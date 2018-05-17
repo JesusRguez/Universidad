@@ -1,0 +1,18 @@
+El nombre del alumno es: Pepe	Nacio el dia 4200944 de Garcia de 1	La edad del alumno es: 125 anos
+
+
+El nombre del alumno es: 1	Nacio el dia 1 de as de 1	La edad del alumno es: 125 anos
+
+
+El nombre del alumno es: Pepe	Nacio el dia 15 de enero de 2012	La edad del alumno es: 4 anos
+
+
+El nombre del alumno es: Jaime	Nacio el dia 1 de mayo de 1996	La edad del alumno es: 19 anos
+
+
+El nombre del alumno es: Juanpe	Nacio el dia 17 de mayo de 1997	La edad del alumno es: 18 anos
+
+
+El nombre del alumno es: Adri	Nacio el dia 13 de noviembre de 1997	La edad del alumno es: 18 anos
+
+
