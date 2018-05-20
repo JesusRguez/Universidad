@@ -1,0 +1,14 @@
+4003-Fundamentos Fisicos y Electronicos-FFE
+4005-Informatica General-IG
+4006-Introduccion a la Programacion-IP
+4009-Calculo-CAL
+4010-Matematica Discreta-MD
+4001-Organizacion y Gestion de Empresas-OGE
+4002-Estadistica-EST
+4004-Fundamentos de Estructura de Computadores-FEC
+4007-Metodologia de la Programacion-MP
+4008-Algebra-ALG
+1122-Materia_de_Prueba-MDP
+1155-Hola_de_Prueba-HDP
+0099-Esta_es_la_nueva-EEN
+1223-L-LMK
