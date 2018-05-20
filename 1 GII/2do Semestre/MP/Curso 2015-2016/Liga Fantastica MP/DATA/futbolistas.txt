@@ -1,0 +1,100 @@
+00-01-Messi-17-0
+01-02-Cristiano Ronaldo-22-0
+02-01-Neymar-18-0
+03-03-Griezmann-13-0
+04-10-Nolito-9-0
+05-08-Sergio García-16-0
+06-02-James Rodríguez-14-0
+07-10-Orellana-10-0
+08-05-Bacca-8-9
+09-04-Parejo-11-0
+10-02-Benzema-14-0
+11-11-Bueno-7-10
+12-06-Vietto-11-10
+13-13-Jonathas-5-10
+14-03-Godín-9-8
+15-01-Piqué-6-8
+16-10-Krohn-0-8
+17-01-Luis Suárez-14-0
+18-11-Kakuta-6-0
+19-09-Aduriz-9-0
+20-04-Otamendi-7-0
+21-01-Claudio Bravo-2-0
+22-04-Gayá-6-0
+23-04-André Gomes-10-0
+24-03-Arda Turan-11-0
+25-04-Feghouli-8-0
+26-04-Diego Alves-3-0
+27-03-Tiago-7-0
+28-04-Mustafi-7-0
+29-18-Mikel Arruabarrena-4-0
+30-01-Sergio Busquets-7-0
+31-02-Isco-11-0
+32-01-Rakitic-8-0
+33-03-Koke-7-0
+34-02-Kroos-9-0
+35-06-Denis Cheryshev-5-0
+36-02-Marcelo-5-0
+37-01-Xavi-3-0
+38-02-Sergio Ramos-7-0
+39-07-Nordin Amrabat-6-0
+40-02-Bale-11-0
+41-07-Juanmi Jiménez-5-0
+42-06-Sergio Asenjo-1-0
+43-08-Lucas Vázquez-6-0
+44-05-Éver Banega-5-0
+45-04-Javi Fuego-4-0
+46-03-Juanfran Torres-3-0
+47-01-Jordi Alba-6-0
+48-08-Víctor Sánchez-3-0
+49-07-Samu Castillejo-6-0
+50-08-Kiko Casilla-1-0
+51-03-Mandzukic-7-0
+52-12-Carlos Vela-11-0
+53-02-Pepe-4-0
+54-18-Saúl Berjón-2-0
+55-06-Mario Gaspar-2-0
+56-04-Piatti-6-0
+57-19-Trujillo-2-0
+58-07-Sergi Darder-1-0
+59-07-Kameni-1-0
+60-05-Aleix Vidal-4-0
+61-10-Larrivey-4-0
+62-04-Alcácer-7-0
+63-17-Nyom-1-0
+64-16-Cavaleiro-2-0
+65-05-Krychowiak-2-0
+66-11-Trashorras-4-0
+67-05-Iborra-3-0
+68-06-Trigueros-2-0
+69-15-Víctor Casadesús-1-0
+70-19-Verza-3-0
+71-13-Lombán-1-0
+72-15-David Barral-2-0
+73-11-Manucho-1-0
+74-12-Canales-3-0
+75-15-Morales-1-0
+76-09-Mikel Rico-3-0
+77-16-Fabricio-1-0
+78-10-Sergio Álvarez-1-0
+79-04-Negredo-7-0
+80-06-Bruno Soriano-6-0
+81-12-Xabi Prieto-1-0
+82-12-Iñigo Martínez-3-0
+83-05-Nico Pareja-1-9
+84-20-Fede Cartabia-3-0
+85-18-Capa-1-0
+86-14-Sarabia-1-0
+87-02-Carvajal-2-0
+88-09-Iraizoz-1-0
+89-19-Edgar Méndez-2-0
+90-01-Mathieu-4-0
+91-08-Caicedo-3-0
+92-04-Rodrigo-4-0
+93-05-Vitolo-5-0
+94-19-Wellington Silva-1-0
+95-05-Reyes-3-0
+96-08-Álvaro González-1-0
+97-18-Eneko Bóveda-2-0
+98-14-Guaita-1-0
+99-12-Chory Castro-2-0

@@ -1,0 +1,6 @@
+01-Juan Pérez-administrador-admin-a1111111
+02-Pedro López-cronista-croni-b2222222
+03-Guillermo Gómez-participante-part1-c3333333
+04-Manuel López-participante-part2-d4444444
+05-Juan-participante-coca-123
+19-higinio-participante-higi-123
