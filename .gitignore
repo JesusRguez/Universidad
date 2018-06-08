@@ -7,3 +7,5 @@
 *.save-failed
 *.cscope_file_list
 *.ini
+*.class
+*.mf

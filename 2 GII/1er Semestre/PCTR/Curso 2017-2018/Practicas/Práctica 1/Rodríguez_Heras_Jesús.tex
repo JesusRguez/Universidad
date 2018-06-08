@@ -1,0 +1,169 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+%\usepackage{hyperref}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+\title{WPA2 \& Ettercap}
+\author{Jesús Rodríguez Heras\\Juan Pedro Rodríguez Gracia}
+
+\begin{document}
+	
+	\maketitle
+	\begin{abstract} %Poner esto en todas las prácticas de PCTR
+		\begin{center}
+			Definición del protocolo WPA2 con la explicación del ataque KRACK y ejemplo de ataque con Ettercap.
+		\end{center}
+	\end{abstract}
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
+
+\section{Problemas resueltos}
+\subsection{\texttt{Circulo.java}}
+\noindent
+\textbf{Escriba un programa en java para calcular el volumen de un cono. Declare una constante que guarde el valor de $\pi$. Suponga un cono de 14,2 cm de diámetro en la base y de 20 cm de altura. Guárdelo en un fichero llamado \texttt{Circulo.java}.}
+
+\lstinputlisting[language=java]{Circulo.java}
+
+
+\subsection{\texttt{NewtonRaphson.java}}
+\noindent
+\textbf{Escriba un programa en java para encontrar el cero de una función $f(x)$ mediante el método de \textit{Newton-Raphson}. Este método iterativo construye una sucesión \textit{$x_{0}$, $x_{1}$, $x_{2}$...} de aproximaciones a la solución utilizando la siguiente ecuación:
+\begin{center}
+	$x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$
+\end{center}
+La aproximación inicial será introducida por teclado, junto con el número de iteraciones que permitirán obtener la aproximación a la raíz de la función $f(x)$. El programa irá imprimiendo en pantalla las sucesivas aproximaciones que va calculando. Aplique su programa a las funciones siguientes:
+\begin{itemize}
+	\item $f(x)=cos(x)-x^{3}$ en [0, 1]
+	\item $f(x)=x^{2}-5$ en [2, 3]
+\end{itemize}
+Guarde su programa en un fichero llamado \texttt{NewtonRaphson.java}.}
+
+\lstinputlisting[language=java]{NewtonRaphson.java}
+
+
+\subsection{\texttt{intDefinidaMonteCarlo.java}}
+\noindent
+\textbf{La integral definida en [0 - 1] de una función real de variable real $f(x)$ puede calcularse mediante un método de Monte Carlo (probabilístico) inscribiendo la curva de la función en un cuadrado de lado igual a la unidad. Para aproximar el valor de la integral, se generan puntos aleatorios en el marco determinado por el cuadrado, y se cuentan únicamente aquellos puntos que están situados bajo la curva. La razón entre el número de puntos bajo la curva y el número total de puntos es una aproximación al valor buscado que naturalmente, conforme mayor es el número de puntos, mejora la aproximación. Escriba un programa java que permita realizar tal cálculo, leyendo desde teclado el número de puntos con el cuál genera la aproximación para las funciones siguientes:
+\begin{itemize}
+	\item $f(x)=sin(x)$
+	\item $f(x)=x$
+\end{itemize}
+Guarde el programa en \texttt{intDefinidaMonteCarlo.java}.}
+
+\lstinputlisting[language=java]{intDefinidaMonteCarlo.java}
+
+
+\subsection{\texttt{Cesar.java}}
+\noindent
+\textbf{El cifrado de César es una técnica elemental de ocultamiento de la información que matemáticamente se describe de forma simple utilizando la siguiente ecuación
+\begin{center}
+	$E(x)=x+n$ $ mod $ $27$
+\end{center}
+donde $x$ es la letra que queremos cifrar (representada por su código ASCII o por cualquier otra ordenación válida) y $n$ es un número que se suma a ese código. Escriba un programa \texttt{Cesar.java} que lea el valor de $n$, una cadena de texto cualquiera, y muestre en pantalla su representación cifrada. Escriba otro programa llamado \texttt{desCesar.java} que efectúe el descifrado de acuerdo a la siguiente ecuación:
+\begin{center}
+	$D(k)=k-n$ $ mod $ $27$
+\end{center}}
+\subsubsection{\texttt{Cesar.java}}
+
+\lstinputlisting[language=java]{Cesar.java}
+
+
+\subsubsection{\texttt{desCesar.java}}
+
+\lstinputlisting[language=java]{desCesar.java}
+
+
+\subsection{\texttt{aleatorios.java}}
+\noindent
+\textbf{Una tarea que será de utilidad durante el curso es la generación de números aleatorios. En Java, esto puede lograrse de dos maneras diferentes. Comencemos ahora por la primera; escriba un programa llamado \texttt{aleatorios.java} que use el método \texttt{random()} de la clase \texttt{Math} para generar una secuencia de números aleatorios. La longitud de la secuencia será fijada mediante un argumento leído por el programa desde la línea de comandos de una ventana de terminal.}
+
+\lstinputlisting[language=java]{aleatorios.java}
+
+\section{Referencias bibliográficas}
+
+
+\end{document}

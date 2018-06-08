@@ -1,0 +1,10 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Problemas resueltos}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}\texttt {Circulo.java}}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}\texttt {NewtonRaphson.java}}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}\texttt {intDefinidaMonteCarlo.java}}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}\texttt {Cesar.java}}{7}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}\texttt {Cesar.java}}{7}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}\texttt {desCesar.java}}{8}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}\texttt {aleatorios.java}}{9}{subsection.1.5}
+\contentsline {section}{\numberline {2}Referencias bibliogr\IeC {\'a}ficas}{10}{section.2}
