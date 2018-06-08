@@ -1,0 +1,17 @@
+.\objects\glcd.o: glcd.c
+.\objects\glcd.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h
+.\objects\glcd.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\glcd.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\glcd.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
+.\objects\glcd.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h
+.\objects\glcd.o: glcd.h
+.\objects\glcd.o: tipos.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\glcd.o: sdram.h
+.\objects\glcd.o: font.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\glcd.o: error.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

@@ -1,0 +1,16 @@
+.\objects\uda1380_lpc4078fbd80.o: uda1380_lpc4078fbd80.c
+.\objects\uda1380_lpc4078fbd80.o: uda1380_lpc4078fbd80.h
+.\objects\uda1380_lpc4078fbd80.o: tipos.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uda1380_lpc4078fbd80.o: i2c_lpc40xx.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
+.\objects\uda1380_lpc4078fbd80.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h
+.\objects\uda1380_lpc4078fbd80.o: gpio_lpc40xx.h
+.\objects\uda1380_lpc4078fbd80.o: uda1380.h
+.\objects\uda1380_lpc4078fbd80.o: timer_lpc40xx.h
+.\objects\uda1380_lpc4078fbd80.o: i2s_lpc40xx.h

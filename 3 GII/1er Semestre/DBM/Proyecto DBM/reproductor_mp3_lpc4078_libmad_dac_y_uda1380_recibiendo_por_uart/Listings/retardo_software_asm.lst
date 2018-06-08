@@ -1,0 +1,179 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       ************************
+    2 00000000         ; \file     retardo_software_asm.s
+    3 00000000         ;
+    4 00000000         ; \brief    Parte en ensamblador de las funciones de ret
+                       ardo por software.
+    5 00000000         ;
+    6 00000000         ;           La ventaja de que retardo_software_us esté 
+                       en ensamblador es que el
+    7 00000000         ;           código previo al bucle de retardo así como
+                        el que forma el bucle de
+    8 00000000         ;           retardo puede controlarse totalmente y puede
+                        hacerse muy corto, lo
+    9 00000000         ;           que da mayor exactitud en los retardos conse
+                       guidos. Además el código
+   10 00000000         ;           de la función no dependerá del nivel de op
+                       timización seleccionado en
+   11 00000000         ;           el compilador.
+   12 00000000         ;
+   13 00000000                 EXPORT           retardo_software_fijar_escala
+   14 00000000                 EXPORT           retardo_software_us
+   15 00000000         
+   16 00000000         ;*******************************************************
+                       ************************
+   17 00000000         ; Sección de datos inicializados.
+   18 00000000         ;
+   19 00000000                 AREA             |.data|, DATA
+   20 00000000                 ALIGN            4
+   21 00000000         ;*******************************************************
+                       ************************
+   22 00000000         ;           La variable iteraciones_por_us indica el nú
+                       mero de iteraciones que
+   23 00000000         ;           el bucle de retardo debe realizar por cada m
+                       icrosegundo de retardo
+   24 00000000         ;           requerido. Su valor inicial es 1 pero debe s
+                       er calibrada antes de
+   25 00000000         ;           usar la función retardo_software_us para ge
+                       nerar retardos. La
+   26 00000000         ;           calibración se realiza mediante la función
+                       
+   27 00000000         ;           retardo_software_inicializar en el fichero r
+                       etardo_software.c
+   28 00000000         ;
+   29 00000000         iteraciones_por_us
+   30 00000000 00 00 00 
+              00               SPACE            4
+   31 00000004         
+   32 00000004         ;*******************************************************
+                       ************************
+   33 00000004         ; Sección de código.
+   34 00000004         ;
+   35 00000004                 AREA             |.text|, CODE, READONLY
+   36 00000000                 THUMB
+   37 00000000                 ALIGN            2
+   38 00000000         
+   39 00000000         ;*******************************************************
+                       ************************
+   40 00000000         ; \brief        Asignar un valor a la variable iteracion
+                       es_por_us.
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   41 00000000         ;
+   42 00000000         ; \pararm[in]   R0  valor a dar a iteraciones_por_us.
+   43 00000000         ;
+   44 00000000         retardo_software_fijar_escala
+                               PROC
+   45 00000000 4904            ldr              r1, =iteraciones_por_us
+   46 00000002 6008            str              r0, [r1]
+   47 00000004 4770            bx               lr
+   48 00000006                 ENDP
+   49 00000006         
+   50 00000006         ;*******************************************************
+                       ************************
+   51 00000006         ; \brief        Realizar un retardo del número de micro
+                       segundos indicado.
+   52 00000006         ;
+   53 00000006         ;               Antes de llamar esta función debe haber
+                       se realizado la
+   54 00000006         ;               calibración del retardo llamando a la f
+                       unción
+   55 00000006         ;               retardo_software_inicializar en el fiche
+                       ro retardo_software.c
+   56 00000006         ;
+   57 00000006         ; \pararm[in]   R0  número de microsegundos a retardar.
+                       
+   58 00000006         ;        
+   59 00000006         retardo_software_us
+                               PROC
+   60 00000006 4903            ldr              r1, =iteraciones_por_us
+   61 00000008 6809            ldr              r1, [r1]
+   62 0000000A FB00 F001       mul              r0, r0, r1
+   63 0000000E 1E40    bucle   subs             r0, r0, #1
+   64 00000010 D1FD            bne              bucle
+   65 00000012 4770            bx               lr
+   66 00000014                 ENDP
+   67 00000014         
+   68 00000014                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\retardo_software_asm.d -o.\objects\retardo_software_a
+sm.o -I.\RTE\Device\LPC4078FBD80 -I.\RTE\_Target_1 -IC:\Keil_v5\ARM\PACK\ARM\CM
+SIS\5.0.1\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Inc
+lude --predefine="__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" --pred
+efine="CORE_M4 SETA 1" --list=.\listings\retardo_software_asm.lst retardo_softw
+are_asm.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.data 00000000
+
+Symbol: .data
+   Definitions
+      At line 19 in file retardo_software_asm.s
+   Uses
+      None
+Comment: .data unused
+iteraciones_por_us 00000000
+
+Symbol: iteraciones_por_us
+   Definitions
+      At line 29 in file retardo_software_asm.s
+   Uses
+      At line 45 in file retardo_software_asm.s
+      At line 60 in file retardo_software_asm.s
+
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 35 in file retardo_software_asm.s
+   Uses
+      None
+Comment: .text unused
+bucle 0000000E
+
+Symbol: bucle
+   Definitions
+      At line 63 in file retardo_software_asm.s
+   Uses
+      At line 64 in file retardo_software_asm.s
+Comment: bucle used once
+retardo_software_fijar_escala 00000000
+
+Symbol: retardo_software_fijar_escala
+   Definitions
+      At line 44 in file retardo_software_asm.s
+   Uses
+      At line 13 in file retardo_software_asm.s
+Comment: retardo_software_fijar_escala used once
+retardo_software_us 00000006
+
+Symbol: retardo_software_us
+   Definitions
+      At line 59 in file retardo_software_asm.s
+   Uses
+      At line 14 in file retardo_software_asm.s
+Comment: retardo_software_us used once
+4 symbols
+342 symbols in table

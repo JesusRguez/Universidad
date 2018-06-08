@@ -1,0 +1,17 @@
+.\objects\uart_lpc40xx_xon_xoff.o: uart_lpc40xx_xon_xoff.c
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h
+.\objects\uart_lpc40xx_xon_xoff.o: uart_lpc40xx_xon_xoff.h
+.\objects\uart_lpc40xx_xon_xoff.o: tipos.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uart_lpc40xx_xon_xoff.o: gpio_lpc40xx.h
+.\objects\uart_lpc40xx_xon_xoff.o: iocon_lpc40xx.h
+.\objects\uart_lpc40xx_xon_xoff.o: error.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\uart_lpc40xx_xon_xoff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

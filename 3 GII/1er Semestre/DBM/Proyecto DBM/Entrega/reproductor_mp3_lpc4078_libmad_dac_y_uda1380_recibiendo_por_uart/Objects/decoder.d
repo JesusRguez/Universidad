@@ -1,0 +1,10 @@
+.\objects\decoder.o: libmad\decoder.c
+.\objects\decoder.o: libmad\global.h
+.\objects\decoder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\decoder.o: libmad\stream.h
+.\objects\decoder.o: libmad\bit.h
+.\objects\decoder.o: libmad\frame.h
+.\objects\decoder.o: libmad\fixed.h
+.\objects\decoder.o: libmad\timer.h
+.\objects\decoder.o: libmad\synth.h
+.\objects\decoder.o: libmad\decoder.h

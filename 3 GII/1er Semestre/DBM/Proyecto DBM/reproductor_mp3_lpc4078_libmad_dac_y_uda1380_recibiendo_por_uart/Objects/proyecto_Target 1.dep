@@ -1,0 +1,266 @@
+Dependencies for Project 'proyecto', Target 'Target 1': (DO NOT MODIFY !)
+F (.\dac_lpc40xx.c)(0x5876CFD6)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\dac_lpc40xx.o --omf_browse .\objects\dac_lpc40xx.crf --depend .\objects\dac_lpc40xx.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (dac_lpc40xx.h)(0x5876CFD6)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+F (.\error.c)(0x5A5B5D7E)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\error.o --omf_browse .\objects\error.crf --depend .\objects\error.d)
+I (error.h)(0x57B99392)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+F (.\gpio_lpc40xx.c)(0x59E920EE)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\gpio_lpc40xx.o --omf_browse .\objects\gpio_lpc40xx.crf --depend .\objects\gpio_lpc40xx.d)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (error.h)(0x57B99392)
+F (.\i2c_lpc40xx.c)(0x59F248ED)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\i2c_lpc40xx.o --omf_browse .\objects\i2c_lpc40xx.crf --depend .\objects\i2c_lpc40xx.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (i2c_lpc40xx.h)(0x59F23D7B)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (iocon_lpc40xx.h)(0x59E92107)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (error.h)(0x57B99392)
+F (.\iocon_lpc40xx.c)(0x59E92386)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\iocon_lpc40xx.o --omf_browse .\objects\iocon_lpc40xx.crf --depend .\objects\iocon_lpc40xx.d)
+I (iocon_lpc40xx.h)(0x59E92107)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (error.h)(0x57B99392)
+F (.\main.c)(0x5A86D22E)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+I (reproductor_mp3.h)(0x5A5B5428)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (.\libmad\mad.h)(0x58A22E11)
+I (.\libmad\midmad.h)(0x5876CFE6)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BE5B4)
+F (.\reproductor_mp3.c)(0x5A900BE9)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\reproductor_mp3.o --omf_browse .\objects\reproductor_mp3.crf --depend .\objects\reproductor_mp3.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (.\libmad\mad.h)(0x58A22E11)
+I (generacion_audio.h)(0x58A23200)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (reproductor_mp3.h)(0x5A5B5428)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BE5B4)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (uart_lpc40xx_xon_xoff.h)(0x5A86E4BB)
+I (lcd_hd44780_lpc40xx.h)(0x5A82D4AA)
+F (.\timer_lpc40xx.c)(0x5A247197)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\timer_lpc40xx.o --omf_browse .\objects\timer_lpc40xx.crf --depend .\objects\timer_lpc40xx.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (error.h)(0x57B99392)
+F (.\generacion_audio_con_uda1380.c)(0x5A8FE38A)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\generacion_audio_con_uda1380.o --omf_browse .\objects\generacion_audio_con_uda1380.crf --depend .\objects\generacion_audio_con_uda1380.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BE5B4)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (generacion_audio.h)(0x58A23200)
+I (i2s_lpc40xx.h)(0x58A21555)
+I (error.h)(0x57B99392)
+I (uda1380.h)(0x5A6728AD)
+I (lcd_hd44780_lpc40xx.h)(0x5A82D4AA)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+I (retardo_software.h)(0x58BEA77E)
+F (.\uda1380_lpc4078fbd80.c)(0x5A672D39)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\uda1380_lpc4078fbd80.o --omf_browse .\objects\uda1380_lpc4078fbd80.crf --depend .\objects\uda1380_lpc4078fbd80.d)
+I (uda1380_lpc4078fbd80.h)(0x5A672959)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (i2c_lpc40xx.h)(0x59F23D7B)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (uda1380.h)(0x5A6728AD)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (i2s_lpc40xx.h)(0x58A21555)
+F (.\uart_lpc40xx_xon_xoff.c)(0x5A8FDE91)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\uart_lpc40xx_xon_xoff.o --omf_browse .\objects\uart_lpc40xx_xon_xoff.crf --depend .\objects\uart_lpc40xx_xon_xoff.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (uart_lpc40xx_xon_xoff.h)(0x5A86E4BB)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (gpio_lpc40xx.h)(0x59E920E3)
+I (iocon_lpc40xx.h)(0x59E92107)
+I (error.h)(0x57B99392)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x588BE5B4)
+F (.\lcd_hd44780_lpc40xx.c)(0x5A8BF1D4)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\lcd_hd44780_lpc40xx.o --omf_browse .\objects\lcd_hd44780_lpc40xx.crf --depend .\objects\lcd_hd44780_lpc40xx.d)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+I (lcd_hd44780_lpc40xx.h)(0x5A82D4AA)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (timer_lpc40xx.h)(0x5A2471A4)
+I (error.h)(0x57B99392)
+I (retardo_software.h)(0x58BEA77E)
+F (.\lcd_hd44780_lpc40xx.h)(0x5A82D4AA)()
+F (.\retardo_software.c)(0x59C388F8)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\retardo_software.o --omf_browse .\objects\retardo_software.crf --depend .\objects\retardo_software.d)
+I (retardo_software.h)(0x58BEA77E)
+I (tipos.h)(0x596DDEC0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)
+F (.\retardo_software_asm.s)(0x58BEB548)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "CORE_M4 SETA 1"--list .\listings\retardo_software_asm.lst --xref -o .\objects\retardo_software_asm.o --depend .\objects\retardo_software_asm.d)
+F (.\libmad\bit.c)(0x4010EC4C)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\bit.o --omf_browse .\objects\bit.crf --depend .\objects\bit.d)
+I (libmad\global.h)(0x4010EC4C)
+I (libmad\bit.h)(0x4010EC4C)
+F (.\libmad\decoder.c)(0x4010EC4C)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\decoder.o --omf_browse .\objects\decoder.crf --depend .\objects\decoder.d)
+I (libmad\global.h)(0x4010EC4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BE5B4)
+I (libmad\stream.h)(0x402206AF)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\frame.h)(0x4010EC4C)
+I (libmad\fixed.h)(0x58A22DD1)
+I (libmad\timer.h)(0x4010EC4D)
+I (libmad\synth.h)(0x4010EC4D)
+I (libmad\decoder.h)(0x4010EC4C)
+F (.\libmad\fixed.c)(0x4010EC4C)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\fixed.o --omf_browse .\objects\fixed.crf --depend .\objects\fixed.d)
+I (libmad\global.h)(0x4010EC4C)
+I (libmad\fixed.h)(0x58A22DD1)
+F (.\libmad\frame.c)(0x40217947)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\frame.o --omf_browse .\objects\frame.crf --depend .\objects\frame.d)
+I (libmad\global.h)(0x4010EC4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BE5B4)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\stream.h)(0x402206AF)
+I (libmad\frame.h)(0x4010EC4C)
+I (libmad\fixed.h)(0x58A22DD1)
+I (libmad\timer.h)(0x4010EC4D)
+I (libmad\layer12.h)(0x4010EC4C)
+I (libmad\layer3.h)(0x4010EC4C)
+F (.\libmad\huffman.c)(0x4010EC4C)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\huffman.o --omf_browse .\objects\huffman.crf --depend .\objects\huffman.d)
+I (libmad\global.h)(0x4010EC4C)
+I (libmad\huffman.h)(0x4010EC4C)
+F (.\libmad\layer3.c)(0x5A5BB989)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\layer3.o --omf_browse .\objects\layer3.crf --depend .\objects\layer3.d)
+I (libmad\global.h)(0x4010EC4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BE5B4)
+I (libmad\fixed.h)(0x58A22DD1)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\stream.h)(0x402206AF)
+I (libmad\frame.h)(0x4010EC4C)
+I (libmad\timer.h)(0x4010EC4D)
+I (libmad\huffman.h)(0x4010EC4C)
+I (libmad\layer3.h)(0x4010EC4C)
+I (libmad\rq_table.dat)(0x4010EC4C)
+I (libmad\imdct_s.dat)(0x4010EC4C)
+F (.\libmad\layer12.c)(0x402206AF)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\layer12.o --omf_browse .\objects\layer12.crf --depend .\objects\layer12.d)
+I (libmad\global.h)(0x4010EC4C)
+I (libmad\fixed.h)(0x58A22DD1)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\stream.h)(0x402206AF)
+I (libmad\frame.h)(0x4010EC4C)
+I (libmad\timer.h)(0x4010EC4D)
+I (libmad\layer12.h)(0x4010EC4C)
+I (libmad\sf_table.dat)(0x4010EC4D)
+I (libmad\qc_table.dat)(0x4010EC4C)
+F (.\libmad\stream.c)(0x402206AF)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\stream.o --omf_browse .\objects\stream.crf --depend .\objects\stream.d)
+I (libmad\global.h)(0x4010EC4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BE5B4)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\stream.h)(0x402206AF)
+F (.\libmad\synth.c)(0x4010EC4D)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\synth.o --omf_browse .\objects\synth.crf --depend .\objects\synth.d)
+I (libmad\global.h)(0x4010EC4C)
+I (libmad\fixed.h)(0x58A22DD1)
+I (libmad\frame.h)(0x4010EC4C)
+I (libmad\timer.h)(0x4010EC4D)
+I (libmad\stream.h)(0x402206AF)
+I (libmad\bit.h)(0x4010EC4C)
+I (libmad\synth.h)(0x4010EC4D)
+I (libmad\D.dat)(0x4010EC4C)
+F (.\libmad\timer.c)(0x5A5BB989)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+I (libmad\global.h)(0x4010EC4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BE5B4)
+I (libmad\timer.h)(0x4010EC4D)
+F (.\libmad\imdct_l_arm.S)(0x5876CFE6)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "CORE_M4 SETA 1"--list .\listings\imdct_l_arm.lst --xref -o .\objects\imdct_l_arm.o --depend .\objects\imdct_l_arm.d)
+F (RTE\Device\LPC4078FBD80\RTE_Device.h)(0x568E4358)()
+F (RTE\Device\LPC4078FBD80\startup_LPC407x_8x_177x_8x.s)(0x5A8C0EE9)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "CORE_M4 SETA 1"--list .\listings\startup_lpc407x_8x_177x_8x.lst --xref -o .\objects\startup_lpc407x_8x_177x_8x.o --depend .\objects\startup_lpc407x_8x_177x_8x.d)
+F (RTE\Device\LPC4078FBD80\system_LPC407x_8x_177x_8x.c)(0x5A5B52FF)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I . -I .\libmad-I.\RTE\Device\LPC4078FBD80-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DCORE_M4-o .\objects\system_lpc407x_8x_177x_8x.o --omf_browse .\objects\system_lpc407x_8x_177x_8x.crf --depend .\objects\system_lpc407x_8x_177x_8x.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BE5B4)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h)(0x539FF742)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898ABFA)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h)(0x4FF169DA)

@@ -1,0 +1,10 @@
+.\objects\frame.o: libmad\frame.c
+.\objects\frame.o: libmad\global.h
+.\objects\frame.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\frame.o: libmad\bit.h
+.\objects\frame.o: libmad\stream.h
+.\objects\frame.o: libmad\frame.h
+.\objects\frame.o: libmad\fixed.h
+.\objects\frame.o: libmad\timer.h
+.\objects\frame.o: libmad\layer12.h
+.\objects\frame.o: libmad\layer3.h

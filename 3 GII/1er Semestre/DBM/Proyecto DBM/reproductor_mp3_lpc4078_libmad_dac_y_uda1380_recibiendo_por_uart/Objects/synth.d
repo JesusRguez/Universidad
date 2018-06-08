@@ -1,0 +1,9 @@
+.\objects\synth.o: libmad\synth.c
+.\objects\synth.o: libmad\global.h
+.\objects\synth.o: libmad\fixed.h
+.\objects\synth.o: libmad\frame.h
+.\objects\synth.o: libmad\timer.h
+.\objects\synth.o: libmad\stream.h
+.\objects\synth.o: libmad\bit.h
+.\objects\synth.o: libmad\synth.h
+.\objects\synth.o: libmad\D.dat

@@ -1,0 +1,16 @@
+.\objects\generacion_audio_con_dac.o: generacion_audio_con_dac.c
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\LPC407x_8x_177x_8x.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cm4.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cminstr.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\cmsis_armcc.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cmfunc.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cmsimd.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include\system_LPC407x_8x_177x_8x.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\generacion_audio_con_dac.o: generacion_audio.h
+.\objects\generacion_audio_con_dac.o: tipos.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\generacion_audio_con_dac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\generacion_audio_con_dac.o: dac_lpc40xx.h
+.\objects\generacion_audio_con_dac.o: error.h

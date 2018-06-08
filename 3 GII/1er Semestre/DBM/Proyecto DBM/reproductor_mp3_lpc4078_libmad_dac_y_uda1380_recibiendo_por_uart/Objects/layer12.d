@@ -1,0 +1,10 @@
+.\objects\layer12.o: libmad\layer12.c
+.\objects\layer12.o: libmad\global.h
+.\objects\layer12.o: libmad\fixed.h
+.\objects\layer12.o: libmad\bit.h
+.\objects\layer12.o: libmad\stream.h
+.\objects\layer12.o: libmad\frame.h
+.\objects\layer12.o: libmad\timer.h
+.\objects\layer12.o: libmad\layer12.h
+.\objects\layer12.o: libmad\sf_table.dat
+.\objects\layer12.o: libmad\qc_table.dat

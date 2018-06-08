@@ -1,0 +1,13 @@
+.\objects\layer3.o: libmad\layer3.c
+.\objects\layer3.o: libmad\global.h
+.\objects\layer3.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\layer3.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\layer3.o: libmad\fixed.h
+.\objects\layer3.o: libmad\bit.h
+.\objects\layer3.o: libmad\stream.h
+.\objects\layer3.o: libmad\frame.h
+.\objects\layer3.o: libmad\timer.h
+.\objects\layer3.o: libmad\huffman.h
+.\objects\layer3.o: libmad\layer3.h
+.\objects\layer3.o: libmad\rq_table.dat
+.\objects\layer3.o: libmad\imdct_s.dat

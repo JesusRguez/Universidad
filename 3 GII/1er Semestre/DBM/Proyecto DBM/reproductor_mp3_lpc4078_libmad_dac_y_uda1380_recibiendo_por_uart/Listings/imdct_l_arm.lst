@@ -1,0 +1,3026 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/******************************************************
+                       ***********************
+    2 00000000         ;* Copyright (C) 2000-2001 Andre McCurdy  <armccurdy;yah
+                       oo.co.uk>
+    3 00000000         ;*
+    4 00000000         ;* This program is free software. you can redistribute i
+                       t and/or modify
+    5 00000000         ;* it under the terms of the GNU General Public License 
+                       as published by
+    6 00000000         ;* the Free Software Foundation; either version 2 of the
+                        License, or
+    7 00000000         ;* (at your option) any later version.
+    8 00000000         ;*
+    9 00000000         ;* This program is distributed in the hope that it will 
+                       be useful,
+   10 00000000         ;* but WITHOUT ANY WARRANTY, without even the implied wa
+                       rranty of
+   11 00000000         ;* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+                        See the
+   12 00000000         ;* GNU General Public License for more details.
+   13 00000000         ;*
+   14 00000000         ;* You should have received a copy of the GNU General Pu
+                       blic License
+   15 00000000         ;* along with this program; if not, write to the Free So
+                       ftware
+   16 00000000         ;* Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+                        MA  02111-1307  USA
+   17 00000000         ;*
+   18 00000000         ;*******************************************************
+                       **********************
+   19 00000000         ;*
+   20 00000000         ;* Notes:
+   21 00000000         ;*
+   22 00000000         ;*
+   23 00000000         ;*******************************************************
+                       **********************
+   24 00000000         ;*
+   25 00000000         ;* $Id: imdct_l_arm.S,v 1.7 2001/03/25 20:03:34 rob Rel 
+                       $
+   26 00000000         ;*
+   27 00000000         ;* 2001/03/24:  Andre McCurdy <armccurdy;yahoo.co.uk>
+   28 00000000         ;*   - Corrected PIC unsafe loading of address of 'imdct
+                       36_long_karray'
+   29 00000000         ;*
+   30 00000000         ;* 2000/09/20:  Robert Leslie <rob;mars.org>
+   31 00000000         ;*   - Added a global symbol with leading underscore per
+                        suggestion of
+   32 00000000         ;*     Simon Burge to support linking with the a.out for
+                       mat.
+   33 00000000         ;*
+   34 00000000         ;* 2000/09/15:  Robert Leslie <rob;mars.org>
+   35 00000000         ;*   - Fixed a small bug where flags were changed before
+                        a conditional branch.
+   36 00000000         ;*
+   37 00000000         ;* 2000/09/15:  Andre McCurdy <armccurdy;yahoo.co.uk>
+   38 00000000         ;*   - Applied Nicolas Pitre's rounding optimisation in 
+                       all remaining places.
+   39 00000000         ;*
+   40 00000000         ;* 2000/09/09:  Nicolas Pitre <nico;cam.org>
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   41 00000000         ;*   - Optimized rounding + scaling operations.
+   42 00000000         ;*
+   43 00000000         ;* 2000/08/09:  Andre McCurdy <armccurdy;yahoo.co.uk>
+   44 00000000         ;*   - Original created.
+   45 00000000         ;*
+   46 00000000         ;*******************************************************
+                       *********************/
+   47 00000000         
+   48 00000000         
+   49 00000000         ;/*
+   50 00000000         ;On entry:
+   51 00000000         
+   52 00000000         ;r0 = pointer to 18 element input  array
+   53 00000000         ;r1 = pointer to 36 element output array
+   54 00000000         ;r2 = windowing block type
+   55 00000000         
+   56 00000000         
+   57 00000000         ;Stack frame created during execution of the function:
+   58 00000000         
+   59 00000000         ;Initial   Holds:
+   60 00000000         ;Stack
+   61 00000000         ;pointer
+   62 00000000         ;minus:
+   63 00000000         
+   64 00000000         ;0
+   65 00000000         ;4     lr
+   66 00000000         ;8     r11
+   67 00000000         ;12     r10
+   68 00000000         ;16     r9
+   69 00000000         ;20     r8
+   70 00000000         ;24     r7
+   71 00000000         ;28     r6
+   72 00000000         ;32     r5
+   73 00000000         ;36     r4
+   74 00000000         
+   75 00000000         ;40     r2 : windowing block type
+   76 00000000         
+   77 00000000         ;44     ct00 high
+   78 00000000         ;48     ct00 low
+   79 00000000         ;52     ct01 high
+   80 00000000         ;56     ct01 low
+   81 00000000         ;60     ct04 high
+   82 00000000         ;64     ct04 low
+   83 00000000         ;68     ct06 high
+   84 00000000         ;72     ct06 low
+   85 00000000         ;76     ct05 high
+   86 00000000         ;80     ct05 low
+   87 00000000         ;84     ct03 high
+   88 00000000         ;88     ct03 low
+   89 00000000         ;92    -ct05 high
+   90 00000000         ;96    -ct05 low
+   91 00000000         ;100    -ct07 high
+   92 00000000         ;104    -ct07 low
+   93 00000000         ;108     ct07 high
+   94 00000000         ;112     ct07 low
+   95 00000000         ;116     ct02 high
+   96 00000000         ;120     ct02 low
+   97 00000000         ;*/
+   98 00000000         
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   99 00000000 00000000 
+                       BLOCK_MODE_NORMAL
+                               EQU              0
+  100 00000000 00000001 
+                       BLOCK_MODE_START
+                               EQU              1
+  101 00000000 00000003 
+                       BLOCK_MODE_STOP
+                               EQU              3
+  102 00000000         
+  103 00000000 00000000 
+                       X0      EQU              0x00
+  104 00000000 00000004 
+                       X1      EQU              0x04
+  105 00000000 00000008 
+                       X2      EQU              0x08
+  106 00000000 0000000C 
+                       X3      EQU              0x0C
+  107 00000000 00000010 
+                       X4      EQU              0x10
+  108 00000000 00000014 
+                       X5      EQU              0x14
+  109 00000000 00000018 
+                       X6      EQU              0x18
+  110 00000000 0000001C 
+                       X7      EQU              0x1c
+  111 00000000 00000020 
+                       X8      EQU              0x20
+  112 00000000 00000024 
+                       X9      EQU              0x24
+  113 00000000 00000028 
+                       X10     EQU              0x28
+  114 00000000 0000002C 
+                       X11     EQU              0x2c
+  115 00000000 00000030 
+                       X12     EQU              0x30
+  116 00000000 00000034 
+                       X13     EQU              0x34
+  117 00000000 00000038 
+                       X14     EQU              0x38
+  118 00000000 0000003C 
+                       X15     EQU              0x3c
+  119 00000000 00000040 
+                       X16     EQU              0x40
+  120 00000000 00000044 
+                       X17     EQU              0x44
+  121 00000000         
+  122 00000000 00000000 
+                       x0      EQU              0x00
+  123 00000000 00000004 
+                       x1      EQU              0x04
+  124 00000000 00000008 
+                       x2      EQU              0x08
+  125 00000000 0000000C 
+                       x3      EQU              0x0C
+  126 00000000 00000010 
+                       x4      EQU              0x10
+  127 00000000 00000014 
+                       x5      EQU              0x14
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  128 00000000 00000018 
+                       x6      EQU              0x18
+  129 00000000 0000001C 
+                       x7      EQU              0x1c
+  130 00000000 00000020 
+                       x8      EQU              0x20
+  131 00000000 00000024 
+                       x9      EQU              0x24
+  132 00000000 00000028 
+                       x10     EQU              0x28
+  133 00000000 0000002C 
+                       x11     EQU              0x2c
+  134 00000000 00000030 
+                       x12     EQU              0x30
+  135 00000000 00000034 
+                       x13     EQU              0x34
+  136 00000000 00000038 
+                       x14     EQU              0x38
+  137 00000000 0000003C 
+                       x15     EQU              0x3c
+  138 00000000 00000040 
+                       x16     EQU              0x40
+  139 00000000 00000044 
+                       x17     EQU              0x44
+  140 00000000 00000048 
+                       x18     EQU              0x48
+  141 00000000 0000004C 
+                       x19     EQU              0x4c
+  142 00000000 00000050 
+                       x20     EQU              0x50
+  143 00000000 00000054 
+                       x21     EQU              0x54
+  144 00000000 00000058 
+                       x22     EQU              0x58
+  145 00000000 0000005C 
+                       x23     EQU              0x5c
+  146 00000000 00000060 
+                       x24     EQU              0x60
+  147 00000000 00000064 
+                       x25     EQU              0x64
+  148 00000000 00000068 
+                       x26     EQU              0x68
+  149 00000000 0000006C 
+                       x27     EQU              0x6c
+  150 00000000 00000070 
+                       x28     EQU              0x70
+  151 00000000 00000074 
+                       x29     EQU              0x74
+  152 00000000 00000078 
+                       x30     EQU              0x78
+  153 00000000 0000007C 
+                       x31     EQU              0x7c
+  154 00000000 00000080 
+                       x32     EQU              0x80
+  155 00000000 00000084 
+                       x33     EQU              0x84
+  156 00000000 00000088 
+                       x34     EQU              0x88
+  157 00000000 0000008C 
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+                       x35     EQU              0x8c
+  158 00000000         
+  159 00000000 0FFC19FD 
+                       K00     EQU              0x0ffc19fd
+  160 00000000 00B2AA3E 
+                       K01     EQU              0x00b2aa3e
+  161 00000000 0FDCF549 
+                       K02     EQU              0x0fdcf549
+  162 00000000 0216A2A2 
+                       K03     EQU              0x0216a2a2
+  163 00000000 0F9EE890 
+                       K04     EQU              0x0f9ee890
+  164 00000000 03768962 
+                       K05     EQU              0x03768962
+  165 00000000 0F426CB5 
+                       K06     EQU              0x0f426cb5
+  166 00000000 04CFB0E2 
+                       K07     EQU              0x04cfb0e2
+  167 00000000 0EC835E8 
+                       K08     EQU              0x0ec835e8
+  168 00000000 061F78AA 
+                       K09     EQU              0x061f78aa
+  169 00000000 0E313245 
+                       K10     EQU              0x0e313245
+  170 00000000 07635284 
+                       K11     EQU              0x07635284
+  171 00000000 0D7E8807 
+                       K12     EQU              0x0d7e8807
+  172 00000000 0898C779 
+                       K13     EQU              0x0898c779
+  173 00000000 0CB19346 
+                       K14     EQU              0x0cb19346
+  174 00000000 09BD7CA0 
+                       K15     EQU              0x09bd7ca0
+  175 00000000 0BCBE352 
+                       K16     EQU              0x0bcbe352
+  176 00000000 0ACF37AD 
+                       K17     EQU              0x0acf37ad
+  177 00000000         
+  178 00000000 F0230AB7 
+                       minus_K02
+                               EQU              0xf0230ab7
+  179 00000000         
+  180 00000000 00B2AA3E 
+                       WL0     EQU              0x00b2aa3e
+  181 00000000 0216A2A2 
+                       WL1     EQU              0x0216a2a2
+  182 00000000 03768962 
+                       WL2     EQU              0x03768962
+  183 00000000 04CFB0E2 
+                       WL3     EQU              0x04cfb0e2
+  184 00000000 061F78AA 
+                       WL4     EQU              0x061f78aa
+  185 00000000 07635284 
+                       WL5     EQU              0x07635284
+  186 00000000 0898C779 
+                       WL6     EQU              0x0898c779
+  187 00000000 09BD7CA0 
+                       WL7     EQU              0x09bd7ca0
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  188 00000000 0ACF37AD 
+                       WL8     EQU              0x0acf37ad
+  189 00000000 0BCBE352 
+                       WL9     EQU              0x0bcbe352
+  190 00000000 0CB19346 
+                       WL10    EQU              0x0cb19346
+  191 00000000 0D7E8807 
+                       WL11    EQU              0x0d7e8807
+  192 00000000 0E313245 
+                       WL12    EQU              0x0e313245
+  193 00000000 0EC835E8 
+                       WL13    EQU              0x0ec835e8
+  194 00000000 0F426CB5 
+                       WL14    EQU              0x0f426cb5
+  195 00000000 0F9EE890 
+                       WL15    EQU              0x0f9ee890
+  196 00000000 0FDCF549 
+                       WL16    EQU              0x0fdcf549
+  197 00000000 0FFC19FD 
+                       WL17    EQU              0x0ffc19fd
+  198 00000000         
+  199 00000000         
+  200 00000000         ;*******************************************************
+                       **********************
+  201 00000000         
+  202 00000000                 THUMB
+  203 00000000         
+  204 00000000                 AREA             |.text|, CODE, READONLY
+  205 00000000                 ALIGN            2
+  206 00000000         
+  207 00000000                 EXPORT           III_imdct_l
+  208 00000000         ;    EXPORT _III_imdct_l
+  209 00000000         
+  210 00000000         III_imdct_l
+                               PROC
+  211 00000000         
+  212 00000000 E92D 4FF4       push             { r2, r4 - r11, lr } ; all call
+                                                            ee saved regs, plus
+                                                             arg3
+  213 00000004         
+  214 00000004 4CA2            ldr              r4, =K08    ; r4 =  K08
+  215 00000006 4DA3            ldr              r5, =K09    ; r5 =  K09
+  216 00000008 F8D0 8010       ldr              r8, [r0, #X4] ; r8 =  X4
+  217 0000000C F8D0 9034       ldr              r9, [r0, #X13] ; r9 =  X13
+  218 00000010 F1C4 0600       rsb              r6, r4, #0  ; r6 = -K08
+  219 00000014 F1C5 0700       rsb              r7, r5, #0  ; r7 = -K09
+  220 00000018         
+  221 00000018 FB84 2308       smull            r2, r3, r4, r8 ; r2..r3  = (X4 
+                                                            * K08)
+  222 0000001C FBC5 2309       smlal            r2, r3, r5, r9 ; r2..r3  = (X4 
+                                                            * K08) + (X13 *  K0
+                                                            9) = ct01
+  223 00000020         
+  224 00000020 FB88 AE05       smull            r10, lr, r8, r5 ; r10..lr = (X4
+                                                             * K09)
+  225 00000024 FBC9 AE06       smlal            r10, lr, r9, r6 ; r10..lr = (X4
+                                                             * K09) + (X13 * -K
+                                                            08) = ct00
+  226 00000028         
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+  227 00000028 F8D0 801C       ldr              r8, [r0, #X7] ; r8 = X7
+  228 0000002C F8D0 9040       ldr              r9, [r0, #X16] ; r9 = X16
+  229 00000030         
+  230 00000030 E92D 440C       push             { r2, r3, r10, lr } ; stack ct0
+                                                            0_h, ct00_l, ct01_h
+                                                            , ct01_l
+  231 00000034         
+  232 00000034 44C8            add              r8, r8, r9  ; r8 = (X7 + X16)
+  233 00000036 F8D0 9004       ldr              r9, [r0, #X1] ; r9 = X1
+  234 0000003A         
+  235 0000003A FBC6 2308       smlal            r2, r3, r6, r8 ; r2..r3  = ct01
+                                                             + ((X7 + X16) * -K
+                                                            08)
+  236 0000003E FBC7 2309       smlal            r2, r3, r7, r9 ; r2..r3 += (X1 
+                                                             * -K09)
+  237 00000042         
+  238 00000042 6A87            ldr              r7, [r0, #X10] ; r7 = X10
+  239 00000044         
+  240 00000044 F1DA 0A00       rsbs             r10, r10, #0
+  241 00000048 F1CE 0E00       rsb              lr, lr, #0  ; r10..lr  = -ct00
+  242 0000004C BF38 F1AE 
+              0E01             subcc            lr, lr, #1
+  243 00000052         
+  244 00000052 FBC5 2307       smlal            r2, r3, r5, r7 ; r2..r3  += (X1
+                                                            0 *  K09) = ct06
+  245 00000056         
+  246 00000056 FBC9 AE06       smlal            r10, lr, r9, r6 ; r10..lr  = -c
+                                                            t00 + ( X1        *
+                                                             -K08)
+  247 0000005A FBC8 AE05       smlal            r10, lr, r8, r5 ; r10..lr +=   
+                                                                  ((X7 + X16) *
+                                                              K09)
+  248 0000005E FBC7 AE04       smlal            r10, lr, r7, r4 ; r10..lr +=   
+                                                                  ( X10       *
+                                                              K08) = ct04
+  249 00000062         
+  250 00000062 E92D 440C       push             { r2, r3, r10, lr } ; stack ct0
+                                                            4_h, ct04_l, ct06_h
+                                                            , ct06_l
+  251 00000066         
+  252 00000066         ;----
+  253 00000066         
+  254 00000066 6807            ldr              r7, [r0, #X0]
+  255 00000068 F8D0 802C       ldr              r8, [r0, #X11]
+  256 0000006C F8D0 9030       ldr              r9, [r0, #X12]
+  257 00000070 EBA7 0708       sub              r7, r7, r8
+  258 00000074 EBA7 0709       sub              r7, r7, r9  ; r7 = (X0 - X11 -X
+                                                            12) = ct14
+  259 00000078         
+  260 00000078 F8D0 900C       ldr              r9,  [r0, #X3]
+  261 0000007C F8D0 8020       ldr              r8,  [r0, #X8]
+  262 00000080 F8D0 B03C       ldr              r11, [r0, #X15]
+  263 00000084 EBA8 0809       sub              r8, r8, r9
+  264 00000088 44D8            add              r8, r8, r11 ; r8 = (X8 - X3 + X
+                                                            15) = ct16
+  265 0000008A         
+  266 0000008A EB07 0B08       add              r11, r7, r8 ; r11 = ct14 + ct16
+                                                             = ct18
+  267 0000008E         
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  268 0000008E FBC6 230B       smlal            r2, r3, r6, r11 ; r2..r3 = ct06
+                                                             + ((X0 - X11 - X3 
+                                                            + X15 + X8 - X12) *
+                                                             -K08)
+  269 00000092         
+  270 00000092 6886            ldr              r6,  [r0, #X2]
+  271 00000094 F8D0 9024       ldr              r9,  [r0, #X9]
+  272 00000098 F8D0 C038       ldr              r12, [r0, #X14]
+  273 0000009C EBA6 0609       sub              r6, r6, r9
+  274 000000A0 EBA6 060C       sub              r6, r6, r12 ; r6 = (X2 - X9 - X
+                                                            14) = ct15
+  275 000000A4         
+  276 000000A4 F8D0 9014       ldr              r9,  [r0, #X5]
+  277 000000A8 F8D0 C018       ldr              r12, [r0, #X6]
+  278 000000AC EBA9 090C       sub              r9, r9, r12
+  279 000000B0 F8D0 C044       ldr              r12, [r0, #X17]
+  280 000000B4 EBA9 090C       sub              r9, r9, r12 ; r9 = (X5 - X6 - X
+                                                            17) = ct17
+  281 000000B8         
+  282 000000B8 EB09 0C06       add              r12, r9, r6 ; r12 = ct15 + ct17
+                                                             = ct19
+  283 000000BC         
+  284 000000BC FBC5 230C       smlal            r2, r3, r5, r12 ; r2..r3 += ((X
+                                                            2 - X9 + X5 - X6 - 
+                                                            X17 - X14) * K09)
+  285 000000C0         
+  286 000000C0 FBCB AE05       smlal            r10, lr, r11, r5 ; r10..lr = ct
+                                                            04 + (ct18 * K09)
+  287 000000C4 FBCC AE04       smlal            r10, lr, r12, r4 ; r10..lr = ct
+                                                            04 + (ct18 * K09) +
+                                                             (ct19 * K08)
+  288 000000C8         
+  289 000000C8 0F12            movs             r2, r2, lsr #28
+  290 000000CA EB42 1203       adc              r2, r2, r3, lsl #4 ; r2 = bits[
+                                                            59..28] of r2..r3
+  291 000000CE 658A            str              r2, [r1, #x22] 
+                                                            ; store result x22
+  292 000000D0         
+  293 000000D0 EA5F 7A1A       movs             r10, r10, lsr #28
+  294 000000D4 EB4A 1A0E       adc              r10, r10, lr, lsl #4 ; r10 = bi
+                                                            ts[59..28] of r10..
+                                                            lr
+  295 000000D8 F8C1 A010       str              r10, [r1, #x4] 
+                                                            ; store result x4
+  296 000000DC         
+  297 000000DC         ;----
+  298 000000DC         
+  299 000000DC BC3C            pop              { r2, r3, r4, r5 } ; r2..r3 = c
+                                                            t06, r4..r5 = ct04 
+                                                            (dont update sp)
+  300 000000DE         
+  301 000000DE         ; r2..r3 = ct06
+  302 000000DE         ; r4..r5 = ct04
+  303 000000DE         ; r6     = ct15
+  304 000000DE         ; r7     = ct14
+  305 000000DE         ; r8     = ct16
+  306 000000DE         ; r9     = ct17
+  307 000000DE         ; r10    = .
+  308 000000DE         ; r11    = .
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+  309 000000DE         ; r12    = .
+  310 000000DE         ; lr     = .
+  311 000000DE         
+  312 000000DE F8DF A1B8       ldr              r10, =K03   ; r10 = K03
+  313 000000E2 F8DF E1B8       ldr              lr,  =K15   ; lr  = K15
+  314 000000E6         
+  315 000000E6 FBCA 2307       smlal            r2, r3, r10, r7 ; r2..r3 = ct06
+                                                             + (ct14 * K03)
+  316 000000EA FBCE 4507       smlal            r4, r5,  lr, r7 ; r4..r5 = ct04
+                                                             + (ct14 * K15)
+  317 000000EE         
+  318 000000EE F8DF C1B0       ldr              r12, =K14   ; r12 =  K14
+  319 000000F2 F1CA 0A00       rsb              r10, r10, #0 ; r10 = -K03
+  320 000000F6         
+  321 000000F6 FBCE 2306       smlal            r2, r3,  lr, r6 ; r2..r3 += (ct
+                                                            15 *  K15)
+  322 000000FA FBCA 4506       smlal            r4, r5, r10, r6 ; r4..r5 += (ct
+                                                            15 * -K03)
+  323 000000FE FBCC 2308       smlal            r2, r3, r12, r8 ; r2..r3 += (ct
+                                                            16 *  K14)
+  324 00000102         
+  325 00000102 F8DF B1A0       ldr              r11, =minus_K02 ; r11 = -K02
+  326 00000106 F1CC 0C00       rsb              r12, r12, #0 ; r12 = -K14
+  327 0000010A         
+  328 0000010A FBCC 4509       smlal            r4, r5, r12, r9 ; r4..r5 += (ct
+                                                            17 * -K14)
+  329 0000010E FBCB 2309       smlal            r2, r3, r11, r9 ; r2..r3 += (ct
+                                                            17 * -K02)
+  330 00000112 FBCB 4508       smlal            r4, r5, r11, r8 ; r4..r5 += (ct
+                                                            16 * -K02)
+  331 00000116         
+  332 00000116 0F12            movs             r2, r2, lsr #28
+  333 00000118 EB42 1203       adc              r2, r2, r3, lsl #4 ; r2 = bits[
+                                                            59..28] of r2..r3
+  334 0000011C 61CA            str              r2, [r1, #x7] ; store result x7
+                                                            
+  335 0000011E         
+  336 0000011E 0F24            movs             r4, r4, lsr #28
+  337 00000120 EB44 1405       adc              r4, r4, r5, lsl #4 ; r4 = bits[
+                                                            59..28] of r4..r5
+  338 00000124 604C            str              r4, [r1, #x1] ; store result x1
+                                                            
+  339 00000126         
+  340 00000126         ;----
+  341 00000126         
+  342 00000126 BC3C            pop              { r2, r3, r4, r5 } ; r2..r3 = c
+                                                            t06, r4..r5 = ct04 
+                                                            (dont update sp)
+  343 00000128         
+  344 00000128         ; r2..r3 = ct06
+  345 00000128         ; r4..r5 = ct04
+  346 00000128         ; r6     = ct15
+  347 00000128         ; r7     = ct14
+  348 00000128         ; r8     = ct16
+  349 00000128         ; r9     = ct17
+  350 00000128         ; r10    = -K03
+  351 00000128         ; r11    = -K02
+  352 00000128         ; r12    = -K14
+  353 00000128         ; lr     =  K15
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  354 00000128         
+  355 00000128 4252            rsbs             r2, r2, #0
+  356 0000012A F1C3 0300       rsb              r3, r3, #0  ; r2..r3 = -ct06
+  357 0000012E BF38 1E5B       subcc            r3, r3, #1
+  358 00000132         
+  359 00000132 FBCC 2307       smlal            r2, r3, r12, r7 ; r2..r3  = -ct
+                                                            06 + (ct14 * -K14)
+  360 00000136 FBCA 2308       smlal            r2, r3, r10, r8 ; r2..r3 += (ct
+                                                            16 * -K03)
+  361 0000013A         
+  362 0000013A FBCC 4506       smlal            r4, r5, r12, r6 ; r4..r5  =  ct
+                                                            04 + (ct15 * -K14)
+  363 0000013E FBCA 4509       smlal            r4, r5, r10, r9 ; r4..r5 += (ct
+                                                            17 * -K03)
+  364 00000142 FBCE 4508       smlal            r4, r5,  lr, r8 ; r4..r5 += (ct
+                                                            16 *  K15)
+  365 00000146 FBCB 4507       smlal            r4, r5, r11, r7 ; r4..r5 += (ct
+                                                            14 * -K02)
+  366 0000014A         
+  367 0000014A F1CE 0E00       rsb              lr, lr, #0  ; lr  = -K15
+  368 0000014E F1CB 0B00       rsb              r11, r11, #0 ; r11 =  K02
+  369 00000152         
+  370 00000152 FBCE 2309       smlal            r2, r3,  lr, r9 ; r2..r3 += (ct
+                                                            17 * -K15)
+  371 00000156 FBCB 2306       smlal            r2, r3, r11, r6 ; r2..r3 += (ct
+                                                            15 *  K02)
+  372 0000015A         
+  373 0000015A 0F24            movs             r4, r4, lsr #28
+  374 0000015C EB44 1405       adc              r4, r4, r5, lsl #4 ; r4 = bits[
+                                                            59..28] of r4..r5
+  375 00000160 664C            str              r4, [r1, #x25] 
+                                                            ; store result x25
+  376 00000162         
+  377 00000162 0F12            movs             r2, r2, lsr #28
+  378 00000164 EB42 1203       adc              r2, r2, r3, lsl #4 ; r2 = bits[
+                                                            59..28] of r2..r3
+  379 00000168 64CA            str              r2, [r1, #x19] 
+                                                            ; store result x19
+  380 0000016A         
+  381 0000016A         ;----
+  382 0000016A         
+  383 0000016A 9A04            ldr              r2, [sp, #16] ; r2 = ct01_l
+  384 0000016C 9B05            ldr              r3, [sp, #20] ; r3 = ct01_h
+  385 0000016E         
+  386 0000016E 6846            ldr              r6, [r0, #X1]
+  387 00000170 F8D0 801C       ldr              r8, [r0, #X7]
+  388 00000174 F8D0 9028       ldr              r9, [r0, #X10]
+  389 00000178 6C07            ldr              r7, [r0, #X16]
+  390 0000017A         
+  391 0000017A 4252            rsbs             r2, r2, #0
+  392 0000017C F1C3 0300       rsb              r3, r3, #0  ; r2..r3 = -ct01
+  393 00000180 BF38 1E5B       subcc            r3, r3, #1
+  394 00000184         
+  395 00000184 4614            mov              r4, r2
+  396 00000186 461D            mov              r5, r3      ; r4..r5 = -ct01
+  397 00000188         
+  398 00000188         ; r2..r3 = -ct01
+  399 00000188         ; r4..r5 = -ct01
+  400 00000188         ; r6     =  X1
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+  401 00000188         ; r7     =  X16
+  402 00000188         ; r8     =  X7
+  403 00000188         ; r9     =  X10
+  404 00000188         ; r10    = -K03
+  405 00000188         ; r11    =  K02
+  406 00000188         ; r12    = -K14
+  407 00000188         ; lr     = -K15
+  408 00000188         
+  409 00000188 FBCC 4507       smlal            r4, r5, r12, r7 ; r4..r5 = -ct0
+                                                            1 + (X16 * -K14)
+  410 0000018C FBCE 2309       smlal            r2, r3,  lr, r9 ; r2..r3 = -ct0
+                                                            1 + (X10 * -K15)
+  411 00000190         
+  412 00000190 FBCA 4508       smlal            r4, r5, r10, r8 ; r4..r5 += (X7
+                                                              * -K03)
+  413 00000194 FBCA 2307       smlal            r2, r3, r10, r7 ; r2..r3 += (X1
+                                                            6 * -K03)
+  414 00000198         
+  415 00000198 FBCB 4509       smlal            r4, r5, r11, r9 ; r4..r5 += (X1
+                                                            0 *  K02)
+  416 0000019C FBCC 2308       smlal            r2, r3, r12, r8 ; r2..r3 += (X7
+                                                              * -K14)
+  417 000001A0         
+  418 000001A0 F1CE 0E00       rsb              lr, lr, #0  ; lr  =  K15
+  419 000001A4 F1CB 0B00       rsb              r11, r11, #0 ; r11 = -K02
+  420 000001A8         
+  421 000001A8 FBCE 4506       smlal            r4, r5,  lr, r6 ; r4..r5 += (X1
+                                                              *  K15) = ct05
+  422 000001AC FBCB 2306       smlal            r2, r3, r11, r6 ; r2..r3 += (X1
+                                                              * -K02) = ct03
+  423 000001B0         
+  424 000001B0 B43C            push             { r2, r3, r4, r5 } ; stack ct05
+                                                            _h, ct05_l, ct03_h,
+                                                             ct03_l
+  425 000001B2         
+  426 000001B2 4264            rsbs             r4, r4, #0
+  427 000001B4 F1C5 0500       rsb              r5, r5, #0  ; r4..r5 = -ct05
+  428 000001B8 BF38 1E6D       subcc            r5, r5, #1
+  429 000001BC         
+  430 000001BC B430            push             { r4, r5 }  ; stack -ct05_h, -c
+                                                            t05_l
+  431 000001BE         
+  432 000001BE 9A0C            ldr              r2, [sp, #48] ; r2 = ct00_l
+  433 000001C0 9B0D            ldr              r3, [sp, #52] ; r3 = ct00_h
+  434 000001C2         
+  435 000001C2 F1CA 0A00       rsb              r10, r10, #0 ; r10 = K03
+  436 000001C6         
+  437 000001C6 4254            rsbs             r4, r2, #0
+  438 000001C8 F1C3 0500       rsb              r5, r3, #0  ; r4..r5 = -ct00
+  439 000001CC BF38 1E6D       subcc            r5, r5, #1
+  440 000001D0         
+  441 000001D0         ; r2..r3 =  ct00
+  442 000001D0         ; r4..r5 = -ct00
+  443 000001D0         ; r6     =  X1
+  444 000001D0         ; r7     =  X16
+  445 000001D0         ; r8     =  X7
+  446 000001D0         ; r9     =  X10
+  447 000001D0         ; r10    =  K03
+  448 000001D0         ; r11    = -K02
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+  449 000001D0         ; r12    = -K14
+  450 000001D0         ; lr     =  K15
+  451 000001D0         
+  452 000001D0 FBCA 4506       smlal            r4, r5, r10, r6 ; r4..r5 = -ct0
+                                                            0 + (X1  * K03)
+  453 000001D4 FBCA 2309       smlal            r2, r3, r10, r9 ; r2..r3 =  ct0
+                                                            0 + (X10 * K03)
+  454 000001D8         
+  455 000001D8 FBCC 4509       smlal            r4, r5, r12, r9 ; r4..r5 += (X1
+                                                            0 * -K14)
+  456 000001DC FBCC 2306       smlal            r2, r3, r12, r6 ; r2..r3 += (X1
+                                                              * -K14)
+  457 000001E0         
+  458 000001E0 FBCB 4507       smlal            r4, r5, r11, r7 ; r4..r5 += (X1
+                                                            6 * -K02)
+  459 000001E4 FBCE 4508       smlal            r4, r5,  lr, r8 ; r4..r5 += (X7
+                                                              *  K15) = ct07
+  460 000001E8         
+  461 000001E8 F1CE 0E00       rsb              lr, lr, #0  ; lr  = -K15
+  462 000001EC F1CB 0B00       rsb              r11, r11, #0 ; r11 =  K02
+  463 000001F0         
+  464 000001F0 FBCB 2308       smlal            r2, r3, r11, r8 ; r2..r3 += (X7
+                                                              *  K02)
+  465 000001F4 FBCE 2307       smlal            r2, r3,  lr, r7 ; r2..r3 += (X1
+                                                            6 * -K15) = ct02
+  466 000001F8         
+  467 000001F8 4266            rsbs             r6, r4, #0
+  468 000001FA F1C5 0700       rsb              r7, r5, #0  ; r6..r7 = -ct07
+  469 000001FE BF38 1E7F       subcc            r7, r7, #1
+  470 00000202         
+  471 00000202 B4FC            push             { r2 - r7 } ; stack -ct07_h, -c
+                                                            t07_l, ct07_h, ct07
+                                                            _l, ct02_h, ct02_l
+  472 00000204         
+  473 00000204         
+  474 00000204         ;----
+  475 00000204         
+  476 00000204 A227            add              r2, pc, #(imdct36_long_karray-.
+-8) 
+                                                            ; r2 = base address
+                                                             of Knn array (PIC 
+                                                            safe ?)
+  477 00000206         
+  478 00000206         
+  479 00000206         loop
+  480 00000206 F8D0 C000       ldr              r12, [r0, #X0]
+  481 0000020A         
+  482 0000020A E8B2 0FE0       ldmia            r2!, { r5 - r11 } ; first 7 wor
+                                                            ds from Karray elem
+                                                            ent
+  483 0000020E         
+  484 0000020E FB85 340C       smull            r3, r4, r5, r12 
+                                                            ; sum =  (Kxx * X0)
+                                                            
+  485 00000212 F8D0 C008       ldr              r12, [r0, #X2]
+  486 00000216 68C5            ldr              r5,  [r0, #X3]
+  487 00000218 FBC6 340C       smlal            r3, r4, r6, r12 
+                                                            ; sum += (Kxx * X2)
+                                                            
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+  488 0000021C F8D0 C014       ldr              r12, [r0, #X5]
+  489 00000220 6986            ldr              r6,  [r0, #X6]
+  490 00000222 FBC7 3405       smlal            r3, r4, r7, r5 
+                                                            ; sum += (Kxx * X3)
+                                                            
+  491 00000226 FBC8 340C       smlal            r3, r4, r8, r12 
+                                                            ; sum += (Kxx * X5)
+                                                            
+  492 0000022A F8D0 C020       ldr              r12, [r0, #X8]
+  493 0000022E 6A45            ldr              r5,  [r0, #X9]
+  494 00000230 FBC9 3406       smlal            r3, r4, r9, r6 
+                                                            ; sum += (Kxx * X6)
+                                                            
+  495 00000234 FBCA 340C       smlal            r3, r4, r10, r12 
+                                                            ; sum += (Kxx * X8)
+                                                            
+  496 00000238 FBCB 3405       smlal            r3, r4, r11, r5 
+                                                            ; sum += (Kxx * X9)
+                                                            
+  497 0000023C         
+  498 0000023C E8B2 07E0       ldmia            r2!, { r5 - r10 } ; final 6 wor
+                                                            ds from Karray elem
+                                                            ent
+  499 00000240         
+  500 00000240 F8D0 B02C       ldr              r11, [r0, #X11]
+  501 00000244 F8D0 C030       ldr              r12, [r0, #X12]
+  502 00000248 FBC5 340B       smlal            r3, r4, r5, r11 ; sum += (Kxx *
+                                                             X11)
+  503 0000024C F8D0 B038       ldr              r11, [r0, #X14]
+  504 00000250 6BC5            ldr              r5,  [r0, #X15]
+  505 00000252 FBC6 340C       smlal            r3, r4, r6, r12 ; sum += (Kxx *
+                                                             X12)
+  506 00000256 FBC7 340B       smlal            r3, r4, r7, r11 ; sum += (Kxx *
+                                                             X14)
+  507 0000025A F8D0 B044       ldr              r11, [r0, #X17]
+  508 0000025E FBC8 3405       smlal            r3, r4, r8, r5 ; sum += (Kxx * 
+                                                            X15)
+  509 00000262 FBC9 340B       smlal            r3, r4, r9, r11 ; sum += (Kxx *
+                                                             X17)
+  510 00000266         
+  511 00000266 EB0D 451A       add              r5, sp, r10, lsr #16 ; create i
+                                                            ndex back into stac
+                                                            k for required ctxx
+                                                            
+  512 0000026A         
+  513 0000026A E895 00C0       ldmia            r5, { r6, r7 } ; r6..r7 = ctxx
+  514 0000026E         
+  515 0000026E EA4F 480A       mov              r8, r10, lsl #16 ; push ctxx in
+                                                            dex off the top end
+                                                            
+  516 00000272         
+  517 00000272 199B            adds             r3, r3, r6  ; add low words
+  518 00000274 EB44 0407       adc              r4, r4, r7  ; add high words, w
+                                                            ith carry
+  519 00000278 0F1B            movs             r3, r3, lsr #28
+  520 0000027A EB43 1304       adc              r3, r3, r4, lsl #4 ; r3 = bits[
+                                                            59..28] of r3..r4
+  521 0000027E         
+  522 0000027E EA4F 6C18       mov              r12, r8, lsr #24
+
+
+
+ARM Macro Assembler    Page 14 
+
+
+  523 00000282 F841 300C       str              r3, [r1, r12] ; push completion
+                                                             flag off the botto
+                                                            m end
+  524 00000286         
+  525 00000286 EA5F 2808       movs             r8, r8, lsl #8 ; push result lo
+                                                            cation index off th
+                                                            e top end
+  526 0000028A D0BC            beq              loop        ; loop back if comp
+                                                            letion flag not set
+                                                            
+  527 0000028C E144            b                imdct_l_windowing ; branch to w
+                                                            indowing stage if l
+                                                            ooping finished
+  528 0000028E         
+  529 0000028E 00 00           ALIGN            4
+  530 00000290         
+  531 00000290 0EC835E8 
+              061F78AA 
+              0216A2A2 
+              09BD7CA0 
+              0CB19346 
+              F0230AB7         LTORG
+  532 000002A8         
+  533 000002A8         imdct36_long_karray
+  534 000002A8         
+  535 000002A8 0ACF37AD 
+              F7673887 
+              0E313245 
+              F0BD934B 
+              FC89769E 
+              00B2AA3E 
+              F003E603 
+              0F9EE890 
+              FB304F1E 
+              07635284 
+              0D7E8807 
+              F4341CAE 
+              00000000         DCD              K17, -K13,  K10, -K06, -K05,  K
+01, -K00,  K04, -K07,  K11,  K12, -K16, 0x00000000
+  536 000002DC 0898C779 
+              04CFB0E2 
+              0BCBE352 
+              00B2AA3E 
+              0E313245 
+              FC89769E 
+              0F9EE890 
+              F89CAD7C 
+              0FFC19FD 
+              F530C853 
+              0F426CB5 
+              F28177F9 
+              00200800         DCD              K13,  K07,  K16,  K01,  K10, -K
+05,  K04, -K11,  K00, -K17,  K06, -K12, 0x00200800
+  537 00000310 07635284 
+              0ACF37AD 
+              03768962 
+              0D7E8807 
+              FF4D55C2 
+              0F426CB5 
+
+
+
+ARM Macro Assembler    Page 15 
+
+
+              FB304F1E 
+              0FFC19FD 
+              F7673887 
+              0F9EE890 
+              F4341CAE 
+              0E313245 
+              00200C00         DCD              K11,  K17,  K05,  K12, -K01,  K
+06, -K07,  K00, -K13,  K04, -K16,  K10, 0x00200c00
+  538 00000344 04CFB0E2 
+              0FFC19FD 
+              F28177F9 
+              03768962 
+              F4341CAE 
+              F1CECDBB 
+              07635284 
+              F530C853 
+              0F9EE890 
+              0898C779 
+              00B2AA3E 
+              0F426CB5 
+              00001400         DCD              K07,  K00, -K12,  K05, -K16, -K
+10,  K11, -K17,  K04,  K13,  K01,  K06, 0x00001400
+  539 00000378 03768962 
+              0E313245 
+              F003E603 
+              F530C853 
+              04CFB0E2 
+              F7673887 
+              0D7E8807 
+              0F426CB5 
+              F4341CAE 
+              00B2AA3E 
+              F89CAD7C 
+              F0611770 
+              00181800         DCD              K05,  K10, -K00, -K17,  K07, -K
+13,  K12,  K06, -K16,  K01, -K11, -K04, 0x00181800
+  540 000003AC 00B2AA3E 
+              03768962 
+              FB304F1E 
+              F89CAD7C 
+              0898C779 
+              0ACF37AD 
+              F4341CAE 
+              F28177F9 
+              0E313245 
+              0F426CB5 
+              F0611770 
+              F003E603 
+              00102000         DCD              K01,  K05, -K07, -K11,  K13,  K
+17, -K16, -K12,  K10,  K06, -K04, -K00, 0x00102000
+  541 000003E0 F4341CAE 
+              0D7E8807 
+              F89CAD7C 
+              04CFB0E2 
+              0F9EE890 
+              F003E603 
+              FF4D55C2 
+              03768962 
+              F0BD934B 
+
+
+
+ARM Macro Assembler    Page 16 
+
+
+              0E313245 
+              0898C779 
+              F530C853 
+              00284800         DCD              -K16,  K12, -K11,  K07,  K04, -
+K00, -K01,  K05, -K06,  K10,  K13, -K17, 0x00284800
+  542 00000414 F28177F9 
+              0F426CB5 
+              0ACF37AD 
+              F003E603 
+              F89CAD7C 
+              0F9EE890 
+              03768962 
+              F1CECDBB 
+              00B2AA3E 
+              0BCBE352 
+              FB304F1E 
+              F7673887 
+              00085000         DCD              -K12,  K06,  K17, -K00, -K11,  
+K04,  K05, -K10,  K01,  K16, -K07, -K13, 0x00085000
+  543 00000448 F1CECDBB 
+              0BCBE352 
+              0F9EE890 
+              F7673887 
+              F003E603 
+              04CFB0E2 
+              0F426CB5 
+              FF4D55C2 
+              F28177F9 
+              FC89769E 
+              0ACF37AD 
+              07635284 
+              00105400         DCD              -K10,  K16,  K04, -K13, -K00,  
+K07,  K06, -K01, -K12, -K05,  K17,  K11, 0x00105400
+  544 0000047C F0BD934B 
+              FF4D55C2 
+              0898C779 
+              0F9EE890 
+              0ACF37AD 
+              F89CAD7C 
+              F1CECDBB 
+              F4341CAE 
+              FC89769E 
+              0D7E8807 
+              0FFC19FD 
+              04CFB0E2 
+              00185C00         DCD              -K06, -K01,  K13,  K04,  K17, -
+K11, -K10, -K16, -K05,  K12,  K00,  K07, 0x00185c00
+  545 000004B0 F0611770 
+              F89CAD7C 
+              FF4D55C2 
+              0BCBE352 
+              0F426CB5 
+              0D7E8807 
+              0898C779 
+              FB304F1E 
+              F530C853 
+              F003E603 
+              F1CECDBB 
+              FC89769E 
+
+
+
+ARM Macro Assembler    Page 17 
+
+
+              00006000         DCD              -K04, -K11, -K01,  K16,  K06,  
+K12,  K13, -K07, -K17, -K00, -K10, -K05, 0x00006000
+  546 000004E4 F003E603 
+              F0611770 
+              F0BD934B 
+              F1CECDBB 
+              F28177F9 
+              F4341CAE 
+              F530C853 
+              F7673887 
+              F89CAD7C 
+              FB304F1E 
+              FC89769E 
+              FF4D55C2 
+              00206801         DCD              -K00, -K04, -K06, -K10, -K12, -
+K16, -K17, -K13, -K11, -K07, -K05, -K01, 0x00206801
+  547 00000518         
+  548 00000518         
+  549 00000518         ;----
+  550 00000518         ;-------------------------------------------------------
+                       ------------------
+  551 00000518         ;----
+  552 00000518         
+  553 00000518         imdct_l_windowing
+  554 00000518         
+  555 00000518 F8DD B050       ldr              r11, [sp, #80] ; fetch function
+                                                             parameter 3 from o
+                                                            ut of the stack
+  556 0000051C E8B1 03FD       ldmia            r1!, { r0, r2 - r9 } ; load 9 w
+                                                            ords from x0, updat
+                                                            e pointer
+  557 00000520         
+  558 00000520         ; r0     = x0
+  559 00000520         ; r1     = &x[9]
+  560 00000520         ; r2     = x1
+  561 00000520         ; r3     = x2
+  562 00000520         ; r4     = x3
+  563 00000520         ; r5     = x4
+  564 00000520         ; r6     = x5
+  565 00000520         ; r7     = x6
+  566 00000520         ; r8     = x7
+  567 00000520         ; r9     = x8
+  568 00000520         ; r10    = .
+  569 00000520         ; r11    = window mode: (0 == normal), (1 == start block
+                       ), (3 == stop block)
+  570 00000520         ; r12    = .
+  571 00000520         ; lr     = .
+  572 00000520         
+  573 00000520 F1BB 0F03       cmp              r11, #BLOCK_MODE_STOP 
+                                                            ; setup flags
+  574 00000524 F1C0 0A00       rsb              r10, r0, #0 ; r10 = -x0 (DONT c
+                                                            hange flags !!)
+  575 00000528 F000 8137       beq.w            stop_block_x0_to_x17
+  576 0000052C         
+  577 0000052C         
+  578 0000052C         ; start and normal blocks are treated the same for x[0].
+                       .x[17]
+  579 0000052C         
+  580 0000052C         normal_block_x0_to_x17
+
+
+
+ARM Macro Assembler    Page 18 
+
+
+  581 0000052C         
+  582 0000052C F8DF C384       ldr              r12, =WL9   ; r12 = window_l[9]
+                                                            
+  583 00000530         
+  584 00000530 F1C9 0000       rsb              r0,  r9, #0 ; r0  = -x8
+  585 00000534 F1C2 0900       rsb              r9,  r2, #0 ; r9  = -x1
+  586 00000538 F1C8 0200       rsb              r2,  r8, #0 ; r2  = -x7
+  587 0000053C F1C3 0800       rsb              r8,  r3, #0 ; r8  = -x2
+  588 00000540 F1C7 0300       rsb              r3,  r7, #0 ; r3  = -x6
+  589 00000544 F1C4 0700       rsb              r7,  r4, #0 ; r7  = -x3
+  590 00000548 F1C6 0400       rsb              r4,  r6, #0 ; r4  = -x5
+  591 0000054C F1C5 0600       rsb              r6,  r5, #0 ; r6  = -x4
+  592 00000550         
+  593 00000550         ; r0     = -x8
+  594 00000550         ; r1     = &x[9]
+  595 00000550         ; r2     = -x7
+  596 00000550         ; r3     = -x6
+  597 00000550         ; r4     = -x5
+  598 00000550         ; r5     = .
+  599 00000550         ; r6     = -x4
+  600 00000550         ; r7     = -x3
+  601 00000550         ; r8     = -x2
+  602 00000550         ; r9     = -x1
+  603 00000550         ; r10    = -x0
+  604 00000550         ; r11    = window mode: (0 == normal), (1 == start block
+                       ), (3 == stop block)
+  605 00000550         ; r12    = window_l[9]
+  606 00000550         ; lr     = .
+  607 00000550         
+  608 00000550 FB8C 5E00       smull            r5, lr, r12, r0 ; r5..lr = (win
+                                                            dow_l[9]  * (x[9]  
+                                                            == -x[8]))
+  609 00000554 F85F C2B8       ldr              r12, =WL10  ; r12 = window_l[10
+                                                            ]
+  610 00000558 0F2D            movs             r5, r5, lsr #28
+  611 0000055A EB45 100E       adc              r0, r5, lr, lsl #4 ; r0 = bits[
+                                                            59..28] of windowed
+                                                             x9
+  612 0000055E         
+  613 0000055E FB8C 5E02       smull            r5, lr, r12, r2 ; r5..lr = (win
+                                                            dow_l[10] * (x[10] 
+                                                            == -x[7]))
+  614 00000562 F8DF C358       ldr              r12, =WL11  ; r12 = window_l[11
+                                                            ]
+  615 00000566 0F2D            movs             r5, r5, lsr #28
+  616 00000568 EB45 120E       adc              r2, r5, lr, lsl #4 ; r2 = bits[
+                                                            59..28] of windowed
+                                                             x10
+  617 0000056C         
+  618 0000056C FB8C 5E03       smull            r5, lr, r12, r3 ; r5..lr = (win
+                                                            dow_l[11] * (x[11] 
+                                                            == -x[6]))
+  619 00000570 F8DF C34C       ldr              r12, =WL12  ; r12 = window_l[12
+                                                            ]
+  620 00000574 0F2D            movs             r5, r5, lsr #28
+  621 00000576 EB45 130E       adc              r3, r5, lr, lsl #4 ; r3 = bits[
+                                                            59..28] of windowed
+                                                             x11
+  622 0000057A         
+
+
+
+ARM Macro Assembler    Page 19 
+
+
+  623 0000057A FB8C 5E04       smull            r5, lr, r12, r4 ; r5..lr = (win
+                                                            dow_l[12] * (x[12] 
+                                                            == -x[5]))
+  624 0000057E F85F C2F0       ldr              r12, =WL13  ; r12 = window_l[13
+                                                            ]
+  625 00000582 0F2D            movs             r5, r5, lsr #28
+  626 00000584 EB45 140E       adc              r4, r5, lr, lsl #4 ; r4 = bits[
+                                                            59..28] of windowed
+                                                             x12
+  627 00000588         
+  628 00000588 FB8C 5E06       smull            r5, lr, r12, r6 ; r5..lr = (win
+                                                            dow_l[13] * (x[13] 
+                                                            == -x[4]))
+  629 0000058C F8DF C338       ldr              r12, =WL14  ; r12 = window_l[14
+                                                            ]
+  630 00000590 0F2D            movs             r5, r5, lsr #28
+  631 00000592 EB45 160E       adc              r6, r5, lr, lsl #4 ; r6 = bits[
+                                                            59..28] of windowed
+                                                             x13
+  632 00000596         
+  633 00000596 FB8C 5E07       smull            r5, lr, r12, r7 ; r5..lr = (win
+                                                            dow_l[14] * (x[14] 
+                                                            == -x[3]))
+  634 0000059A F8DF C330       ldr              r12, =WL15  ; r12 = window_l[15
+                                                            ]
+  635 0000059E 0F2D            movs             r5, r5, lsr #28
+  636 000005A0 EB45 170E       adc              r7, r5, lr, lsl #4 ; r7 = bits[
+                                                            59..28] of windowed
+                                                             x14
+  637 000005A4         
+  638 000005A4 FB8C 5E08       smull            r5, lr, r12, r8 ; r5..lr = (win
+                                                            dow_l[15] * (x[15] 
+                                                            == -x[2]))
+  639 000005A8 F8DF C324       ldr              r12, =WL16  ; r12 = window_l[16
+                                                            ]
+  640 000005AC 0F2D            movs             r5, r5, lsr #28
+  641 000005AE EB45 180E       adc              r8, r5, lr, lsl #4 ; r8 = bits[
+                                                            59..28] of windowed
+                                                             x15
+  642 000005B2         
+  643 000005B2 FB8C 5E09       smull            r5, lr, r12, r9 ; r5..lr = (win
+                                                            dow_l[16] * (x[16] 
+                                                            == -x[1]))
+  644 000005B6 F8DF C31C       ldr              r12, =WL17  ; r12 = window_l[17
+                                                            ]
+  645 000005BA 0F2D            movs             r5, r5, lsr #28
+  646 000005BC EB45 190E       adc              r9, r5, lr, lsl #4 ; r9 = bits[
+                                                            59..28] of windowed
+                                                             x16
+  647 000005C0         
+  648 000005C0 FB8C 5E0A       smull            r5, lr, r12, r10 ; r5..lr = (wi
+                                                            ndow_l[17] * (x[17]
+                                                             == -x[0]))
+  649 000005C4 F8DF C310       ldr              r12, =WL0   ; r12 = window_l[0]
+                                                            
+  650 000005C8 0F2D            movs             r5, r5, lsr #28
+  651 000005CA EB45 1A0E       adc              r10, r5, lr, lsl #4 ; r10 = bit
+                                                            s[59..28] of window
+                                                            ed x17
+
+
+
+ARM Macro Assembler    Page 20 
+
+
+  652 000005CE         
+  653 000005CE         
+  654 000005CE E881 07DD       stmia            r1,  { r0, r2 - r4, r6 - r10 } 
+                                                            ; store windowed x[
+                                                            9] .. x[17]
+  655 000005D2 E931 03FD       ldmdb            r1!, { r0, r2 - r9 } ; load 9 w
+                                                            ords downto (and in
+                                                            cluding) x0
+  656 000005D6         
+  657 000005D6         
+  658 000005D6 FB8C AE00       smull            r10, lr, r12, r0 ; r10..lr = (w
+                                                            indow_l[0] * x[0])
+  659 000005DA F85F C344       ldr              r12, =WL1   ; r12 = window_l[1]
+                                                            
+  660 000005DE EA5F 7A1A       movs             r10, r10, lsr #28
+  661 000005E2 EB4A 100E       adc              r0, r10, lr, lsl #4 ; r0 = bits
+                                                            [59..28] of windowe
+                                                            d x0
+  662 000005E6         
+  663 000005E6 FB8C AE02       smull            r10, lr, r12, r2 ; r10..lr = (w
+                                                            indow_l[1] * x[1])
+  664 000005EA F8DF C2F4       ldr              r12, =WL2   ; r12 = window_l[2]
+                                                            
+  665 000005EE EA5F 7A1A       movs             r10, r10, lsr #28
+  666 000005F2 EB4A 120E       adc              r2, r10, lr, lsl #4 ; r2 = bits
+                                                            [59..28] of windowe
+                                                            d x1
+  667 000005F6         
+  668 000005F6 FB8C AE03       smull            r10, lr, r12, r3 ; r10..lr = (w
+                                                            indow_l[2] * x[2])
+  669 000005FA F8DF C2E8       ldr              r12, =WL3   ; r12 = window_l[3]
+                                                            
+  670 000005FE EA5F 7A1A       movs             r10, r10, lsr #28
+  671 00000602 EB4A 130E       adc              r3, r10, lr, lsl #4 ; r3 = bits
+                                                            [59..28] of windowe
+                                                            d x2
+  672 00000606         
+  673 00000606 FB8C AE04       smull            r10, lr, r12, r4 ; r10..lr = (w
+                                                            indow_l[3] * x[3])
+  674 0000060A F85F C378       ldr              r12, =WL4   ; r12 = window_l[4]
+                                                            
+  675 0000060E EA5F 7A1A       movs             r10, r10, lsr #28
+  676 00000612 EB4A 140E       adc              r4, r10, lr, lsl #4 ; r4 = bits
+                                                            [59..28] of windowe
+                                                            d x3
+  677 00000616         
+  678 00000616 FB8C AE05       smull            r10, lr, r12, r5 ; r10..lr = (w
+                                                            indow_l[4] * x[4])
+  679 0000061A F8DF C2D0       ldr              r12, =WL5   ; r12 = window_l[5]
+                                                            
+  680 0000061E EA5F 7A1A       movs             r10, r10, lsr #28
+  681 00000622 EB4A 150E       adc              r5, r10, lr, lsl #4 ; r5 = bits
+                                                            [59..28] of windowe
+                                                            d x4
+  682 00000626         
+  683 00000626 FB8C AE06       smull            r10, lr, r12, r6 ; r10..lr = (w
+                                                            indow_l[5] * x[5])
+  684 0000062A F8DF C2C4       ldr              r12, =WL6   ; r12 = window_l[6]
+                                                            
+
+
+
+ARM Macro Assembler    Page 21 
+
+
+  685 0000062E EA5F 7A1A       movs             r10, r10, lsr #28
+  686 00000632 EB4A 160E       adc              r6, r10, lr, lsl #4 ; r6 = bits
+                                                            [59..28] of windowe
+                                                            d x5
+  687 00000636         
+  688 00000636 FB8C AE07       smull            r10, lr, r12, r7 ; r10..lr = (w
+                                                            indow_l[6] * x[6])
+  689 0000063A F85F C3A0       ldr              r12, =WL7   ; r12 = window_l[7]
+                                                            
+  690 0000063E EA5F 7A1A       movs             r10, r10, lsr #28
+  691 00000642 EB4A 170E       adc              r7, r10, lr, lsl #4 ; r7 = bits
+                                                            [59..28] of windowe
+                                                            d x6
+  692 00000646         
+  693 00000646 FB8C AE08       smull            r10, lr, r12, r8 ; r10..lr = (w
+                                                            indow_l[7] * x[7])
+  694 0000064A F8DF C2AC       ldr              r12, =WL8   ; r12 = window_l[8]
+                                                            
+  695 0000064E EA5F 7A1A       movs             r10, r10, lsr #28
+  696 00000652 EB4A 180E       adc              r8, r10, lr, lsl #4 ; r8 = bits
+                                                            [59..28] of windowe
+                                                            d x7
+  697 00000656         
+  698 00000656 FB8C AE09       smull            r10, lr, r12, r9 ; r10..lr = (w
+                                                            indow_l[8] * x[8])
+  699 0000065A EA5F 7A1A       movs             r10, r10, lsr #28
+  700 0000065E EB4A 190E       adc              r9, r10, lr, lsl #4 ; r9 = bits
+                                                            [59..28] of windowe
+                                                            d x8
+  701 00000662         
+  702 00000662 E881 03FD       stmia            r1, { r0, r2 - r9 } ; store win
+                                                            dowed x[0] .. x[8]
+  703 00000666         
+  704 00000666 F1BB 0F01       cmp              r11, #BLOCK_MODE_START
+  705 0000066A F000 80DF       beq.w            start_block_x18_to_x35
+  706 0000066E         
+  707 0000066E         
+  708 0000066E         ;----
+  709 0000066E         
+  710 0000066E         
+  711 0000066E         normal_block_x18_to_x35
+  712 0000066E         
+  713 0000066E F8DF B274       ldr              r11, =WL3   ; r11 = window_l[3]
+                                                            
+  714 00000672 F85F C3E0       ldr              r12, =WL4   ; r12 = window_l[4]
+                                                            
+  715 00000676         
+  716 00000676 F101 0148       add              r1, r1, #(18*4) ; r1 = &x[18]
+  717 0000067A         
+  718 0000067A E8B1 07DD       ldmia            r1!, { r0, r2 - r4, r6 - r10 } 
+                                                            ; load 9 words from
+                                                             x18, update pointe
+                                                            r
+  719 0000067E         
+  720 0000067E         ; r0     = x18
+  721 0000067E         ; r1     = &x[27]
+  722 0000067E         ; r2     = x19
+  723 0000067E         ; r3     = x20
+  724 0000067E         ; r4     = x21
+
+
+
+ARM Macro Assembler    Page 22 
+
+
+  725 0000067E         ; r5     = .
+  726 0000067E         ; r6     = x22
+  727 0000067E         ; r7     = x23
+  728 0000067E         ; r8     = x24
+  729 0000067E         ; r9     = x25
+  730 0000067E         ; r10    = x26
+  731 0000067E         ; r11    = window_l[3]
+  732 0000067E         ; r12    = window_l[4]
+  733 0000067E         ; lr     = .
+  734 0000067E         
+  735 0000067E FB8C 5E06       smull            r5, lr, r12, r6 ; r5..lr = (win
+                                                            dow_l[4] * (x[22] =
+                                                            = x[31]))
+  736 00000682 0F2D            movs             r5, r5, lsr #28
+  737 00000684 EB45 150E       adc              r5, r5, lr, lsl #4 ; r5 = bits[
+                                                            59..28] of windowed
+                                                             x31
+  738 00000688         
+  739 00000688 FB8B 6E04       smull            r6, lr, r11, r4 ; r5..lr = (win
+                                                            dow_l[3] * (x[21] =
+                                                            = x[32]))
+  740 0000068C F8DF C25C       ldr              r12, =WL5   ; r12    =  window_
+                                                            l[5]
+  741 00000690 0F36            movs             r6, r6, lsr #28
+  742 00000692 EB46 160E       adc              r6, r6, lr, lsl #4 ; r6 = bits[
+                                                            59..28] of windowed
+                                                             x32
+  743 00000696         
+  744 00000696 FB8C 4E07       smull            r4, lr, r12, r7 ; r4..lr = (win
+                                                            dow_l[5] * (x[23] =
+                                                            = x[30]))
+  745 0000069A F85F B404       ldr              r11, =WL1   ; r11    =  window_
+                                                            l[1]
+  746 0000069E F8DF C240       ldr              r12, =WL2   ; r12    =  window_
+                                                            l[2]
+  747 000006A2 0F24            movs             r4, r4, lsr #28
+  748 000006A4 EB44 140E       adc              r4, r4, lr, lsl #4 ; r4 = bits[
+                                                            59..28] of windowed
+                                                             x30
+  749 000006A8         
+  750 000006A8 FB8C 7E03       smull            r7, lr, r12, r3 ; r7..lr = (win
+                                                            dow_l[2] * (x[20] =
+                                                            = x[33]))
+  751 000006AC F8DF C240       ldr              r12, =WL6   ; r12 = window_l[6]
+                                                            
+  752 000006B0 0F3F            movs             r7, r7, lsr #28
+  753 000006B2 EB47 170E       adc              r7, r7, lr, lsl #4 ; r7 = bits[
+                                                            59..28] of windowed
+                                                             x33
+  754 000006B6         
+  755 000006B6 FB8C 3E08       smull            r3, lr, r12, r8 ; r3..lr = (win
+                                                            dow_l[6] * (x[24] =
+                                                            = x[29]))
+  756 000006BA 0F1B            movs             r3, r3, lsr #28
+  757 000006BC EB43 130E       adc              r3, r3, lr, lsl #4 ; r3 = bits[
+                                                            59..28] of windowed
+                                                             x29
+  758 000006C0         
+  759 000006C0 FB8B 8E02       smull            r8, lr, r11, r2 ; r7..lr = (win
+
+
+
+ARM Macro Assembler    Page 23 
+
+
+                                                            dow_l[1] * (x[19] =
+                                                            = x[34]))
+  760 000006C4 F85F C42C       ldr              r12, =WL7   ; r12    =  window_
+                                                            l[7]
+  761 000006C8 F8DF B22C       ldr              r11, =WL8   ; r11    =  window_
+                                                            l[8]
+  762 000006CC EA5F 7818       movs             r8, r8, lsr #28
+  763 000006D0 EB48 180E       adc              r8, r8, lr, lsl #4 ; r8 = bits[
+                                                            59..28] of windowed
+                                                             x34
+  764 000006D4         
+  765 000006D4 FB8C 2E09       smull            r2, lr, r12, r9 ; r7..lr = (win
+                                                            dow_l[7] * (x[25] =
+                                                            = x[28]))
+  766 000006D8 F8DF C1FC       ldr              r12, =WL0   ; r12 = window_l[0]
+                                                            
+  767 000006DC 0F12            movs             r2, r2, lsr #28
+  768 000006DE EB42 120E       adc              r2, r2, lr, lsl #4 ; r2 = bits[
+                                                            59..28] of windowed
+                                                             x28
+  769 000006E2         
+  770 000006E2 FB8C 9E00       smull            r9, lr, r12, r0 ; r3..lr = (win
+                                                            dow_l[0] * (x[18] =
+                                                            = x[35]))
+  771 000006E6 EA5F 7919       movs             r9, r9, lsr #28
+  772 000006EA EB49 190E       adc              r9, r9, lr, lsl #4 ; r9 = bits[
+                                                            59..28] of windowed
+                                                             x35
+  773 000006EE         
+  774 000006EE FB8B 0E0A       smull            r0, lr, r11, r10 ; r7..lr = (wi
+                                                            ndow_l[8] * (x[26] 
+                                                            == x[27]))
+  775 000006F2 F8DF B1DC       ldr              r11, =WL16  ; r11    =  window_
+                                                            l[16]
+  776 000006F6 F8DF C1DC       ldr              r12, =WL17  ; r12    =  window_
+                                                            l[17]
+  777 000006FA 0F00            movs             r0, r0, lsr #28
+  778 000006FC EB40 100E       adc              r0, r0, lr, lsl #4 ; r0 = bits[
+                                                            59..28] of windowed
+                                                             x27
+  779 00000700         
+  780 00000700         
+  781 00000700 E881 03FD       stmia            r1,  { r0, r2 - r9 } ; store wi
+                                                            ndowed x[27] .. x[3
+                                                            5]
+  782 00000704 E931 03FD       ldmdb            r1!, { r0, r2 - r9 } ; load 9 w
+                                                            ords downto (and in
+                                                            cluding) x18
+  783 00000708         
+  784 00000708         
+  785 00000708 FB8C AE00       smull            r10, lr, r12, r0 ; r10..lr = (w
+                                                            indow_l[17] * x[18]
+                                                            )
+  786 0000070C EA5F 7A1A       movs             r10, r10, lsr #28
+  787 00000710 EB4A 100E       adc              r0,  r10, lr, lsl #4 ; r0 = bit
+                                                            s[59..28] of window
+                                                            ed x0
+  788 00000714         
+  789 00000714 FB8B AE02       smull            r10, lr, r11, r2 ; r10..lr = (w
+
+
+
+ARM Macro Assembler    Page 24 
+
+
+                                                            indow_l[16] * x[19]
+                                                            )
+  790 00000718 F8DF B1AC       ldr              r11, =WL14  ; r11     =  window
+                                                            _l[14]
+  791 0000071C F8DF C1AC       ldr              r12, =WL15  ; r12     =  window
+                                                            _l[15]
+  792 00000720 EA5F 7A1A       movs             r10, r10, lsr #28
+  793 00000724 EB4A 120E       adc              r2,  r10, lr, lsl #4 ; r2 = bit
+                                                            s[59..28] of window
+                                                            ed x1
+  794 00000728         
+  795 00000728 FB8C AE03       smull            r10, lr, r12, r3 ; r10..lr = (w
+                                                            indow_l[15] * x[20]
+                                                            )
+  796 0000072C EA5F 7A1A       movs             r10, r10, lsr #28
+  797 00000730 EB4A 130E       adc              r3,  r10, lr, lsl #4 ; r3 = bit
+                                                            s[59..28] of window
+                                                            ed x2
+  798 00000734         
+  799 00000734 FB8B AE04       smull            r10, lr, r11, r4 ; r10..lr = (w
+                                                            indow_l[14] * x[21]
+                                                            )
+  800 00000738 F8DF B184       ldr              r11, =WL12  ; r11     =  window
+                                                            _l[12]
+  801 0000073C F85F C4B0       ldr              r12, =WL13  ; r12     =  window
+                                                            _l[13]
+  802 00000740 EA5F 7A1A       movs             r10, r10, lsr #28
+  803 00000744 EB4A 140E       adc              r4,  r10, lr, lsl #4 ; r4 = bit
+                                                            s[59..28] of window
+                                                            ed x3
+  804 00000748         
+  805 00000748 FB8C AE05       smull            r10, lr, r12, r5 ; r10..lr = (w
+                                                            indow_l[13] * x[22]
+                                                            )
+  806 0000074C EA5F 7A1A       movs             r10, r10, lsr #28
+  807 00000750 EB4A 150E       adc              r5,  r10, lr, lsl #4 ; r5 = bit
+                                                            s[59..28] of window
+                                                            ed x4
+  808 00000754         
+  809 00000754 FB8B AE06       smull            r10, lr, r11, r6 ; r10..lr = (w
+                                                            indow_l[12] * x[23]
+                                                            )
+  810 00000758 F85F B4BC       ldr              r11, =WL10  ; r12 = window_l[10
+                                                            ]
+  811 0000075C F8DF C15C       ldr              r12, =WL11  ; r12 = window_l[11
+                                                            ]
+  812 00000760 EA5F 7A1A       movs             r10, r10, lsr #28
+  813 00000764 EB4A 160E       adc              r6,  r10, lr, lsl #4 ; r6 = bit
+                                                            s[59..28] of window
+                                                            ed x5
+  814 00000768         
+  815 00000768 FB8C AE07       smull            r10, lr, r12, r7 ; r10..lr = (w
+                                                            indow_l[11] * x[24]
+                                                            )
+  816 0000076C EA5F 7A1A       movs             r10, r10, lsr #28
+  817 00000770 EB4A 170E       adc              r7,  r10, lr, lsl #4 ; r7 = bit
+                                                            s[59..28] of window
+                                                            ed x6
+  818 00000774         
+
+
+
+ARM Macro Assembler    Page 25 
+
+
+  819 00000774 FB8B AE08       smull            r10, lr, r11, r8 ; r10..lr = (w
+                                                            indow_l[10] * x[25]
+                                                            )
+  820 00000778 F8DF C138       ldr              r12, =WL9   ; r12 = window_l[9]
+                                                            
+  821 0000077C EA5F 7A1A       movs             r10, r10, lsr #28
+  822 00000780 EB4A 180E       adc              r8,  r10, lr, lsl #4 ; r8 = bit
+                                                            s[59..28] of window
+                                                            ed x7
+  823 00000784         
+  824 00000784 FB8C AE09       smull            r10, lr, r12, r9 ; r10..lr = (w
+                                                            indow_l[9] * x[26])
+                                                            
+  825 00000788         
+  826 00000788 EA5F 7A1A       movs             r10, r10, lsr #28
+  827 0000078C EB4A 190E       adc              r9,  r10, lr, lsl #4 ; r9 = bit
+                                                            s[59..28] of window
+                                                            ed x8
+  828 00000790         
+  829 00000790 E881 03FD       stmia            r1, { r0, r2 - r9 } ; store win
+                                                            dowed x[18] .. x[26
+                                                            ]
+  830 00000794         
+  831 00000794         ;----
+  832 00000794         ; NB there are 2 possible exits from this function - thi
+                       s is only one of them
+  833 00000794         ;----
+  834 00000794         
+  835 00000794 B015            add              sp, sp, #(21*4) ; return stack 
+                                                            frame
+  836 00000796 E8BD 8FF0       pop              { r4 - r11, pc } ; restore call
+                                                            ee saved regs, and 
+                                                            return
+  837 0000079A         
+  838 0000079A         ;----
+  839 0000079A         
+  840 0000079A         
+  841 0000079A         stop_block_x0_to_x17
+  842 0000079A         
+  843 0000079A         ; r0     =  x0
+  844 0000079A         ; r1     = &x[9]
+  845 0000079A         ; r2     =  x1
+  846 0000079A         ; r3     =  x2
+  847 0000079A         ; r4     =  x3
+  848 0000079A         ; r5     =  x4
+  849 0000079A         ; r6     =  x5
+  850 0000079A         ; r7     =  x6
+  851 0000079A         ; r8     =  x7
+  852 0000079A         ; r9     =  x8
+  853 0000079A         ; r10    = -x0
+  854 0000079A         ; r11    =  window mode: (0 == normal), (1 == start bloc
+                       k), (3 == stop block)
+  855 0000079A         ; r12    =  .
+  856 0000079A         ; lr     =  .
+  857 0000079A         
+  858 0000079A F1C6 0000       rsb              r0, r6, #0  ; r0 = -x5
+  859 0000079E F1C2 0600       rsb              r6, r2, #0  ; r6 = -x1
+  860 000007A2 F1C5 0200       rsb              r2, r5, #0  ; r2 = -x4
+  861 000007A6 F1C3 0500       rsb              r5, r3, #0  ; r5 = -x2
+
+
+
+ARM Macro Assembler    Page 26 
+
+
+  862 000007AA F1C4 0300       rsb              r3, r4, #0  ; r3 = -x3
+  863 000007AE         
+  864 000007AE F101 010C       add              r1, r1, #(3*4) ; r1 = &x[12]
+  865 000007B2 E881 046D       stmia            r1, { r0, r2, r3, r5, r6, r10 }
+ 
+                                                            ; store unchanged x
+                                                            [12] .. x[17]
+  866 000007B6         
+  867 000007B6 4849            ldr              r0, =WL1    ; r0 = window_l[1] 
+                                                             == window_s[0]
+  868 000007B8         
+  869 000007B8 F1C9 0A00       rsb              r10, r9, #0 ; r10 = -x8
+  870 000007BC F1C8 0C00       rsb              r12, r8, #0 ; r12 = -x7
+  871 000007C0 F1C7 0E00       rsb              lr,  r7, #0 ; lr  = -x6
+  872 000007C4         
+  873 000007C4         ; r0     =  WL1
+  874 000007C4         ; r1     = &x[12]
+  875 000007C4         ; r2     =  .
+  876 000007C4         ; r3     =  .
+  877 000007C4         ; r4     =  .
+  878 000007C4         ; r5     =  .
+  879 000007C4         ; r6     =  .
+  880 000007C4         ; r7     =  x6
+  881 000007C4         ; r8     =  x7
+  882 000007C4         ; r9     =  x8
+  883 000007C4         ; r10    = -x8
+  884 000007C4         ; r11    =  window mode: (0 == normal), (1 == start bloc
+                       k), (3 == stop block)
+  885 000007C4         ; r12    = -x7
+  886 000007C4         ; lr     = -x6
+  887 000007C4         
+  888 000007C4 FB80 5607       smull            r5, r6, r0, r7 ; r5..r6 = (wind
+                                                            ow_l[1] * x[6])
+  889 000007C8 4A47            ldr              r2, =WL4    ; r2     =  window_
+                                                            l[4] == window_s[1]
+                                                            
+  890 000007CA 0F2D            movs             r5, r5, lsr #28
+  891 000007CC EB45 1706       adc              r7, r5, r6, lsl #4 ; r7 = bits[
+                                                            59..28] of windowed
+                                                             x6
+  892 000007D0         
+  893 000007D0 FB82 5608       smull            r5, r6, r2, r8 ; r5..r6 = (wind
+                                                            ow_l[4] * x[7])
+  894 000007D4 4B47            ldr              r3, =WL7    ; r3     =  window_
+                                                            l[7] == window_s[2]
+                                                            
+  895 000007D6 0F2D            movs             r5, r5, lsr #28
+  896 000007D8 EB45 1806       adc              r8, r5, r6, lsl #4 ; r8 = bits[
+                                                            59..28] of windowed
+                                                             x7
+  897 000007DC         
+  898 000007DC FB83 5609       smull            r5, r6, r3, r9 ; r5..r6 = (wind
+                                                            ow_l[7] * x[8])
+  899 000007E0 4C35            ldr              r4, =WL10   ; r4     =  window_
+                                                            l[10] == window_s[3
+                                                            ]
+  900 000007E2 0F2D            movs             r5, r5, lsr #28
+  901 000007E4 EB45 1906       adc              r9, r5, r6, lsl #4 ; r9 = bits[
+                                                            59..28] of windowed
+
+
+
+ARM Macro Assembler    Page 27 
+
+
+                                                             x8
+  902 000007E8         
+  903 000007E8 FB84 560A       smull            r5, r6, r4, r10 ; r5..r6 = (win
+                                                            dow_l[10] * (x[9] =
+                                                            = -x[8]))
+  904 000007EC 4835            ldr              r0, =WL13   ; r0     =  window_
+                                                            l[13] == window_s[4
+                                                            ]
+  905 000007EE 0F2D            movs             r5, r5, lsr #28
+  906 000007F0 EB45 1A06       adc              r10, r5, r6, lsl #4 ; r10 = bit
+                                                            s[59..28] of window
+                                                            ed x9
+  907 000007F4         
+  908 000007F4 FB80 560C       smull            r5, r6, r0, r12 ; r5..r6 = (win
+                                                            dow_l[13] * (x[10] 
+                                                            == -x[7]))
+  909 000007F8 4A35            ldr              r2, =WL16   ; r2     =  window_
+                                                            l[16] == window_s[5
+                                                            ]
+  910 000007FA 0F2D            movs             r5, r5, lsr #28
+  911 000007FC EB45 1C06       adc              r12, r5, r6, lsl #4 ; r10 = bit
+                                                            s[59..28] of window
+                                                            ed x9
+  912 00000800         
+  913 00000800 FB82 560E       smull            r5, r6, r2, lr ; r5..r6 = (wind
+                                                            ow_l[16] * (x[11] =
+                                                            = -x[6]))
+  914 00000804         
+  915 00000804 F04F 0000       ldr              r0, =0x00
+  916 00000808         
+  917 00000808 0F2D            movs             r5, r5, lsr #28
+  918 0000080A EB45 1E06       adc              lr, r5, r6, lsl #4 ; r10 = bits
+                                                            [59..28] of windowe
+                                                            d x9
+  919 0000080E         
+  920 0000080E E921 5780       stmdb            r1!, { r7 - r10, r12, lr } ; st
+                                                            ore windowed x[6] .
+                                                            . x[11]
+  921 00000812         
+  922 00000812 F04F 0500       ldr              r5, =0x00
+  923 00000816 F04F 0600       ldr              r6, =0x00
+  924 0000081A F04F 0200       ldr              r2, =0x00
+  925 0000081E F04F 0300       ldr              r3, =0x00
+  926 00000822 F04F 0400       ldr              r4, =0x00
+  927 00000826         
+  928 00000826 E921 007D       stmdb            r1!, { r0, r2 - r6 } ; store wi
+                                                            ndowed x[0] .. x[5]
+                                                            
+  929 0000082A         
+  930 0000082A E720            b                normal_block_x18_to_x35
+  931 0000082C         
+  932 0000082C         
+  933 0000082C         ;----
+  934 0000082C         
+  935 0000082C         
+  936 0000082C         start_block_x18_to_x35
+  937 0000082C         
+  938 0000082C 4C2B            ldr              r4, =WL1    ; r0 = window_l[1] 
+                                                             == window_s[0]
+
+
+
+ARM Macro Assembler    Page 28 
+
+
+  939 0000082E         
+  940 0000082E F101 0160       add              r1, r1, #(24*4) ; r1 = &x[24]
+  941 00000832         
+  942 00000832 E891 000D       ldmia            r1, { r0, r2, r3 } ; load 3 wor
+                                                            ds from x24, dont u
+                                                            pdate pointer
+  943 00000836         
+  944 00000836         ; r0     = x24
+  945 00000836         ; r1     = &x[24]
+  946 00000836         ; r2     = x25
+  947 00000836         ; r3     = x26
+  948 00000836         ; r4     = WL1
+  949 00000836         ; r5     = WL4
+  950 00000836         ; r6     = WL7
+  951 00000836         ; r7     = WL10
+  952 00000836         ; r8     = WL13
+  953 00000836         ; r9     = WL16
+  954 00000836         ; r10    = .
+  955 00000836         ; r11    = .
+  956 00000836         ; r12    = .
+  957 00000836         ; lr     = .
+  958 00000836         
+  959 00000836 4D2C            ldr              r5, =WL4    ; r5 = window_l[4] 
+                                                            == window_s[1]
+  960 00000838         
+  961 00000838 FB84 AB00       smull            r10, r11, r4, r0 ; r10..r11 = (
+                                                            window_l[1] * (x[24
+                                                            ] == x[29]))
+  962 0000083C 4E2D            ldr              r6, =WL7    ; r6       =  windo
+                                                            w_l[7]  == window_s
+                                                            [2]
+  963 0000083E EA5F 7A1A       movs             r10, r10, lsr #28
+  964 00000842 EB4A 1E0B       adc              lr, r10, r11, lsl #4 ; lr = bit
+                                                            s[59..28] of window
+                                                            ed x29
+  965 00000846         
+  966 00000846 FB85 AB02       smull            r10, r11, r5, r2 ; r10..r11 = (
+                                                            window_l[4] * (x[25
+                                                            ] == x[28]))
+  967 0000084A 4F1B            ldr              r7, =WL10   ; r7       =  windo
+                                                            w_l[10] == window_s
+                                                            [3]
+  968 0000084C EA5F 7A1A       movs             r10, r10, lsr #28
+  969 00000850 EB4A 1C0B       adc              r12, r10, r11, lsl #4 ; r12 = b
+                                                            its[59..28] of wind
+                                                            owed x28
+  970 00000854         
+  971 00000854 FB86 AB03       smull            r10, r11, r6, r3 ; r10..r11 = (
+                                                            window_l[7] * (x[26
+                                                            ] == x[27]))
+  972 00000858 F85F 85CC       ldr              r8, =WL13   ; r8       =  windo
+                                                            w_l[13] == window_s
+                                                            [4]
+  973 0000085C EA5F 7A1A       movs             r10, r10, lsr #28
+  974 00000860 EB4A 140B       adc              r4, r10, r11, lsl #4 ; r4 = bit
+                                                            s[59..28] of window
+                                                            ed x27
+  975 00000864         
+  976 00000864 FB87 AB03       smull            r10, r11, r7, r3 ; r10..r11 = (
+
+
+
+ARM Macro Assembler    Page 29 
+
+
+                                                            window_l[10] * x[26
+                                                            ])
+  977 00000868 F8DF 9064       ldr              r9, =WL16   ; r9       =  windo
+                                                            w_l[16] == window_s
+                                                            [5]
+  978 0000086C EA5F 7A1A       movs             r10, r10, lsr #28
+  979 00000870 EB4A 130B       adc              r3, r10, r11, lsl #4 ; r3 = bit
+                                                            s[59..28] of window
+                                                            ed x26
+  980 00000874         
+  981 00000874 FB88 AB02       smull            r10, r11, r8, r2 ; r10..r11 = (
+                                                            window_l[13] * x[25
+                                                            ])
+  982 00000878 F04F 0500       ldr              r5, =0x00
+  983 0000087C EA5F 7A1A       movs             r10, r10, lsr #28
+  984 00000880 EB4A 120B       adc              r2, r10, r11, lsl #4 ; r2 = bit
+                                                            s[59..28] of window
+                                                            ed x25
+  985 00000884         
+  986 00000884 FB89 AB00       smull            r10, r11, r9, r0 ; r10..r11 = (
+                                                            window_l[16] * x[24
+                                                            ])
+  987 00000888 F04F 0600       ldr              r6, =0x00
+  988 0000088C EA5F 7A1A       movs             r10, r10, lsr #28
+  989 00000890 EB4A 100B       adc              r0, r10, r11, lsl #4 ; r0 = bit
+                                                            s[59..28] of window
+                                                            ed x24
+  990 00000894         
+  991 00000894 E8A1 501D       stmia            r1!, { r0, r2, r3, r4, r12, lr 
+} 
+                                                            ; store windowed x[
+                                                            24] .. x[29]
+  992 00000898         
+  993 00000898 F04F 0700       ldr              r7, =0x00
+  994 0000089C F04F 0800       ldr              r8, =0x00
+  995 000008A0 F04F 0900       ldr              r9, =0x00
+  996 000008A4 F04F 0A00       ldr              r10, =0x00
+  997 000008A8         
+  998 000008A8 E8A1 07E0       stmia            r1!, { r5 - r10 } ; store windo
+                                                            wed x[30] .. x[35]
+  999 000008AC         
+ 1000 000008AC         ;----
+ 1001 000008AC         ; NB there are 2 possible exits from this function - thi
+                       s is only one of them
+ 1002 000008AC         ;----
+ 1003 000008AC         
+ 1004 000008AC B015            add              sp, sp, #(21*4) ; return stack 
+                                                            frame
+ 1005 000008AE E8BD 8FF0       pop              { r4 - r11, pc } ; restore call
+                                                            ee saved regs, and 
+                                                            return
+ 1006 000008B2         
+ 1007 000008B2 00 00           ALIGN            4
+ 1008 000008B4         
+ 1009 000008B4                 ENDP
+ 1010 000008B4         
+ 1011 000008B4                 END
+              0BCBE352 
+              0CB19346 
+
+
+
+ARM Macro Assembler    Page 30 
+
+
+              0D7E8807 
+              0E313245 
+              0EC835E8 
+              0F426CB5 
+              0F9EE890 
+              0FDCF549 
+              0FFC19FD 
+              00B2AA3E 
+              0216A2A2 
+              03768962 
+              04CFB0E2 
+              061F78AA 
+              07635284 
+              0898C779 
+              09BD7CA0 
+              0ACF37AD 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\imdct_l_arm.d -o.\objects\imdct_l_arm.o -I.\RTE\Devic
+e\LPC4078FBD80 -I.\RTE\_Target_1 -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\In
+clude -IC:\Keil_v5\ARM\PACK\Keil\LPC4000_DFP\2.0.0\Device\Include --predefine="
+__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="CORE_M4 SET
+A 1" --list=.\listings\imdct_l_arm.lst libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 204 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: .text unused
+III_imdct_l 00000000
+
+Symbol: III_imdct_l
+   Definitions
+      At line 210 in file libmad\imdct_l_arm.S
+   Uses
+      At line 207 in file libmad\imdct_l_arm.S
+Comment: III_imdct_l used once
+imdct36_long_karray 000002A8
+
+Symbol: imdct36_long_karray
+   Definitions
+      At line 533 in file libmad\imdct_l_arm.S
+   Uses
+      At line 476 in file libmad\imdct_l_arm.S
+Comment: imdct36_long_karray used once
+imdct_l_windowing 00000518
+
+Symbol: imdct_l_windowing
+   Definitions
+      At line 553 in file libmad\imdct_l_arm.S
+   Uses
+      At line 527 in file libmad\imdct_l_arm.S
+Comment: imdct_l_windowing used once
+loop 00000206
+
+Symbol: loop
+   Definitions
+      At line 479 in file libmad\imdct_l_arm.S
+   Uses
+      At line 526 in file libmad\imdct_l_arm.S
+Comment: loop used once
+normal_block_x0_to_x17 0000052C
+
+Symbol: normal_block_x0_to_x17
+   Definitions
+      At line 580 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: normal_block_x0_to_x17 unused
+normal_block_x18_to_x35 0000066E
+
+Symbol: normal_block_x18_to_x35
+   Definitions
+      At line 711 in file libmad\imdct_l_arm.S
+   Uses
+      At line 930 in file libmad\imdct_l_arm.S
+Comment: normal_block_x18_to_x35 used once
+start_block_x18_to_x35 0000082C
+
+Symbol: start_block_x18_to_x35
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 936 in file libmad\imdct_l_arm.S
+   Uses
+      At line 705 in file libmad\imdct_l_arm.S
+Comment: start_block_x18_to_x35 used once
+stop_block_x0_to_x17 0000079A
+
+Symbol: stop_block_x0_to_x17
+   Definitions
+      At line 841 in file libmad\imdct_l_arm.S
+   Uses
+      At line 575 in file libmad\imdct_l_arm.S
+Comment: stop_block_x0_to_x17 used once
+9 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+BLOCK_MODE_NORMAL 00000000
+
+Symbol: BLOCK_MODE_NORMAL
+   Definitions
+      At line 99 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: BLOCK_MODE_NORMAL unused
+BLOCK_MODE_START 00000001
+
+Symbol: BLOCK_MODE_START
+   Definitions
+      At line 100 in file libmad\imdct_l_arm.S
+   Uses
+      At line 704 in file libmad\imdct_l_arm.S
+Comment: BLOCK_MODE_START used once
+BLOCK_MODE_STOP 00000003
+
+Symbol: BLOCK_MODE_STOP
+   Definitions
+      At line 101 in file libmad\imdct_l_arm.S
+   Uses
+      At line 573 in file libmad\imdct_l_arm.S
+Comment: BLOCK_MODE_STOP used once
+K00 0FFC19FD
+
+Symbol: K00
+   Definitions
+      At line 159 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K01 00B2AA3E
+
+Symbol: K01
+   Definitions
+      At line 160 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K02 0FDCF549
+
+Symbol: K02
+   Definitions
+      At line 161 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: K02 unused
+K03 0216A2A2
+
+Symbol: K03
+   Definitions
+      At line 162 in file libmad\imdct_l_arm.S
+   Uses
+      At line 312 in file libmad\imdct_l_arm.S
+Comment: K03 used once
+K04 0F9EE890
+
+Symbol: K04
+   Definitions
+      At line 163 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K05 03768962
+
+Symbol: K05
+   Definitions
+      At line 164 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K06 0F426CB5
+
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Absolute symbols
+
+Symbol: K06
+   Definitions
+      At line 165 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K07 04CFB0E2
+
+Symbol: K07
+   Definitions
+      At line 166 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K08 0EC835E8
+
+Symbol: K08
+   Definitions
+      At line 167 in file libmad\imdct_l_arm.S
+   Uses
+      At line 214 in file libmad\imdct_l_arm.S
+Comment: K08 used once
+K09 061F78AA
+
+Symbol: K09
+   Definitions
+      At line 168 in file libmad\imdct_l_arm.S
+   Uses
+      At line 215 in file libmad\imdct_l_arm.S
+Comment: K09 used once
+K10 0E313245
+
+Symbol: K10
+   Definitions
+      At line 169 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K11 07635284
+
+Symbol: K11
+   Definitions
+      At line 170 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K12 0D7E8807
+
+Symbol: K12
+   Definitions
+      At line 171 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K13 0898C779
+
+Symbol: K13
+   Definitions
+      At line 172 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K14 0CB19346
+
+Symbol: K14
+   Definitions
+      At line 173 in file libmad\imdct_l_arm.S
+   Uses
+      At line 318 in file libmad\imdct_l_arm.S
+Comment: K14 used once
+K15 09BD7CA0
+
+Symbol: K15
+   Definitions
+      At line 174 in file libmad\imdct_l_arm.S
+   Uses
+      At line 313 in file libmad\imdct_l_arm.S
+Comment: K15 used once
+K16 0BCBE352
+
+Symbol: K16
+   Definitions
+      At line 175 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+K17 0ACF37AD
+
+Symbol: K17
+   Definitions
+      At line 176 in file libmad\imdct_l_arm.S
+   Uses
+      At line 535 in file libmad\imdct_l_arm.S
+      At line 536 in file libmad\imdct_l_arm.S
+      At line 537 in file libmad\imdct_l_arm.S
+      At line 538 in file libmad\imdct_l_arm.S
+      At line 539 in file libmad\imdct_l_arm.S
+      At line 540 in file libmad\imdct_l_arm.S
+      At line 541 in file libmad\imdct_l_arm.S
+      At line 542 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 543 in file libmad\imdct_l_arm.S
+      At line 544 in file libmad\imdct_l_arm.S
+      At line 545 in file libmad\imdct_l_arm.S
+      At line 546 in file libmad\imdct_l_arm.S
+
+WL0 00B2AA3E
+
+Symbol: WL0
+   Definitions
+      At line 180 in file libmad\imdct_l_arm.S
+   Uses
+      At line 649 in file libmad\imdct_l_arm.S
+      At line 766 in file libmad\imdct_l_arm.S
+
+WL1 0216A2A2
+
+Symbol: WL1
+   Definitions
+      At line 181 in file libmad\imdct_l_arm.S
+   Uses
+      At line 659 in file libmad\imdct_l_arm.S
+      At line 745 in file libmad\imdct_l_arm.S
+      At line 867 in file libmad\imdct_l_arm.S
+      At line 938 in file libmad\imdct_l_arm.S
+
+WL10 0CB19346
+
+Symbol: WL10
+   Definitions
+      At line 190 in file libmad\imdct_l_arm.S
+   Uses
+      At line 609 in file libmad\imdct_l_arm.S
+      At line 810 in file libmad\imdct_l_arm.S
+      At line 899 in file libmad\imdct_l_arm.S
+      At line 967 in file libmad\imdct_l_arm.S
+
+WL11 0D7E8807
+
+Symbol: WL11
+   Definitions
+      At line 191 in file libmad\imdct_l_arm.S
+   Uses
+      At line 614 in file libmad\imdct_l_arm.S
+      At line 811 in file libmad\imdct_l_arm.S
+
+WL12 0E313245
+
+Symbol: WL12
+   Definitions
+      At line 192 in file libmad\imdct_l_arm.S
+   Uses
+      At line 619 in file libmad\imdct_l_arm.S
+      At line 800 in file libmad\imdct_l_arm.S
+
+WL13 0EC835E8
+
+Symbol: WL13
+   Definitions
+      At line 193 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Absolute symbols
+
+   Uses
+      At line 624 in file libmad\imdct_l_arm.S
+      At line 801 in file libmad\imdct_l_arm.S
+      At line 904 in file libmad\imdct_l_arm.S
+      At line 972 in file libmad\imdct_l_arm.S
+
+WL14 0F426CB5
+
+Symbol: WL14
+   Definitions
+      At line 194 in file libmad\imdct_l_arm.S
+   Uses
+      At line 629 in file libmad\imdct_l_arm.S
+      At line 790 in file libmad\imdct_l_arm.S
+
+WL15 0F9EE890
+
+Symbol: WL15
+   Definitions
+      At line 195 in file libmad\imdct_l_arm.S
+   Uses
+      At line 634 in file libmad\imdct_l_arm.S
+      At line 791 in file libmad\imdct_l_arm.S
+
+WL16 0FDCF549
+
+Symbol: WL16
+   Definitions
+      At line 196 in file libmad\imdct_l_arm.S
+   Uses
+      At line 639 in file libmad\imdct_l_arm.S
+      At line 775 in file libmad\imdct_l_arm.S
+      At line 909 in file libmad\imdct_l_arm.S
+      At line 977 in file libmad\imdct_l_arm.S
+
+WL17 0FFC19FD
+
+Symbol: WL17
+   Definitions
+      At line 197 in file libmad\imdct_l_arm.S
+   Uses
+      At line 644 in file libmad\imdct_l_arm.S
+      At line 776 in file libmad\imdct_l_arm.S
+
+WL2 03768962
+
+Symbol: WL2
+   Definitions
+      At line 182 in file libmad\imdct_l_arm.S
+   Uses
+      At line 664 in file libmad\imdct_l_arm.S
+      At line 746 in file libmad\imdct_l_arm.S
+
+WL3 04CFB0E2
+
+Symbol: WL3
+   Definitions
+      At line 183 in file libmad\imdct_l_arm.S
+   Uses
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 669 in file libmad\imdct_l_arm.S
+      At line 713 in file libmad\imdct_l_arm.S
+
+WL4 061F78AA
+
+Symbol: WL4
+   Definitions
+      At line 184 in file libmad\imdct_l_arm.S
+   Uses
+      At line 674 in file libmad\imdct_l_arm.S
+      At line 714 in file libmad\imdct_l_arm.S
+      At line 889 in file libmad\imdct_l_arm.S
+      At line 959 in file libmad\imdct_l_arm.S
+
+WL5 07635284
+
+Symbol: WL5
+   Definitions
+      At line 185 in file libmad\imdct_l_arm.S
+   Uses
+      At line 679 in file libmad\imdct_l_arm.S
+      At line 740 in file libmad\imdct_l_arm.S
+
+WL6 0898C779
+
+Symbol: WL6
+   Definitions
+      At line 186 in file libmad\imdct_l_arm.S
+   Uses
+      At line 684 in file libmad\imdct_l_arm.S
+      At line 751 in file libmad\imdct_l_arm.S
+
+WL7 09BD7CA0
+
+Symbol: WL7
+   Definitions
+      At line 187 in file libmad\imdct_l_arm.S
+   Uses
+      At line 689 in file libmad\imdct_l_arm.S
+      At line 760 in file libmad\imdct_l_arm.S
+      At line 894 in file libmad\imdct_l_arm.S
+      At line 962 in file libmad\imdct_l_arm.S
+
+WL8 0ACF37AD
+
+Symbol: WL8
+   Definitions
+      At line 188 in file libmad\imdct_l_arm.S
+   Uses
+      At line 694 in file libmad\imdct_l_arm.S
+      At line 761 in file libmad\imdct_l_arm.S
+
+WL9 0BCBE352
+
+Symbol: WL9
+   Definitions
+      At line 189 in file libmad\imdct_l_arm.S
+   Uses
+      At line 582 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 9 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 820 in file libmad\imdct_l_arm.S
+
+X0 00000000
+
+Symbol: X0
+   Definitions
+      At line 103 in file libmad\imdct_l_arm.S
+   Uses
+      At line 254 in file libmad\imdct_l_arm.S
+      At line 480 in file libmad\imdct_l_arm.S
+
+X1 00000004
+
+Symbol: X1
+   Definitions
+      At line 104 in file libmad\imdct_l_arm.S
+   Uses
+      At line 233 in file libmad\imdct_l_arm.S
+      At line 386 in file libmad\imdct_l_arm.S
+
+X10 00000028
+
+Symbol: X10
+   Definitions
+      At line 113 in file libmad\imdct_l_arm.S
+   Uses
+      At line 238 in file libmad\imdct_l_arm.S
+      At line 388 in file libmad\imdct_l_arm.S
+
+X11 0000002C
+
+Symbol: X11
+   Definitions
+      At line 114 in file libmad\imdct_l_arm.S
+   Uses
+      At line 255 in file libmad\imdct_l_arm.S
+      At line 500 in file libmad\imdct_l_arm.S
+
+X12 00000030
+
+Symbol: X12
+   Definitions
+      At line 115 in file libmad\imdct_l_arm.S
+   Uses
+      At line 256 in file libmad\imdct_l_arm.S
+      At line 501 in file libmad\imdct_l_arm.S
+
+X13 00000034
+
+Symbol: X13
+   Definitions
+      At line 116 in file libmad\imdct_l_arm.S
+   Uses
+      At line 217 in file libmad\imdct_l_arm.S
+Comment: X13 used once
+X14 00000038
+
+Symbol: X14
+   Definitions
+
+
+
+ARM Macro Assembler    Page 10 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 117 in file libmad\imdct_l_arm.S
+   Uses
+      At line 272 in file libmad\imdct_l_arm.S
+      At line 503 in file libmad\imdct_l_arm.S
+
+X15 0000003C
+
+Symbol: X15
+   Definitions
+      At line 118 in file libmad\imdct_l_arm.S
+   Uses
+      At line 262 in file libmad\imdct_l_arm.S
+      At line 504 in file libmad\imdct_l_arm.S
+
+X16 00000040
+
+Symbol: X16
+   Definitions
+      At line 119 in file libmad\imdct_l_arm.S
+   Uses
+      At line 228 in file libmad\imdct_l_arm.S
+      At line 389 in file libmad\imdct_l_arm.S
+
+X17 00000044
+
+Symbol: X17
+   Definitions
+      At line 120 in file libmad\imdct_l_arm.S
+   Uses
+      At line 279 in file libmad\imdct_l_arm.S
+      At line 507 in file libmad\imdct_l_arm.S
+
+X2 00000008
+
+Symbol: X2
+   Definitions
+      At line 105 in file libmad\imdct_l_arm.S
+   Uses
+      At line 270 in file libmad\imdct_l_arm.S
+      At line 485 in file libmad\imdct_l_arm.S
+
+X3 0000000C
+
+Symbol: X3
+   Definitions
+      At line 106 in file libmad\imdct_l_arm.S
+   Uses
+      At line 260 in file libmad\imdct_l_arm.S
+      At line 486 in file libmad\imdct_l_arm.S
+
+X4 00000010
+
+Symbol: X4
+   Definitions
+      At line 107 in file libmad\imdct_l_arm.S
+   Uses
+      At line 216 in file libmad\imdct_l_arm.S
+Comment: X4 used once
+X5 00000014
+
+
+
+ARM Macro Assembler    Page 11 Alphabetic symbol ordering
+Absolute symbols
+
+
+Symbol: X5
+   Definitions
+      At line 108 in file libmad\imdct_l_arm.S
+   Uses
+      At line 276 in file libmad\imdct_l_arm.S
+      At line 488 in file libmad\imdct_l_arm.S
+
+X6 00000018
+
+Symbol: X6
+   Definitions
+      At line 109 in file libmad\imdct_l_arm.S
+   Uses
+      At line 277 in file libmad\imdct_l_arm.S
+      At line 489 in file libmad\imdct_l_arm.S
+
+X7 0000001C
+
+Symbol: X7
+   Definitions
+      At line 110 in file libmad\imdct_l_arm.S
+   Uses
+      At line 227 in file libmad\imdct_l_arm.S
+      At line 387 in file libmad\imdct_l_arm.S
+
+X8 00000020
+
+Symbol: X8
+   Definitions
+      At line 111 in file libmad\imdct_l_arm.S
+   Uses
+      At line 261 in file libmad\imdct_l_arm.S
+      At line 492 in file libmad\imdct_l_arm.S
+
+X9 00000024
+
+Symbol: X9
+   Definitions
+      At line 112 in file libmad\imdct_l_arm.S
+   Uses
+      At line 271 in file libmad\imdct_l_arm.S
+      At line 493 in file libmad\imdct_l_arm.S
+
+minus_K02 F0230AB7
+
+Symbol: minus_K02
+   Definitions
+      At line 178 in file libmad\imdct_l_arm.S
+   Uses
+      At line 325 in file libmad\imdct_l_arm.S
+Comment: minus_K02 used once
+x0 00000000
+
+Symbol: x0
+   Definitions
+      At line 122 in file libmad\imdct_l_arm.S
+   Uses
+      None
+
+
+
+ARM Macro Assembler    Page 12 Alphabetic symbol ordering
+Absolute symbols
+
+Comment: x0 unused
+x1 00000004
+
+Symbol: x1
+   Definitions
+      At line 123 in file libmad\imdct_l_arm.S
+   Uses
+      At line 338 in file libmad\imdct_l_arm.S
+Comment: x1 used once
+x10 00000028
+
+Symbol: x10
+   Definitions
+      At line 132 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x10 unused
+x11 0000002C
+
+Symbol: x11
+   Definitions
+      At line 133 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x11 unused
+x12 00000030
+
+Symbol: x12
+   Definitions
+      At line 134 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x12 unused
+x13 00000034
+
+Symbol: x13
+   Definitions
+      At line 135 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x13 unused
+x14 00000038
+
+Symbol: x14
+   Definitions
+      At line 136 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x14 unused
+x15 0000003C
+
+Symbol: x15
+   Definitions
+      At line 137 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x15 unused
+x16 00000040
+
+
+
+
+ARM Macro Assembler    Page 13 Alphabetic symbol ordering
+Absolute symbols
+
+Symbol: x16
+   Definitions
+      At line 138 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x16 unused
+x17 00000044
+
+Symbol: x17
+   Definitions
+      At line 139 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x17 unused
+x18 00000048
+
+Symbol: x18
+   Definitions
+      At line 140 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x18 unused
+x19 0000004C
+
+Symbol: x19
+   Definitions
+      At line 141 in file libmad\imdct_l_arm.S
+   Uses
+      At line 379 in file libmad\imdct_l_arm.S
+Comment: x19 used once
+x2 00000008
+
+Symbol: x2
+   Definitions
+      At line 124 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x2 unused
+x20 00000050
+
+Symbol: x20
+   Definitions
+      At line 142 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x20 unused
+x21 00000054
+
+Symbol: x21
+   Definitions
+      At line 143 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x21 unused
+x22 00000058
+
+Symbol: x22
+   Definitions
+      At line 144 in file libmad\imdct_l_arm.S
+
+
+
+ARM Macro Assembler    Page 14 Alphabetic symbol ordering
+Absolute symbols
+
+   Uses
+      At line 291 in file libmad\imdct_l_arm.S
+Comment: x22 used once
+x23 0000005C
+
+Symbol: x23
+   Definitions
+      At line 145 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x23 unused
+x24 00000060
+
+Symbol: x24
+   Definitions
+      At line 146 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x24 unused
+x25 00000064
+
+Symbol: x25
+   Definitions
+      At line 147 in file libmad\imdct_l_arm.S
+   Uses
+      At line 375 in file libmad\imdct_l_arm.S
+Comment: x25 used once
+x26 00000068
+
+Symbol: x26
+   Definitions
+      At line 148 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x26 unused
+x27 0000006C
+
+Symbol: x27
+   Definitions
+      At line 149 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x27 unused
+x28 00000070
+
+Symbol: x28
+   Definitions
+      At line 150 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x28 unused
+x29 00000074
+
+Symbol: x29
+   Definitions
+      At line 151 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x29 unused
+
+
+
+ARM Macro Assembler    Page 15 Alphabetic symbol ordering
+Absolute symbols
+
+x3 0000000C
+
+Symbol: x3
+   Definitions
+      At line 125 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x3 unused
+x30 00000078
+
+Symbol: x30
+   Definitions
+      At line 152 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x30 unused
+x31 0000007C
+
+Symbol: x31
+   Definitions
+      At line 153 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x31 unused
+x32 00000080
+
+Symbol: x32
+   Definitions
+      At line 154 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x32 unused
+x33 00000084
+
+Symbol: x33
+   Definitions
+      At line 155 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x33 unused
+x34 00000088
+
+Symbol: x34
+   Definitions
+      At line 156 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x34 unused
+x35 0000008C
+
+Symbol: x35
+   Definitions
+      At line 157 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x35 unused
+x4 00000010
+
+Symbol: x4
+
+
+
+ARM Macro Assembler    Page 16 Alphabetic symbol ordering
+Absolute symbols
+
+   Definitions
+      At line 126 in file libmad\imdct_l_arm.S
+   Uses
+      At line 295 in file libmad\imdct_l_arm.S
+Comment: x4 used once
+x5 00000014
+
+Symbol: x5
+   Definitions
+      At line 127 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x5 unused
+x6 00000018
+
+Symbol: x6
+   Definitions
+      At line 128 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x6 unused
+x7 0000001C
+
+Symbol: x7
+   Definitions
+      At line 129 in file libmad\imdct_l_arm.S
+   Uses
+      At line 334 in file libmad\imdct_l_arm.S
+Comment: x7 used once
+x8 00000020
+
+Symbol: x8
+   Definitions
+      At line 130 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x8 unused
+x9 00000024
+
+Symbol: x9
+   Definitions
+      At line 131 in file libmad\imdct_l_arm.S
+   Uses
+      None
+Comment: x9 unused
+94 symbols
+441 symbols in table
