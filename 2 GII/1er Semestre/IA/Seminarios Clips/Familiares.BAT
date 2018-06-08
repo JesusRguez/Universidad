@@ -1,0 +1,61 @@
+(deftemplate padre_de
+	(slot padre)
+	(slot hijo)
+)
+(deftemplate madre_de
+	(slot madre)
+	(slot hijo)
+)
+(deftemplate mujer_de
+	(slot mujer)
+	(slot marido)
+)
+(deftemplate marido_de
+	(slot hombre)
+	(slot mujer)
+)
+(deftemplate hermano_de
+	(slot hermano1)
+	(slot hermano2)
+)
+(deftemplate abuelo
+	(slot abuelo)
+	(slot nieto)
+)
+
+(defrule hermano_de
+	(padre_de (padre ?x)(hijo ?y)
+	(padre_de (padre ?x)(hijo ?z)
+	(madre_de (madre ?q)(hijo ?y)
+	(madre_de (madre ?q)(hijo ?z)
+	=>(assert (hermano_de ((hermano1 ?y)(hermano2 ?z)))
+)
+(defrule primo_de
+	(hermano_de (hermano1 ?y)(hermano2 ?z))
+	(padre_de (padre ?y)(hijo ?x))(padre_de (padre ?z)(hijo ?r))
+	(or (madre_de (madre ?y)(hijo ?x))(madre_de (madre ?z)(hijo ?r)))
+	(or (padre_de (madre ?y)(hijo ?x))(madre_de (madre ?z)(hijo ?r)))
+	(or (madre_de (madre ?y)(hijo ?x))(padre_de (madre ?z)(hijo ?r)))
+	=>(assert (primo_de ((primo1 ?x)(primo2 ?r)))
+)
+(defrule Abuelo
+	(padre_de (padre ?x)(hijo ?y))
+	(madre_de (madre ?y)(hijo ?z))
+	or(madre_de(madr ?y)(hijo ?z))
+	=>(assert (Abuelo_de (abuelo ?x)(nieto ?z)))
+)
+
+(padre_de (padre Juan)(hijo Julia))
+(madre_de (madre Silvia)(hijo Julia))
+(padre_de (padre Juan)(hijo Salvador))
+(madre_de (madre Silvia)(hijo Salvador))
+(mujer_de (mujer Julia)(hombre Carlos))
+(marido_de (hombre Carlos)(mujer Julia))
+(mujer_de (mujer Francisca)(hombre Salvador))
+(marido_de (hombre Salvador)(mujer Francisca))
+(padre_de (padre Salvador)(hijo Manuel))
+(madre_de (madre Francisca)(hijo Manuel))
+(padre_de (padre Salvador)(hijo María))
+(madre_de (madre Francisca)(hijo María))
+(padre_de (padre Carlos)(hijo Carlota))
+(madre_de (madre Julia)(hijo Carlota))
