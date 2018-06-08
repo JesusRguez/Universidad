@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="UsuariosServidorService" targetNamespace="http://clases/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://clases/" schemaLocation="usuariosservidor_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="anadirUsuario">
+    <wsdl:part name="parameters" element="tns:anadirUsuario">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarUsuarios">
+    <wsdl:part name="parameters" element="tns:listarUsuarios">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="anadirUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:anadirUsuarioResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarUsuariosResponse">
+    <wsdl:part name="parameters" element="tns:listarUsuariosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UsuariosServidor">
+    <wsdl:operation name="anadirUsuario">
+      <wsdl:input name="anadirUsuario" message="tns:anadirUsuario">
+    </wsdl:input>
+      <wsdl:output name="anadirUsuarioResponse" message="tns:anadirUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <wsdl:input name="listarUsuarios" message="tns:listarUsuarios">
+    </wsdl:input>
+      <wsdl:output name="listarUsuariosResponse" message="tns:listarUsuariosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsuariosServidorServiceSoapBinding" type="tns:UsuariosServidor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="anadirUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="anadirUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="anadirUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarUsuarios">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarUsuariosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuariosServidorService">
+    <wsdl:port name="UsuariosServidorPort" binding="tns:UsuariosServidorServiceSoapBinding">
+      <soap:address location="http://localhost:8080/Practica6/services/UsuariosServidorPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

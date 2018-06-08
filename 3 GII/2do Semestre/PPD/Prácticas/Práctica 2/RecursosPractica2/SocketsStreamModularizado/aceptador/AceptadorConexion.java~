@@ -1,0 +1,32 @@
+package aceptador;
+
+import java.net.*;
+import java.io.*;
+  public class AceptadorConexion {
+   public static void main(String[] args) {
+       try {
+          int numPuerto = 5000;
+          String mensaje = "Soy el que acepta";
+          // instancia un socket para aceptar la conexión
+          ServerSocket socketConexion = new ServerSocket(numPuerto);
+  /**/    System.out.println("preparado para aceptar una conexión");
+          // espera una petición de conexión, instante en el cual
+          // se crea un socket de datos
+          MiSocketStream socketDatos =
+            new MiSocketStream(socketConexion.accept());
+  /**/    System.out.println("conexión aceptada");
+          socketDatos.enviaMensaje(mensaje);
+
+  /**/    System.out.println("mensaje enviado");
+          socketDatos.close( );
+  /**/    System.out.println("socket de datos cerrado");
+          socketConexion.close( );
+  /**/    System.out.println("socket de conexión cerrado");
+        } // fin de try
+        catch (Exception ex) {
+          ex.printStackTrace( );
+        } // fin de catch
+    } // fin de main
+  } // fin de class
+
+

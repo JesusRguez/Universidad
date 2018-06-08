@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Principal" targetNamespace="http://clases/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://clases/" schemaLocation="principal_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="mensaje">
+    <wsdl:part name="parameters" element="tns:mensaje">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mensajeResponse">
+    <wsdl:part name="parameters" element="tns:mensajeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PrincipalPortType">
+    <wsdl:operation name="mensaje">
+      <wsdl:input name="mensaje" message="tns:mensaje">
+    </wsdl:input>
+      <wsdl:output name="mensajeResponse" message="tns:mensajeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrincipalSoapBinding" type="tns:PrincipalPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mensaje">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mensaje">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mensajeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Principal">
+    <wsdl:port name="PrincipalPort" binding="tns:PrincipalSoapBinding">
+      <soap:address location="http://localhost:8080/HolaMundo6/services/PrincipalPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

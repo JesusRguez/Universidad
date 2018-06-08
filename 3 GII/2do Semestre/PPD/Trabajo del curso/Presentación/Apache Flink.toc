@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Definiciones}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Apache Flink}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{RabbitMQ}{4}{0}{1}
+\beamer@sectionintoc {2}{Instalaci\IeC {\'o}n}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Java}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Apache Flink}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{RabbitMQ}{8}{0}{2}
+\beamer@sectionintoc {3}{Palabras m\IeC {\'a}s publicadas en twitter}{9}{0}{3}
+\beamer@sectionintoc {4}{Problemas encontrados}{13}{0}{4}
+\beamer@sectionintoc {5}{Mejoras futuras}{14}{0}{5}
+\beamer@sectionintoc {6}{Referencias}{15}{0}{6}

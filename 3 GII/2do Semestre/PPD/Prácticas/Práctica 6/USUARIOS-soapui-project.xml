@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="901ac732-7bb9-4ead-badf-67c014e7a885" activeEnvironment="Default" name="USUARIOS" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6cd5d578-4cf6-4d6a-ac62-5c0362d4bbb3" wsaVersion="NONE" name="UsuariosServidorServiceSoapBinding" type="wsdl" bindingName="{http://clases/}UsuariosServidorServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Practica6/services/UsuariosServidorPort?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Practica6/services/UsuariosServidorPort?wsdl"><con:part><con:url>http://localhost:8080/Practica6/services/UsuariosServidorPort?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="UsuariosServidorService" targetNamespace="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://clases/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://clases/" schemaLocation="http://localhost:8080/Practica6/services/UsuariosServidorPort?xsd=usuariosservidor_schema1.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="anadirUsuario">
+    <wsdl:part element="tns:anadirUsuario" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarUsuarios">
+    <wsdl:part element="tns:listarUsuarios" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="anadirUsuarioResponse">
+    <wsdl:part element="tns:anadirUsuarioResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarUsuariosResponse">
+    <wsdl:part element="tns:listarUsuariosResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UsuariosServidor">
+    <wsdl:operation name="anadirUsuario">
+      <wsdl:input message="tns:anadirUsuario" name="anadirUsuario"></wsdl:input>
+      <wsdl:output message="tns:anadirUsuarioResponse" name="anadirUsuarioResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <wsdl:input message="tns:listarUsuarios" name="listarUsuarios"></wsdl:input>
+      <wsdl:output message="tns:listarUsuariosResponse" name="listarUsuariosResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsuariosServidorServiceSoapBinding" type="tns:UsuariosServidor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="anadirUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="anadirUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="anadirUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarUsuarios">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarUsuariosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuariosServidorService">
+    <wsdl:port binding="tns:UsuariosServidorServiceSoapBinding" name="UsuariosServidorPort">
+      <soap:address location="http://localhost:8080/Practica6/services/UsuariosServidorPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Practica6/services/UsuariosServidorPort?xsd=usuariosservidor_schema1.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="unqualified" targetNamespace="http://clases/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://clases/">
+  <xs:element name="anadirUsuario" type="tns:anadirUsuario"/>
+  <xs:element name="anadirUsuarioResponse" type="tns:anadirUsuarioResponse"/>
+  <xs:element name="listarUsuarios" type="tns:listarUsuarios"/>
+  <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse"/>
+  <xs:complexType name="anadirUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:usuario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido1" type="xs:string"/>
+      <xs:element minOccurs="0" name="apellido2" type="xs:string"/>
+      <xs:element name="codigoPostal" type="xs:int"/>
+      <xs:element minOccurs="0" name="direccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="dni" type="xs:string"/>
+      <xs:element name="edad" type="xs:int"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element name="telefono" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anadirUsuarioResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="listarUsuarios">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:usuario"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Practica6/services/UsuariosServidorPort</con:endpoint></con:endpoints><con:operation id="5d7ba257-4108-4962-9c37-26f0bfe29226" isOneWay="false" action="" name="anadirUsuario" bindingOperationName="anadirUsuario" type="Request-Response" outputName="anadirUsuarioResponse" inputName="anadirUsuario" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b35aa7f2-6d48-4373-bd5a-e69e42978ba5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Practica6/services/UsuariosServidorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clas="http://clases/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <clas:anadirUsuario>
+         <!--Optional:-->
+         <arg0>
+            <!--Optional:-->
+            <apellido1>?</apellido1>
+            <!--Optional:-->
+            <apellido2>?</apellido2>
+            <codigoPostal>33333</codigoPostal>
+            <!--Optional:-->
+            <direccion>?</direccion>
+            <!--Optional:-->
+            <dni>?</dni>
+            <edad>345</edad>
+            <!--Optional:-->
+            <nombre>?</nombre>
+            <telefono>5464</telefono>
+         </arg0>
+      </clas:anadirUsuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://clases/UsuariosServidor/anadirUsuario"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bbd592ed-0fe9-4571-9f2a-f52a87e8fc92" isOneWay="false" action="" name="listarUsuarios" bindingOperationName="listarUsuarios" type="Request-Response" outputName="listarUsuariosResponse" inputName="listarUsuarios" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2e9b1362-077d-406b-a018-b89db48240e3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Practica6/services/UsuariosServidorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clas="http://clases/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <clas:listarUsuarios/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://clases/UsuariosServidor/listarUsuarios"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

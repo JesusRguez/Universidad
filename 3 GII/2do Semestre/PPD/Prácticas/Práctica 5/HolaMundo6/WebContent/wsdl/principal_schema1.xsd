@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><xsd:schema xmlns:tns="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://clases/">
+  <xsd:element name="mensaje" type="tns:mensaje"/>
+  <xsd:complexType name="mensaje">
+    <xsd:sequence/>
+  </xsd:complexType>
+  <xsd:element name="mensajeResponse" type="tns:mensajeResponse"/>
+  <xsd:complexType name="mensajeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

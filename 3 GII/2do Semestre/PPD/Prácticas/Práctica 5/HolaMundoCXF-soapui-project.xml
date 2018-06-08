@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f359c5d4-c9fb-43de-9b63-7af49c8e505c" activeEnvironment="Default" name="HolaMundoCXF" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7d6c6ebf-cfec-4821-806c-4fcc20e4a950" wsaVersion="NONE" name="PrincipalSoapBinding" type="wsdl" bindingName="{http://clases/}PrincipalSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/HolaMundo6/services/PrincipalPort?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/HolaMundo6/services/PrincipalPort?wsdl"><con:part><con:url>http://localhost:8080/HolaMundo6/services/PrincipalPort?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Principal" targetNamespace="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://clases/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://clases/" schemaLocation="http://localhost:8080/HolaMundo6/services/PrincipalPort?xsd=principal_schema1.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="mensaje">
+    <wsdl:part element="tns:mensaje" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mensajeResponse">
+    <wsdl:part element="tns:mensajeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PrincipalPortType">
+    <wsdl:operation name="mensaje">
+      <wsdl:input message="tns:mensaje" name="mensaje"></wsdl:input>
+      <wsdl:output message="tns:mensajeResponse" name="mensajeResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrincipalSoapBinding" type="tns:PrincipalPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mensaje">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mensaje">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mensajeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Principal">
+    <wsdl:port binding="tns:PrincipalSoapBinding" name="PrincipalPort">
+      <soap:address location="http://localhost:8080/HolaMundo6/services/PrincipalPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/HolaMundo6/services/PrincipalPort?xsd=principal_schema1.xsd</con:url><con:content><![CDATA[<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://clases/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://clases/">
+  <xsd:element name="mensaje" type="tns:mensaje"/>
+  <xsd:complexType name="mensaje">
+    <xsd:sequence/>
+  </xsd:complexType>
+  <xsd:element name="mensajeResponse" type="tns:mensajeResponse"/>
+  <xsd:complexType name="mensajeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/HolaMundo6/services/PrincipalPort</con:endpoint></con:endpoints><con:operation id="2db3f261-4816-4ffe-919e-cf3733ddd18c" isOneWay="false" action="" name="mensaje" bindingOperationName="mensaje" type="Request-Response" outputName="mensajeResponse" inputName="mensaje" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="507871a7-4786-48e5-a08c-c0bf0a94ee97" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/HolaMundo6/services/PrincipalPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clas="http://clases/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <clas:mensaje/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://clases/PrincipalPortType/mensaje"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
