@@ -1,0 +1,57 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Man-in-the-Middle}{3}{Man-in-the-Middle}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Definici\IeC {\'o}n}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Definici\IeC {\'o}n}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@sectionpages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\sectionentry {2}{Ettercap}{4}{Ettercap}{0}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Definici\IeC {\'o}n}}
+\headcommand {\slideentry {2}{1}{1}{4/4}{Definici\IeC {\'o}n}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Funcionamiento}}
+\headcommand {\slideentry {2}{2}{1}{5/5}{Funcionamiento}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{6}{Ataque pr\IeC {\'a}ctico con Ettercap}}
+\headcommand {\slideentry {2}{3}{1}{6/6}{Ataque pr\IeC {\'a}ctico con Ettercap}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@sectionpages {4}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\sectionentry {3}{SSLStrip}{7}{SSLStrip}{0}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{Definici\IeC {\'o}n}}
+\headcommand {\slideentry {3}{1}{1}{7/7}{Definici\IeC {\'o}n}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{8}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona SSLStrip?}}
+\headcommand {\slideentry {3}{2}{1}{8/8}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona SSLStrip?}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{9}{Ataque pr\IeC {\'a}ctico con SSLStrip}}
+\headcommand {\slideentry {3}{3}{1}{9/9}{Ataque pr\IeC {\'a}ctico con SSLStrip}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@sectionpages {7}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\sectionentry {4}{HSTS}{10}{HSTS}{0}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{10}{\IeC {\textquestiondown }Qu\IeC {\'e} ha pasado?}}
+\headcommand {\slideentry {4}{1}{1}{10/10}{\IeC {\textquestiondown }Qu\IeC {\'e} ha pasado?}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{11}{Definici\IeC {\'o}n de HSTS}}
+\headcommand {\slideentry {4}{2}{1}{11/11}{Definici\IeC {\'o}n de HSTS}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@partpages {1}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@sectionpages {10}{11}}
+\headcommand {\beamer@documentpages {11}}
+\headcommand {\gdef \inserttotalframenumber {11}}

@@ -1,0 +1,14 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Man-in-the-Middle}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Definici\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{Ettercap}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Definici\IeC {\'o}n}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Funcionamiento}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Ataque pr\IeC {\'a}ctico con Ettercap}{6}{0}{2}
+\beamer@sectionintoc {3}{SSLStrip}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Definici\IeC {\'o}n}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona SSLStrip?}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{Ataque pr\IeC {\'a}ctico con SSLStrip}{9}{0}{3}
+\beamer@sectionintoc {4}{HSTS}{10}{0}{4}
+\beamer@subsectionintoc {4}{1}{\IeC {\textquestiondown }Qu\IeC {\'e} ha pasado?}{10}{0}{4}
+\beamer@subsectionintoc {4}{2}{Definici\IeC {\'o}n de HSTS}{11}{0}{4}
