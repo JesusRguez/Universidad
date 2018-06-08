@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Wed Oct 25 11:50:20 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Value<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "Value<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "Value<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "Value_Inc<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "Value_Inc<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "Value_Inc<2>" LOCATE = SITE "P7" LEVEL 1;
+SCHEMATIC END;
+

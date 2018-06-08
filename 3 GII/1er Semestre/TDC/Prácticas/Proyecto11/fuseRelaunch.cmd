@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb_beh.prj" "work.Inc_3bits_tb" 

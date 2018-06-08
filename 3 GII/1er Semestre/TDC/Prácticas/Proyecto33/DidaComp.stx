@@ -1,0 +1,65 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jesus/Xilinx/Proyecto33/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jesus/Xilinx/Proyecto33/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ALU_4bits.vhd" in Library work.
+Architecture behavioral of Entity alu_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/RAM_16x4.vhd" in Library work.
+Architecture behavioral of Entity ram_16x4 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/RAM_DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity ram_datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ROM_8x10.vhd" in Library work.
+Architecture behavioral of Entity rom_8x10 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_10bits.vhd" in Library work.
+Architecture behavioral of Entity reg_10bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ROM_RAM_DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity rom_ram_datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_3bits.vhd" in Library work.
+Architecture behavioral of Entity reg_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Inc_3bits.vhd" in Library work.
+Architecture behavioral of Entity inc_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_3bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ControlUnit_DidaComp.vhd" in Library work.
+Architecture behavioral of Entity controlunit_didacomp is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/MicroArq_DidaComp.vhd" in Library work.
+Architecture behavioral of Entity microarq_didacomp is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/DidaComp.vhd" in Library work.
+Entity <didacomp> compiled.
+Entity <didacomp> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> 
+
+Total memory usage is 303464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

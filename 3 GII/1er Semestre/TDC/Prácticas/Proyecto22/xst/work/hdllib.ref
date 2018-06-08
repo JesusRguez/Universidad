@@ -1,0 +1,8 @@
+EN display7seg_4on NULL C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.vhd sub00/vhpl06 1511344520
+AR clk_1khz behavioral C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhd sub00/vhpl01 1511344515
+EN clk_1khz NULL C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhd sub00/vhpl00 1511344514
+EN disp7seg NULL C:/Users/Jesus/Xilinx/Proyecto22/Disp7Seg.vhd sub00/vhpl04 1511344518
+AR disp7seg behavioral C:/Users/Jesus/Xilinx/Proyecto22/Disp7Seg.vhd sub00/vhpl05 1511344519
+EN counter_2bits NULL C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhd sub00/vhpl02 1511344516
+AR display7seg_4on behavioral C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.vhd sub00/vhpl07 1511344521
+AR counter_2bits behavioral C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhd sub00/vhpl03 1511344517

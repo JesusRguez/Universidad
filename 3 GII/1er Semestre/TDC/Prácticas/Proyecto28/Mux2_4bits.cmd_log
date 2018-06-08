@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto28 -o C:/Users/Jesus/Xilinx/Proyecto28/Mux2_4bits.vhi -module Mux2_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Mux2_4bits.vhd 

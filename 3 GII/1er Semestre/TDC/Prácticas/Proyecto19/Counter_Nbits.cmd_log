@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto19 -o C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhi -module Counter_Nbits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Counter_Nbits.vhd 

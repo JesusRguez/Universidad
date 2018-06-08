@@ -1,0 +1,18 @@
+V3 11
+FL C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhd 2017/11/15.11:12:30 P.28xd
+EN work/Counter_Nbits 1510743598 \
+      FL C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Counter_Nbits/Behavioral 1510743599 \
+      FL C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhd EN work/Counter_Nbits 1510743598
+FL C:/Users/Jesus/Xilinx/Proyecto19/RisingEdge.vhd 2017/11/08.11:52:10 P.28xd
+EN work/RisingEdge 1510743596 FL C:/Users/Jesus/Xilinx/Proyecto19/RisingEdge.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/RisingEdge/Behavioral 1510743597 \
+      FL C:/Users/Jesus/Xilinx/Proyecto19/RisingEdge.vhd EN work/RisingEdge 1510743596
+FL C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.vhd 2017/11/15.11:59:53 P.28xd
+EN work/YourTurn 1510743600 FL C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/YourTurn/Behavioral 1510743601 \
+      FL C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.vhd EN work/YourTurn 1510743600 \
+      CP RisingEdge CP Counter_Nbits

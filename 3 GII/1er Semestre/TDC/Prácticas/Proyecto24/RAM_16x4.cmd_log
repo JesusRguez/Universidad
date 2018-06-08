@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto24/RAM_16x4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 RAM_16x4.ngc RAM_16x4.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o RAM_16x4_map.ncd RAM_16x4.ngd RAM_16x4.pcf 
+par -w -intstyle ise -ol high -t 1 RAM_16x4_map.ncd RAM_16x4.ncd RAM_16x4.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml RAM_16x4.twx RAM_16x4.ncd -o RAM_16x4.twr RAM_16x4.pcf 
+bitgen -intstyle ise -f RAM_16x4.ut RAM_16x4.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc RAM_16x4_ucf.ucf -p xc3s100e-cp132-5 RAM_16x4.ngc RAM_16x4.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o RAM_16x4_map.ncd RAM_16x4.ngd RAM_16x4.pcf 
+par -w -intstyle ise -ol high -t 1 RAM_16x4_map.ncd RAM_16x4.ncd RAM_16x4.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml RAM_16x4.twx RAM_16x4.ncd -o RAM_16x4.twr RAM_16x4.pcf -ucf RAM_16x4_ucf.ucf 
+bitgen -intstyle ise -f RAM_16x4.ut RAM_16x4.ncd 

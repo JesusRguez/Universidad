@@ -1,0 +1,2 @@
+vhdtdtfi -prj PFP4 -o C:/Users/Jesus/Xilinx/PFP4/Inc_4bits.vhi -module Inc_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Inc_4bits.vhd 
+vhdtdtfi -prj PFP4 -o C:/Users/Jesus/Xilinx/PFP4/Inc_4bits.vhi -module Inc_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Inc_4bits.vhd 

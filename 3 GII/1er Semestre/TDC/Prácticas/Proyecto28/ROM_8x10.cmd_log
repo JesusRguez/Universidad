@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto28 -o C:/Users/Jesus/Xilinx/Proyecto28/ROM_8x10.vhi -module ROM_8x10 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ROM_8x10.vhd 

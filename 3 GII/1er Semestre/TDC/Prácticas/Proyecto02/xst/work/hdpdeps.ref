@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate.vhd 2017/10/07.10:13:45 P.28xd
+EN work/xnor_gate 1507713678 FL C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/xnor_gate/Behavioral 1507713679 \
+      FL C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate.vhd EN work/xnor_gate 1507713678

@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Fri Oct 20 09:44:58 2017
+
+drc -z Mux2_3bits.ncd Mux2_3bits.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,3 @@
+NET "CLK" LOC = "B8";
+NET "RESET" LOC = "G12";
+NET "Q" LOC = "M5";

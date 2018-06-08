@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.syr" 
+vhdtdtfi -prj PFP4 -o C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.vhi -module Counter_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work Mux2_4bits.vhd -lib work Inc_4bits.vhd -lib work Counter_4bits.vhd 
+vhdtdtfi -prj PFP4 -o C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.vhi -module Counter_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work Mux2_4bits.vhd -lib work Inc_4bits.vhd -lib work Counter_4bits.vhd 

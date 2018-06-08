@@ -1,0 +1,20 @@
+Release 14.2 - netgen P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -ar Structure -tm Mux_Disp_LED -w -dir
+netgen/synthesis -ofmt vhdl -sim Mux_Disp_LED.ngc Mux_Disp_LED_synthesis.vhd  
+
+Reading design 'Mux_Disp_LED.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing VHDL netlist
+'C:\Users\Jesus\Xilinx\Proyecto09\netgen\synthesis\Mux_Disp_LED_synthesis.vhd'
+...
+INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM library for correct
+   compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 129464 kilobytes

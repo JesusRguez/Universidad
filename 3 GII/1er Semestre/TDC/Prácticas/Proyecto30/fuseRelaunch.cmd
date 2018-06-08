@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto30/Debounce_tb_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto30/Debounce_tb_beh.prj" "work.Debounce_tb" 

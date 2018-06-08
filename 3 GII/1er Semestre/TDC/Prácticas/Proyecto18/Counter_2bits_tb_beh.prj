@@ -1,0 +1,2 @@
+vhdl work "Counter_2bits.vhd"
+vhdl work "Counter_2bits_tb.vhd"

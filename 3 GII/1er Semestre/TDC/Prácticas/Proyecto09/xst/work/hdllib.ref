@@ -1,0 +1,6 @@
+EN mux2_4bits NULL C:/Users/Jesus/Xilinx/Proyecto09/Mux2_4bits.vhd sub00/vhpl00 1508323514
+EN disp7seg NULL C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhd sub00/vhpl02 1508323516
+AR mux_disp_led structural C:/Users/Jesus/Xilinx/Proyecto09/Mux_Disp_LED.vhd sub00/vhpl05 1508323519
+AR disp7seg behavioral C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhd sub00/vhpl03 1508323517
+EN mux_disp_led NULL C:/Users/Jesus/Xilinx/Proyecto09/Mux_Disp_LED.vhd sub00/vhpl04 1508323518
+AR mux2_4bits behavioral C:/Users/Jesus/Xilinx/Proyecto09/Mux2_4bits.vhd sub00/vhpl01 1508323515

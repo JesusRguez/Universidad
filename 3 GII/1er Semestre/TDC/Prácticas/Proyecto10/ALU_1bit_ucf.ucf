@@ -1,0 +1,9 @@
+NET "A" LOC = "N3";
+NET "B" LOC = "E2";
+NET "Carry_In" LOC = "F3";
+
+NET "Sel_Ope<0>" LOC = "P11";
+NET "Sel_Ope<1>" LOC = "L3";
+
+NET "Carry_Out" LOC = "G1";
+NET "Result" LOC = "P4";

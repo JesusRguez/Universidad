@@ -1,0 +1,6 @@
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\Reg_4bits.vhd"
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\FFD.vhd"
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\ALU_4bits.vhd"
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\RAM_16x4.vhd"
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\DataPath_01.vhd"
+vhdl work "C:\Users\Jesus\Xilinx\Proyecto26\RAM_DataPath_01.vhd"

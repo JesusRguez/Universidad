@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/Deco2to4.vhi -module Deco2to4 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Deco2to4.vhd 

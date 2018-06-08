@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 20 10:36:47 2017
+
+drc -z MicroArq_DidaComp.ncd MicroArq_DidaComp.pcf
+
+DRC detected 0 errors and 0 warnings.

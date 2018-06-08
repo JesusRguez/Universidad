@@ -1,0 +1,57 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc YourTurn_ucf.ucf -p xc3s100e-cp132-5 YourTurn.ngc YourTurn.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o YourTurn_map.ncd YourTurn.ngd YourTurn.pcf 
+par -w -intstyle ise -ol high -t 1 YourTurn_map.ncd YourTurn.ncd YourTurn.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml YourTurn.twx YourTurn.ncd -o YourTurn.twr YourTurn.pcf -ucf YourTurn_ucf.ucf 
+bitgen -intstyle ise -f YourTurn.ut YourTurn.ncd 

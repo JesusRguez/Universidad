@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto30 -o C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhi -module Timer300ms -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Timer300ms.vhd 

@@ -1,0 +1,20 @@
+NET Hex<0> LOC=P11;
+NET Hex<1> LOC=L3;
+NET Hex<2> LOC=K3;
+NET Hex<3> LOC=B4;
+
+NET Select_Disp<0> LOC=E2;
+NET Select_Disp<1> LOC=N3;
+
+NET Seg<0> LOC=M12;
+NET Seg<1> LOC=L13;
+NET Seg<2> LOC=P12;
+NET Seg<3> LOC=N11;
+NET Seg<4> LOC=N14;
+NET Seg<5> LOC=H12;
+NET Seg<6> LOC=L14;
+
+NET Anode<0> LOC=F12;
+NET Anode<1> LOC=J12;
+NET Anode<2> LOC=M13;
+NET Anode<3> LOC=K14;

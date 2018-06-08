@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto22 -o C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhi -module Counter_2bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Counter_2bits.vhd 

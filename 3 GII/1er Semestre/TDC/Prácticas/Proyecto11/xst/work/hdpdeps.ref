@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits.vhd 2017/10/25.11:49:15 P.28xd
+EN work/Inc_3bits 1508924965 FL C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Inc_3bits/Behavioral 1508924966 \
+      FL C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits.vhd EN work/Inc_3bits 1508924965

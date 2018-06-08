@@ -1,0 +1,11 @@
+V3 6
+FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz.vhd 2017/11/15.12:26:45 P.28xd
+EN work/CLK_1Hz 1510745208 FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/CLK_1Hz/Behavioral 1510745209 \
+      FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz.vhd EN work/CLK_1Hz 1510745208
+FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1KHz.vhd 2017/11/15.12:36:40 P.28xd
+EN work/CLK_1KHz 1510745802 FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1KHz.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/CLK_1KHz/Behavioral 1510745803 \
+      FL C:/Users/Jesus/Xilinx/Proyecto20/CLK_1KHz.vhd EN work/CLK_1KHz 1510745802

@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz_tb_isim_beh.exe -prj C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz_tb_beh.prj work.CLK_1Hz_tb 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz.vhd" into library work
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity CLK_1Hz [clk_1hz_default]
+Compiling architecture behavior of entity clk_1hz_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable C:/Users/Jesus/Xilinx/Proyecto20/CLK_1Hz_tb_isim_beh.exe
+Fuse Memory Usage: 29760 KB
+Fuse CPU Usage: 530 ms

@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto12/ALU_4bits.vhd 2017/10/27.09:34:53 P.28xd
+EN work/ALU_4bits 1509089703 FL C:/Users/Jesus/Xilinx/Proyecto12/ALU_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/ALU_4bits/Behavioral 1509089704 \
+      FL C:/Users/Jesus/Xilinx/Proyecto12/ALU_4bits.vhd EN work/ALU_4bits 1509089703

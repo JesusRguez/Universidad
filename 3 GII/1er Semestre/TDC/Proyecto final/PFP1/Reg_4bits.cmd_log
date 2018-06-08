@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP1 -o C:/Users/Jesus/Xilinx/PFP1/Reg_4bits.vhi -module Reg_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd 

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jesus/Xilinx/PFP3/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Xilinx/PFP3/xst"
+elaborate
+-ifn DataPath.prj
+-ifmt mixed

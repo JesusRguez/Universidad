@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Tarea03_B/INC_N_bits.vhd 2017/11/02.18:09:54 P.28xd
+EN work/Inc_3bits 1509642650 FL C:/Users/Jesus/Xilinx/Tarea03_B/INC_N_bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Inc_3bits/Behavioral 1509642651 \
+      FL C:/Users/Jesus/Xilinx/Tarea03_B/INC_N_bits.vhd EN work/Inc_3bits 1509642650

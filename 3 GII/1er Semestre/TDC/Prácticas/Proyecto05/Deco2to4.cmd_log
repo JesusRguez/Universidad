@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto05/Deco2to4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Deco2to4_ucf.ucf -p xc3s100e-cp132-4 Deco2to4.ngc Deco2to4.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Deco2to4_map.ncd Deco2to4.ngd Deco2to4.pcf 
+par -w -intstyle ise -ol high -t 1 Deco2to4_map.ncd Deco2to4.ncd Deco2to4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Deco2to4.twx Deco2to4.ncd -o Deco2to4.twr Deco2to4.pcf -ucf Deco2to4_ucf.ucf 
+bitgen -intstyle ise -f Deco2to4.ut Deco2to4.ncd 

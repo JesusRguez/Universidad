@@ -1,0 +1,4 @@
+vhdl work "Disp7Seg.vhd"
+vhdl work "Counter_2bits.vhd"
+vhdl work "CLK_1KHz.vhd"
+vhdl work "Display7Seg_4ON.vhd"

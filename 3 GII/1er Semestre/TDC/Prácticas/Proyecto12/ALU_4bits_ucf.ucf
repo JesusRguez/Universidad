@@ -1,0 +1,19 @@
+NET "OPE_A<0>" LOC = "P11";
+NET "OPE_A<1>" LOC = "L3";
+NET "OPE_A<2>" LOC = "K3";
+NET "OPE_A<3>" LOC = "B4";
+
+NET "OPE_B<0>" LOC = "G3";
+NET "OPE_B<1>" LOC = "F3";
+NET "OPE_B<2>" LOC = "E2";
+NET "OPE_B<3>" LOC = "N3";
+
+NET "SEL_ALU<0>" LOC = "G12";
+NET "SEL_ALU<1>" LOC = "C11";
+
+NET "Sal_ALU<0>" LOC = "M5";
+NET "Sal_ALU<1>" LOC = "M11";
+NET "Sal_ALU<2>" LOC = "P7";
+NET "Sal_ALU<3>" LOC = "P6";
+
+NET "SalFZ" LOC = "G1";

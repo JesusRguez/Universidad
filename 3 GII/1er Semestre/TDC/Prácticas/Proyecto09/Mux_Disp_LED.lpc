@@ -1,0 +1,34 @@
+# Mux_Disp_LED.lpc  
+#   The constraints in this file were created simply to be viewed.  
+#   If you wish to use these constraints, please copy them into your  
+#   project's constraint file. If you do not have a project constraints  
+#   file yet, please use the "Project->New Source" menu to create one.
+
+
+
+#pin2ucf - Wed Oct 18 12:50:07 2017
+#The following constraints were newly added
+NET "Seg<0>" LOC = M12;
+NET "Seg<1>" LOC = L13;
+NET "B<0>" LOC = G3;
+NET "Seg<2>" LOC = P12;
+NET "B<1>" LOC = F3;
+NET "Seg<3>" LOC = N11;
+NET "B<2>" LOC = E2;
+NET "Seg<4>" LOC = N14;
+NET "B<3>" LOC = N3;
+NET "Seg<5>" LOC = H12;
+NET "Seg<6>" LOC = L14;
+NET "LED<0>" LOC = M5;
+NET "LED<1>" LOC = M11;
+NET "A<0>" LOC = P11;
+NET "LED<2>" LOC = P7;
+NET "A<1>" LOC = L3;
+NET "LED<3>" LOC = P6;
+NET "A<2>" LOC = K3;
+NET "A<3>" LOC = B4;
+NET "Anode<0>" LOC = F12;
+NET "Anode<1>" LOC = J12;
+NET "Anode<2>" LOC = M13;
+NET "Anode<3>" LOC = K14;
+NET "Sel" LOC = G12;

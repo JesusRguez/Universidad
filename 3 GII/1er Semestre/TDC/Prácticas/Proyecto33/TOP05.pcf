@@ -1,0 +1,33 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Wed Jan 17 12:34:16 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Catodo<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "Catodo<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Catodo<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "Catodo<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "Catodo<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Catodo<5>" LOCATE = SITE "H12" LEVEL 1;
+COMP "Catodo<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Push" LOCATE = SITE "A7" LEVEL 1;
+COMP "SalFZ" LOCATE = SITE "D12" LEVEL 1;
+COMP "SalCOP<0>" LOCATE = SITE "B7" LEVEL 1;
+COMP "SalCOP<1>" LOCATE = SITE "B5" LEVEL 1;
+COMP "Anodo<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "Instruction<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "Anodo<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "Instruction<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "Anodo<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "Instruction<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "Anodo<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "Instruction<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "CLK" LOCATE = SITE "B8" LEVEL 1;
+COMP "Instruction<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "Instruction<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "RESET" LOCATE = SITE "G12" LEVEL 1;
+COMP "Instruction<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "Instruction<7>" LOCATE = SITE "G1" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

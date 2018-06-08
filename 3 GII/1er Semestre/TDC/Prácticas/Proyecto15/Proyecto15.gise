@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Proyecto15.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="RisingEdge.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RisingEdge.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RisingEdge.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="RisingEdge.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RisingEdge.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="RisingEdge.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="RisingEdge.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="RisingEdge.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="RisingEdge.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="RisingEdge.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RisingEdge.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="RisingEdge.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RisingEdge.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RisingEdge.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="RisingEdge.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="RisingEdge.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="RisingEdge.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="RisingEdge.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="RisingEdge.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RisingEdge.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RisingEdge_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="RisingEdge_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="RisingEdge_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="RisingEdge_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="RisingEdge_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="RisingEdge_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RisingEdge_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RisingEdge_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="RisingEdge_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="RisingEdge_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RisingEdge_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RisingEdge_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="RisingEdge_summary.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RisingEdge_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RisingEdge_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RisingEdge_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RisingEdge_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="RisingEdge_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RisingEdge_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RisingEdge_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="risingedge.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="risingedge.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="risingedge.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1510139896" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1510139896">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510140017" xil_pn:in_ck="8020042588196124375" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1510140017">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.vhd"/>
+      <outfile xil_pn:name="RisingEdge_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1510140022" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7691182822767055284" xil_pn:start_ts="1510140022">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510140022" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2381669090224977742" xil_pn:start_ts="1510140022">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139896" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-159552557881454512" xil_pn:start_ts="1510139896">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510140023" xil_pn:in_ck="8020042588196124375" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1510140022">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.vhd"/>
+      <outfile xil_pn:name="RisingEdge_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1510140028" xil_pn:in_ck="8020042588196124375" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5269705643736393594" xil_pn:start_ts="1510140023">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge_tb_beh.prj"/>
+      <outfile xil_pn:name="RisingEdge_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1511287317" xil_pn:in_ck="5330464615739757605" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3277772751923802471" xil_pn:start_ts="1511287317">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RisingEdge_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1575095856024568506" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-159552557881454512" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6909907016737349116" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138298" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7591429632426540710" xil_pn:start_ts="1510138298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139684" xil_pn:in_ck="8942843050489730609" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-6342157624464922835" xil_pn:start_ts="1510139674">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RisingEdge.lso"/>
+      <outfile xil_pn:name="RisingEdge.ngc"/>
+      <outfile xil_pn:name="RisingEdge.ngr"/>
+      <outfile xil_pn:name="RisingEdge.prj"/>
+      <outfile xil_pn:name="RisingEdge.stx"/>
+      <outfile xil_pn:name="RisingEdge.syr"/>
+      <outfile xil_pn:name="RisingEdge.xst"/>
+      <outfile xil_pn:name="RisingEdge_vhdl.prj"/>
+      <outfile xil_pn:name="RisingEdge_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1510138552" xil_pn:in_ck="-7410039619038107862" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5608183220072786503" xil_pn:start_ts="1510138552">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139690" xil_pn:in_ck="5030407509857937137" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1217547740825891395" xil_pn:start_ts="1510139684">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.bld"/>
+      <outfile xil_pn:name="RisingEdge.ngd"/>
+      <outfile xil_pn:name="RisingEdge_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139696" xil_pn:in_ck="8211183481047518514" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1510139690">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RisingEdge.pcf"/>
+      <outfile xil_pn:name="RisingEdge_map.map"/>
+      <outfile xil_pn:name="RisingEdge_map.mrp"/>
+      <outfile xil_pn:name="RisingEdge_map.ncd"/>
+      <outfile xil_pn:name="RisingEdge_map.ngm"/>
+      <outfile xil_pn:name="RisingEdge_map.xrpt"/>
+      <outfile xil_pn:name="RisingEdge_summary.xml"/>
+      <outfile xil_pn:name="RisingEdge_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139707" xil_pn:in_ck="4098326504571591819" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1510139696">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.ncd"/>
+      <outfile xil_pn:name="RisingEdge.pad"/>
+      <outfile xil_pn:name="RisingEdge.par"/>
+      <outfile xil_pn:name="RisingEdge.ptwx"/>
+      <outfile xil_pn:name="RisingEdge.unroutes"/>
+      <outfile xil_pn:name="RisingEdge.xpi"/>
+      <outfile xil_pn:name="RisingEdge_pad.csv"/>
+      <outfile xil_pn:name="RisingEdge_pad.txt"/>
+      <outfile xil_pn:name="RisingEdge_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139715" xil_pn:in_ck="8942843050489721732" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1510139707">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="risingedge.bgn"/>
+      <outfile xil_pn:name="risingedge.bit"/>
+      <outfile xil_pn:name="risingedge.drc"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139720" xil_pn:in_ck="-653258871484952178" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1510139715">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1510139707" xil_pn:in_ck="-5822875094367087698" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1510139703">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RisingEdge.twr"/>
+      <outfile xil_pn:name="RisingEdge.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

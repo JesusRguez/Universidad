@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Tarea03_A/MUX_2_N_bits.vhd 2017/11/02.18:06:33 P.28xd
+EN work/Mux2_4bits 1509642720 FL C:/Users/Jesus/Xilinx/Tarea03_A/MUX_2_N_bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Mux2_4bits/Behavioral 1509642721 \
+      FL C:/Users/Jesus/Xilinx/Tarea03_A/MUX_2_N_bits.vhd EN work/Mux2_4bits 1509642720

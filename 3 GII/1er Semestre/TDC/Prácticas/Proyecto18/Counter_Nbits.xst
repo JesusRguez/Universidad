@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jesus/Xilinx/Proyecto18/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Xilinx/Proyecto18/xst"
+elaborate
+-ifn Counter_Nbits.prj
+-ifmt mixed

@@ -1,0 +1,20 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb_isim_beh.exe -prj C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb_beh.prj work.Inc_3bits_tb 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits.vhd" into library work
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity Inc_3bits [inc_3bits_default]
+Compiling architecture behavior of entity inc_3bits_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable C:/Users/Jesus/Xilinx/Proyecto11/Inc_3bits_tb_isim_beh.exe
+Fuse Memory Usage: 36448 KB
+Fuse CPU Usage: 2968 ms

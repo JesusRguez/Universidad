@@ -1,0 +1,28 @@
+NET "RESET" LOC = "G12";
+NET "CLK" LOC = "B8";
+NET "CW0" LOC ="C11";
+NET "CW1" LOC ="M4";
+NET "CW2" LOC ="A7";
+
+NET "SalFZ" LOC = "M5";
+
+NET "DataBus<0>" LOC = "G3";
+NET "DataBus<1>" LOC = "F3";
+NET "DataBus<2>" LOC = "E2";
+NET "DataBus<3>" LOC = "N3";
+
+NET "SEL_ALU<0>" LOC = "P11";
+NET "SEL_ALU<1>" LOC = "L3";
+
+NET "Catodo<0>" LOC="M12";
+NET "Catodo<1>" LOC="L13";
+NET "Catodo<2>" LOC="P12";
+NET "Catodo<3>" LOC="N11";
+NET "Catodo<4>" LOC="N14";
+NET "Catodo<5>" LOC="H12";
+NET "Catodo<6>" LOC="L14";
+
+NET "Anodo<0>" LOC="F12";
+NET "Anodo<1>" LOC="J12";
+NET "Anodo<2>" LOC="M13";
+NET "Anodo<3>" LOC="K14";

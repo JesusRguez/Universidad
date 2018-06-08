@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto08/Disp7Seg.vhd 2017/10/18.11:11:35 P.28xd
+EN work/Disp7Seg 1508317899 FL C:/Users/Jesus/Xilinx/Proyecto08/Disp7Seg.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Disp7Seg/Behavioral 1508317900 \
+      FL C:/Users/Jesus/Xilinx/Proyecto08/Disp7Seg.vhd EN work/Disp7Seg 1508317899

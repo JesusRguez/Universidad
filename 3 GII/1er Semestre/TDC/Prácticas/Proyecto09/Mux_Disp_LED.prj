@@ -1,0 +1,3 @@
+vhdl work "Mux2_4bits.vhd"
+vhdl work "Disp7Seg.vhd"
+vhdl work "Mux_Disp_LED.vhd"

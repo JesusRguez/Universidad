@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.syr" 
+vhdtdtfi -prj Proyecto30 -o C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhi -module DebounceFSM -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work DebounceFSM.vhd 

@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Sep 27 12:09:19 2017
+
+drc -z switch_on_led.ncd switch_on_led.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,6 @@
+EN toggle NULL C:/Users/Jesus/Xilinx/Proyecto16/Toggle.vhd sub00/vhpl02 1510303178
+AR risingedge behavioral C:/Users/Jesus/Xilinx/Proyecto16/RisingEdge.vhd sub00/vhpl01 1510303177
+AR on_off behavioral C:/Users/Jesus/Xilinx/Proyecto16/ON_OFF.vhd sub00/vhpl05 1510303181
+EN risingedge NULL C:/Users/Jesus/Xilinx/Proyecto16/RisingEdge.vhd sub00/vhpl00 1510303176
+EN on_off NULL C:/Users/Jesus/Xilinx/Proyecto16/ON_OFF.vhd sub00/vhpl04 1510303180
+AR toggle behavioral C:/Users/Jesus/Xilinx/Proyecto16/Toggle.vhd sub00/vhpl03 1510303179

@@ -1,0 +1,2 @@
+vhdl work "FFD_Basic.vhd"
+vhdl work "FFD_Basic_tb.vhd"

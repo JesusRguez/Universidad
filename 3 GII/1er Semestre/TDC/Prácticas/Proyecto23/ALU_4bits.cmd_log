@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto23 -o C:/Users/Jesus/Xilinx/Proyecto23/ALU_4bits.vhi -module ALU_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ALU_4bits.vhd 

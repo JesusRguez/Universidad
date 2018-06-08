@@ -1,0 +1,3 @@
+vhdl work "Toggle.vhd"
+vhdl work "CLK_1Hz.vhd"
+vhdl work "BlinkLED.vhd"

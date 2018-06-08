@@ -1,0 +1,6 @@
+NET "a" LOC = P11;
+NET "b" LOC = L3;
+NET "c" LOC = M5;
+//Usa:
+// Number of Slices:                        1  out of    960     0%  
+// Number of 4 input LUTs:                  1  out of   1920     0% 

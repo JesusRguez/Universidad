@@ -1,0 +1,2 @@
+vhdtdtfi -prj Proyecto10 -o C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhi -module add_1bit -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work add_1bit.vhd 
+vhdtdtfi -prj Proyecto10 -o C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhi -module add_1bit -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work add_1bit.vhd 

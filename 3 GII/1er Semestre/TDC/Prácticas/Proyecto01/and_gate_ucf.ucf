@@ -1,0 +1,23 @@
+//Para hacerlo con interruptores:
+//NET "a" LOC = "P11";
+//NET "b" LOC = "L3";
+//NET "c" LOC = "M5";
+
+//Para hacerlo con pulsadores:
+//NET "a" LOC = "G12";
+//NET "b" LOC = "C11";
+//NET "c" LOC = "M5";
+
+//Con dos entradas usa:
+ //Number of Slices:                        1  out of    960     0%  
+ //Number of 4 input LUTs:                  1  out of   1920     0%
+
+//Para hacerlo con tres puertas;
+NET "a" LOC = "P11";
+NET "b" LOC = "L3";
+NET "c" LOC = "K3";
+NET "d" LOC = "M5";
+
+//Con tres entradas usa:
+ //Number of Slices:                        1  out of    960     0%  
+ //Number of 4 input LUTs:                  1  out of   1920     0% 

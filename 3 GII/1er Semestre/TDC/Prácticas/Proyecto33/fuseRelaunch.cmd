@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto33/tbDidaComp_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto33/tbDidaComp_beh.prj" "work.tbDidaComp" 

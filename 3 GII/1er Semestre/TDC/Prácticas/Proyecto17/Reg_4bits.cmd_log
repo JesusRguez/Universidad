@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Reg_4bits.ngc Reg_4bits.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Reg_4bits_map.ncd Reg_4bits.ngd Reg_4bits.pcf 
+par -w -intstyle ise -ol high -t 1 Reg_4bits_map.ncd Reg_4bits.ncd Reg_4bits.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Reg_4bits.twx Reg_4bits.ncd -o Reg_4bits.twr Reg_4bits.pcf 
+bitgen -intstyle ise -f Reg_4bits.ut Reg_4bits.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Reg_4bits.ngc Reg_4bits.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Reg_4bits_map.ncd Reg_4bits.ngd Reg_4bits.pcf 
+par -w -intstyle ise -ol high -t 1 Reg_4bits_map.ncd Reg_4bits.ncd Reg_4bits.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Reg_4bits.twx Reg_4bits.ncd -o Reg_4bits.twr Reg_4bits.pcf 
+bitgen -intstyle ise -f Reg_4bits.ut Reg_4bits.ncd 

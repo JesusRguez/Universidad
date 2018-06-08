@@ -1,0 +1,2 @@
+vhdl isim_temp "CLK_1KHz.vhd"
+vhdl isim_temp "CLK_1KHz_tb.vhd"

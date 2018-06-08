@@ -1,0 +1,22 @@
+V3 15
+FL C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhd 2017/10/11.12:15:44 P.28xd
+EN work/add_1bit 1508697299 FL C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/add_1bit/Dataflow 1508697300 \
+      FL C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhd EN work/add_1bit 1508697299
+FL C:/Users/Jesus/Xilinx/Proyecto10/ALU_1bit.vhd 2017/10/22.20:34:57 P.28xd
+EN work/ALU_1bit 1508697305 FL C:/Users/Jesus/Xilinx/Proyecto10/ALU_1bit.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/ALU_1bit/Structural 1508697306 \
+      FL C:/Users/Jesus/Xilinx/Proyecto10/ALU_1bit.vhd EN work/ALU_1bit 1508697305 \
+      CP add_1bit CP and_gate CP xnor_gate
+FL C:/Users/Jesus/Xilinx/Proyecto10/and_gate.vhd 2017/10/19.20:09:08 P.28xd
+EN work/and_gate 1508697301 FL C:/Users/Jesus/Xilinx/Proyecto10/and_gate.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/and_gate/Behavioral 1508697302 \
+      FL C:/Users/Jesus/Xilinx/Proyecto10/and_gate.vhd EN work/and_gate 1508697301
+FL C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhd 2017/10/07.10:13:45 P.28xd
+EN work/xnor_gate 1508697303 FL C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/xnor_gate/Behavioral 1508697304 \
+      FL C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhd EN work/xnor_gate 1508697303

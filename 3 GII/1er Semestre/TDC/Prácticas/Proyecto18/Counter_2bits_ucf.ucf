@@ -1,0 +1,4 @@
+NET "ENABLE" LOC = "A7";
+NET "RESET" LOC = "G12";
+NET "Q<0>" LOC = "P4";
+NET "Q<1>" LOC = "G1";

@@ -1,0 +1,8 @@
+AR xnor_gate behavioral C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhd sub00/vhpl05 1508697304
+EN alu_1bit NULL C:/Users/Jesus/Xilinx/Proyecto10/ALU_1bit.vhd sub00/vhpl06 1508697305
+EN add_1bit NULL C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhd sub00/vhpl00 1508697299
+AR and_gate behavioral C:/Users/Jesus/Xilinx/Proyecto10/and_gate.vhd sub00/vhpl03 1508697302
+EN xnor_gate NULL C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhd sub00/vhpl04 1508697303
+AR alu_1bit structural C:/Users/Jesus/Xilinx/Proyecto10/ALU_1bit.vhd sub00/vhpl07 1508697306
+AR add_1bit dataflow C:/Users/Jesus/Xilinx/Proyecto10/add_1bit.vhd sub00/vhpl01 1508697300
+EN and_gate NULL C:/Users/Jesus/Xilinx/Proyecto10/and_gate.vhd sub00/vhpl02 1508697301

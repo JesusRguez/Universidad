@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Tarea03_C/ALU_4bits.vhd 2017/11/10.09:08:40 P.28xd
+EN work/ALU_4bits 1510301323 FL C:/Users/Jesus/Xilinx/Tarea03_C/ALU_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/ALU_4bits/Behavioral 1510301324 \
+      FL C:/Users/Jesus/Xilinx/Tarea03_C/ALU_4bits.vhd EN work/ALU_4bits 1510301323

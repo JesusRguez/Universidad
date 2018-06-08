@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto28 -o C:/Users/Jesus/Xilinx/Proyecto28/Reg_10bits.vhi -module Reg_10bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_10bits.vhd 

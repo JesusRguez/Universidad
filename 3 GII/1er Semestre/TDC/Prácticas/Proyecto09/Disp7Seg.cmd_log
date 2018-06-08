@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto09 -o C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhi -module Disp7Seg -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Disp7Seg.vhd 

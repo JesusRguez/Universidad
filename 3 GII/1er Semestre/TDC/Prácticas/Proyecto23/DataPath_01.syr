@@ -1,0 +1,453 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: DataPath_01.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DataPath_01.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DataPath_01"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : DataPath_01
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto23/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto23/ALU_4bits.vhd" in Library work.
+Architecture behavioral of Entity alu_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto23/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.vhd" in Library work.
+Entity <datapath_01> compiled.
+Entity <datapath_01> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <DataPath_01> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FFD> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <DataPath_01> in library <work> (Architecture <behavioral>).
+Entity <DataPath_01> analyzed. Unit <DataPath_01> generated.
+
+Analyzing Entity <Reg_4bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_4bits> analyzed. Unit <Reg_4bits> generated.
+
+Analyzing Entity <ALU_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto23/ALU_4bits.vhd" line 55: Mux is complete : default of case is discarded
+Entity <ALU_4bits> analyzed. Unit <ALU_4bits> generated.
+
+Analyzing Entity <FFD> in library <work> (Architecture <behavioral>).
+Entity <FFD> analyzed. Unit <FFD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Reg_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto23/Reg_4bits.vhd".
+    Found 4-bit register for signal <DataOut>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Reg_4bits> synthesized.
+
+
+Synthesizing Unit <ALU_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto23/ALU_4bits.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <Resultado>.
+    Found 4-bit addsub for signal <Resultado$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <ALU_4bits> synthesized.
+
+
+Synthesizing Unit <FFD>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto23/FFD.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FFD> synthesized.
+
+
+Synthesizing Unit <DataPath_01>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.vhd".
+Unit <DataPath_01> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit addsub                                          : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 4-bit register                                        : 2
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit addsub                                          : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DataPath_01> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DataPath_01, actual ratio is 1.
+FlipFlop REGA/DataOut_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGA/DataOut_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGA/DataOut_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGA/DataOut_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGB/DataOut_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGB/DataOut_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGB/DataOut_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop REGB/DataOut_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : DataPath_01.ngr
+Top Level Output File Name         : DataPath_01
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 20
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 10
+#      LUT4_D                      : 2
+#      MUXF5                       : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 17
+#      FDCE                        : 17
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 10
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       11  out of    960     1%  
+ Number of Slice Flip Flops:              9  out of   1920     0%  
+ Number of 4 input LUTs:                 16  out of   1920     0%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of     83    28%  
+    IOB Flip Flops:                       8
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 17    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.649ns (Maximum Frequency: 215.086MHz)
+   Minimum input arrival time before clock: 6.857ns
+   Maximum output required time after clock: 7.881ns
+   Maximum combinational path delay: 10.050ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.649ns (frequency: 215.086MHz)
+  Total number of paths / destination ports: 35 / 1
+-------------------------------------------------------------------------
+Delay:               4.649ns (Levels of Logic = 4)
+  Source:            REGA/DataOut_0 (FF)
+  Destination:       Inst_FFD/Q (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: REGA/DataOut_0 to Inst_FFD/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.481  REGA/DataOut_0 (REGA/DataOut_0)
+     LUT4_D:I2->LO         1   0.612   0.103  Inst_ALU_4bits/Mmux_Resultado2_SW2 (N30)
+     LUT4:I3->O            2   0.612   0.380  Inst_ALU_4bits/Mmux_Resultado2 (SalALU_1_OBUF)
+     MUXF5:S->O            1   0.641   0.426  Inst_ALU_4bits/Mmux_Resultado4_SW2 (N13)
+     LUT4:I1->O            1   0.612   0.000  Inst_ALU_4bits/SalFZ_cmp_eq00001 (FlagZero)
+     FDCE:D                    0.268          Inst_FFD/Q
+    ----------------------------------------
+    Total                      4.649ns (3.259ns logic, 1.390ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 68 / 34
+-------------------------------------------------------------------------
+Offset:              6.857ns (Levels of Logic = 6)
+  Source:            SEL_ALU<1> (PAD)
+  Destination:       Inst_FFD/Q (FF)
+  Destination Clock: CLK rising
+
+  Data Path: SEL_ALU<1> to Inst_FFD/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.795  SEL_ALU_1_IBUF (SEL_ALU_1_IBUF)
+     LUT2:I0->O            5   0.612   0.690  Inst_ALU_4bits/Resultado_mux00001 (Inst_ALU_4bits/Resultado_mux0000)
+     LUT4_D:I0->LO         1   0.612   0.103  Inst_ALU_4bits/Mmux_Resultado2_SW2 (N30)
+     LUT4:I3->O            2   0.612   0.380  Inst_ALU_4bits/Mmux_Resultado2 (SalALU_1_OBUF)
+     MUXF5:S->O            1   0.641   0.426  Inst_ALU_4bits/Mmux_Resultado4_SW2 (N13)
+     LUT4:I1->O            1   0.612   0.000  Inst_ALU_4bits/SalFZ_cmp_eq00001 (FlagZero)
+     FDCE:D                    0.268          Inst_FFD/Q
+    ----------------------------------------
+    Total                      6.857ns (4.463ns logic, 2.394ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 32 / 13
+-------------------------------------------------------------------------
+Offset:              7.881ns (Levels of Logic = 5)
+  Source:            REGA/DataOut_0 (FF)
+  Destination:       SalALU<3> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: REGA/DataOut_0 to SalALU<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.520  REGA/DataOut_0 (REGA/DataOut_0)
+     LUT3_L:I1->LO         1   0.612   0.103  Inst_ALU_4bits/Mmux_Resultado2_SW1 (N11)
+     LUT4:I3->O            2   0.612   0.383  Inst_ALU_4bits/Maddsub_Resultado_addsub0000_cy<1>1 (Inst_ALU_4bits/Maddsub_Resultado_addsub0000_cy<1>)
+     LUT4_D:I3->O          1   0.612   0.387  Inst_ALU_4bits/Mmux_Resultado4_SW1 (N8)
+     LUT4:I2->O            1   0.612   0.357  Inst_ALU_4bits/Mmux_Resultado4 (SalALU_3_OBUF)
+     OBUF:I->O                 3.169          SalALU_3_OBUF (SalALU<3>)
+    ----------------------------------------
+    Total                      7.881ns (6.131ns logic, 1.750ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 4
+-------------------------------------------------------------------------
+Delay:               10.050ns (Levels of Logic = 7)
+  Source:            SEL_ALU<1> (PAD)
+  Destination:       SalALU<3> (PAD)
+
+  Data Path: SEL_ALU<1> to SalALU<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.795  SEL_ALU_1_IBUF (SEL_ALU_1_IBUF)
+     LUT2:I0->O            5   0.612   0.690  Inst_ALU_4bits/Resultado_mux00001 (Inst_ALU_4bits/Resultado_mux0000)
+     LUT3_L:I0->LO         1   0.612   0.103  Inst_ALU_4bits/Mmux_Resultado2_SW1 (N11)
+     LUT4:I3->O            2   0.612   0.383  Inst_ALU_4bits/Maddsub_Resultado_addsub0000_cy<1>1 (Inst_ALU_4bits/Maddsub_Resultado_addsub0000_cy<1>)
+     LUT4_D:I3->O          1   0.612   0.387  Inst_ALU_4bits/Mmux_Resultado4_SW1 (N8)
+     LUT4:I2->O            1   0.612   0.357  Inst_ALU_4bits/Mmux_Resultado4 (SalALU_3_OBUF)
+     OBUF:I->O                 3.169          SalALU_3_OBUF (SalALU<3>)
+    ----------------------------------------
+    Total                     10.050ns (7.335ns logic, 2.715ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.45 secs
+ 
+--> 
+
+Total memory usage is 259316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,4 @@
+work	"CLK_1KHz.vhd"
+work	"Counter_2bits.vhd"
+work	"Disp7Seg.vhd"
+work	"Display7Seg_4ON.vhd"

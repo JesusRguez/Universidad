@@ -1,0 +1,22 @@
+V3 15
+FL C:/Users/Jesus/Xilinx/PFP2/Banco_Registros.vhd 2018/01/21.14:09:52 P.28xd
+EN work/Banco_Registros 1516559768 \
+      FL C:/Users/Jesus/Xilinx/PFP2/Banco_Registros.vhd PB ieee/std_logic_1164 1341906176
+AR work/Banco_Registros/Behavioral 1516559769 \
+      FL C:/Users/Jesus/Xilinx/PFP2/Banco_Registros.vhd EN work/Banco_Registros 1516559768 \
+      CP Deco3to8 CP Reg_4bits CP Mux8_4bits
+FL C:/Users/Jesus/Xilinx/PFP2/Deco3to8.vhd 2018/01/21.13:42:08 P.28xd
+EN work/Deco3to8 1516559762 FL C:/Users/Jesus/Xilinx/PFP2/Deco3to8.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Deco3to8/Behavioral 1516559763 \
+      FL C:/Users/Jesus/Xilinx/PFP2/Deco3to8.vhd EN work/Deco3to8 1516559762
+FL C:/Users/Jesus/Xilinx/PFP2/Mux8_4bits.vhd 2018/01/21.13:59:09 P.28xd
+EN work/Mux8_4bits 1516559766 FL C:/Users/Jesus/Xilinx/PFP2/Mux8_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Mux8_4bits/Behavioral 1516559767 \
+      FL C:/Users/Jesus/Xilinx/PFP2/Mux8_4bits.vhd EN work/Mux8_4bits 1516559766
+FL C:/Users/Jesus/Xilinx/PFP2/Reg_4bits.vhd 2017/11/10.09:45:01 P.28xd
+EN work/Reg_4bits 1516559764 FL C:/Users/Jesus/Xilinx/PFP2/Reg_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Reg_4bits/Behavioral 1516559765 \
+      FL C:/Users/Jesus/Xilinx/PFP2/Reg_4bits.vhd EN work/Reg_4bits 1516559764

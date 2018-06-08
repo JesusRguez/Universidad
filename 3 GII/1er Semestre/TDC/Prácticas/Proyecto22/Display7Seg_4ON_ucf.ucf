@@ -1,0 +1,24 @@
+NET "Dato1<0>" LOC = "P11";
+NET "Dato1<1>" LOC = "L3";
+NET "Dato1<2>" LOC = "K3";
+NET "Dato1<3>" LOC = "B4";
+NET "Dato2<0>" LOC = "G3";
+NET "Dato2<1>" LOC = "F3";
+NET "Dato2<2>" LOC = "L2";
+NET "Dato2<3>" LOC = "N3";
+
+NET "CLK" LOC = "B8";
+NET "RESET" lOC = "G12";
+
+NET "Catodo<0>" LOC="M12";
+NET "Catodo<1>" LOC="L13";
+NET "Catodo<2>" LOC="P12";
+NET "Catodo<3>" LOC="N11";
+NET "Catodo<4>" LOC="N14";
+NET "Catodo<5>" LOC="H12";
+NET "Catodo<6>" LOC="L14";
+
+NET "Anodo<0>" LOC="F12";
+NET "Anodo<1>" LOC="J12";
+NET "Anodo<2>" LOC="M13";
+NET "Anodo<3>" LOC="K14";

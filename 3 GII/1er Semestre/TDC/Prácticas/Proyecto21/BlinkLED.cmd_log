@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 BlinkLED.ngc BlinkLED.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BlinkLED_map.ncd BlinkLED.ngd BlinkLED.pcf 
+par -w -intstyle ise -ol high -t 1 BlinkLED_map.ncd BlinkLED.ncd BlinkLED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BlinkLED.twx BlinkLED.ncd -o BlinkLED.twr BlinkLED.pcf 
+bitgen -intstyle ise -f BlinkLED.ut BlinkLED.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BlikLED_ucf.ucf -p xc3s100e-cp132-5 BlinkLED.ngc BlinkLED.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BlinkLED_map.ncd BlinkLED.ngd BlinkLED.pcf 
+par -w -intstyle ise -ol high -t 1 BlinkLED_map.ncd BlinkLED.ncd BlinkLED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BlinkLED.twx BlinkLED.ncd -o BlinkLED.twr BlinkLED.pcf -ucf BlikLED_ucf.ucf 
+bitgen -intstyle ise -f BlinkLED.ut BlinkLED.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BlikLED_ucf.ucf -p xc3s100e-cp132-5 BlinkLED.ngc BlinkLED.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o BlinkLED_map.ncd BlinkLED.ngd BlinkLED.pcf 
+par -w -intstyle ise -ol high -t 1 BlinkLED_map.ncd BlinkLED.ncd BlinkLED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BlinkLED.twx BlinkLED.ncd -o BlinkLED.twr BlinkLED.pcf -ucf BlikLED_ucf.ucf 
+bitgen -intstyle ise -f BlinkLED.ut BlinkLED.ncd 

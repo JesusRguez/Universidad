@@ -1,0 +1,16 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate_beh.prj" "work.xnor_gate" 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity xnor_gate
+Time Resolution for simulation is 1ps.
+Compiled 3 VHDL Units
+Built simulation executable C:/Users/Jesus/Xilinx/Proyecto02/xnor_gate_isim_beh.exe
+Fuse Memory Usage: 30396 KB
+Fuse CPU Usage: 1874 ms

@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Mux2_4bits instance_name (
+    .A(A), 
+    .B(B), 
+    .Sel(Sel), 
+    .Z(Z)
+    );
+
+

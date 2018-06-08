@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 TOP03.ngc TOP03.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o TOP03_map.ncd TOP03.ngd TOP03.pcf 
+par -w -intstyle ise -ol high -t 1 TOP03_map.ncd TOP03.ncd TOP03.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP03.twx TOP03.ncd -o TOP03.twr TOP03.pcf 
+bitgen -intstyle ise -f TOP03.ut TOP03.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP03_ucf.ucf -p xc3s100e-cp132-5 TOP03.ngc TOP03.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o TOP03_map.ncd TOP03.ngd TOP03.pcf 
+par -w -intstyle ise -ol high -t 1 TOP03_map.ncd TOP03.ncd TOP03.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP03.twx TOP03.ncd -o TOP03.twr TOP03.pcf -ucf TOP03_ucf.ucf 
+bitgen -intstyle ise -f TOP03.ut TOP03.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto28/TOP03.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP03_ucf.ucf -p xc3s100e-cp132-5 TOP03.ngc TOP03.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o TOP03_map.ncd TOP03.ngd TOP03.pcf 
+par -w -intstyle ise -ol high -t 1 TOP03_map.ncd TOP03.ncd TOP03.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP03.twx TOP03.ncd -o TOP03.twr TOP03.pcf -ucf TOP03_ucf.ucf 
+bitgen -intstyle ise -f TOP03.ut TOP03.ncd 

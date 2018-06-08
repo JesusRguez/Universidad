@@ -1,0 +1,61 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jesus/Xilinx/PFP4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jesus/Xilinx/PFP4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Deco3to8.vhd" in Library work.
+Architecture behavioral of Entity deco3to8 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Mux8_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux8_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Reg_10bits.vhd" in Library work.
+Architecture behavioral of Entity reg_10bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Demux_RAM.vhd" in Library work.
+Architecture behavioral of Entity demux_ram is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/RAM_16x10.vhd" in Library work.
+Architecture behavioral of Entity ram_16x10 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Deco1to2.vhd" in Library work.
+Architecture behavioral of Entity deco1to2 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/DataPath.vhd" in Library work.
+Architecture behavioral of Entity datapath is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Deco2to4.vhd" in Library work.
+Architecture behavioral of Entity deco2to4 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Banco_Registros.vhd" in Library work.
+Architecture behavioral of Entity banco_registros is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/RAM_Banco_DataPath.vhd" in Library work.
+Entity <ram_banco_datapath> compiled.
+Entity <ram_banco_datapath> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> 
+
+Total memory usage is 256716 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

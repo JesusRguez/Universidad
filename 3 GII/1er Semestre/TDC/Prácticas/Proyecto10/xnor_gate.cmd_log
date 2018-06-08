@@ -1,0 +1,3 @@
+vhdtdtfi -prj Proyecto10 -o C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhi -module xnor_gate -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work xnor_gate.vhd 
+vhdtdtfi -prj Proyecto10 -o C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhi -module xnor_gate -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work xnor_gate.vhd 
+vhdtdtfi -prj Proyecto10 -o C:/Users/Jesus/Xilinx/Proyecto10/xnor_gate.vhi -module xnor_gate -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work xnor_gate.vhd 

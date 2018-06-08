@@ -1,0 +1,4 @@
+vhdl work "Reg_4bits.vhd"
+vhdl work "Mux2_4bits.vhd"
+vhdl work "Inc_4bits.vhd"
+vhdl work "Counter_4bits.vhd"

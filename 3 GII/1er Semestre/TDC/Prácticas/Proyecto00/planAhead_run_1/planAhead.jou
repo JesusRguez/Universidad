@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Wed Sep 27 12:06:42 2017
+# Process ID: 3940
+# Log file: C:/Users/TDC/Xilinx/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/TDC/Xilinx/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/TDC/Xilinx/pa.fromNcd.tcl

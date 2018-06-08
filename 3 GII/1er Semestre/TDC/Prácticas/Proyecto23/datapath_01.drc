@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Nov 22 11:51:26 2017
+
+drc -z DataPath_01.ncd DataPath_01.pcf
+
+DRC detected 0 errors and 0 warnings.

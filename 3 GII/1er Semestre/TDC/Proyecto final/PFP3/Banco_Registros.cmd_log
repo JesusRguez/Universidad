@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/Banco_Registros.vhi -module Banco_Registros -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work Mux8_4bits.vhd -lib work Deco3to8.vhd -lib work Banco_Registros.vhd 

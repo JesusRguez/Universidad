@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Wed Oct 18 11:11:55 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Anode<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "Anode<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "Anode<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "Anode<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "Hex<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "Hex<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "Hex<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "Hex<3>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Seg<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "Seg<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Seg<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "Seg<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "Seg<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Seg<5>" LOCATE = SITE "H12" LEVEL 1;
+COMP "Seg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Select_Disp<0>" LOCATE = SITE "E2" LEVEL 1;
+COMP "Select_Disp<1>" LOCATE = SITE "N3" LEVEL 1;
+SCHEMATIC END;
+

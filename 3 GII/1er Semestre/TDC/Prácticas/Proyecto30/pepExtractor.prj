@@ -1,0 +1,3 @@
+work	"Debounce.vhd"
+work	"DebounceFSM.vhd"
+work	"Timer300ms.vhd"

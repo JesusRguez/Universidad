@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Display7Seg_4ON.ngc Display7Seg_4ON.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Display7Seg_4ON_map.ncd Display7Seg_4ON.ngd Display7Seg_4ON.pcf 
+par -w -intstyle ise -ol high -t 1 Display7Seg_4ON_map.ncd Display7Seg_4ON.ncd Display7Seg_4ON.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Display7Seg_4ON.twx Display7Seg_4ON.ncd -o Display7Seg_4ON.twr Display7Seg_4ON.pcf 
+bitgen -intstyle ise -f Display7Seg_4ON.ut Display7Seg_4ON.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Display7Seg_4ON_ucf.ucf -p xc3s100e-cp132-5 Display7Seg_4ON.ngc Display7Seg_4ON.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Display7Seg_4ON_map.ncd Display7Seg_4ON.ngd Display7Seg_4ON.pcf 
+par -w -intstyle ise -ol high -t 1 Display7Seg_4ON_map.ncd Display7Seg_4ON.ncd Display7Seg_4ON.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Display7Seg_4ON.twx Display7Seg_4ON.ncd -o Display7Seg_4ON.twr Display7Seg_4ON.pcf -ucf Display7Seg_4ON_ucf.ucf 
+bitgen -intstyle ise -f Display7Seg_4ON.ut Display7Seg_4ON.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Display7Seg_4ON_ucf.ucf -p xc3s100e-cp132-5 Display7Seg_4ON.ngc Display7Seg_4ON.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Display7Seg_4ON_map.ncd Display7Seg_4ON.ngd Display7Seg_4ON.pcf 
+par -w -intstyle ise -ol high -t 1 Display7Seg_4ON_map.ncd Display7Seg_4ON.ncd Display7Seg_4ON.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Display7Seg_4ON.twx Display7Seg_4ON.ncd -o Display7Seg_4ON.twr Display7Seg_4ON.pcf -ucf Display7Seg_4ON_ucf.ucf 
+bitgen -intstyle ise -f Display7Seg_4ON.ut Display7Seg_4ON.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Display7Seg_4ON_ucf.ucf -p xc3s100e-cp132-5 Display7Seg_4ON.ngc Display7Seg_4ON.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Display7Seg_4ON_map.ncd Display7Seg_4ON.ngd Display7Seg_4ON.pcf 
+par -w -intstyle ise -ol high -t 1 Display7Seg_4ON_map.ncd Display7Seg_4ON.ncd Display7Seg_4ON.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Display7Seg_4ON.twx Display7Seg_4ON.ncd -o Display7Seg_4ON.twr Display7Seg_4ON.pcf -ucf Display7Seg_4ON_ucf.ucf 
+bitgen -intstyle ise -f Display7Seg_4ON.ut Display7Seg_4ON.ncd 

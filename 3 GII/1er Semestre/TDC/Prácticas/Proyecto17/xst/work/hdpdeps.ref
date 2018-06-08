@@ -1,0 +1,16 @@
+V3 9
+FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_10bits.vhd 2017/12/13.10:44:29 P.28xd
+EN work/Reg_10bits 1513158271 FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_10bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Reg_10bits/Behavioral 1513158272 \
+      FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_10bits.vhd EN work/Reg_10bits 1513158271
+FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_3bits.vhd 2017/12/15.09:33:13 P.28xd
+EN work/Reg_3bits 1513326795 FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_3bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Reg_3bits/Behavioral 1513326796 \
+      FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_3bits.vhd EN work/Reg_3bits 1513326795
+FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.vhd 2017/11/10.09:45:01 P.28xd
+EN work/Reg_4bits 1510303504 FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Reg_4bits/Behavioral 1510303505 \
+      FL C:/Users/Jesus/Xilinx/Proyecto17/Reg_4bits.vhd EN work/Reg_4bits 1510303504

@@ -1,0 +1,2 @@
+vhdl work "RisingEdge.vhd"
+vhdl work "RisingEdge_tb.vhd"

@@ -1,0 +1,2 @@
+vhdl isim_temp "Inc_3bits.vhd"
+vhdl isim_temp "Inc_3bits_tb.vhd"

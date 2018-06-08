@@ -1,0 +1,2 @@
+vhdl work "Inc_3bits.vhd"
+vhdl work "Inc_3bits_tb.vhd"

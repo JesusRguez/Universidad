@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jesus/Xilinx/Proyecto33/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Xilinx/Proyecto33/xst"
+elaborate
+-ifn DidaComp.prj
+-ifmt mixed

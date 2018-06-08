@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jesus/Xilinx/TDComp/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Xilinx/TDComp/xst"
+elaborate
+-ifn RAM_16x10.prj
+-ifmt mixed

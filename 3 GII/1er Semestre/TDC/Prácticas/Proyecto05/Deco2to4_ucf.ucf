@@ -1,0 +1,7 @@
+NET "I<0>" LOC=P11;
+NET "I<1>" LOC=L3;
+NET "Enable" LOC=K3;
+NET "S<0>" LOC=N5;
+NET "S<1>" LOC=N4;
+NET "S<2>" LOC=P4;
+NET "S<3>" LOC=G1;

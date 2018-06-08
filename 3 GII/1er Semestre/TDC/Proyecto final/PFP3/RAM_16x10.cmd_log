@@ -1,0 +1,2 @@
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/RAM_16x10.vhi -module RAM_16x10 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RAM_16x10.vhd 
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/RAM_16x10.vhi -module RAM_16x10 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RAM_16x10.vhd 

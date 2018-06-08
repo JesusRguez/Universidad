@@ -1,0 +1,13 @@
+V3 6
+FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_2bits.vhd 2017/11/15.10:32:35 P.28xd
+EN work/Counter_2bits 1510739282 \
+      FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_2bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Counter_2bits/Behavioral 1510739283 \
+      FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_2bits.vhd EN work/Counter_2bits 1510739282
+FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_Nbits.vhd 2017/11/15.10:54:47 P.28xd
+EN work/Counter_Nbits 1510739688 \
+      FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_Nbits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Counter_Nbits/Behavioral 1510739689 \
+      FL C:/Users/Jesus/Xilinx/Proyecto18/Counter_Nbits.vhd EN work/Counter_Nbits 1510739688

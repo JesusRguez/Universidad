@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml MicroArq_DidaComp.twx MicroArq_DidaComp.ncd -o
+MicroArq_DidaComp.twr MicroArq_DidaComp.pcf
+
+Design file:              MicroArq_DidaComp.ncd
+Physical constraint file: MicroArq_DidaComp.pcf
+Device,package,speed:     xc3s100e,cp132,-5 (PRODUCTION 1.27 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CW0         |    0.212(R)|    1.112(R)|CLK_BUFGP         |   0.000|
+CW1         |    0.418(R)|    0.964(R)|CLK_BUFGP         |   0.000|
+CW2         |    0.259(R)|    1.066(R)|CLK_BUFGP         |   0.000|
+CW3         |    1.697(R)|    0.680(R)|CLK_BUFGP         |   0.000|
+CW4         |    1.004(R)|    1.077(R)|CLK_BUFGP         |   0.000|
+CW5         |    2.550(R)|    0.071(R)|CLK_BUFGP         |   0.000|
+CW6         |    0.249(R)|    0.900(R)|CLK_BUFGP         |   0.000|
+CW7         |    0.444(R)|    0.926(R)|CLK_BUFGP         |   0.000|
+SelALU<0>   |    5.330(R)|    0.131(R)|CLK_BUFGP         |   0.000|
+SelALU<1>   |    4.929(R)|    0.263(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+-------------+------------+------------------+--------+
+             | clk (edge) |                  | Clock  |
+Destination  |   to PAD   |Internal Clock(s) | Phase  |
+-------------+------------+------------------+--------+
+AddressRAM<0>|    9.422(R)|CLK_BUFGP         |   0.000|
+AddressRAM<1>|    9.123(R)|CLK_BUFGP         |   0.000|
+AddressRAM<2>|    9.377(R)|CLK_BUFGP         |   0.000|
+AddressRAM<3>|    9.089(R)|CLK_BUFGP         |   0.000|
+AddressROM<0>|    7.545(R)|CLK_BUFGP         |   0.000|
+AddressROM<1>|    7.314(R)|CLK_BUFGP         |   0.000|
+AddressROM<2>|    7.548(R)|CLK_BUFGP         |   0.000|
+COP<0>       |    7.199(R)|CLK_BUFGP         |   0.000|
+COP<1>       |    6.873(R)|CLK_BUFGP         |   0.000|
+DataBus<0>   |    7.216(R)|CLK_BUFGP         |   0.000|
+DataBus<1>   |    7.478(R)|CLK_BUFGP         |   0.000|
+DataBus<2>   |    7.604(R)|CLK_BUFGP         |   0.000|
+DataBus<3>   |    7.434(R)|CLK_BUFGP         |   0.000|
+RegInst<0>   |    7.453(R)|CLK_BUFGP         |   0.000|
+RegInst<1>   |    7.405(R)|CLK_BUFGP         |   0.000|
+RegInst<2>   |    7.439(R)|CLK_BUFGP         |   0.000|
+RegInst<3>   |    7.370(R)|CLK_BUFGP         |   0.000|
+RegInst<4>   |    7.195(R)|CLK_BUFGP         |   0.000|
+RegInst<5>   |    6.955(R)|CLK_BUFGP         |   0.000|
+RegInst<6>   |    7.006(R)|CLK_BUFGP         |   0.000|
+RegInst<7>   |    6.919(R)|CLK_BUFGP         |   0.000|
+SalFZ        |    7.098(R)|CLK_BUFGP         |   0.000|
+SalRegA<0>   |    6.746(R)|CLK_BUFGP         |   0.000|
+SalRegA<1>   |    7.200(R)|CLK_BUFGP         |   0.000|
+SalRegA<2>   |    6.890(R)|CLK_BUFGP         |   0.000|
+SalRegA<3>   |    7.611(R)|CLK_BUFGP         |   0.000|
+SalRegB<0>   |    7.461(R)|CLK_BUFGP         |   0.000|
+SalRegB<1>   |    7.162(R)|CLK_BUFGP         |   0.000|
+SalRegB<2>   |    7.200(R)|CLK_BUFGP         |   0.000|
+SalRegB<3>   |    7.125(R)|CLK_BUFGP         |   0.000|
+-------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.320|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CW5            |AddressRAM<0>  |    7.497|
+CW5            |AddressRAM<1>  |    7.193|
+CW5            |AddressRAM<2>  |    7.330|
+CW5            |AddressRAM<3>  |    7.138|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Dec 20 10:36:43 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 209 MB
+
+
+

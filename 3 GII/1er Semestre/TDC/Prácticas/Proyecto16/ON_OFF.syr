@@ -1,0 +1,404 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: ON_OFF.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ON_OFF.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ON_OFF"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : ON_OFF
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto16/RisingEdge.vhd" in Library work.
+Architecture behavioral of Entity risingedge is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto16/Toggle.vhd" in Library work.
+Architecture behavioral of Entity toggle is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto16/ON_OFF.vhd" in Library work.
+Entity <on_off> compiled.
+Entity <on_off> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ON_OFF> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RisingEdge> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Toggle> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ON_OFF> in library <work> (Architecture <behavioral>).
+Entity <ON_OFF> analyzed. Unit <ON_OFF> generated.
+
+Analyzing Entity <RisingEdge> in library <work> (Architecture <behavioral>).
+Entity <RisingEdge> analyzed. Unit <RisingEdge> generated.
+
+Analyzing Entity <Toggle> in library <work> (Architecture <behavioral>).
+Entity <Toggle> analyzed. Unit <Toggle> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RisingEdge>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto16/RisingEdge.vhd".
+    Found 1-bit register for signal <PreviousPush>.
+    Found 1-bit register for signal <RegisteredPush>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <RisingEdge> synthesized.
+
+
+Synthesizing Unit <Toggle>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto16/Toggle.vhd".
+    Found 1-bit register for signal <Q_signal>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Toggle> synthesized.
+
+
+Synthesizing Unit <ON_OFF>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto16/ON_OFF.vhd".
+Unit <ON_OFF> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 3
+ 1-bit register                                        : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ON_OFF> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ON_OFF, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ON_OFF.ngr
+Top Level Output File Name         : ON_OFF
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 2
+#      INV                         : 1
+#      LUT2                        : 1
+# FlipFlops/Latches                : 3
+#      FDC                         : 2
+#      FDCE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                        2  out of    960     0%  
+ Number of Slice Flip Flops:              3  out of   1920     0%  
+ Number of 4 input LUTs:                  2  out of   1920     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of     83     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------+------------------------------+-------+
+Clock Signal                                  | Clock buffer(FF name)        | Load  |
+----------------------------------------------+------------------------------+-------+
+CLK                                           | BUFGP                        | 2     |
+pulse_enable(Inst_RisingEdge/Pulse_and00001:O)| NONE(*)(Inst_Toggle/Q_signal)| 1     |
+----------------------------------------------+------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 3     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 2.131ns (Maximum Frequency: 469.274MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 4.063ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.162ns (frequency: 860.622MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.162ns (Levels of Logic = 0)
+  Source:            Inst_RisingEdge/RegisteredPush (FF)
+  Destination:       Inst_RisingEdge/PreviousPush (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Inst_RisingEdge/RegisteredPush to Inst_RisingEdge/PreviousPush
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  Inst_RisingEdge/RegisteredPush (Inst_RisingEdge/RegisteredPush)
+     FDC:D                     0.268          Inst_RisingEdge/PreviousPush
+    ----------------------------------------
+    Total                      1.162ns (0.782ns logic, 0.380ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'pulse_enable'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            Inst_Toggle/Q_signal (FF)
+  Destination:       Inst_Toggle/Q_signal (FF)
+  Source Clock:      pulse_enable rising
+  Destination Clock: pulse_enable rising
+
+  Data Path: Inst_Toggle/Q_signal to Inst_Toggle/Q_signal
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  Inst_Toggle/Q_signal (Inst_Toggle/Q_signal)
+     INV:I->O              1   0.612   0.357  Inst_Toggle/Q_signal_not00011_INV_0 (Inst_Toggle/Q_signal_not0001)
+     FDCE:D                    0.268          Inst_Toggle/Q_signal
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            Button (PAD)
+  Destination:       Inst_RisingEdge/RegisteredPush (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Button to Inst_RisingEdge/RegisteredPush
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Button_IBUF (Button_IBUF)
+     FDC:D                     0.268          Inst_RisingEdge/RegisteredPush
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pulse_enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            Inst_Toggle/Q_signal (FF)
+  Destination:       Toggle_out (PAD)
+  Source Clock:      pulse_enable rising
+
+  Data Path: Inst_Toggle/Q_signal to Toggle_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  Inst_Toggle/Q_signal (Inst_Toggle/Q_signal)
+     OBUF:I->O                 3.169          Toggle_out_OBUF (Toggle_out)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.60 secs
+ 
+--> 
+
+Total memory usage is 243132 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

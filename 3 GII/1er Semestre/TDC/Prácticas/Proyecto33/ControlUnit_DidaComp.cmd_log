@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto33 -o C:/Users/Jesus/Xilinx/Proyecto33/ControlUnit_DidaComp.vhi -module ControlUnit_DidaComp -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ControlUnit_DidaComp.vhd 

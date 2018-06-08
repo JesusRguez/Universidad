@@ -1,0 +1,44 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jesus/Xilinx/PFP3/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jesus/Xilinx/PFP3/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP3/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP3/FFD.vhd" in Library work.
+Entity <FFD> compiled.
+Entity <FFD> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP3/Reg_4bits.vhd" in Library work.
+Entity <Reg_4bits> compiled.
+Entity <Reg_4bits> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP3/DataPath.vhd" in Library work.
+Entity <DataPath> compiled.
+Entity <DataPath> (Architecture <Behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> 
+
+Total memory usage is 295356 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,24 @@
+V3 15
+FL C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhd 2017/11/15.12:36:40 P.28xd
+EN work/CLK_1KHz 1511344514 FL C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/CLK_1KHz/Behavioral 1511344515 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhd EN work/CLK_1KHz 1511344514
+FL C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhd 2017/11/15.10:32:35 P.28xd
+EN work/Counter_2bits 1511344516 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/Counter_2bits/Behavioral 1511344517 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/Counter_2bits.vhd EN work/Counter_2bits 1511344516
+FL C:/Users/Jesus/Xilinx/Proyecto22/Disp7Seg.vhd 2017/10/18.10:11:35 P.28xd
+EN work/Disp7Seg 1511344518 FL C:/Users/Jesus/Xilinx/Proyecto22/Disp7Seg.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Disp7Seg/Behavioral 1511344519 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/Disp7Seg.vhd EN work/Disp7Seg 1511344518
+FL C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.vhd 2017/11/22.10:55:11 P.28xd
+EN work/Display7Seg_4ON 1511344520 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Display7Seg_4ON/Behavioral 1511344521 \
+      FL C:/Users/Jesus/Xilinx/Proyecto22/Display7Seg_4ON.vhd \
+      EN work/Display7Seg_4ON 1511344520 CP CLK_1KHz CP Counter_2bits CP Disp7Seg

@@ -1,0 +1,29 @@
+Command line:
+   tbDidaComp_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55810
+
+Wed Jan 17 12:19:57 2018
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 875.803 Meg
+
+ Total Signals          : 161
+ Total Nets             : 197
+ Total Signal Drivers   : 38
+ Total Blocks           : 20
+ Total Primitive Blocks : 14
+ Total Processes        : 34
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 851
+Total Line Count : 122
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 875.803 Meg
+
+Wed Jan 17 12:20:05 2018
+

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jesus/Xilinx/Proyecto20/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Xilinx/Proyecto20/xst"
+elaborate
+-ifn CLK_1KHz.prj
+-ifmt mixed

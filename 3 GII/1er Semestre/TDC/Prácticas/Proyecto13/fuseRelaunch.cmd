@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic_tb_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic_tb_beh.prj" "work.FFD_Basic_tb" 

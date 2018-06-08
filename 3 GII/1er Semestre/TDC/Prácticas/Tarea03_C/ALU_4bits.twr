@@ -1,0 +1,165 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml ALU_4bits.twx ALU_4bits.ncd -o ALU_4bits.twr ALU_4bits.pcf
+
+Design file:              ALU_4bits.ncd
+Physical constraint file: ALU_4bits.pcf
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+OPE_A<0>       |SalFZ          |   11.647|
+OPE_A<0>       |Sal_ALU<0>     |    7.821|
+OPE_A<0>       |Sal_ALU<1>     |    9.222|
+OPE_A<0>       |Sal_ALU<2>     |    9.176|
+OPE_A<0>       |Sal_ALU<3>     |    9.578|
+OPE_A<0>       |Sal_ALU<4>     |    9.426|
+OPE_A<0>       |Sal_ALU<5>     |    9.883|
+OPE_A<0>       |Sal_ALU<6>     |   10.151|
+OPE_A<0>       |Sal_ALU<7>     |   10.011|
+OPE_A<1>       |SalFZ          |   11.737|
+OPE_A<1>       |Sal_ALU<1>     |    9.063|
+OPE_A<1>       |Sal_ALU<2>     |    9.266|
+OPE_A<1>       |Sal_ALU<3>     |    9.668|
+OPE_A<1>       |Sal_ALU<4>     |    9.516|
+OPE_A<1>       |Sal_ALU<5>     |    9.973|
+OPE_A<1>       |Sal_ALU<6>     |   10.241|
+OPE_A<1>       |Sal_ALU<7>     |   10.101|
+OPE_A<2>       |SalFZ          |   11.629|
+OPE_A<2>       |Sal_ALU<2>     |    8.712|
+OPE_A<2>       |Sal_ALU<3>     |    9.288|
+OPE_A<2>       |Sal_ALU<4>     |    9.408|
+OPE_A<2>       |Sal_ALU<5>     |    9.865|
+OPE_A<2>       |Sal_ALU<6>     |   10.133|
+OPE_A<2>       |Sal_ALU<7>     |    9.993|
+OPE_A<3>       |SalFZ          |   11.090|
+OPE_A<3>       |Sal_ALU<3>     |    8.500|
+OPE_A<3>       |Sal_ALU<4>     |    8.869|
+OPE_A<3>       |Sal_ALU<5>     |    9.326|
+OPE_A<3>       |Sal_ALU<6>     |    9.594|
+OPE_A<3>       |Sal_ALU<7>     |    9.454|
+OPE_A<4>       |SalFZ          |   11.758|
+OPE_A<4>       |Sal_ALU<4>     |    9.091|
+OPE_A<4>       |Sal_ALU<5>     |    9.722|
+OPE_A<4>       |Sal_ALU<6>     |   10.262|
+OPE_A<4>       |Sal_ALU<7>     |   10.122|
+OPE_A<5>       |SalFZ          |   11.473|
+OPE_A<5>       |Sal_ALU<5>     |    9.188|
+OPE_A<5>       |Sal_ALU<6>     |    9.977|
+OPE_A<5>       |Sal_ALU<7>     |    9.837|
+OPE_A<6>       |SalFZ          |   11.181|
+OPE_A<6>       |Sal_ALU<6>     |    9.511|
+OPE_A<6>       |Sal_ALU<7>     |    9.545|
+OPE_A<7>       |SalFZ          |   11.240|
+OPE_A<7>       |Sal_ALU<7>     |    9.604|
+OPE_B<0>       |SalFZ          |   12.318|
+OPE_B<0>       |Sal_ALU<0>     |    8.492|
+OPE_B<0>       |Sal_ALU<1>     |    9.893|
+OPE_B<0>       |Sal_ALU<2>     |    9.847|
+OPE_B<0>       |Sal_ALU<3>     |   10.249|
+OPE_B<0>       |Sal_ALU<4>     |   10.097|
+OPE_B<0>       |Sal_ALU<5>     |   10.554|
+OPE_B<0>       |Sal_ALU<6>     |   10.822|
+OPE_B<0>       |Sal_ALU<7>     |   10.682|
+OPE_B<1>       |SalFZ          |   12.298|
+OPE_B<1>       |Sal_ALU<1>     |    9.624|
+OPE_B<1>       |Sal_ALU<2>     |    9.827|
+OPE_B<1>       |Sal_ALU<3>     |   10.229|
+OPE_B<1>       |Sal_ALU<4>     |   10.077|
+OPE_B<1>       |Sal_ALU<5>     |   10.534|
+OPE_B<1>       |Sal_ALU<6>     |   10.802|
+OPE_B<1>       |Sal_ALU<7>     |   10.662|
+OPE_B<2>       |SalFZ          |   11.698|
+OPE_B<2>       |Sal_ALU<2>     |    8.781|
+OPE_B<2>       |Sal_ALU<3>     |    9.357|
+OPE_B<2>       |Sal_ALU<4>     |    9.477|
+OPE_B<2>       |Sal_ALU<5>     |    9.934|
+OPE_B<2>       |Sal_ALU<6>     |   10.202|
+OPE_B<2>       |Sal_ALU<7>     |   10.062|
+OPE_B<3>       |SalFZ          |   12.095|
+OPE_B<3>       |Sal_ALU<3>     |    9.505|
+OPE_B<3>       |Sal_ALU<4>     |    9.874|
+OPE_B<3>       |Sal_ALU<5>     |   10.331|
+OPE_B<3>       |Sal_ALU<6>     |   10.599|
+OPE_B<3>       |Sal_ALU<7>     |   10.459|
+OPE_B<4>       |SalFZ          |   11.776|
+OPE_B<4>       |Sal_ALU<4>     |    9.109|
+OPE_B<4>       |Sal_ALU<5>     |    9.740|
+OPE_B<4>       |Sal_ALU<6>     |   10.280|
+OPE_B<4>       |Sal_ALU<7>     |   10.140|
+OPE_B<5>       |SalFZ          |   11.589|
+OPE_B<5>       |Sal_ALU<5>     |    9.304|
+OPE_B<5>       |Sal_ALU<6>     |   10.093|
+OPE_B<5>       |Sal_ALU<7>     |    9.953|
+OPE_B<6>       |SalFZ          |   11.103|
+OPE_B<6>       |Sal_ALU<6>     |    9.433|
+OPE_B<6>       |Sal_ALU<7>     |    9.467|
+OPE_B<7>       |SalFZ          |   11.052|
+OPE_B<7>       |Sal_ALU<7>     |    9.416|
+SEL_ALU<0>     |SalFZ          |   13.211|
+SEL_ALU<0>     |Sal_ALU<0>     |    9.903|
+SEL_ALU<0>     |Sal_ALU<1>     |   11.130|
+SEL_ALU<0>     |Sal_ALU<2>     |   10.740|
+SEL_ALU<0>     |Sal_ALU<3>     |   11.142|
+SEL_ALU<0>     |Sal_ALU<4>     |   10.990|
+SEL_ALU<0>     |Sal_ALU<5>     |   11.447|
+SEL_ALU<0>     |Sal_ALU<6>     |   11.715|
+SEL_ALU<0>     |Sal_ALU<7>     |   11.575|
+SEL_ALU<1>     |SalFZ          |   13.168|
+SEL_ALU<1>     |Sal_ALU<0>     |    9.860|
+SEL_ALU<1>     |Sal_ALU<1>     |   11.087|
+SEL_ALU<1>     |Sal_ALU<2>     |   10.697|
+SEL_ALU<1>     |Sal_ALU<3>     |   11.099|
+SEL_ALU<1>     |Sal_ALU<4>     |   10.947|
+SEL_ALU<1>     |Sal_ALU<5>     |   11.404|
+SEL_ALU<1>     |Sal_ALU<6>     |   11.672|
+SEL_ALU<1>     |Sal_ALU<7>     |   11.532|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Nov 10 09:09:07 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 158 MB
+
+
+

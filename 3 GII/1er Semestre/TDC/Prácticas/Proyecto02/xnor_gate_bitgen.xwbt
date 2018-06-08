@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jesus\Xilinx\Proyecto02\xnor_gate.ncd
+OUTFILE=C:\Users\Jesus\Xilinx\Proyecto02\xnor_gate.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=C:\Users\Jesus\Xilinx\Proyecto02
+LICENSE=WebPack
+USER_INFO=211414194_0_0_150

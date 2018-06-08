@@ -1,0 +1,61 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jesus/Xilinx/TDComp/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jesus/Xilinx/TDComp/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco3to8.vhd" in Library work.
+Architecture behavioral of Entity deco3to8 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Mux8_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux8_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Reg_10bits.vhd" in Library work.
+Architecture behavioral of Entity reg_10bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Demux_RAM.vhd" in Library work.
+Architecture behavioral of Entity demux_ram is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/RAM_16x10.vhd" in Library work.
+Architecture behavioral of Entity ram_16x10 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco1to2.vhd" in Library work.
+Architecture behavioral of Entity deco1to2 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/DataPath.vhd" in Library work.
+Architecture behavioral of Entity datapath is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco2to4.vhd" in Library work.
+Architecture behavioral of Entity deco2to4 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Banco_Registros.vhd" in Library work.
+Architecture behavioral of Entity banco_registros is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/RAM_Banco_DataPath.vhd" in Library work.
+Entity <ram_banco_datapath> compiled.
+Entity <ram_banco_datapath> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.94 secs
+ 
+--> 
+
+Total memory usage is 303524 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

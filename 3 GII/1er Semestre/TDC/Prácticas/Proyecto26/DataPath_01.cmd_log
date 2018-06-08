@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto26 -o C:/Users/Jesus/Xilinx/Proyecto26/DataPath_01.vhi -module DataPath_01 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work FFD.vhd -lib work ALU_4bits.vhd -lib work DataPath_01.vhd 

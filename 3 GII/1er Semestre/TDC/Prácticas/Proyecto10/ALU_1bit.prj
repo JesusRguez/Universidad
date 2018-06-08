@@ -1,0 +1,4 @@
+vhdl work "xnor_gate.vhd"
+vhdl work "and_gate.vhd"
+vhdl work "add_1bit.vhd"
+vhdl work "ALU_1bit.vhd"

@@ -1,0 +1,4 @@
+work	"Counter_4bits.vhd"
+work	"Inc_4bits.vhd"
+work	"Mux2_4bits.vhd"
+work	"Reg_4bits.vhd"

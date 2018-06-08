@@ -1,0 +1,17 @@
+V3 11
+FL C:/Users/Jesus/Xilinx/Proyecto30/Debounce.vhd 2018/01/10.12:03:51 P.28xd
+EN work/Debounce 1515582239 FL C:/Users/Jesus/Xilinx/Proyecto30/Debounce.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Debounce/Behavioral 1515582240 \
+      FL C:/Users/Jesus/Xilinx/Proyecto30/Debounce.vhd EN work/Debounce 1515582239 \
+      CP DebounceFSM CP Timer300ms
+FL C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhd 2018/01/10.11:57:35 P.28xd
+EN work/DebounceFSM 1515582235 \
+      FL C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhd PB ieee/std_logic_1164 1341906176
+AR work/DebounceFSM/Behavioral 1515582236 \
+      FL C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhd EN work/DebounceFSM 1515582235
+FL C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhd 2018/01/10.11:40:52 P.28xd
+EN work/Timer300ms 1515582237 FL C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Timer300ms/Behavioral 1515582238 \
+      FL C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhd EN work/Timer300ms 1515582237

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/TDC/Xilinx/switch_on_led.xst" -ofn "C:/Users/TDC/Xilinx/switch_on_led.syr" 
+xst -intstyle ise -ifn "C:/Users/TDC/Xilinx/switch_on_led.xst" -ofn "C:/Users/TDC/Xilinx/switch_on_led.syr" 
+xst -intstyle ise -ifn "C:/Users/TDC/Xilinx/switch_on_led.xst" -ofn "C:/Users/TDC/Xilinx/switch_on_led.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc switch_on_led_ucf.ucf -p xc3s100e-cp132-4 switch_on_led.ngc switch_on_led.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o switch_on_led_map.ncd switch_on_led.ngd switch_on_led.pcf 
+par -w -intstyle ise -ol high -t 1 switch_on_led_map.ncd switch_on_led.ncd switch_on_led.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_on_led.twx switch_on_led.ncd -o switch_on_led.twr switch_on_led.pcf -ucf switch_on_led_ucf.ucf 
+bitgen -intstyle ise -f switch_on_led.ut switch_on_led.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc switch_on_led_ucf.ucf -p xc3s100e-cp132-4 switch_on_led.ngc switch_on_led.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o switch_on_led_map.ncd switch_on_led.ngd switch_on_led.pcf 
+par -w -intstyle ise -ol high -t 1 switch_on_led_map.ncd switch_on_led.ncd switch_on_led.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_on_led.twx switch_on_led.ncd -o switch_on_led.twr switch_on_led.pcf -ucf switch_on_led_ucf.ucf 

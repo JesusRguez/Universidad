@@ -1,0 +1,4 @@
+NET "Button" LOC = "A7";
+NET "CLK" LOC = "B8";
+NET "RESET" LOC = "G12";
+NET "Toggle_out" LOC = "M5";

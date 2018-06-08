@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto03/mux2_1bit_tb_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto03/mux2_1bit_tb_beh.prj" "work.mux2_1bit_tb" 

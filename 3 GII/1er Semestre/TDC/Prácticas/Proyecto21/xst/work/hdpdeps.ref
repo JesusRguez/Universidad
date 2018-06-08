@@ -1,0 +1,31 @@
+V3 17
+FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.vhd 2017/11/17.08:56:49 P.28xd
+EN work/BlinkLED 1510906063 FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/BlinkLED/Behavioral 1510906064 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.vhd EN work/BlinkLED 1510906063 \
+      CP CLK_1Hz CP Toggle
+FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_1Process.vhd 2017/11/17.09:48:27 P.28xd
+EN work/BlinkLED_1Process 1510908510 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_1Process.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/BlinkLED_1Process/Behavioral 1510908511 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_1Process.vhd \
+      EN work/BlinkLED_1Process 1510908510
+FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_2Process.vhd 2017/11/17.09:16:24 P.28xd
+EN work/BlinkLED_2Process 1510906587 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_2Process.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/BlinkLED_2Process/Behavioral 1510906588 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_2Process.vhd \
+      EN work/BlinkLED_2Process 1510906587
+FL C:/Users/Jesus/Xilinx/Proyecto21/CLK_1Hz.vhd 2017/11/15.12:26:45 P.28xd
+EN work/CLK_1Hz 1510906059 FL C:/Users/Jesus/Xilinx/Proyecto21/CLK_1Hz.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/CLK_1Hz/Behavioral 1510906060 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/CLK_1Hz.vhd EN work/CLK_1Hz 1510906059
+FL C:/Users/Jesus/Xilinx/Proyecto21/Toggle.vhd 2017/11/08.11:20:22 P.28xd
+EN work/Toggle 1510906061 FL C:/Users/Jesus/Xilinx/Proyecto21/Toggle.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Toggle/Behavioral 1510906062 \
+      FL C:/Users/Jesus/Xilinx/Proyecto21/Toggle.vhd EN work/Toggle 1510906061

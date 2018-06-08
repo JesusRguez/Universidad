@@ -1,0 +1,8 @@
+AR ffd behavioral C:/Users/Jesus/Xilinx/PFP1/FFD.vhd sub00/vhpl03 1516536678
+EN datapath NULL C:/Users/Jesus/Xilinx/PFP1/DataPath.vhd sub00/vhpl06 1516536681
+EN ffd NULL C:/Users/Jesus/Xilinx/PFP1/FFD.vhd sub00/vhpl02 1516536677
+AR reg_4bits behavioral C:/Users/Jesus/Xilinx/PFP1/Reg_4bits.vhd sub00/vhpl05 1516536680
+AR alu behavioral C:/Users/Jesus/Xilinx/PFP1/ALU.vhd sub00/vhpl01 1516536676
+AR datapath behavioral C:/Users/Jesus/Xilinx/PFP1/DataPath.vhd sub00/vhpl07 1516536682
+EN reg_4bits NULL C:/Users/Jesus/Xilinx/PFP1/Reg_4bits.vhd sub00/vhpl04 1516536679
+EN alu NULL C:/Users/Jesus/Xilinx/PFP1/ALU.vhd sub00/vhpl00 1516536675

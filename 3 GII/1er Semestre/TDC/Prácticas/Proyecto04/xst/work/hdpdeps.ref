@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto04/add_1bit.vhd 2017/10/11.12:15:44 P.28xd
+EN work/add_1bit 1507716959 FL C:/Users/Jesus/Xilinx/Proyecto04/add_1bit.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/add_1bit/Dataflow 1507716960 \
+      FL C:/Users/Jesus/Xilinx/Proyecto04/add_1bit.vhd EN work/add_1bit 1507716959

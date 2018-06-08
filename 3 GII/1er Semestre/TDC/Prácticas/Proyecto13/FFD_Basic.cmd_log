@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 FFD_Basic.ngc FFD_Basic.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o FFD_Basic_map.ncd FFD_Basic.ngd FFD_Basic.pcf 
+par -w -intstyle ise -ol high -t 1 FFD_Basic_map.ncd FFD_Basic.ncd FFD_Basic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FFD_Basic.twx FFD_Basic.ncd -o FFD_Basic.twr FFD_Basic.pcf 
+bitgen -intstyle ise -f FFD_Basic.ut FFD_Basic.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto13/FFD_Basic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FFD_Basic_ucf.ucf -p xc3s100e-cp132-4 FFD_Basic.ngc FFD_Basic.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o FFD_Basic_map.ncd FFD_Basic.ngd FFD_Basic.pcf 
+par -w -intstyle ise -ol high -t 1 FFD_Basic_map.ncd FFD_Basic.ncd FFD_Basic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FFD_Basic.twx FFD_Basic.ncd -o FFD_Basic.twr FFD_Basic.pcf -ucf FFD_Basic_ucf.ucf 
+bitgen -intstyle ise -f FFD_Basic.ut FFD_Basic.ncd 

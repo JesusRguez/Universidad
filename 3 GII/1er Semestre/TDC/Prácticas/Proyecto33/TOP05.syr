@@ -1,0 +1,774 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: TOP05.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP05.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP05"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : TOP05
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ALU_4bits.vhd" in Library work.
+Architecture behavioral of Entity alu_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/RAM_16x4.vhd" in Library work.
+Architecture behavioral of Entity ram_16x4 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/RAM_DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity ram_datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ROM_8x10.vhd" in Library work.
+Architecture behavioral of Entity rom_8x10 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_10bits.vhd" in Library work.
+Architecture behavioral of Entity reg_10bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ROM_RAM_DataPath_01.vhd" in Library work.
+Architecture behavioral of Entity rom_ram_datapath_01 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Reg_3bits.vhd" in Library work.
+Architecture behavioral of Entity reg_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Inc_3bits.vhd" in Library work.
+Architecture behavioral of Entity inc_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_3bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_3bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/CLK_1KHz.vhd" in Library work.
+Architecture behavioral of Entity clk_1khz is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Counter_2bits.vhd" in Library work.
+Architecture behavioral of Entity counter_2bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Disp7Seg.vhd" in Library work.
+Architecture behavioral of Entity disp7seg is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/ControlUnit_DidaComp.vhd" in Library work.
+Architecture behavioral of Entity controlunit_didacomp is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/MicroArq_DidaComp.vhd" in Library work.
+Architecture behavioral of Entity microarq_didacomp is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/RisingEdge.vhd" in Library work.
+Architecture behavioral of Entity risingedge is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/DidaComp.vhd" in Library work.
+Architecture behavioral of Entity didacomp is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/Display7Seg_4ON.vhd" in Library work.
+Architecture behavioral of Entity display7seg_4on is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/Proyecto33/TOP05.vhd" in Library work.
+Entity <top05> compiled.
+Entity <top05> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP05> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RisingEdge> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DidaComp> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Display7Seg_4ON> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ControlUnit_DidaComp> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MicroArq_DidaComp> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CLK_1KHz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_2bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Disp7Seg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ROM_RAM_DataPath_01> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_3bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Inc_3bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux2_3bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RAM_DataPath_01> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ROM_8x10> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_10bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux2_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RAM_16x4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DataPath_01> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FFD> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP05> in library <work> (Architecture <behavioral>).
+Entity <TOP05> analyzed. Unit <TOP05> generated.
+
+Analyzing Entity <RisingEdge> in library <work> (Architecture <behavioral>).
+Entity <RisingEdge> analyzed. Unit <RisingEdge> generated.
+
+Analyzing Entity <DidaComp> in library <work> (Architecture <behavioral>).
+Entity <DidaComp> analyzed. Unit <DidaComp> generated.
+
+Analyzing Entity <ControlUnit_DidaComp> in library <work> (Architecture <behavioral>).
+Entity <ControlUnit_DidaComp> analyzed. Unit <ControlUnit_DidaComp> generated.
+
+Analyzing Entity <MicroArq_DidaComp> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/Jesus/Xilinx/Proyecto33/MicroArq_DidaComp.vhd" line 112: Unconnected output port 'DataBus' of component 'ROM_RAM_DataPath_01'.
+Entity <MicroArq_DidaComp> analyzed. Unit <MicroArq_DidaComp> generated.
+
+Analyzing Entity <ROM_RAM_DataPath_01> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/Jesus/Xilinx/Proyecto33/ROM_RAM_DataPath_01.vhd" line 106: Unconnected output port 'SalALU' of component 'RAM_DataPath_01'.
+Entity <ROM_RAM_DataPath_01> analyzed. Unit <ROM_RAM_DataPath_01> generated.
+
+Analyzing Entity <RAM_DataPath_01> in library <work> (Architecture <behavioral>).
+Entity <RAM_DataPath_01> analyzed. Unit <RAM_DataPath_01> generated.
+
+Analyzing Entity <RAM_16x4> in library <work> (Architecture <behavioral>).
+Entity <RAM_16x4> analyzed. Unit <RAM_16x4> generated.
+
+Analyzing Entity <DataPath_01> in library <work> (Architecture <behavioral>).
+Entity <DataPath_01> analyzed. Unit <DataPath_01> generated.
+
+Analyzing Entity <Reg_4bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_4bits> analyzed. Unit <Reg_4bits> generated.
+
+Analyzing Entity <ALU_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/ALU_4bits.vhd" line 55: Mux is complete : default of case is discarded
+Entity <ALU_4bits> analyzed. Unit <ALU_4bits> generated.
+
+Analyzing Entity <FFD> in library <work> (Architecture <behavioral>).
+Entity <FFD> analyzed. Unit <FFD> generated.
+
+Analyzing Entity <ROM_8x10> in library <work> (Architecture <behavioral>).
+Entity <ROM_8x10> analyzed. Unit <ROM_8x10> generated.
+
+Analyzing Entity <Reg_10bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_10bits> analyzed. Unit <Reg_10bits> generated.
+
+Analyzing Entity <Mux2_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_4bits.vhd" line 46: Mux is complete : default of case is discarded
+Entity <Mux2_4bits> analyzed. Unit <Mux2_4bits> generated.
+
+Analyzing Entity <Reg_3bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_3bits> analyzed. Unit <Reg_3bits> generated.
+
+Analyzing Entity <Inc_3bits> in library <work> (Architecture <behavioral>).
+Entity <Inc_3bits> analyzed. Unit <Inc_3bits> generated.
+
+Analyzing Entity <Mux2_3bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_3bits.vhd" line 46: Mux is complete : default of case is discarded
+Entity <Mux2_3bits> analyzed. Unit <Mux2_3bits> generated.
+
+Analyzing Entity <Display7Seg_4ON> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/Display7Seg_4ON.vhd" line 104: Mux is complete : default of case is discarded
+Entity <Display7Seg_4ON> analyzed. Unit <Display7Seg_4ON> generated.
+
+Analyzing Entity <CLK_1KHz> in library <work> (Architecture <behavioral>).
+Entity <CLK_1KHz> analyzed. Unit <CLK_1KHz> generated.
+
+Analyzing Entity <Counter_2bits> in library <work> (Architecture <behavioral>).
+Entity <Counter_2bits> analyzed. Unit <Counter_2bits> generated.
+
+Analyzing Entity <Disp7Seg> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/Disp7Seg.vhd" line 49: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/Proyecto33/Disp7Seg.vhd" line 69: Mux is complete : default of case is discarded
+Entity <Disp7Seg> analyzed. Unit <Disp7Seg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RisingEdge>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/RisingEdge.vhd".
+    Found 1-bit register for signal <PreviousPush>.
+    Found 1-bit register for signal <RegisteredPush>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <RisingEdge> synthesized.
+
+
+Synthesizing Unit <ControlUnit_DidaComp>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/ControlUnit_DidaComp.vhd".
+    Found finite state machine <FSM_0> for signal <Next_State>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 7                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RESET                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ControlUnit_DidaComp> synthesized.
+
+
+Synthesizing Unit <Reg_3bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Reg_3bits.vhd".
+    Found 3-bit register for signal <DataOut>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <Reg_3bits> synthesized.
+
+
+Synthesizing Unit <Inc_3bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Inc_3bits.vhd".
+    Found 3-bit adder for signal <Value_Inc>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Inc_3bits> synthesized.
+
+
+Synthesizing Unit <Mux2_3bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_3bits.vhd".
+Unit <Mux2_3bits> synthesized.
+
+
+Synthesizing Unit <ROM_8x10>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/ROM_8x10.vhd".
+    Found 8x10-bit ROM for signal <DataOut$mux0000> created at line 58.
+    Found 10-bit register for signal <DataOut>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <ROM_8x10> synthesized.
+
+
+Synthesizing Unit <Reg_10bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Reg_10bits.vhd".
+    Found 10-bit register for signal <DataOut>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <Reg_10bits> synthesized.
+
+
+Synthesizing Unit <Mux2_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Mux2_4bits.vhd".
+Unit <Mux2_4bits> synthesized.
+
+
+Synthesizing Unit <RAM_16x4>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/RAM_16x4.vhd".
+    Found 16x4-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 4-bit register for signal <DataOut>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 D-type flip-flop(s).
+Unit <RAM_16x4> synthesized.
+
+
+Synthesizing Unit <Reg_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Reg_4bits.vhd".
+    Found 4-bit register for signal <DataOut>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Reg_4bits> synthesized.
+
+
+Synthesizing Unit <ALU_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/ALU_4bits.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <Resultado>.
+    Found 4-bit addsub for signal <Resultado$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <ALU_4bits> synthesized.
+
+
+Synthesizing Unit <FFD>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/FFD.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FFD> synthesized.
+
+
+Synthesizing Unit <CLK_1KHz>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/CLK_1KHz.vhd".
+    Found 1-bit register for signal <Out_1KHz>.
+    Found 16-bit up counter for signal <Count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <CLK_1KHz> synthesized.
+
+
+Synthesizing Unit <Counter_2bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Counter_2bits.vhd".
+    Found 2-bit up counter for signal <CUENTA>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_2bits> synthesized.
+
+
+Synthesizing Unit <Disp7Seg>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Disp7Seg.vhd".
+    Found 16x7-bit ROM for signal <Seg>.
+    Found 1-of-4 decoder for signal <Anode>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Decoder(s).
+Unit <Disp7Seg> synthesized.
+
+
+Synthesizing Unit <Display7Seg_4ON>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/Display7Seg_4ON.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <salida_mux>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Display7Seg_4ON> synthesized.
+
+
+Synthesizing Unit <DataPath_01>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/DataPath_01.vhd".
+Unit <DataPath_01> synthesized.
+
+
+Synthesizing Unit <RAM_DataPath_01>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/RAM_DataPath_01.vhd".
+Unit <RAM_DataPath_01> synthesized.
+
+
+Synthesizing Unit <ROM_RAM_DataPath_01>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/ROM_RAM_DataPath_01.vhd".
+Unit <ROM_RAM_DataPath_01> synthesized.
+
+
+Synthesizing Unit <MicroArq_DidaComp>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/MicroArq_DidaComp.vhd".
+Unit <MicroArq_DidaComp> synthesized.
+
+
+Synthesizing Unit <DidaComp>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/DidaComp.vhd".
+Unit <DidaComp> synthesized.
+
+
+Synthesizing Unit <TOP05>.
+    Related source file is "C:/Users/Jesus/Xilinx/Proyecto33/TOP05.vhd".
+Unit <TOP05> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x4-bit single-port RAM                              : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 8x10-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 10-bit register                                       : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 3
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State/FSM> on signal <Next_State[1:4]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 0000
+ loadinst | 0001
+ deco     | 0010
+ loada    | 0011
+ loadb    | 0101
+ beq      | 0100
+ aaddb    | 0111
+ asubb    | 1000
+ mova     | 0110
+----------------------
+
+Synthesizing (advanced) Unit <RAM_16x4>.
+INFO:Xst:3231 - The small RAM <Mram_RAM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <Address>       |          |
+    |     diA            | connected to signal <DataIn>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM_16x4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM_8x10>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_DataOut_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <ROM_8x10> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 16x4-bit single-port distributed RAM                  : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 8x10-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TOP05> ...
+
+Optimizing unit <ROM_8x10> ...
+
+Optimizing unit <Reg_10bits> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP05, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP05.ngr
+Top Level Output File Name         : TOP05
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 150
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 15
+#      LUT2                        : 29
+#      LUT2_L                      : 1
+#      LUT3                        : 16
+#      LUT3_L                      : 2
+#      LUT4                        : 41
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
+#      MUXCY                       : 15
+#      MUXF5                       : 6
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 61
+#      FD                          : 2
+#      FDC                         : 22
+#      FDCE                        : 25
+#      FDE                         : 4
+#      FDR                         : 3
+#      FDRS                        : 1
+#      FDS                         : 4
+# RAMS                             : 4
+#      RAM16X1S                    : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 2
+#      OBUF                        : 22
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       61  out of    960     6%  
+ Number of Slice Flip Flops:             61  out of   1920     3%  
+ Number of 4 input LUTs:                115  out of   1920     5%  
+    Number used as logic:               111
+    Number used as RAMs:                  4
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of     83    30%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 65    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 47    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.527ns (Maximum Frequency: 180.917MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 8.719ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.527ns (frequency: 180.917MHz)
+  Total number of paths / destination ports: 881 / 122
+-------------------------------------------------------------------------
+Delay:               5.527ns (Levels of Logic = 4)
+  Source:            Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd3 (FF)
+  Destination:       Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_FFD/Q (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd3 to Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_FFD/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.514   0.988  Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd3 (Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd3)
+     LUT3:I0->O           12   0.612   0.847  Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_Out31 (Inst_DidaComp/senalCU<2>)
+     LUT3:I2->O            1   0.612   0.360  Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_ALU_4bits/Mmux_Resultado4_SW0_SW0 (N12)
+     LUT4_L:I3->LO         1   0.612   0.103  Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_ALU_4bits/Mmux_Resultado4_SW0 (N7)
+     LUT4:I3->O            1   0.612   0.000  Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_ALU_4bits/SalFZ_cmp_eq00001 (Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/FlagZero)
+     FDCE:D                    0.268          Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_RAM_DataPath_01/Inst_DataPath_01/Inst_FFD/Q
+    ----------------------------------------
+    Total                      5.527ns (3.230ns logic, 2.297ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            Push (PAD)
+  Destination:       Inst_RisingEdge/RegisteredPush (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Push to Inst_RisingEdge/RegisteredPush
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Push_IBUF (Push_IBUF)
+     FDC:D                     0.268          Inst_RisingEdge/RegisteredPush
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 313 / 22
+-------------------------------------------------------------------------
+Offset:              8.719ns (Levels of Logic = 5)
+  Source:            Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd4 (FF)
+  Destination:       Catodo<6> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd4 to Catodo<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.514   1.045  Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd4 (Inst_DidaComp/Inst_ControlUnit_DidaComp/Next_State_FSM_FFd4)
+     LUT4:I0->O            9   0.612   0.766  Inst_DidaComp/Inst_MicroArq_DidaComp/Inst_ROM_RAM_DataPath_01/Inst_Mux2_4bits/Z<1>1 (senalDato3<1>)
+     LUT3:I1->O            1   0.612   0.000  Inst_Display7Seg_4ON/Mmux_salida_mux_31 (Inst_Display7Seg_4ON/Mmux_salida_mux_31)
+     MUXF5:I1->O           7   0.278   0.754  Inst_Display7Seg_4ON/Mmux_salida_mux_2_f5_0 (Inst_Display7Seg_4ON/salida_mux<1>)
+     LUT4:I0->O            1   0.612   0.357  Inst_Display7Seg_4ON/Inst_Disp7Seg/Mrom_Seg41 (Catodo_4_OBUF)
+     OBUF:I->O                 3.169          Catodo_4_OBUF (Catodo<4>)
+    ----------------------------------------
+    Total                      8.719ns (5.797ns logic, 2.922ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.14 secs
+ 
+--> 
+
+Total memory usage is 356144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

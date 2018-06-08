@@ -1,0 +1,2 @@
+vhdl isim_temp "ControlUnit_DidaComp.vhd"
+vhdl isim_temp "ControlUnit_DidaComp_tb.vhd"

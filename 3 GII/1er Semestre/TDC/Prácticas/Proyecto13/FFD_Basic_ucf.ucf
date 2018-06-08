@@ -1,0 +1,7 @@
+NET "CLK" LOC = "B8";
+NET "D" LOC = "P11";
+NET "Q" LOC = "M5";
+
+//Estas dos últimas líneas son para el módulo FFD que tiene tanto el CLK como el enable en su architecture
+NET "RESET" LOC = "G12";
+NET "ENABLE" LOC = "A7";

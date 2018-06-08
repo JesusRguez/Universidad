@@ -1,0 +1,397 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Counter_4bits.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Counter_4bits.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Counter_4bits"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : Counter_4bits
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Inc_4bits.vhd" in Library work.
+Architecture behavioral of Entity inc_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.vhd" in Library work.
+Entity <counter_4bits> compiled.
+Entity <Counter_4bits> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Counter_4bits> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Inc_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux2_4bits> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Counter_4bits> in library <work> (Architecture <Behavioral>).
+Entity <Counter_4bits> analyzed. Unit <Counter_4bits> generated.
+
+Analyzing Entity <Inc_4bits> in library <work> (Architecture <behavioral>).
+Entity <Inc_4bits> analyzed. Unit <Inc_4bits> generated.
+
+Analyzing Entity <Reg_4bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_4bits> analyzed. Unit <Reg_4bits> generated.
+
+Analyzing Entity <Mux2_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/PFP4/Mux2_4bits.vhd" line 46: Mux is complete : default of case is discarded
+Entity <Mux2_4bits> analyzed. Unit <Mux2_4bits> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Inc_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/PFP4/Inc_4bits.vhd".
+    Found 4-bit adder for signal <Value_Inc>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Inc_4bits> synthesized.
+
+
+Synthesizing Unit <Reg_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/PFP4/Reg_4bits.vhd".
+    Found 4-bit register for signal <DataOut>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Reg_4bits> synthesized.
+
+
+Synthesizing Unit <Mux2_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/PFP4/Mux2_4bits.vhd".
+Unit <Mux2_4bits> synthesized.
+
+
+Synthesizing Unit <Counter_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/PFP4/Counter_4bits.vhd".
+Unit <Counter_4bits> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Counter_4bits> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Counter_4bits, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Counter_4bits.ngr
+Top Level Output File Name         : Counter_4bits
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 6
+#      LUT2_L                      : 1
+#      LUT3                        : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 3
+# FlipFlops/Latches                : 4
+#      FDCE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 7
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                        3  out of    960     0%  
+ Number of Slice Flip Flops:              4  out of   1920     0%  
+ Number of 4 input LUTs:                  6  out of   1920     0%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of     83    14%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 4     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 2.760ns (Maximum Frequency: 362.325MHz)
+   Minimum input arrival time before clock: 2.637ns
+   Maximum output required time after clock: 4.221ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.760ns (frequency: 362.325MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.760ns (Levels of Logic = 2)
+  Source:            Inst_Reg_4bits/DataOut_1 (FF)
+  Destination:       Inst_Reg_4bits/DataOut_2 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Inst_Reg_4bits/DataOut_1 to Inst_Reg_4bits/DataOut_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  Inst_Reg_4bits/DataOut_1 (Inst_Reg_4bits/DataOut_1)
+     LUT2_L:I0->LO         1   0.612   0.103  Inst_Mux2_4bits/Z<2>_SW0 (N01)
+     LUT4:I3->O            1   0.612   0.000  Inst_Mux2_4bits/Z<2> (signal_MUX_PC<2>)
+     FDCE:D                    0.268          Inst_Reg_4bits/DataOut_2
+    ----------------------------------------
+    Total                      2.760ns (2.006ns logic, 0.754ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 12 / 8
+-------------------------------------------------------------------------
+Offset:              2.637ns (Levels of Logic = 2)
+  Source:            CW11 (PAD)
+  Destination:       Inst_Reg_4bits/DataOut_1 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: CW11 to Inst_Reg_4bits/DataOut_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.651  CW11_IBUF (CW11_IBUF)
+     LUT3:I0->O            1   0.612   0.000  Inst_Mux2_4bits/Z<0>1 (signal_MUX_PC<0>)
+     FDCE:D                    0.268          Inst_Reg_4bits/DataOut_0
+    ----------------------------------------
+    Total                      2.637ns (1.986ns logic, 0.651ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.221ns (Levels of Logic = 1)
+  Source:            Inst_Reg_4bits/DataOut_0 (FF)
+  Destination:       PC_RAM<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Inst_Reg_4bits/DataOut_0 to PC_RAM<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.514   0.538  Inst_Reg_4bits/DataOut_0 (Inst_Reg_4bits/DataOut_0)
+     OBUF:I->O                 3.169          PC_RAM_0_OBUF (PC_RAM<0>)
+    ----------------------------------------
+    Total                      4.221ns (3.683ns logic, 0.538ns route)
+                                       (87.3% logic, 12.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.73 secs
+ 
+--> 
+
+Total memory usage is 293144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

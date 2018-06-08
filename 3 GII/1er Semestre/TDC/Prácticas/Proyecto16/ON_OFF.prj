@@ -1,0 +1,3 @@
+vhdl work "Toggle.vhd"
+vhdl work "RisingEdge.vhd"
+vhdl work "ON_OFF.vhd"

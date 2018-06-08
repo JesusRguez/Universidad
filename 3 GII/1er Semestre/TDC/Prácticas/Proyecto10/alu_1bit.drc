@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Sun Oct 22 20:47:41 2017
+
+drc -z ALU_1bit.ncd ALU_1bit.pcf
+
+DRC detected 0 errors and 0 warnings.

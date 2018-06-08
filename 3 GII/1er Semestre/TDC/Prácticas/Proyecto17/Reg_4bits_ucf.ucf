@@ -1,0 +1,12 @@
+NET "DataIn<0>" LOC = "P11";
+NET "DataIn<1>" LOC = "L3";
+NET "DataIn<2>" LOC = "K3";
+NET "DataIn<3>" LOC = "B4";
+
+NET "ENABLE" LOC = "A7";
+NET "RESET" LOC = "G12";
+
+NET "DataOut<0>" LOC = "M5";
+NET "DataOut<1>" LOC = "M11";
+NET "DataOut<2>" LOC = "P7";
+NET "DataOut<3>" LOC = "P6";

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb_isim_beh.exe" -prj "C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb_beh.prj" "work.Toggle_tb" 

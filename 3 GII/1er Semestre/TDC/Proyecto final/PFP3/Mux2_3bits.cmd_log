@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/Mux2_3bits.vhi -module Mux2_3bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Mux2_3bits.vhd 

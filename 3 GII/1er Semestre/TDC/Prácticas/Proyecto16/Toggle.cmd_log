@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto16 -o C:/Users/Jesus/Xilinx/Proyecto16/Toggle.vhi -module Toggle -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Toggle.vhd 

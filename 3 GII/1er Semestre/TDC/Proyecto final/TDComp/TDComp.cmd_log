@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/TDComp/TDComp.xst" -ofn "C:/Users/Jesus/Xilinx/TDComp/TDComp.syr" 
+vhdtdtfi -prj TDComp -o C:/Users/Jesus/Xilinx/TDComp/TDComp.vhi -module TDComp -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work Mux8_4bits.vhd -lib work FFD.vhd -lib work Deco3to8.vhd -lib work ALU.vhd -lib work Reg_10bits.vhd -lib work RAM_16x10.vhd -lib work Mux2_4bits.vhd -lib work Inc_4bits.vhd -lib work Demux_RAM.vhd -lib work Deco2to4.vhd -lib work Deco1to2.vhd -lib work DataPath.vhd -lib work Banco_Registros.vhd -lib work RAM_Banco_DataPath.vhd -lib work Counter_4bits.vhd -lib work RisingEdge.vhd -lib work PC_RAM_BancoDataPath.vhd -lib work ControlUnit.vhd -lib work TDComp.vhd 

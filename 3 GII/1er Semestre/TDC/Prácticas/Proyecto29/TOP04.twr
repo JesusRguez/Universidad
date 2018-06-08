@@ -1,0 +1,140 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml TOP04.twx TOP04.ncd -o TOP04.twr TOP04.pcf -ucf
+TOP04_ucf.ucf
+
+Design file:              TOP04.ncd
+Physical constraint file: TOP04.pcf
+Device,package,speed:     xc3s100e,cp132,-5 (PRODUCTION 1.27 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CW0         |    1.978(R)|    0.056(R)|CLK_BUFGP         |   0.000|
+CW1         |    1.108(R)|    0.593(R)|CLK_BUFGP         |   0.000|
+CW2         |    0.520(R)|    0.861(R)|CLK_BUFGP         |   0.000|
+CW3         |    1.575(R)|    0.478(R)|CLK_BUFGP         |   0.000|
+CW4         |    2.423(R)|    0.082(R)|CLK_BUFGP         |   0.000|
+CW5         |    2.606(R)|    0.004(R)|CLK_BUFGP         |   0.000|
+CW6         |    0.806(R)|    0.525(R)|CLK_BUFGP         |   0.000|
+CW7         |    2.033(R)|    0.395(R)|CLK_BUFGP         |   0.000|
+SelALU<0>   |    5.501(R)|    0.301(R)|CLK_BUFGP         |   0.000|
+SelALU<1>   |    4.771(R)|    0.148(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+-------------+------------+------------------+--------+
+             | clk (edge) |                  | Clock  |
+Destination  |   to PAD   |Internal Clock(s) | Phase  |
+-------------+------------+------------------+--------+
+AddressRAM<0>|    8.548(R)|CLK_BUFGP         |   0.000|
+AddressRAM<1>|    8.856(R)|CLK_BUFGP         |   0.000|
+AddressRAM<2>|    9.194(R)|CLK_BUFGP         |   0.000|
+AddressRAM<3>|    9.467(R)|CLK_BUFGP         |   0.000|
+AddressROM<0>|    8.011(R)|CLK_BUFGP         |   0.000|
+AddressROM<1>|    8.223(R)|CLK_BUFGP         |   0.000|
+AddressROM<2>|    7.748(R)|CLK_BUFGP         |   0.000|
+Anodo<0>     |    8.966(R)|CLK_BUFGP         |   0.000|
+Anodo<1>     |    8.717(R)|CLK_BUFGP         |   0.000|
+Anodo<2>     |    8.359(R)|CLK_BUFGP         |   0.000|
+Anodo<3>     |    7.906(R)|CLK_BUFGP         |   0.000|
+COP<0>       |    7.293(R)|CLK_BUFGP         |   0.000|
+COP<1>       |    7.433(R)|CLK_BUFGP         |   0.000|
+Catodo<0>    |   13.335(R)|CLK_BUFGP         |   0.000|
+Catodo<1>    |   13.110(R)|CLK_BUFGP         |   0.000|
+Catodo<2>    |   12.981(R)|CLK_BUFGP         |   0.000|
+Catodo<3>    |   13.346(R)|CLK_BUFGP         |   0.000|
+Catodo<4>    |   13.569(R)|CLK_BUFGP         |   0.000|
+Catodo<5>    |   13.173(R)|CLK_BUFGP         |   0.000|
+Catodo<6>    |   13.086(R)|CLK_BUFGP         |   0.000|
+RegInst<0>   |    7.534(R)|CLK_BUFGP         |   0.000|
+RegInst<1>   |    8.255(R)|CLK_BUFGP         |   0.000|
+RegInst<2>   |    7.827(R)|CLK_BUFGP         |   0.000|
+RegInst<3>   |    7.466(R)|CLK_BUFGP         |   0.000|
+RegInst<4>   |    7.694(R)|CLK_BUFGP         |   0.000|
+RegInst<5>   |    7.453(R)|CLK_BUFGP         |   0.000|
+RegInst<6>   |    7.594(R)|CLK_BUFGP         |   0.000|
+RegInst<7>   |    7.802(R)|CLK_BUFGP         |   0.000|
+SalFZ        |    7.892(R)|CLK_BUFGP         |   0.000|
+SalRegA<0>   |    7.921(R)|CLK_BUFGP         |   0.000|
+SalRegA<1>   |    7.569(R)|CLK_BUFGP         |   0.000|
+SalRegA<2>   |    7.321(R)|CLK_BUFGP         |   0.000|
+SalRegA<3>   |    7.533(R)|CLK_BUFGP         |   0.000|
+SalRegB<0>   |    8.030(R)|CLK_BUFGP         |   0.000|
+SalRegB<1>   |    8.066(R)|CLK_BUFGP         |   0.000|
+SalRegB<2>   |    7.602(R)|CLK_BUFGP         |   0.000|
+SalRegB<3>   |    7.256(R)|CLK_BUFGP         |   0.000|
+-------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.473|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CW5            |AddressRAM<0>  |    7.113|
+CW5            |AddressRAM<1>  |    7.328|
+CW5            |AddressRAM<2>  |    7.385|
+CW5            |AddressRAM<3>  |    7.534|
+CW5            |Catodo<0>      |   11.806|
+CW5            |Catodo<1>      |   11.581|
+CW5            |Catodo<2>      |   11.393|
+CW5            |Catodo<3>      |   11.817|
+CW5            |Catodo<4>      |   12.040|
+CW5            |Catodo<5>      |   11.590|
+CW5            |Catodo<6>      |   11.557|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Dec 20 13:19:34 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 208 MB
+
+
+

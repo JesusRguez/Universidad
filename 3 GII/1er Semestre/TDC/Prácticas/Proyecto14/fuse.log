@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb_isim_beh.exe -prj C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb_beh.prj work.Toggle_tb 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto14/Toggle.vhd" into library work
+Parsing VHDL file "C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity Toggle [toggle_default]
+Compiling architecture behavior of entity toggle_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable C:/Users/Jesus/Xilinx/Proyecto14/Toggle_tb_isim_beh.exe
+Fuse Memory Usage: 29004 KB
+Fuse CPU Usage: 530 ms

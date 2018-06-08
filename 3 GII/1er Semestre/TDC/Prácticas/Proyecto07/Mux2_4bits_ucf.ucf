@@ -1,0 +1,35 @@
+//4 bits:
+//NET "A<0>" LOC="P11";
+//NET "A<1>" LOC="L3";
+//NET "A<2>" LOC="K3";
+//NET "A<3>" LOC="B4";
+
+//NET "B<0>" LOC="G3";
+//NET "B<1>" LOC="F3";
+//NET "B<2>" LOC="E2";
+//NET "B<3>" LOC="N3";
+
+//NET "Sel" LOC="G12";
+
+//NET "Z<0>" LOC="M5";
+//NET "Z<1>" LOC="M11";
+//NET "Z<2>" LOC="P7";
+//NET "Z<3>" LOC="P6";
+
+//3 bits:
+//Switches:
+NET "A<0>" LOC="P11";
+NET "A<1>" LOC="L3";
+NET "A<2>" LOC="K3";
+
+NET "B<0>" LOC="G3";
+NET "B<1>" LOC="F3";
+NET "B<2>" LOC="E2";
+
+//Select button:
+NET "Sel" LOC="G12";
+
+//Leds:
+NET "Z<0>" LOC="M5";
+NET "Z<1>" LOC="M11";
+NET "Z<2>" LOC="P7";

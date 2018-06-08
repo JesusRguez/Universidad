@@ -1,0 +1,2 @@
+vhdl work "CLK_1Hz.vhd"
+vhdl work "CLK_1Hz_tb.vhd"

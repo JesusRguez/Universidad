@@ -1,0 +1,10 @@
+EN toggle NULL C:/Users/Jesus/Xilinx/Proyecto21/Toggle.vhd sub00/vhpl02 1510906061
+AR clk_1hz behavioral C:/Users/Jesus/Xilinx/Proyecto21/CLK_1Hz.vhd sub00/vhpl01 1510906060
+AR blinkled_2process behavioral C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_2Process.vhd sub00/vhpl07 1510906588
+AR blinkled behavioral C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.vhd sub00/vhpl05 1510906064
+EN blinkled_2process NULL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_2Process.vhd sub00/vhpl06 1510906587
+EN clk_1hz NULL C:/Users/Jesus/Xilinx/Proyecto21/CLK_1Hz.vhd sub00/vhpl00 1510906059
+EN blinkled_1process NULL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_1Process.vhd sub00/vhpl08 1510908510
+AR toggle behavioral C:/Users/Jesus/Xilinx/Proyecto21/Toggle.vhd sub00/vhpl03 1510906062
+AR blinkled_1process behavioral C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED_1Process.vhd sub00/vhpl09 1510908511
+EN blinkled NULL C:/Users/Jesus/Xilinx/Proyecto21/BlinkLED.vhd sub00/vhpl04 1510906063

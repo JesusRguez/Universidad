@@ -1,0 +1,17 @@
+V3 11
+FL C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhd 2017/10/18.11:11:35 P.28xd
+EN work/Disp7Seg 1508323516 FL C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Disp7Seg/Behavioral 1508323517 \
+      FL C:/Users/Jesus/Xilinx/Proyecto09/Disp7Seg.vhd EN work/Disp7Seg 1508323516
+FL C:/Users/Jesus/Xilinx/Proyecto09/Mux2_4bits.vhd 2017/10/18.11:25:33 P.28xd
+EN work/Mux2_4bits 1508323514 FL C:/Users/Jesus/Xilinx/Proyecto09/Mux2_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Mux2_4bits/Behavioral 1508323515 \
+      FL C:/Users/Jesus/Xilinx/Proyecto09/Mux2_4bits.vhd EN work/Mux2_4bits 1508323514
+FL C:/Users/Jesus/Xilinx/Proyecto09/Mux_Disp_LED.vhd 2017/10/18.12:34:14 P.28xd
+EN work/Mux_Disp_LED 1508323518 \
+      FL C:/Users/Jesus/Xilinx/Proyecto09/Mux_Disp_LED.vhd PB ieee/std_logic_1164 1341906176
+AR work/Mux_Disp_LED/Structural 1508323519 \
+      FL C:/Users/Jesus/Xilinx/Proyecto09/Mux_Disp_LED.vhd EN work/Mux_Disp_LED 1508323518 \
+      CP Mux2_4bits CP Disp7Seg

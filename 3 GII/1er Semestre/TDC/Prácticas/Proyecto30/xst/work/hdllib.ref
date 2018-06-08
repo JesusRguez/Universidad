@@ -1,0 +1,6 @@
+EN timer300ms NULL C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhd sub00/vhpl00 1515582237
+EN debounce NULL C:/Users/Jesus/Xilinx/Proyecto30/Debounce.vhd sub00/vhpl04 1515582239
+EN debouncefsm NULL C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhd sub00/vhpl02 1515582235
+AR debouncefsm behavioral C:/Users/Jesus/Xilinx/Proyecto30/DebounceFSM.vhd sub00/vhpl03 1515582236
+AR debounce behavioral C:/Users/Jesus/Xilinx/Proyecto30/Debounce.vhd sub00/vhpl05 1515582240
+AR timer300ms behavioral C:/Users/Jesus/Xilinx/Proyecto30/Timer300ms.vhd sub00/vhpl01 1515582238

@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP2 -o C:/Users/Jesus/Xilinx/PFP2/Mux8_4bits.vhi -module Mux8_4bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Mux8_4bits.vhd 

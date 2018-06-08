@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto22 -o C:/Users/Jesus/Xilinx/Proyecto22/CLK_1KHz.vhi -module CLK_1KHz -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CLK_1KHz.vhd 

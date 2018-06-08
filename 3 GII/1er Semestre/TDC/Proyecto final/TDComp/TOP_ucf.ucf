@@ -1,0 +1,40 @@
+//Código de operación
+NET "Instruction<7>" LOC = "C9";
+NET "Instruction<8>" LOC = "B7";
+NET "Instruction<9>" LOC = "B5";
+
+//Reset
+NET "RESET" LOC = "G12";
+
+//Instrucción sin código de operación
+NET "Instruction<0>" LOC = "M5";
+NET "Instruction<1>" LOC = "M11";
+NET "Instruction<2>" LOC = "P7";
+NET "Instruction<3>" LOC = "P6";
+NET "Instruction<4>" LOC = "N5";
+NET "Instruction<5>" LOC = "N4";
+NET "Instruction<6>" LOC = "P4";
+
+//Reloj
+NET "CLK" LOC = "B8";
+
+//Cátodos de los displays
+NET "Catodo<0>" LOC = "M12";
+NET "Catodo<1>" LOC = "L13";
+NET "Catodo<2>" LOC = "P12";
+NET "Catodo<3>" LOC = "N11";
+NET "Catodo<4>" LOC = "N14";
+NET "Catodo<5>" LOC = "H12";
+NET "Catodo<6>" LOC = "L14";
+
+//Displays de la tarjeta Basys2
+NET "Anodo<0>" LOC = "F12";
+NET "Anodo<1>" LOC = "J12";
+NET "Anodo<2>" LOC = "M13";
+NET "Anodo<3>" LOC = "K14";
+
+//Bandera de cero
+NET "FZ" LOC = "D12";
+
+//Botón push para el paso entre estados de una instrucción
+NET "Push" LOC = "A7";

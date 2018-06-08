@@ -1,0 +1,3 @@
+vhdl work "Timer300ms.vhd"
+vhdl work "DebounceFSM.vhd"
+vhdl work "Debounce.vhd"

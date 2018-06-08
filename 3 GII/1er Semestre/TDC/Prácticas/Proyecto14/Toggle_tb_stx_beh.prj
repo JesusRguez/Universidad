@@ -1,0 +1,2 @@
+vhdl isim_temp "Toggle.vhd"
+vhdl isim_temp "Toggle_tb.vhd"

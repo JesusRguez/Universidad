@@ -1,0 +1,29 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cod2to4_Prior_ucf.ucf -p xc3s100e-cp132-4 Cod2to4_Prior.ngc Cod2to4_Prior.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Cod2to4_Prior_map.ncd Cod2to4_Prior.ngd Cod2to4_Prior.pcf 
+par -w -intstyle ise -ol high -t 1 Cod2to4_Prior_map.ncd Cod2to4_Prior.ncd Cod2to4_Prior.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Cod2to4_Prior.twx Cod2to4_Prior.ncd -o Cod2to4_Prior.twr Cod2to4_Prior.pcf -ucf Cod2to4_Prior_ucf.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cod2to4_Prior_ucf.ucf -p xc3s100e-cp132-4 Cod2to4_Prior.ngc Cod2to4_Prior.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Cod2to4_Prior_map.ncd Cod2to4_Prior.ngd Cod2to4_Prior.pcf 
+par -w -intstyle ise -ol high -t 1 Cod2to4_Prior_map.ncd Cod2to4_Prior.ncd Cod2to4_Prior.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Cod2to4_Prior.twx Cod2to4_Prior.ncd -o Cod2to4_Prior.twr Cod2to4_Prior.pcf -ucf Cod2to4_Prior_ucf.ucf 
+bitgen -intstyle ise -f Cod2to4_Prior.ut Cod2to4_Prior.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cod2to4_Prior_ucf.ucf -p xc3s100e-cp132-4 Cod2to4_Prior.ngc Cod2to4_Prior.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Cod2to4_Prior_map.ncd Cod2to4_Prior.ngd Cod2to4_Prior.pcf 
+par -w -intstyle ise -ol high -t 1 Cod2to4_Prior_map.ncd Cod2to4_Prior.ncd Cod2to4_Prior.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Cod2to4_Prior.twx Cod2to4_Prior.ncd -o Cod2to4_Prior.twr Cod2to4_Prior.pcf -ucf Cod2to4_Prior_ucf.ucf 
+bitgen -intstyle ise -f Cod2to4_Prior.ut Cod2to4_Prior.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto06/Cod2to4_Prior.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cod2to4_Prior_ucf.ucf -p xc3s100e-cp132-4 Cod2to4_Prior.ngc Cod2to4_Prior.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Cod2to4_Prior_map.ncd Cod2to4_Prior.ngd Cod2to4_Prior.pcf 
+par -w -intstyle ise -ol high -t 1 Cod2to4_Prior_map.ncd Cod2to4_Prior.ncd Cod2to4_Prior.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Cod2to4_Prior.twx Cod2to4_Prior.ncd -o Cod2to4_Prior.twr Cod2to4_Prior.pcf -ucf Cod2to4_Prior_ucf.ucf 
+bitgen -intstyle ise -f Cod2to4_Prior.ut Cod2to4_Prior.ncd 

@@ -1,0 +1,6 @@
+AR risingedge behavioral C:/Users/Jesus/Xilinx/Proyecto19/RisingEdge.vhd sub00/vhpl01 1510743597
+AR yourturn behavioral C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.vhd sub00/vhpl05 1510743601
+EN risingedge NULL C:/Users/Jesus/Xilinx/Proyecto19/RisingEdge.vhd sub00/vhpl00 1510743596
+EN yourturn NULL C:/Users/Jesus/Xilinx/Proyecto19/YourTurn.vhd sub00/vhpl04 1510743600
+EN counter_nbits NULL C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhd sub00/vhpl02 1510743598
+AR counter_nbits behavioral C:/Users/Jesus/Xilinx/Proyecto19/Counter_Nbits.vhd sub00/vhpl03 1510743599

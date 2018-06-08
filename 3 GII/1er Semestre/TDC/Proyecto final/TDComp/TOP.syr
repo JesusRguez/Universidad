@@ -1,0 +1,821 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.80 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.80 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco3to8.vhd" in Library work.
+Architecture behavioral of Entity deco3to8 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Reg_4bits.vhd" in Library work.
+Architecture behavioral of Entity reg_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Mux8_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux8_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/FFD.vhd" in Library work.
+Architecture behavioral of Entity ffd is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Reg_10bits.vhd" in Library work.
+Architecture behavioral of Entity reg_10bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Demux_RAM.vhd" in Library work.
+Architecture behavioral of Entity demux_ram is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/RAM_16x10.vhd" in Library work.
+Architecture behavioral of Entity ram_16x10 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco1to2.vhd" in Library work.
+Architecture behavioral of Entity deco1to2 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Mux2_4bits.vhd" in Library work.
+Architecture behavioral of Entity mux2_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/DataPath.vhd" in Library work.
+Architecture behavioral of Entity datapath is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Deco2to4.vhd" in Library work.
+Architecture behavioral of Entity deco2to4 is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Banco_Registros.vhd" in Library work.
+Architecture behavioral of Entity banco_registros is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Inc_4bits.vhd" in Library work.
+Architecture behavioral of Entity inc_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Counter_4bits.vhd" in Library work.
+Architecture behavioral of Entity counter_4bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/RAM_Banco_DataPath.vhd" in Library work.
+Entity <ram_banco_datapath> compiled.
+Entity <ram_banco_datapath> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/CLK_1KHz.vhd" in Library work.
+Architecture behavioral of Entity clk_1khz is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Counter_2bits.vhd" in Library work.
+Architecture behavioral of Entity counter_2bits is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Disp7Seg.vhd" in Library work.
+Architecture behavioral of Entity disp7seg is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/ControlUnit.vhd" in Library work.
+Architecture behavioral of Entity controlunit is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/PC_RAM_BancoDataPath.vhd" in Library work.
+Entity <pc_ram_bancodatapath> compiled.
+Entity <pc_ram_bancodatapath> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/RisingEdge.vhd" in Library work.
+Architecture behavioral of Entity risingedge is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/TDComp.vhd" in Library work.
+Entity <tdcomp> compiled.
+Entity <tdcomp> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/Display7Seg_4ON.vhd" in Library work.
+Architecture behavioral of Entity display7seg_4on is up to date.
+Compiling vhdl file "C:/Users/Jesus/Xilinx/TDComp/TOP.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RisingEdge> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TDComp> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Display7Seg_4ON> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ControlUnit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PC_RAM_BancoDataPath> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CLK_1KHz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_2bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Disp7Seg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RAM_Banco_DataPath> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Inc_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux2_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_10bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Demux_RAM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RAM_16x10> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Deco1to2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DataPath> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Deco2to4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Banco_Registros> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FFD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg_4bits> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Deco3to8> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux8_4bits> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP> in library <work> (Architecture <behavioral>).
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing Entity <RisingEdge> in library <work> (Architecture <behavioral>).
+Entity <RisingEdge> analyzed. Unit <RisingEdge> generated.
+
+Analyzing Entity <TDComp> in library <work> (Architecture <behavioral>).
+Entity <TDComp> analyzed. Unit <TDComp> generated.
+
+Analyzing Entity <ControlUnit> in library <work> (Architecture <behavioral>).
+Entity <ControlUnit> analyzed. Unit <ControlUnit> generated.
+
+Analyzing Entity <PC_RAM_BancoDataPath> in library <work> (Architecture <behavioral>).
+Entity <PC_RAM_BancoDataPath> analyzed. Unit <PC_RAM_BancoDataPath> generated.
+
+Analyzing Entity <Counter_4bits> in library <work> (Architecture <behavioral>).
+Entity <Counter_4bits> analyzed. Unit <Counter_4bits> generated.
+
+Analyzing Entity <Inc_4bits> in library <work> (Architecture <behavioral>).
+Entity <Inc_4bits> analyzed. Unit <Inc_4bits> generated.
+
+Analyzing Entity <Reg_4bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_4bits> analyzed. Unit <Reg_4bits> generated.
+
+Analyzing Entity <Mux2_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Mux2_4bits.vhd" line 46: Mux is complete : default of case is discarded
+Entity <Mux2_4bits> analyzed. Unit <Mux2_4bits> generated.
+
+Analyzing Entity <RAM_Banco_DataPath> in library <work> (Architecture <behavioral>).
+Entity <RAM_Banco_DataPath> analyzed. Unit <RAM_Banco_DataPath> generated.
+
+Analyzing Entity <Reg_10bits> in library <work> (Architecture <behavioral>).
+Entity <Reg_10bits> analyzed. Unit <Reg_10bits> generated.
+
+Analyzing Entity <Demux_RAM> in library <work> (Architecture <behavioral>).
+Entity <Demux_RAM> analyzed. Unit <Demux_RAM> generated.
+
+Analyzing Entity <RAM_16x10> in library <work> (Architecture <behavioral>).
+Entity <RAM_16x10> analyzed. Unit <RAM_16x10> generated.
+
+Analyzing Entity <Deco1to2> in library <work> (Architecture <behavioral>).
+Entity <Deco1to2> analyzed. Unit <Deco1to2> generated.
+
+Analyzing Entity <DataPath> in library <work> (Architecture <behavioral>).
+Entity <DataPath> analyzed. Unit <DataPath> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <FFD> in library <work> (Architecture <behavioral>).
+Entity <FFD> analyzed. Unit <FFD> generated.
+
+Analyzing Entity <Deco2to4> in library <work> (Architecture <behavioral>).
+Entity <Deco2to4> analyzed. Unit <Deco2to4> generated.
+
+Analyzing Entity <Banco_Registros> in library <work> (Architecture <behavioral>).
+Entity <Banco_Registros> analyzed. Unit <Banco_Registros> generated.
+
+Analyzing Entity <Deco3to8> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Deco3to8.vhd" line 55: Mux is complete : default of case is discarded
+Entity <Deco3to8> analyzed. Unit <Deco3to8> generated.
+
+Analyzing Entity <Mux8_4bits> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Mux8_4bits.vhd" line 59: Mux is complete : default of case is discarded
+Entity <Mux8_4bits> analyzed. Unit <Mux8_4bits> generated.
+
+Analyzing Entity <Display7Seg_4ON> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Display7Seg_4ON.vhd" line 104: Mux is complete : default of case is discarded
+Entity <Display7Seg_4ON> analyzed. Unit <Display7Seg_4ON> generated.
+
+Analyzing Entity <CLK_1KHz> in library <work> (Architecture <behavioral>).
+Entity <CLK_1KHz> analyzed. Unit <CLK_1KHz> generated.
+
+Analyzing Entity <Counter_2bits> in library <work> (Architecture <behavioral>).
+Entity <Counter_2bits> analyzed. Unit <Counter_2bits> generated.
+
+Analyzing Entity <Disp7Seg> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Disp7Seg.vhd" line 49: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/Jesus/Xilinx/TDComp/Disp7Seg.vhd" line 69: Mux is complete : default of case is discarded
+Entity <Disp7Seg> analyzed. Unit <Disp7Seg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RisingEdge>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/RisingEdge.vhd".
+    Found 1-bit register for signal <PreviousPush>.
+    Found 1-bit register for signal <RegisteredPush>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <RisingEdge> synthesized.
+
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/ControlUnit.vhd".
+    Found finite state machine <FSM_0> for signal <Next_State>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 38                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 13                                             |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RESET                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ControlUnit> synthesized.
+
+
+Synthesizing Unit <Inc_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Inc_4bits.vhd".
+    Found 4-bit adder for signal <Value_Inc>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Inc_4bits> synthesized.
+
+
+Synthesizing Unit <Reg_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Reg_4bits.vhd".
+    Found 4-bit register for signal <DataOut>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Reg_4bits> synthesized.
+
+
+Synthesizing Unit <Mux2_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Mux2_4bits.vhd".
+Unit <Mux2_4bits> synthesized.
+
+
+Synthesizing Unit <Reg_10bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Reg_10bits.vhd".
+    Found 10-bit register for signal <DataOut>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <Reg_10bits> synthesized.
+
+
+Synthesizing Unit <Demux_RAM>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Demux_RAM.vhd".
+Unit <Demux_RAM> synthesized.
+
+
+Synthesizing Unit <RAM_16x10>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/RAM_16x10.vhd".
+    Found 16x10-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 10-bit register for signal <DataOut>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <RAM_16x10> synthesized.
+
+
+Synthesizing Unit <Deco1to2>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Deco1to2.vhd".
+Unit <Deco1to2> synthesized.
+
+
+Synthesizing Unit <Deco2to4>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Deco2to4.vhd".
+Unit <Deco2to4> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/ALU.vhd".
+    Found 4-bit addsub for signal <Resultado$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <FFD>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/FFD.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FFD> synthesized.
+
+
+Synthesizing Unit <Deco3to8>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Deco3to8.vhd".
+Unit <Deco3to8> synthesized.
+
+
+Synthesizing Unit <Mux8_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Mux8_4bits.vhd".
+    Found 4-bit 8-to-1 multiplexer for signal <Z>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Mux8_4bits> synthesized.
+
+
+Synthesizing Unit <CLK_1KHz>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/CLK_1KHz.vhd".
+    Found 1-bit register for signal <Out_1KHz>.
+    Found 16-bit up counter for signal <Count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <CLK_1KHz> synthesized.
+
+
+Synthesizing Unit <Counter_2bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Counter_2bits.vhd".
+    Found 2-bit up counter for signal <CUENTA>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_2bits> synthesized.
+
+
+Synthesizing Unit <Disp7Seg>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Disp7Seg.vhd".
+    Found 16x7-bit ROM for signal <Seg>.
+    Found 1-of-4 decoder for signal <Anode>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Decoder(s).
+Unit <Disp7Seg> synthesized.
+
+
+Synthesizing Unit <Display7Seg_4ON>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Display7Seg_4ON.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <salida_mux>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Display7Seg_4ON> synthesized.
+
+
+Synthesizing Unit <Counter_4bits>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Counter_4bits.vhd".
+Unit <Counter_4bits> synthesized.
+
+
+Synthesizing Unit <DataPath>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/DataPath.vhd".
+Unit <DataPath> synthesized.
+
+
+Synthesizing Unit <Banco_Registros>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/Banco_Registros.vhd".
+Unit <Banco_Registros> synthesized.
+
+
+Synthesizing Unit <RAM_Banco_DataPath>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/RAM_Banco_DataPath.vhd".
+Unit <RAM_Banco_DataPath> synthesized.
+
+
+Synthesizing Unit <PC_RAM_BancoDataPath>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/PC_RAM_BancoDataPath.vhd".
+Unit <PC_RAM_BancoDataPath> synthesized.
+
+
+Synthesizing Unit <TDComp>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/TDComp.vhd".
+Unit <TDComp> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:/Users/Jesus/Xilinx/TDComp/TOP.vhd".
+Unit <TOP> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x10-bit single-port RAM                             : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 17
+ 1-bit register                                        : 4
+ 10-bit register                                       : 2
+ 4-bit register                                        : 11
+# Multiplexers                                         : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 2
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_TDComp/Inst_ControlUnit/Next_State/FSM> on signal <Next_State[1:4]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 0000
+ loadinst | 0001
+ deco     | 0011
+ loada    | 0110
+ loadreg  | 0010
+ stram    | 1100
+ loadrarb | 0101
+ aaddb    | 1111
+ asubb    | 1101
+ loadregi | 0111
+ aincb    | 1010
+ adecb    | 1110
+ beq      | 0100
+----------------------
+
+Synthesizing (advanced) Unit <RAM_16x10>.
+INFO:Xst:3231 - The small RAM <Mram_RAM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <Enable>        | high     |
+    |     addrA          | connected to signal <Address>       |          |
+    |     diA            | connected to signal <DataIn>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM_16x10> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 16x10-bit single-port distributed RAM                 : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 68
+ Flip-Flops                                            : 68
+# Multiplexers                                         : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 2
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <ControlUnit> ...
+
+Optimizing unit <Reg_10bits> ...
+
+Optimizing unit <RAM_16x10> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <Banco_Registros> ...
+
+Optimizing unit <RAM_Banco_DataPath> ...
+
+Optimizing unit <TDComp> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 12.
+FlipFlop Inst_TDComp/Inst_ControlUnit/Next_State_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_8 has been replicated 1 time(s)
+FlipFlop Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 93
+ Flip-Flops                                            : 93
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 274
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 15
+#      LUT2                        : 36
+#      LUT2_D                      : 3
+#      LUT2_L                      : 1
+#      LUT3                        : 64
+#      LUT3_D                      : 4
+#      LUT3_L                      : 2
+#      LUT4                        : 62
+#      LUT4_D                      : 10
+#      LUT4_L                      : 7
+#      MUXCY                       : 15
+#      MUXF5                       : 27
+#      MUXF6                       : 8
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 93
+#      FDC                         : 24
+#      FDCE                        : 59
+#      FDE                         : 10
+# RAMS                             : 10
+#      RAM16X1S                    : 10
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 2
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      114  out of    960    11%  
+ Number of Slice Flip Flops:             93  out of   1920     4%  
+ Number of 4 input LUTs:                216  out of   1920    11%  
+    Number used as logic:               206
+    Number used as RAMs:                 10
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of     83    33%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 103   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 83    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.267ns (Maximum Frequency: 159.555MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 11.195ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.267ns (frequency: 159.555MHz)
+  Total number of paths / destination ports: 3768 / 215
+-------------------------------------------------------------------------
+Delay:               6.267ns (Levels of Logic = 5)
+  Source:            Inst_TDComp/Inst_ControlUnit/Next_State_FSM_FFd2 (FF)
+  Destination:       Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/REGA/DataOut_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Inst_TDComp/Inst_ControlUnit/Next_State_FSM_FFd2 to Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/REGA/DataOut_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             25   0.514   1.101  Inst_TDComp/Inst_ControlUnit/Next_State_FSM_FFd2 (Inst_TDComp/Inst_ControlUnit/Next_State_FSM_FFd2)
+     LUT4_D:I2->O          1   0.612   0.426  Inst_TDComp/Inst_ControlUnit/Next_State_FSM_Out31 (Inst_TDComp/signalCW<7>)
+     LUT3:I1->O            8   0.612   0.643  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Deco2to4/OutputB<1>1 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/signalSaltoBanco<1>)
+     MUXF5:S->O            1   0.641   0.000  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Banco_Registros/MuxDirA/Mmux_Z_3_f5 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Banco_Registros/MuxDirA/Mmux_Z_3_f5)
+     MUXF6:I1->O           1   0.451   0.387  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Banco_Registros/MuxDirA/Mmux_Z_2_f6 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/signalSalBancotoRegA<0>)
+     LUT3:I2->O            1   0.612   0.000  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Mux2_4bits_Banco/Z<0>11 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/signalSaltoRegA<0>)
+     FDCE:D                    0.268          Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/REGA/DataOut_0
+    ----------------------------------------
+    Total                      6.267ns (3.710ns logic, 2.557ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            Push (PAD)
+  Destination:       Inst_RisingEdge/RegisteredPush (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Push to Inst_RisingEdge/RegisteredPush
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Push_IBUF (Push_IBUF)
+     FDC:D                     0.268          Inst_RisingEdge/RegisteredPush
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1373 / 25
+-------------------------------------------------------------------------
+Offset:              11.195ns (Levels of Logic = 8)
+  Source:            Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_7 (FF)
+  Destination:       Catodo<2> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_7 to Catodo<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.514   1.031  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_7 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_Reg_10bits/DataOut_7)
+     LUT3_D:I0->LO         1   0.612   0.130  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/Inst_ALU/Resultado_mux00021 (N78)
+     LUT3:I2->O            2   0.612   0.383  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/Inst_ALU/Maddsub_Resultado_addsub0000_lut<3>1 (Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/Inst_ALU/Maddsub_Resultado_addsub0000_lut<3>)
+     LUT4:I3->O            1   0.612   0.387  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/Inst_ALU/Resultado<3>80_SW0 (N22)
+     LUT4_D:I2->O          3   0.612   0.520  Inst_TDComp/Inst_PC_RAM_BancoDataPath/Inst_RAM_Banco_DataPath/Inst_DataPath/Inst_ALU/Resultado<3>80 (senalDato1<3>)
+     LUT3:I1->O            1   0.612   0.000  Inst_Display7Seg_4ON/Mmux_salida_mux_43 (Inst_Display7Seg_4ON/Mmux_salida_mux_43)
+     MUXF5:I0->O           7   0.278   0.754  Inst_Display7Seg_4ON/Mmux_salida_mux_2_f5_2 (Inst_Display7Seg_4ON/salida_mux<3>)
+     LUT4:I0->O            1   0.612   0.357  Inst_Display7Seg_4ON/Inst_Disp7Seg/Mrom_Seg12 (Catodo_0_OBUF)
+     OBUF:I->O                 3.169          Catodo_0_OBUF (Catodo<0>)
+    ----------------------------------------
+    Total                     11.195ns (7.633ns logic, 3.562ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.70 secs
+ 
+--> 
+
+Total memory usage is 387424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

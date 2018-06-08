@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto26 -o C:/Users/Jesus/Xilinx/Proyecto26/Display7Seg_4ON.vhi -module Display7Seg_4ON -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Disp7Seg.vhd -lib work Counter_2bits.vhd -lib work CLK_1KHz.vhd -lib work Display7Seg_4ON.vhd 

@@ -1,0 +1,11 @@
+V3 6
+FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_3bits.vhd 2017/10/18.11:38:03 P.28xd
+EN work/Mux2_3bits 1508485422 FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_3bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Mux2_3bits/Behavioral 1508485423 \
+      FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_3bits.vhd EN work/Mux2_3bits 1508485422
+FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_4bits.vhd 2017/10/18.11:25:33 P.28xd
+EN work/Mux2_4bits 1508485302 FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_4bits.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/Mux2_4bits/Behavioral 1508485303 \
+      FL C:/Users/Jesus/Xilinx/Proyecto07/Mux2_4bits.vhd EN work/Mux2_4bits 1508485302

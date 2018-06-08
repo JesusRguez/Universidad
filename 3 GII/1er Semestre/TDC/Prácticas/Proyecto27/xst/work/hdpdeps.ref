@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jesus/Xilinx/Proyecto27/ROM_8x10.vhd 2017/12/05.09:53:33 P.28xd
+EN work/ROM_8x10 1512464015 FL C:/Users/Jesus/Xilinx/Proyecto27/ROM_8x10.vhd \
+      PB ieee/std_logic_1164 1341906176 PB ieee/NUMERIC_STD 1341906182
+AR work/ROM_8x10/Behavioral 1512464016 \
+      FL C:/Users/Jesus/Xilinx/Proyecto27/ROM_8x10.vhd EN work/ROM_8x10 1512464015

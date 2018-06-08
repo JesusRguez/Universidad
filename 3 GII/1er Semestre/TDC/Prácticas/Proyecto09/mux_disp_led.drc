@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Oct 18 12:45:44 2017
+
+drc -z Mux_Disp_LED.ncd Mux_Disp_LED.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Fri Oct 27 09:35:51 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Sal_ALU<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "Sal_ALU<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "Sal_ALU<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "SalFZ" LOCATE = SITE "G1" LEVEL 1;
+COMP "SEL_ALU<0>" LOCATE = SITE "G12" LEVEL 1;
+COMP "SEL_ALU<1>" LOCATE = SITE "C11" LEVEL 1;
+COMP "OPE_A<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "OPE_A<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "OPE_A<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "OPE_A<3>" LOCATE = SITE "B4" LEVEL 1;
+COMP "OPE_B<0>" LOCATE = SITE "G3" LEVEL 1;
+COMP "OPE_B<1>" LOCATE = SITE "F3" LEVEL 1;
+COMP "OPE_B<2>" LOCATE = SITE "E2" LEVEL 1;
+COMP "OPE_B<3>" LOCATE = SITE "N3" LEVEL 1;
+COMP "Sal_ALU<0>" LOCATE = SITE "M5" LEVEL 1;
+SCHEMATIC END;
+

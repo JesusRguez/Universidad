@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto29 -o C:/Users/Jesus/Xilinx/Proyecto29/Reg_3bits.vhi -module Reg_3bits -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_3bits.vhd 

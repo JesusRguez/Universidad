@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto03/mux2_df_1bit.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto03/mux2_df_1bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 mux2_df_1bit.ngc mux2_df_1bit.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o mux2_df_1bit_map.ncd mux2_df_1bit.ngd mux2_df_1bit.pcf 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto03/mux2_df_1bit.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto03/mux2_df_1bit.syr" 
+par -w -intstyle ise -ol high -t 1 mux2_df_1bit_map.ncd mux2_df_1bit.ncd mux2_df_1bit.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 mux2_df_1bit.ngc mux2_df_1bit.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o mux2_df_1bit_map.ncd mux2_df_1bit.ngd mux2_df_1bit.pcf 
+par -w -intstyle ise -ol high -t 1 mux2_df_1bit_map.ncd mux2_df_1bit.ncd mux2_df_1bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux2_df_1bit.twx mux2_df_1bit.ncd -o mux2_df_1bit.twr mux2_df_1bit.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 mux2_df_1bit.ngc mux2_df_1bit.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o mux2_df_1bit_map.ncd mux2_df_1bit.ngd mux2_df_1bit.pcf 
+par -w -intstyle ise -ol high -t 1 mux2_df_1bit_map.ncd mux2_df_1bit.ncd mux2_df_1bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux2_df_1bit.twx mux2_df_1bit.ncd -o mux2_df_1bit.twr mux2_df_1bit.pcf 
+bitgen -intstyle ise -f mux2_df_1bit.ut mux2_df_1bit.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mux2_df_1bit_ucf.ucf -p xc3s100e-cp132-4 mux2_df_1bit.ngc mux2_df_1bit.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o mux2_df_1bit_map.ncd mux2_df_1bit.ngd mux2_df_1bit.pcf 
+par -w -intstyle ise -ol high -t 1 mux2_df_1bit_map.ncd mux2_df_1bit.ncd mux2_df_1bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux2_df_1bit.twx mux2_df_1bit.ncd -o mux2_df_1bit.twr mux2_df_1bit.pcf -ucf mux2_df_1bit_ucf.ucf 
+bitgen -intstyle ise -f mux2_df_1bit.ut mux2_df_1bit.ncd 

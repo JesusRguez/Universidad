@@ -1,0 +1,32 @@
+NET Seg<0> LOC=M12;
+NET Seg<1> LOC=L13;
+NET Seg<2> LOC=P12;
+NET Seg<3> LOC=N11;
+NET Seg<4> LOC=N14;
+NET Seg<5> LOC=H12;
+NET Seg<6> LOC=L14;
+
+NET Anode<0> LOC=F12;
+NET Anode<1> LOC=J12;
+NET Anode<2> LOC=M13;
+NET Anode<3> LOC=K14;
+
+NET "A<0>" LOC="P11";
+NET "A<1>" LOC="L3";
+NET "A<2>" LOC="K3";
+NET "A<3>" LOC="B4";
+
+NET "B<0>" LOC="G3";
+NET "B<1>" LOC="F3";
+NET "B<2>" LOC="E2";
+NET "B<3>" LOC="N3";
+
+NET "Sel" LOC="G12";
+
+NET LED<0> LOC=M5;
+NET LED<1> LOC=M11;
+NET LED<2> LOC=P7;
+NET LED<3> LOC=P6;
+
+//Number of Slices:                        6  out of    960     0%  
+//Number of 4 input LUTs:                 11  out of   1920     0%  

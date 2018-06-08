@@ -1,0 +1,1 @@
+vhdtdtfi -prj Proyecto28 -o C:/Users/Jesus/Xilinx/Proyecto28/RAM_DataPath_01.vhi -module RAM_DataPath_01 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work FFD.vhd -lib work ALU_4bits.vhd -lib work RAM_16x4.vhd -lib work DataPath_01.vhd -lib work RAM_DataPath_01.vhd 

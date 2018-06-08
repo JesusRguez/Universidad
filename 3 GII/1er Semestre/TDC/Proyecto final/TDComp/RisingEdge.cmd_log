@@ -1,0 +1,1 @@
+vhdtdtfi -prj TDComp -o C:/Users/Jesus/Xilinx/TDComp/RisingEdge.vhi -module RisingEdge -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RisingEdge.vhd 

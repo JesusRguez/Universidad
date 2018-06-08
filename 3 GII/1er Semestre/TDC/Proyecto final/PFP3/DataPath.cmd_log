@@ -1,0 +1,1 @@
+vhdtdtfi -prj PFP3 -o C:/Users/Jesus/Xilinx/PFP3/DataPath.vhi -module DataPath -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work FFD.vhd -lib work ALU.vhd -lib work DataPath.vhd 

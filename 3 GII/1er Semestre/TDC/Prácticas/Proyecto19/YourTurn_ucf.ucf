@@ -1,0 +1,6 @@
+NET "Push_Inc" LOC = "A7";
+NET "RESET" LOC = "G12";
+NET "Count<0>" LOC = "N5";
+NET "Count<1>" LOC = "N4";
+NET "Count<2>" LOC = "P4";
+NET "Count<3>" LOC = "G1";

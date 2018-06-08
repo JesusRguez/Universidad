@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jesus\Xilinx\Proyecto15\RisingEdge.ncd
+OUTFILE=C:\Users\Jesus\Xilinx\Proyecto15\RisingEdge.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Users\Jesus\Xilinx\Proyecto15
+LICENSE=WebPack
+USER_INFO=211414194_0_0_150

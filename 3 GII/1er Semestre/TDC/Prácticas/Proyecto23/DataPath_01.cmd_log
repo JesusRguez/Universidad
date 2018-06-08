@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.xst" -ofn "C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 DataPath_01.ngc DataPath_01.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o DataPath_01_map.ncd DataPath_01.ngd DataPath_01.pcf 
+par -w -intstyle ise -ol high -t 1 DataPath_01_map.ncd DataPath_01.ncd DataPath_01.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml DataPath_01.twx DataPath_01.ncd -o DataPath_01.twr DataPath_01.pcf 
+bitgen -intstyle ise -f DataPath_01.ut DataPath_01.ncd 
+vhdtdtfi -prj Proyecto23 -o C:/Users/Jesus/Xilinx/Proyecto23/DataPath_01.vhi -module DataPath_01 -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Reg_4bits.vhd -lib work FFD.vhd -lib work ALU_4bits.vhd -lib work DataPath_01.vhd 
