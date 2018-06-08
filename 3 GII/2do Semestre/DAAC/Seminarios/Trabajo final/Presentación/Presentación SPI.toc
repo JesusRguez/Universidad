@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Caracter\IeC {\'\i }sticas}{3}{0}{1}
+\beamer@sectionintoc {2}{Implementaci\IeC {\'o}n}{4}{0}{2}
+\beamer@sectionintoc {3}{Funcionamiento}{9}{0}{3}
