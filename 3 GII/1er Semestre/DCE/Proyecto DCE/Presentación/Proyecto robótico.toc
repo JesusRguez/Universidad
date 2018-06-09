@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Objetivo}{3}{0}{1}
+\beamer@sectionintoc {2}{Hardware empleado}{4}{0}{2}
+\beamer@sectionintoc {3}{Montaje}{5}{0}{3}
+\beamer@sectionintoc {4}{Requisitos}{6}{0}{4}
+\beamer@sectionintoc {5}{Implementaci\IeC {\'o}n}{7}{0}{5}
+\beamer@sectionintoc {6}{Funcionamiento}{8}{0}{6}
+\beamer@sectionintoc {7}{Presupuesto}{9}{0}{7}

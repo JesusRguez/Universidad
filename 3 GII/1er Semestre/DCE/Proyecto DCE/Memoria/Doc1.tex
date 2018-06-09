@@ -1,0 +1,112 @@
+%Doc1
+\chapter{Introducción}
+\section{Objetivo}
+El objetivo del proyecto es la creación de un robot móvil capaz de recorrer un laberinto de 5x5 celdas tratando de encontrar la salida y volviendo a la casilla inicial por el camino más rápido una vez que se llega a la casilla final.
+Las acciones llevadas a cabo por el robot para conseguir su objetivo son:
+\subsection{Movimientos}
+\begin{itemize}
+	\item Adelante: Se hace girar a los dos motores en el mismo sentido y a la misma velocidad para obtener un movimiento recto en la misma dirección.
+	\item Atrás: Se hace girar a los dos motores en sentido contrario respecto al movimiento "Adelante" y a la misma velocidad.
+	\item Izquierda: Se hace girar el motor derecho del robot hacia delante y el izquierdo hacia atrás, ambos a la misma velocidad.
+	\item Derecha: Se hace girar el motor izquierdo del robot hacia delante y el derecho hacia atrás, ambos a la misma velocidad.
+\end{itemize}
+\subsection{Detección}
+Para la detección de obstáculos se utilizan sensores situados en la parte de delante (ultrasonidos) y a ambos lados del robot (infrarrojos), dejando la parte trasera sin sensores. En la parte de abajo del robot encontramos otros tres sensores (CNY) para la detección de la transición de las casillas del laberinto, dos en cada esquina delantera y uno más en la esquina derecha trasera.
+\subsection{Recogida de información}
+Para esta tarea se ha implementado una pila en la que se insertan los movimientos que va realizando el robot mediante su recorrido. Al llegar a la casilla final, los movimientos van saliendo de dicha pila (en orden inverso al que entraron) para que el robot llegue de nuevo a la casilla inicial.
+\subsection{Algoritmo de resolución del laberinto}
+El \hyperlink{laberinto}{algoritmo} que sigue el robot para establecer la prioridad de dirección sigue el algoritmo de la mano derecha estableciendo el orden de prioridad derecha, delante, izquierda y atrás.
+
+\subsection{Monitorización de la información}
+Cada vez que el robot llega a una celda envía al portátil la información sobre la misma (mediante bluetooth) y éste la traslada a la \hyperlink{Monitorizacion}{interfaz gráfica} diseñada en python.
+
+\section{Hardware empleado}
+Para este proyecto hemos empleado el siguiente hardware.
+\subsection{Arduino Leonardo}
+Utilizaremos una placa con un microprocesador Arduino Leonardo que cuenta con las siguientes características:
+\begin{itemize}
+	\item Microcontrolador Atmega32u4.
+	\item Voltaje de entrada: 7-12V.
+	\item Voltaje de trabajo: 5V.
+	\item Corriente por pin I/O: 40mA.
+	\item 20 pines digitales I/O.
+	\item 7 canales PWM.
+	\item 12 ADC.
+	\item 16MHz de velocidad de reloj.
+	\item Memoria Flash: 32 KB (ATmega32u4) de los cuales 4 KB son usador por el bootloader.
+	\item Memoria SRAM: 2.5 KB (ATmega32u4).
+	\item Memoria EEPROM: 1KB (ATmega32u4).
+	\item Dimensiones: 68.6 x 53.3mm.
+	\item Peso: 20g.
+\end{itemize}
+\subsection{Ordenador portátil}
+El portátil que se usará para la conexión mediante bluetooth con el robot será un Toshiba Satellite C850 que cuenta con un procesador Intel i3 2310M @2.1GHz x64.
+\subsection{Sensores}
+%ESPECIFICACIONES DE LAS QUE NOS INTERESEN DE LOS SENSORES COMO LAS DISTANCIAS\\
+%HACER UNA LISTA DE ITEMS
+Utilizaremos tres tipos de sensores para poder resolver el problema:
+\begin{enumerate}
+	\item \textbf{UltrasonidoS HC-SR03:}
+	\begin{itemize}
+		\item Dimensiones: 45 * 20 * 15mm
+		\item Rango: 2cm - 4m
+		\item Ángulo: 30º
+		\item Ciclo de respuesta: 100ms
+	\end{itemize}
+	\item \textbf{Infrarrojos SHARP GP2Y0A21YK0F:}
+	\begin{itemize}
+		\item Dimensiones: 29,5 * 13 * 13,5
+		\item Rango: 10 - 80cm
+		\item Voltaje de salida: 0 - 3,3V 
+	\end{itemize}
+	\item \textbf{Óptico reflexivo CNY70:}
+	\begin{itemize}
+		\item Dimensiones:7 * 7 * 6mm
+		\item Rango: 0 - 2mm
+	\end{itemize}
+\end{enumerate}
+\subsection{Actuadores}
+%ESPECIFICACIONES DE LOS ACTUADORES\\
+%COMO SOLO TIENE LOS DOS MOTORES, ESPECIFICAR SOLO UNO YA QUE EL OTRO ES IGUAL\\
+%PEDIRLE AL INFORMACIÓN DE LOS MOTORES A MIRIAN
+Como actuadores usaremos dos motores micro metal con reductora 30:1.
+\begin{enumerate}
+	\item \textbf{Motores:}
+	\begin{itemize}
+		\item Dimensiones: 24 * 10 * 12mm
+		\item Torque: 0,3kg/cm
+		\item Velocidad de giro sin carga: 440rpm
+		\item Voltaje: 3 - 9V
+		\item Peso: 10 gramos.
+	\end{itemize}
+\end{enumerate}
+\subsection{Elementos de comunicación}
+%ESPECIFICACIONES DE LA ANTENA BLUETOOTH\\
+%MIRARLO EN LA QUE NOS DIÓ VICTOR PARA DBM
+Para la comunicación con el ordenador portátil se usará un módulo bluetooth HC-05 actuando como esclavo que irá dentro del robot.
+\begin{enumerate}
+	\item \textbf{HC-05:}
+	\begin{itemize}
+		\item Voltaje\footnote{Debido a este voltaje, nos vemos obligados a usar un circuito reductor de tensión, el cual se implementa con una resistencia y un diodo zener.} de trabajo: 1,8 - 3,6V I/O.
+		\item Rango: 9m
+	\end{itemize}
+\end{enumerate}
+\subsection{Alimentación}
+%ESPECIFICACIONES DE LA PETACA\\
+%BUSCARSE LAS PAPAS
+Para la alimentación del robot usaremos 6 pilas alcalinas tipo AA de 1,5V obteniendo un total de 9V.
+
+\section{Software empleado}
+En cuanto a software, hemos usado los siguientes programas:
+\subsection{Sketchup 2017}
+Es un programa de diseño 3D que nos permite exportar archivos a formato ".stl". Con él hemos diseñado las piezas que alojarán a los sensores y darán un chasis al robot.
+\subsection{Makerbot}
+Es un programa usado que convierte los archivos ".stl" en instrucciones que seguirá la impresora 3D con el fin de obtener las piezas anteriormente diseñadas con Sketchup. 
+\subsection{Arduino IDE}
+Es un entorno de desarrollo que hemos usado para programar el algoritmo que sacará al robot del laberinto y en general, toda la lógica del programa.
+\subsection{SublimeText 3}
+Es un editor de texto utilizado para crear las \hyperlink{bibliotecas}{bibliotecas} que darán soporte al código de Arduino.
+\subsection{Python 2.7 IDE}
+Es un entorno de desarrollo en el cual implementaremos la monitorización del robot, mostrando a través de una interfaz gráfica el laberinto y el progreso del robot cruzándolo.
+\subsection{Serial Bluetooth Terminal}
+Es una aplicación para android disponible en Play Store que nos permite tener una conexión serie con una consola en nuestro móvil a través de la antena bluetooth del mismo.

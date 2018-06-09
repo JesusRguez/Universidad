@@ -1,0 +1,34 @@
+%Doc7
+\chapter{Implementación}
+\section{Librerías}
+\subsection{Propias}
+Las \hypertarget{bibliotecas}{bibliotecas} usadas para dar soporte al código de Arduino son las siguientes:
+\subsubsection{\texttt{Robot.hpp}}
+\hypertarget{Robot}{}
+\lstinputlisting[language=C]{Robot.hpp}
+\subsubsection{\texttt{celda.hpp}}
+\hypertarget{Celda}{}
+\lstinputlisting[language=C]{celda.hpp}
+\subsubsection{\texttt{sUltrasonidos.hpp}}
+\hypertarget{sUltrasonidos}{}
+\lstinputlisting[language=C]{sUltrasonidos.hpp}
+\subsubsection{\texttt{sInfrarrojos.hpp}}
+\hypertarget{sInfrarrojos}{}
+\lstinputlisting[language=C]{sInfrarrojos.hpp}
+\subsubsection{\texttt{sCNY.hpp}}
+\hypertarget{sCNY}{}
+\lstinputlisting[language=C]{sCNY.hpp}
+\subsubsection{\texttt{motor.hpp}}
+\hypertarget{Motor}{}
+\lstinputlisting[language=C]{motor.hpp}
+
+\subsection{Públicas}
+%La que pilló Gabri por internet
+\subsubsection{\texttt{StandardCplusplus}}
+La librería \hypertarget{StandardCplusplus}{\texttt{StandardCplusplus.hpp}} la hemos descargado de Internet porque nos hacía falta para la implementación del TAD (tipo abstracto de dato) pila que nos ayudará en la vuelta a la casilla inicial.
+
+\section{Apuntes sobre el código}
+%Preguntar a Gabri
+En la fase de salir del laberinto, entra en un bucle donde escanea la celda en a que se encuentra y luego va aplicando el algoritmo de la mano derecha hasta llegar a la casilla final.
+
+Una vez que alcanza la meta deshace en orden inverso los movimientos que ha hecho, sin tener en cuenta los retrocesos, para volver a la casilla inicial por el camino más corto posible.

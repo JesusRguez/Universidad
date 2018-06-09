@@ -1,0 +1,57 @@
+\BOOKMARK [-1][-]{part.1}{I Memoria}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Objetivo}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.1}{Movimientos}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.2}{Detecci\363n}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.3}{Recogida de informaci\363n}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.4}{Algoritmo de resoluci\363n del laberinto}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.5}{Monitorizaci\363n de la informaci\363n}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Hardware empleado}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.2.1}{Arduino Leonardo}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.2}{Ordenador port\341til}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.3}{Sensores}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.4}{Actuadores}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.5}{Elementos de comunicaci\363n}{section.1.2}% 14
+\BOOKMARK [2][-]{subsection.1.2.6}{Alimentaci\363n}{section.1.2}% 15
+\BOOKMARK [1][-]{section.1.3}{Software empleado}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.3.1}{Sketchup 2017}{section.1.3}% 17
+\BOOKMARK [2][-]{subsection.1.3.2}{Makerbot}{section.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.3.3}{Arduino IDE}{section.1.3}% 19
+\BOOKMARK [2][-]{subsection.1.3.4}{SublimeText 3}{section.1.3}% 20
+\BOOKMARK [2][-]{subsection.1.3.5}{Python 2.7 IDE}{section.1.3}% 21
+\BOOKMARK [2][-]{subsection.1.3.6}{Serial Bluetooth Terminal}{section.1.3}% 22
+\BOOKMARK [0][-]{chapter.2}{Especificaci\363n de requisitos}{part.1}% 23
+\BOOKMARK [1][-]{section.2.1}{Requisitos funcionales}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.2}{Requisitos no funcionales}{chapter.2}% 25
+\BOOKMARK [0][-]{chapter.3}{Planificaci\363n}{part.1}% 26
+\BOOKMARK [0][-]{chapter.4}{Presupuesto}{part.1}% 27
+\BOOKMARK [0][-]{chapter.5}{An\341lisis}{part.1}% 28
+\BOOKMARK [1][-]{section.5.1}{Caso de uso}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{Diagrama de flujo}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Dise\361o}{part.1}% 31
+\BOOKMARK [1][-]{section.6.1}{Estructura}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Programa principal}{section.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.1.2}{Celdas}{section.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.1.3}{Sensores}{section.6.1}% 35
+\BOOKMARK [2][-]{subsection.6.1.4}{Actuadores}{section.6.1}% 36
+\BOOKMARK [1][-]{section.6.2}{Plan de pruebas}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.2.1}{Primeras pruebas}{section.6.2}% 38
+\BOOKMARK [2][-]{subsection.6.2.2}{Pruebas finales}{section.6.2}% 39
+\BOOKMARK [0][-]{chapter.7}{Implementaci\363n}{part.1}% 40
+\BOOKMARK [1][-]{section.7.1}{Librer\355as}{chapter.7}% 41
+\BOOKMARK [2][-]{subsection.7.1.1}{Propias}{section.7.1}% 42
+\BOOKMARK [2][-]{subsection.7.1.2}{P\372blicas}{section.7.1}% 43
+\BOOKMARK [1][-]{section.7.2}{Apuntes sobre el c\363digo}{chapter.7}% 44
+\BOOKMARK [0][-]{chapter.8}{Montaje}{part.1}% 45
+\BOOKMARK [1][-]{section.8.1}{Chasis}{chapter.8}% 46
+\BOOKMARK [1][-]{section.8.2}{Cableado}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.3}{Im\341genes del proyecto}{chapter.8}% 48
+\BOOKMARK [0][-]{chapter.9}{Pruebas}{part.1}% 49
+\BOOKMARK [0][-]{chapter.10}{Mejoras}{part.1}% 50
+\BOOKMARK [-1][-]{part.2}{II Anexo de c\363digos}{}% 51
+\BOOKMARK [0][-]{chapter.11}{C\363digos}{part.2}% 52
+\BOOKMARK [1][-]{section.11.1}{Algoritmo}{chapter.11}% 53
+\BOOKMARK [1][-]{section.11.2}{Pruebas}{chapter.11}% 54
+\BOOKMARK [2][-]{subsection.11.2.1}{Primeras pruebas}{section.11.2}% 55
+\BOOKMARK [2][-]{subsection.11.2.2}{Pruebas finales}{section.11.2}% 56
+\BOOKMARK [1][-]{section.11.3}{Monitorizaci\363n}{chapter.11}% 57

@@ -1,0 +1,24 @@
+%Doc6
+\chapter{Diseño}
+\section{Estructura}
+\subsection{Programa principal}
+Para el desarrollo de los códigos, seguimos una estructura tal que, a partir del archivo \hyperlink{laberinto}{Robot.ino}, se acceda al resto de librerías que controlarán el robot.
+
+En la librería \hyperlink{Robot}{Robot.hpp} se encuentra todo lo necesario para definir los pines y las funciones necesarias para el control de los sensores y motores.
+
+\subsection{Celdas}
+Para el mapeado de las celdas utilizamos la librería \hyperlink{Celda}{celda.hpp}.
+
+\subsection{Sensores}
+Para el control de los sensores, utilizamos una librería por cada tipo de sensor, de tal forma que tenemos tres librerías: \hyperlink{sUltrasonidos}{sUltrasonidos.hpp}, \hyperlink{sInfrarrojos}{sInfrarrojos.hpp} y \hyperlink{sCNY}{sCNY.hpp}.
+
+\subsection{Actuadores}
+Para el control de los motores hemos usado la librería \hyperlink{Motor}{motor.hpp}.
+
+\section{Plan de pruebas}
+%Pones el bicho y miras con el serial blueooth lo que va midiendo el nota.
+\subsection{Primeras pruebas}
+Al principio comenzamos con las \hyperlink{primerasPruebas}{pruebas individuales} de cada sensor, de los motores y de la conexión bluetooth usando los códigos de las prácticas de la asignatura para comprobar su correcto funcionamiento.
+
+\subsection{Pruebas finales}
+Una vez que los sensores estuvieron calibrados, pasamos a hacer \hyperlink{pruebasFinales}{pruebas en conjunto} con todos los sensores activos para ir corrigiendo los pequeños fallos que iban surgiendo.
