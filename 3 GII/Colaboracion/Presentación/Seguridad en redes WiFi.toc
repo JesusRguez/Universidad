@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{WPA2-PSK}{3}{0}{1}
+\beamer@sectionintoc {2}{Espionaje en red WPA2-PSK}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Conocemos la passphrase}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{No conocemos la passphrase}{17}{0}{2}
