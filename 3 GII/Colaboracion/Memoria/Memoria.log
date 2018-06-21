@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.12)  21 JUN 2018 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.12)  21 JUN 2018 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -592,35 +592,79 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 
 ]
 Cap\'{\i }tulo 2.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 19.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [7]
+<ARPpoison1.png, id=99, 589.20125pt x 341.275pt>
+File: ARPpoison1.png Graphic file (type png)
+<use ARPpoison1.png>
+Package pdftex.def Info: ARPpoison1.png  used on input line 52.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+ [8 <./ARPpoison1.png>]
+<ARPpoison2.png, id=109, 589.20125pt x 341.275pt>
+File: ARPpoison2.png Graphic file (type png)
+<use ARPpoison2.png>
+Package pdftex.def Info: ARPpoison2.png  used on input line 57.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+<ARPpoison3.png, id=110, 589.20125pt x 341.275pt>
+File: ARPpoison3.png Graphic file (type png)
+<use ARPpoison3.png>
+Package pdftex.def Info: ARPpoison3.png  used on input line 65.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+ [9 <./ARPpoison2.png> <./ARPpoison3.png>]
+<ARPpoison3-2.png, id=119, 589.20125pt x 341.275pt>
+File: ARPpoison3-2.png Graphic file (type png)
+<use ARPpoison3-2.png>
+Package pdftex.def Info: ARPpoison3-2.png  used on input line 70.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+<ARPpoison3-3.png, id=120, 589.20125pt x 341.275pt>
+File: ARPpoison3-3.png Graphic file (type png)
+<use ARPpoison3-3.png>
+Package pdftex.def Info: ARPpoison3-3.png  used on input line 74.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+ [10 <./ARPpoison3-2.png> <./ARPpoison3-3.png>]
+<escenario.png, id=129, 589.20125pt x 341.275pt>
+File: escenario.png Graphic file (type png)
+<use escenario.png>
+Package pdftex.def Info: escenario.png  used on input line 80.
+(pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
+ [11 <./Escenario.png>]
+<Saludo4vias.png, id=141, 401.5pt x 320.19624pt>
+File: Saludo4vias.png Graphic file (type png)
+<use Saludo4vias.png>
+Package pdftex.def Info: Saludo4vias.png  used on input line 102.
+(pdftex.def)             Requested size: 281.04808pt x 224.13583pt.
+) [12 <./Saludo4vias.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./Memoria.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- (./Cap1.aux) (./Cap2.aux))
+(./Cap1.aux) (./Cap2.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 861D7B188311D6249EAAF342820FBEB8;439.
+(rerunfilecheck)             Checksum: 5F96CC9616350C592345B1819005C255;655.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 10176 strings out of 492648
- 144199 string characters out of 6132023
- 300841 words of memory out of 5000000
- 13852 multiletter control sequences out of 15000+600000
- 64664 words of font info for 97 fonts, out of 8000000 for 9000
+ 10277 strings out of 492648
+ 145597 string characters out of 6132023
+ 302841 words of memory out of 5000000
+ 13910 multiletter control sequences out of 15000+600000
+ 65285 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,49p,417b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,49p,489b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on Memoria.pdf (7 pages, 46163 bytes).
+e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on Memoria.pdf (12 pages, 445955 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
