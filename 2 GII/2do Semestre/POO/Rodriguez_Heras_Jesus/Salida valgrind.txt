@@ -1,0 +1,319 @@
+Salida valgrind:
+
+jesus@Debian:~/GitHub/Universidad/2 GII/2do Semestre/POO/Rodriguez_Heras_Jesus/P4$ make valgrind
+valgrind --quiet ./test-P4-auto --logger=minimal
+
+---------- PRÁCTICA 1: FECHA ----------
+
+........................................................................................................................
+---------- PRÁCTICA 1: CADENA ----------
+
+..........................................................................................
+---------- PRÁCTICA 2 ----------
+
+...........................................................................
+---------- PRÁCTICA 3 ----------
+
+...............................................................
+---------- PRÁCTICA 4 ----------
+
+............................................
+valgrind --quiet ./test-caso4-consola
+
+---------------INVENTARIO DE EXISTENCIAS-----------
+LIBROS: 
+[100] "El arte del insulto", de Picuito. 2.000. 32,50 €
+	245 págs., 5 unidades.
+[110] "Cómo montar en bici sin sillín", de Poyáquez, Picuito. 1.998. 35,95 €
+	650 págs., 100 unidades.
+[111] "Aprenda Braille en 5 minutos", de Leches. 2.002. 42,10 €
+	150 págs., 300 unidades.
+[103] "Historia del bastón", de El Legionario, Leches. 2.001. 39,95 €
+	455 págs., 4 unidades.
+LIBROS DIGITALES: 
+[034] "Revisiones", de El Legionario, Leches. 2.009. 6,00 €
+	A la venta hasta el miércoles 1 de julio de 2009.
+[035] "Horarios", de Poyáquez. 2.009. 9,00 €
+	A la venta hasta el domingo 19 de junio de 2022.
+[036] "Exámenes", de Poyáquez. 2.007. 12,00 €
+	A la venta hasta el martes 30 de septiembre de 2008.
+CEDERRONES: 
+[210] "Camela", de Poyáquez. 2.000. 32,50 €
+	245 MB, 40 unidades.
+[211] "Mecano nlaleche", de Poyáquez, Picuito. 1.998. 35,95 €
+	650 MB, 50 unidades.
+[220] "Jarabe de Falo", de Poyáquez, Picuito, Leches. 2.007. 12,90 €
+	547 MB, 30 unidades.
+
+
+CARRITOS VACÍOS
+
+Carrito de la compra de lucas[Artículos: 0]
+ Cant. Artículo
+================================================================
+
+Carrito de la compra de krispin[Artículos: 0]
+ Cant. Artículo
+================================================================
+
+Carrito de la compra de yoshua[Artículos: 0]
+ Cant. Artículo
+================================================================
+
+Carrito de la compra de yessi[Artículos: 0]
+ Cant. Artículo
+================================================================
+
+
+Carrito de la compra de lucas[Artículos: 4]
+ Cant. Artículo
+================================================================
+   1   [211] "Mecano nlaleche", 1.998. 35,95 €
+   1   [111] "Aprenda Braille en 5 minutos", 2.002. 42,10 €
+   2   [034] "Revisiones", 2.009. 6,00 €
+   3   [110] "Cómo montar en bici sin sillín", 1.998. 35,95 €
+
+*** Cambio de precio de MONTAR_BICI, BRAILLE, EBOOK1 y CD1
+
+Carrito de la compra de krispin[Artículos: 2]
+ Cant. Artículo
+================================================================
+   2   [111] "Aprenda Braille en 5 minutos", 2.002. 44,50 €
+   2   [110] "Cómo montar en bici sin sillín", 1.998. 29,95 €
+
+
+*** krispin devuelve BRAILLE y compra ARTE_INSULTO y CD3
+Carrito de la compra de krispin[Artículos: 3]
+ Cant. Artículo
+================================================================
+   1   [220] "Jarabe de Falo", 2.007. 12,90 €
+   1   [100] "El arte del insulto", 2.000. 32,50 €
+   2   [110] "Cómo montar en bici sin sillín", 1.998. 29,95 €
+
+
+*** No se comprueban existencias
+*** existencias de BASTON = 4
+
+*** No se comprueba la fecha de expiración
+*** fecha expir. eBook3 = martes 30 de septiembre de 2008
+
+Carrito de la compra de yoshua[Artículos: 2]
+ Cant. Artículo
+================================================================
+   2   [036] "Exámenes", 2.007. 12,00 €
+   6   [103] "Historia del bastón", 2.001. 39,95 €
+
+
+*** Yoshua devuelve 4 BASTON
+Carrito de la compra de yoshua[Artículos: 2]
+ Cant. Artículo
+================================================================
+   2   [036] "Exámenes", 2.007. 12,00 €
+   2   [103] "Historia del bastón", 2.001. 39,95 €
+
+*** Cambio de precio de ARTE_INSULTO, BASTON y eBook2
+
+Carrito de la compra de yessi[Artículos: 3]
+ Cant. Artículo
+================================================================
+   1   [111] "Aprenda Braille en 5 minutos", 2.002. 44,50 €
+   3   [035] "Horarios", 2.009. 3,00 €
+   2   [220] "Jarabe de Falo", 2.007. 12,90 €
+
+
+---------------------PEDIDOS-----------------------
+Núm. pedido: 1
+Fecha:       sábado 10 de marzo de 2018
+Pagado con:  VISA nº: 4539451203987356
+Importe:     185,90 €
+
+Núm. pedido: 2
+Fecha:       miércoles 4 de julio de 2018
+Pagado con:  AmericanExpress nº: 378282246310005
+Importe:     79,90 €
+
+Núm. pedido: 3
+Fecha:       lunes 5 de abril de 2010
+Pagado con:  Mastercard nº: 5555555555554444
+Importe:     105,30 €
+
+Núm. pedido: 4
+Fecha:       lunes 5 de abril de 2010
+Pagado con:  VISA nº: 3530111333300000
+Importe:     79,30 €
+
+Núm. pedido: 5
+Fecha:       jueves 5 de julio de 2018
+Pagado con:  VISA nº: 3530111333300000
+Importe:     79,40 €
+
+Núm. pedido: 6
+Fecha:       jueves 5 de julio de 2018
+Pagado con:  Mastercard nº: 30569309025904
+Importe:     89,85 €
+
+Núm. pedido: 7
+Fecha:       lunes 5 de abril de 2010
+Pagado con:  Maestro nº: 5610591081018250
+Importe:     185,00 €
+
+Núm. pedido: 8
+Fecha:       lunes 5 de abril de 2010
+Pagado con:  AmericanExpress nº: 378282246310005
+Importe:     100,35 €
+
+
+-------------------DETALLE DE PEDIDOS--------------
+Pedido núm. 1	Cliente: Lucas 
+Fecha: sábado 10 de marzo de 2018
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 35,95€	3	[110] "Cómo montar en bici sin sillín" 
+ 42,10€	1	[111] "Aprenda Braille en 5 minutos" 
+ 35,95€	1	[211] "Mecano nlaleche" 
+===================================================
+185,90 €
+Pedido núm. 2	Cliente: Yoshua 
+Fecha: miércoles 4 de julio de 2018
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 39,95€	2	[103] "Historia del bastón" 
+===================================================
+79,90 €
+Pedido núm. 3	Cliente: Crispín 
+Fecha: lunes 5 de abril de 2010
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 32,50€	1	[100] "El arte del insulto" 
+ 29,95€	2	[110] "Cómo montar en bici sin sillín" 
+ 12,90€	1	[220] "Jarabe de Falo" 
+===================================================
+105,30 €
+Pedido núm. 4	Cliente: Yésica 
+Fecha: lunes 5 de abril de 2010
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 3,00€	3	[035] "Horarios" 
+ 44,50€	1	[111] "Aprenda Braille en 5 minutos" 
+ 12,90€	2	[220] "Jarabe de Falo" 
+===================================================
+79,30 €
+Pedido núm. 5	Cliente: Yésica 
+Fecha: jueves 5 de julio de 2018
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 34,90€	1	[103] "Historia del bastón" 
+ 44,50€	1	[111] "Aprenda Braille en 5 minutos" 
+===================================================
+79,40 €
+Pedido núm. 6	Cliente: Yésica 
+Fecha: jueves 5 de julio de 2018
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 29,95€	3	[110] "Cómo montar en bici sin sillín" 
+===================================================
+89,85 €
+Pedido núm. 7	Cliente: Crispín 
+Fecha: lunes 5 de abril de 2010
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 35,20€	3	[100] "El arte del insulto" 
+ 34,90€	1	[103] "Historia del bastón" 
+ 44,50€	1	[111] "Aprenda Braille en 5 minutos" 
+===================================================
+185,00 €
+Pedido núm. 8	Cliente: Yoshua 
+Fecha: lunes 5 de abril de 2010
+====================================================
+ PVP 	 Cant. 	 Articulo 
+====================================================
+ 35,20€	2	[100] "El arte del insulto" 
+ 29,95€	1	[110] "Cómo montar en bici sin sillín" 
+===================================================
+100,35 €
+TOTAL VENTAS: 905,00 €
+
+------------------VENTAS DE ARTÍCULOS--------------
+Ventas de [035]"Horarios" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 3,00€	3	lunes 5 de abril de 2010
+====================================================
+9,00 €	3
+
+Ventas de [100]"El arte del insulto" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 32,50€	1	lunes 5 de abril de 2010
+ 35,20€	3	lunes 5 de abril de 2010
+ 35,20€	2	lunes 5 de abril de 2010
+====================================================
+208,50 €	6
+
+Ventas de [103]"Historia del bastón" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 39,95€	2	miércoles 4 de julio de 2018
+ 34,90€	1	jueves 5 de julio de 2018
+ 34,90€	1	lunes 5 de abril de 2010
+====================================================
+149,70 €	4
+
+Ventas de [110]"Cómo montar en bici sin sillín" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 35,95€	3	sábado 10 de marzo de 2018
+ 29,95€	2	lunes 5 de abril de 2010
+ 29,95€	3	jueves 5 de julio de 2018
+ 29,95€	1	lunes 5 de abril de 2010
+====================================================
+287,55 €	9
+
+Ventas de [111]"Aprenda Braille en 5 minutos" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 42,10€	1	sábado 10 de marzo de 2018
+ 44,50€	1	lunes 5 de abril de 2010
+ 44,50€	1	jueves 5 de julio de 2018
+ 44,50€	1	lunes 5 de abril de 2010
+====================================================
+175,60 €	4
+
+Ventas de [211]"Mecano nlaleche" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 35,95€	1	sábado 10 de marzo de 2018
+====================================================
+35,95 €	1
+
+Ventas de [220]"Jarabe de Falo" 
+====================================================
+ PVP 	 Cant. 	 Fecha venta 
+====================================================
+ 12,90€	1	lunes 5 de abril de 2010
+ 12,90€	2	lunes 5 de abril de 2010
+====================================================
+38,70 €	3
+
+
+-----------------PRUEBAS DE EXCEPCIONES------------
+Error de pedido: el carrito de lucas está vacío. 
+Error de pedido: la tarjeta de pago no es de krispin
+Error de pedido: no hay existencias del artículo [103]
+Error de pedido: tarjeta caducada el miércoles 4 de julio de 2018
+Error de artículo: No se puede crear uno anónimo.
+
+Número total de pedidos: 8
