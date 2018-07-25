@@ -1,37 +1,37 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.5.25)  27 MAY 2018 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.5.31)  24 JUL 2018 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Polen.tex
 (./Polen.tex
-LaTeX2e <2018-04-01> patch level 4
-Babel <3.20> and hyphenation patterns for 84 language(s) loaded.
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2018/03/24 v5.7 Page Geometry
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -40,9 +40,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -59,13 +59,13 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count91
+\uc@secondtry=\count90
 \uc@combtoks=\toks16
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
 
@@ -73,17 +73,17 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+Package: fontenc 2017/02/22 v2.0g Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+File: t1enc.def 2017/02/22 v2.0g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -106,7 +106,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -135,56 +135,57 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen111
-\Hy@linkcounter=\count92
-\Hy@pagecounter=\count93
+\Hy@linkcounter=\count91
+\Hy@pagecounter=\count92
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count94
+\Hy@SavedSpaceFactor=\count93
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 4383.
-Package hyperref Info: Option `colorlinks' set `true' on input line 4383.
-Package hyperref Info: Hyper figures OFF on input line 4509.
-Package hyperref Info: Link nesting OFF on input line 4514.
-Package hyperref Info: Hyper index ON on input line 4517.
-Package hyperref Info: Plain pages OFF on input line 4524.
-Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4362.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count95
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count94
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5115.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen112
-\Fld@menulength=\count96
+\Fld@menulength=\count95
 \Field@Width=\dimen113
 \Fld@charsize=\dimen114
-Package hyperref Info: Hyper figures OFF on input line 6369.
-Package hyperref Info: Link nesting OFF on input line 6374.
-Package hyperref Info: Hyper index ON on input line 6377.
-Package hyperref Info: backreferencing OFF on input line 6384.
-Package hyperref Info: Link coloring ON on input line 6387.
-Package hyperref Info: Link coloring with OCG OFF on input line 6394.
-Package hyperref Info: PDF/A mode OFF on input line 6399.
-LaTeX Info: Redefining \ref on input line 6439.
-LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count97
-\c@Item=\count98
-\c@Hfootnote=\count99
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring ON on input line 6360.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count96
+\c@Item=\count97
+\c@Hfootnote=\count98
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+
+Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count100
-\c@bookmark@seq@number=\count101
+File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+\Fld@listcount=\count99
+\c@bookmark@seq@number=\count100
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -194,7 +195,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip43
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -205,10 +206,11 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+\Gread@gobject=\count101
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
 )
@@ -219,7 +221,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
@@ -284,24 +286,18 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \bigstrutjot=\dimen126
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/05/02 3.20 The Babel package
+Package: babel 2016/04/23 3.9r The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/05/02 3.20 Babel switching mechanism
-)
 (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/05/02 3.20 Babel common definitions
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count115
 \U@D=\dimen127
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count116
 )
 \es@quottoks=\toks26
-\es@quotdepth=\count117
+\es@quotdepth=\count116
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
@@ -314,34 +310,32 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen128
-\ar@mcellbox=\box28
 \extrarowheight=\dimen129
 \NC@list=\toks29
 \extratabsurround=\skip49
 \backup@length=\skip50
-\ar@cellbox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count118
-\lst@gtempboxa=\box30
+\lst@mode=\count117
+\lst@gtempboxa=\box28
 \lst@token=\toks30
-\lst@length=\count119
+\lst@length=\count118
 \lst@currlwidth=\dimen130
-\lst@column=\count120
-\lst@pos=\count121
+\lst@column=\count119
+\lst@pos=\count120
 \lst@lostspace=\dimen131
 \lst@width=\dimen132
-\lst@newlines=\count122
-\lst@lineno=\count123
+\lst@newlines=\count121
+\lst@lineno=\count122
 \lst@maxwidth=\dimen133
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count124
-\lst@skipnumbers=\count125
-\lst@framebox=\box31
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
+\lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -357,11 +351,11 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks31
 \minrowclearance=\skip51
 )
-\rownum=\count126
+\rownum=\count125
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -439,7 +433,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box32
+\AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring ON on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -448,7 +442,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count126
 )
 LaTeX Info: Redefining \ref on input line 79.
 LaTeX Info: Redefining \pageref on input line 79.
@@ -461,16 +455,16 @@ LaTeX Info: Redefining \nameref on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
+\scratchcounter=\count127
 \scratchdimen=\dimen134
-\scratchbox=\box33
-\nofMPsegments=\count129
-\nofMParguments=\count130
+\scratchbox=\box31
+\nofMPsegments=\count128
+\nofMParguments=\count129
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count131
+\MPscratchCnt=\count130
 \MPscratchDim=\dimen135
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -481,7 +475,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
@@ -491,7 +485,7 @@ e
 ))
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
-\c@lstlisting=\count134
+\c@lstlisting=\count133
 LaTeX Font Info:    Try loading font information for U+lasy on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
@@ -545,53 +539,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-[3]
-<1.png, id=57, 1927.2pt x 988.69376pt>
+[3] <1.png, id=57, 1927.2pt x 988.69376pt>
 File: 1.png Graphic file (type png)
-<use 1.png>
-Package pdftex.def Info: 1.png  used on input line 132.
+ <use 1.png>
+Package pdftex.def Info: 1.png used on input line 132.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
+
 <2.png, id=59, 1927.2pt x 988.69376pt>
 File: 2.png Graphic file (type png)
-<use 2.png>
-Package pdftex.def Info: 2.png  used on input line 135.
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 135.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
  [4 <./1.png> <./2.png>]
 <3.png, id=66, 1927.2pt x 988.69376pt>
 File: 3.png Graphic file (type png)
-<use 3.png>
-Package pdftex.def Info: 3.png  used on input line 143.
+ <use 3.png>
+Package pdftex.def Info: 3.png used on input line 143.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
+
 <4.png, id=67, 1927.2pt x 988.69376pt>
 File: 4.png Graphic file (type png)
-<use 4.png>
-Package pdftex.def Info: 4.png  used on input line 150.
+ <use 4.png>
+Package pdftex.def Info: 4.png used on input line 150.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
  [5 <./3.png> <./4.png>]
 <5.png, id=74, 1927.2pt x 988.69376pt>
 File: 5.png Graphic file (type png)
-<use 5.png>
-Package pdftex.def Info: 5.png  used on input line 158.
+ <use 5.png>
+Package pdftex.def Info: 5.png used on input line 158.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
+
 <8.png, id=75, 1927.2pt x 988.69376pt>
 File: 8.png Graphic file (type png)
-<use 8.png>
-Package pdftex.def Info: 8.png  used on input line 165.
+ <use 8.png>
+Package pdftex.def Info: 8.png used on input line 165.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
  [6 <./5.png> <./8.png>]
 <6.png, id=82, 1927.2pt x 988.69376pt>
 File: 6.png Graphic file (type png)
-<use 6.png>
-Package pdftex.def Info: 6.png  used on input line 173.
+ <use 6.png>
+Package pdftex.def Info: 6.png used on input line 173.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
+
 <7.png, id=83, 1927.2pt x 988.69376pt>
 File: 7.png Graphic file (type png)
-<use 7.png>
-Package pdftex.def Info: 7.png  used on input line 180.
+ <use 7.png>
+Package pdftex.def Info: 7.png used on input line 180.
 (pdftex.def)             Requested size: 462.53746pt x 237.29135pt.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
-
-[7 <./6.png> <./7.png>] [8]
+ [7 <./6.png> <./7.png>]
+[8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./Polen.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -604,10 +601,10 @@ Package rerunfilecheck Info: File `Polen.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 10445 strings out of 492649
- 147475 string characters out of 6132031
- 307718 words of memory out of 5000000
- 14143 multiletter control sequences out of 15000+600000
+ 10447 strings out of 493013
+ 147382 string characters out of 6135682
+ 301367 words of memory out of 5000000
+ 13811 multiletter control sequences out of 15000+600000
  40496 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,49p,835b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -616,7 +613,7 @@ e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb>
-Output written on Polen.pdf (8 pages, 1150653 bytes).
+Output written on Polen.pdf (8 pages, 1150867 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream

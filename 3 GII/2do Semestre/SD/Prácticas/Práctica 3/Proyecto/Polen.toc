@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\select@language {spanish}
 \contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
 \contentsline {section}{\numberline {2}Almacenamiento y salida de datos}{3}{section.2}
 \contentsline {section}{\numberline {3}Tecnolog\IeC {\'\i }as utilizadas}{3}{section.3}
