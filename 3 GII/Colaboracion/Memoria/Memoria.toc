@@ -8,11 +8,14 @@
 \contentsline {section}{\numberline {2.1}Conocemos la passphrase}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Instalaci\IeC {\'o}n de Ettercap}{7}{subsection.2.1.1}
 \contentsline {paragraph}{Nota\ 2.2}{8}{section*.3}
-\contentsline {subsection}{\numberline {2.1.2}Preparaci\IeC {\'o}n del ataque}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Preparaci\IeC {\'o}n te\IeC {\'o}rica del ataque}{8}{subsection.2.1.2}
 \contentsline {subsubsection}{ARP Poisoning}{8}{section*.4}
-\contentsline {paragraph}{Nota\ 2.3}{11}{section*.5}
-\contentsline {paragraph}{Nota\ 2.4}{11}{section*.6}
-\contentsline {subsubsection}{HTTPS}{11}{section*.7}
-\contentsline {section}{\numberline {2.2}No conocemos la passphrase}{11}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}KRACK}{12}{subsection.2.2.1}
-\contentsline {subsubsection}{Recursos para usar KRACK}{12}{section*.8}
+\contentsline {paragraph}{Nota\ 2.3}{12}{section*.5}
+\contentsline {paragraph}{Nota\ 2.4}{12}{section*.6}
+\contentsline {subsubsection}{HTTPS}{12}{section*.7}
+\contentsline {section}{\numberline {2.2}No conocemos la passphrase}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}KRACK}{13}{subsection.2.2.1}
+\contentsline {subsubsection}{Recursos para usar KRACK}{13}{section*.8}
+\contentsline {chapter}{\numberline {3}Manos a la obra}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Preparaci\IeC {\'o}n pr\IeC {\'a}ctica del ataque}{15}{section.3.1}
+\contentsline {paragraph}{Nota\ 3.1}{15}{section*.9}

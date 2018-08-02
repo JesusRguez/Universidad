@@ -23,7 +23,7 @@ Para instalar ettercap en modo gráfico deberemos seguir los siguientes pasos:
 		%Aprovechar el center para la foto
 		
 	\end{center}
-	\item A continuación introducimos el siguiente comando para instalar ettercap en modo gráfico:
+	\item A continuación introducimos el siguiente comando para instalar Ettercap en modo gráfico:
 	\begin{center}
 		\texttt{sudo apt-get install ettercap-graphical}
 		%Aprovechar este center para poner la foto del comando.
@@ -31,16 +31,20 @@ Para instalar ettercap en modo gráfico deberemos seguir los siguientes pasos:
 	\end{center}
 	\item Abrimos Ettercap en modo gráfico con el siguiente comando:
 	\begin{center}
-		\texttt{sudo ettercap -G}
-		%Aprovechar este center para poner la foto del comando y del ettercap abierto.
-		
+		\texttt{ettercap -G}
+	\end{center}
+	Una vez introducido el último comando, podemos ver como se ha abierto Ettercap en su modo gráfico:
+	\begin{center}
+		\includegraphics[scale=0.28]{Ettercap.png}
 	\end{center}
 \end{enumerate}
 
-\Nota Si estamos usando Kali Linux (o algún otro sistema operativo para la seguridad y hacking ético) debemos tener en cuenta que puede venir instalado por defecto.
+\Nota Si estamos usando Kali Linux (o algún otro sistema operativo enfocado en la seguridad informática y/o hacking ético) puede venir instalado por defecto.
 
-\subsection{Preparación del ataque}
+\subsection{Preparación teórica del ataque}
 Ya tenemos todo lo necesario en nuestro ordenador para reproducir el ataque con éxito. Solo nos queda preparar el ataque y que nuestra víctima acceda a una página web con protocolo HTTP.
+
+Para ello, utilizaremos un ARP Poisoning con la finalidad de interceptar los datos entre la víctima y el AP.
 
 \subsubsection{ARP Poisoning}
 Un ARP Poisoning es un ataque en el que el atacante envía mensajes ARP falsos al AP. Como resultado de este ataque la dirección ARP del atacante queda vinculada a la dirección ARP del AP.
@@ -95,6 +99,7 @@ Por ello, para poder obtener las credenciales de usuario, se ha insistido tanto 
 Hasta hace poco, en el caso de no conocer la passphrase de la red Wi-Fi, no podríamos acceder a ella a no ser que usáramos un ataque de fuerza bruta o de diccionario. Pero a partir del 16 de octubre de 2017 contamos con una nueva herramienta que nos permite entrar a una red Wi-Fi sin necesidad de conocer la passphrase.
 
 \subsection{KRACK}
+\hypertarget{krack}{}
 Key Reinstallation AttaCK: Es un ataque que se basa en forzar el reuso del SNonce del saludo de cuatro vías de WPA2-PSK, de tal forma que se puedan desencriptar los datos. Por lo que no es necesario el conocimiento de la passphrase de la red.
 
 El saludo de cuatro vías de WPA2-PSK es el siguiente:
