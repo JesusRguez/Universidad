@@ -49,36 +49,38 @@ Para ello, utilizaremos un ARP Poisoning con la finalidad de interceptar los dat
 \subsubsection{ARP Poisoning}
 Un ARP Poisoning es un ataque en el que el atacante envía mensajes ARP falsos al AP. Como resultado de este ataque la dirección ARP del atacante queda vinculada a la dirección ARP del AP.
 
-Veamos lo que ocurre paso a paso:
+Veamos lo que ocurre paso a paso en la configuración del ARP Poisoning en una red con protocolo de seguridad WPA2-PSK:
+\newpage
 \begin{enumerate}
 	\item El atacante envía un ARP replay para envenenar la tabla ARP de la víctima.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison1.png}
 	\end{center}
-\newpage
 	\item La víctima modifica su tabla ARP relacionando la IP de la puerta de enlace con la MAC del atacante.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison2.png}
 	\end{center}
 \end{enumerate}
 
-Hasta aquí quedaría configurado el ARP Poisoning. Por lo tanto, cuando el usuario quiere acceder a algún servicio web ocurre lo siguiente:
+Hasta aquí quedaría configurado el ARP Poisoning completamente.
+
+Por lo tanto, cuando el usuario quiere acceder a algún servicio web ocurrirá lo siguiente:
+\newpage
 \begin{enumerate}
 	\item La víctima lanza una solicitud HTTP.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3.png}
 	\end{center}
-\newpage
 	\item El AP redirecciona el paquete a la MAC del atacante.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3-2.png}
 	\end{center}
+\newpage
 	\item El atacante lee y envía el paquete al destinatario legítimo sin que la víctima sea consciente de ello.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3-3.png}
 	\end{center}
 \end{enumerate}
-\newpage
 Por lo tanto, el escenario resultante después de la configuración del ARP Poisoning es el siguiente:
 \begin{center}
 	\includegraphics[scale=0.7]{Escenario.png}
@@ -86,7 +88,7 @@ Por lo tanto, el escenario resultante después de la configuración del ARP Pois
 
 \Nota En estos ejemplos se ha usado la página web \url{http://minecub.es/} por tener protoclo HTTP.
 
-\Nota En caso de que la red sea abierta (sin contraseña) el procedimiento es exáctamente igual una vez que estamos conectados a la red.
+\Nota En caso de que la red sea abierta (sin contraseña) el procedimiento es exactamente igual una vez que estamos conectados a la red. La única diferencia es que no habría cifrado dentro de la propia red.
 
 \subsubsection{HTTPS}
 HTTPS es una protocolo de aplicación basado en HTTP y destinado a la transferencia segura de paquetes HTTP, es decir, es al versión segura de HTTP.

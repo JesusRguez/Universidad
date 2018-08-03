@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.5.31)  2 AUG 2018 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.5.31)  3 AUG 2018 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -427,21 +427,21 @@ LaTeX Info: Redefining \% on input line 23.
 (./Cap1.aux) (./Cap2.aux) (./Cap3.aux))
 \openout1 = `Memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -450,7 +450,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -460,9 +460,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (./Memoria.out) (./Memoria.out)
 \@outlinefile=\write3
@@ -499,51 +499,51 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
 \c@lstlisting=\count133
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 86
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 88
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 86
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 88
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 86
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 88
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 86
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 88
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 86.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 88.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 88.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 88.
  [1
 
 
@@ -551,7 +551,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 92.
  (./Memoria.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -596,58 +596,56 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 19.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<Ettercap.png, id=96, 1562.83875pt x 531.9875pt>
+<Ettercap.png, id=111, 1562.83875pt x 531.9875pt>
 File: Ettercap.png Graphic file (type png)
  <use Ettercap.png>
 Package pdftex.def Info: Ettercap.png used on input line 38.
 (pdftex.def)             Requested size: 437.59187pt x 148.95547pt.
  [7]
-<ARPpoison1.png, id=109, 589.20125pt x 341.275pt>
+[8 <./Ettercap.png>] <ARPpoison1.png, id=133, 589.20125pt x 341.275pt>
 File: ARPpoison1.png Graphic file (type png)
- <use ARPpoison1.png>
-Package pdftex.def Info: ARPpoison1.png used on input line 56.
+
+<use ARPpoison1.png>
+Package pdftex.def Info: ARPpoison1.png used on input line 57.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
-
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
- [8 <./Ettercap.png>] [9 <./ARPpoison1.png>]
-<ARPpoison2.png, id=125, 589.20125pt x 341.275pt>
+ <ARPpoison2.png, id=134, 589.20125pt x 341.275pt>
 File: ARPpoison2.png Graphic file (type png)
- <use ARPpoison2.png>
+
+<use ARPpoison2.png>
 Package pdftex.def Info: ARPpoison2.png used on input line 61.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
-
-<ARPpoison3.png, id=126, 589.20125pt x 341.275pt>
+ [9 <./ARPpoison1.png> <./ARPpoison2.png>]
+<ARPpoison3.png, id=143, 589.20125pt x 341.275pt>
 File: ARPpoison3.png Graphic file (type png)
  <use ARPpoison3.png>
-Package pdftex.def Info: ARPpoison3.png used on input line 69.
+Package pdftex.def Info: ARPpoison3.png used on input line 72.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
- [10 <./ARPpoison2.png> <./ARPpoison3.png>]
-<ARPpoison3-2.png, id=135, 589.20125pt x 341.275pt>
+
+<ARPpoison3-2.png, id=144, 589.20125pt x 341.275pt>
 File: ARPpoison3-2.png Graphic file (type png)
  <use ARPpoison3-2.png>
-Package pdftex.def Info: ARPpoison3-2.png used on input line 74.
+Package pdftex.def Info: ARPpoison3-2.png used on input line 76.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
 
-<ARPpoison3-3.png, id=136, 589.20125pt x 341.275pt>
+[10 <./ARPpoison3.png> <./ARPpoison3-2.png>]
+<ARPpoison3-3.png, id=154, 589.20125pt x 341.275pt>
 File: ARPpoison3-3.png Graphic file (type png)
  <use ARPpoison3-3.png>
-Package pdftex.def Info: ARPpoison3-3.png used on input line 78.
+Package pdftex.def Info: ARPpoison3-3.png used on input line 81.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
 
-[11 <./ARPpoison3-2.png> <./ARPpoison3-3.png>]
-<Escenario.png, id=145, 589.20125pt x 341.275pt>
+<Escenario.png, id=155, 589.20125pt x 341.275pt>
 File: Escenario.png Graphic file (type png)
  <use Escenario.png>
-Package pdftex.def Info: Escenario.png used on input line 84.
+Package pdftex.def Info: Escenario.png used on input line 86.
 (pdftex.def)             Requested size: 412.43805pt x 238.89085pt.
- [12 <./Escenario.png>] <Saludo4vias.png, id=158, 401.5pt x 320.19624pt>
+ [11 <./ARPpoison3-3.png> <./Escenario.png>]
+<Saludo4vias.png, id=168, 401.5pt x 320.19624pt>
 File: Saludo4vias.png Graphic file (type png)
-
-<use Saludo4vias.png>
-Package pdftex.def Info: Saludo4vias.png used on input line 107.
+ <use Saludo4vias.png>
+Package pdftex.def Info: Saludo4vias.png used on input line 109.
 (pdftex.def)             Requested size: 281.04808pt x 224.13583pt.
-) [13 <./Saludo4vias.png>]
+ [12 <./Saludo4vias.png>]) [13]
 \openout2 = `Cap3.aux'.
 
  (./Cap3.tex [14
@@ -656,36 +654,115 @@ Package pdftex.def Info: Saludo4vias.png used on input line 107.
 
 ]
 Cap\'{\i }tulo 3.
-) [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
- (./Memoria.aux
+<1.png, id=191, 722.7pt x 1005.7575pt>
+File: 1.png Graphic file (type png)
+ <use 1.png>
+Package pdftex.def Info: 1.png used on input line 15.
+(pdftex.def)             Requested size: 180.67455pt x 251.43875pt.
+
+<2.png, id=192, 721.69624pt x 579.16376pt>
+File: 2.png Graphic file (type png)
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 20.
+(pdftex.def)             Requested size: 180.42361pt x 144.79057pt.
+
+<3.png, id=193, 722.7pt x 578.16pt>
+File: 3.png Graphic file (type png)
+ <use 3.png>
+Package pdftex.def Info: 3.png used on input line 20.
+(pdftex.def)             Requested size: 180.67455pt x 144.53964pt.
+ [15 <./1.png>]
+<5v2.png, id=202, 722.7pt x 1005.7575pt>
+File: 5v2.png Graphic file (type png)
+ <use 5v2.png>
+Package pdftex.def Info: 5v2.png used on input line 26.
+(pdftex.def)             Requested size: 180.67455pt x 251.43875pt.
+
+<6v2.png, id=203, 722.7pt x 1005.7575pt>
+File: 6v2.png Graphic file (type png)
+ <use 6v2.png>
+Package pdftex.def Info: 6v2.png used on input line 26.
+(pdftex.def)             Requested size: 180.67455pt x 251.43875pt.
+ [16 <./2.png> <./3.png> <./5v2.png> <./6v2.png>]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 43.
+
+Overfull \hbox (2.13522pt too wide) in paragraph at lines 43--44
+[]\T1/pcr/b/n/10 ifconfig\T1/ptm/b/n/10 : \T1/ptm/m/n/10 En ca-so de no ve-nir 
+ins-ta-la-do (co-mo pa-sa en De-bian 9), ins-ta-lar-lo con \T1/pcr/m/n/10 sudo 
+apt-get install
+ []
+
+<ip.png, id=217, 742.775pt x 496.85625pt>
+File: ip.png Graphic file (type png)
+ <use ip.png>
+Package pdftex.def Info: ip.png used on input line 51.
+(pdftex.def)             Requested size: 371.38658pt x 248.4275pt.
+ [17 <./ip.png>]
+<nmap.png, id=225, 744.7825pt x 606.265pt>
+File: nmap.png Graphic file (type png)
+ <use nmap.png>
+Package pdftex.def Info: nmap.png used on input line 57.
+(pdftex.def)             Requested size: 372.39034pt x 303.13176pt.
+ [18 <./nmap.png>]
+<e1.png, id=233, 819.06pt x 533.995pt>
+File: e1.png Graphic file (type png)
+ <use e1.png>
+Package pdftex.def Info: e1.png used on input line 70.
+(pdftex.def)             Requested size: 409.52899pt x 266.99684pt.
+
+<e2.png, id=234, 820.06375pt x 533.995pt>
+File: e2.png Graphic file (type png)
+ <use e2.png>
+Package pdftex.def Info: e2.png used on input line 74.
+(pdftex.def)             Requested size: 410.03087pt x 266.99684pt.
+ [19 <./e1.png> <./e2.png>] <e3.png, id=244, 820.06375pt x 534.99875pt>
+File: e3.png Graphic file (type png)
+ <use e3.png>
+Package pdftex.def Info: e3.png used on input line 79.
+(pdftex.def)             Requested size: 410.03087pt x 267.49872pt.
+
+<e4.png, id=245, 820.06375pt x 533.995pt>
+File: e4.png Graphic file (type png)
+ <use e4.png>
+Package pdftex.def Info: e4.png used on input line 83.
+(pdftex.def)             Requested size: 410.03087pt x 266.99684pt.
+ [20 <./e3.png> <./e4.png>] <e5.png, id=254, 1142.2675pt x 530.98375pt>
+File: e5.png Graphic file (type png)
+ <use e5.png>
+Package pdftex.def Info: e5.png used on input line 88.
+(pdftex.def)             Requested size: 434.06616pt x 201.77591pt.
+) [21 <./e5.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
+
+(./Memoria.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
  (./Cap1.aux) (./Cap2.aux) (./Cap3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 42ED5248C5083CD5E9846ADBBB1826D5;801.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+(rerunfilecheck)             Checksum: 8757C5F876696F1B7AFA209D35A98688;1032.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 10310 strings out of 493013
- 145803 string characters out of 6135682
- 296172 words of memory out of 5000000
- 13592 multiletter control sequences out of 15000+600000
- 65285 words of font info for 99 fonts, out of 8000000 for 9000
+ 10407 strings out of 493013
+ 146766 string characters out of 6135682
+ 296130 words of memory out of 5000000
+ 13653 multiletter control sequences out of 15000+600000
+ 65906 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,49p,489b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,49p,489b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on Memoria.pdf (15 pages, 526036 bytes).
+e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Memoria.pdf (21 pages, 1115078 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
