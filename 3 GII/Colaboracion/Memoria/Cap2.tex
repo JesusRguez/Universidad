@@ -23,7 +23,7 @@ Para instalar ettercap en modo gráfico deberemos seguir los siguientes pasos:
 		%Aprovechar el center para la foto
 		
 	\end{center}
-	\item A continuación introducimos el siguiente comando para instalar ettercap en modo gráfico:
+	\item A continuación introducimos el siguiente comando para instalar Ettercap en modo gráfico:
 	\begin{center}
 		\texttt{sudo apt-get install ettercap-graphical}
 		%Aprovechar este center para poner la foto del comando.
@@ -31,50 +31,56 @@ Para instalar ettercap en modo gráfico deberemos seguir los siguientes pasos:
 	\end{center}
 	\item Abrimos Ettercap en modo gráfico con el siguiente comando:
 	\begin{center}
-		\texttt{sudo ettercap -G}
-		%Aprovechar este center para poner la foto del comando y del ettercap abierto.
-		
+		\texttt{ettercap -G}
+	\end{center}
+	Una vez introducido el último comando, podemos ver como se ha abierto Ettercap en su modo gráfico:
+	\begin{center}
+		\includegraphics[scale=0.28]{Ettercap.png}
 	\end{center}
 \end{enumerate}
 
-\Nota Si estamos usando Kali Linux (o algún otro sistema operativo para la seguridad y hacking ético) debemos tener en cuenta que puede venir instalado por defecto.
+\Nota Si estamos usando Kali Linux (o algún otro sistema operativo enfocado en la seguridad informática y/o hacking ético) puede venir instalado por defecto.
 
-\subsection{Preparación del ataque}
+\subsection{Preparación teórica del ataque}
 Ya tenemos todo lo necesario en nuestro ordenador para reproducir el ataque con éxito. Solo nos queda preparar el ataque y que nuestra víctima acceda a una página web con protocolo HTTP.
+
+Para ello, utilizaremos un ARP Poisoning con la finalidad de interceptar los datos entre la víctima y el AP.
 
 \subsubsection{ARP Poisoning}
 Un ARP Poisoning es un ataque en el que el atacante envía mensajes ARP falsos al AP. Como resultado de este ataque la dirección ARP del atacante queda vinculada a la dirección ARP del AP.
 
-Veamos lo que ocurre paso a paso:
+Veamos lo que ocurre paso a paso en la configuración del ARP Poisoning en una red con protocolo de seguridad WPA2-PSK:
+\newpage
 \begin{enumerate}
 	\item El atacante envía un ARP replay para envenenar la tabla ARP de la víctima.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison1.png}
 	\end{center}
-\newpage
 	\item La víctima modifica su tabla ARP relacionando la IP de la puerta de enlace con la MAC del atacante.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison2.png}
 	\end{center}
 \end{enumerate}
 
-Hasta aquí quedaría configurado el ARP Poisoning. Por lo tanto, cuando el usuario quiere acceder a algún servicio web ocurre lo siguiente:
+Hasta aquí quedaría configurado el ARP Poisoning completamente.
+
+Por lo tanto, cuando el usuario quiere acceder a algún servicio web ocurrirá lo siguiente:
+\newpage
 \begin{enumerate}
 	\item La víctima lanza una solicitud HTTP.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3.png}
 	\end{center}
-\newpage
 	\item El AP redirecciona el paquete a la MAC del atacante.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3-2.png}
 	\end{center}
+\newpage
 	\item El atacante lee y envía el paquete al destinatario legítimo sin que la víctima sea consciente de ello.
 	\begin{center}
 		\includegraphics[scale=0.7]{ARPpoison3-3.png}
 	\end{center}
 \end{enumerate}
-\newpage
 Por lo tanto, el escenario resultante después de la configuración del ARP Poisoning es el siguiente:
 \begin{center}
 	\includegraphics[scale=0.7]{Escenario.png}
@@ -82,7 +88,7 @@ Por lo tanto, el escenario resultante después de la configuración del ARP Pois
 
 \Nota En estos ejemplos se ha usado la página web \url{http://minecub.es/} por tener protoclo HTTP.
 
-\Nota En caso de que la red sea abierta (sin contraseña) el procedimiento es exáctamente igual una vez que estamos conectados a la red.
+\Nota En caso de que la red sea abierta (sin contraseña) el procedimiento es exactamente igual una vez que estamos conectados a la red. La única diferencia es que no habría cifrado dentro de la propia red.
 
 \subsubsection{HTTPS}
 HTTPS es una protocolo de aplicación basado en HTTP y destinado a la transferencia segura de paquetes HTTP, es decir, es al versión segura de HTTP.
@@ -95,6 +101,7 @@ Por ello, para poder obtener las credenciales de usuario, se ha insistido tanto 
 Hasta hace poco, en el caso de no conocer la passphrase de la red Wi-Fi, no podríamos acceder a ella a no ser que usáramos un ataque de fuerza bruta o de diccionario. Pero a partir del 16 de octubre de 2017 contamos con una nueva herramienta que nos permite entrar a una red Wi-Fi sin necesidad de conocer la passphrase.
 
 \subsection{KRACK}
+\hypertarget{krack}{}
 Key Reinstallation AttaCK: Es un ataque que se basa en forzar el reuso del SNonce del saludo de cuatro vías de WPA2-PSK, de tal forma que se puedan desencriptar los datos. Por lo que no es necesario el conocimiento de la passphrase de la red.
 
 El saludo de cuatro vías de WPA2-PSK es el siguiente:
