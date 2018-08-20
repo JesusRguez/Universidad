@@ -28,7 +28,7 @@ public:
 		Incorrecto (Numero::Razon razon):razon_(razon){}
 
 		//Razón:
-		Numero::Razon razon() const{return razon_;}
+		Numero::Razon razon() const{ return razon_; }
 
 	private:
 		Numero::Razon razon_;
@@ -44,13 +44,13 @@ bool operator <(const Numero& n1, const Numero& n2);
 //Es blanco:
 class EsBlanco: public unary_function<char, bool>{
 public:
-	bool operator()(char c) const {return isspace(c);}
+	bool operator()(char c) const { return isspace(c); }
 };
 
 //Es dígito:
 class EsDigito: public unary_function<char, bool>{
 public:
-	bool operator()(char c) const {return isdigit(c);}
+	bool operator()(char c) const { return isdigit(c); }
 };
 
 class Usuario;
@@ -71,19 +71,19 @@ public:
 	~Tarjeta();
 
 	//Mostrar tipo:
-	Tipo tipo() const;
+	inline Tipo tipo() const { return tipo_; };
 
 	//Mostrar número:
-	Numero numero() const;
+	inline Numero numero() const { return numero_; };
 
 	//Mostrar fecha de caducidad:
-	Fecha caducidad() const;
+	inline Fecha caducidad() const { return fechaExp_; };
 
 	//Mostrar titular facial:
-	Cadena titular_facial() const;
+	inline Cadena titular_facial() const { return titular_facial_; };
 
 	//Mostrar titular:
-	const Usuario* titular() const;
+	inline const Usuario* titular() const { return usuario_; };
 
 	//Anular titular:
 	void anula_titular();
@@ -95,7 +95,7 @@ public:
 		Caducada(const Fecha& caducada) : caducada_(caducada){}
 
 		//Mostrar cuando caducó:
-		const Fecha& cuando() const { return caducada_;}
+		const Fecha& cuando() const { return caducada_; }
 
 	private:
 		Fecha caducada_;

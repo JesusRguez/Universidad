@@ -23,7 +23,7 @@ public:
 	Clave(const char* contrasena);
 
 	//Mostrar clave cifrada:
-	const Cadena& clave() const;
+	inline const Cadena& clave() const { return clave_; };
 
 	//Verificar clave:
 	bool verifica(const char* posible_contrasena) const;
@@ -35,7 +35,7 @@ public:
 	    Incorrecta(const Clave::Razon razon):razon_(razon){}
 
 	    //Razón:
-	    Clave::Razon razon() const {return razon_;}
+	    Clave::Razon razon() const { return razon_; }
 
 	  private:
 	    Clave::Razon razon_;
@@ -76,19 +76,19 @@ public:
 	void no_es_titular_de(Tarjeta& t);
 
 	//Mostrar id:
-	Cadena id() const;
+	inline Cadena id() const { return id_; };
 
 	//Mostrar nombre:
-	Cadena nombre() const;
+	inline Cadena nombre() const { return nombre_; };
 
 	//Mostrar apellidos:
-	Cadena apellidos() const;
+	inline Cadena apellidos() const { return apellidos_; };
 
 	//Mostrar dirección:
-	Cadena direccion() const;
+	inline Cadena direccion() const { return direccion_; };
 
 	//Mostrar tarjetas:
-	const Tarjetas& tarjetas() const;
+	inline const Tarjetas& tarjetas() const { return MapTarjetas_; };
 
 	//Asociacion unidireccional:
 	void compra(Articulo& a, unsigned cant=1);
@@ -97,7 +97,7 @@ public:
 	const Articulos& compra() const;
 
 	//Mostrar número de artículos:
-	size_t n_articulos() const;
+	inline size_t n_articulos() const { return n_art_.size(); };
 
 	//Operador <<:
 	friend ostream& operator<<(ostream& os, const Usuario& u);
@@ -109,7 +109,7 @@ public:
         Id_duplicado(const Cadena& idd) : idd_(idd) {}
 
         //Mostrar id duplicado:
-        const Cadena& idd() const {return idd_;}
+        const Cadena& idd() const { return idd_; }
 
     private:
         Cadena idd_;

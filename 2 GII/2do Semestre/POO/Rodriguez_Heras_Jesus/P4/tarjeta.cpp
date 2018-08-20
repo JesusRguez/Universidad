@@ -53,31 +53,6 @@ Tarjeta::~Tarjeta(){
 		usuario_->no_es_titular_de(*this);
 }
 
-//Mostrar tipo:
-Tarjeta::Tipo Tarjeta::tipo() const{
-	return tipo_;
-}
-
-//Mostrar número:
-Numero Tarjeta::numero() const{
-	return numero_;
-}
-
-//Mostrar fecha de caducidad:
-Fecha Tarjeta::caducidad() const{
-	return fechaExp_;
-}
-
-//Mostrar titular facial:
-Cadena Tarjeta::titular_facial() const{
-	return titular_facial_;
-}
-
-//Mostrar titular:
-const Usuario* Tarjeta::titular() const{
-	return usuario_;
-}
-
 //Anular titular:
 void Tarjeta::anula_titular(){
 	const_cast<Usuario*&>(usuario_) = nullptr;

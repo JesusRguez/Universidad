@@ -50,31 +50,6 @@ Pedido::Pedido(Usuario_Pedido& u_p, Pedido_Articulo& p_a, Usuario& u, const Tarj
 	num_ = ++ N_pedidos;
 }
 
-//Mostrar número:
-int Pedido::numero() const{
-	return num_;
-}
-
-//Mostrar tarjeta:
-Tarjeta const* Pedido::tarjeta() const{
-	return tarjeta_;
-}
-
-//Mostrar fecha:
-Fecha Pedido::fecha() const{
-	return fecha_;
-}
-
-//Mostrar total:
-double Pedido::total() const{
-	return total_;
-}
-
-//Mostrar n_total_pedidos:
-int Pedido::n_total_pedidos(){
-	return N_pedidos;
-}
-
 //Constructor de Vacio:
 Pedido::Vacio::Vacio(Usuario *usuario):usuario_(usuario){}
 

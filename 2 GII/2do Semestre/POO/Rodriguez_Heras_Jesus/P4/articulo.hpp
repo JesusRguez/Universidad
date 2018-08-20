@@ -15,13 +15,13 @@ public:
 	Autor(const Cadena& nombre, const Cadena& apellidos, const Cadena& direccion);
 
 	//Mostrar nombre:
-	Cadena nombre() const;
+	inline Cadena nombre() const { return nombre_; };
 
 	//Mostrar apellidos:
-	Cadena apellidos() const;
+	inline Cadena apellidos() const { return apellidos_; };
 
 	//Mostrar direccion:
-	Cadena direccion() const;
+	inline Cadena direccion() const { return direccion_; };
 
 private:
 	Cadena nombre_;
@@ -38,20 +38,20 @@ public:
 	Articulo(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio);
 
 	//Mostrar referencia:
-	const Cadena& referencia() const;
+	inline const Cadena& referencia() const { return referencia_; };
 
 	//Mostrar título:
-	const Cadena& titulo() const;
+	inline const Cadena& titulo() const { return titulo_; };
 
 	//Mostrar fecha de publicación:
-	const Fecha& f_publi() const;
+	inline const Fecha& f_publi() const { return fecha_publi_; };
 
 	//Mostrar precio:
-	const double precio() const;
-	double& precio();
+	inline const double precio() const { return precio_; };
+	inline double& precio() { return precio_; };
 
 	//Mostrar autores:
-	const Autores& autores() const;
+	inline const Autores& autores() const { return autores_; };
 
 	//impresion_especifica:
 	virtual void impresion_especifica(ostream& os) const = 0;
@@ -80,7 +80,7 @@ public:
 	ArticuloAlmacenable(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned stock=0);
 
 	//Mostrar stock;
-	unsigned stock() const;
+	inline unsigned stock() const { return stock_; };
 
 	//Modificar stock:
 	unsigned& stock();
@@ -96,7 +96,7 @@ public:
 	LibroDigital(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const Fecha& f_expir);
 
 	//Mostrar f_expir:
-	const Fecha& f_expir() const;
+	inline const Fecha& f_expir() const { return f_expir_; };
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
@@ -112,7 +112,7 @@ public:
 	Libro(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned n_pag, const unsigned stock=0);
 
 	//Mostrar n_pag:
-	unsigned n_pag() const;
+	inline unsigned n_pag() const { return n_pag_; };
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
@@ -128,7 +128,7 @@ public:
 	Cederron(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned tam, const unsigned stock=0);
 
 	//Mostrar tam:
-	unsigned tam() const;
+	inline unsigned tam() const { return tam_; };
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
@@ -136,7 +136,5 @@ public:
 private:
 	unsigned tam_;
 };
-
-
 
 #endif
