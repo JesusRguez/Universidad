@@ -32,6 +32,10 @@ private:
 //Clase Artículo:
 class Articulo{
 public:
+
+	//Clase Autores_vacios:
+	class Autores_vacios{};
+
 	typedef set<Autor*> Autores;
 
 	//Constructor de artículo:
@@ -58,9 +62,6 @@ public:
 
 	//Destructor virtual:
 	virtual ~Articulo(){}
-
-	//Clase Autores_vacios:
-	class Autores_vacios{};
 
 private:
 	Autores autores_;
