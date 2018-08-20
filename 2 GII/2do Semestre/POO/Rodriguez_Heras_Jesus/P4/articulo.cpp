@@ -9,7 +9,7 @@
 Autor::Autor(const Cadena& nombre, const Cadena& apellidos, const Cadena& direccion):nombre_(nombre), apellidos_(apellidos), direccion_(direccion){}
 
 //Constructor de artículo:
-Articulo::Articulo(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio):autores_(a), referencia_(referencia), titulo_(titulo), fecha_publi_(fecha_publi), precio_(precio){
+Articulo::Articulo(const Articulo::Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio):autores_(a), referencia_(referencia), titulo_(titulo), fecha_publi_(fecha_publi), precio_(precio){
 	if(a.empty()){
 		throw Autores_vacios();
 	}
