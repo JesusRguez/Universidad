@@ -64,7 +64,7 @@ public:
 	virtual ~Articulo(){}
 
 private:
-	Autores autores_;
+	const Autores autores_;
 	Cadena referencia_;
 	Cadena titulo_;
 	Fecha fecha_publi_;
