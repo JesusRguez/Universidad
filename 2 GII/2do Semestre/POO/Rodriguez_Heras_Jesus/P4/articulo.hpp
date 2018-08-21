@@ -15,13 +15,13 @@ public:
 	Autor(const Cadena& nombre, const Cadena& apellidos, const Cadena& direccion);
 
 	//Mostrar nombre:
-	inline Cadena nombre() const { return nombre_; };
+	inline Cadena nombre() const noexcept { return nombre_; };
 
 	//Mostrar apellidos:
-	inline Cadena apellidos() const { return apellidos_; };
+	inline Cadena apellidos() const noexcept { return apellidos_; };
 
 	//Mostrar direccion:
-	inline Cadena direccion() const { return direccion_; };
+	inline Cadena direccion() const noexcept { return direccion_; };
 
 private:
 	Cadena nombre_;
