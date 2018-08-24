@@ -9,16 +9,6 @@ using namespace std;
 //Constructor de LineaPedido:
 LineaPedido::LineaPedido(double pv, unsigned cant):precio_venta_(pv), cantidad_(cant){};
 
-//Mostrar el precio de venta:
-double LineaPedido::precio_venta() const{
-	return precio_venta_;
-}
-
-//Mostrar la cantidad:
-unsigned LineaPedido::cantidad() const{
-	return cantidad_;
-}
-
 //Operador <<:
 ostream& operator <<(ostream& os, const LineaPedido& LP){
 	os << fixed << setprecision(2) << LP.precio_venta() << " €\t"<< LP.cantidad();
