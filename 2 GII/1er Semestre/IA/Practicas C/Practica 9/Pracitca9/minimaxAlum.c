@@ -10,6 +10,7 @@
 #include <string.h>
 #define LIMITE 4
 #include "tictactoe.h"
+#include "minimaxAlum.h"
 
 
 
