@@ -42,20 +42,20 @@ public:
 	Articulo(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio);
 
 	//Mostrar referencia:
-	inline const Cadena& referencia() const { return referencia_; }
+	inline const Cadena& referencia() const noexcept { return referencia_; }
 
 	//Mostrar título:
-	inline const Cadena& titulo() const { return titulo_; }
+	inline const Cadena& titulo() const noexcept { return titulo_; }
 
 	//Mostrar fecha de publicación:
-	inline const Fecha& f_publi() const { return fecha_publi_; }
+	inline const Fecha& f_publi() const noexcept { return fecha_publi_; }
 
 	//Mostrar precio:
-	inline const double precio() const { return precio_; }
-	inline double& precio() { return precio_; }
+	inline const double precio() const noexcept { return precio_; }
+	inline double& precio() noexcept { return precio_; }
 
 	//Mostrar autores:
-	inline const Autores& autores() const { return autores_; }
+	inline const Autores& autores() const noexcept { return autores_; }
 
 	//impresion_especifica:
 	virtual void impresion_especifica(ostream& os) const = 0;
@@ -81,7 +81,7 @@ public:
 	ArticuloAlmacenable(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned stock=0);
 
 	//Mostrar stock;
-	inline unsigned stock() const { return stock_; }
+	inline unsigned stock() const noexcept { return stock_; }
 
 	//Modificar stock:
 	unsigned& stock();
@@ -97,7 +97,7 @@ public:
 	LibroDigital(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const Fecha& f_expir);
 
 	//Mostrar f_expir:
-	inline const Fecha& f_expir() const { return f_expir_; }
+	inline const Fecha& f_expir() const noexcept { return f_expir_; }
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
@@ -113,7 +113,7 @@ public:
 	Libro(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned n_pag, const unsigned stock=0);
 
 	//Mostrar n_pag:
-	inline unsigned n_pag() const { return n_pag_; }
+	inline unsigned n_pag() const noexcept { return n_pag_; }
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
@@ -129,7 +129,7 @@ public:
 	Cederron(const Autores& a, const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double precio, const unsigned tam, const unsigned stock=0);
 
 	//Mostrar tam:
-	inline unsigned tam() const { return tam_; }
+	inline unsigned tam() const noexcept { return tam_; }
 
 	//impresion_especifica:
 	void impresion_especifica(ostream& os) const;
