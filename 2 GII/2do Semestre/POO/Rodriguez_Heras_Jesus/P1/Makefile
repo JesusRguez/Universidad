@@ -1,9 +1,9 @@
 #
 #
 
-CXX = g++
+CXX = clang++
 CPPFLAGS = -DP1 -I../Tests-auto -I.
-CXXFLAGS = -std=c++11 -Wall -pedantic -g
+CXXFLAGS = -std=c++14 -Wall -pedantic -g
 VPATH = ../Tests-auto:.
 
 all: test-P1-auto test-P1-consola
