@@ -10,6 +10,7 @@ using namespace std;
 
 int Pedido::N_pedidos = 0;
 
+//Constructor de Pedido:
 Pedido::Pedido(Usuario_Pedido& u_p, Pedido_Articulo& p_a, Usuario& u, const Tarjeta& t, const Fecha& fp):num_(N_pedidos+1), tarjeta_(&t), fecha_(fp), total_(0.0){
 	if(u.compra().empty()) throw Vacio(&u);
 	if(t.titular() != &u) throw Impostor(&u);
