@@ -6,7 +6,7 @@ Para realizar el ataque, necesitamos una red con protocolo de seguridad WPA2-PSK
 \Nota En caso de tener passphrase y no conocerla, nos veremos obligados a usar el ataque \hyperlink{krack}{KRACK}.
 
 
-La red inalámbrica que usaremos para emular el ataque, la crearemos con un dispositivo Android, para no interferir con la red principal.
+La red inalámbrica que usaremos para emular el ataque, la crearemos con un dispositivo Android, para no interferir con la red principal del edificio\footnote{Salvo que nuestra verdadera intención sea interceptar datos del tráfico que se encuentran en dicha red.}.
 
 Para ello, seguiremos los siguientes pasos:
 \begin{enumerate}
@@ -33,9 +33,9 @@ Llegados a este punto, tendríamos configurada la red inalámbrica en la que vam
 \section{Realización del ataque}
 Para la realización del ataque, nuestra víctima tiene que estar conectada a la red inalámbrica en la que vamos a actuar (en nuestro caso, la que acabamos de crear con el dispositivo Android).
 
-\Nota También es posible hacerlo en cualquier red, pero si dicha red tiene muchos hosts conectados, el escaneo de los mismos efectuado a continuación puede tardar demasiado.
+\Nota También es posible hacerlo en cualquier red, pero si dicha red tiene muchos hosts conectados, el escaneo de los mismos efectuado más adelante puede tardar demasiado tiempo.
 
-A continuación, lo primero debemos hacer un breve reconocimiento de la red y ver si nuestra víctima está conectada a ella y luego, actuar para sustraerle las credenciales al ingresar en una página con protocolo HTTP donde sea necesario iniciar sesión (para este ejemplo y, como se comentó en la preparación teórica del ataque, se usará la página web \url{http://minecub.es/}.)
+A continuación, lo primero debemos hacer un breve reconocimiento de la red y ver si nuestra víctima está conectada a ella y luego, actuar para sustraerle las credenciales al ingresar en una página con protocolo HTTP donde ha iniciado sesión (para este ejemplo y, como se comentó en la preparación teórica del ataque, se usará la página web \url{http://minecub.es/}.)
 
 \subsection{Reconocimiento de la red}
 Para realizar un reconocimiento de la red usaremos lo siguiente:
@@ -56,7 +56,7 @@ Una vez contamos con estas dos herramientas seguimos los siguientes pasos:
 	\begin{center}
 		\includegraphics[scale=0.5]{nmap.png}
 	\end{center}
-	\item Buscamos a nuestra víctima con IP 192.168.1.36 tiene la MAC 4C:74:03:F1:16:B9 y se encuentra conectado a la red con una latencia de 0.010 segundos.
+	\item Buscamos a nuestra víctima (que en este ejemplo tiene la IP 192.168.1.36 y la MAC 4C:74:03:F1:16:B9) y se encuentra conectado a la red con una latencia de 0.010 segundos tal como podemos ver en la imagen anterior.
 \end{enumerate}
 
 \subsection{Atacar a nuestra víctima}
@@ -89,4 +89,4 @@ Para conseguir las credenciales de usuario de nuestra víctima seguiremos los si
 	\end{center}
 \end{enumerate}
 
-Una vez hayamos concluido el ataque, seleccionamos la opción ``Start'' > ``Stop sniffing'' y luego ``Start'' > ``Exit'' y se deshace el ARP Poisoning que habíamos establecido previamente al ataque.
+Una vez hayamos concluido el ataque, seleccionamos la opción ``Start'' > ``Stop sniffing'' y luego ``Start'' > ``Exit'' y se deshace el ARP Poisoning que habíamos establecido antes de realizar el ataque.

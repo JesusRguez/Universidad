@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.5.31)  3 AUG 2018 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.5)  6 SEP 2018 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -654,31 +654,31 @@ Package pdftex.def Info: Saludo4vias.png used on input line 109.
 
 ]
 Cap\'{\i }tulo 3.
-<1.png, id=191, 722.7pt x 1005.7575pt>
+<1.png, id=192, 722.7pt x 1005.7575pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
 Package pdftex.def Info: 1.png used on input line 15.
 (pdftex.def)             Requested size: 180.67455pt x 251.43875pt.
 
-<2.png, id=192, 721.69624pt x 579.16376pt>
+<2.png, id=193, 721.69624pt x 579.16376pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
 Package pdftex.def Info: 2.png used on input line 20.
 (pdftex.def)             Requested size: 180.42361pt x 144.79057pt.
 
-<3.png, id=193, 722.7pt x 578.16pt>
+<3.png, id=194, 722.7pt x 578.16pt>
 File: 3.png Graphic file (type png)
  <use 3.png>
 Package pdftex.def Info: 3.png used on input line 20.
 (pdftex.def)             Requested size: 180.67455pt x 144.53964pt.
  [15 <./1.png>]
-<5v2.png, id=202, 722.7pt x 1005.7575pt>
+<5v2.png, id=204, 722.7pt x 1005.7575pt>
 File: 5v2.png Graphic file (type png)
  <use 5v2.png>
 Package pdftex.def Info: 5v2.png used on input line 26.
 (pdftex.def)             Requested size: 180.67455pt x 251.43875pt.
 
-<6v2.png, id=203, 722.7pt x 1005.7575pt>
+<6v2.png, id=205, 722.7pt x 1005.7575pt>
 File: 6v2.png Graphic file (type png)
  <use 6v2.png>
 Package pdftex.def Info: 6v2.png used on input line 26.
@@ -693,41 +693,41 @@ ins-ta-la-do (co-mo pa-sa en De-bian 9), ins-ta-lar-lo con \T1/pcr/m/n/10 sudo
 apt-get install
  []
 
-<ip.png, id=217, 742.775pt x 496.85625pt>
+<ip.png, id=220, 742.775pt x 496.85625pt>
 File: ip.png Graphic file (type png)
  <use ip.png>
 Package pdftex.def Info: ip.png used on input line 51.
 (pdftex.def)             Requested size: 371.38658pt x 248.4275pt.
  [17 <./ip.png>]
-<nmap.png, id=225, 744.7825pt x 606.265pt>
+<nmap.png, id=228, 744.7825pt x 606.265pt>
 File: nmap.png Graphic file (type png)
  <use nmap.png>
 Package pdftex.def Info: nmap.png used on input line 57.
 (pdftex.def)             Requested size: 372.39034pt x 303.13176pt.
  [18 <./nmap.png>]
-<e1.png, id=233, 819.06pt x 533.995pt>
+<e1.png, id=236, 819.06pt x 533.995pt>
 File: e1.png Graphic file (type png)
  <use e1.png>
 Package pdftex.def Info: e1.png used on input line 70.
 (pdftex.def)             Requested size: 409.52899pt x 266.99684pt.
 
-<e2.png, id=234, 820.06375pt x 533.995pt>
+<e2.png, id=237, 820.06375pt x 533.995pt>
 File: e2.png Graphic file (type png)
  <use e2.png>
 Package pdftex.def Info: e2.png used on input line 74.
 (pdftex.def)             Requested size: 410.03087pt x 266.99684pt.
- [19 <./e1.png> <./e2.png>] <e3.png, id=244, 820.06375pt x 534.99875pt>
+ [19 <./e1.png> <./e2.png>] <e3.png, id=247, 820.06375pt x 534.99875pt>
 File: e3.png Graphic file (type png)
  <use e3.png>
 Package pdftex.def Info: e3.png used on input line 79.
 (pdftex.def)             Requested size: 410.03087pt x 267.49872pt.
 
-<e4.png, id=245, 820.06375pt x 533.995pt>
+<e4.png, id=248, 820.06375pt x 533.995pt>
 File: e4.png Graphic file (type png)
  <use e4.png>
 Package pdftex.def Info: e4.png used on input line 83.
 (pdftex.def)             Requested size: 410.03087pt x 266.99684pt.
- [20 <./e3.png> <./e4.png>] <e5.png, id=254, 1142.2675pt x 530.98375pt>
+ [20 <./e3.png> <./e4.png>] <e5.png, id=257, 1142.2675pt x 530.98375pt>
 File: e5.png Graphic file (type png)
  <use e5.png>
 Package pdftex.def Info: e5.png used on input line 88.
@@ -747,22 +747,22 @@ Package rerunfilecheck Info: File `Memoria.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 10407 strings out of 493013
- 146766 string characters out of 6135682
- 296130 words of memory out of 5000000
+ 10408 strings out of 493013
+ 146777 string characters out of 6135683
+ 296126 words of memory out of 5000000
  13653 multiletter control sequences out of 15000+600000
  65906 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,49p,489b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,49p,487b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Memoria.pdf (21 pages, 1115078 bytes).
+Output written on Memoria.pdf (21 pages, 1115390 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
