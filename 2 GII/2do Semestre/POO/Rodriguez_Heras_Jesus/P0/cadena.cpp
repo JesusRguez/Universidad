@@ -49,7 +49,7 @@ Cadena::Cadena(const char* s, size_t n):tam_(n){
 Cadena::Cadena(const Cadena& cad, size_t indice, size_t n):tam_(n){
 	if(indice>cad.tam_-1)
 		throw out_of_range("Error: Indice fuera de rango.");
-	if(n==Cadena::pos || n>cad.tam_-indice)
+	if(n==Cadena::npos || n>cad.tam_-indice)
 		tam_=cad.tam_-indice;
 	s_=new char[tam_+1];
 	for(size_t i=0;i<tam_;i++)

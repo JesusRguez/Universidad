@@ -17,11 +17,11 @@ public:
 	//Constructor cons char* tamanno:
 	Cadena(const char* s, size_t n);
 	//Consttuctor con cadena, inicial y tamanno:
-	Cadena(const Cadena& cad, size_t indice, size_t n=pos);
+	Cadena(const Cadena& cad, size_t indice, size_t n=npos);
 	//Destructor:
 	~Cadena();
-	//Constante pos:
-	static const size_t pos=-1;
+	//Constante npos:
+	static const size_t npos=-1;
 	//Operador =:
 	Cadena& operator =(const Cadena& cad);
 	//Conversion const char*:
