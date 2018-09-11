@@ -13,13 +13,13 @@ Fecha::Fecha(int d, int m, int a) : dia_(d), mes_(m), anno_(a) {
 	if(dia_==0||mes_==0||anno_==0){
 		time_t tiempoActual = time(nullptr);
 		tm* structActual = localtime(&tiempoActual);
-	
+
 		if(dia_==0)
 			dia_=structActual->tm_mday;
-	
+
 		if(mes_==0)
 			mes_=structActual->tm_mon+1;
-	
+
 		if(anno_==0)
 			anno_=structActual->tm_year+1900;
 	}
@@ -32,21 +32,6 @@ Fecha::Fecha(const char* array){
 		*this = Fecha(dia_, mes_, anno_);
 	else
 		throw Fecha::Invalida("Error: Formato no válido");
-}
-
-//Observador dia:
-inline int Fecha::dia() const{
-	return dia_;
-}
-
-//Observador mes:
-inline int Fecha::mes() const{
-	return mes_;
-}
-
-//Observador anno:
-inline int Fecha::anno() const{
-	return anno_;
 }
 
 //Operador const char*(), cadena:
@@ -235,5 +220,3 @@ istream& operator >>(istream& is, Fecha& f){
   	}
 	return is;
 }
-
-

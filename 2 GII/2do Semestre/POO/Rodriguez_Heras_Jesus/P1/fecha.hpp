@@ -15,53 +15,55 @@ public:
 	public:
 		//Constructor Invalida: const char*
 		Invalida(const char* s);
+
 		//Observador por_que
 		const char* por_que() const;
+
 		//Destructor de Invalida
 		~Invalida()=default;
 	private:
 		const char* s_;
 	};
-	
+
 	//Constructor Fecha: dia, mes, anno:
 	explicit Fecha(int d=0, int m=0, int a=0);
-	
+
 	//Constructor Fecha: const char*():
 	Fecha(const char* array);
-	
+
 	//Operador =:
 	Fecha& operator =(const Fecha&)=default;
-	
+
 	//Metodos observadores:
-	int dia() const;
-	int mes() const;
-	int anno() const;
-	
+	inline int dia() const { return dia_; }
+	inline int mes() const { return mes_; }
+	inline int anno() const { return anno_; }
+
 	//Constantes:
 	static const int AnnoMinimo=1902;
 	static const int AnnoMaximo=2037;
 	
 	//Conversion a const char*, cadena:
 	const char* cadena() const;
-	
+
 	//Preincremento:
 	Fecha& operator ++();
-	
+
 	//Postincremento:
 	Fecha operator ++(int);
-	
+
 	//Predecremento:
 	Fecha& operator --();
-	
+
 	//Postdecremento:
 	Fecha operator --(int);
-	
+
 	//Operador +=:
 	Fecha& operator +=(int dias);
-	
+
 	//Operador -=:
 	Fecha& operator -=(int dias);
-		
+
 private:
 	int dia_, mes_, anno_;
 	void Fecha_Valida() const;

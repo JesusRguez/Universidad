@@ -71,16 +71,6 @@ Cadena& Cadena::operator =(const Cadena& cad){
 	return *this;
 }
 
-//Conversion const char*:
-Cadena::operator const char*() const{
-	return s_;
-}
-
-//Metodo length:
-size_t Cadena::length()const{
-	return tam_;
-}
-
 //Operador +=:
 Cadena& Cadena::operator +=(const Cadena& cad){
 	char* temp = new char[tam_+1];

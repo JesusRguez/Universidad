@@ -43,11 +43,11 @@ public:
 	//Operador = de movimiento:
 	Cadena& operator =(Cadena&& cad);
 
-	//Conversion const char*:
-	const char* c_str() const;
+	//Conversion const char*, c_str():
+	inline const char* c_str() const { return s_; }
 
 	//Metodo length:
-	size_t length()const;
+	inline size_t length()const { return tam_; }
 
 	//Operador +=:
 	Cadena& operator +=(const Cadena& cad);
