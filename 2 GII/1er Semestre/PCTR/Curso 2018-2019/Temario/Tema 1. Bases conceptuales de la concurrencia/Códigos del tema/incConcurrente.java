@@ -26,6 +26,6 @@ public class incConcurrente
         for(int i=0;i<h.length;i++)h[i] = new incConcurrente(1000);
         for(int i=0;i<h.length;i++)h[i].start();
         for(int i=0;i<h.length;i++)h[i].join();
-        System.out.print(n);
+        System.out.println(n);
     }
 }
