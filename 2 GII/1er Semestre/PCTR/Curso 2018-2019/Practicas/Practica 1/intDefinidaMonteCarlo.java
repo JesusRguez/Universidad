@@ -3,6 +3,10 @@ import java.lang.Math;
 
 class intDefinidaMonteCarlo{
 
+    /**
+     * Método para clacular la integral en la función f(x)=sin(x)
+     * @param puntos Número de puntos que generará el método
+     */
     public static void seno(int puntos){
         double aciertos=0;
         double x, y;
@@ -16,6 +20,10 @@ class intDefinidaMonteCarlo{
         System.out.println("El resultado es: "+aciertos/puntos);
     }
 
+    /**
+     * Método para calcular la integral en la función f(x)=x
+     * @param puntos Número de puntos que generará el método
+     */
     public static void lineal(int puntos){
         double aciertos=0;
         double x, y;

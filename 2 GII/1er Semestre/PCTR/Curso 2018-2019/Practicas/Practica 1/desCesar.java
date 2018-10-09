@@ -1,6 +1,13 @@
 import java.util.*;
 
 class desCesar{
+
+    /**
+     * Método para descifrar una cadena previamente cifrada con el cifrado Cesar
+     * @param  cadena Cadena cifrada que recibimos
+     * @param  n      Desplazamiento
+     * @return        Devuelve la cadena cifrada llamada res mediante el método ".toString()"
+     */
     public static String descifrar(String cadena, int n){
         StringBuilder res = new StringBuilder();
         int valorASCII;

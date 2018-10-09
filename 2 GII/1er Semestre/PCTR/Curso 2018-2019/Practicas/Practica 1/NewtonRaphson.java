@@ -3,6 +3,11 @@ import java.lang.Math;
 
 class NewtonRaphson{
 
+    /**
+     * Método para la función f(x)=cos(x)-x³
+     * @param aprox       Aproximación inicial de la función
+     * @param iteraciones Número de iteraciones a ejecutar
+     */
     public static void coseno(double aprox, int iteraciones){
         for (int i=0; i<iteraciones; ++i) {
             aprox=aprox-((Math.cos(aprox)-Math.pow(aprox,3))/(-Math.sin(aprox)-3*Math.pow(aprox,2)));
@@ -10,6 +15,11 @@ class NewtonRaphson{
         }
     }
 
+    /**
+     * Método para la función f(x)=x²-5
+     * @param aprox       Aproximación inicial de la función
+     * @param iteraciones Número de iteraciones a ejecutar
+     */
     public static void cuadrado(double aprox, int iteraciones){
         for (int i=0; i<iteraciones; ++i) {
             aprox=aprox-((Math.pow(aprox,2)-5)/(2*aprox));

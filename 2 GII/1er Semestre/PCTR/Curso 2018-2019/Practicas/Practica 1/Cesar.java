@@ -2,6 +2,12 @@ import java.util.*;
 
 class Cesar{
 
+    /**
+     * Método para cifrar una cadena usando el cifrado Cesar
+     * @param  cadena Cadena inicial tal como la escribe el usuario
+     * @param  n      Desplazamiento
+     * @return        Devuelve la cadena cifrada llamada res mediante el método ".toString()"
+     */
     public static String cifrar(String cadena, int n){
         StringBuilder res = new StringBuilder();
         int valorASCII;
