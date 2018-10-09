@@ -1,3 +1,7 @@
+/**
+ * @author Jesús Rodríguez Heras
+ */
+
 import java.util.*;
 
 class aleatorios{
