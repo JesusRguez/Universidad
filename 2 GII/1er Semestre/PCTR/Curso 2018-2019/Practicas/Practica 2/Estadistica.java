@@ -6,6 +6,12 @@ import java.lang.*;
 import java.util.*;
 
 class Estadistica{
+
+    /**
+     * Método para calcular al media aritmética
+     * @param  []v Array de valores de entrada
+     * @return     Retorna la media aritmética
+     */
     public static double media(double []v){
         double s=0;
         for (int i=0; i<v.length; ++i) {
@@ -14,6 +20,11 @@ class Estadistica{
         return s/v.length;
     }
 
+    /**
+     * Método para calcular la moda
+     * @param  []v Array de valores de entrada
+     * @return     Retorna la moda
+     */
     public static double moda(double []v){
         int repeticiones;
         int maxrepeticiones = 0;
@@ -33,6 +44,11 @@ class Estadistica{
         return moda;
     }
 
+    /**
+     * Método para calcular la varianza
+     * @param  []v Array de valores de entrada
+     * @return     Retorna la varianza
+     */
     public static double varianza(double []v){
         double sumatorio = 0;
         double m = media(v);
@@ -42,6 +58,11 @@ class Estadistica{
         return sumatorio/(v.length-1);
     }
 
+    /**
+     * Método para calcular la desviación típica
+     * @param  []v Array de valores de entrada
+     * @return     Retorna la desviación típica
+     */
     public static double desviacion(double []v){
         return Math.sqrt(varianza(v));
     }
@@ -83,6 +104,6 @@ class Estadistica{
                     System.out.println("Solo hay cuatro opciones, por favor, selecciones 1, 2, 3, 4 ó 5.");
                 }
             } while (opcion < 1 && opcion > 5);
-        } while (opcion != 5);        
+        } while (opcion != 5);
     }
 }
