@@ -48,7 +48,7 @@
 \usepackage{mathptm}
 
 %%% VARIOS:
-\usepackage{slashbox}
+%\usepackage{slashbox}
 \usepackage{verbatim}
 \usepackage{array}
 \usepackage{listings}
@@ -146,6 +146,6 @@ Por ejemplo:
 	$3^3=9$\\
 	$Ack(3,3)=61$
 \end{center}
-Sin embargo, si aumentamos la $n$ a 4 o más, obtenemos valores extremadamente grandes, que en la ejecución del programa obtendremos el error de \texttt{Stack Over Flow}, lo que significa que se ha producido un desbordamiento de la pila de llamadas recursivas.
+Sin embargo, si aumentamos la $n$ a 4 o más, obtenemos valores extremadamente grandes, que en la ejecución del programa obtendremos el error de \texttt{java.lang.StackOverflowError}, lo que significa que se ha producido un desbordamiento de la memoria en la pila de llamadas recursivas.
 
 \end{document}
