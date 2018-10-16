@@ -23,6 +23,7 @@ class Biblioteca{
      */
     public void insertarPaciente(){
         Paciente nuevo = new Paciente();
+        teclado.nextLine();
         System.out.println("Introduzca el nombre del paciente:");
         String nombre = teclado.nextLine();
         nuevo.nombre = nombre;
@@ -46,6 +47,7 @@ class Biblioteca{
      * Método para consultar pacientes
      */
     public void consultarPaciente(){
+        teclado.nextLine();
         System.out.println("Introduzca el DNI del paciente a buscar:");
         String dni = teclado.nextLine();
         Paciente buscado = new Paciente();
@@ -68,6 +70,7 @@ class Biblioteca{
      * Método para borrar pacientes
      */
     public void borrarPaciente(){
+        teclado.nextLine();
         System.out.println("Introduzca el DNI del paciente a borrar:");
         String dni = teclado.nextLine();
         Paciente buscado= new Paciente();
@@ -91,21 +94,25 @@ class Biblioteca{
         Biblioteca consulta = new Biblioteca();
         int opcion;
         do {
-            System.out.println("¿Qué desea hacer?\n1. Insertar nuevo paciente\n2. Consultar paciente\n3. Borrar paciente");
-            opcion=teclado.nextInt();
-            if (opcion < 1 || opcion > 3) {
-                System.out.println("Solo hay tres opciones disponibles, por favor, introduzca 1, 2 ó 3.");
-            }
-        } while (opcion < 1 && opcion > 3);
+            do {
+                System.out.println("¿Qué desea hacer?\n1. Insertar nuevo paciente\n2. Consultar paciente\n3. Borrar paciente\n4. Salir");
+                opcion=teclado.nextInt();
+                if (opcion < 1 || opcion > 4) {
+                    System.out.println("Solo hay tres opciones disponibles, por favor, introduzca 1, 2, 3 ó 4.");
+                }
+            } while (opcion < 1 && opcion > 4);
 
-        switch(opcion){
-            case 1: consulta.insertarPaciente();
-                break;
-            case 2: consulta.consultarPaciente();
-                break;
-            case 3: consulta.borrarPaciente();
-                break;
-        }
+            switch(opcion){
+                case 1: consulta.insertarPaciente();
+                    break;
+                case 2: consulta.consultarPaciente();
+                    break;
+                case 3: consulta.borrarPaciente();
+                    break;
+                case 4: break;
+            }
+        } while (opcion != 4);
+
 
     }
 }
