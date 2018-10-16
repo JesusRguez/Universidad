@@ -11,10 +11,16 @@ class Biblioteca{
     public static ArrayList<Paciente> consulta;
     public static Scanner teclado = new Scanner(System.in);
 
+    /**
+     * Constructor de Biblioteca
+     */
     public Biblioteca() {
         consulta = new ArrayList<Paciente>();
     }
 
+    /**
+     * Método para insertar pacientes
+     */
     public void insertarPaciente(){
         Paciente nuevo = new Paciente();
         System.out.println("Introduzca el nombre del paciente:");
@@ -36,6 +42,9 @@ class Biblioteca{
         consulta.add(nuevo); //Introducimos el paciente en la lista
     }
 
+    /**
+     * Método para consultar pacientes
+     */
     public void consultarPaciente(){
         System.out.println("Introduzca el DNI del paciente a buscar:");
         String dni = teclado.nextLine();
@@ -55,6 +64,9 @@ class Biblioteca{
         }
     }
 
+    /**
+     * Método para borrar pacientes
+     */
     public void borrarPaciente(){
         System.out.println("Introduzca el DNI del paciente a borrar:");
         String dni = teclado.nextLine();
