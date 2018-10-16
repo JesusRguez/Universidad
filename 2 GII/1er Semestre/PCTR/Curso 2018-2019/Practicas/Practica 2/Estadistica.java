@@ -100,8 +100,8 @@ class Estadistica{
                         break;
                     case 5: break;
                 }
-                if (opcion > 5) {
-                    System.out.println("Solo hay cuatro opciones, por favor, selecciones 1, 2, 3, 4 ó 5.");
+                if (opcion < 1 || opcion > 5) {
+                    System.out.println("Solo hay cuatro opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
                 }
             } while (opcion < 1 && opcion > 5);
         } while (opcion != 5);

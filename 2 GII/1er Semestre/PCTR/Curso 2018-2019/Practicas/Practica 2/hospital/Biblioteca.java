@@ -112,7 +112,5 @@ class Biblioteca{
                 case 4: break;
             }
         } while (opcion != 4);
-
-
     }
 }
