@@ -34,7 +34,7 @@ class intDefinidaMonteCarlo{
         for (int i=0; i<puntos; ++i) {
             x = Math.random();
             y = Math.random();
-            if (y<=Math.sin(x)) {
+            if (y<=x) {
                 aciertos++;
             }
         }
