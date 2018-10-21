@@ -79,9 +79,8 @@ class usaComplejos{
                         break;
                     case 6:
                         break;
-                }
-                if (opcion < 1 || opcion > 6) {
-                    System.out.println("Solo hay cuatro opciones, por favor, seleccione 1, 2, 3, 4, 5 ó 6.");
+                    default:
+                        System.out.println("Solo hay seis opciones, por favor, seleccione 1, 2, 3, 4, 5 ó 6.");
                 }
             } while (opcion < 1 && opcion > 6);
         } while (opcion != 6);

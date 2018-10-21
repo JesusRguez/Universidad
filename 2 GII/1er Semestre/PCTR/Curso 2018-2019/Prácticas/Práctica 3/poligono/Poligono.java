@@ -52,8 +52,4 @@ class Poligono{
             figura.get(i).y = figura.get(i).y * escala;
         }
     }
-
-    public static void main(String[] args) {
-
-    }
 }

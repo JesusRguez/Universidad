@@ -32,7 +32,7 @@ public class Punto {
      * @param  b Segundo punto
      * @return   Retorna la distancia entre los puntos a y b
      */
-    public double distancia(Punto a, Punto b){
+    public static double distancia(Punto a, Punto b){
         return Math.abs(Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2)));
     }
 

@@ -98,20 +98,18 @@ class Biblioteca{
             do {
                 System.out.println("¿Qué desea hacer?\n1. Insertar nuevo paciente\n2. Consultar paciente\n3. Borrar paciente\n4. Salir");
                 opcion=teclado.nextInt();
-                if (opcion < 1 || opcion > 4) {
-                    System.out.println("Solo hay tres opciones disponibles, por favor, introduzca 1, 2, 3 ó 4.");
+                switch(opcion){
+                    case 1: consulta.insertarPaciente();
+                        break;
+                    case 2: consulta.consultarPaciente();
+                        break;
+                    case 3: consulta.borrarPaciente();
+                        break;
+                    case 4: break;
+                    default:
+                        System.out.println("Solo hay cuatro opciones, por favor, seleccione 1, 2, 3 ó 4.");
                 }
             } while (opcion < 1 && opcion > 4);
-
-            switch(opcion){
-                case 1: consulta.insertarPaciente();
-                    break;
-                case 2: consulta.consultarPaciente();
-                    break;
-                case 3: consulta.borrarPaciente();
-                    break;
-                case 4: break;
-            }
         } while (opcion != 4);
     }
 }

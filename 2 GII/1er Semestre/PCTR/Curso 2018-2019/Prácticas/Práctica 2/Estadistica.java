@@ -100,9 +100,8 @@ class Estadistica{
                         System.out.println("La desviación es "+d);
                         break;
                     case 5: break;
-                }
-                if (opcion < 1 || opcion > 5) {
-                    System.out.println("Solo hay cuatro opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
+                    default:
+                        System.out.println("Solo hay cinco opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
                 }
             } while (opcion < 1 && opcion > 5);
         } while (opcion != 5);
