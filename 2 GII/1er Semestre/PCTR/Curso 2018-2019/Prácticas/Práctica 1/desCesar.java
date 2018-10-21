@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class desCesar{
+public class desCesar{
 
     /**
      * Método para descifrar una cadena previamente cifrada con el cifrado Cesar

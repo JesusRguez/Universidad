@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class Ack{
+public class Ack{
 
     /**
      * Método para calcular la función de Ackerman

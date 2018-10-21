@@ -7,7 +7,7 @@ package poligono;
 
 import java.util.*;
 
-class Poligono{
+public class Poligono{
     public static ArrayList<Punto> figura;
     public static Scanner teclado = new Scanner(System.in);
 

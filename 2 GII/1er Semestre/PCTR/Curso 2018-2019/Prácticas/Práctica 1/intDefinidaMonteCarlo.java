@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.Math;
 
-class intDefinidaMonteCarlo{
+public class intDefinidaMonteCarlo{
 
     /**
      * Método para clacular la integral en la función f(x)=sin(x)

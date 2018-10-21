@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class Cesar{
+public class Cesar{
 
     /**
      * Método para cifrar una cadena usando el cifrado Cesar

@@ -5,6 +5,6 @@
 
 package hospital;
 
-class Paciente{
+public class Paciente{
     String nombre, dni, direccion, telefono, compseguros;
 }

@@ -7,7 +7,7 @@ package poligono;
 
 import java.util.*;
 
-class Hexagono extends Poligono{
+public class Hexagono extends Poligono{
 
     /**
      * Constructor de Hexagono

@@ -7,7 +7,7 @@ package poligono;
 
 import java.util.*;
 
-class Cuadrado extends Poligono{
+public class Cuadrado extends Poligono{
 
     /**
      * Constructor de la clase Poligono

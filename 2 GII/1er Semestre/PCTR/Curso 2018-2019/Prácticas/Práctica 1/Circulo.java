@@ -3,7 +3,7 @@
  * @version 1.0
  */
 
-class Circulo{
+public class Circulo{
     static final double PI = 3.1416;
     public static void main(String[] args) {
         double diametro = 14.2;

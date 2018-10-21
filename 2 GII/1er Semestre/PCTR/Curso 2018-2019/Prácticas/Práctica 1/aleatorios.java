@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class aleatorios{
+public class aleatorios{
     public static void main(String[] args) {
         System.out.println("Introduzca la longitudo de la secuencia de números aleatorios:");
         Scanner teclado = new Scanner(System.in);

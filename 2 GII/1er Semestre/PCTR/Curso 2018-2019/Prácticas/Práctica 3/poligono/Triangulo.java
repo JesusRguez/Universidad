@@ -7,7 +7,7 @@ package poligono;
 
 import java.util.*;
 
-class Triangulo extends Poligono{
+public class Triangulo extends Poligono{
 
     /**
      * Constructor de la clase Triángulo

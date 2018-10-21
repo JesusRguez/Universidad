@@ -6,7 +6,7 @@
 import java.lang.*;
 import java.util.*;
 
-class Estadistica{
+public class Estadistica{
 
     /**
      * Método para calcular al media aritmética
@@ -79,31 +79,29 @@ class Estadistica{
         }
         int opcion;
         do {
-            do {
-                System.out.println("Seleccione la acción que desea:\n1. Media\n2. Moda\n3. Varianza\n4. Desviación típica\n5. Salir");
-                opcion=teclado.nextInt();
-                switch(opcion){
-                    case 1:
-                        double me = media(v);
-                        System.out.println("La media es "+me);
-                        break;
-                    case 2:
-                        double mo = moda(v);
-                        System.out.println("La moda es "+mo);
-                        break;
-                    case 3:
-                        double va = varianza(v);
-                        System.out.println("La varianza es "+va);
-                        break;
-                    case 4:
-                        double d = desviacion(v);
-                        System.out.println("La desviación es "+d);
-                        break;
-                    case 5: break;
-                    default:
-                        System.out.println("Solo hay cinco opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
-                }
-            } while (opcion < 1 && opcion > 5);
+            System.out.println("Seleccione la acción que desea:\n1. Media\n2. Moda\n3. Varianza\n4. Desviación típica\n5. Salir");
+            opcion=teclado.nextInt();
+            switch(opcion){
+                case 1:
+                    double me = media(v);
+                    System.out.println("La media es "+me);
+                    break;
+                case 2:
+                    double mo = moda(v);
+                    System.out.println("La moda es "+mo);
+                    break;
+                case 3:
+                    double va = varianza(v);
+                    System.out.println("La varianza es "+va);
+                    break;
+                case 4:
+                    double d = desviacion(v);
+                    System.out.println("La desviación es "+d);
+                    break;
+                case 5: break;
+                default:
+                    System.out.println("Solo hay cinco opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
+            }
         } while (opcion != 5);
     }
 }

@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.Math;
 
-class NewtonRaphson{
+public class NewtonRaphson{
 
     /**
      * Método para la función f(x)=cos(x)-x³

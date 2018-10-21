@@ -5,7 +5,7 @@
 
 package elipse;
 
-class Elipse{
+public class Elipse{
     double a, b, o1, o2;
 
     /**

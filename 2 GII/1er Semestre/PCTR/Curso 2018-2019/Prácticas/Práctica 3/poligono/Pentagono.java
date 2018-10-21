@@ -7,7 +7,7 @@ package poligono;
 
 import java.util.*;
 
-class Pentagono extends Poligono{
+public class Pentagono extends Poligono{
 
     /**
      * Constructor de la clase Pentagono

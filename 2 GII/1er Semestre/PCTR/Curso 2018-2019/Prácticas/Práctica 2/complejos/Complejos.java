@@ -5,7 +5,7 @@
 
 package complejos;
 
-class Complejos{
+public class Complejos{
 
     double real, imaginario;
 
