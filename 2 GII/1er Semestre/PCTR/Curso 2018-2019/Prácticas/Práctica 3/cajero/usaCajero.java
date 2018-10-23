@@ -10,6 +10,12 @@ public class usaCajero extends Cajero implements Runnable{
     public int tipoOperacion, id;
     public double cantidad;
 
+    /**
+     * Constructor de usaCajero
+     * @param tipoOperacion Tipo de la operación a realizar: deposito/reintegro
+     * @param id            Id del cliente al que se le va a realizar la operación
+     * @param cantidad      Cantidad con la que se va a trabajar
+     */
     public usaCajero(int tipoOperacion, int id, double cantidad){
         this.tipoOperacion = tipoOperacion;
         this.id = id;

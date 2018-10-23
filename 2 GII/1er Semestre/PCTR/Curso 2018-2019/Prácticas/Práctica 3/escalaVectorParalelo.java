@@ -12,6 +12,12 @@ public class escalaVectorParalelo extends Thread{
     static int[] r;
     static int eleccion, f;
 
+    /**
+     * Constructro de escalaVectorParalelo
+     * @param n        Número de elementos del vector
+     * @param eleccion Eleccion de suma/resta
+     * @param f        Factor de escalado
+     */
     public escalaVectorParalelo(int n, int eleccion, int f){
         v = new int[n];
         this.eleccion = eleccion;
@@ -61,7 +67,7 @@ public class escalaVectorParalelo extends Thread{
         for (int i=0; i<n; ++i) {
             v[i] = (int)(Math.random()*10);
         }
-        
+
         hilo1.start();
         hilo2.start();
         hilo3.start();

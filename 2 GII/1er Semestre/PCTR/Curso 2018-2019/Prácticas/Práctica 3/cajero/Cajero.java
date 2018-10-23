@@ -11,6 +11,9 @@ public class Cajero {
 
     ArrayList<Cuenta_Banca2> cuentas = new ArrayList<Cuenta_Banca2>();
 
+    /**
+     * Constructor de Cajero
+     */
     public Cajero(){
         cuentas.add(new Cuenta_Banca2(1, 20000, "pepe"));
         cuentas.add(new Cuenta_Banca2(2, 30000, "juan"));
@@ -18,6 +21,11 @@ public class Cajero {
         cuentas.add(new Cuenta_Banca2(4, 10000, "antonio"));
     }
 
+    /**
+     * Método para realizar un depósito
+     * @param id       Id del cliente
+     * @param cantidad Cantidad a depositar en la cuenta del cliente
+     */
     public void deposito(int id, double cantidad){
         boolean encontrado = false;
         int i = 0;
@@ -35,6 +43,11 @@ public class Cajero {
         }
     }
 
+    /**
+     * Método para realizar un reintegro
+     * @param id       Ide del cliente
+     * @param cantidad Cantidad a extraer en el reintegro
+     */
     public void reintegro(int id, double cantidad){
         boolean encontrado = false;
         int i = 0;
