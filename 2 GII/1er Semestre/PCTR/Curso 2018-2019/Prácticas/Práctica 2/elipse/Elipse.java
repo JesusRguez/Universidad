@@ -42,7 +42,7 @@ public class Elipse{
      * Método para calcular el área de la elipse
      * @return Retorna el área de la elipse
      */
-    public double area(){
+    public double superficie(){
         return Math.PI * a * b;
     }
 
@@ -60,7 +60,7 @@ public class Elipse{
      * @param  y Coordenada Y el punto a comprobar
      * @return   Devuelve true si el punto pertenece a la elipse y false en caso contrario
      */
-    public boolean puntoPertenece(double x, double y) {
+    public boolean esUnPunto(double x, double y) {
         boolean dentro = false;
         if (((x - Math.pow(o1, 2)) / Math.pow(a, 2)) + ((y - Math.pow(o2, 2)) / Math.pow(b, 2)) == 1) {
             dentro = true;

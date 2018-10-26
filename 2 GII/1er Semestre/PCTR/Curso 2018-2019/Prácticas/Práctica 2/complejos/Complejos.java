@@ -9,7 +9,12 @@ public class Complejos{
 
     double real, imaginario;
 
-    Complejos(){}
+    public Complejos(){}
+
+    public Complejos(double r, double i){
+        this.real = r;
+        this.imaginario = i;
+    }
 
     /**
      * Método para sumar complejos
@@ -71,5 +76,50 @@ public class Complejos{
         res.real = (a.real * b.real + a.imaginario * b.imaginario) / (Math.pow(b.real, 2) + Math.pow(b.imaginario, 2));
         res.imaginario = (a.imaginario * b.real - a.real * b.imaginario) / (Math.pow(b.real, 2) + Math.pow(b.imaginario, 2));
         return res;
+    }
+
+    /**
+     * Método para saber si un complejo es nulo
+     * @return Devuelve true si el complejo es nulo y false en caso contrario
+     */
+    public boolean esComplejoNulo(){
+        if (this.real == 0 && this.imaginario == 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * Método para obtener el cuadrante de un complejo
+     * @return Retorna el cuadrante del complejo
+     */
+    public int cuadranteComplejo(){
+        if (this.real > 0 && this.imaginario > 0) {
+            return 1;
+        }else{
+            if(this.real < 0 && this.imaginario > 0){
+                return 2;
+            }else{
+                if(this.real < 0 && this.imaginario < 0){
+                    return 3;
+                }else{
+                    if(this.real > 0 && this.imaginario < 0){
+                        return 4;
+                    }
+                }
+            }
+        }
+
+        return 0;
+    }
+
+    /**
+     * Método para calcular el conjugado de un complejo
+     * @return Retorna el conjugado de un complejo
+     */
+    public Complejos conjugadoComplejos(){
+        Complejos c = new Complejos(this.real, (-1)*this.imaginario);
+        return c;
     }
 }

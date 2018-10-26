@@ -30,7 +30,7 @@ public class usaElipse{
                     double x = teclado.nextDouble();
                     System.out.println("Introduce la coordenada y del punto:");
                     double y = teclado.nextDouble();
-                    boolean dentro = E.puntoPertenece(x, y);
+                    boolean dentro = E.esUnPunto(x, y);
                     if (dentro == true) {
                         System.out.println("El punto pertenece la elipse.");
                     } else {
@@ -38,7 +38,7 @@ public class usaElipse{
                     }
                     break;
                 case 2:
-                    System.out.println("El área de la elipse es " + E.area()+" cm²");
+                    System.out.println("El área de la elipse es " + E.superficie()+" cm²");
                     break;
                 case 3:
                     System.out.println("El perímetro de la elipse es " + E.perimetro()+" cm");
@@ -50,6 +50,7 @@ public class usaElipse{
                     System.out.println("El radio menor de la elipse es " + E.radioMayor()+" cm");
                     break;
                 case 6:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay seis opciones, por favor, seleccione 1, 2, 3, 4, 5 ó 6.");
