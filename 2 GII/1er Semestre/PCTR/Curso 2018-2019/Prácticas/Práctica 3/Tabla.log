@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  21 OCT 2018 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  27 OCT 2018 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,7 +550,11 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 82.
- [1
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 84.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
@@ -577,38 +581,34 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 128.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
- (./Tabla.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+
+(./Tabla.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `Tabla.out' has not changed.
 (rerunfilecheck)             Checksum: 124E4FC865F8705CD2A3AFB73A310C57;58.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 9560 strings out of 493013
- 135830 string characters out of 6135682
- 259208 words of memory out of 5000000
+ 9561 strings out of 493013
+ 135834 string characters out of 6135682
+ 259290 words of memory out of 5000000
  12939 multiletter control sequences out of 15000+600000
- 48130 words of font info for 82 fonts, out of 8000000 for 9000
+ 47016 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,10n,49p,364b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,10n,49p,333b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on Tabla.pdf (3 pages, 36224 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb>
+Output written on Tabla.pdf (3 pages, 38728 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

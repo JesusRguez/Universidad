@@ -7,13 +7,13 @@ package complejos;
 
 public class Complejos{
 
-    double real, imaginario;
+    double[] c = new double[2];
 
     public Complejos(){}
 
     public Complejos(double r, double i){
-        this.real = r;
-        this.imaginario = i;
+        this.c[0] = r;
+        this.c[1] = i;
     }
 
     /**
@@ -24,8 +24,8 @@ public class Complejos{
      */
     public static Complejos suma(Complejos a, Complejos b){
         Complejos res = new Complejos();
-        res.real = a.real + b.real;
-        res.imaginario = a.imaginario + b.imaginario;
+        res.c[0] = a.c[0] + b.c[0];
+        res.c[1] = a.c[1] + b.c[1];
         return res;
     }
 
@@ -37,8 +37,8 @@ public class Complejos{
      */
     public static Complejos resta(Complejos a, Complejos b){
         Complejos res = new Complejos();
-        res.real = a.real - b.real;
-        res.imaginario = a.imaginario - b.imaginario;
+        res.c[0] = a.c[0] - b.c[0];
+        res.c[1] = a.c[1] - b.c[1];
         return res;
     }
 
@@ -48,7 +48,7 @@ public class Complejos{
      * @return   Retorna el módulo del complejo
      */
     public static double modulo(Complejos a){
-        double res = Math.sqrt(Math.pow(a.real, 2)+(Math.pow(a.imaginario, 2)));
+        double res = Math.sqrt(Math.pow(a.c[0], 2)+(Math.pow(a.c[1], 2)));
         return res;
     }
 
@@ -60,8 +60,8 @@ public class Complejos{
      */
     public static Complejos producto(Complejos a, Complejos b){
         Complejos res = new Complejos();
-        res.real = a.real * b.imaginario;
-        res.imaginario = a.imaginario * b.real;
+        res.c[0] = a.c[0] * b.c[1];
+        res.c[1] = a.c[1] * b.c[0];
         return res;
     }
 
@@ -73,8 +73,8 @@ public class Complejos{
      */
     public static Complejos cociente(Complejos a, Complejos b){
         Complejos res = new Complejos();
-        res.real = (a.real * b.real + a.imaginario * b.imaginario) / (Math.pow(b.real, 2) + Math.pow(b.imaginario, 2));
-        res.imaginario = (a.imaginario * b.real - a.real * b.imaginario) / (Math.pow(b.real, 2) + Math.pow(b.imaginario, 2));
+        res.c[0] = (a.c[0] * b.c[0] + a.c[1] * b.c[1]) / (Math.pow(b.c[0], 2) + Math.pow(b.c[1], 2));
+        res.c[1] = (a.c[1] * b.c[0] - a.c[0] * b.c[1]) / (Math.pow(b.c[0], 2) + Math.pow(b.c[1], 2));
         return res;
     }
 
@@ -83,7 +83,7 @@ public class Complejos{
      * @return Devuelve true si el complejo es nulo y false en caso contrario
      */
     public boolean esComplejoNulo(){
-        if (this.real == 0 && this.imaginario == 0) {
+        if (this.c[0] == 0 && this.c[1] == 0) {
             return true;
         }else{
             return false;
@@ -95,16 +95,16 @@ public class Complejos{
      * @return Retorna el cuadrante del complejo
      */
     public int cuadranteComplejo(){
-        if (this.real > 0 && this.imaginario > 0) {
+        if (this.c[0] > 0 && this.c[1] > 0) {
             return 1;
         }else{
-            if(this.real < 0 && this.imaginario > 0){
+            if(this.c[0] < 0 && this.c[1] > 0){
                 return 2;
             }else{
-                if(this.real < 0 && this.imaginario < 0){
+                if(this.c[0] < 0 && this.c[1] < 0){
                     return 3;
                 }else{
-                    if(this.real > 0 && this.imaginario < 0){
+                    if(this.c[0] > 0 && this.c[1] < 0){
                         return 4;
                     }
                 }
@@ -119,7 +119,7 @@ public class Complejos{
      * @return Retorna el conjugado de un complejo
      */
     public Complejos conjugadoComplejos(){
-        Complejos c = new Complejos(this.real, (-1)*this.imaginario);
+        Complejos c = new Complejos(this.c[0], (-1)*this.c[1]);
         return c;
     }
 }

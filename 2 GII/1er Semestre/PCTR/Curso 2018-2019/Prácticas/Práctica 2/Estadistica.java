@@ -98,7 +98,9 @@ public class Estadistica{
                     double d = desviacion(v);
                     System.out.println("La desviación es "+d);
                     break;
-                case 5: break;
+                case 5:
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Solo hay cinco opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
             }

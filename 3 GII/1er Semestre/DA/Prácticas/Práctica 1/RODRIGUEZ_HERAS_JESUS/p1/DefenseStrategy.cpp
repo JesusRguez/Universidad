@@ -41,15 +41,26 @@ Vector3 cellCenterToPosition(int i, int j, float cellWidth, float cellHeight){ r
 void positionToCell(const Vector3 pos, int &i_out, int &j_out, float cellWidth, float cellHeight){ i_out = (int)(pos.y * 1.0f/cellHeight); j_out = (int)(pos.x * 1.0f/cellWidth); }
 
 bool factibilidad(int fila, int coloumna, Defense* defensa, std::list<Object*> obstaculos, float mapWidth, float mapHeight, std::list<Defense*> defensas, int nCellsWidth, int nCellsHeight){
-	Vector3 posicion = cellCenterToPosition(fila, columna, cellWidth, cellHeight));
-	if (posicion.x-d.radio < 0 || posicion.x+d.radio > mapWidth || posicion.y-d.radio < 0 || posicion.y+d.radio > 0) {
-		return false;//no cabe porque se sale de los límites del mapa
+	bool entra = true;
+	Vector3 posicionDefensa = cellCenterToPosition(fila, columna, cellWidth, cellHeight));
+	if (posicionDefensa.x-d.radio < 0 || posicionDefensa.x+d.radio > mapWidth || posicionDefensa.y-d.radio < 0 || posicionDefensa.y+d.radio > 0) {
+		entra = false;//no cabe porque se sale de los límites del mapa
 	}else{
 		std::list<Object*>::const_iterator i = obstaculos.begin();
+		std::list<Defense*>::const_iterator j = defensas.begin();
 		while (i!=obstaculos.end()) {
-			//seguir por aqui con _distance
+			if ((d.radio + obstaculos[i].radio) > (_distance(posicionDefensa, obstaculos[i].position))) {
+				entra = false;
+			}else{
+				while (j!=i) {
+					if ((d.radio + defensas[j].radio) > (_distance(posicionDefensa, defensas[j].position))) {
+						entra = false;
+					}
+				}
+			}
 		}
 	}
+	return entra;
 }
 
 void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {

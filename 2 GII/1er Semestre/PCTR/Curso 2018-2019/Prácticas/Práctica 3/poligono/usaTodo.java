@@ -46,6 +46,7 @@ public class usaTodo{
                     T.zoom();
                     break;
                 case 6:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay 3 opciones, por favor, selecione 1, 2, 3, 4, 5 ó 6.");
@@ -88,6 +89,7 @@ public class usaTodo{
                     C.zoom();
                     break;
                 case 6:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay 3 opciones, por favor, selecione 1, 2, 3, 4, 5 ó 6.");
@@ -130,6 +132,7 @@ public class usaTodo{
                     P.zoom();
                     break;
                 case 6:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay 3 opciones, por favor, selecione 1, 2, 3, 4, 5 ó 6.");
@@ -172,6 +175,7 @@ public class usaTodo{
                     H.zoom();
                     break;
                 case 6:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay 3 opciones, por favor, selecione 1, 2, 3, 4, 5 ó 6.");
@@ -199,6 +203,7 @@ public class usaTodo{
                     controlaHexagono();
                     break;
                 case 5:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Solo hay cinco opciones, por favor, seleccione 1, 2, 3, 4 ó 5.");
