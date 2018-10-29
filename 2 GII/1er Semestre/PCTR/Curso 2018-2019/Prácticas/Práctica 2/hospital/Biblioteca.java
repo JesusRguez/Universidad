@@ -21,6 +21,7 @@ public class Biblioteca{
 
     /**
      * Método para insertar pacientes
+     * Introduce pacientes en el sistema, ArrayList de tipo Paciente
      */
     public void insertarPaciente(){
         teclado.nextLine(); //Limpiamos el buffer de entrada
@@ -32,14 +33,14 @@ public class Biblioteca{
         String direccion = teclado.nextLine();
         System.out.println("Introduzca el teléfono del paciente:");
         int telefono = teclado.nextInt();
-        teclado.nextLine();
+        teclado.nextLine(); //Limpiamos el buffer de entrada
         System.out.println("Introduzca la aseguradora del paciente:");
         String aseguradora = teclado.nextLine();
         System.out.println("Introduzca el diagnóstico del paciente:");
         String diagnostico = teclado.nextLine();
         System.out.println("Introduzca la edad del paciente:");
         int edad = teclado.nextInt();
-        teclado.nextLine();
+        teclado.nextLine(); //Limpiamos el buffer de entrada
         System.out.println("Introduzca el sexo del paciente:");
         String sexo = teclado.nextLine();
         System.out.println("Introduzca el número de la seguridad social del paciente:");
@@ -51,6 +52,7 @@ public class Biblioteca{
 
     /**
      * Método para consultar pacientes
+     * Muestra en pantalla el paciente buscado o, si no existe, muestra el mensaje "Paciente no encontrado"
      */
     public void consultarPaciente(){
         teclado.nextLine();
@@ -74,6 +76,7 @@ public class Biblioteca{
 
     /**
      * Método para borrar pacientes
+     * Borra el paciente indicado o, si no lo encuentra, muestra el mensaje "Paciente no encontrado y, por lo tanto, no borrado."
      */
     public void borrarPaciente(){
         teclado.nextLine();

@@ -11,6 +11,11 @@ public class Complejos{
 
     public Complejos(){}
 
+    /**
+     * Constructor de Complejos
+     * @param r Parte real del complejo
+     * @param i Parte imaginaria del complejo
+     */
     public Complejos(double r, double i){
         this.c[0] = r;
         this.c[1] = i;
@@ -121,5 +126,37 @@ public class Complejos{
     public Complejos conjugadoComplejos(){
         Complejos c = new Complejos(this.c[0], (-1)*this.c[1]);
         return c;
+    }
+
+    /**
+     * Método para obtener la parte real de un complejo
+     * @return Retorna la parte real del complejo
+     */
+    public double getReal(){
+        return this.c[0];
+    }
+
+    /**
+     * Método para establecer la parte real de un complejo
+     * @param r Parte real del complejo
+     */
+    public void setReal(double r){
+        this.c[0] = r;
+    }
+
+    /**
+     * Método para obtener la parte imaginaria de un cumplejo
+     * @return Retorna la parte imaginaria del complejo
+     */
+    public double getImaginario(){
+        return this.c[1];
+    }
+
+    /**
+     * Método para establecer la parte imaginaria de un complejo
+     * @param i Parte imaginaria del complejo
+     */
+    public void setImaginario(double i){
+        this.c[1] = i;
     }
 }

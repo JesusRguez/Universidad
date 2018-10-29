@@ -17,14 +17,14 @@ public class usaComplejos{
         Complejos b = new Complejos();
         Complejos c = new Complejos();
 
-        System.out.print("Introduzca la parte c[0] del primer complejo: ");
-        a.c[0] = teclado.nextDouble();
+        System.out.print("Introduzca la parte real del primer complejo: ");
+        a.setReal(teclado.nextDouble());
         System.out.print("Introduzca la parte imaginaria del primer complejo: ");
-        a.c[1] = teclado.nextDouble();
-        System.out.print("\nIntroduzca la parte c[0] del segundo complejo: ");
-        b.c[0] = teclado.nextDouble();
+        a.setImaginario(teclado.nextDouble());
+        System.out.print("\nIntroduzca la parte real del segundo complejo: ");
+        b.setReal(teclado.nextDouble());
         System.out.print("Introduzca la parte imaginaria del segundo complejo: ");
-        b.c[1] = teclado.nextDouble();
+        b.setImaginario(teclado.nextDouble());
 
         do {
             System.out.println("Introduzca la opción que desea:\n1. Sumar dos complejos\n2. Restar dos complejos\n3. Módulo de un complejo\n4. Producto de dos complejos\n5. Cociente de dos complejos\n6. ¿Es nulo?\n7. Cuadrante\n8. Conjugado\n9. Salir.");
@@ -32,14 +32,14 @@ public class usaComplejos{
             switch(opcion){
                 case 1:
                     c = Complejos.suma(a, b);
-                    System.out.println("El resultado es el complejo: ("+c.c[0]+", "+c.c[1]+")");
+                    System.out.println("El resultado es el complejo: ("+c.getReal()+", "+c.getImaginario()+")");
                     break;
                 case 2:
                     c = Complejos.resta(a, b);
-                    System.out.println("El resultado es el complejo: ("+c.c[0]+", "+c.c[1]+")");
+                    System.out.println("El resultado es el complejo: ("+c.getReal()+", "+c.getImaginario()+")");
                     break;
                 case 3:
-                    System.out.println("Seleccione el complejo al que quiere calcular el módulo:\n1. ("+a.c[0]+", "+a.c[1]+")\n2. ("+b.c[0]+", "+b.c[1]+")");
+                    System.out.println("Seleccione el complejo al que quiere calcular el módulo:\n1. ("+a.getReal()+", "+a.getImaginario()+")\n2. ("+b.getReal()+", "+b.getImaginario()+")");
                     opcion = teclado.nextInt();
                     double res;
                     switch(opcion){
@@ -48,7 +48,7 @@ public class usaComplejos{
                             System.out.println("El módulo del complejo es: "+res);
                             break;
                         case 2:
-                            res = Complejos.modulo(a);
+                            res = Complejos.modulo(b);
                             System.out.println("El módulo del complejo es: "+res);
                             break;
                         default:
@@ -57,14 +57,14 @@ public class usaComplejos{
                     break;
                 case 4:
                     c = Complejos.producto(a, b);
-                    System.out.println("El resultado es el complejo: ("+c.c[0]+", "+c.c[1]+")");
+                    System.out.println("El resultado es el complejo: ("+c.getReal()+", "+c.getImaginario()+")");
                     break;
                 case 5:
                     c = Complejos.cociente(a, b);
-                    System.out.println("El resultado es el complejo: ("+c.c[0]+", "+c.c[1]+")");
+                    System.out.println("El resultado es el complejo: ("+c.getReal()+", "+c.getImaginario()+")");
                     break;
                 case 6:
-                    System.out.println("Seleccione el complejo que quiere comprobar si es nulo:\n1. ("+a.c[0]+", "+a.c[1]+")\n2. ("+b.c[0]+", "+b.c[1]+")");
+                    System.out.println("Seleccione el complejo que quiere comprobar si es nulo:\n1. ("+a.getReal()+", "+a.getImaginario()+")\n2. ("+b.getReal()+", "+b.getImaginario()+")");
                     opcion = teclado.nextInt();
                     switch(opcion){
                         case 1:
@@ -86,7 +86,7 @@ public class usaComplejos{
                     }
                     break;
                 case 7:
-                    System.out.println("Seleccione el complejo al que le quiere comprobar el cuadrante:\n1. ("+a.c[0]+", "+a.c[1]+")\n2. ("+b.c[0]+", "+b.c[1]+")");
+                    System.out.println("Seleccione el complejo al que le quiere comprobar el cuadrante:\n1. ("+a.getReal()+", "+a.getImaginario()+")\n2. ("+b.getReal()+", "+b.getImaginario()+")");
                     opcion = teclado.nextInt();
                     switch(opcion){
                         case 1:
@@ -100,16 +100,16 @@ public class usaComplejos{
                     }
                     break;
                 case 8:
-                    System.out.println("Seleccione el complejo al que le quiere calcular el conjugado:\n1. ("+a.c[0]+", "+a.c[1]+")\n2. ("+b.c[0]+", "+b.c[1]+")");
+                    System.out.println("Seleccione el complejo al que le quiere calcular el conjugado:\n1. ("+a.getReal()+", "+a.getImaginario()+")\n2. ("+b.getReal()+", "+b.getImaginario()+")");
                     opcion = teclado.nextInt();
                     switch(opcion){
                         case 1:
                             c = a.conjugadoComplejos();
-                            System.out.println("El conjugado del complejo introducido es ("+c.c[0]+", "+c.c[1]+")");
+                            System.out.println("El conjugado del complejo introducido es ("+c.getReal()+", "+c.getImaginario()+")");
                             break;
                         case 2:
-                        c = b.conjugadoComplejos();
-                        System.out.println("El conjugado del complejo introducido es ("+c.c[0]+", "+c.c[1]+")");
+                            c = b.conjugadoComplejos();
+                            System.out.println("El conjugado del complejo introducido es ("+c.getReal()+", "+c.getImaginario()+")");
                             break;
                         default:
                             System.out.println("Solo hay dos opciones, por favor, introduzca 1 ó 2.");

@@ -10,10 +10,10 @@ public class Estadistica{
 
     /**
      * Método para calcular al media aritmética
-     * @param  []v Array de valores de entrada
-     * @return     Retorna la media aritmética
+     * @param  v Array de valores de entrada
+     * @return   Retorna la media aritmética
      */
-    public static double media(double []v){
+    public static double media(double[] v){
         double s=0;
         for (int i=0; i<v.length; ++i) {
             s+=v[i];
@@ -23,10 +23,10 @@ public class Estadistica{
 
     /**
      * Método para calcular la moda
-     * @param  []v Array de valores de entrada
-     * @return     Retorna la moda
+     * @param  v Array de valores de entrada
+     * @return   Retorna la moda
      */
-    public static double moda(double []v){
+    public static double moda(double[] v){
         int repeticiones;
         int maxrepeticiones = 0;
         double moda = 0;
@@ -47,10 +47,10 @@ public class Estadistica{
 
     /**
      * Método para calcular la varianza
-     * @param  []v Array de valores de entrada
-     * @return     Retorna la varianza
+     * @param  v Array de valores de entrada
+     * @return   Retorna la varianza
      */
-    public static double varianza(double []v){
+    public static double varianza(double[] v){
         double sumatorio = 0;
         double m = media(v);
         for (int i=0; i<v.length; ++i) {
@@ -61,10 +61,10 @@ public class Estadistica{
 
     /**
      * Método para calcular la desviación típica
-     * @param  []v Array de valores de entrada
-     * @return     Retorna la desviación típica
+     * @param  v Array de valores de entrada
+     * @return   Retorna la desviación típica
      */
-    public static double desviacion(double []v){
+    public static double desviacion(double[] v){
         return Math.sqrt(varianza(v));
     }
 
@@ -72,7 +72,7 @@ public class Estadistica{
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca el número de elementos:");
         int n = teclado.nextInt();
-        double []v = new double[n];
+        double[] v = new double[n];
         for (int i=0; i<n; ++i) {
             System.out.print("Introduzca el elemento "+(i+1)+": ");
             v[i] = teclado.nextDouble();
