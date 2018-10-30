@@ -56,7 +56,7 @@ public class matVectorConcurrente implements Runnable{
                         System.out.println("Introduzca el tamaño del vector");
                         tvector = teclado.nextInt();
                         if(columnas != tvector){
-                            System.out.println("El número de columnas y el tamaño del vector debe coincidir,");
+                            System.out.println("El número de columnas y el tamaño del vector debe coincidir.");
                         }
                     } while (columnas != tvector);
 

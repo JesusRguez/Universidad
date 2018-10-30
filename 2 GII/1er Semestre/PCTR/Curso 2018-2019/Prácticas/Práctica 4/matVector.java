@@ -9,7 +9,7 @@ public class matVector{
 
     public static double[] producto(double[][] m, double[] v){
         double[] res = new double[v.length];
-        int aux = 0;
+        double aux = 0;
         for (int i=0; i<m.length; ++i) {
             for (int j=0; j<m[i].length; ++j) {
                 aux += m[i][j]*v[j];
@@ -46,7 +46,7 @@ public class matVector{
                         System.out.println("Introduzca el tamaño del vector");
                         tvector = teclado.nextInt();
                         if(columnas != tvector){
-                            System.out.println("El número de columnas y el tamaño del vector debe coincidir,");
+                            System.out.println("El número de columnas y el tamaño del vector debe coincidir.");
                         }
                     } while (columnas != tvector);
 
