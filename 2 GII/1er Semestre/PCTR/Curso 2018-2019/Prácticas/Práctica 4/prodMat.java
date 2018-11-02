@@ -106,16 +106,12 @@ public class prodMat{
                         }
                     }
 
-                    imprimeMatriz(m1);
-
                     m2 = new double[filas2][columnas2];
                     for (int i=0; i<filas2; ++i) {
                         for (int j=0; j<columnas2; ++j) {
                             m2[i][j] = r.nextDouble()*10;
                         }
                     }
-
-                    imprimeMatriz(m2);
 
                     res = new double[filas1][columnas2];
 
