@@ -19,6 +19,9 @@ public class Hilo extends Thread{
         this.nVueltas = nVueltas;
     }
 
+    /**
+     * Método run
+     */
     public void run(){
         if(tipoHilo == true){
             for (int i=0; i<nVueltas; ++i) {

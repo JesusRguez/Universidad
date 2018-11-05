@@ -11,6 +11,9 @@ public class usaTodo{
     public static Scanner teclado = new Scanner(System.in);
     public static ArrayList<Punto> entrada;
 
+    /**
+     * Método que gestiona las operaciones del triángulo
+     */
     public static void controlaTriangulo(){
         int opcion;
         System.out.println("Introduzca los puntos del triángulo:");
@@ -54,6 +57,9 @@ public class usaTodo{
         } while (opcion != 6);
     }
 
+    /**
+     * Método que gestiona las operaciones del cuadrado
+     */
     public static void controlaCuadrado(){
         int opcion;
         System.out.println("Introduzca los puntos del cuadrado:");
@@ -97,6 +103,9 @@ public class usaTodo{
         } while (opcion != 6);
     }
 
+    /**
+     * Método que gestiona las operaciones del pentágono
+     */
     public static void controlaPentagono(){
         int opcion;
         System.out.println("Introduzca los puntos del pentágono:");
@@ -140,6 +149,9 @@ public class usaTodo{
         } while (opcion != 6);
     }
 
+    /**
+     * Método que gestiona las operaciones del hexágono
+     */
     public static void controlaHexagono(){
         int opcion;
         System.out.println("Introduzca los puntos del hexágono:");

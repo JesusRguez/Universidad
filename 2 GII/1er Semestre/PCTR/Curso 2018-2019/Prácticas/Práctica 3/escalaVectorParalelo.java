@@ -13,7 +13,7 @@ public class escalaVectorParalelo extends Thread{
     static int eleccion, f;
 
     /**
-     * Constructro de escalaVectorParalelo
+     * Constructor de escalaVectorParalelo
      * @param n        Número de elementos del vector
      * @param eleccion Eleccion de suma/resta
      * @param f        Factor de escalado
@@ -25,6 +25,9 @@ public class escalaVectorParalelo extends Thread{
         t = n;
     }
 
+    /**
+     * Método run
+     */
     public void run(){
         r = new int[t];
 

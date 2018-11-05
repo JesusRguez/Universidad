@@ -13,6 +13,15 @@ public class matVectorConcurrente implements Runnable{
     static int filas, columnas, tvector;
     int filaControl;
 
+    /**
+     * Constructor de matVectorConcurrente
+     * @param filas       Filas de la matriz
+     * @param columnas    Columnas de la matriz
+     * @param tvector     Tamaño del vector
+     * @param matriz      Matriz inicial
+     * @param vector      Vector inicial
+     * @param filaControl Fila que controlará el hilo en la concurrencia
+     */
     public matVectorConcurrente(int filas, int columnas, int tvector, double[][] matriz, double[] vector, int filaControl){
         matVectorConcurrente.filas = filas;
         matVectorConcurrente.columnas = columnas;
@@ -26,12 +35,19 @@ public class matVectorConcurrente implements Runnable{
         }
     }
 
+    /**
+     * Método run
+     */
     public void run(){
         for (int i=0; i<columnas; ++i) {
             res[filaControl] += m[filaControl][i] * v[i];
         }
     }
 
+    /**
+     * Método para imprimir un vector
+     * @param v Vector a imprimir
+     */
     public static void imprimeVector(double[] v){
         for (int i=0; i<v.length; ++i) {
             System.out.print(v[i]+"   ");

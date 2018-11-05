@@ -7,6 +7,12 @@ import java.util.*;
 
 public class prodMat{
 
+    /**
+     * Método para multipilicar dos matrices
+     * @param  m1 Primera matriz
+     * @param  m2 Segunda matriz
+     * @return    Retorna una matriz "res" como resultado de la multipilcación de las matrices anteriores
+     */
     public static double[][] producto(double[][] m1, double[][] m2){
         double[][] res = new double[m1.length][m2.length];
         for (int i=0; i<res.length; ++i) {
@@ -20,6 +26,10 @@ public class prodMat{
         return res;
     }
 
+    /**
+     * Método para imprimir una matriz
+     * @param m Matriz a imprimir
+     */
     public static void imprimeMatriz(double[][] m){
         for (int i=0; i<m.length; ++i) {
             for (int j=0; j<m[i].length; ++j) {

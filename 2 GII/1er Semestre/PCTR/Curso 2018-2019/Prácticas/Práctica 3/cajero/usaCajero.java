@@ -22,6 +22,9 @@ public class usaCajero extends Cajero implements Runnable{
         this. cantidad = cantidad;
     }
 
+    /**
+     * Método run
+     */
     public void run(){
         switch(tipoOperacion){
             case 0:

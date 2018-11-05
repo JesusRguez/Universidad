@@ -7,6 +7,12 @@ import java.util.*;
 
 public class matVector{
 
+    /**
+     * Método para multiplicar la matriz por el vector
+     * @param  m Matriz a multiplicar
+     * @param  v Vector a multiplicar
+     * @return   Retorna un vector "res" como resultado de la multiplicación de la matriz por el vector
+     */
     public static double[] producto(double[][] m, double[] v){
         double[] res = new double[v.length];
         double aux = 0;
@@ -20,9 +26,13 @@ public class matVector{
         return res;
     }
 
+    /**
+     * Método para imprimir un vector
+     * @param v Vector a imprimir
+     */
     public static void imprimeVector(double[] v){
         for (int i=0; i<v.length; ++i) {
-            System.out.print(v[i]+"   ");
+            System.out.print(v[i]+"\t");
         }
     }
 

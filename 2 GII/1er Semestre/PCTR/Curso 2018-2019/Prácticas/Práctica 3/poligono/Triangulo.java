@@ -35,6 +35,10 @@ public class Triangulo extends Poligono{
         return l1 + l2 + l3;
     }
 
+    /**
+     * Método para calcular el área del triángulo
+     * @return Retorna el área del triángulo
+     */
     public double areaTriangulo(){
         Punto a = figura.get(0);
         Punto b = figura.get(1);
