@@ -137,16 +137,12 @@ public class UsaprodMatConcurrente extends prodMatConcurrente{
                         }
                     }
 
-                    imprimeMatriz(m1);
-
                     m2 = new double[filas2][columnas2];
                     for (int i=0; i<filas2; ++i) {
                         for (int j=0; j<columnas2; ++j) {
                             m2[i][j] = r.nextDouble()*10;
                         }
                     }
-
-                    imprimeMatriz(m2);
 
                     hilos = new UsaprodMatConcurrente[filas1];
                     time_start = System.currentTimeMillis();

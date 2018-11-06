@@ -103,7 +103,7 @@
 
 \section{\texttt{matVector.java}}
 \noindent
-Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mísmo número de columnsa que elementos tiene el vector por el cual se multiplica dicha matriz.
+Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mismo número de columnas que elementos tiene el vector por el cual se multiplica dicha matriz.
 \begin{center}
 	\begin{table}[htbp]
 		\begin{center}
@@ -111,25 +111,23 @@ Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mísmo
 				\hline
 				\textbf{Elementos} & \textbf{\% CPU} & \textbf{Tiempo (s)}  \\
 				\hline 
-				$500$ & 9 & 0.003\\ \hline	
-				$1000$ & 10 & 0.006\\ \hline
-				$1500$ & 12 & 0.009\\ \hline
-				$2000$ & 16 & 0.01\\ \hline
-				$2500$ & 18 & 0.012\\ \hline
-				$3000$ & 20 & 0.014\\ \hline
-				$3500$ & 19 & 0.017\\ \hline
-				$4000$ & 23 & 0.02\\ \hline
-				$4500$ & 25 & 0.024\\ \hline
-				$5000$ & 30 & 0.029\\ \hline				
-				$10000$ & 35 & 0.097\\ \hline	
+				$500$ & 13 & 0.014\\ \hline	
+				$1000$ & 17 & 0.011\\ \hline
+				$1500$ & 19 & 0.013\\ \hline
+				$2000$ & 21 & 0.015\\ \hline
+				$2500$ & 31 & 0.016\\ \hline
+				$3000$ & 32 & 0.021\\ \hline
+				$3500$ & 38 & 0.024\\ \hline
+				$4000$ & 47 & 0.026\\ \hline
+				$4500$ & 58 & 0.034\\ \hline
+				$5000$ & 64 & 0.04\\ \hline				
+				$10000$ & 100 & 0.126\\ \hline	
 			\end{tabular}
 			\caption{Valores de matVector.}
 			\label{tabla:Valores de matVector}
 		\end{center}
 	\end{table}
 \end{center}
-\noindent
-Con valores superiores a los de la tabla, no obtenemos resultados debido a que excedemos la memoria de la máquina virtual de java.
 \newpage
 \begin{figure}
 	\begin{center}
@@ -150,25 +148,23 @@ Para las pruebas realizadas, hemos utilizado una matriz cuadrada con el mismo n�
 				\hline
 				\textbf{Elementos} & \textbf{\% CPU} & \textbf{Tiempo (s)}  \\
 				\hline 
-				$500$ & 25 & 0.019\\ \hline	
-				$1000$ & 31 & 0.192\\ \hline
-				$1500$ & 35 & 0.154\\ \hline
-				$2000$ & 52 & 0.297\\ \hline
-				$2500$ & 49 & 0.216\\ \hline
-				$3000$ & 57 & 0.394\\ \hline
-				$3500$ & 68 & 0.374\\ \hline
-				$4000$ & 52 & 0.402\\ \hline
-				$4500$ & 75 & 0.427\\ \hline
-				$5000$ & 88 & 0.506\\ \hline				
-				$10000$ & 100 & 0.906\\ \hline	
+				$500$ & 18 & 0.093\\ \hline	
+				$1000$ & 20 & 0.096\\ \hline
+				$1500$ & 24 & 0.133\\ \hline
+				$2000$ & 23 & 0.186\\ \hline
+				$2500$ & 22 & 0.216\\ \hline
+				$3000$ & 36 & 0.232\\ \hline
+				$3500$ & 46 & 0.276\\ \hline
+				$4000$ & 47 & 0.269\\ \hline
+				$4500$ & 49 & 0.32\\ \hline
+				$5000$ & 43 & 0.356\\ \hline				
+				$10000$ & 100 & 0.795\\ \hline	
 			\end{tabular}
 			\caption{Valores de matVectorConcurrente.}
 			\label{tabla:Valores de matVectorConcurrente}
 		\end{center}
 	\end{table}
 \end{center}
-\noindent
-Con valores superiores a los de la tabla obtendremos un 100\% de uso de CPU y el tiempo irá aumentando hasta el punto en el que no entre en la memoria de la máquina virtual de java.
 \begin{figure}
 	\begin{center}
 %		\includegraphics[scale=1]{matVectorConcurrente.png}
@@ -181,7 +177,7 @@ Con valores superiores a los de la tabla obtendremos un 100\% de uso de CPU y el
 \newpage
 \section{\texttt{prodMat.java}}
 \noindent
-Para las pruebas realizadas, hemos usado matrices cuadradas.
+Para las pruebas realizadas hemos usado matrices cuadradas.
 \begin{center}
 	\begin{table}[htbp]
 		\begin{center}
@@ -189,11 +185,11 @@ Para las pruebas realizadas, hemos usado matrices cuadradas.
 				\hline
 				\textbf{Elementos} & \textbf{\% CPU} & \textbf{Tiempo (s)}  \\
 				\hline 
-				$500$ & 19 & 0.282\\ \hline	
-				$1000$ & 34 & 10.13\\ \hline
-				$1500$ & 37 & 44.212\\ \hline
-				$2000$ & 40 & 112.759\\ \hline
-				$2500$ & 48 & 259.564\\ \hline
+				$500$ & 36 & 0.395\\ \hline	
+				$1000$ & 100 & 15.982\\ \hline
+				$1500$ & 100 & 63.443\\ \hline
+				$2000$ & 100 & 159.822\\ \hline
+				$2500$ & 100 & 323.924\\ \hline
 			\end{tabular}
 			\caption{Valores de prodMat.}
 			\label{tabla:Valores de prodMat}
@@ -222,9 +218,13 @@ Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea
 				\hline
 				\textbf{Elementos} & \textbf{\% CPU} & \textbf{Tiempo (s)}  \\
 				\hline 
-				$25$ & 33 & 0.052\\ \hline
-				$50$ & 63 & 0.19\\ \hline
-				$100$ & 99 & 0.839\\ \hline	
+				$25$ & 24 & 0.083\\ \hline
+				$50$ & 17 & 0.211\\ \hline
+				$100$ & 34 & 0.738\\ \hline	
+				$200$ & 53 & 3.609 \\ \hline 
+				$300$ & 66 & 13.348 \\ \hline 
+				$400$ & 69 & 37.195 \\ \hline 
+				$500$ & 74 & 90.705\\ \hline
 			\end{tabular}
 			\caption{Valores de prodMatConcurrente.}
 			\label{tabla:Valores de prodMatConcurrente}
@@ -232,7 +232,7 @@ Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea
 	\end{table}
 \end{center}
 \noindent
-Debido al uso de excesivos hilos, si aumentamos el numero de filas/columnas a más de 100, el programa no ejecuta debido a que crea un hilo por elemento de la matriz resultante, por lo que satura la memoria de la máquina virtual de java.
+Debido al uso de excesivos hilos, si aumentamos el numero de filas/columnas a más de 500, el programa tarda mucho en ejecutarse y con la batería de pruebas mostrada se ve el crecimiento que tiene.
 \begin{figure}
 	\begin{center}
 %		\includegraphics[scale=1]{prodMatConcurrente.png}
@@ -241,49 +241,10 @@ Debido al uso de excesivos hilos, si aumentamos el numero de filas/columnas a m�
 	\end{center}	
 \end{figure}
 
-
-\newpage
-\section{\texttt{prodMatAHiloPorFila.java}}
-\noindent
-Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea un hilo por cada fila de la matriz inicial, por lo que no genera tantísimos hilos como el algoritmo anterior.
-\begin{center}
-	\begin{table}[htbp]
-		\begin{center}
-			\begin{tabular}{|c|c|c|}
-				\hline
-				\textbf{Elementos} & \textbf{\% CPU} & \textbf{Tiempo (s)}  \\
-				\hline 
-				$500$ & 72 & 0.274\\ \hline	
-				$1000$ & 88 & 1.756\\ \hline
-				$1500$ & 81 & 5.172\\ \hline
-				$2000$ & 92 & 12.37\\ \hline
-				$2500$ & 98 & 25.733\\ \hline
-				$3000$ & 100 & 49.419\\ \hline
-				$3500$ & 84 & 105.38\\ \hline
-				$4000$ & 94 & 191.47\\ \hline
-				$4500$ & 100 & 344.6\\ \hline	
-			\end{tabular}
-			\caption{Valores de prodMatAHiloPorFila.}
-			\label{tabla:Valores de prodMatAHiloPorFila}
-		\end{center}
-	\end{table}
-\end{center}
-\noindent
-Si aumentamos el número de filas/columnas a mas de 4500, el programa tarda demasiado tiempo como para ser viable. Aún así, tarda mucho menos y no satura la memoria de la máquina virtual de java en comparación con su versión de hilo por elemento de la matriz resultante.
-\begin{figure}
-	\begin{center}
-%		\includegraphics[scale=1]{prodMatAHiloPorFilaf.png}
-		\caption{prodMatAHiloPorFila.}
-		\label{fig: prodMatAHiloPorFila}
-	\end{center}	
-\end{figure}
-
-
 \newpage
 \section{Impresiones recabadas}
 \noindent
 Viendo los resultado obtenidos en las pruebas de los diversos algoritmos, podemos darnos cuenta de que el hecho de crear más hilos, no nos determina la velocidad con la que se ejecutará un programa.\\
-Esto es así, debido a que la creación de hilos, nos genera un coste en tiempo y en memoria que puede ser crucial en otros aspectos.\\
-El caso más evidente donde podemos contrastar lo descrito en este apartado lo tenemos a simple vista en los algoritmos \texttt{prodMatConcurrente.java} (donde creamos un hilo por elemento de la matriz resultante) y \texttt{prodMatAHiloPorFila.java} (donde creamos un hilo por fila de la primera matriz). En estos algoritmos que, hacen exáctamente lo mismo, podemos ver que tener un mayor número de hilos, no nos asegura una mayor velocidad ya que, aparte de la velocidad, la memoria, es un elemento a tener muy en cuenta, ya que en el primero se satura con algo más de 100 elementos, mientras que el segundo acepta más de 4500 y no da problemas respecto a la memoria.
+Esto es así, debido a que la creación de hilos, nos genera un coste de tiempo y de memoria que puede ser crucial en otros aspectos.
 
 \end{document}
