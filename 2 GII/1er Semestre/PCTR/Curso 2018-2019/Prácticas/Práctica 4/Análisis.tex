@@ -102,7 +102,7 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
 \section{\texttt{matVector.java}}
-\noindent
+
 Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mismo número de columnas que elementos tiene el vector por el cual se multiplica dicha matriz.
 \begin{center}
 	\begin{table}[htbp]
@@ -128,10 +128,9 @@ Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mismo 
 		\end{center}
 	\end{table}
 \end{center}
-\newpage
-\begin{figure}
+\begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{matVector.png}
+		\includegraphics[scale=0.8]{matVector.png}
 		\caption{Gráfica de matVector.}
 		\label{fig: matVector}
 	\end{center}
@@ -139,8 +138,8 @@ Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mismo 
 
 \newpage
 \section{\texttt{matVectorConcurrente.java}}
-\noindent
-Para las pruebas realizadas, hemos utilizado una matriz cuadrada con el mismo número de columnas que elementos tiene el vector por el cual se multiplica dicha matriz.
+
+Para las pruebas realizadas, hemos utilizado una matriz cuadrada con el mismo número de columnas que elementos tiene el vector por el cual se multiplica dicha matriz. Este algoritmo crea un hilo por cada elemento del vector resultante.
 \begin{center}
 	\begin{table}[htbp]
 		\begin{center}
@@ -165,18 +164,17 @@ Para las pruebas realizadas, hemos utilizado una matriz cuadrada con el mismo n�
 		\end{center}
 	\end{table}
 \end{center}
-\begin{figure}
+\begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{matVectorConcurrente.png}
+		\includegraphics[scale=0.8]{matVectorConcurrente.png}
 		\caption{Gráfica de matVectorConcurrente.}
 		\label{fig: matVectorConcurrente}
 	\end{center}	
 \end{figure}
 
-
 \newpage
 \section{\texttt{prodMat.java}}
-\noindent
+
 Para las pruebas realizadas hemos usado matrices cuadradas.
 \begin{center}
 	\begin{table}[htbp]
@@ -196,11 +194,12 @@ Para las pruebas realizadas hemos usado matrices cuadradas.
 		\end{center}
 	\end{table}
 \end{center}
-\noindent
+
 Viendo como va evolucionando la tabla, poner más valores es innecesario, ya que sería inviable para valores más altos.
-\begin{figure}
+
+\begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{prodMat.png}
+		\includegraphics[scale=0.8]{prodMat.png}
 		\caption{Gráfica de prodMat.}
 		\label{fig: prodMat}
 	\end{center}	
@@ -209,8 +208,8 @@ Viendo como va evolucionando la tabla, poner más valores es innecesario, ya que
 
 \newpage
 \section{\texttt{prodMatConcurrente.java}}
-\noindent
-Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea un hilo por cada elemento de la matriz resultante.
+
+Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea un hilo por cada fila de la matriz resultante.
 \begin{center}
 	\begin{table}[htbp]
 		\begin{center}
@@ -224,27 +223,31 @@ Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea
 				$200$ & 53 & 3.609 \\ \hline 
 				$300$ & 66 & 13.348 \\ \hline 
 				$400$ & 69 & 37.195 \\ \hline 
-				$500$ & 74 & 90.705\\ \hline
+				$500$ & 74 & 114.118\\ \hline
+				$1000$ & 84 & 1775.674 \\ \hline
 			\end{tabular}
 			\caption{Valores de prodMatConcurrente.}
 			\label{tabla:Valores de prodMatConcurrente}
 		\end{center}
 	\end{table}
 \end{center}
-\noindent
+
 Debido al uso de excesivos hilos, si aumentamos el numero de filas/columnas a más de 500, el programa tarda mucho en ejecutarse y con la batería de pruebas mostrada se ve el crecimiento que tiene.
-\begin{figure}
+\begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{prodMatConcurrente.png}
-		\caption{prodMatConcurrente.}
-		\label{fig: prodMatConcurrente}
+		\includegraphics[scale=0.8]{prodMatConcurrente.png}
+		\caption{Gráfica de prodMatConcurrente.}
+		\label{fig: Gráfica de prodMatConcurrente}
 	\end{center}	
 \end{figure}
 
 \newpage
 \section{Impresiones recabadas}
-\noindent
-Viendo los resultado obtenidos en las pruebas de los diversos algoritmos, podemos darnos cuenta de que el hecho de crear más hilos, no nos determina la velocidad con la que se ejecutará un programa.\\
+
+Viendo los resultado obtenidos en las pruebas de los diversos algoritmos, podemos deducir que el hecho de crear más hilos, no nos determina la velocidad con la que se ejecutará un programa.
+
 Esto es así, debido a que la creación de hilos, nos genera un coste de tiempo y de memoria que puede ser crucial en otros aspectos.
+
+El ejemplo más claro lo obtenemos entre los algoritmos \texttt{prodMat.java} y\\ \texttt{prodMatConcurrente.java} donde, con dos matrices de $1000x1000$ elementos, en el primero de ellos (secuencial) tardamos 15.982 segundos, mientras que en el segundo (concurrente) tardamos 1775.674 segundos.
 
 \end{document}
