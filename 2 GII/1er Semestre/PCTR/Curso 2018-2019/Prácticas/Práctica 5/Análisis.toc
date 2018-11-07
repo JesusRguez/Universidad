@@ -1,0 +1,3 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}\texttt {algDekker.java}}{3}{section.1}
+\contentsline {section}{\numberline {2}\texttt {algEisenbergMcGuire.java}}{3}{section.2}
