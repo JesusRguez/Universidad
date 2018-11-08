@@ -1,0 +1,49 @@
+\begin{lstlisting}
+void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth,
+                                    int nCellsHeight, float mapWidth,
+                                    float mapHeight,
+                                    std::list<Object*> obstacles,
+                                    std::list<Defense*> defenses)
+{
+    int fila = 0, columna = 0;
+    float x = 0, y = 0;
+    float** cellValues = new float*[nCellsHeight];
+    
+		for(int i = 0; i < nCellsHeight; ++i)
+	    cellValues[i] = new float[nCellsWidth];
+
+    float cellWidth = mapWidth / nCellsWidth;
+    float cellHeight = mapHeight / nCellsHeight;
+
+    for(int i = 0; i < nCellsHeight; i++)
+  		for(int j = 0; j < nCellsWidth; j++)
+  			cellValues[i][j] = cellValue(i, j, freeCells, nCellsWidth, nCellsHeight,
+  				mapWidth,mapHeight,cellWidth, cellHeight, obstacles, defenses);
+
+    int maxAttemps = 1000;
+
+    List<Defense*>::iterator currentDefense = defenses.begin();
+
+    while(currentDefense == defenses.begin() and maxAttemps > 0)
+    {
+        seleccion(cellValues, nCellsWidth, nCellsHeight, &fila, &columna);
+
+        x = fila*cellWidth + cellWidth/2;
+        y = columna*cellHeight + cellHeight/2;
+
+        if(factible(x, y, (*currentDefense)->radio, mapWidth, mapHeight,
+           cellWidth,cellHeight,obstacles, defenses))
+        {
+            (*currentDefense)->position.x = x;
+            (*currentDefense)->position.y = y;
+            (*currentDefense)->position.z = 0;
+
+            cellValueDefensas(cellValues, nCellsWidth, nCellsHeight,cellWidth,
+              cellHeight,mapWidth,mapHeight,defenses);
+
+            currentDefense++;
+        }
+        maxAttemps--;
+    }
+    //Resto de codigo no perteneciente al centro de extraccion.
+\end{lstlisting}

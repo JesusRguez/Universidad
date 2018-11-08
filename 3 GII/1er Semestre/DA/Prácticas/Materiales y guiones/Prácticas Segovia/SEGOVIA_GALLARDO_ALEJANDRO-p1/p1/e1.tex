@@ -1,0 +1,35 @@
+La estrategia que he seguido se ha basado en la evaluación de la fila y columna
+que reciben la función cellValue por parámetros y su puntuación en funcion de
+su distancia al centro del mapa concreto(a mayor distancia menor puntuación)
+y aumentando su puntuacion en función de su cercania a los obstaculos que puedan
+existir en el ya mencionado mapa.
+
+\begin{lstlisting}
+float cellValue(int row, int col, bool** freeCells, int nCellsWidth,
+               int nCellsHeight, float mapWidth, float mapHeight,
+               float cellWidth, float cellHeight,
+               List<Object*> obstacles, List<Defense*> defenses)
+{
+    float proximidad = 0;
+    Vector3 dst,obj;
+    dst.x = (nCellsWidth/2) * cellWidth + (cellWidth/2) - row * cellWidth +
+              (cellWidth/2);
+    dst.y = (nCellsHeight/2) * cellHeight + (cellHeight/2) - col * cellHeight +
+            (cellHeight/2);
+
+    for(std::list<Object*>::const_iterator it = obstacles.begin();
+        it != obstacles.end();it++)
+        {
+        obj.x = (*it)->position.x - row * cellWidth + cellWidth/2;
+        obj.y = (*it)->position.y - col * cellHeight + cellHeight/2;
+        if((*it)->radio * 1.5 < obj.length())
+          proximidad += 1;
+        if((*it)->radio * 2 < obj.length())
+          proximidad += 0.5;
+        if((*it)->radio * 1.1 < obj.length())
+          proximidad += 0.5;
+        }
+    return  std::max(mapWidth,mapHeight) - dst.length() + proximidad;
+}
+
+\end{lstlisting}

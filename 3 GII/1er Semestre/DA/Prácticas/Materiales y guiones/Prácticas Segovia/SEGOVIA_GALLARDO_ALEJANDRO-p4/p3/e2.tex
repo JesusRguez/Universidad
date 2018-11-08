@@ -1,0 +1,50 @@
+\begin{lstlisting}
+std::vector<Defensas> fusion(const std::vector<Defensas>& v1,
+                        const std::vector<Defensas>& v2)
+{
+    std::vector<Defensas> aux(v1.size() + v2.size());
+    int i, j, k;
+    i = j = k = 0;
+    while(i < v1.size() and j < v2.size()) {
+        if(v1[i].puntuacion <= v2[j].puntuacion) {
+            aux[k].puntuacion = v1[i].puntuacion;
+            ++i;
+        }
+        else {
+            aux[k].puntuacion = v2[j].puntuacion;
+            ++j;
+        }
+        ++k;
+    }
+    while(i < v1.size()) {
+        aux[k].puntuacion = v1[i].puntuacion;
+        ++k;
+        ++i;
+    }
+    while(j < v2.size()) {
+        aux[k].puntuacion = v2[j].puntuacion;
+        ++k;
+        ++j;
+    }
+    return aux;
+}
+
+void ordenacionFusion(std::vector<Defensas>& v)
+{
+  int m = v.size()/2;
+  if(m != 0) {
+      std::vector<Defensas> aux1(m);
+      for(int i = 0; i < aux1.size() - 1; ++i)
+          aux1[i].puntuacion = v[i].puntuacion;
+
+      std::vector<Defensas> aux2(v.size()-aux1.size());
+      for(int i = 0; i < aux2.size() - 1; ++i)
+        aux1[i].puntuacion = v[aux1.size()+i].puntuacion;
+
+        ordenacionFusion(aux1);
+        ordenacionFusion(aux2);
+        v = fusion(aux1, aux2);
+  }
+}
+
+\end{lstlisting}

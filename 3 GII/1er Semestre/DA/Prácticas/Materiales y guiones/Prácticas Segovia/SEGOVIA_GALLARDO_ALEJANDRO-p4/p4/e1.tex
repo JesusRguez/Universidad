@@ -1,0 +1,9 @@
+Mi algoritmo está basado en el algoritmo visto en clase de A*, para ello, me he basado en las estructuras definidas en Asedio.h, creando asi las siguientes estructuras para la implementación del algoritmo:
+
+AStarNode* abiertos: Un vector del tipo AStarNode para llevar el control de los nodos abriertos, el cual ordenaremos en cada iteración del algoritmo para mejora el camino.
+
+AStarNode* cerrados: Otro vector del mismo tipo que el anterior, el cual usaremos para insertar los nodos ya visitados, evitando asi la reevaluación de los nodos.
+
+AStarNode* current: Estructura del tipo AStarNode donde almacenaremos el nodo que estamos evaluando en todo momento.
+
+El funcionamiento del algoritmo de A* es el siguiente: Partiendo del nodo de origen, iremos expandiendo todos sus nodos hijos (se encontraran en el vector de abiertos), y siempre eligiendo la mejor opcion tras un análisis, y cambiando siempre el nodo current por el que estamos evaluando actualmente tras el análisis, los nodos ya visitados se irán guardando en el vector de nodos cerrados y cuando finaliza el analisis de todos los nodos hasta llegar al nodo destino, se produce un bucle para la recuperación del camino.

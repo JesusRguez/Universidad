@@ -1,0 +1,40 @@
+La función de factibilidad de mi algoritmo está basada en que dada una posición
+del mapa concreta dada observar si pertenece a los limites del mapa dado o si
+presenta algún conflicto de posición con algun obstaculo/defensa colocada ya en
+el tablero. En el caso de que no peresente alguna incidencia de las ya
+mencionadas, retornara un valor booleano verdadero, en caso contrario, será
+falso
+
+\begin{lstlisting}
+bool factible(float x, float y, float rDef, float mapWidth,
+                  float mapHeight, float cellWidth,
+                  float cellHeight,std::list<Object*> obstacles,
+                  std::list<Defense*> defenses)
+{
+
+    if (x - rDef  < 0 || x + rDef > mapWidth ||y - rDef< 0 ||
+        y + rDef > mapHeight)
+          return false;
+
+    Vector3 dst;
+    for(std::list<Object*>::const_iterator obs = obstacles.begin();
+        obs != obstacles.end();obs++)
+    {
+      dst.x = (*obs)->position.x - x;
+      dst.y = (*obs)->position.y - y;
+      if(dst.length() - (*obs)->radio - rDef <= 0)
+        return false;
+    }
+
+    for(std::list<Defense*>::const_iterator defensaconst = defenses.begin();
+        defensaconst != defenses.end();defensaconst++)
+    {
+      dst.x = (*defensaconst)->position.x - x;
+      dst.y = (*defensaconst)->position.y - y;
+      if(dst.length() - (*defensaconst)->radio - rDef <= 0)
+        return false;
+    }
+
+    return true;
+}
+\end{lstlisting}

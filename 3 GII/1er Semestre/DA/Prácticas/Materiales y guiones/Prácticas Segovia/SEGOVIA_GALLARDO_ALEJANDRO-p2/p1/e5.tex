@@ -1,0 +1,21 @@
+En esta función he intentado puntuar con mayor valor las celdas mas cercanas en
+linea recta al centro de extracción ya colocado, de manera que estaría anillando
+las posiciones cercanas al centro, tratando de conseguir que las defensas rodeen
+el ya mencionado centro.
+
+\begin{lstlisting}
+void cellValueDefensas(float** cellValue, int  nCellsWidth, int nCellsHeight,
+              float cellWidth, float cellHeight,float mapWidth, float mapHeight,
+              std::list<Defense*> defenses)
+{
+    List<Defense*>::const_iterator centroExtraccion = defenses.begin();
+    Vector3 dst;
+    for(int i = 0; i < nCellsWidth; ++i)
+        for(int j = 0; j < nCellsHeight; ++j)
+        {
+          dst.x = i*cellWidth + cellWidth/2 - (*centroExtraccion)->position.x;
+          dst.y = j*cellHeight + cellHeight/2 - (*centroExtraccion)->position.y;
+          cellValue[i][j] = std::max(mapWidth, mapHeight) - dst.length();
+        }
+}
+\end{lstlisting}

@@ -1,0 +1,28 @@
+\begin{lstlisting}
+void algoritmo_mochila(unsigned int ases, std::list<Defense*> defenses,
+                       float rendimiento[], unsigned int coste[],float** matDef)
+{
+
+  for(int i=0;i<=ases;i++){
+    if(i<coste[0])
+    {
+      matDef[0][i]=0;
+    }
+    else
+    {
+      matDef[0][i]=rendimiento[0];
+    }
+  }
+
+  for(int i=1;i<defenses.size();i++){
+  for(int j=0;j<=ases;j++)
+    if(j<coste[i])
+      matDef[i][j]=matDef[i-1][j];
+
+    else
+      matDef[i][j]=std::max(matDef[i-1][j], matDef[i-1][j-coste[i]] +
+                                            rendimiento[i]);
+  }
+
+}
+\end{lstlisting}

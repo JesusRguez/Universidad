@@ -1,0 +1,39 @@
+\begin{lstlisting}
+
+int divide(std::vector<Defensas>& array, int start, int end) {
+  int p = start;
+  float x = array[start].puntuacion;
+  for(int i = start+1; i<=end; i++)
+    if(array[i].puntuacion <= x){
+      p++;
+      Defensas aux = array[i];
+      array[i] = array[p];
+      array[p] = aux;
+    }
+  Defensas array_aux = array[start];
+  array[start] = array[p];
+  array[p].x = array_aux.x;
+  array[p].y = array_aux.y;
+  array[p].puntuacion = x;
+}
+
+
+void quicksort(std::vector<Defensas>& array, int start, int end)
+{
+    int n = end - start + 1;
+    if(n <= 2){
+      std::sort(array.begin(),array.end());
+    }
+    else{
+
+        int pivot = divide(array, start, end);
+
+        // Ordeno la lista de los menores
+        quicksort(array, start, pivot - 1);
+
+        // Ordeno la lista de los mayores
+        quicksort(array, pivot + 1, end);
+    }
+}
+
+\end{lstlisting}
