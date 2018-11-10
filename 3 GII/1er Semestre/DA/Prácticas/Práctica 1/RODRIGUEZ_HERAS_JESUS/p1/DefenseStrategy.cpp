@@ -40,20 +40,20 @@ float cellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsH
 
 	float proximidad = 0;
     Vector3 dst,obj;
-    dst.x = (nCellsWidth/2) * cellWidth + (cellWidth/2) - row * cellWidth +(cellWidth/2);
-    dst.y = (nCellsHeight/2) * cellHeight + (cellHeight/2) - col * cellHeight +(cellHeight/2);
+    dst.x = (nCellsWidth*0.5f) * cellWidth + (cellWidth*0.5f) - row * cellWidth +(cellWidth*0.5f);
+    dst.y = (nCellsHeight*0.5f) * cellHeight + (cellHeight*0.5f) - col * cellHeight +(cellHeight*0.5f);
 
     for(std::list<Object*>::const_iterator it = obstacles.begin();
         it != obstacles.end();it++)
         {
-        obj.x = (*it)->position.x - row * cellWidth + cellWidth/2;
-        obj.y = (*it)->position.y - col * cellHeight + cellHeight/2;
+        obj.x = (*it)->position.x - row * cellWidth + cellWidth*0.5f;
+        obj.y = (*it)->position.y - col * cellHeight + cellHeight*0.5f;
         if((*it)->radio * 1.5 < obj.length())
           proximidad += 1;
         if((*it)->radio * 2 < obj.length())
           proximidad += 0.5;
         if((*it)->radio * 1.1 < obj.length())
-          proximidad += 0.5;
+          proximidad += 0.25;
         }
     return  std::max(mapWidth,mapHeight) - dst.length() + proximidad;
 }
