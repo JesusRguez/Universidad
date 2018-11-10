@@ -1,4 +1,4 @@
-BASE_DIR = RODRIGUEZ_HERAS_JESUS
+BASE_DIR = APELLIDO1_APELLIDO2_NOMBRE
 TAR_NAME = practicas-da
 
 ####################### FIN CONFIGURACION ###########################

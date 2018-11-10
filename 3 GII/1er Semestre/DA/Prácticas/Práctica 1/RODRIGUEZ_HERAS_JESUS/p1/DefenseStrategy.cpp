@@ -19,12 +19,6 @@ RAND_TYPE SimpleRandomGenerator::a;
 
 using namespace Asedio;
 
-float cellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsHeight
-	, float mapWidth, float mapHeight, List<Object*> obstacles, List<Defense*> defenses) {
-	return 0; // implemente aqui la funci�n que asigna valores a las celdas
-	//Aqui es donde va mi estrategia devoradora que es la que hay que programar y entregar, y sera llamada n*n veces en funcion del numero de celdas
-}
-
 // Devuelve la posición en el mapa del centro de la celda (i,j)
 // i - fila
 // j - columna
@@ -40,76 +34,81 @@ Vector3 cellCenterToPosition(int i, int j, float cellWidth, float cellHeight){ r
 // cellHeight - alto de las celdas
 void positionToCell(const Vector3 pos, int &i_out, int &j_out, float cellWidth, float cellHeight){ i_out = (int)(pos.y * 1.0f/cellHeight); j_out = (int)(pos.x * 1.0f/cellWidth); }
 
-bool factibilidad(int fila, int columna, Defense* defensa, std::list<Object*> obstaculos, float mapWidth, float mapHeight, std::list<Defense*> defensas, int nCellsWidth, int nCellsHeight){
+float cellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, float cellWidth, float cellHeight, List<Object*> obstacles, List<Defense*> defenses) {
+
+	//CAMBIAR
+
+	float proximidad = 0;
+    Vector3 dst,obj;
+    dst.x = (nCellsWidth/2) * cellWidth + (cellWidth/2) - row * cellWidth +(cellWidth/2);
+    dst.y = (nCellsHeight/2) * cellHeight + (cellHeight/2) - col * cellHeight +(cellHeight/2);
+
+    for(std::list<Object*>::const_iterator it = obstacles.begin();
+        it != obstacles.end();it++)
+        {
+        obj.x = (*it)->position.x - row * cellWidth + cellWidth/2;
+        obj.y = (*it)->position.y - col * cellHeight + cellHeight/2;
+        if((*it)->radio * 1.5 < obj.length())
+          proximidad += 1;
+        if((*it)->radio * 2 < obj.length())
+          proximidad += 0.5;
+        if((*it)->radio * 1.1 < obj.length())
+          proximidad += 0.5;
+        }
+    return  std::max(mapWidth,mapHeight) - dst.length() + proximidad;
+}
+
+bool factibilidad(float x, float y, Defense* defensa, std::list<Object*> obstaculos, float mapWidth, float mapHeight, std::list<Defense*> defensas, float cellWidth, float cellHeight){
+
 	bool entra = true;
-	float cellWidth = mapWidth / nCellsWidth;
-    float cellHeight = mapHeight / nCellsHeight;
-	Vector3 posicionDefensa = cellCenterToPosition(fila, columna, cellWidth, cellHeight);
-	if (posicionDefensa.x-defensa->radio < 0 || posicionDefensa.x+defensa->radio > mapWidth || posicionDefensa.y-defensa->radio < 0 || posicionDefensa.y+defensa->radio > 0) {
-		entra = false;//no cabe porque se sale de los límites del mapa
-	}else{
-		std::list<Object*>::const_iterator i = obstaculos.begin();
-		std::list<Defense*>::const_iterator j = defensas.begin();
-		while (i!=obstaculos.end()) {
-			if ((defensa->radio + (*i)->radio) > (_distance(posicionDefensa, (*i)->position))) {
-				entra = false;
-			}else{
-				while (j!=defensas.end()) {
-					if ((defensa->radio + (*j)->radio) > (_distance(posicionDefensa, (*j)->position))) {
-						entra = false;
-					}
-					++j;
-				}
-			}
-			++i;
-		}
+	if (x-defensa->radio < 0 || x+defensa->radio > mapWidth || y-defensa->radio < 0 || y+defensa->radio > mapHeight) {
+		entra = false; //No cabe porque se sale de los límites del mapa
 	}
+
+	std::list<Object*>::const_iterator iterObst = obstaculos.begin();
+	std::list<Defense*>::const_iterator iterDef = defensas.begin();
+	Vector3 posicionDefensa(x, y, 0);
+	while (iterObst!=obstaculos.end()) {
+		if ((defensa->radio + (*iterObst)->radio) > (_distance(posicionDefensa, (*iterObst)->position))) {
+			entra = false; //Se choca con un obsaculo
+		}else{
+			while (iterDef!=defensas.end()) {
+				if ((defensa->radio + (*iterDef)->radio) > (_distance(posicionDefensa, (*iterDef)->position))) {
+					entra = false; //Se choca con una defensa
+				}
+				++iterDef;
+			}
+		}
+		++iterObst;
+	}
+
 	return entra;
 }
 
-void seleccion(float** mapa, int nCellsHeight, int nCellsWidth, int* fila, int* columna){
-	//Ahora la cuestión es seleccionar la celda que mejor se adapta a nuestras especificaciones
-	int maxi = 0;
-	for (size_t i = 0; i < nCellsHeight; ++i) {
-		for (size_t j = 0; j < nCellsWidth; ++j) {
+void seleccion(float** mapa, int nCellsWidth, int nCellsHeight, int* fila, int* columna){
+	float maxi = 0;
+	for (size_t i = 0; i < nCellsWidth; ++i) {
+		for (size_t j = 0; j < nCellsHeight; ++j) {
 			if (mapa[i][j] > maxi) {
 				maxi = mapa[i][j];
-				mapa[i][j] = 0;
 				*fila = i;
 				*columna = j;
 			}
 		}
 	}
+	mapa[*fila][*columna] = 0;
 }
 
-void inicializarMapa(float** mapa, int nCellsHeight, int nCellsWidth){
-	/*for (size_t i = 0; i < mapa.length; ++i) {
-		for (size_t j = 0; j < mapa[i].length ; ++j) {
-	 		mapa[i][j] = 0;
+void cellValueDefensas(float** mapa, int nCellsWidth, int nCellsHeight, float cellWidth, float cellHeight, float mapWidth, float mapHeight, std::list<Defense*> defenses){
+	std::list<Defense*>::const_iterator extractor = defenses.begin();
+	Vector3 distancia;
+	for (size_t i = 0; i < nCellsWidth; ++i) {
+		for (size_t j = 0; j < nCellsHeight; ++j) {
+			distancia.x = i*cellWidth + cellWidth*0.5f - (*extractor)->position.x;
+			distancia.y = j*cellHeight + cellHeight*0.5f - (*extractor)->position.y;
+			mapa[i][j] = std::max(mapWidth, mapHeight) - distancia.length();
 		}
-	}*/
-	//Es para probar. la rellena en espiral de dentro hacia afuera
-	int MAX = nCellsHeight;
-	int i,j,count=1,aux=MAX;
-	for(i = 1; i < MAX; i++) {
-        for( j = i-1; j < aux; j++) {
-            mapa[MAX-(aux+1)][j] = count;
-            count++;
-        }
-        for( j = i-1; j < aux; j++) {
-            mapa[j][aux] = count;
-            count++;
-        }
-        for(j = aux; j >= (i-1); j--) {
-            mapa[aux][j] = count;
-            count++;
-        }
-        aux--;
-        for(j = aux; j >= i; j--) {
-            mapa[j][MAX-(aux+2)] = count;
-            count++;
-        }
-    }
+	}
 }
 
 void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {
@@ -118,56 +117,66 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
     float cellHeight = mapHeight / nCellsHeight;
 
     int maxAttemps = 1000;
-    /*List<Defense*>::iterator currentDefense = defenses.begin();
-    while(currentDefense != defenses.end() && maxAttemps > 0) {
 
-        (*currentDefense)->position.x = ((int)(_RAND2(nCellsWidth))) * cellWidth + cellWidth * 0.5f;
-        (*currentDefense)->position.y = ((int)(_RAND2(nCellsHeight))) * cellHeight + cellHeight * 0.5f;
-        (*currentDefense)->position.z = 0;
-        ++currentDefense;
-    }*/
-
-	// Evaluar las celdas para saber donde colocar la base
 	float** mapa = new float*[nCellsHeight];
 	for (size_t i = 0; i < nCellsHeight; ++i) {
 		mapa[i] = new float[nCellsWidth];
 	}
-	inicializarMapa(mapa, nCellsHeight, nCellsWidth);
 
-	//Defense d;
-	std::list<Defense*> defensesCopia = defenses;
-	std::list<Defense*>::iterator currentDefense = defensesCopia.begin();
-	while (currentDefense != defensesCopia.end() && maxAttemps > 0) {
-		/*int fila = 0, columna = 0;
-		seleccion(mapa, fila, columna);
-		//defenses.remove(d); No puede ser así porque solo tnemos una lista de defensas que no podemos perder
-		//defensesCopia.remove(d);
-		if (factibilidad(fila, columna, currentDefense, obstacles, mapWidth, mapHeight, defenses, nCellsWidth, nCellsHeight)) {
-			//defenses.insert(d); Por la misma razón que antes, debe de ser la misma, sin insertar nada
-			//Es posible que aquí haya que modificar la matriz de freeCells
-			freeCells[fila][columna] = false; //Luego, gracias a la función de factibiliad probaremos si entra la siguiente defensa o no
-		}*/
-		int fila = 0, columna = 0;
-		do {
-			seleccion(mapa, nCellsHeight, nCellsWidth, &fila, &columna);
-		} while(factibilidad(fila, columna, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, nCellsWidth, nCellsHeight));
-		(*currentDefense)->position.x = cellWidth * fila + cellWidth * 0.5f;
-		(*currentDefense)->position.y = cellHeight * columna + cellHeight * 0.5f;
-		++currentDefense;
+	for (size_t i = 0; i < nCellsHeight; ++i) {
+		for (size_t j = 0; j < nCellsHeight; ++j) {
+			mapa[i][j] = cellValue(i, j, freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, cellWidth, cellHeight, obstacles, defenses);
+		}
+	}
+
+
+	std::list<Defense*>::iterator currentDefense = defenses.begin();
+	int fila = 0, columna = 0;
+	float x = 0, y = 0;
+
+	while(currentDefense == defenses.begin() && maxAttemps > 0){
+		seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+		x = fila*cellWidth + cellWidth*0.5f;
+		y = columna*cellHeight + cellHeight*0.5f;
+		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
+			(*currentDefense)->position.x = x;
+			(*currentDefense)->position.y = y;
+			(*currentDefense)->position.z = 0;
+
+			cellValueDefensas(mapa, nCellsWidth, nCellsHeight, cellWidth, cellHeight, mapWidth, mapHeight, defenses);
+
+			++currentDefense;
+		}
+		--maxAttemps;
+	}
+
+	maxAttemps = 1000 * std::max(nCellsWidth,nCellsHeight);
+
+	while (currentDefense != defenses.end() && maxAttemps > 0) {
+		seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+		x = fila*cellWidth + cellWidth*0.5f;
+		y = columna*cellHeight + cellHeight*0.5f;
+		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
+			(*currentDefense)->position.x = x;
+			(*currentDefense)->position.y = y;
+			(*currentDefense)->position.z = 0;
+			++currentDefense;
+		}
+		--maxAttemps;
 	}
 
 #ifdef PRINT_DEFENSE_STRATEGY
 
     float** cellValues = new float* [nCellsHeight];
-    for(int i = 0; i < nCellsHeight; ++i) {
+    for(size_t i = 0; i < nCellsHeight; ++i) {
        cellValues[i] = new float[nCellsWidth];
-       for(int j = 0; j < nCellsWidth; ++j) {
+       for(size_t j = 0; j < nCellsWidth; ++j) {
            cellValues[i][j] = ((int)(cellValue(i, j))) % 256;
        }
     }
     dPrintMap("strategy.ppm", nCellsHeight, nCellsWidth, cellHeight, cellWidth, freeCells, cellValues, std::list<Defense*>(), true);
 
-    for(int i = 0; i < nCellsHeight ; ++i)
+    for(size_t i = 0; i < nCellsHeight ; ++i)
         delete [] cellValues[i];
 	delete [] cellValues;
 	cellValues = NULL;
