@@ -36,26 +36,23 @@ void positionToCell(const Vector3 pos, int &i_out, int &j_out, float cellWidth, 
 
 float cellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, float cellWidth, float cellHeight, List<Object*> obstacles, List<Defense*> defenses) {
 
-	//CAMBIAR
+	float distancia = 0, maxDistancia = 0;
 
-	float proximidad = 0;
-    Vector3 dst,obj;
-    dst.x = (nCellsWidth*0.5f) * cellWidth + (cellWidth*0.5f) - row * cellWidth +(cellWidth*0.5f);
-    dst.y = (nCellsHeight*0.5f) * cellHeight + (cellHeight*0.5f) - col * cellHeight +(cellHeight*0.5f);
+	if (freeCells[row][col] == false) {
+		return 0;
+	}else{
+		Vector3 posibleDefensa = cellCenterToPosition(row, col, cellWidth, cellHeight);
 
-    for(std::list<Object*>::const_iterator it = obstacles.begin();
-        it != obstacles.end();it++)
-        {
-        obj.x = (*it)->position.x - row * cellWidth + cellWidth*0.5f;
-        obj.y = (*it)->position.y - col * cellHeight + cellHeight*0.5f;
-        if((*it)->radio * 1.5 < obj.length())
-          proximidad += 1;
-        if((*it)->radio * 2 < obj.length())
-          proximidad += 0.5;
-        if((*it)->radio * 1.1 < obj.length())
-          proximidad += 0.25;
-        }
-    return  std::max(mapWidth,mapHeight) - dst.length() + proximidad;
+		std::list<Object*>::const_iterator iterObst = obstacles.begin();
+		while (iterObst != obstacles.end()) {
+			distancia = 1/_distance(posibleDefensa,(*iterObst)->position);
+			if (distancia > maxDistancia) {
+				maxDistancia = distancia;
+			}
+			++iterObst;
+		}
+		return maxDistancia;
+	}
 }
 
 bool factibilidad(float x, float y, Defense* defensa, std::list<Object*> obstaculos, float mapWidth, float mapHeight, std::list<Defense*> defensas, float cellWidth, float cellHeight){
