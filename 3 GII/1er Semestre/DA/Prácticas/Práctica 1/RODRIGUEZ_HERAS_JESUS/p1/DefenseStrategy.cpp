@@ -127,10 +127,11 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
 	}
 
 
-	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	int fila = 0, columna = 0;
 	float x = 0, y = 0;
 
+
+	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
 		seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
 		x = fila*cellWidth + cellWidth*0.5f;
@@ -148,7 +149,7 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
 	}
 
 	maxAttemps = 1000 * std::max(nCellsWidth,nCellsHeight);
-
+//std::cout << "TIRA" << '\n';
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
 		seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
 		x = fila*cellWidth + cellWidth*0.5f;
