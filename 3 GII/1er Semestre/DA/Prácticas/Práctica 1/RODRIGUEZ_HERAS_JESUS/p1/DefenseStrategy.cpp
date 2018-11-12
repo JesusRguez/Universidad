@@ -69,7 +69,7 @@ bool factibilidad(float x, float y, Defense* defensa, std::list<Object*> obstacu
 		if ((defensa->radio + (*iterObst)->radio) > (_distance(posicionDefensa, (*iterObst)->position))) {
 			entra = false; //Se choca con un obsaculo
 		}else{
-			while (iterDef!=defensas.end()) {
+			while ((*iterDef)!=defensa) {
 				if ((defensa->radio + (*iterDef)->radio) > (_distance(posicionDefensa, (*iterDef)->position))) {
 					entra = false; //Se choca con una defensa
 				}
@@ -96,14 +96,17 @@ void seleccion(float** mapa, int nCellsWidth, int nCellsHeight, int* fila, int* 
 	mapa[*fila][*columna] = 0;
 }
 
-void cellValueDefensas(float** mapa, int nCellsWidth, int nCellsHeight, float cellWidth, float cellHeight, float mapWidth, float mapHeight, std::list<Defense*> defenses){
-	std::list<Defense*>::const_iterator extractor = defenses.begin();
-	Vector3 distancia;
+void cellValueCentro(float** mapa, int nCellsWidth, int nCellsHeight, float cellWidth, float cellHeight, float mapWidth, float mapHeight, std::list<Defense*> defensas){
+	float x, y, distancia = 0;
+	std::list<Defense*>::const_iterator centro = defensas.begin();
+
 	for (size_t i = 0; i < nCellsWidth; ++i) {
 		for (size_t j = 0; j < nCellsHeight; ++j) {
-			distancia.x = i*cellWidth + cellWidth*0.5f - (*extractor)->position.x;
-			distancia.y = j*cellHeight + cellHeight*0.5f - (*extractor)->position.y;
-			mapa[i][j] = std::max(mapWidth, mapHeight) - distancia.length();
+			x = i*cellWidth + cellWidth*0.5f - (*centro)->position.x;
+			y = j*cellHeight + cellHeight*0.5f - (*centro)->position.y;
+			Vector3 posicionDefensa(x, y, 0);
+			Vector3 posMax(mapWidth, mapHeight, 0);
+			mapa[i][j] = posMax.length() - posicionDefensa.length();
 		}
 	}
 }
@@ -112,7 +115,6 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
 
     float cellWidth = mapWidth / nCellsWidth;
     float cellHeight = mapHeight / nCellsHeight;
-
     int maxAttemps = 1000;
 
 	float** mapa = new float*[nCellsHeight];
@@ -126,10 +128,8 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
 		}
 	}
 
-
 	int fila = 0, columna = 0;
 	float x = 0, y = 0;
-
 
 	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
@@ -141,15 +141,13 @@ void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCell
 			(*currentDefense)->position.y = y;
 			(*currentDefense)->position.z = 0;
 
-			cellValueDefensas(mapa, nCellsWidth, nCellsHeight, cellWidth, cellHeight, mapWidth, mapHeight, defenses);
+			cellValueCentro(mapa, nCellsWidth, nCellsHeight, cellWidth, cellHeight, mapWidth, mapHeight, defenses);
 
 			++currentDefense;
 		}
 		--maxAttemps;
 	}
 
-	maxAttemps = 1000 * std::max(nCellsWidth,nCellsHeight);
-//std::cout << "TIRA" << '\n';
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
 		seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
 		x = fila*cellWidth + cellWidth*0.5f;
