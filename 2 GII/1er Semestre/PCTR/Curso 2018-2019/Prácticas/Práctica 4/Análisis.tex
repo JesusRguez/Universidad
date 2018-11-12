@@ -120,8 +120,7 @@ Para las pruebas realizadas, hemos considerado una matriz cuadrada con el mismo 
 				$3500$ & 38 & 0.024\\ \hline
 				$4000$ & 47 & 0.026\\ \hline
 				$4500$ & 58 & 0.034\\ \hline
-				$5000$ & 64 & 0.04\\ \hline				
-				$10000$ & 100 & 0.126\\ \hline	
+				$5000$ & 64 & 0.04\\ \hline			
 			\end{tabular}
 			\caption{Valores de matVector.}
 			\label{tabla:Valores de matVector}
@@ -156,8 +155,7 @@ Para las pruebas realizadas, hemos utilizado una matriz cuadrada con el mismo n�
 				$3500$ & 46 & 0.276\\ \hline
 				$4000$ & 47 & 0.269\\ \hline
 				$4500$ & 49 & 0.32\\ \hline
-				$5000$ & 43 & 0.356\\ \hline				
-				$10000$ & 100 & 0.795\\ \hline	
+				$5000$ & 43 & 0.356\\ \hline		
 			\end{tabular}
 			\caption{Valores de matVectorConcurrente.}
 			\label{tabla:Valores de matVectorConcurrente}
@@ -224,7 +222,6 @@ Para las pruebas realizadas, hemos usado matrices cuadradas. Este algoritmo crea
 				$300$ & 66 & 13.348 \\ \hline 
 				$400$ & 69 & 37.195 \\ \hline 
 				$500$ & 74 & 114.118\\ \hline
-				$1000$ & 84 & 1775.674 \\ \hline
 			\end{tabular}
 			\caption{Valores de prodMatConcurrente.}
 			\label{tabla:Valores de prodMatConcurrente}
@@ -248,6 +245,6 @@ Viendo los resultado obtenidos en las pruebas de los diversos algoritmos, podemo
 
 Esto es así, debido a que la creación de hilos, nos genera un coste de tiempo y de memoria que puede ser crucial en otros aspectos.
 
-El ejemplo más claro lo obtenemos entre los algoritmos \texttt{prodMat.java} y\\ \texttt{prodMatConcurrente.java} donde, con dos matrices de $1000x1000$ elementos, en el primero de ellos (secuencial) tardamos 15.982 segundos, mientras que en el segundo (concurrente) tardamos 1775.674 segundos.
+El ejemplo más claro lo obtenemos entre los algoritmos \texttt{prodMat.java} y\\ \texttt{prodMatConcurrente.java} donde, con dos matrices de $500x500$ elementos, en el primero de ellos (secuencial) tardamos 0.395 segundos, mientras que en el segundo (concurrente) tardamos 114.118 segundos.
 
 \end{document}

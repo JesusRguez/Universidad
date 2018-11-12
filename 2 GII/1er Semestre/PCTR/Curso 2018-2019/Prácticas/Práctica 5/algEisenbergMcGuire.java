@@ -8,57 +8,57 @@ import java.util.*;
 
 public class algEisenbergMcGuire implements Runnable{
 
-    public static enum estado {IDLE, ESPERANDO, ACTIVO};
-    public static estado flags[];
-    public static int turno, n, variable = 0;
+    public static boolean flags[];
+    public static int turno, n;
+    public static int h = 0;
     public int i;
 
     public algEisenbergMcGuire(int n, int i){
-        flags = new estado[n];
+        flags = new boolean[n];
         turno = 0;
-        this.n = n;
         this.i = i;
+        this.n = n;
         for (int j=0; j<n; ++j) {
-            flags[j] = estado.IDLE;
+            flags[j] = false;
         }
     }
 
     public void run(){
-        //int i = 0;
-        int indice;
+        int indice = 0;
+
         do{
-            flags[i] = estado.ESPERANDO;
-            indice = turno;
+            flags[i]=false;
+            indice=turno;
             while(indice != i){
-                if(flags[indice] != estado.IDLE){
+                if (flags[i] != false) {
                     indice = turno;
                 }else{
                     indice = (indice+1)%n;
+                    Thread.yield();
                 }
             }
-            flags[i] = estado.ACTIVO;
+
+            flags[i] = true;
             indice = 0;
-            while((indice < n) && ((indice == i) || (flags[indice] != estado.ACTIVO))){
-                indice++;
+            while((indice < n) && ((indice == i) || (flags[indice]!=true))){
+                indice = indice+1;
+                Thread.yield();
             }
-        }while(!((indice >= n) && ((turno == i) || (flags[turno] == estado.IDLE))));
+        }while((indice >= n) && ((turno == i) || (flags[turno] == false)));
         //Entramos en la sección crítica
         turno = i;
 
         // AQUÍ VA LA SECCIÓN crítica
-
-        if(i == 1){
-            variable++;
-        }else{
-            variable--;
-        }
-
+        h++;
+        Thread.yield();
+        System.out.println("Número de procesos en sección crítica: "+h);
+        h--;
         indice = (turno + 1) % n;
-        while(flags[indice] == estado.IDLE){
+        while(flags[indice] == false){
             indice = (indice + 1) % n;
         }
         turno = indice;
-        flags[i] = estado.IDLE;
+        flags[i] = false;
     }
 
     public static void main(String[] args) {
@@ -67,11 +67,10 @@ public class algEisenbergMcGuire implements Runnable{
         int n = teclado.nextInt();
 
         ExecutorService ejecutor = Executors.newFixedThreadPool(2);
-        for (int i=0; i<2; ++i) {
+        for (int i=0; i<n; ++i) {
             ejecutor.execute(new algEisenbergMcGuire(n, i));
         }
         ejecutor.shutdown();
         while(!ejecutor.isTerminated());
-        System.out.println("Variable: "+variable);
     }
 }
