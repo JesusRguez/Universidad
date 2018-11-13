@@ -25,6 +25,11 @@ public class algoLamport implements Runnable{
         this.i = i;
     }
 
+    /**
+     * Método para calcular el máximo de un vector
+     * @param  v Vector al que se desea calcular su máximo elemento
+     * @return   Retorna el máximo elemento del vector v
+     */
     public int maximo(int[] v){
         int m=0;
         for (int i=0; i<v.length; ++i) {

@@ -10,21 +10,22 @@ public class matVectorDenso implements Runnable {
 
     public static Scanner teclado = new Scanner(System.in);
 
-    static double[][] matriz;
-    static double[] vector;
-    static int filas, columnas;
-    static double[] resultado;
-    static double coeficienteBloqueo;
-    static int cores = 4;
-    static int hilos;
-    int idHilo;
+    public static double[][] matriz;
+    public static double[] vector;
+    public static int filas, columnas;
+    public static double[] resultado;
+    public static double coeficienteBloqueo;
+    public static int cores = 4;
+    public static int hilos;
+    public int idHilo;
 
     /**
-     * @param filas
-     * @param columnas
-     * @param matriz
-     * @param vector
-     * @param idHilo
+     * Constructor de matVectorDenso
+     * @param filas    Filas de la matriz
+     * @param columnas Columnas de la matriz
+     * @param matriz   Matriz a multiplicar por el vector
+     * @param vector   Vector por el que se va a multiplicar la matriz
+     * @param idHilo   Identificador del thread
      */
     public matVectorDenso(int filas, int columnas, double[][] matriz, double[] vector, int idHilo) {
         matVectorDenso.vector = vector;
@@ -91,26 +92,26 @@ public class matVectorDenso implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.out.println("Introduce el n�mero de filas:");
+        System.out.println("Introduce el número de filas:");
         int arg_filas = teclado.nextInt();
 
-        System.out.println("Introduce el n�mero de columnas:");
+        System.out.println("Introduce el número de columnas:");
         int arg_columnas = teclado.nextInt();
 
         double[][] matrizAux = new double[arg_filas][arg_columnas];
         double[] vectorAux = new double[arg_columnas];
 
-        System.out.println("Seleccione como desea rellenar la matriz y el vector:\n1.) Autom�tico\n2.) Manual");
+        System.out.println("Seleccione como desea rellenar la matriz y el vector:\n1.) Manual\n2.) Automático");
         int opcion = teclado.nextInt();
 
         switch (opcion) {
             case 1:
-                rellenaMatriz(matrizAux);
-                rellenaVector(vectorAux);
-                break;
-            case 2:
                 rellenaMatrizManual(matrizAux);
                 rellenaVectorManual(vectorAux);
+                break;
+            case 2:
+                rellenaMatriz(matrizAux);
+                rellenaVector(vectorAux);
                 break;
             default:
                 System.out.println("Seleccione una opci�n correcta.");
@@ -124,24 +125,16 @@ public class matVectorDenso implements Runnable {
 
         long time_start, time_end;
 
-        ExecutorService pool = Executors.newFixedThreadPool(hilos);
+        ExecutorService pool = Executors.newCachedThreadPool();
         time_start = System.currentTimeMillis();
         for (int i = 0; i < hilos; i++) {
-            /*matVectorDenso A = new matVectorDenso(arg_filas, arg_columnas, matrizAux, vectorAux, i);
-            pool.execute(A);*/
             pool.execute(new matVectorDenso(arg_filas, arg_columnas, matrizAux, vectorAux, i));
         }
 
         pool.shutdown();
         pool.awaitTermination(1, TimeUnit.HOURS);
-
+        
         time_end = System.currentTimeMillis();
         System.out.println("\nTarda " + (time_end - time_start) / (double) 1000 + " segundos");
-
-        /*for (int i = 0; i < hilos; i++) {
-            for (int j = 0; j < hilos; j++) {
-                System.out.println(resultado[i]);
-            }
-        }*/
     }
 }

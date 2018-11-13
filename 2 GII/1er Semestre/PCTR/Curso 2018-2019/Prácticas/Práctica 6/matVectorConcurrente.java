@@ -44,16 +44,6 @@ public class matVectorConcurrente implements Runnable{
         }
     }
 
-    /**
-     * Método para imprimir un vector
-     * @param v Vector a imprimir
-     */
-    public static void imprimeVector(double[] v){
-        for (int i=0; i<v.length; ++i) {
-            System.out.print(v[i]+"   ");
-        }
-    }
-
     public static void main(String[] args) throws InterruptedException {
         Scanner teclado = new Scanner(System.in);
         int opcion;
@@ -104,7 +94,7 @@ public class matVectorConcurrente implements Runnable{
                         hilos[i].join();
                     }
                     time_end = System.currentTimeMillis();
-                    imprimeVector(res);
+                    
                     System.out.println("\nHa tardado "+(time_end - time_start)/(double)1000+" segundos");
                     break;
                 case 2:
@@ -144,7 +134,7 @@ public class matVectorConcurrente implements Runnable{
                         hilos[i].join();
                     }
                     time_end = System.currentTimeMillis();
-                    imprimeVector(res);
+
                     System.out.println("\nHa tardado "+(time_end - time_start)/(double)1000+" segundos");
                     break;
                 default:

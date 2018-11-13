@@ -3,118 +3,113 @@
  * @version 1.0
  */
 
-import java.util.Scanner;
+import java.util.*;
 
-public class matVector {
-
-    public static Scanner teclado = new Scanner(System.in);
-
-    static double[][] matriz;
-    static double[] vector;
-    int filas, columnas;
+public class matVector{
 
     /**
-     * @param filas
-     * @param columnas
+     * Método para multiplicar la matriz por el vector
+     * @param  m Matriz a multiplicar
+     * @param  v Vector a multiplicar
+     * @return   Retorna un vector "res" como resultado de la multiplicación de la matriz por el vector
      */
-    public matVector(int filas, int columnas) {
-        this.filas = filas;
-        this.columnas = columnas;
-        matriz = new double[filas][columnas];
-        vector = new double[filas];
-    }
-
-    /**
-     * @param matriz
-     */
-    public static void rellenaMatriz(matVector matriz) {
-        for (int i = 0; i < matriz.filas; i++) {
-            for (int j = 0; j < matriz.columnas; j++) {
-                matriz.matriz[i][j] = Math.random() * 10;
+    public static double[] producto(double[][] m, double[] v){
+        double[] res = new double[v.length];
+        double aux = 0;
+        for (int i=0; i<m.length; ++i) {
+            for (int j=0; j<m[i].length; ++j) {
+                aux += m[i][j]*v[j];
             }
+            res[i] = aux;
+            aux = 0;
         }
-    }
-
-    /**
-     * @param matriz
-     */
-    public static void rellenaVector(matVector matriz) {
-        for (int i = 0; i < matriz.columnas; i++) {
-            matriz.vector[i] = Math.random() * 10;
-        }
-    }
-
-    /**
-     * @param matriz
-     */
-    public static void rellenaMatrizManual(matVector matriz) {
-        for (int i = 0; i < matriz.filas; i++) {
-            for (int j = 0; j < matriz.columnas; j++) {
-                System.out.println("Introduzca el elemento " + i + 1 + ", " + j + 1 + ":");
-                matriz.matriz[i][j] = teclado.nextDouble();
-            }
-        }
-    }
-
-    /**
-     * @param matriz
-     */
-    public static void rellenaVectorManual(matVector matriz) {
-        for (int i = 0; i < matriz.columnas; i++) {
-            System.out.println("Introduzca el elemento " + i + 1 + ":");
-            matriz.vector[i] = teclado.nextDouble();
-        }
-    }
-
-    /**
-     * @return
-     */
-    public double[] multiplica() {
-        double[] resultado = new double[columnas];
-
-        for (int i = 0; i < filas; i++) {
-            resultado[i] = 0;
-            for (int j = 0; j < columnas; j++) {
-                resultado[i] = resultado[i] + matriz[i][j] * vector[j];
-            }
-        }
-
-        return resultado;
+        return res;
     }
 
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int filas = 0, columnas = 0, tvector = 0, opcion;
+        double[][] m;
+        double[] v;
+        double[] res;
         long time_start, time_end;
+        do {
+            System.out.println("Introduzca la opción que desea:\n1. Introducir datos manualmente\n2. Introducir solo las dimensiones");
+            opcion = teclado.nextInt();
+            switch(opcion){
+                case 1:
+                    do {
+                        System.out.println("Introduzca las filas de la matriz");
+                        filas = teclado.nextInt();
+                        System.out.println("Introduzca las columnas de la matriz");
+                        columnas = teclado.nextInt();
+                        System.out.println("Introduzca el tamaño del vector");
+                        tvector = teclado.nextInt();
+                        if(columnas != tvector){
+                            System.out.println("El número de columnas y el tamaño del vector debe coincidir.");
+                        }
+                    } while (columnas != tvector);
 
-        System.out.println("Introuce el n�mero de filas:");
-        int filas = teclado.nextInt();
-        System.out.println("Introduce el n�mero de columnas:");
-        int columnas = teclado.nextInt();
+                    m = new double[filas][columnas];
+                    System.out.println("Introduzca los valores de la matriz:");
+                    for (int i=0; i<filas; ++i) {
+                        for (int j=0; j<columnas; ++j) {
+                            System.out.println("Introduzca el valor de la coordenada ("+i+", "+j+"):");
+                            m[i][j] = teclado.nextDouble();
+                        }
+                    }
 
-        matVector matriz = new matVector(filas, columnas);
+                    v = new double[tvector];
+                    System.out.println("Introduzca los valores del vecotr:");
+                    for (int i=0; i<tvector; ++i) {
+                        System.out.println("Introduzca el valor de la coordenada "+i+":");
+                        v[i] = teclado.nextDouble();
+                    }
 
-        System.out.println("Seleccione como desea rellenar la matriz y el vector:\n1.) Autom�tico\n2.) Manual");
-        int opcion = teclado.nextInt();
+                    res = new double[tvector];
 
-        switch (opcion) {
-            case 1:
-                rellenaMatriz(matriz);
-                rellenaVector(matriz);
-                break;
-            case 2:
-                rellenaMatrizManual(matriz);
-                rellenaVectorManual(matriz);
-                break;
-            default:
-                System.out.println("Seleccione una opci�n correcta.");
-                break;
-        }
-        time_start = System.currentTimeMillis();
-        double[] resultado = matriz.multiplica();
-        time_end = System.currentTimeMillis();
+                    time_start = System.currentTimeMillis();
+                    res = producto(m, v);
+                    time_end = System.currentTimeMillis();
 
-        /*for (int i = 0; i < resultado.length; i++) {
-            System.out.println(resultado[i]);
-        }*/
-        System.out.println("\nTarda " + (time_end - time_start) / (double) 1000 + " segundos");
+                    System.out.println("\nHa tardado "+(time_end-time_start)/(double)1000+" segundos");
+                    break;
+                case 2:
+                    do {
+                        System.out.println("Introduzca las filas de la matriz");
+                        filas = teclado.nextInt();
+                        System.out.println("Introduzca las columnas de la matriz");
+                        columnas = teclado.nextInt();
+                        System.out.println("Introduzca el tamaño del vector");
+                        tvector = teclado.nextInt();
+                        if(columnas != tvector){
+                            System.out.println("El número de columnas y el tamaño del vector debe coincidir,");
+                        }
+                    } while (columnas != tvector);
+                    Random r = new Random();
+                    m = new double[filas][columnas];
+                    for (int i=0; i<filas; ++i) {
+                        for (int j=0; j<columnas; ++j) {
+                            m[i][j] = r.nextDouble()*10;
+                        }
+                    }
+
+                    v = new double[tvector];
+                    for (int i=0; i<tvector; ++i) {
+                        v[i] = r.nextDouble()*10;
+                    }
+
+                    res = new double[tvector];
+
+                    time_start = System.currentTimeMillis();
+                    res = producto(m, v);
+                    time_end = System.currentTimeMillis();
+
+                    System.out.println("Ha tardado "+(time_end - time_start)/(double)1000+" segundos");
+                    break;
+                default:
+                    System.out.println("Solo hay dos opciones, por favor, introduce 1 ó 2.");
+            }
+        } while (opcion < 1 || opcion > 2);
     }
 }
