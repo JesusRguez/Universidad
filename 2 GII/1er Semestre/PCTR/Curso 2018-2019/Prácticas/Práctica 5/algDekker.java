@@ -22,9 +22,9 @@ class algDekker {
                 /* Non-critical section */
                 wantp = true;
                 while (wantq || wantr) {
-                    if (turn != 2) {
+                    if (turn == 2 || turn == 3) {
                         wantp = false;
-                        while (turn != 2)
+                        while (turn == 2 || turn == 3)
                             Thread.yield();
                         wantp = true;
                     }
@@ -46,9 +46,9 @@ class algDekker {
                 /* Non-critical section */
                 wantq = true;
                 while (wantp || wantr) {
-                    if (turn != 1) {
+                    if (turn == 1 || turn == 3) {
                         wantq = false;
-                        while (turn != 1)
+                        while (turn == 1 || turn == 3)
                             Thread.yield();
                         wantq = true;
                     }
@@ -56,9 +56,9 @@ class algDekker {
                 inCS++;
                 Thread.yield();
                 /* Critical section */
-                System.out.println("Número de procesoss en sección crítica: "+ inCS);
+                System.out.println("Número de procesos en sección crítica: "+ inCS);
                 inCS--;
-                turn = 1;
+                turn = 3;
                 wantq = false;
             }
         }
@@ -70,9 +70,9 @@ class algDekker {
                 /* Non-critical section */
                 wantr = true;
                 while(wantp || wantq){
-                    if(turn != 3){
+                    if(turn == 1 || turn == 2){
                         wantr = false;
-                        while(turn != 3){
+                        while(turn == 1 || turn == 2){
                             Thread.yield();
                         }
                         wantr = true;
@@ -83,7 +83,7 @@ class algDekker {
                 /* Critical section */
                 System.out.println("Número de procesos en sección crítica: "+inCS);
                 inCS--;
-                turn = 3;
+                turn = 1;
                 wantr = false;
             }
         }

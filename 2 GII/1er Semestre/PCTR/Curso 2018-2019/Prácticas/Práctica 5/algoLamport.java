@@ -10,7 +10,7 @@ public class algoLamport implements Runnable{
 
     public static int numero[];
     public static boolean eligiendo[];
-    public static int h = 0;
+    public static int variable = 0;
     public int iteraciones;
     public int i;
 
@@ -45,13 +45,16 @@ public class algoLamport implements Runnable{
                 while(eligiendo[i]){
                     Thread.yield();
                 }
-                while((numero[j] != 0) && ((numero[j] < numero[i]) || ((numero[j] == numero[i]) && (j < i)))){}
+                while((numero[j] != 0) && ((numero[j] < numero[i]) || ((numero[j] == numero[i]) && (j < i)))){
+                    Thread.yield();
+                }
             }
             //SECCIÓN CRÍTICA
-            h++;
-            Thread.yield();
-            System.out.println("Número de procesos en la sección crítica: "+h);
-            h--;
+            if(i%2 == 0){
+                variable++;
+            }else{
+                variable--;
+            }
             //fin
             numero[i] = 0;
         }
@@ -63,10 +66,11 @@ public class algoLamport implements Runnable{
         int n = teclado.nextInt();
 
         ExecutorService ejecutor = Executors.newFixedThreadPool(4);
-        for (int i=0; i<n; ++i) {
+        for (int i=0; i<4; ++i) {
             ejecutor.execute(new algoLamport(n, i));
         }
         ejecutor.shutdown();
         while(!ejecutor.isTerminated());
+        System.out.println("La variable compartida vale "+variable);
     }
 }

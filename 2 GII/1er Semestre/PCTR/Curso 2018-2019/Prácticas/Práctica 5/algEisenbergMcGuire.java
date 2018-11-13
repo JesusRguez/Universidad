@@ -8,51 +8,50 @@ import java.util.*;
 
 public class algEisenbergMcGuire implements Runnable{
 
-    public static boolean flags[];
-    public static int turno, n;
-    public static int h = 0;
+    public static volatile boolean flags[];
+    public static volatile int turno, n, variable = 0;
     public int i;
 
     public algEisenbergMcGuire(int n, int i){
         flags = new boolean[n];
         turno = 0;
-        this.i = i;
         this.n = n;
+        this.i = i;
         for (int j=0; j<n; ++j) {
             flags[j] = false;
         }
     }
 
     public void run(){
-        int indice = 0;
-
+        int indice;
         do{
-            flags[i]=false;
-            indice=turno;
+            flags[i] = false;
+            indice = turno;
             while(indice != i){
-                if (flags[i] != false) {
+                if(flags[indice] != false){
                     indice = turno;
                 }else{
                     indice = (indice+1)%n;
-                    Thread.yield();
                 }
             }
-
             flags[i] = true;
             indice = 0;
-            while((indice < n) && ((indice == i) || (flags[indice]!=true))){
-                indice = indice+1;
-                Thread.yield();
+            while((indice < n) && ((indice == i) || (flags[indice] != true))){
+                indice++;
+                //Thread.yield();
             }
-        }while((indice >= n) && ((turno == i) || (flags[turno] == false)));
+        }while(!((indice >= n) && ((turno == i) || (flags[turno] == false))));
         //Entramos en la sección crítica
         turno = i;
 
         // AQUÍ VA LA SECCIÓN crítica
-        h++;
-        Thread.yield();
-        System.out.println("Número de procesos en sección crítica: "+h);
-        h--;
+//Thread.yield();
+        if(i == 1){
+            variable++;
+        }else{
+            variable--;
+        }
+
         indice = (turno + 1) % n;
         while(flags[indice] == false){
             indice = (indice + 1) % n;
@@ -62,9 +61,7 @@ public class algEisenbergMcGuire implements Runnable{
     }
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduzca el número de iteraciones:");
-        int n = teclado.nextInt();
+        int n = 2; //Es para dos procesos
 
         ExecutorService ejecutor = Executors.newFixedThreadPool(2);
         for (int i=0; i<n; ++i) {
@@ -72,5 +69,6 @@ public class algEisenbergMcGuire implements Runnable{
         }
         ejecutor.shutdown();
         while(!ejecutor.isTerminated());
+        System.out.println("La variable compartida vale: "+variable);
     }
 }
