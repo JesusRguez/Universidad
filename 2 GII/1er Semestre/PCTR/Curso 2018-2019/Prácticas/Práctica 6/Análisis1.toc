@@ -1,0 +1,3 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}\texttt {tareaPrimos.java}}{3}{section.1}
+\contentsline {section}{\numberline {2}\texttt {volcadoRed.java}}{3}{section.2}
