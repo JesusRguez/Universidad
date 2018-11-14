@@ -101,14 +101,6 @@
 	%%Configuracion del paquete listings
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
-\newpage
-\begin{figure}
-	\begin{center}
-		\includegraphics[scale=1]{SpeedUp2.png}
-		\caption{Valores del SpeedUp.}
-		\label{fig:Valores del SpeedUp}
-	\end{center}
-\end{figure}
 
 \begin{center}
 	\begin{table}[htbp]
@@ -117,19 +109,35 @@
 				\hline
 				\textbf{Elementos} & \textbf{resImagen} & \textbf{resImagenParFin} & \textbf{resImagenParGru}  \\
 				\hline 
-				$50$ & 0.000 & 0.303 & 0.003 \\ \hline
-				$100$ & 0.001 & 2.146 & 0.004 \\ \hline
-				$150$ & 0.003 & 10.179 & 0.005 \\ \hline
-				$200$ & 0.004 & 33.327 & 0.006 \\ \hline
-				$250$ & 0.006 & 85.824 & 0.008 \\ \hline
-				$1000$ & 0.893 & Error & 0.2 \\ \hline
+				$50$ & 0.001 & 0.325 & 0.002 \\ \hline
+				$100$ & 0.002 & 2.17 & 0.004 \\ \hline
+				$150$ & 0.006 & \texttt{ERROR} & 0.008 \\ \hline
+				$200$ & 0.008 & \texttt{ERROR} & 0.007 \\ \hline
+				$250$ & 0.014 & \texttt{ERROR} & 0.011 \\ \hline
 			\end{tabular}
 			\caption{Valores en segundos del tiempo usado por cada algoritmo.}
 			\label{tabla:Valores en segundos del tiempo usado por cada algoritmo}
 		\end{center}
 	\end{table}
 \end{center}
-Para la realización de la gráfica inicial, hemos tenido en cuenta dichos datos tomados en tiempo con los que calculamos el SpeedUp de los algoritmos de grano fino (\texttt{resImagenParFin.java}) y de grano grueso (\texttt{resImagenParGru.java}) respecto del algoritmo secuencial (\texttt{resImagen.java}).\\
-Como podemos apreciar en la imagen, el SpeedUp no empieza a ser notable hasta más de los 300 elementos y, donde verdaderamente se le saca partido es en los 1000 elementos, donde dicho SpeedUp alcanza casi un valor de 4,5.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1]{SpeedUp2.png}
+		\caption{Valores del SpeedUp.}
+		\label{fig:Valores del SpeedUp}
+	\end{center}
+\end{figure}
+Para la realización de la gráfica, hemos tenido en cuenta dichos datos tomados del tiempo de ejecución de los algoritmos de grano fino (\texttt{resImagenParFin.java}) y de grano grueso (\texttt{resImagenParGru.java}) respecto del algoritmo secuencial (\texttt{resImagen.java}).
+
+Como podemos apreciar en la imagen, el Speed-Up no empieza a ser igual a $1$ hasta un tamaño de matriz de  $200x200$ por parte del algoritmo de grano grueso y, de ahí en adelante, siempre llevará irá a la cabeza, en contraposición al algoritmo de grano fino que irá empeorando su tiempo respecto del secuencial.
+
+Tal como vemos en la gráfica y en la tabla de tiempos, podemos observar como ni siquiera es capaz de ejecutarse para una matriz de tamaño $150x150$ debido a que sobrepasa la memoria del heap de la máquina virtual de java. Ni siquiera cambiando dicha memoria con el flag \texttt{-Xss1024m} hemos podido conseguir que ejecute.
+
+Por lo tanto, podemos deducir que crear muchos hilos no nos asegura en ningún momento una mayor optimización del problema ya que, como se puede ver, la versión secuencial es mejor que la de grano fino.
+
+No ocurre así con la versión de grano grueso en la que se dividen la matriz entre los cores disponibles de la máquina y es en esta versión donde se puede observar una mejoría considerable sobre todo en matrices de mayor tamaño.
+
+Para una matriz de tamaño $10000x10000$ la versión secuencial tarda $0.605$ segundos y la versión de grano grueso tarda $0.192$ segundos, consiguiendo un Speed-Up de $3.151$, muy cerca de los 4 cores que usa la máquina en la que se han probado los programas\footnote{Esta prueba no se ha puesto en la tabla ni en la gráfica para no descuadrar los datos ni dar falsos positivos, por eso se encuentra aparte.}.
 
 \end{document}

@@ -134,7 +134,7 @@
 \end{figure}
 Para la realización de la gráfica inicial, hemos tenido en cuenta dichos datos tomados en tiempo con los que calculamos el Speed-Up de los algoritmos de grano fino (\texttt{matVectorConcurrente.java}) y de grano grueso (\texttt{matVectorDenso.java}) respecto del algoritmo secuencial (\texttt{matVector.java}).
 
-Como podemos apreciar en la imagen, el Speed-Up no empieza a ser notable hasta los 4000 elementos y, donde verdaderamente se le saca partido es en los 10000 elementos, donde dicho Speed-Up alcanza casi un valor de 2,5.
+Como podemos apreciar en la imagen, el Speed-Up no empieza a ser notable hasta los 7000 elementos y, donde verdaderamente se le saca partido es a partir de los 10000 elementos donde alcanza un Speed-Up de $1.43$ y, como puede observarse, su tendencia nos indica que seguirá subiendo conforme aumentemos el número de elementos de las matrices. Esta prueba no la hemos podido realizar debido a que con más de 10000 elementos, se sobrepasa la memoria del heap de Java en el algoritmo de grano grueso \texttt{matVectorDenso.java}.
 
 	
 

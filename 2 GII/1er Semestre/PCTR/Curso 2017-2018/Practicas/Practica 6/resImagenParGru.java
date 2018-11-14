@@ -3,24 +3,24 @@ import java.util.Scanner;
 import java.util.concurrent.*;
 
 /**
- * @author Jesús Rodríguez Heras
+ * @author Jess Rodrguez Heras
  */
 public class resImagenParGru implements Runnable {
 
     static int matriz[][];
     int id;
-    static int tamaño, hilos;
+    static int tam, hilos;
     static int matriz2[][];
 
     /**
      * @param id
      * @param hilos
-     * @param tamaño
+     * @param tam
      */
-    public resImagenParGru(int id, int hilos, int tamaño) {
+    public resImagenParGru(int id, int hilos, int tam) {
         this.id = id;
         resImagenParGru.hilos = hilos;
-        resImagenParGru.tamaño = tamaño;
+        resImagenParGru.tam = tam;
     }
 
     public void rellenarImagen() {
@@ -33,8 +33,8 @@ public class resImagenParGru implements Runnable {
     }
 
     public void run() {
-        for (int i = 0; i < tamaño; i++) {
-            for (int j = id * tamaño / hilos; j < (id + 1) * tamaño / hilos; j++) {
+        for (int i = 0; i < tam; i++) {
+            for (int j = id * tam / hilos; j < (id + 1) * tam / hilos; j++) {
                 matriz2[i][j] = (4 * matriz[i][j] - matriz[(i + 1) % matriz.length][j] - matriz[i][(j + 1) % matriz.length] - matriz[(i + matriz.length - 1) % matriz.length][j] - matriz[i][(j + matriz.length - 1) % matriz.length]) / 8;
             }
         }
