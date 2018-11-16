@@ -2,15 +2,15 @@
  * @(#)tryTwo.java
  * @author  A.T.
  * @version 1.00 2012/11/9
- * Pre-solucion al control de la e.m. con variables comunes mediante flag de seÒalizaciÛn
- * No preserva la e.m. sobre el recurso com˙n.
+ * Pre-solucion al control de la e.m. con variables comunes mediante flag de se√±alizaci√≥n
+ * No preserva la e.m. sobre el recurso com√∫n.
  */
 
 public class tryTwo
   extends Thread
 {
 	private int tipoHilo;
-	
+
 	private static volatile int nVueltas = 1000000;
 	private static volatile int n = 0;
 	private static volatile boolean C1 = false;
@@ -22,18 +22,19 @@ public class tryTwo
     public void run()
     {
       switch(tipoHilo){
+          //Si seguimos el n√∫mero de los comentarios como orden de ejecuci√≥n, una vez que C1 se pone a true ya es tarde para que en el caso 2, el segundo hilo pueda verlo, por eso no se verifica ni siquiera la propiedad de seguridad
         case 1:{for(int i=0; i<nVueltas; i++){
-        	      while(C2==true);
-        	      C1 = true;
-        	      n++;
+        	      while(C2==true);//(1)
+        	      C1 = true;//(3)
+        	      n++;//(5)
         	      C1 = false;
-        	      
+
         	    }
         	    break;}
         case 2: {for(int i=0; i<nVueltas;i++){
-        	      while(C1==true);
-        	      C2 = true;
-        	      n--;
+        	      while(C1==true);//(2)
+        	      C2 = true;//(4)
+        	      n--;//(6)
         	      C2 = false;
                 }
         	    }break;

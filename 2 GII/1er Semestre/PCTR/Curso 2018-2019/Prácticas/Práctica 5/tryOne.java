@@ -3,7 +3,7 @@
  * @author  A.T.
  * @version 1.00 2012/11/9
  * Pre-solucion al control de la e.m. con variables comunes mediante toma de turnos.
- * Satisface todas las condiciones de corrección excepto una (falla en asuencia de contencion).
+ * Satisface todas las condiciones de correcciÃ³n excepto una (falla en asuencia de contencion).
  */
 
 public class tryOne

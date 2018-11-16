@@ -1,4 +1,4 @@
-Escriba aquí su respuesta al ejercicio 1. 
+%Escriba aquí su respuesta al ejercicio 1. 
 
 % Elimine los símbolos de tanto por ciento para descomentar las siguientes instrucciones e incluir una imagen en su respuesta. La mejor ubicación de la imagen será determinada por el compilador de Latex. No tiene por qué situarse a continuación en el fichero en formato pdf resultante.
 %\begin{figure}
@@ -7,3 +7,22 @@ Escriba aquí su respuesta al ejercicio 1.
 %\caption{Estrategia devoradora para la mina}
 %\label{fig:defenseValueCellsHead}
 %\end{figure}
+
+La función que evalúa las celdas para el caso del centro de extracción de minerales se llama \texttt{cellValueCentro} y recibe los siguientes parámetros:
+\begin{itemize}
+	\item \texttt{float** mapa}: Matriz que representa el mapa de juego.
+	\item \texttt{int nCellsWidth}: Número de celdas de ancho que tiene el mapa.
+	\item \texttt{int nCellsHeight}: Número de celdas de alto que tiene el mapa.
+	\item \texttt{float cellWidth}: Ancho de las celdas.
+	\item \texttt{float cellHeight}: Alto de las celdas.
+	\item \texttt{float mapWidth}: Tamaño de la anchura del mapa.
+	\item \texttt{float mapHeight}: Tamaño del alto del mapa.
+	\item \texttt{std::list<Defense*> defensas}: Lista de defensas del juego.
+\end{itemize}
+Para dar valores a las celdas de la matriz del terreno de batalla la función calcula la posición del centro de extracción respecto de la diferencia con los bordes del mapa en una variable de tipo \texttt{Vector3} llamado \texttt{posicionDefensa}.
+
+Luego creamos una variable de tipo \texttt{Vector3}, llamado \texttt{posMax}, que estará formada por el tamaño total del mapa en sus coordenadas ``X'' e ``Y''.
+                                                                          
+A continuación, se asigna el valor de cada celda como la resta de los módulos de ambos vectores, \texttt{posMax} y \texttt{posicionDefensa}.
+
+El valor de las celdas es devuelto por la misma variable \texttt{mapa} por referencia.
