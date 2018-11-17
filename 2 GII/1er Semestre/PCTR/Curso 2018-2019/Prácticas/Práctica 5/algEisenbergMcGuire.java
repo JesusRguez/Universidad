@@ -38,15 +38,13 @@ public class algEisenbergMcGuire implements Runnable{
             indice = 0;
             while((indice < n) && ((indice == i) || (flags[indice] != true))){
                 indice++;
-                //Thread.yield();
             }
         }while(!((indice >= n) && ((turno == i) || (flags[turno] == false))));
         //Entramos en la sección crítica
         turno = i;
 
         // AQUÍ VA LA SECCIÓN crítica
-//Thread.yield();
-        if(i == 1){
+        if(i%2 == 0){
             variable++;
         }else{
             variable--;
@@ -61,7 +59,9 @@ public class algEisenbergMcGuire implements Runnable{
     }
 
     public static void main(String[] args) {
-        int n = 2; //Es para dos procesos
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduzca el número de iteraciones:");
+        int n = teclado.nextInt();
 
         ExecutorService ejecutor = Executors.newFixedThreadPool(2);
         for (int i=0; i<n; ++i) {

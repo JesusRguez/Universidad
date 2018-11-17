@@ -70,8 +70,10 @@ public class algoLamport implements Runnable{
         System.out.println("Introduzca el número de iteraciones:");
         int n = teclado.nextInt();
 
-        ExecutorService ejecutor = Executors.newFixedThreadPool(4);
-        for (int i=0; i<4; ++i) {
+        int hilos = Runtime.getRuntime().availableProcessors();
+
+        ExecutorService ejecutor = Executors.newFixedThreadPool(hilos);
+        for (int i=0; i<hilos; ++i) {
             ejecutor.execute(new algoLamport(n, i));
         }
         ejecutor.shutdown();
