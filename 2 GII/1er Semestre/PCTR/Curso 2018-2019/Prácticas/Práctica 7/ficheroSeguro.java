@@ -19,20 +19,21 @@ public class ficheroSeguro implements Runnable{
         this.cadena = cadena;
     }
 
-    public void run(){
-        synchronized(lock){
+    public synchronized void run(){
+        //synchronized(lock){
             try{
                 RandomAccessFile fichero = new RandomAccessFile("fichero.txt", "rw");
                 try {
                     fichero.seek(desplazamiento);
-                    fichero.writeChars(cadena);
+                    fichero.writeUTF(cadena);
+                    fichero.close();
                 }catch(IOException ex){
                     System.out.println("Fallo al escribir en el fichero.");
                 }
             }catch (FileNotFoundException e) {
                 System.out.println("Fallo al abrir el fichero.");
             }
-        }
+        //}
     }
 
     public static void main(String[] args) throws InterruptedException {
