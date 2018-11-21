@@ -38,9 +38,7 @@ public class piParalelouniCont implements Runnable{
         int cores = Runtime.getRuntime().availableProcessors();
         int h = (int)(cores/(1-c));
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
-
         long time_start = System.currentTimeMillis();
-
         for (int i=0; i<h; ++i) {
             ejecutor.execute(new piParalelouniCont(p/h));
         }

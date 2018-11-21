@@ -47,10 +47,8 @@ public class intParalelomultiCont implements Runnable{
         int cores = Runtime.getRuntime().availableProcessors();
         int h = (int) ((cores)/(1-c));
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
-
         int sol=0;
         long time_start = System.currentTimeMillis();
-
         for (int i=0; i<h; ++i) {
             ejecutor.execute(new intParalelomultiCont(p/h, h, i));
         }

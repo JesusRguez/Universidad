@@ -45,7 +45,6 @@ public class piParalelomultiCont implements Runnable{
         double c = teclado.nextDouble();
         int cores = Runtime.getRuntime().availableProcessors();
         int h = (int)(cores/(1-c));
-
         int sol=0;
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
         long time_start = System.currentTimeMillis();
