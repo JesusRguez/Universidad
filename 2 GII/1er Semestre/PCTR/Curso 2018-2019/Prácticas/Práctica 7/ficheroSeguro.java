@@ -20,20 +20,18 @@ public class ficheroSeguro implements Runnable{
     }
 
     public synchronized void run(){
-        //synchronized(lock){
-            try{
-                RandomAccessFile fichero = new RandomAccessFile("fichero.txt", "rw");
-                try {
-                    fichero.seek(desplazamiento);
-                    fichero.writeUTF(cadena);
-                    fichero.close();
-                }catch(IOException ex){
-                    System.out.println("Fallo al escribir en el fichero.");
-                }
-            }catch (FileNotFoundException e) {
-                System.out.println("Fallo al abrir el fichero.");
+        try{
+            RandomAccessFile fichero = new RandomAccessFile("fichero.txt", "rw");
+            try {
+                fichero.seek(desplazamiento);
+                fichero.writeChars(cadena);
+                fichero.close();
+            }catch(IOException ex){
+                System.out.println("Fallo al escribir en el fichero.");
             }
-        //}
+        }catch (FileNotFoundException e) {
+            System.out.println("Fallo al abrir el fichero.");
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
