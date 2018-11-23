@@ -81,7 +81,7 @@
 	\maketitle
 	\begin{abstract} %Poner esto en todas las prácticas de PCTR
 		\begin{center}
-			Resolución y resultados del ejercicio 1 de la práctica 6.
+			Análisis de los resultados obtenidos al probar programas de distinta tipología según el coeficiente de bloqueo.
 		\end{center}
 	\end{abstract}
 	\thispagestyle{empty}
@@ -102,15 +102,23 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
 \section{\texttt{tareaPrimos.java}}
-El algoritmo se centra en encontrar los números primos que hay en el total de números que le pasamos como argumento. Para ello, utiliza el método de dividir dicho número hasta la raíz, para ver que un número primo solo es divisible por 1 y por él mismo.
+El algoritmo se centra en encontrar los números primos que hay en el total de números que le pasamos como argumento por la línea de comandos.
 
-El número de hilos viene determinado por el número de cores lógicos de la máquina y, como es evidente, también podemos observar una mejora en tiempo por parte de la versión paralela.
+El número de hilos viene determinado por el número de cores lógicos de la máquina debido a que la tipología del problema es ``numérica'' y su coeficiente de bloqueo es $0$ debido a que no tiene bloqueo de escritura en disco ni bloqueo de red, que son los más notorios.
 
 
 \section{\texttt{volcadoRed.java}}
 El algoritmo se basa en descargar páginas html a disco, las cuales están almacenadas en el archivo \texttt{direccionesRed.txt} de la práctica.
 
-El número de hilos viene determinado por el número de cores lógicos dividido entre 1 menos el coeficiente de interbloqueo y podemos observar que, mientras más se acerca dicho coeficiente a 1, mejor es el tiempo obtenido por el programa.
+El número de hilos viene determinado por la ecuación se subramanian: 
+\begin{center}
+	$N_{t}=\frac{N_{nld}}{1 - C_{b}}$
+\end{center}
+Donde el número d e hilos será determinado por el número de cores lógicos de la máquina y del coeficiente de bloqueo.
+
+Este problema no es de tipología ``numérica'' y observamos que el tiempo que tarda dicho programa es mejor cuando el coeficiente de bloqueo es $0.75$, alcanzando un tiempo de $2.295$ segundos.
+
+Con un coeficiente de bloqueo menor o mayor al indicado, obtenemos tiempos mayores, bien porque el número de hilos es demasiado pequeño o bien porque es demasiado grande.
 
 
 \end{document}

@@ -8,14 +8,13 @@ public class primosParalelos {
 
   public static void main(String[] args) throws Exception {
     long nPuntos     = Integer.parseInt(args[0]);
-    int  nTareas     = Runtime.getRuntime().availableProcessors();
+    int  nTareas     = Runtime.getRuntime().availableProcessors(); // Aquí estaríamos usando la ecuación de subramanian debido a que el coeficiente de bloqueo es nulo.
     long tVentana    = nPuntos/nTareas;
     long primosTotal = 0;
     long linf        = 0;
     long lsup        = tVentana;
 
-    ArrayList<Future<Long>> contParciales =
-      new ArrayList<Future<Long>>();
+    ArrayList<Future<Long>> contParciales = new ArrayList<Future<Long>>();
     long inicTiempo = System.nanoTime();
     ThreadPoolExecutor ept = new ThreadPoolExecutor(
       nTareas,

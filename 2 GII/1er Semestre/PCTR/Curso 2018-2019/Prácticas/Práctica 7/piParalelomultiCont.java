@@ -41,10 +41,7 @@ public class piParalelomultiCont implements Runnable{
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca el número de puntos:");
         int p = teclado.nextInt();
-        System.out.println("Introduzca el coeficiente de bloqueo:");
-        double c = teclado.nextDouble();
-        int cores = Runtime.getRuntime().availableProcessors();
-        int h = (int)(cores/(1-c));
+        int h = Runtime.getRuntime().availableProcessors();//Usando la ecuación de subramanian el coeficiente de bloque es 0 para este problema debido a que es de tipología numérica.
         int sol=0;
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
         long time_start = System.currentTimeMillis();

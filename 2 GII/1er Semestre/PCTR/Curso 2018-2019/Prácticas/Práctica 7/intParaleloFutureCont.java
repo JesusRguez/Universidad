@@ -33,28 +33,26 @@ public class intParaleloFutureCont implements Callable<Integer>{
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca el número de puntos:");
         int p = teclado.nextInt();
-        System.out.println("Introduzca el coeficiente de bloqueo:");
-        double c = teclado.nextDouble();
-        int cores = Runtime.getRuntime().availableProcessors();
-        int h = (int) (cores/(1-c));
+        int h = Runtime.getRuntime().availableProcessors(); //Usando la ecuación de subramanian el coeficiente de bloque es 0 para este problema debido a que es de tipología numérica.        
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
         int cont = 0;
-        Future<Integer> sol;
+        int sol = 0;
+        ArrayList<Future<Integer>> contParciales = new ArrayList<Future<Integer>>();
         long time_start = System.currentTimeMillis();
         for (int i=0; i<h; ++i) {
+            contParciales.add(ejecutor.submit(new intParaleloFutureCont(p/h)));
+        }
+        for (Future<Integer> iterador:contParciales) {
             try{
-                sol = ejecutor.submit(new intParaleloFutureCont(p/h));
-                if(!sol.isDone()){
-                    cont += sol.get();
-                }
+                sol += iterador.get();
             }catch (Exception e) {
-                System.out.println("Fallo...");
+                System.out.println("Error en el Future");
             }
         }
         ejecutor.shutdown();
         ejecutor.awaitTermination(1, TimeUnit.HOURS);
         long time_end = System.currentTimeMillis();
-        System.out.println("El resultado es: "+(double)cont/p);
+        System.out.println("El resultado es: "+(double)sol/p);
         System.out.println("Tarda "+(time_end-time_start)/(double)1000+" segundos.");
     }
 }
