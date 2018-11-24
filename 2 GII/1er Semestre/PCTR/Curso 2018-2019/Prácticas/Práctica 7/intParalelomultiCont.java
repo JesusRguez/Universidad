@@ -10,14 +10,12 @@ import java.lang.Math;
 public class intParalelomultiCont implements Runnable{
 
     public int puntos, nHilos, idHilo;
-    public static Object lock;
     public static int res[];
 
     public intParalelomultiCont(int p, int nHilos, int idHilo){
         this.puntos = p;
         this.nHilos = nHilos;
         this.idHilo = idHilo;
-        lock = new Object();
         res = new int[nHilos];
         for (int i=0; i<nHilos; ++i) {
             res[i] = 0;
@@ -31,9 +29,7 @@ public class intParalelomultiCont implements Runnable{
             x = r.nextDouble();
             y = r.nextDouble();
             if (y<=Math.sin(x)) {
-                synchronized (lock){
-                    res[idHilo]+=1;
-                }
+                res[idHilo]+=1;
             }
         }
     }

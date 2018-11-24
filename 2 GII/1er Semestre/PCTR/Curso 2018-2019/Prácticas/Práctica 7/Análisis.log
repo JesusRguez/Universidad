@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  24 NOV 2018 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  24 NOV 2018 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Análisis2.tex
-(./Análisis2.tex
+**Análisis.tex
+(./Análisis.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -381,11 +381,11 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(./Análisis2.aux
+(./Análisis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-\openout1 = `Análisis2.aux'.
+\openout1 = `Análisis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
@@ -466,9 +466,9 @@ LaTeX Info: Redefining \ref on input line 79.
 LaTeX Info: Redefining \pageref on input line 79.
 LaTeX Info: Redefining \nameref on input line 79.
 
-(./Análisis2.out) (./Análisis2.out)
+(./Análisis.out) (./Análisis.out)
 \@outlinefile=\write3
-\openout3 = `Análisis2.out'.
+\openout3 = `Análisis.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -560,66 +560,71 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 109.
-
-<SpeedUp1.png, id=11, 455.45157pt x 255.95625pt>
-File: SpeedUp1.png Graphic file (type png)
- <use SpeedUp1.png>
-Package pdftex.def Info: SpeedUp1.png used on input line 130.
-(pdftex.def)             Requested size: 455.45045pt x 255.95561pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 135.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 110.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 131.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (36.60994pt too wide) in paragraph at lines 135--136
-\T1/ptm/m/n/12 con los que cal-cu-la-mos el Speed-Up de los al-go-rit-mos de gr
-ano fino (\T1/pcr/m/n/12 matVectorConcurrente.java\T1/ptm/m/n/12 )
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
  []
 
 
-Overfull \hbox (33.01027pt too wide) in paragraph at lines 135--136
-\T1/ptm/m/n/12 y de grano grue-so (\T1/pcr/m/n/12 matVectorDenso.java\T1/ptm/m/
-n/12 ) res-pec-to del al-go-rit-mo se-cuen-cial (\T1/pcr/m/n/12 matVector.java\
-T1/ptm/m/n/12 ). 
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-[2 <./SpeedUp1.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
- (./Análisis2.aux
+[2]
+Overfull \hbox (89.76297pt too wide) in paragraph at lines 142--143
+[]\T1/ptm/b/n/12 TPool: \T1/ptm/m/n/12 Es el ta-ma-�o del pool de th-reads. Que
+-da es-ta-ble-ci-do en el c�-di-go de \T1/pcr/m/n/12 ServidorHiloconPool.java\T
+1/ptm/m/n/12 . 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+ (./Análisis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
-Package rerunfilecheck Info: File `Análisis2.out' has not changed.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `Análisis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 9555 strings out of 493013
- 135928 string characters out of 6135682
- 261255 words of memory out of 5000000
- 12941 multiletter control sequences out of 15000+600000
- 40622 words of font info for 76 fonts, out of 8000000 for 9000
+ 9590 strings out of 493013
+ 136349 string characters out of 6135682
+ 261289 words of memory out of 5000000
+ 12963 multiletter control sequences out of 15000+600000
+ 61994 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,9n,49p,569b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,9n,49p,517b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb>
-Output written on Análisis2.pdf (2 pages, 61702 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Análisis.pdf (3 pages, 61023 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 52 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

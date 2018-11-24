@@ -40,7 +40,7 @@ public class matVectorDenso implements Runnable {
     }
 
     /**
-     * @param matriz
+     * @param matriz Matriz a rellenar
      */
     public static void rellenaMatriz(double[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
@@ -51,7 +51,7 @@ public class matVectorDenso implements Runnable {
     }
 
     /**
-     * @param vector
+     * @param vector Vector a rellenar
      */
     public static void rellenaVector(double[] vector) {
         for (int i = 0; i < vector.length; i++) {
@@ -60,7 +60,7 @@ public class matVectorDenso implements Runnable {
     }
 
     /**
-     * @param matriz
+     * @param matriz Matriz a rellenar
      */
     public static void rellenaMatrizManual(double[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
@@ -72,7 +72,7 @@ public class matVectorDenso implements Runnable {
     }
 
     /**
-     * @param vector
+     * @param vector Vector a rellenar
      */
     public static void rellenaVectorManual(double[] vector) {
         for (int i = 0; i < vector.length; i++) {
@@ -81,6 +81,9 @@ public class matVectorDenso implements Runnable {
         }
     }
 
+    /**
+     * Método run()
+     */
     public void run() {
         for (int i = idHilo * filas / hilos; i < (idHilo + 1) * filas / hilos; i++) {
             resultado[i] = 0;
@@ -114,12 +117,12 @@ public class matVectorDenso implements Runnable {
                 rellenaVector(vectorAux);
                 break;
             default:
-                System.out.println("Seleccione una opci�n correcta.");
+                System.out.println("Seleccione una opción correcta.");
                 break;
         }
 
-        System.out.println("Introduzca el coeficiente de bloqueo:");
-        coeficienteBloqueo = teclado.nextDouble();
+        //System.out.println("Introduzca el coeficiente de bloqueo:");
+        coeficienteBloqueo = 0; //teclado.nextDouble(); //Coeficiente de bloqueo = 0 porque no hay interbloqueo al ser un problema de tipo numérico
 
         hilos = (int) (cores / (1 - coeficienteBloqueo));
 
@@ -133,7 +136,7 @@ public class matVectorDenso implements Runnable {
 
         pool.shutdown();
         pool.awaitTermination(1, TimeUnit.HOURS);
-        
+
         time_end = System.currentTimeMillis();
         System.out.println("\nTarda " + (time_end - time_start) / (double) 1000 + " segundos");
     }
