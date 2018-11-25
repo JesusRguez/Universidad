@@ -61,43 +61,43 @@ void DEF_LIB_EXPORTED selectDefenses(std::list<Defense*> defenses,
 
     else{
 
-		float rendimiento[defenses.size()];
-		unsigned int coste[defenses.size()];
-		float** matDef = new float*[defenses.size()];
-		for(int i = 0; i < defenses.size(); ++i)
-		  matDef[i] = new float[ases+1];
+    float rendimiento[defenses.size()];
+    unsigned int coste[defenses.size()];
+    float** matDef = new float*[defenses.size()];
+    for(int i = 0; i < defenses.size(); ++i)
+      matDef[i] = new float[ases+1];
 
-		std::list<Defense*>::iterator centroExtraccion = defenses.begin();
-		selectedIDs.push_back((*centroExtraccion)->id);
-		ases -= (*centroExtraccion)->cost;
-		defenses.erase(centroExtraccion);
+    std::list<Defense*>::iterator centroExtraccion = defenses.begin();
+    selectedIDs.push_back((*centroExtraccion)->id);
+    ases -= (*centroExtraccion)->cost;
+    defenses.erase(centroExtraccion);
 
-		int i = 0;
-		for(std::list<Defense*>::iterator it=defenses.begin(); it != defenses.end();
-		    it++){
-		    rendimiento[i]  = puntuacion(it);
-		    coste[i] = (*it)->cost;
-		    i++;
-		}
+    int i = 0;
+    for(std::list<Defense*>::iterator it=defenses.begin(); it != defenses.end();
+        it++){
+        rendimiento[i]  = puntuacion(it);
+        coste[i] = (*it)->cost;
+        i++;
+    }
 
-		algoritmo_mochila(ases,defenses,rendimiento,coste,matDef);
+    algoritmo_mochila(ases,defenses,rendimiento,coste,matDef);
 
-		i = defenses.size()-1;
-		int j = ases;
-		std::list<Defense*>::iterator it = defenses.end();
-		it--;
+    i = defenses.size()-1;
+    int j = ases;
+    std::list<Defense*>::iterator it = defenses.end();
+    it--;
 
-		while(i>=0 && j>0){
-		  if(i>0 && matDef[i][j] == matDef[i-1][j]){
-		    i--;
-		    it--;
-		  }
-		  else{
-		    selectedIDs.push_back((*it)->id);
-		    j = j - (*it)->cost;
-		    i--;
-		    it--;
-		  }
-		}
+    while(i>=0 && j>0){
+      if(i>0 && matDef[i][j] == matDef[i-1][j]){
+        i--;
+        it--;
+      }
+      else{
+        selectedIDs.push_back((*it)->id);
+        j = j - (*it)->cost;
+        i--;
+        it--;
+      }
+    }
   }
 }
