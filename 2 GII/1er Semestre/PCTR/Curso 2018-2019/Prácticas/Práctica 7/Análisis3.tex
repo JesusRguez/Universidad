@@ -126,13 +126,14 @@
 
 \begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{TiempoPi.png}
+		\includegraphics[scale=1]{TiempoPi.png}
 		\caption{Valores del tiempo del calculo de pi.}
 		\label{fig:Valores del calculo de pi}
 	\end{center}
 \end{figure}
-\noindent
-Tal y como se ve en la gráfica y en la tabla, el algoritmo \texttt{CirculoParaleloFutureCont.java} es un poco más eficiente que el algoritmo \texttt{CirculoParaleloFutureCont.java}. La diferencia empieza a notarse a partir de los 3 millones de puntos, y de ahí en adelante, dicha diferencia va creciendo poco a poco.
+	Tal y como se ve en la gráfica y en la tabla, el algoritmo \texttt{piParaleloFutureCont.java} es más eficiente que el algoritmo \texttt{piParaleloFutureCont.java} debido al uso de la interfaz \texttt{Callable} y objetos \texttt{Future}.
+	
+\texttt{piParalelomultiCont.java} es más eficiente que \texttt{piParalelouniCont.java} debido al uso de contadores parciales, lo que elimina el cerrojo que nos causaba la pérdida de tiempo.
 
 
 \end{document}
