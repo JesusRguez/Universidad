@@ -10,9 +10,13 @@
 
 using namespace Asedio;
 
+float valor(std::list<Defense*>::iterator defensa){
+    return ((*defensa)->range * (*defensa)->damage * (*defensa)->attacksPerSecond * (*defensa)->health) / ((*defensa)->dispersion * (*defensa)->cost);
+}
+
 void mochila(float* valores, unsigned int* coste, unsigned int ases, float** matriz, std::list<Defense*> defenses){
 
-    for (size_t j = 0; j <= ases; ++j) {
+    for (int j = 0; j <= ases; ++j) {
         if (j < coste[0]) {
             matriz[0][j] = 0;
         }else{
@@ -20,8 +24,8 @@ void mochila(float* valores, unsigned int* coste, unsigned int ases, float** mat
         }
     }
 
-    for (size_t i = 1; i < defenses.size(); ++i) {
-        for (size_t j = 0; j < ases; ++j) {
+    for (int i = 1; i < defenses.size(); ++i) {
+        for (int j = 0; j <= ases; ++j) {
             if (j < coste[i]) {
                 matriz[i][j] = matriz[i-1][j];
             }else{
@@ -35,14 +39,14 @@ void DEF_LIB_EXPORTED selectDefenses(std::list<Defense*> defenses, unsigned int 
 
     unsigned int costeTotal = 0;
 
-    std::list<Defense*>::const_iterator it = defenses.begin();
+    std::list<Defense*>::iterator it = defenses.begin();
     while (it != defenses.end()) {
         costeTotal += (*it)->cost;
         ++it;
     }
 
     if (costeTotal <= ases) {
-        std::list<Defense*>::const_iterator iter = defenses.begin();
+        std::list<Defense*>::iterator iter = defenses.begin();
         while (iter != defenses.end()) {
             selectedIDs.push_back((*iter)->id);
             ++iter;
@@ -51,26 +55,20 @@ void DEF_LIB_EXPORTED selectDefenses(std::list<Defense*> defenses, unsigned int 
         unsigned int coste[defenses.size()];
         float valores[defenses.size()];
 
-        for (size_t i = 0; i < defenses.size(); ++i) {
-            coste[i] = 0;
-            valores[i] = 0;
-        }
-
         float** matriz = new float*[defenses.size()];
-    	for (size_t i = 0; i < defenses.size(); ++i) {
+    	for (int i = 0; i < defenses.size(); ++i) {
     		matriz[i] = new float[ases+1];
     	}
 
-        std::list<Defense*>::const_iterator extractor = defenses.begin();
+        std::list<Defense*>::iterator extractor = defenses.begin();
         selectedIDs.push_back((*extractor)->id);
         ases -= (*extractor)->cost;
         defenses.erase(extractor);
 
         int i = 0;
-        std::list<Defense*>::const_iterator itDef = defenses.begin();
+        std::list<Defense*>::iterator itDef = defenses.begin();
         while (itDef != defenses.end()) {
-            //((*itDef)->range * (*itDef)->damage * (*itDef)->attacksPerSecond * (*itDef)->health) / ((*itDef)->dispersion * (*itDef)->cost);
-            valores[i] = ((*itDef)->range * (*itDef)->damage * (*itDef)->attacksPerSecond * (*itDef)->health) / ((*itDef)->dispersion * (*itDef)->cost);
+            valores[i] = valor(itDef);
             coste[i] = (*itDef)->cost;
             ++i;
             ++itDef;
@@ -78,11 +76,10 @@ void DEF_LIB_EXPORTED selectDefenses(std::list<Defense*> defenses, unsigned int 
 
         mochila(valores, coste, ases, matriz, defenses);
 
-        // Nos posicionamos al final de la fila y la columna
         i = defenses.size() - 1;
         int j = ases;
 
-        std::list<Defense*>::const_iterator iterDef = defenses.end();
+        std::list<Defense*>::iterator iterDef = defenses.end();
         --iterDef;
 
         while (i>=0 && j>0) {

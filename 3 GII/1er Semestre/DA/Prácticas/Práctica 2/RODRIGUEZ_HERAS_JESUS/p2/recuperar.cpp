@@ -1,30 +1,67 @@
+// ###### Config options ################
+
+
+// #######################################
+
+#define BUILDING_DEF_STRATEGY_LIB 1
+
+#include "../simulador/Asedio.h"
+#include "../simulador/Defense.h"
+
+using namespace Asedio;
+
+float valor(std::list<Defense*>::iterator defensa){
+    return ((*defensa)->range * (*defensa)->damage * (*defensa)->attacksPerSecond * (*defensa)->health) / ((*defensa)->dispersion * (*defensa)->cost);
+}
+
+void mochila(float* valores, unsigned int* coste, unsigned int ases, float** matriz, std::list<Defense*> defenses){
+
+    for (int j = 0; j <= ases; ++j) {
+        if (j < coste[0]) {
+            matriz[0][j] = 0;
+        }else{
+            matriz[0][j] = valores[0];
+        }
+    }
+
+    for (int i = 1; i < defenses.size(); ++i) {
+        for (int j = 0; j <= ases; ++j) {
+            if (j < coste[i]) {
+                matriz[i][j] = matriz[i-1][j];
+            }else{
+                matriz[i][j] = std::max(matriz[i-1][j], matriz[i-1][j-coste[i]]+valores[i]);
+            }
+        }
+    }
+}
+
 void DEF_LIB_EXPORTED selectDefenses(std::list<Defense*> defenses, unsigned int ases, std::list<int> &selectedIDs, float mapWidth, float mapHeight, std::list<Object*> obstacles) {
 
     unsigned int costeTotal = 0;
 
-    std::list<Defense*>::const_iterator it = defenses.begin();
+    std::list<Defense*>::iterator it = defenses.begin();
     while (it != defenses.end()) {
         costeTotal += (*it)->cost;
         ++it;
     }
 
     if (costeTotal <= ases) {
-        std::list<Defense*>::const_iterator iter = defenses.begin();
+        std::list<Defense*>::iterator iter = defenses.begin();
         while (iter != defenses.end()) {
             selectedIDs.push_back((*iter)->id);
             ++iter;
         }
     }else{
+        unsigned int coste[defenses.size()];
+        float valores[defenses.size()];
 
         // Algoritmo de la mochila
 
         i = defenses.size() - 1;
         int j = ases;
 
-        std::list<Defense*>::const_iterator iterDef = defenses.end();
+        std::list<Defense*>::iterator iterDef = defenses.end();
         --iterDef;
-
-        // Ahora, recuperamos la combinacion de defensas
 
         while (i>=0 && j>0) {
             if(i>0 && matriz[i][j] == matriz[i-1][j]){

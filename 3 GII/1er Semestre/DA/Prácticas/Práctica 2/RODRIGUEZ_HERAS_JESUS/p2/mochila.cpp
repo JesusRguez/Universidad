@@ -1,6 +1,6 @@
 void mochila(float* valores, unsigned int* coste, unsigned int ases, float** matriz, std::list<Defense*> defenses){
 
-    for (size_t j = 0; j <= ases; ++j) {
+    for (int j = 0; j <= ases; ++j) {
         if (j < coste[0]) {
             matriz[0][j] = 0;
         }else{
@@ -8,8 +8,8 @@ void mochila(float* valores, unsigned int* coste, unsigned int ases, float** mat
         }
     }
 
-    for (size_t i = 1; i < defenses.size(); ++i) {
-        for (size_t j = 0; j < ases; ++j) {
+    for (int i = 1; i < defenses.size(); ++i) {
+        for (int j = 0; j <= ases; ++j) {
             if (j < coste[i]) {
                 matriz[i][j] = matriz[i-1][j];
             }else{
