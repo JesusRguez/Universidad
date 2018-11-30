@@ -31,4 +31,3 @@ public class Cliente_Hilos
         {System.out.println("Error en sockets...");}
     }//main
 }//Cliente_Hilos
-

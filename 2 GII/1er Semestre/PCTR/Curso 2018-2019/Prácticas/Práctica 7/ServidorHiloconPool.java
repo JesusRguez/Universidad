@@ -22,14 +22,12 @@ public class ServidorHiloconPool implements Runnable{
             String datos = entrada.readLine();
             int j;
             int i = Integer.valueOf(datos).intValue();
-            long time_start = System.currentTimeMillis();
             for(j=1; j<=20; j++){
                 System.out.println("El hilo "+Thread.currentThread().getName()+" escribiendo el dato "+i);
                 Thread.sleep(1000);
             }
             enchufe.close();
-            long time_end = System.currentTimeMillis();
-            System.out.println("El hilo "+Thread.currentThread().getName()+" cierra su conexion y ha tardado "+(time_end-time_start/(double)1000)+" segundos");
+            System.out.println("El hilo "+Thread.currentThread().getName()+" cierra su conexion");
         } catch(Exception e) {
             System.out.println("Error...");
         }
@@ -37,7 +35,6 @@ public class ServidorHiloconPool implements Runnable{
 
     public static void main(String[] args) {
         int puerto = 2001;
-        //ExecutorService ejecutor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         ExecutorService ejecutor = Executors.newCachedThreadPool();
 
         try{
@@ -46,10 +43,7 @@ public class ServidorHiloconPool implements Runnable{
                 System.out.println("Esperando solicitud de conexion...");
                 Socket cable = chuff.accept();
                 System.out.println("Recibida solicitud de conexion...");
-                long time_start = System.currentTimeMillis();
                 ejecutor.execute(new ServidorHiloconPool(cable));
-                long time_end = System.currentTimeMillis();
-                System.out.println("Tarda "+(time_end-time_start/(double)1000)+" segundos");
             }
         } catch (Exception e){
           System.out.println("Error en sockets...");

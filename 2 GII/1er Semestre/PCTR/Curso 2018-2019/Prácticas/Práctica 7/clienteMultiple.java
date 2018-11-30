@@ -3,8 +3,9 @@
  * @version 1.0
  */
 
- import java.net.*;
- import java.io.*;
+import java.net.*;
+import java.io.*;
+import java.util.concurrent.*;
 
 public class clienteMultiple implements Runnable{
 
@@ -31,13 +32,14 @@ public class clienteMultiple implements Runnable{
 
     public static void main(String[] args) throws InterruptedException {
         int h = Runtime.getRuntime().availableProcessors();
-        Thread hilos[] = new Thread[h];
+        ExecutorService ejecutor = Executors.newFixedThreadPool(h);
+        long time_start = System.currentTimeMillis();
         for (int i=0; i<h; ++i) {
-            hilos[i] = new Thread(new clienteMultiple());
-            hilos[i].start();
+            ejecutor.execute(new clienteMultiple());
         }
-        for (int i=0; i<h; ++i) {
-            hilos[i].join();
-        }
+        ejecutor.shutdown();
+        ejecutor.awaitTermination(1, TimeUnit.HOURS);
+        long time_end = System.currentTimeMillis();
+        System.out.println("Tarda "+(time_end-time_start)/(double)1000+" segundos");
     }
 }

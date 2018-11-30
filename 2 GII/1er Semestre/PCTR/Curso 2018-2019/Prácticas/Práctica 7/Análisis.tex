@@ -122,24 +122,23 @@
 \end{center}
 \begin{figure}[h]
 	\begin{center}
-%		\includegraphics[scale=1]{TiempoServidor.png}
+		\includegraphics[scale=1]{TiempoServidor.png}
 		\caption{Valores del tiempo del calculo de la integral de sen(x).}
 		\label{fig:Valores del tiempo del calculo de la integral de sen(x)}
 	\end{center}
 \end{figure}
-\noindent
-En la tabla\footnote[1]{Para hacer la tabla de tiempos para el algoritmo \texttt{ServidorHiloconPool.java} hemos establecido un valor de TPool (tamaño del pool) de 20 elemntos.}, podemos ver que para el algoritmo \texttt{ServidorHilosinPool.java} el tiempo siempre va a ser el mismo debido a que las peticiones tardan un tiempo despreciable en comparación con el \texttt{sleep(1000)} que tiene en su código.\\
 
-Sin embargo, para el algoritmo \texttt{ServidorHiloconPool.java} vemos que conforme vamos aumentando el número de peticiones, mayor va siendo el tiempo debido al tamaño del pool de threads y al número de peticiones. Por lo tanto, podemos obtener la siguiente fórmula que, para este caso, donde el tiempo que se tarda en procesar un hilo es prácticamente despreciable, nos dará el tiempo que tardará en procesarse los hilos que queramos en función del tamaño del pool:\\
+En la tabla, podemos ver que para el algoritmo \texttt{ServidorHiloconPool.java} el tiempo siempre va a ser el mismo debido a que las peticiones tardan un tiempo despreciable en comparación con el \texttt{sleep(1000)} que tiene en su código.
+
+Sin embargo, para el algoritmo \texttt{ServidorHilosinPool.java} vemos que conforme vamos aumentando el número de peticiones, mayor va siendo el tiempo debido al tamaño del pool de threads y al número de peticiones. Por lo tanto, podemos obtener la siguiente fórmula que, para este caso, donde el tiempo que se tarda en procesar un hilo es prácticamente despreciable, nos dará el tiempo que tardará en procesarse los hilos que queramos en función del tamaño del pool:
 \begin{center}
-	$Tiempo = \lceil{\frac{NPeticiones\cdot 20}{TPool}}\rceil$
+	$Tiempo = \lceil{\frac{NPeticiones\cdot It}{TPool}}\rceil$
 \end{center}
-\newpage
 Siendo:
 \begin{itemize}
 	\item \textbf{NPeticiones:} Es el número de peticiones que realiza el cliente. Queda establecido en el código de \texttt{ClienteMultiple.java}.
-	\item \textbf{20:} Son los 20 segundos que tarda en procesarse una petición debido al \texttt{sleep(1000)} que tiene cada algoritmo en el \texttt{run} y que hace que en comparación con él, el tiempo que tarda en procesarse una iteración del hilo, sea, esta última, despreciable.
-	\item \textbf{TPool:} Es el tamaño del pool de threads. Queda establecido en el código de \texttt{ServidorHiloconPool.java}.
+	\item \textbf{It:} Es el número de iteraciones que tiene el bucle del motor de ejecución debido a que, por cada iteración del mismo, tenemos un \texttt{Thread.sleep(1000)} que nos dormirá el hilo durante un segundo.
+	\item \textbf{TPool:} Es el tamaño del pool de threads. Queda establecido en el código de \texttt{ServidorHiloconPool.java} mediante el método \texttt{Runtime.getRuntime().availableProcessors()}.
 \end{itemize}
 
 

@@ -20,14 +20,12 @@ public class ServidorHilosinPool implements Runnable{
             String datos = entrada.readLine();
             int j;
             int i = Integer.valueOf(datos).intValue();
-            long time_start = System.currentTimeMillis();
             for(j=1; j<=20; j++){
                 System.out.println("El hilo "+Thread.currentThread().getName()+" escribiendo el dato "+i);
                 Thread.sleep(1000);
             }
             enchufe.close();
-            long time_end = System.currentTimeMillis();
-            System.out.println("El hilo "+Thread.currentThread().getName()+" cierra su conexion y ha tardado "+(time_end-time_start/(double)1000)+" segundos");
+            System.out.println("El hilo "+Thread.currentThread().getName()+" cierra su conexion.");
 
         } catch(Exception e) {
             System.out.println("Error...");
