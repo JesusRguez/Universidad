@@ -3,12 +3,12 @@ LEVEL = 3056
 
 ####################### FIN CONFIGURACION ###########################
 
-# Cuidado con la configuración del editor de texto. Los comandos de los objetivos deben de ir precedidos por tabuladores, NO ESPACIOS (error: falta separador). 
+# Cuidado con la configuración del editor de texto. Los comandos de los objetivos deben de ir precedidos por tabuladores, NO ESPACIOS (error: falta separador).
 
 FILES_TO_PACK_P1 = ../p1/DefenseStrategy.cpp ../p1/*.tex ../p1/p1.pdf ../autor.tex ../p1/Makefile ../p1/ppm.h
 FILES_TO_PACK_P2 = ../p2/DefensesSelection.cpp ../p2/*.tex ../p2/p2.pdf ../p2/Makefile
 CC = g++ # C++ compiler
-CFLAGS = -fPIC -O2 -ffloat-store # -Wall -Wextra -g 
+CFLAGS = -fPIC -O2 -ffloat-store # -Wall -Wextra -g
 LDFLAGS = -shared # linking flags
 RM = rm -f # rm command
 TARGET_LIB = libDefensesSelection.so # target lib
@@ -20,10 +20,10 @@ REPLAYFILE = replay.txt
 
 SRCS = DefensesSelection.cpp # source files
 OBJS = $(SRCS:.cpp=.o)
- 
+
 .PHONY: all
 all: ${TARGET_LIB}
- 
+
 $(TARGET_LIB): $(SRCS)
 	$(CC) $(CFLAGS) ${LDFLAGS} -o $@ $^
 
@@ -39,24 +39,23 @@ savereplay: $(EXE)
 loadreplay: $(REPLAYFILE)
 	${VIEWER} -replay $(REPLAYFILE) $(VIEWERFLAGS)
 
-convertimages: 
+convertimages:
 	for i in *.ppm ; do \
 		convert $$i -scale 400x400 $$i.png ; \
 	done
 
-convertpaths: 
+convertpaths:
 	for i in paths/*.ppm ; do \
 		convert $$i -scale 400x400 $$i.png ; \
 	done
-	
+
 doc:
 	pdflatex p2.tex
 pack:
 	tar -czvf $(APELLIDO1_APELLIDO2_NOMBRE)-p2.tar.gz $(FILES_TO_PACK_P1) $(FILES_TO_PACK_P2)
- 
+
 .PHONY: clean
 clean:
 	-${RM} ${TARGET_LIB} ${OBJS} $(SRCS:.cpp=.d) \
 	${RM} *.ppm* *.aux *.log p*.pdf *.tar.gz *.png
 	${RM} paths/*.ppm*
-

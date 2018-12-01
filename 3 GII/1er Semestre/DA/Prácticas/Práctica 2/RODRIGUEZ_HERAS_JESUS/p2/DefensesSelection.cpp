@@ -11,7 +11,7 @@
 using namespace Asedio;
 
 float valor(std::list<Defense*>::iterator defensa){
-    return ((*defensa)->range * (*defensa)->damage * (*defensa)->attacksPerSecond * (*defensa)->health) / ((*defensa)->dispersion * (*defensa)->cost);
+    return ((*defensa)->damage*(*defensa)->range*(*defensa)->health)/(*defensa)->radio;
 }
 
 void mochila(float* valores, unsigned int* coste, unsigned int ases, float** matriz, std::list<Defense*> defenses){
