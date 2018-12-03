@@ -1,0 +1,598 @@
+((*defensa)->range * (*defensa)->damage * (*defensa)->attacksPerSecond * (*defensa)->health) / ((*defensa)->dispersion * (*defensa)->cost)
+Nivel 3124:
+306.01	Base raided!
+Nivel 3125:
+234.71	Base raided!
+Nivel 3054:
+407.52	Base raided!
+Nivel 3056:
+425.82	Base raided!
+Nivel 3056:
+714.47	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+395.91	Base raided!
+Nivel 3028:
+432.72	Base raided!
+Nivel 4056:
+433.62	Base raided!
+Nivel 4092:
+437.02	Base raided!
+MEDIA: 434.951
+
+
+((*defensa)->damage)
+Nivel 3124:
+309.61	Base raided!
+Nivel 3125:
+243.51	Base raided!
+Nivel 3054:
+274.51	Base raided!
+Nivel 3056:
+516.12	Base raided!
+Nivel 3056:
+518.02	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+268.21	Base raided!
+Nivel 3028:
+372.41	Base raided!
+Nivel 4056:
+377.21	Base raided!
+Nivel 4092:
+475.22	Base raided!
+MEDIA: 391.693
+
+
+(*defensa)->damage*(*defensa)->range
+Nivel 3124:
+313.51	Base raided!
+Nivel 3125:
+258.41	Base raided!
+Nivel 3054:
+363.91	Base raided!
+Nivel 3056:
+479.02	Base raided!
+Nivel 3056:
+751.96	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+320.41	Base raided!
+Nivel 3028:
+615.00	Base raided!
+Nivel 4056:
+445.02	Base raided!
+Nivel 4092:
+426.62	Base raided!
+MEDIA: 453.557
+
+
+(*defensa)->damage*(*defensa)->range*(*defensa)->health
+Nivel 3124:
+334.51	Base raided!
+Nivel 3125:
+369.51	Base raided!
+Nivel 3054:
+337.91	Base raided!
+Nivel 3056:
+555.91	Base raided!
+Nivel 3056:
+766.86	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+435.72	Base raided!
+Nivel 3028:
+429.02	Base raided!
+Nivel 4056:
+442.52	Base raided!
+Nivel 4092:
+551.31	Base raided!
+MEDIA: 478.498
+
+
+((*defensa)->damage*(*defensa)->range*(*defensa)->health)/(*defensa)->radio
+Nivel 3124:
+314.01	Base raided!
+Nivel 3125:
+402.52	Base raided!
+Nivel 3054:
+269.81	Base raided!
+Nivel 3056:
+533.52	Base raided!
+Nivel 3056:
+766.86	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+447.52	Base raided!
+Nivel 3028:
+408.42	Base raided!
+Nivel 4056:
+415.42	Base raided!
+Nivel 4092:
+572.91	Base raided!
+MEDIA: 469.272
+
+
+((*defensa)->damage*(*defensa)->range)/(*defensa)->health*(*defensa)->radio
+Nivel 3124:
+309.61	Base raided!
+Nivel 3125:
+234.61	Base raided!
+Nivel 3054:
+243.61	Base raided!
+Nivel 3056:
+473.12	Base raided!
+Nivel 3056:
+446.02	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+225.30	Base raided!
+Nivel 3028:
+281.01	Base raided!
+Nivel 4056:
+396.01	Base raided!
+Nivel 4092:
+439.52	Base raided!
+MEDIA: 361.052
+
+
+((*defensa)->damage*(*defensa)->attacksPerSecond*(*defensa)->range)/(*defensa)->health
+Nivel 3124:
+306.11	Base raided!
+Nivel 3125:
+243.51	Base raided!
+Nivel 3054:
+292.21	Base raided!
+Nivel 3056:
+423.92	Base raided!
+Nivel 3056:
+609.50	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+183.50	Base raided!
+Nivel 3028:
+372.41	Base raided!
+Nivel 4056:
+437.72	Base raided!
+Nivel 4092:
+382.81	Base raided!
+MEDIA: 381.343
+
+
+((*defensa)->damage*(*defensa)->attacksPerSecond*(*defensa)->range)/((*defensa)->health*(*defensa)->radio)
+Nivel 3124:
+167.30	Base raided!
+Nivel 3125:
+261.51	Base raided!
+Nivel 3054:
+230.80	Base raided!
+Nivel 3056:
+488.92	Base raided!
+Nivel 3056:
+546.01	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+222.80	Base raided!
+Nivel 3028:
+375.01	Base raided!
+Nivel 4056:
+381.61	Base raided!
+Nivel 4092:
+446.82	Base raided!
+MEDIA: 368.169
+
+
+((*defensa)->damage*(*defensa)->attacksPerSecond*(*defensa)->range)/((*defensa)->health*(*defensa)->radio*(*defensa)->cost)
+Nivel 3124:
+312.31	Base raided!
+Nivel 3125:
+243.51	Base raided!
+Nivel 3054:
+400.02	Base raided!
+Nivel 3056:
+448.12	Base raided!
+Nivel 3056:
+621.40	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+294.61	Base raided!
+Nivel 3028:
+603.60	Base raided!
+Nivel 4056:
+422.02	Base raided!
+Nivel 4092:
+331.21	Base raided!
+MEDIA: 424.049
+
+
+((*defensa)->damage*(*defensa)->attacksPerSecond*(*defensa)->range);
+Nivel 3124:
+299.11	Base raided!
+Nivel 3125:
+278.21	Base raided!
+Nivel 3054:
+312.71	Base raided!
+Nivel 3056:
+325.11	Base raided!
+Nivel 3056:
+608.50	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+329.31	Base raided!
+Nivel 3028:
+264.01	Base raided!
+Nivel 4056:
+417.02	Base raided!
+Nivel 4092:
+419.82	Base raided!
+MEDIA: 381.551
+
+
+((*defensa)->damage*(*defensa)->attacksPerSecond*(*defensa)->range)/(*defensa)->cost
+Nivel 3124:
+306.51	Base raided!
+Nivel 3125:
+368.51	Base raided!
+Nivel 3054:
+299.21	Base raided!
+Nivel 3056:
+325.11	Base raided!
+Nivel 3056:
+680.68	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+339.31	Base raided!
+Nivel 3028:
+472.02	Base raided!
+Nivel 4056:
+464.02	Base raided!
+Nivel 4092:
+555.91	Base raided!
+MEDIA: 407.299
+
+
+((*defensa)->damage*(*defensa)->range)/(*defensa)->cost
+Nivel 3124:
+293.01	Base raided!
+Nivel 3125:
+243.51	Base raided!
+Nivel 3054:
+231.20	Base raided!
+Nivel 3056:
+532.52	Base raided!
+Nivel 3056:
+753.36	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+333.91	Base raided!
+Nivel 3028:
+383.31	Base raided!
+Nivel 4056:
+438.02	Base raided!
+Nivel 4092:
+497.22	Base raided!
+MEDIA: 426.777
+
+
+((*defensa)->damage*(*defensa)->range)/((*defensa)->attacksPerSecond*(*defensa)->cost)
+Nivel 3124:
+235.01	Base raided!
+Nivel 3125:
+242.71	Base raided!
+Nivel 3054:
+314.21	Base raided!
+Nivel 3056:
+514.52	Base raided!
+Nivel 3056:
+586.00	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+266.31	Base raided!
+Nivel 3028:
+536.52	Base raided!
+Nivel 4056:
+437.62	Base raided!
+Nivel 4092:
+435.52	Base raided!
+MEDIA: 413.013
+
+
+((*defensa)->damage*(*defensa)->range)/((*defensa)->attacksPerSecond*(*defensa)->cost*(*defensa)->cost)
+Nivel 3124:
+293.01	Base raided!
+Nivel 3125:
+259.41	Base raided!
+Nivel 3054:
+314.41	Base raided!
+Nivel 3056:
+512.02	Base raided!
+Nivel 3056:
+621.50	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+286.91	Base raided!
+Nivel 3028:
+428.02	Base raided!
+Nivel 4056:
+437.62	Base raided!
+Nivel 4092:
+403.72	Base raided!
+MEDIA: 411.803
+
+
+((*defensa)->damage*(*defensa)->range*(*defensa)->health)/((*defensa)->attacksPerSecond*(*defensa)->cost*(*defensa)->cost)
+Nivel 3124:
+293.11	Base raided!
+Nivel 3125:
+234.61	Base raided!
+Nivel 3054:
+380.11	Base raided!
+Nivel 3056:
+480.02	Base raided!
+Nivel 3056:
+753.36	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+329.31	Base raided!
+Nivel 3028:
+369.31	Base raided!
+Nivel 4056:
+437.62	Base raided!
+Nivel 4092:
+398.02	Base raided!
+MEDIA: 423.718
+
+
+((*defensa)->damage*(*defensa)->range*(*defensa)->health)/((*defensa)->attacksPerSecond*(*defensa)->cost*(*defensa)->cost*(*defensa)->dispersion)
+Nivel 3124:
+321.01	Base raided!
+Nivel 3125:
+225.20	Base raided!
+Nivel 3054:
+299.21	Base raided!
+Nivel 3056:
+473.62	Base raided!
+Nivel 3056:
+621.50	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+294.41	Base raided!
+Nivel 3028:
+279.51	Base raided!
+Nivel 4056:
+418.62	Base raided!
+Nivel 4092:
+615.40	Base raided!
+MEDIA: 411.017
+
+
+((*defensa)->damage*(*defensa)->range*(*defensa)->attacksPerSecond)
+Nivel 3124:
+299.11	Base raided!
+Nivel 3125:
+278.21	Base raided!
+Nivel 3054:
+312.71	Base raided!
+Nivel 3056:
+325.11	Base raided!
+Nivel 3056:
+608.50	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+329.31	Base raided!
+Nivel 3028:
+264.01	Base raided!
+Nivel 4056:
+417.02	Base raided!
+Nivel 4092:
+419.82	Base raided!
+MEDIA: 381.551
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond)
+Nivel 3124:
+293.51	Base raided!
+Nivel 3125:
+280.51	Base raided!
+Nivel 3054:
+316.21	Base raided!
+Nivel 3056:
+552.51	Base raided!
+Nivel 3056:
+733.87	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+284.81	Base raided!
+Nivel 3028:
+466.02	Base raided!
+Nivel 4056:
+412.02	Base raided!
+Nivel 4092:
+403.52	Base raided!
+MEDIA: 430.469
+
+
+(*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond*(*defensa)->dispersion
+Nivel 3124:
+323.51	Base raided!
+Nivel 3125:
+223.00	Base raided!
+Nivel 3054:
+315.01	Base raided!
+Nivel 3056:
+447.52	Base raided!
+Nivel 3056:
+712.47	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+429.22	Base raided!
+Nivel 3028:
+468.02	Base raided!
+Nivel 4056:
+430.52	Base raided!
+Nivel 4092:
+470.72	Base raided!
+MEDIA: 438.17
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond*(*defensa)->range)/(*defensa)->dispersion
+Nivel 3124:
+320.01	Base raided!
+Nivel 3125:
+234.71	Base raided!
+Nivel 3054:
+371.61	Base raided!
+Nivel 3056:
+425.82	Base raided!
+Nivel 3056:
+745.96	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+416.52	Base raided!
+Nivel 3028:
+304.01	Base raided!
+Nivel 4056:
+433.62	Base raided!
+Nivel 4092:
+455.42	Base raided!
+MEDIA: 426.939
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->range)/(*defensa)->dispersion
+Nivel 3124:
+356.01	Base raided!
+Nivel 3125:
+278.21	Base raided!
+Nivel 3054:
+325.61	Base raided!
+Nivel 3056:
+548.41	Base raided!
+Nivel 3056:
+714.47	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+409.22	Base raided!
+Nivel 3028:
+456.92	Base raided!
+Nivel 4056:
+395.11	Base raided!
+Nivel 4092:
+421.02	Base raided!
+MEDIA: 446.669
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond*(*defensa)->radio)
+Nivel 3124:
+320.01	Base raided!
+Nivel 3125:
+225.00	Base raided!
+Nivel 3054:
+314.21	Base raided!
+Nivel 3056:
+346.01	Base raided!
+Nivel 3056:
+791.95	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+322.51	Base raided!
+Nivel 3028:
+351.71	Base raided!
+Nivel 4056:
+420.02	Base raided!
+Nivel 4092:
+400.62	Base raided!
+MEDIA: 405.375
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond/(*defensa)->radio)
+Nivel 3124:
+294.51	Base raided!
+Nivel 3125:
+226.40	Base raided!
+Nivel 3054:
+292.21	Base raided!
+Nivel 3056:
+388.51	Base raided!
+Nivel 3056:
+738.27	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+482.12	Base raided!
+Nivel 3028:
+397.82	Base raided!
+Nivel 4056:
+474.52	Base raided!
+Nivel 4092:
+382.81	Base raided!
+MEDIA: 423.888
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond)/((*defensa)->radio*(*defensa)->range)
+Nivel 3124:
+271.31	Base raided!
+Nivel 3125:
+271.01	Base raided!
+Nivel 3054:
+228.50	Base raided!
+Nivel 3056:
+448.12	Base raided!
+Nivel 3056:
+694.28	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+393.41	Base raided!
+Nivel 3028:
+596.00	Base raided!
+Nivel 4056:
+433.92	Base raided!
+Nivel 4092:
+403.72	Base raided!
+MEDIA: 430.198
+
+
+((*defensa)->damage*(*defensa)->health*(*defensa)->attacksPerSecond)/((*defensa)->radio*(*defensa)->range*(*defensa)->cost)
+Nivel 3124:
+330.01	Base raided!
+Nivel 3125:
+348.21	Base raided!
+Nivel 3054:
+243.81	Base raided!
+Nivel 3056:
+448.12	Base raided!
+Nivel 3056:
+694.28	Base raided!
+Nivel 3056:
+561.71	Base raided!
+Nivel 3052:
+342.01	Base raided!
+Nivel 3028:
+289.51	Base raided!
+Nivel 4056:
+426.12	Base raided!
+Nivel 4092:
+419.82	Base raided!
+MEDIA: 410.16

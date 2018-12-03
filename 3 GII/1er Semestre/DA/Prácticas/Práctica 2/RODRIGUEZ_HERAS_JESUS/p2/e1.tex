@@ -1,3 +1,3 @@
-$$ f(radio,rango,salud,dano,coste,dispersion,ataquesPorSegundo)=\frac{rango*dano*ataquesPorSegundo*salud}{dispersion*coste} $$
+$$ f(dano,rango,salud,radio)=\frac{dano*rango*salud}{radio} $$
 
-La función que se encarga de asignar valores a las defensas la hemos planteado de forma simple tal que divide lo considerado ``bueno'' (rango, daño, ataques por segundo y salud) entre lo considerado ``malo'' (dispersión y coste).
+La función que se encarga de asignar valores a las defensas la hemos planteado de forma simple tal que divide lo considerado ``bueno'' (daño, rango y salud) entre lo considerado ``malo'' (radio). Esto es debido a que queremos defensas que sean lo más fuertes posible pero que sean lo más pequeñas en comparación a su fuerza, siendo la fuerza ``$dano*rango*salud$''.
