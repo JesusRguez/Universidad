@@ -1,1 +1,12 @@
-Escriba aquí su respuesta al ejercicio 4.
+%Escriba aquí su respuesta al ejercicio 4.
+El algoritmo diseñado contiene los siguientes elementos que se corresponden con los de un algoritmo voraz:
+\begin{itemize}
+	\item \textbf{Conjunto de candidatos:} Lista de defensas a colocar en el terreno de batalla.
+	\item \textbf{Función de selección:} Indica la celda más prometedora de las que quedan disponibles en el terreno de batalla.
+	\item \textbf{Función de factibilidad:} Comprueba si una defensa dada puede colocarse en la celda elegida por la función de selección.
+\end{itemize}
+Inicialmente, el algoritmo contiene un bucle cuya condición de parada contiene dos factores: un número de intentos (establecido a 1000 por defecto) y una condición booleana que se correspondería con la solución de la estructura de los algoritmos voraces.
+
+También contiene una función de selección que, en su interior impondrá un valor de 0 a las celdas que hayan sido eliminadas de la solución para que no puedan ser seleccionadas de nuevo.
+
+A continuación, tenemos una función booleana de factibilidad que nos devolverá \texttt{true} si la es posible incluir la selección realizada por la función de selección puede incluirse en la solución del problema. En caso contrario, devolverá \texttt{false}.
