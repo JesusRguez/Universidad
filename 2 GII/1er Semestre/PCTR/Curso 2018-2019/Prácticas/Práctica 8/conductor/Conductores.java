@@ -15,8 +15,8 @@ public class Conductores{
         conductores = new ArrayList<Conductor>();
     }
 
-    public synchronized String mostrarConductor(int i){
-        return conductores.get(i).toString();
+    public synchronized Conductor mostrarConductor(int i){
+        return conductores.get(i);
     }
 
     public synchronized void agregarConductor(Conductor c){
