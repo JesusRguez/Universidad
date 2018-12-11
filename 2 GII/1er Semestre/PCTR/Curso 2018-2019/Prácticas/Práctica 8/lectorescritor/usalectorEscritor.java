@@ -5,6 +5,8 @@
 
 package lectorescritor;
 
+import java.io.*;
+
 public class usalectorEscritor implements Runnable{
 
     private static final lectorEscritor monitor = new lectorEscritor();
@@ -19,9 +21,35 @@ public class usalectorEscritor implements Runnable{
         if (tipoHilo == 1) {
             while(true){
                 try {
-
+                    monitor.inicia_lectura();
+                    Thread.sleep(1000);
+                    try {
+                        fichero.seek(0);
+                        System.out.println(fichero.readLine());
+                    } catch(IOException e) {
+                        System.out.println("Error en fichero...");
+                    }
+                    monitor.fin_lectura();
+                    Thread.sleep(500);
+                } catch(InterruptedException e) {
+                    System.out.println("Error en lectores...");
+                }
+            }
+        }else{
+            while(true){
+                try {
+                    monitor.inicia_escritura();
+                    Thread.sleep(1000);
+                    try {
+                        fichero.getFilePointer();
+                        fichero.writeChars("Escribiendo en fichero\n");
+                    } catch(IOException e) {
+                        System.out.println("Fallo en fichero...");
+                    }
+                    monitor.fin_escritura();
+                    Thread.sleep(500);
                 } catch(Exception e) {
-
+                    System.out.println("Error en escritores...");
                 }
             }
         }
@@ -29,21 +57,21 @@ public class usalectorEscritor implements Runnable{
 
     public static void main(String[] args) throws Exception {
         try {
-            fichero = new RandomAccessFile("datos", "rw");
+            fichero = new RandomAccessFile("datos.txt", "rw");
         } catch(Exception e) {
             System.out.println("No se ha podido abrir el fichero");
         }
-        usalectorEscritor personas[] = usalectorEscritor[10];
+        Thread hilos[] = new Thread[10];
         for (int i=0; i<5; ++i) {
-            personas[i] = new usalectorEscritor(1);
-            personas[i].start();
+            hilos[i] = new Thread(new usalectorEscritor(1)); // lectores=1
+            hilos[i].start();
         }
         for (int i=5; i<10; ++i) {
-            personas[i] = new usalectorEscritor(2);
-            personas[i].start();
+            hilos[i] = new Thread(new usalectorEscritor(2)); // escritores=2
+            hilos[i].start();
         }
         for (int i=0; i<10; ++i) {
-            personas[i].join();
+            hilos[i].join();
         }
         fichero.close();
     }
