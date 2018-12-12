@@ -13,6 +13,10 @@ public class usalectorEscritor implements Runnable{
     public static RandomAccessFile fichero;
     public int tipoHilo;
 
+    /**
+     * Constructor de la clase usalectorEscritor
+     * @param tipoHilo Tipo de hilo: 1=lector; 2=escritor
+     */
     public usalectorEscritor(int tipoHilo){
         this.tipoHilo = tipoHilo;
     }

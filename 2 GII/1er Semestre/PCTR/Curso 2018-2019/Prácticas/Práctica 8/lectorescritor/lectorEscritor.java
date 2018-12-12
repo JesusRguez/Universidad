@@ -10,11 +10,17 @@ public class lectorEscritor{
     private int n;
     private boolean escribiendo;
 
+    /**
+     * Constructor del monitor lectorEscritor
+     */
     public lectorEscritor(){
         n = 0;
         escribiendo = false;
     }
 
+    /**
+     * Método para iniciar la lectura
+     */
     public synchronized void inicia_lectura(){
         while(escribiendo){
             try {
@@ -27,6 +33,9 @@ public class lectorEscritor{
         notifyAll();
     }
 
+    /**
+     * Método para finalizar la lectura
+     */
     public synchronized void fin_lectura(){
         --n;
         while(n == 0){
@@ -34,6 +43,9 @@ public class lectorEscritor{
         }
     }
 
+    /**
+     * Método para inciar la escritura
+     */
     public synchronized void inicia_escritura(){
         while(n!=0 || escribiendo == true){
             try {
@@ -45,6 +57,9 @@ public class lectorEscritor{
         escribiendo = true;
     }
 
+    /**
+     * Método para finalizar la escritura
+     */
     public synchronized void fin_escritura(){
         escribiendo = false;
         notifyAll();

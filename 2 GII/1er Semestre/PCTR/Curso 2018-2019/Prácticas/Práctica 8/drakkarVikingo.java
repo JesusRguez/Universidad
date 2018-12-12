@@ -27,9 +27,12 @@ public class drakkarVikingo implements Runnable {
         }
     }
 
+    /**
+     * Método para que los vikingos coman de la marmita
+     */
     public synchronized void comer(){
         while(marmita == 0){
-
+            notifyAll();
             System.out.println("Marmita vacia");
             try{
                 wait();
@@ -38,10 +41,12 @@ public class drakkarVikingo implements Runnable {
             }
         }
         --marmita;
-        notifyAll();
         System.out.println("Anguilas en la marmita: "+marmita);
     }
 
+    /**
+     * Método para que el cocinero rellene la marmita
+     */
     public synchronized void llenar_marmita(){
         while (marmita > 0) {
             try{

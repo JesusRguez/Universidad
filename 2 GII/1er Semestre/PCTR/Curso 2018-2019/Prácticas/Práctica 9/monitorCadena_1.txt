@@ -1,0 +1,40 @@
+monitor Cadena_1;
+    var
+        lectores, max_elem, n_elem: integer;
+        escribiendo: boolean;
+        leer, escribir: condition;
+
+    begin
+        lectores:=0;
+        escribiendo:=false;
+        max_elem:=100;
+        n_elem:=0;
+    end
+
+    procedure inicioLectura();
+    begin
+        if (escribiendo) then wait(leer);
+        lectores++;
+        n_elem++;
+        send(leer);
+    end;
+
+    procedure finLectura();
+    begin
+        lectores--;
+        if (lectores = 0) then send(escribir);
+    end;
+
+    procedure inicioEscritura();
+    begin
+        if ((escribiendo) or lectores!=0) or (n_elem=max_elem) then
+            wait(escribir);
+        n_elem++;
+        escribiendo=true;
+    end;
+
+    procedure finEscritura();
+    begin
+        escribiendo=false;
+        send(leer);
+    end;
