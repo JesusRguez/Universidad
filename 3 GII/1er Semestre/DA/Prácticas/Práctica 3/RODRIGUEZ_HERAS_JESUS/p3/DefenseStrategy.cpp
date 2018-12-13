@@ -9,6 +9,7 @@
 #include "../simulador/Asedio.h"
 #include "../simulador/Defense.h"
 #include "cronometro.h"
+#include <vector>
 
 using namespace Asedio;
 
@@ -135,21 +136,34 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 		}
 	}
 
-    std::vector<float> mapaOrdenado(0, nCellsHeight*nCellsWidth);
-    std::vector<float>::iterator itMapa = mapaOrdenado.begin();
-    for (size_t i = 0; i < nCellsHeight; ++i) {
-        for (size_t j = 0; j < nCellsWidth; ++j) {
-            mapaOrdenado.insert(itMapa, mapa[i][j]);
-            ++itMapa;
+    class posicionConValor{
+    public:
+        int i, j;
+        float valor;
+        posicionConValor();
+        posicionConValor(int i2, int j2, float valor2) : i(i2), j(j2), valor(valor2){};
+    };
+
+    std::vector<posicionConValor> mapaOrdenado;
+    std::cout<< mapaOrdenado.size();
+    for (int i = 0; i < nCellsHeight; ++i) {
+        for (int j = 0; j < nCellsWidth; ++j) {
+            mapaOrdenado.push_back(pepe);
         }
     }
+
+    std::vector<posicionConValor>::iterator i = mapaOrdenado.begin();
+    std::vector<posicionConValor>::iterator j = mapaOrdenado.end();
+    ordenacionFusion(mapaOrdenado, i, j);
+    //Cuando esto termine, me lo devuelve ordenado, falta la implementación de esta funcion
 
 	int fila = 0, columna = 0;
 	float x = 0, y = 0;
 
 	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+		//seleccionConOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+
 		x = fila*cellWidth + cellWidth*0.5f;
 		y = columna*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
@@ -165,7 +179,7 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 	}
 
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+		seleccionConOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
 		x = fila*cellWidth + cellWidth*0.5f;
 		y = columna*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
@@ -303,7 +317,7 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     c1.activar();
     do { // Este do-while tiene el esequema de medida adaptativo
 		placeDefensesSinOrdenacion(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-
+        //Funciona
 		++r1;
     } while(c1.tiempo() < 1.0);
     c1.parar();
@@ -313,7 +327,7 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     c2.activar();
     do { // Este do-while tiene el esequema de medida adaptativo
 		placeDefensesFusion(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-
+        //Este no funciona
 		++r2;
     } while(c2.tiempo() < 1.0);
     c2.parar();
@@ -323,7 +337,7 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     c3.activar();
     do { // Este do-while tiene el esequema de medida adaptativo
 		placeDefensesRapido(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-
+        //Este no se si funciona, pero no
 		++r3;
     } while(c3.tiempo() < 1.0);
     c3.parar();
@@ -333,7 +347,7 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     c4.activar();
     do { // Este do-while tiene el esequema de medida adaptativo
 		placeDefensesMonticulo(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-
+        //Por descarte, tampoco funciona
 		++r4;
     } while(c4.tiempo() < 1.0);
     c4.parar();
