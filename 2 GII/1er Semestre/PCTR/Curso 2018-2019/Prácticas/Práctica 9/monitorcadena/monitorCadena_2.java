@@ -7,10 +7,17 @@ package monitorcadena;
 
 public class monitorCadena_2 {
 
-    public int lectores = 0;
-    public boolean escribiendo = false;
-    public int max_elem = 50;
-    public int n_elem = 0;
+    private int lectores;
+    private boolean escribiendo;
+    private int max_elem;
+    private int n_elem;
+
+    public monitorCadena_2(){
+        this.lectores = 0;
+        this.escribiendo = false;
+        this.max_elem = 50;
+        this.n_elem = 0;
+    }
 
     /**
      * Método para iniciar la lectura

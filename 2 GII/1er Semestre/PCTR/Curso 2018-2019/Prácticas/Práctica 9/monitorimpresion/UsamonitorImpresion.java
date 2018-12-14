@@ -7,7 +7,7 @@ package monitorimpresion;
 
 public class UsamonitorImpresion implements Runnable {
 
-    public static monitorImpresion monitor = monitorImpresion(3);
+    public static monitorImpresion monitor = new monitorImpresion();
     public int impresora;
 
     /**
@@ -17,7 +17,7 @@ public class UsamonitorImpresion implements Runnable {
 
     public void run(){
         impresora = monitor.take_print();
-        System.out.println("Impreso");
+        System.out.println("Impreso por impresora "+impresora+" lanzada por el hilo "+Thread.currentThread().getName());
         monitor.drop_print(impresora);
     }
 

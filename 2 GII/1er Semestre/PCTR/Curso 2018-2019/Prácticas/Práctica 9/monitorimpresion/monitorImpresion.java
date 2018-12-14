@@ -7,19 +7,19 @@ package monitorimpresion;
 
 public class monitorImpresion{
 
-    int i, impresoras;
-    boolean libre[];
+    private int n, impresoras;
+    private boolean libre[];
 
     /**
      * Constructor del monitorImpresion
      * @param n Número de impresoras en el sistema
      */
-    public monitorImpresion(int n){
-        libre = new boolean[n];
-        for (int i=0; i<n; ++i) {
-            this.libre[i] = false;
+    public monitorImpresion(){
+        libre = new boolean[3];
+        for (int i=0; i<3; ++i) {
+            this.libre[i] = true;
         }
-        this.impresoras = n;
+        this.impresoras = 3;
     }
 
     /**
@@ -34,7 +34,7 @@ public class monitorImpresion{
                 System.out.println("Error en take_print...");
             }
         }
-        int n = 1;
+        n = 0;
         while(!libre[n]){
             ++n;
         }
