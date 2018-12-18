@@ -13,6 +13,10 @@ public class UsaRWFileMonitor {
 
         private int hilo;
 
+        /**
+         * Constructor de la clase Lector
+         * @param hilo Identificador de hilo lector
+         */
         public Lector(int hilo){
             this.hilo = hilo;
         }
@@ -35,6 +39,10 @@ public class UsaRWFileMonitor {
 
         private int hilo;
 
+        /**
+         * Constructor de la clase Escritor
+         * @param hilo Identificador de hilo escritor
+         */
         public Escritor(int hilo){
             this.hilo = hilo;
         }
@@ -65,6 +73,6 @@ public class UsaRWFileMonitor {
         for (int i=0; i<5; ++i) {
             lectores[i] = new Lector(i);
             lectores[i].start();
-        }        
+        }
     }
 }

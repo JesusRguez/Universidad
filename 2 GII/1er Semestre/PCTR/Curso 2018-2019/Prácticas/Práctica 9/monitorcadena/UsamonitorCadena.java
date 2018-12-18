@@ -15,6 +15,10 @@ public class UsamonitorCadena implements Runnable {
 
     public int tipoHilo;
 
+    /**
+     * Constructor de la clase UsamonitorCadena
+     * @param tipoHilo Identificador del tipo de hilo (escritor/lector)
+     */
     public UsamonitorCadena(int tipoHilo){
         this.tipoHilo = tipoHilo;
     }
