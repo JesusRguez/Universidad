@@ -4,7 +4,7 @@ monitor Cadena_2;
         escribiendo: boolean;
         leer, escribir: condition;
 
-    begin
+    begin 
         lectores:=0;
         escribiendo:=false;
         max_elem:=50;
