@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  12 DEC 2018 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  18 DEC 2018 09:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,41 +578,47 @@ File: latin1.def 2015/03/17 v1.2c Input encoding file
 (./monitorCadena_1.txt
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 2.
-) [2]
-(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
-(./monitorCadena_2.txt)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./monitorCadena.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
-Package rerunfilecheck Info: File `monitorCadena.out' has not changed.
-(rerunfilecheck)             Checksum: 478DE8639C0F1D4B4C6EC9E2DF2BBA81;106.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+
+
+Package rerunfilecheck Warning: File `monitorCadena.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `monitorCadena.out':
+(rerunfilecheck)             Before: 478DE8639C0F1D4B4C6EC9E2DF2BBA81;106
+(rerunfilecheck)             After:  2C82120C95026F05C3C976A4FA52833C;53.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9967 strings out of 493013
- 140037 string characters out of 6135682
- 276419 words of memory out of 5000000
- 13261 multiletter control sequences out of 15000+600000
+ 9921 strings out of 493013
+ 139200 string characters out of 6135682
+ 276416 words of memory out of 5000000
+ 13266 multiletter control sequences out of 15000+600000
  35144 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,6n,49p,341b,1536s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb>
-Output written on monitorCadena.pdf (3 pages, 46657 bytes).
+pdfTeX warning (dest): name{section.2} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb>
+Output written on monitorCadena.pdf (2 pages, 45057 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 42 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
