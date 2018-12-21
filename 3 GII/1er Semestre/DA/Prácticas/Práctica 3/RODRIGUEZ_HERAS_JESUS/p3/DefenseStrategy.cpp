@@ -13,6 +13,22 @@
 
 using namespace Asedio;
 
+class posicionConValor{
+public:
+    int i, j;
+    float valor;
+    posicionConValor();
+    posicionConValor(int i2, int j2, float valor2) : i(i2), j(j2), valor(valor2){};
+
+    posicionConValor operator <(posicionConValor p){
+        return this.valor < p.valor;
+    }
+
+    posicionConValor operator >(posicionConValor p){
+        return this.valor > p.valor;
+    }
+};
+
 float defaultCellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, List<Object*> obstacles, List<Defense*> defenses) {
 
     float cellWidth = mapWidth / nCellsWidth;
@@ -119,6 +135,19 @@ void DEF_LIB_EXPORTED placeDefensesSinOrdenacion(bool** freeCells, int nCellsWid
 	}
 }
 
+bool mayor(posicionConValor p1, posicionConValorp2){
+    return p1 > p2;
+}
+
+void ordenacionFusion(std::vector<posicionConValor*> mapaOrdenado, std::vector<posicionConValor>::iterator i, std::vector<posicionConValor>::iterator j){
+    int n = mapaOrdenado.size(); //esto es j-i+1, porque es la dimensión del vector
+    if (n < 3) {
+        std::sort(mapaOrdenado.begin(), mapaOrdenado.end(), mayor);
+    }else{
+        //buscate las papas
+    }
+}
+
 void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {
 
     float cellWidth = mapWidth / nCellsWidth;
@@ -135,14 +164,6 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 			mapa[i][j] = defaultCellValue(i, j, freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
 		}
 	}
-
-    class posicionConValor{
-    public:
-        int i, j;
-        float valor;
-        posicionConValor();
-        posicionConValor(int i2, int j2, float valor2) : i(i2), j(j2), valor(valor2){};
-    };
 
     std::vector<posicionConValor> mapaOrdenado;
     std::cout<< mapaOrdenado.size();
