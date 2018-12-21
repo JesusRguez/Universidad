@@ -7,6 +7,10 @@ package filemonitor;
 
 public class UsaRWFileMonitor implements Runnable {
 
+    public UsaRWFileMonitor(int id){
+        this.id = id;
+    }
+
     public void run(){
 
     }

@@ -1,0 +1,36 @@
+monitor filoapian;
+var:
+	fork:=array of Integer[0..4]<--[2,...,2];
+	OKtoEat:=array of condition[0..4];
+
+begin
+	for i[1..5]
+		tenedores[i]:=2;
+end;
+
+begin
+	loop
+		take_forks(i);
+		comer();
+		release_forks(i);
+		pensar();
+	forever;
+end;
+
+procedure take_forks(integer i)
+begin
+	if fork[i]!=2 //En java será un while
+		wait(OKtoEat[i]);
+	
+	fork[i+1]<--fork[i+1]-1;
+	fork[i-1]<--fork[i-1]-1;
+end;
+
+procedure release_forks(integer i)
+begin
+	fork[i+1]<--fork[i+1]+1;
+	fork[i-1]<--fork[i-1]+1;
+	if fork[i+1]=2
+		signal(OKtoEat[i+1];
+	if fork[i-1]=2
+		signal(OKtoEat[i-1];
