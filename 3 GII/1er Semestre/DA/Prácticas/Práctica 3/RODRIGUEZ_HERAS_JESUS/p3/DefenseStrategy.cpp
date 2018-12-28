@@ -20,12 +20,20 @@ public:
     posicionConValor();
     posicionConValor(int i2, int j2, float valor2) : i(i2), j(j2), valor(valor2){};
 
-    posicionConValor operator <(posicionConValor p){
-        return this.valor < p.valor;
+    bool operator <(posicionConValor p){
+        return this->valor < p.valor;
     }
 
-    posicionConValor operator >(posicionConValor p){
-        return this.valor > p.valor;
+    bool operator >(posicionConValor p){
+        return this->valor > p.valor;
+    }
+
+    bool operator ==(posicionConValor p){
+        return this->valor == p.valor;
+    }
+
+    bool operator <=(posicionConValor p){
+        return this->valor <= p.valor;
     }
 };
 
@@ -135,17 +143,55 @@ void DEF_LIB_EXPORTED placeDefensesSinOrdenacion(bool** freeCells, int nCellsWid
 	}
 }
 
-bool mayor(posicionConValor p1, posicionConValorp2){
-    return p1 > p2;
+void ordenacionInsercion(posicionConValor* mapaOrdenado, int i, int j){
+    posicionConValor temp;
+    int tam = j-i+1;
+    for (i; i<tam; ++i){
+        temp = mapaOrdenado[i];
+        j=i-1;
+        while ((mapaOrdenado[j]>temp)&&(j>=0)) {
+            mapaOrdenado[j+1]=mapaOrdenado[j];
+            --j;
+        }
+        mapaOrdenado[j+1] = temp;
+    }
 }
 
-void ordenacionFusion(std::vector<posicionConValor*> mapaOrdenado, std::vector<posicionConValor>::iterator i, std::vector<posicionConValor>::iterator j){
-    int n = mapaOrdenado.size(); //esto es j-i+1, porque es la dimensión del vector
-    if (n < 3) {
-        std::sort(mapaOrdenado.begin(), mapaOrdenado.end(), mayor);
-    }else{
-        //buscate las papas
+void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
+    int n = j-i+1;
+    int p = i;
+    int q = k+1;
+    posicionConValor w[n];
+
+    for (size_t l = 0; l < n; ++l) {
+        if ((p <= k) && (q > j || mapaOrdenado[p] <= mapaOrdenado[q])) {
+            w[l] = mapaOrdenado[p];
+            ++p;
+        }else{
+            w[l] = mapaOrdenado[q];
+            ++q;
+        }
     }
+    // A lo mejor hay que cambiar el 0 por  el 1
+    for (size_t l = 0; l < n; ++l) {
+        mapaOrdenado[i-1+l] = w[l];
+    }
+}
+
+void ordenacionFusion(posicionConValor* mapaOrdenado, int i, int j){
+    int n = j-i+1; //esto es j-i+1, porque es la dimensión del vector
+    if (n < 3) {
+        ordenacionInsercion(mapaOrdenado, i, j);
+    }else{
+        int k = i-1+n/2;
+        ordenacionFusion(mapaOrdenado, i, k);
+        ordenacionFusion(mapaOrdenado, k+1, j);
+        fusion(mapaOrdenado, i, k, j);
+    }
+}
+
+void seleccionConOrdenacion(posicionConValor* mapaOrdenado, int s, posicionConValor* p){
+    *p=mapaOrdenado[s];
 }
 
 void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {
@@ -165,28 +211,30 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 		}
 	}
 
-    std::vector<posicionConValor> mapaOrdenado;
-    std::cout<< mapaOrdenado.size();
-    for (int i = 0; i < nCellsHeight; ++i) {
-        for (int j = 0; j < nCellsWidth; ++j) {
-            mapaOrdenado.push_back(pepe);
+    posicionConValor mapaOrdenado[nCellsWidth*nCellsHeight];
+    for (int i = 0; i < nCellsWidth; ++i) {
+        for (int j = 0; j < nCellsHeight; ++j) {
+            mapaOrdenado[i*nCellsWidth+j].i = i;
+            mapaOrdenado[i*nCellsWidth+j].j = j;
+            mapaOrdenado[i*nCellsWidth+j].valor = mapa[i][j];
         }
     }
 
-    std::vector<posicionConValor>::iterator i = mapaOrdenado.begin();
-    std::vector<posicionConValor>::iterator j = mapaOrdenado.end();
-    ordenacionFusion(mapaOrdenado, i, j);
-    //Cuando esto termine, me lo devuelve ordenado, falta la implementación de esta funcion
+    ordenacionFusion(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
+    //Cuando esto termine, me lo devuelve ordenado
 
 	int fila = 0, columna = 0;
+    int s = 0;
 	float x = 0, y = 0;
+    posicionConValor p;
 
 	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
-		//seleccionConOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+		seleccionConOrdenacion(mapaOrdenado, s, &p);
+        ++s;
 
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
@@ -200,9 +248,10 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 	}
 
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
-		seleccionConOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+		seleccionConOrdenacion(mapaOrdenado, s, &p);
+        ++s;
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
@@ -213,6 +262,33 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
 	}
 }
 
+int pivote(posicionConValor* mapaOrdenado, int i, int j){
+    int p = i;
+    posicionConValor x = mapaOrdenado[i];
+    posicionConValor aux;
+    for (size_t k = i+1; k < j; ++k) {
+        if (mapaOrdenado[k] <= x) {
+            ++p;
+            aux = mapaOrdenado[k];
+            mapaOrdenado[k] = mapaOrdenado[p];
+            mapaOrdenado[p] = aux;
+        }
+    }
+    mapaOrdenado[i] = mapaOrdenado[p];
+    mapaOrdenado[p] = x;
+    return p;
+}
+
+void ordenacionRapido(posicionConValor* mapaOrdenado, int i, int j){
+    int n = j-i+1; //esto es j-i+1, porque es la dimensión del vector
+    if (n < 3) {
+        ordenacionInsercion(mapaOrdenado, i, j);
+    }else{
+        int p = pivote(mapaOrdenado, i, j);
+        ordenacionFusion(mapaOrdenado, i, p-1);
+        ordenacionFusion(mapaOrdenado, p+1, j);
+    }
+}
 
 void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {
 
@@ -231,14 +307,29 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
 		}
 	}
 
+    posicionConValor mapaOrdenado[nCellsWidth*nCellsHeight];
+    for (int i = 0; i < nCellsWidth; ++i) {
+        for (int j = 0; j < nCellsHeight; ++j) {
+            mapaOrdenado[i*nCellsWidth+j].i = i;
+            mapaOrdenado[i*nCellsWidth+j].j = j;
+            mapaOrdenado[i*nCellsWidth+j].valor = mapa[i][j];
+        }
+    }
+
+    ordenacionRapido(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
+    //Cuando esto termine, me lo devuelve ordenado
+
 	int fila = 0, columna = 0;
+    int s = 0;
 	float x = 0, y = 0;
+    posicionConValor p;
 
 	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+        seleccionConOrdenacion(mapaOrdenado, s, &p);
+        ++s;
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
@@ -252,9 +343,10 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
 	}
 
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+        seleccionConOrdenacion(mapaOrdenado, s, &p);
+        ++s;
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
