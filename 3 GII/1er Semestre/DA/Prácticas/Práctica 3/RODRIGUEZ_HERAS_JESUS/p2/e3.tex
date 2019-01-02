@@ -1,15 +1,27 @@
-\begin{lstlisting}
-// sustituya este codigo por su respuesta
-void selectDefenses(...) {
+%\begin{lstlisting}
+%void mochila(float* valores, unsigned int* coste, unsigned int ases, float** matriz, std::list<Defense*> defenses){
+%    int itCoste = 0;
+%    int itv = 0;
+%
+%    for (size_t j = 0; j <= ases; ++j) {
+%        if (j < coste[itCoste]) {
+%            matriz[0][j] = 0;
+%        }else{
+%            matriz[0][j] = valores[itv];
+%        }
+%    }
+%
+%    for (size_t i = 1; i < defenses.size(); ++i) {
+%        for (size_t j = 0; j < ases; ++j) {
+%            if (j < coste[i]) {
+%                matriz[i][j] = matriz[i-1][j];
+%            }else{
+%                matriz[i][j] = std::max(matriz[i-1][j], matriz[i-1][j-coste[i]]+valores[i]);
+%            }
+%        }
+%    }
+%}
+%\end{lstlisting}
 
-    unsigned int cost = 0;
-    std::list<Defense*>::iterator it = defenses.begin();
-    while(it != defenses.end()) {
-        if(cost + (*it)->cost <= ases) {
-            selectedIDs.push_back((*it)->id);
-            cost += (*it)->cost;
-        }
-        ++it;
-    }
-}
-\end{lstlisting}
+\lstinputlisting[language=C]{mochila.cpp}
+\newpage
