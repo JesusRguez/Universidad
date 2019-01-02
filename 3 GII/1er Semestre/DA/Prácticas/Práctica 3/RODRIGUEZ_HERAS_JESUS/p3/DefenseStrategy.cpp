@@ -17,8 +17,7 @@ class posicionConValor{
 public:
     int i, j;
     float valor;
-    posicionConValor();
-    posicionConValor(int i2, int j2, float valor2) : i(i2), j(j2), valor(valor2){};
+    posicionConValor(){i=j=0;valor=0.0;};
 
     bool operator <(posicionConValor p){
         return this->valor < p.valor;
@@ -163,7 +162,7 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
     int q = k+1;
     posicionConValor w[n];
 
-    for (size_t l = 0; l < n; ++l) {
+    for (int l = 0; l < n; ++l) {
         if ((p <= k) && (q > j || mapaOrdenado[p] <= mapaOrdenado[q])) {
             w[l] = mapaOrdenado[p];
             ++p;
@@ -172,14 +171,14 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
             ++q;
         }
     }
-    // A lo mejor hay que cambiar el 0 por  el 1
-    for (size_t l = 0; l < n; ++l) {
+
+    for (int l = 1; l < n; ++l) {
         mapaOrdenado[i-1+l] = w[l];
     }
 }
 
 void ordenacionFusion(posicionConValor* mapaOrdenado, int i, int j){
-    int n = j-i+1; //esto es j-i+1, porque es la dimensión del vector
+    int n = j-i+1;
     if (n < 3) {
         ordenacionInsercion(mapaOrdenado, i, j);
     }else{
@@ -220,7 +219,9 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
         }
     }
 
-    ordenacionFusion(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
+    int tamano = nCellsWidth*nCellsHeight;
+
+    ordenacionFusion(mapaOrdenado, 0, tamano);
     //Cuando esto termine, me lo devuelve ordenado
 
 	int fila = 0, columna = 0;
@@ -280,7 +281,7 @@ int pivote(posicionConValor* mapaOrdenado, int i, int j){
 }
 
 void ordenacionRapido(posicionConValor* mapaOrdenado, int i, int j){
-    int n = j-i+1; //esto es j-i+1, porque es la dimensión del vector
+    int n = j-i+1;
     if (n < 3) {
         ordenacionInsercion(mapaOrdenado, i, j);
     }else{
@@ -328,6 +329,7 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
         seleccionConOrdenacion(mapaOrdenado, s, &p);
         ++s;
+
 		x = p.i*cellWidth + cellWidth*0.5f;
 		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
@@ -374,26 +376,34 @@ void DEF_LIB_EXPORTED placeDefensesMonticulo(bool** freeCells, int nCellsWidth, 
 		}
 	}
 
-    std::vector<float> mapaOrdenado(0, nCellsHeight*nCellsWidth);
-    std::vector<float>::const_iterator itMapa = mapaOrdenado.begin();
-    for (size_t i = 0; i < nCellsHeight; ++i) {
-        for (size_t j = 0; j < nCellsWidth; ++j) {
-            mapaOrdenado.insert(itMapa, mapa[i][j]);
-            ++itMapa;
+    posicionConValor mapaOrdenado[nCellsWidth*nCellsHeight];
+    for (int i = 0; i < nCellsWidth; ++i) {
+        for (int j = 0; j < nCellsHeight; ++j) {
+            mapaOrdenado[i*nCellsWidth+j].i = i;
+            mapaOrdenado[i*nCellsWidth+j].j = j;
+            mapaOrdenado[i*nCellsWidth+j].valor = mapa[i][j];
         }
     }
 
-    std::make_heap(mapaOrdenado.begin(), mapaOrdenado.end());
-    std::sort_heap(mapaOrdenado.begin(), mapaOrdenado.end(), std::greater<float>());
+    std::vector<posicionConValor> vectorOrdenado(mapaOrdenado, mapaOrdenado+(nCellsWidth*nCellsHeight));
+
+    std::make_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+    std::sort_heap(vectorOrdenado.begin(), vectorOrdenado.end());
 
 	int fila = 0, columna = 0;
 	float x = 0, y = 0;
+    posicionConValor p;
 
 	std::list<Defense*>::iterator currentDefense = defenses.begin();
 	while(currentDefense == defenses.begin() && maxAttemps > 0){
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+
+        p = vectorOrdenado.front();
+
+        std::pop_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+        vectorOrdenado.pop_back();
+
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
@@ -407,9 +417,13 @@ void DEF_LIB_EXPORTED placeDefensesMonticulo(bool** freeCells, int nCellsWidth, 
 	}
 
 	while (currentDefense != defenses.end() && maxAttemps > 0) {
-		seleccionSinOrdenacion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
-		x = fila*cellWidth + cellWidth*0.5f;
-		y = columna*cellHeight + cellHeight*0.5f;
+        p = vectorOrdenado.front();
+
+        std::pop_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+        vectorOrdenado.pop_back();
+
+		x = p.i*cellWidth + cellWidth*0.5f;
+		y = p.j*cellHeight + cellHeight*0.5f;
 		if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
 			(*currentDefense)->position.x = x;
 			(*currentDefense)->position.y = y;
@@ -428,9 +442,8 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
 	cronometro c1;
     long int r1 = 0;
     c1.activar();
-    do { // Este do-while tiene el esequema de medida adaptativo
+    do {
 		placeDefensesSinOrdenacion(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-        //Funciona
 		++r1;
     } while(c1.tiempo() < 1.0);
     c1.parar();
@@ -438,9 +451,8 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     cronometro c2;
     long int r2 = 0;
     c2.activar();
-    do { // Este do-while tiene el esequema de medida adaptativo
+    do {
 		placeDefensesFusion(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-        //Este no funciona
 		++r2;
     } while(c2.tiempo() < 1.0);
     c2.parar();
@@ -448,9 +460,8 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     cronometro c3;
     long int r3 = 0;
     c3.activar();
-    do { // Este do-while tiene el esequema de medida adaptativo
+    do {
 		placeDefensesRapido(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-        //Este no se si funciona, pero no
 		++r3;
     } while(c3.tiempo() < 1.0);
     c3.parar();
@@ -458,9 +469,8 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     cronometro c4;
     long int r4 = 0;
     c4.activar();
-    do { // Este do-while tiene el esequema de medida adaptativo
+    do {
 		placeDefensesMonticulo(freeCells, nCellsWidth, nCellsHeight, mapWidth, mapHeight, obstacles, defenses);
-        //Por descarte, tampoco funciona
 		++r4;
     } while(c4.tiempo() < 1.0);
     c4.parar();
