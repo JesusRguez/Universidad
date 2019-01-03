@@ -16,7 +16,7 @@ public:
         return this->valor == p.valor;
     }
 
-    bool operator <=(posicionConValor p){
-        return this->valor <= p.valor;
+    bool operator >=(posicionConValor p){
+        return this->valor >= p.valor;
     }
 };

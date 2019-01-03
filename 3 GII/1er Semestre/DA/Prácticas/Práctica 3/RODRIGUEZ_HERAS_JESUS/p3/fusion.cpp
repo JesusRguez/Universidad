@@ -1,11 +1,11 @@
 void ordenacionInsercion(posicionConValor* mapaOrdenado, int i, int j){
     posicionConValor temp;
     int tam = j-i+1;
-    for (i; i<tam; ++i){
+    for (i; i < tam; ++i){
         temp = mapaOrdenado[i];
-        j=i-1;
-        while ((mapaOrdenado[j]>temp)&&(j>=0)) {
-            mapaOrdenado[j+1]=mapaOrdenado[j];
+        j = i-1;
+        while ((mapaOrdenado[j] < temp) && (j >= 0)){
+            mapaOrdenado[j+1] = mapaOrdenado[j];
             --j;
         }
         mapaOrdenado[j+1] = temp;
@@ -19,7 +19,7 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
     posicionConValor w[n];
 
     for (int l = 0; l < n; ++l) {
-        if ((p <= k) && (q > j || mapaOrdenado[p] <= mapaOrdenado[q])) {
+        if ((p <= k) && (q > j || mapaOrdenado[p] >= mapaOrdenado[q])) {
             w[l] = mapaOrdenado[p];
             ++p;
         }else{
@@ -27,7 +27,7 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
             ++q;
         }
     }
-    
+
     for (int l = 1; l < n; ++l) {
         mapaOrdenado[i-1+l] = w[l];
     }

@@ -31,8 +31,8 @@ public:
         return this->valor == p.valor;
     }
 
-    bool operator <=(posicionConValor p){
-        return this->valor <= p.valor;
+    bool operator >=(posicionConValor p){
+        return this->valor >= p.valor;
     }
 };
 
@@ -145,11 +145,11 @@ void DEF_LIB_EXPORTED placeDefensesSinOrdenacion(bool** freeCells, int nCellsWid
 void ordenacionInsercion(posicionConValor* mapaOrdenado, int i, int j){
     posicionConValor temp;
     int tam = j-i+1;
-    for (i; i<tam; ++i){
+    for (i; i < tam; ++i){
         temp = mapaOrdenado[i];
-        j=i-1;
-        while ((mapaOrdenado[j]>temp)&&(j>=0)) {
-            mapaOrdenado[j+1]=mapaOrdenado[j];
+        j = i-1;
+        while ((mapaOrdenado[j] < temp) && (j >= 0)){
+            mapaOrdenado[j+1] = mapaOrdenado[j];
             --j;
         }
         mapaOrdenado[j+1] = temp;
@@ -163,7 +163,7 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
     posicionConValor w[n];
 
     for (int l = 0; l < n; ++l) {
-        if ((p <= k) && (q > j || mapaOrdenado[p] <= mapaOrdenado[q])) {
+        if ((p <= k) && (q > j || mapaOrdenado[p] >= mapaOrdenado[q])) {
             w[l] = mapaOrdenado[p];
             ++p;
         }else{
@@ -198,6 +198,7 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
     float cellWidth = mapWidth / nCellsWidth;
     float cellHeight = mapHeight / nCellsHeight;
     int maxAttemps = 1000;
+    bool cajaNegraFusion = false;
 
 	float** mapa = new float*[nCellsHeight];
 	for (size_t i = 0; i < nCellsHeight; ++i) {
@@ -219,10 +220,14 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
         }
     }
 
-    int tamano = nCellsWidth*nCellsHeight;
-
-    ordenacionFusion(mapaOrdenado, 0, tamano);
+    ordenacionFusion(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
     //Cuando esto termine, me lo devuelve ordenado
+
+    for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+        if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+            cajaNegraFusion = true; // Se pone a true cuando falla el algoritmo
+        }
+    }
 
 	int fila = 0, columna = 0;
     int s = 0;
@@ -267,8 +272,8 @@ int pivote(posicionConValor* mapaOrdenado, int i, int j){
     int p = i;
     posicionConValor x = mapaOrdenado[i];
     posicionConValor aux;
-    for (size_t k = i+1; k < j; ++k) {
-        if (mapaOrdenado[k] <= x) {
+    for (int k = i+1; k < j; ++k) {
+        if (mapaOrdenado[k] >= x) {
             ++p;
             aux = mapaOrdenado[k];
             mapaOrdenado[k] = mapaOrdenado[p];
@@ -296,6 +301,7 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
     float cellWidth = mapWidth / nCellsWidth;
     float cellHeight = mapHeight / nCellsHeight;
     int maxAttemps = 1000;
+    bool cajaNegraRapido = false;
 
 	float** mapa = new float*[nCellsHeight];
 	for (size_t i = 0; i < nCellsHeight; ++i) {
@@ -319,6 +325,12 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
 
     ordenacionRapido(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
     //Cuando esto termine, me lo devuelve ordenado
+
+    for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+        if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+            cajaNegraRapido = true; // Se pone a true cuando falla el algoritmo
+        }
+    }
 
 	int fila = 0, columna = 0;
     int s = 0;
@@ -364,6 +376,7 @@ void DEF_LIB_EXPORTED placeDefensesMonticulo(bool** freeCells, int nCellsWidth, 
     float cellWidth = mapWidth / nCellsWidth;
     float cellHeight = mapHeight / nCellsHeight;
     int maxAttemps = 1000;
+    bool cajaNegraMonticulo = false;
 
 	float** mapa = new float*[nCellsHeight];
 	for (size_t i = 0; i < nCellsHeight; ++i) {
@@ -385,10 +398,20 @@ void DEF_LIB_EXPORTED placeDefensesMonticulo(bool** freeCells, int nCellsWidth, 
         }
     }
 
-    std::vector<posicionConValor> vectorOrdenado(mapaOrdenado, mapaOrdenado+(nCellsWidth*nCellsHeight));
+    std::vector<posicionConValor> vectorOrdenado;
+
+    for (int i = 0; i < nCellsWidth*nCellsHeight; ++i) {
+        vectorOrdenado.push_back(mapaOrdenado[i]);
+    }
 
     std::make_heap(vectorOrdenado.begin(), vectorOrdenado.end());
     std::sort_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+
+    for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+        if (vectorOrdenado[i].valor > vectorOrdenado[i+1].valor) {
+            cajaNegraMonticulo = true; // Se pone a true cuando falla el algoritmo
+        }
+    }
 
 	int fila = 0, columna = 0;
 	float x = 0, y = 0;

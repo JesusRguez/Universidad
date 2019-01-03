@@ -1,1 +1,36 @@
-Escriba aquí su respuesta al ejercicio 4.
+%Escriba aquí su respuesta al ejercicio 4.
+\begin{itemize}
+\item \textbf{Ordenación por fusión:}
+\begin{lstlisting}[language=C]
+//Codigo anterior
+ordenacionFusion(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
+
+for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+    if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+        cajaNegraFusion = true; // Se pone a true cuando falla el algoritmo
+    }
+}
+\end{lstlisting}
+\item \textbf{Ordenación rápida:}
+\begin{lstlisting}[language=C]
+//Codigo anterior
+ordenacionRapido(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
+
+for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+    if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+        cajaNegraRapido = true; // Se pone a true cuando falla el algoritmo
+    }
+}
+\end{lstlisting}
+\item \textbf{Ordenación por montículo:}
+\begin{lstlisting}[language=C]
+std::make_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+std::sort_heap(vectorOrdenado.begin(), vectorOrdenado.end());
+
+for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+    if (vectorOrdenado[i].valor > vectorOrdenado[i+1].valor) {
+        cajaNegraMonticulo = true; // Se pone a true cuando falla el algoritmo
+    }
+}
+\end{lstlisting}
+\end{itemize}
