@@ -34,6 +34,10 @@ public:
     bool operator >=(posicionConValor p){
         return this->valor >= p.valor;
     }
+
+    bool operator <=(posicionConValor p){
+        return this->valor <= p.valor;
+    }
 };
 
 float defaultCellValue(int row, int col, bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, List<Object*> obstacles, List<Defense*> defenses) {
@@ -156,14 +160,14 @@ void ordenacionInsercion(posicionConValor* mapaOrdenado, int i, int j){
     }
 }
 
-void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
+/*void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
     int n = j-i+1;
     int p = i;
     int q = k+1;
     posicionConValor w[n];
 
     for (int l = 0; l < n; ++l) {
-        if ((p <= k) && (q > j || mapaOrdenado[p] >= mapaOrdenado[q])) {
+        if ((p <= k) && (q > j || mapaOrdenado[p] < mapaOrdenado[q])) {
             w[l] = mapaOrdenado[p];
             ++p;
         }else{
@@ -179,13 +183,57 @@ void fusion(posicionConValor* mapaOrdenado, int i, int k, int j){
 
 void ordenacionFusion(posicionConValor* mapaOrdenado, int i, int j){
     int n = j-i+1;
-    if (n < 3) {
-        ordenacionInsercion(mapaOrdenado, i, j);
-    }else{
+    if (n < 1) {
         int k = i-1+n/2;
         ordenacionFusion(mapaOrdenado, i, k);
         ordenacionFusion(mapaOrdenado, k+1, j);
         fusion(mapaOrdenado, i, k, j);
+    }
+}*/
+
+void fusion(posicionConValor* mapaOrdenado, posicionConValor* t1, int n1, posicionConValor* t2, int n2){
+
+    int i, j, k;
+    i = j = k = 0;
+    while (i < n1 && j < n2) {
+        if (t1[i] <= t2[j]) {
+            mapaOrdenado[k] = t1[i];
+            ++i;
+        }else{
+            mapaOrdenado[k] = t2[j];
+            ++j;
+        }
+        ++k;
+    }
+
+    while (i < n1) {
+        mapaOrdenado[k] = t1[i];
+        ++k;
+        ++i;
+    }
+
+    while (j < n2) {
+        mapaOrdenado[k] = t2[j];
+        ++k;
+        ++j;
+    }
+}
+
+void ordenacionFusion(posicionConValor* mapaOrdenado, int a, int b){
+    int n = b-a+1;
+    int m = n/2;
+    if (n > 1) {
+        posicionConValor t1[m];
+        for (int i = 0; i < m-1; ++i) {
+            t1[i] = mapaOrdenado[i];
+        }
+        posicionConValor t2[n-m];
+        for (int i = 0; i < (n-m)-1; ++i) {
+            t2[i] = mapaOrdenado[m+i];
+        }
+        ordenacionFusion(t1, a, m-1);
+        ordenacionFusion(t2, m, n-1);
+        fusion(mapaOrdenado, t1, n/2, t2, n/2);
     }
 }
 
@@ -224,7 +272,9 @@ void DEF_LIB_EXPORTED placeDefensesFusion(bool** freeCells, int nCellsWidth, int
     //Cuando esto termine, me lo devuelve ordenado
 
     for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+        std::cout << mapaOrdenado[i].valor << '\n';
         if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+            std::cout << "No tira la fusion" << '\n';
             cajaNegraFusion = true; // Se pone a true cuando falla el algoritmo
         }
     }
@@ -287,7 +337,7 @@ int pivote(posicionConValor* mapaOrdenado, int i, int j){
 
 void ordenacionRapido(posicionConValor* mapaOrdenado, int i, int j){
     int n = j-i+1;
-    if (n < 3) {
+    if (n < 2) {
         ordenacionInsercion(mapaOrdenado, i, j);
     }else{
         int p = pivote(mapaOrdenado, i, j);
@@ -327,7 +377,9 @@ void DEF_LIB_EXPORTED placeDefensesRapido(bool** freeCells, int nCellsWidth, int
     //Cuando esto termine, me lo devuelve ordenado
 
     for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
+        std::cout << mapaOrdenado[i].valor << '\n';
         if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+            std::cout << "No tira el rapido" << '\n';
             cajaNegraRapido = true; // Se pone a true cuando falla el algoritmo
         }
     }
