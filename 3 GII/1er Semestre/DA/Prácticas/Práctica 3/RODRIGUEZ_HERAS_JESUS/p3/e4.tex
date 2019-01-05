@@ -7,6 +7,7 @@ ordenacionFusion(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
 
 for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
     if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+        std::cout << "Fallo en el algoritmo de fusion" << '\n';
         cajaNegraFusion = true; // Se pone a true cuando falla el algoritmo
     }
 }
@@ -18,6 +19,7 @@ ordenacionRapido(mapaOrdenado, 0, nCellsWidth*nCellsHeight);
 
 for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
     if (mapaOrdenado[i].valor < mapaOrdenado[i+1].valor) {
+        std::cout << "Fallo en el algoritmo de ordenacion rapida" << '\n';
         cajaNegraRapido = true; // Se pone a true cuando falla el algoritmo
     }
 }
@@ -29,6 +31,7 @@ std::sort_heap(vectorOrdenado.begin(), vectorOrdenado.end());
 
 for (int i = 0; i < (nCellsHeight*nCellsWidth - 1); ++i) {
     if (vectorOrdenado[i].valor > vectorOrdenado[i+1].valor) {
+        std::cout << "Fallo en el algoritmo de monticulo" << '\n';
         cajaNegraMonticulo = true; // Se pone a true cuando falla el algoritmo
     }
 }
