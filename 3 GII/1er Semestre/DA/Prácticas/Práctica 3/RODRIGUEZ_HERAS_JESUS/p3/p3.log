@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  5 JAN 2019 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  7 JAN 2019 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,8 +463,10 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+) (./p3.aux
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
 )
-No file p3.aux.
 \openout1 = `p3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -479,6 +481,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -616,11 +619,11 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./graphic.plot) [4]
 Package epstopdf Info: Source file: <graphic.eps>
-(epstopdf)                    date: 2019-01-05 12:50:47
-(epstopdf)                    size: 24600 bytes
+(epstopdf)                    date: 2019-01-07 13:35:18
+(epstopdf)                    size: 24608 bytes
 (epstopdf)             Output file: <graphic-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-01-05 12:48:00
-(epstopdf)                    size: 2217 bytes
+(epstopdf)                    date: 2019-01-07 13:32:10
+(epstopdf)                    size: 6893 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphic-eps-converted-to.p
 df graphic.eps>
 (epstopdf)             \includegraphics on input line 11.
@@ -628,8 +631,8 @@ runsystem(repstopdf --outfile=graphic-eps-converted-to.pdf graphic.eps)...execu
 ted safely (allowed).
 
 Package epstopdf Info: Result file: <graphic-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-01-05 12:50:47
-(epstopdf)                    size: 6730 bytes.
+(epstopdf)                    date: 2019-01-07 13:35:18
+(epstopdf)                    size: 6733 bytes.
 
 
 pdfTeX warning: pdflatex (file ./graphic-eps-converted-to.pdf): PDF inclusion: 
@@ -646,8 +649,8 @@ LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
- 5469 strings out of 493013
- 71181 string characters out of 6135682
+ 5471 strings out of 493013
+ 71195 string characters out of 6135682
  369572 words of memory out of 5000000
  8911 multiletter control sequences out of 15000+600000
  7833 words of font info for 29 fonts, out of 8000000 for 9000
@@ -664,7 +667,7 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmtt8.pfb>
-Output written on p3.pdf (5 pages, 141182 bytes).
+Output written on p3.pdf (5 pages, 141187 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
