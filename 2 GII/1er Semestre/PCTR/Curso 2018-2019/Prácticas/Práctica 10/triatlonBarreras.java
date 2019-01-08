@@ -11,6 +11,10 @@ public class triatlonBarreras implements Runnable{
     public int idHilo;
     public static long tiempos[] = new long[100];
 
+    /**
+     * Constructor de triatlonBarreras
+     * @param idHilo Identificador del hilo
+     */
     public triatlonBarreras(int idHilo){
         this.idHilo = idHilo;
     }
