@@ -5,14 +5,22 @@
 
 package bonoloto;
 
-import java.rmi.*;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
 public interface iBonoLoto extends Remote{
 
-    public void resetServidor() throws RemoteException{
+    /**
+     * Método para resetear el servidor
+     * @throws RemoteException Lanza una excepción si falla
+     */
+    public void resetServidor() throws RemoteException;
 
-    }
-
-    public boolean compApuesta(int[] apuesta)  throws RemoteException{
-
-    }
+    /**
+     * Método para comparar si la apuesta es válida
+     * @param  apuesta         Apuesta recibida
+     * @return                 Devuelve true si coincide y false en caso contrario
+     * @throws RemoteException Lanza una excepción si falla
+     */
+    public boolean compApuesta(int apuesta)  throws RemoteException;
 }
