@@ -32,6 +32,7 @@ public class usaFiloApiAN implements Runnable {
      */
     public void comer(){
         try {
+            System.out.println("Filosofo "+Thread.currentThread().getId()+" comiendo");
             Thread.sleep(100);
         } catch(Exception e) {
             System.out.println("Error en comer...");
@@ -43,6 +44,7 @@ public class usaFiloApiAN implements Runnable {
      */
     public void pensar(){
         try {
+            System.out.println("Filosofo "+Thread.currentThread().getId()+" pensando");
             Thread.sleep(200);
         } catch(Exception e) {
             System.out.println("Error en pensar...");

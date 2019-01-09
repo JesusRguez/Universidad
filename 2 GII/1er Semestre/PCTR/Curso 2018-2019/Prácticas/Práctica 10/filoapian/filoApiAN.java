@@ -10,15 +10,18 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.io.RandomAccessFile;
 
 public class filoApiAN {
-    public static int tenedores[] = new int[5];
-    public static Condition ok[] = new Condition[5];
+    private int tenedores[] = new int[5];
+    private Condition ok[] = new Condition[5];
+    private ReentrantLock L;
 
     /**
      * Constructor de filoApiAN
      */
     public filoApiAN(){
+        L = new ReentrantLock();
         for (int i=0; i<5; ++i) {
             tenedores[i] = 2;
+            ok[i] = L.newCondition();
         }
     }
 
@@ -27,6 +30,7 @@ public class filoApiAN {
      * @param i Identificador del tenedor
      */
     public void take_forks(int i){
+        L.lock();
         while(tenedores[i] != 2){
             try {
                 ok[i].await();
@@ -35,7 +39,8 @@ public class filoApiAN {
             }
         }
         tenedores[(i+1)%5]--;
-        tenedores[(i-1)%5]--;
+        tenedores[(i+5-1)%5]--;
+        L.unlock();
     }
 
     /**
@@ -43,13 +48,15 @@ public class filoApiAN {
      * @param i Identificador del tenedor
      */
     public void release_forks(int i){
+        L.lock();
         tenedores[(i+1)%5]++;
-        tenedores[(i-1)%5]++;
+        tenedores[(i+5-1)%5]++;
         if (tenedores[(i+1)%5] == 2) {
             ok[(i+1)%5].signalAll();
         }
-        if (tenedores[(i-1)%5] == 2) {
-            ok[(i-1)%5].signalAll();
+        if (tenedores[(i+5-1)%5] == 2) {
+            ok[(i+5-1)%5].signalAll();
         }
+        L.unlock();
     }
 }
