@@ -1,13 +1,86 @@
+Continuación de la función \texttt{placeDefenses} del ejercicio 3:
+%\lstinputlisting[language=C]{def6.cpp}
 \begin{lstlisting}
-// sustituya este codigo por su respuesta
-void placeDefenses(...) {
+void DEF_LIB_EXPORTED placeDefenses(bool** freeCells, int nCellsWidth, int nCellsHeight, float mapWidth, float mapHeight, std::list<Object*> obstacles, std::list<Defense*> defenses) {
 
-    List<Defense*>::iterator currentDefense = defenses.begin();
-    while(currentDefense != defenses.end() && maxAttemps > 0) {
+    float cellWidth = mapWidth / nCellsWidth;
+    float cellHeight = mapHeight / nCellsHeight;
+    int maxAttemps = 1000;
+    int fila = 0, columna = 0;
+    float x = 0, y = 0;
 
-        (*currentDefense)->position.x = ((int)(_RAND2(nCellsWidth))) * cellWidth + cellWidth * 0.5f;
-        ...
-        ++currentDefense;
+    // ...
+    // Ejercicio 3
+    // ...
+    // Continuacion del ejercicio 3
+
+    while (currentDefense != defenses.end() && maxAttemps > 0) {
+        seleccion(mapa, nCellsWidth, nCellsHeight, &fila, &columna);
+        x = fila*cellWidth + cellWidth*0.5f;
+        y = columna*cellHeight + cellHeight*0.5f;
+        if(factibilidad(x, y, (*currentDefense), obstacles, mapWidth, mapHeight, defenses, cellWidth, cellHeight)){
+            (*currentDefense)->position.x = x;
+            (*currentDefense)->position.y = y;
+            (*currentDefense)->position.z = 0;
+            ++currentDefense;
+        }
+        --maxAttemps;
     }
+
+    // Resto de codigo de PRINT_DEFENSE_STRATEGY que no hemos modificado
+
 }
+
+\end{lstlisting}
+Función \texttt{factibilidad}:
+%\lstinputlisting[language=C]{fac.cpp}
+\begin{lstlisting}
+bool factibilidad(float x, float y, Defense* defensa, std::list<Object*> obstaculos, float mapWidth, float mapHeight, std::list<Defense*> defensas, float cellWidth, float cellHeight){
+
+    bool entra = true;
+
+    if (x-defensa->radio < 0 || x+defensa->radio > mapWidth || y-defensa->radio < 0 || y+defensa->radio > mapHeight) {
+        entra = false; //No cabe porque se sale de los limites del mapa
+    }
+
+    std::list<Object*>::const_iterator iterObst = obstaculos.begin();
+    std::list<Defense*>::const_iterator iterDef = defensas.begin();
+    Vector3 posicionDefensa(x, y, 0);
+    while (iterObst!=obstaculos.end()) {
+        if ((defensa->radio + (*iterObst)->radio) > (_distance(posicionDefensa, (*iterObst)->position))) {
+            entra = false; //Se choca con un obsaculo
+        }else{
+            while ((*iterDef)!=defensa) {
+                if ((defensa->radio + (*iterDef)->radio) > (_distance(posicionDefensa, (*iterDef)->position))) {
+                    entra = false; //Se choca con una defensa
+                }
+                ++iterDef;
+            }
+        }
+        ++iterObst;
+    }
+
+    return entra;
+}
+
+\end{lstlisting}
+Función \texttt{selección}:
+%\lstinputlisting[language=C]{sel.cpp}
+\begin{lstlisting}
+void seleccion(float** mapa, int nCellsWidth, int nCellsHeight, int* fila, int* columna){
+
+    float maxi = 0;
+
+    for (size_t i = 0; i < nCellsWidth; ++i) {
+        for (size_t j = 0; j < nCellsHeight; ++j) {
+            if (mapa[i][j] > maxi) {
+                maxi = mapa[i][j];
+                *fila = i;
+                *columna = j;
+            }
+        }
+    }
+    mapa[*fila][*columna] = 0;
+}
+
 \end{lstlisting}

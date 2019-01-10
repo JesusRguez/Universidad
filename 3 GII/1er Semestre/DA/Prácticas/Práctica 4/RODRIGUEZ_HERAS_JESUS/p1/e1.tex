@@ -1,4 +1,4 @@
-Escriba aquí su respuesta al ejercicio 1. 
+%Escriba aquí su respuesta al ejercicio 1. 
 
 % Elimine los símbolos de tanto por ciento para descomentar las siguientes instrucciones e incluir una imagen en su respuesta. La mejor ubicación de la imagen será determinada por el compilador de Latex. No tiene por qué situarse a continuación en el fichero en formato pdf resultante.
 %\begin{figure}
@@ -7,3 +7,23 @@ Escriba aquí su respuesta al ejercicio 1.
 %\caption{Estrategia devoradora para la mina}
 %\label{fig:defenseValueCellsHead}
 %\end{figure}
+
+La función que evalúa las celdas para el caso del centro de extracción de minerales se llama \texttt{cellValue} y recibe los siguientes parámetros:
+\begin{itemize}
+	\item \texttt{int row}: Número de fila de la celda de la matriz del terreno de batalla.
+	\item \texttt{int col}: Número de columna de la celda de la matriz del terreno de batalla.
+	\item \texttt{bool** freeCells}: Matriz de booleanos que indica si una celda de la matriz está libre (\texttt{true}) o no (\texttt{false}).
+	\item \texttt{int nCellsWidht}: Número de celdas de ancho.
+	\item \texttt{int nCellsHeight}: Número de celdas de alto.
+	\item \texttt{float mapWidth}: Tamaño de la anchura del mapa.
+	\item \texttt{float mapHeight}: Tamaño del alto del mapa.
+	\item \texttt{flaot cellWidht}: Tamaño de la anchura de una celda.
+	\item \texttt{float cellHeight}: Tamaño del alto de una celda.
+	\item \texttt{std::list<Object*> obstacles}: Lista de obstáculos del juego.
+	\item \texttt{std::list<Defense*> defenses}: Lista de defensas del juego.
+\end{itemize}
+Para dar valores a las celdas de la matriz del terreno de batalla la función comprueba primeramente que la celda de la matriz no está ocupada. Si está ocupada, devuelve \texttt{false}.
+
+Si no está ocupada creamos una variable de tipo \texttt{Vector3} llamada \texttt{posibleDefensa} con la posición de esa celda y luego vamos recorriendo la lista de obstáculos mientras que vamos guardando en la variable \texttt{maxDistancia} (de tipo \texttt{float}) la máxima de la inversa de la distancia euclídea (proporcionada por la función \texttt{\_distance()}) entre la posición de \texttt{posibleDefensa} y todos los obstáculos del terreno de batalla.
+
+Finalmente devuelve la variable \texttt{maxDistancia} que será el valor que tenga esa celda.

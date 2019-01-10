@@ -29,19 +29,25 @@ void DEF_LIB_EXPORTED calculateAdditionalCost(float** additionalCost, int cellsW
             Vector3 cellPosition = cellCenterToPosition(i, j, cellWidth, cellHeight);
             float cost = 0;
             if( (i+j) % 2 == 0 ) {
-                cost = cellWidth * 100;
+                cost = cellWidth * 100; //Cambiar el coste adicional
             }
-
             additionalCost[i][j] = cost;
         }
     }
+}
+
+bool ordena(AStarNode* n1, AStarNode* n2){
+    return n1.F < n2.F;
 }
 
 void DEF_LIB_EXPORTED calculatePath(AStarNode* originNode, AStarNode* targetNode, int cellsWidth, int cellsHeight, float mapWidth, float mapHeight, float** additionalCost, std::list<Vector3> &path) {
 
     int maxIter = 100;
     AStarNode* current = originNode;
-    while(current != targetNode && maxIter > 0) { // @todo ensure current and target are connected
+    std::vector<AStarNode> opened;
+    std::vector<AStarNode> closed;
+
+    /*while(current != targetNode && maxIter > 0) { // @todo ensure current and target are connected
 	    float min = INF_F;
 	    AStarNode* o = NULL;
 	    for (List<AStarNode*>::iterator it=current->adjacents.begin(); it != current->adjacents.end(); ++it) {
@@ -64,6 +70,19 @@ void DEF_LIB_EXPORTED calculatePath(AStarNode* originNode, AStarNode* targetNode
 
         path.push_back(current->position);
         --maxIter;
+    }*/
+
+    current.G = 0;
+    current.H = heuristica(current, target);
+    current.P = NULL;
+    current.F = current.G + current.H;
+
+    opened.push_back(current);
+    std::make_heap(opened.begin(), opened.end());
+    std::sort_heap(opened.begin(), opened.end(), ordena);
+
+    while (current != target && !opened.empty()) {
+        /* code */
     }
 
 }
