@@ -25,8 +25,8 @@ public class cBonoLoto{
                 teclado.nextLine();
                 p = teclado.nextLine();
                 if (p.toLowerCase().equals("s")) {
-                    ORemoto.resetServidor();
-                    System.out.println("Has dicho de seguir");
+                    String reset = ORemoto.resetServidor();
+                    System.out.println(reset);
                     fin = false;
                 }
             }else{

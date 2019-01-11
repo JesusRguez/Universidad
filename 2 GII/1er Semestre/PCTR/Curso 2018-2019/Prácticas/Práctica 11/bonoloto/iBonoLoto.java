@@ -12,9 +12,10 @@ public interface iBonoLoto extends Remote{
 
     /**
      * Método para resetear el servidor
+     * @return Devuelve un mensaje para saber que se ha reseteado el servidor
      * @throws RemoteException Lanza una excepción si falla
      */
-    public void resetServidor() throws RemoteException;
+    public String resetServidor() throws RemoteException;
 
     /**
      * Método para comparar si la apuesta es válida

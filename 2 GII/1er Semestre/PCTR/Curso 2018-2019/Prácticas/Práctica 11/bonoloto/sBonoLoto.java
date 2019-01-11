@@ -22,12 +22,14 @@ public class sBonoLoto extends UnicastRemoteObject implements iBonoLoto{
     }
 
     /**
-     * Método resetServidor
+     * Método para resetear el servidor
+     * @return Devuelve un mensaje para saber que se ha reseteado el servidor
      * @throws RemoteException Lanza una excepción si falla
      */
-    public void resetServidor() throws RemoteException{
+    public String resetServidor() throws RemoteException{
         numero = (int)(Math.random()*49 + 1);
         System.out.println(numero);
+        return "El servidor ha sido reseteado";
     }
 
     /**
