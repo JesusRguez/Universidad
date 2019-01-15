@@ -20,23 +20,7 @@ public class Libro implements java.io.Serializable{
         this.isbn = i;
     }
 
-    public String getTitulo(){
-        return this.titulo;
-    }
-
-    public String getAutor(){
-        return this.autor;
-    }
-
-    public String getEditorial(){
-        return this.editorial;
-    }
-
-    public String getISBN(){
-        return this.isbn;
-    }
-
-    public String toString(Libro l){
-        return "Título: "+l.getTitulo()+"\nAutor: "+l.getAutor()+"\nEditorial: "+l.getEditorial()+"\nISBN: "+l.getISBN();
+    public String toString(){
+        return "Título: "+this.titulo+"\nAutor: "+this.autor+"\nEditorial: "+this.editorial+"\nISBN: "+this.isbn;
     }
 }

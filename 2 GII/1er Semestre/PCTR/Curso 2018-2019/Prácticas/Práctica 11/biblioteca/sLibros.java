@@ -34,7 +34,7 @@ public class sLibros extends UnicastRemoteObject implements iLibros{
     public boolean extraerLibro(String titulo) throws RemoteException{
         boolean borrado = false;
         for (int i=0; i<biblioteca.size(); ++i) {
-            if (biblioteca.get(i).getTitulo().equals(titulo)) {
+            if (biblioteca.get(i).titulo.equals(titulo)) {
                 biblioteca.remove(i);
                 borrado = true;
             }
@@ -49,13 +49,12 @@ public class sLibros extends UnicastRemoteObject implements iLibros{
      * @throws RemoteException Lanza una excepción si falla
      */
     public Libro consultarLibro(String titulo) throws RemoteException{
-        Libro l = new Libro();
         for (int i=0; i<biblioteca.size(); ++i) {
-            if (biblioteca.get(i).getTitulo().equals(titulo)) {
-                l = biblioteca.get(i);
+            if (biblioteca.get(i).titulo.equals(titulo)) {
+                return biblioteca.get(i);
             }
         }
-        return l;
+        return null;
     }
 
     public static void main(String[] args) throws Exception{
