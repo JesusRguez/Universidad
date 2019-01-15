@@ -34,6 +34,7 @@ void DEF_LIB_EXPORTED placeDefenses3(bool** freeCells, int nCellsWidth, int nCel
     float cellWidth = mapWidth / nCellsWidth;
     float cellHeight = mapHeight / nCellsHeight; 
 
+	int maxAttemps = 1000;
 	cronometro c;
     long int r = 0;
     c.activar();
