@@ -1,1 +1,14 @@
-Escriba aquí su respuesta al ejercicio 1.
+%Escriba aquí su respuesta al ejercicio 1.
+El algoritmo que busca el camino para llegar al centro de extracción de minerales sigue el esquema del algoritmo A* y contiene las siguientes estructuras:
+\begin{itemize}
+	\item \textbf{\texttt{std::vector<AStarNode*> opened}:} Vector de tipo AStarNode que llevará el control de los nodos abiertos.
+	\item \textbf{\texttt{std::vector<AStarNode*> closed}:} Vector de tipo AStarNode que llevará el control de los nodos ya visitados por el algoritmo.
+	\item \textbf{\texttt{AStarNode* current}:} Objeto de la clase \texttt{AStarNode} declarada en \texttt{Asedio.h} que almacena el nodo actual que estamos evaluando.
+\end{itemize}
+El algoritmo A* es un algoritmo de búsqueda que puede ser empleado para el cálculo de caminos. Se trata de un algoritmo heurístico, ya que usa una función de evaluación heurística, $f(n)$, mediante la cual etiquetará a los diferentes nodos de la red y servirá para determinar la probabilidad de dichos nodos de pertenecer al camino óptimo.
+
+Esta función de evaluación está compuesta a su vez por otras dos funciones:
+\begin{itemize}
+	\item \textbf{$g(n)$:} Indica la distancia actual desde el nodo origen hasta el nodo a evaluar.
+	\item \textbf{$h(n)$:} Expresa la distancia estimada desde el nodo a evaluar hasta el nodo destino al que se pretende encontrar el camino mínimo.
+\end{itemize}
