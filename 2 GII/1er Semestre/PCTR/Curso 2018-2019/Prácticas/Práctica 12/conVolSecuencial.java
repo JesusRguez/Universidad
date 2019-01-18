@@ -47,7 +47,8 @@ public class conVolSecuencial{
     public static void main(String[] args) {
         for (int i=0; i<10000; ++i) {
             for (int j=0; j<10000; ++j) {
-                m[i][j] = (int)(Math.random()*(-41)+21);
+                m[i][j] = (int)(Math.random()*(-42)+21);
+                System.out.print(m[i][j]+"\t");
             }
         }
         Scanner teclado = new Scanner(System.in);
