@@ -11,7 +11,7 @@ public class conVolSecuencial{
     public static int[][] r = new int[10000][10000];
     public static int[][] f = new int[3][3];
 
-    public static int[][] convolucion(int[][] m, int[][] f){
+    public static void convolucion(){
         int[][] a = new int[3][3];
         int v = 0;
         for (int i=1; i<9999; ++i) {
@@ -39,7 +39,6 @@ public class conVolSecuencial{
                 r[i][j] = v;
             }
         }
-        return r;
     }
 
     public static void main(String[] args) {
@@ -50,7 +49,7 @@ public class conVolSecuencial{
         }
         Scanner teclado = new Scanner(System.in);
         int opcion;
-        long time_start, time_end;
+        long time_start = 0, time_end = 0;
         do {
             System.out.println("Introduzca el filtro a aplicar o salir:\n1. Enfocar\n2. Realzar bordes\n3. Detectar bordes\n4. Filtro de Sobel\n5. Filtro de Sharpen\n6. Salir");
             opcion = teclado.nextInt();
@@ -65,7 +64,9 @@ public class conVolSecuencial{
                     f[2][0] = 0;
                     f[2][1] = -1;
                     f[2][2] = 0;
-                    r = convolucion(m, f);
+                    time_start = System.currentTimeMillis();
+                    convolucion();
+                    time_end = System.currentTimeMillis();
                 break;
                 case 2:
                     f[0][0] = 0;
@@ -77,7 +78,9 @@ public class conVolSecuencial{
                     f[2][0] = 0;
                     f[2][1] = 0;
                     f[2][2] = 0;
-                    r = convolucion(m, f);
+                    time_start = System.currentTimeMillis();
+                    convolucion();
+                    time_end = System.currentTimeMillis();
                 break;
                 case 3:
                     f[0][0] = 0;
@@ -89,7 +92,9 @@ public class conVolSecuencial{
                     f[2][0] = 0;
                     f[2][1] = 1;
                     f[2][2] = 0;
-                    r = convolucion(m, f);
+                    time_start = System.currentTimeMillis();
+                    convolucion();
+                    time_end = System.currentTimeMillis();
                 break;
                 case 4:
                     f[0][0] = -1;
@@ -101,7 +106,9 @@ public class conVolSecuencial{
                     f[2][0] = -1;
                     f[2][1] = 0;
                     f[2][2] = 1;
-                    r = convolucion(m, f);
+                    time_start = System.currentTimeMillis();
+                    convolucion();
+                    time_end = System.currentTimeMillis();
                 break;
                 case 5:
                     f[0][0] = 1;
@@ -113,7 +120,9 @@ public class conVolSecuencial{
                     f[2][0] = 1;
                     f[2][1] = -2;
                     f[2][2] = 1;
-                    r = convolucion(m, f);
+                    time_start = System.currentTimeMillis();
+                    convolucion();
+                    time_end = System.currentTimeMillis();
                 break;
                 case 6:
                     System.exit(0);
@@ -122,5 +131,6 @@ public class conVolSecuencial{
                     System.out.println("Por favor, introduzca una opción válida");
             }
         } while (opcion < 1 || opcion > 6);
+        System.out.println("La convolución ha tardado "+(time_end-time_start)/(double)1000+" segundos");
     }
 }
