@@ -11,6 +11,9 @@ public class conVolSecuencial{
     public static int[][] r = new int[10000][10000];
     public static int[][] f = new int[3][3];
 
+    /**
+     * Método para realizar la convolución de una matriz
+     */
     public static void convolucion(){
         int[][] a = new int[3][3];
         int v = 0;

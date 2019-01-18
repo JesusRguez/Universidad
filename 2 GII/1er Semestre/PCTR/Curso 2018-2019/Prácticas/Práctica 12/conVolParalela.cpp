@@ -18,12 +18,16 @@ using namespace std;
 int m[10000][10000];
 int r[10000][10000];
 int f[3][3];
-const int n = 10000;
 
+/**
+ * Método para calcular la convolución de una matriz
+ * @param inicio Columna de inicio de la convolución
+ * @param fin    Columna de fin de la convolución
+ */
 void convolucion(int inicio, int fin){
     int a[3][3];
     int v = 0;
-    for (int i=1; i<9999; ++i) {
+    for (int i=inicio; i<fin; ++i) {
         for (int j=1; j<9999; ++j) {
             a[0][0] = m[i-1][j-1];
             a[0][1] = m[i-1][j];
@@ -50,6 +54,11 @@ void convolucion(int inicio, int fin){
     }
 }
 
+/**
+ * Método para llamar al método convolucion(int inicio, int fin), que calculará la convolución de la matriz
+ * @param i Identificador del hilo
+ * @param h Número de hilos totales
+ */
 void convolucionar(int i, int h){
     int rango = 10000/h;
     int inicio = 1 + (i*rango);

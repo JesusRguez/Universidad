@@ -81,7 +81,7 @@
 	\maketitle
 	\begin{abstract} %Poner esto en todas las prácticas de PCTR
 		\begin{center}
-			Resultados obtenidos en la comparación de Java y C++ en sus versiones secuencial y paralela.
+			Resultados obtenidos en la comparación de Java y C++ en sus versiones secuencial y paralela en la convolución de una imagen.
 		\end{center}
 	\end{abstract}
 	\thispagestyle{empty}
@@ -102,14 +102,34 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
 \section{Linux}
-\subsection{Speed-Up}
 \subsection{Tiempo}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{TiempoLinux.png}
+\end{figure}
+\subsection{Speed-Up}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{SpeedUpLinux.png}
+\end{figure}
+\newpage
 
 \section{Windows}
-\subsection{Speed-Up}
 \subsection{Tiempo}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[scale=1]{TiempoWindows.png}
+%\end{figure}
+\subsection{Speed-Up}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[scale=1]{SpeedUpWindows.png}
+%\end{figure}
 
 \section{Conclusión}
-La conclusión general que podemos obtener es que el mejor número de hebras es aquel que se corresponde con los cores de la máquina en la que se está ejecutando la aplicación, debido a que, un número excesivo de hebras, conllevará un aumento del tiempo de ejecución.
+La conclusión general que podemos obtener de esta práctica es que, en Java, el mejor número de hebras es aquel que se corresponde con los cores de la máquina en la que se está ejecutando la aplicación, debido a que, un número excesivo de hebras, conllevará un aumento del tiempo de ejecución. Sin embargo, en C++, podemos observar como el Speed-Up sigue en aumento con un número mayor de hebras.
+
+Por el contrario, Java es más rápido que C++ en el proceso de convolución de una imagen, tal como se puede observar en los gráficos anteriores\footnote{Para estos gráficos se han realizado pruebas en una máquina con procesador Intel i5-3570 CPU @ 3.40GHz × 4, tanto en Linux (Debian 9.6), como en Windows (cuenta con dual-boot a ambos sistemas operativos). Se ha seleccionado el filtro de ``enfoque'' para todas las pruebas realizadas para que sean lo más realistas posibles.}.
+
 
 \end{document}

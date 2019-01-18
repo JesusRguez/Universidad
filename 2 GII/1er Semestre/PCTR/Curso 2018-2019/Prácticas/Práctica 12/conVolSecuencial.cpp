@@ -16,8 +16,10 @@ using namespace std;
 int m[10000][10000];
 int r[10000][10000];
 int f[3][3];
-const int n = 10000;
 
+/**
+ * Método para realizar la convolución a una matriz
+ */
 void convolucion(){
     int a[3][3];
     int v = 0;

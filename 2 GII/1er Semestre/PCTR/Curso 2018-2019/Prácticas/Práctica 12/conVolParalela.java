@@ -13,6 +13,11 @@ public class conVolParalela implements Runnable{
     public int id;
     public int h;
 
+    /**
+     * Constructor de conVolParalela
+     * @param i Identificador del hilo
+     * @param h Número total de hilos
+     */
     public conVolParalela(int i, int h){
         this.id = i;
         this.h = h;
@@ -25,6 +30,11 @@ public class conVolParalela implements Runnable{
         convolucion(inicio, fin);
     }
 
+    /**
+     * Método para realizar la convolución de una matriz
+     * @param inicio Columna de inicio de la convolución
+     * @param fin    Columna de final de la convolución
+     */
     public void convolucion(int inicio, int fin){
         int[][] a = new int[3][3];
         int v = 0;
