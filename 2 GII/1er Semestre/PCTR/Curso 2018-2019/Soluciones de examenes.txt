@@ -1,0 +1,19 @@
+Febrero 2014:
+1.) Saberte el dibujito.
+2.) La taxonomía de Flynn establece 4 categorías: SISD, SIMD, MISD, MIMD.
+Las arquitecturas mencionadas estarían dentro de la categoría MIMD ya que son capaces de procesar varias instrucciones con varios datos a la vez. La diferencia principal se encuentra en la gestión de la memoria que hace cada una de las arquitecturas, pero en cuanto al procesamiento, todas funcionan igual.
+3.) No, porque no existe una sentencia que tenga dicho significado en el lenguaje. Sin embargo, puede simularse con primitivas mutex() que son equivalentes a los ReentrantLock del API de alto nivel de Java.
+No existe primitiva en C++ que tenga semantica de región crítica. Sin embargo, en Java sí.
+Por lo tanto se dice que en C++ se puede simular la región crítica con otras primitivas pero no con una primitiva específica con semántica de región crítica como sí pasa en Java con la primitiva synchronized.
+4.) Al lanzar el kernel sobre la GPU, los hilos de la CPU que lanzan el kernel se quedan bloqueados a la espera de que la GPU complete la ejecución del kenel lanzado y devuelva los resultados.
+5.) Depende del hilo que entre en el run, imprimirá dos números entre 1 y 4 en función de qué hilo entre antes al bloque try-catch ya que los hilos que tengan un id par, se quedarán bloqueados mientras que los que sean impares, imprimmirán el valor de la variable "n". El programa no termina nunca debido a que los hilos se quedan bloqueados y nunca son despertados en ningún momento.
+6.) El for de dentro del método run no vale de nada, salvo de espera ocupada. Luego, cada hilo ejecuta el método run y termina, salvo el último, que se quedará bloqueado en el await() proque no habrá ningún otro hilo que lo despierte. Por lo tanto, el programa no termina, pero imprime 2000 como valor de "s".
+7.) Cuando el coeficiente de bloqueo es 0.835 el rendimiento del programa es más óptimo debido a que el tiempo que tarda en ejecutarse es el mínimo de la curva (120 segundos). Si aumentamos el coeficiente de bloqueo a un número mayor de 0.9, el tiempo del programa se dispara creciendo cuantitativamente.
+Si bajamos el coeficiente de bloqueo, también podemos observar que el tiempo de procesamiento aumenta.
+8.) La primera vez que se entra en oper_B(int x) se echa el cerrojo y cuando se intenta entrar de nuevo a oper_B(int x) desde oper_C(), nos encontramos con que el cerrojo ya está echado y no podemos volverlo a echar, por lo tanto, el programa se queda colgado ahí y no termina.
+
+Septiembre 2013:
+1.) Lo hace la interfaz UnicastRemoteObject transparentemente al programador. El cliente lanza peticiones al servidor y éste asignará cada petición a un hilo diferente de forma que cada cliente tenga su propio hilo de ejecución.
+2.) 28 métricas de prioridad porque siguen el Gold Standard. Cada prioridad tiene más de 30000 niveles de importancia.
+3.) Que se pueden dar condiciones de carrera en las regiones críticas por lo que deberían ser accedidas en exclusión mutua. Si no se contola, el dato queda alterado y el resultado no es el esperado.
+4.) 
