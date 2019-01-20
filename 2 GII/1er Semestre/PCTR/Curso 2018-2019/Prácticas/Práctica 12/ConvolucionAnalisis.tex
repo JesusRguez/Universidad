@@ -81,7 +81,7 @@
 	\maketitle
 	\begin{abstract} %Poner esto en todas las prácticas de PCTR
 		\begin{center}
-			Resultados obtenidos en la comparación de Java y C++ en sus versiones secuencial y paralela en la convolución de una imagen.
+			Resultados obtenidos en la comparación de Java y C++ en sus versiones secuencial y paralela en la convolución de una imagen en Linux y Windows.
 		\end{center}
 	\end{abstract}
 	\thispagestyle{empty}
@@ -127,9 +127,9 @@
 \end{figure}
 
 \section{Conclusión}
-La conclusión general que podemos obtener de esta práctica es que, en Java, el mejor número de hebras es aquel que se corresponde con los cores de la máquina en la que se está ejecutando la aplicación, debido a que, un número excesivo de hebras, conllevará un aumento del tiempo de ejecución. Sin embargo, en C++, podemos observar como el Speed-Up sigue en aumento con un número mayor de hebras.
+La conclusión general que podemos obtener de esta práctica es que Java es más rápido que C++ en ambos sistemas operativos con la diferencia de que C++ tiene un Speed-Up constante al tener un número de hilos mayor o igual al número de cores de la máquina, mientras que Java es más inestable.
 
-Por el contrario, Java es más rápido que C++ en el proceso de convolución de una imagen, tal como se puede observar en los gráficos anteriores\footnote{Para estos gráficos se han realizado pruebas en una máquina con procesador Intel i5-3570 CPU @ 3.40GHz × 4, tanto en Linux (Debian 9.6), como en Windows (cuenta con dual-boot a ambos sistemas operativos). Se ha seleccionado el filtro de ``enfoque'' para todas las pruebas realizadas para que sean lo más realistas posibles.}.
+Por el contrario, Java es más rápido que C++ en el proceso de convolución de una imagen en ambos sistemas operativos, tal como se puede observar en los gráficos anteriores\footnote{Para estos gráficos se han realizado pruebas en una máquina con procesador Intel i5-3570 CPU @ 3.40GHz × 4, tanto en Linux (Debian 9.6), como en Windows (cuenta con dual-boot a ambos sistemas operativos). Se ha seleccionado el filtro de ``enfoque'' para todas las pruebas realizadas para que sean lo más realistas posibles.}.
 
 
 \end{document}
