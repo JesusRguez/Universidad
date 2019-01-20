@@ -1,3 +1,4 @@
+//para que el programa funcione tenemos que cambiar el mutex por recursive_mutex
 #include <thread>
 #include <mutex>
 #include <iostream>
