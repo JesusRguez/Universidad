@@ -148,5 +148,7 @@ int main(int argc, char const *argv[]) {
     std::chrono::duration<double> elapsed_seconds = end-start;
     std::cout << "La convolución ha tardado "<< elapsed_seconds.count() << " segundos\n";
 
+	system("pause");
+
     return 0;
 }
