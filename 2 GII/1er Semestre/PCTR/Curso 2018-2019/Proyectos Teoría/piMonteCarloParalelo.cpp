@@ -5,9 +5,6 @@
 #include <cstdlib>
 #include <cmath>
 #include <random>
-extern "C" {
- 	#include <unistd.h>
-}
 
 using namespace std;
 
