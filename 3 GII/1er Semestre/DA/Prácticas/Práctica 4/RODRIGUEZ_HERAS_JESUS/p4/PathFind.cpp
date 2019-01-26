@@ -21,7 +21,6 @@ Vector3 cellCenterToPosition(int i, int j, float cellWidth, float cellHeight){
 
 void DEF_LIB_EXPORTED calculateAdditionalCost(float** additionalCost, int cellsWidth, int cellsHeight, float mapWidth, float mapHeight, List<Object*> obstacles, List<Defense*> defenses) {
 
-    /*El mio
     float cellWidth = mapWidth / cellsWidth;
     float cellHeight = mapHeight / cellsHeight;
 
@@ -30,23 +29,7 @@ void DEF_LIB_EXPORTED calculateAdditionalCost(float** additionalCost, int cellsW
     for(int i = 0 ; i < cellsHeight ; ++i) {
         for(int j = 0 ; j < cellsWidth ; ++j) {
             Vector3 cellPosition = cellCenterToPosition(i, j, cellWidth, cellHeight);
-            additionalCost[i][j] = _sdistance(cellPosition, (*it)->position);
-        }
-    }*/
-
-    //El del profesor
-    float cellWidth = mapWidth / cellsWidth;
-    float cellHeight = mapHeight / cellsHeight;
-
-    for(int i = 0 ; i < cellsHeight ; ++i) {
-        for(int j = 0 ; j < cellsWidth ; ++j) {
-            Vector3 cellPosition = cellCenterToPosition(i, j, cellWidth, cellHeight);
-            float cost = 0;
-            if( (i+j) % 2 == 0 ) {
-                cost = cellWidth * 100;
-            }
-
-            additionalCost[i][j] = cost;
+            additionalCost[i][j] = 1/(_distance(cellPosition, (*it)->position));
         }
     }
 }
