@@ -33,7 +33,7 @@ public class intParaleloFutureCont implements Callable<Integer>{
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca el número de puntos:");
         int p = teclado.nextInt();
-        int h = Runtime.getRuntime().availableProcessors(); //Usando la ecuación de subramanian el coeficiente de bloque es 0 para este problema debido a que es de tipología numérica.        
+        int h = Runtime.getRuntime().availableProcessors(); //Usando la ecuación de subramanian el coeficiente de bloque es 0 para este problema debido a que es de tipología numérica.
         ExecutorService ejecutor = Executors.newFixedThreadPool(h);
         int cont = 0;
         int sol = 0;
