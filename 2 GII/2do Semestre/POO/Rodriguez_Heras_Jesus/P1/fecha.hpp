@@ -42,7 +42,7 @@ public:
 	//Constantes:
 	static const int AnnoMinimo=1902;
 	static const int AnnoMaximo=2037;
-	
+
 	//Conversion a const char*, cadena:
 	const char* cadena() const;
 
