@@ -12,7 +12,7 @@ void DEF_LIB_EXPORTED calculateAdditionalCost(float** additionalCost, int cellsW
     for(int i = 0 ; i < cellsHeight ; ++i) {
         for(int j = 0 ; j < cellsWidth ; ++j) {
             Vector3 cellPosition = cellCenterToPosition(i, j, cellWidth, cellHeight);
-            additionalCost[i][j] = 1/(_distance(cellPosition, (*it)->position));
+            additionalCost[i][j] = 1/(_sdistance(cellPosition, (*it)->position));
         }
     }
 }
@@ -52,7 +52,7 @@ void DEF_LIB_EXPORTED calculatePath(AStarNode* originNode, AStarNode* targetNode
 
                         opened.push_back(*iter);
                     }else{
-                        d = _sdistance(current->position, (*iter)->position);
+                        d = _distance(current->position, (*iter)->position);
                         if ((*iter)->G > current->G + d) {
                             (*iter)->G = current->G + d;
                             (*iter)->F = (*iter)->G + (*iter)->H;
