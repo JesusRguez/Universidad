@@ -1,0 +1,16 @@
+TARGETS = rsyslog netperf hostapd killprocs motd dbus exim4 rsync ssh loadcpufreq acpid cron network-manager bluetooth bootlogs cpufrequtils plymouth single rmnologin rc.local
+INTERACTIVE =
+dbus: rsyslog
+exim4: rsyslog
+rsync: rsyslog
+ssh: rsyslog
+loadcpufreq: rsyslog
+acpid: rsyslog
+cron: rsyslog
+network-manager: dbus rsyslog
+bluetooth: rsyslog dbus
+cpufrequtils: loadcpufreq
+plymouth: network-manager dbus rsyslog netperf hostapd bluetooth exim4 bootlogs motd rsync ssh cpufrequtils loadcpufreq acpid cron
+single: killprocs bootlogs motd
+rmnologin: network-manager dbus rsyslog netperf hostapd bluetooth exim4 bootlogs motd rsync ssh cpufrequtils loadcpufreq acpid cron
+rc.local: network-manager dbus rsyslog netperf hostapd bluetooth exim4 bootlogs motd rsync ssh cpufrequtils loadcpufreq acpid cron

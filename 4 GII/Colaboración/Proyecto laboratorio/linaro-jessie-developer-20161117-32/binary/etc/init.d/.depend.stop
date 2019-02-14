@@ -1,0 +1,10 @@
+TARGETS = netperf hostapd exim4 network-manager bluetooth plymouth alsa-utils urandom resolvconf sendsigs rsyslog umountnfs.sh hwclock.sh networking umountfs umountroot halt reboot
+sendsigs: network-manager netperf hostapd bluetooth alsa-utils exim4 plymouth
+rsyslog: network-manager bluetooth exim4 sendsigs
+umountnfs.sh: network-manager netperf hostapd bluetooth alsa-utils exim4 rsyslog plymouth sendsigs
+hwclock.sh: netperf rsyslog
+networking: netperf exim4 umountnfs.sh
+umountfs: network-manager netperf hostapd bluetooth alsa-utils exim4 hwclock.sh umountnfs.sh networking resolvconf plymouth urandom
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot
