@@ -1,0 +1,16 @@
+client
+dev tun
+proto tcp
+remote openvpn.uca.es 443 tcp
+tls-remote "/C=ES/O=Universidad_de_Cadiz/CN=openvpn.uca.es"
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca cacert.pem
+cert certificado.pem
+key certificado.key
+cipher AES-128-CBC
+comp-lzo
+verb 3
+redirect-gateway def1

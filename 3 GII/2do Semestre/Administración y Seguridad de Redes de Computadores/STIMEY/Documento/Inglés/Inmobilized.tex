@@ -1,0 +1,152 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+%\usepackage{hyperref}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+%\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+%\usepackage{mathptm}
+
+%%% VARIOS:
+\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+%\usepackage[english]{babel}
+\usepackage[svgnames,x11names,table]{xcolor}
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+
+\title{Inmobilized}
+\author{Jesús Rodríguez Heras\\Isabel Pérez Fernández\\Juan Pedro Rodríguez Gracia\\Gabriel Fernando Sánchez Reina}
+\date{May, 28th 2018}
+
+\begin{document}
+	
+	\maketitle
+%	\begin{abstract} %Poner esto en todas las prácticas de PCTR
+%		\begin{center}
+%			Definición de Etteercap, SSL Strip y demostración práctica de un ataque man-in-the-middle.
+%		\end{center}
+%	\end{abstract}
+	\thispagestyle{empty}
+	\newpage
+	
+%	\renewcommand{\tableofcontents}{\LARGE{\textbf{Index}}} 
+	
+	\tableofcontents
+	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
+	
+	\section{Permissions per user}
+	The users have the following permissions according to the type of user they belong to:
+	\begin{itemize}
+		\item Auditor: You will have permission to run the tests if they are in ``to do'' or ``rejected''. You can only see the test assigned to you. When the test is completed, the test status goes to ``to review''.
+		\item Supervisor: You will have permissions to see the tests that are assigned to him and that are in ``to review''. If the test is well done, it will put the test status to ``approved'', if it does not approve it, it will go to ``rejected''.
+		\item Manager: You will have permissions to see everything, but you will not be able to change the contents of the tables.
+	\end{itemize}
+		
+	\section{Tests}
+	The tests involved in the immobilized are the following:
+	\begin{itemize}
+		\item Validity: Fixed assets exist in the company.
+		\item Court: The date of the expense must correspond to the year in which the exercise is.
+		\item Ownership: All the included accounts of the fixed assets will be the property of the company.
+		\item Accuracy: The amounts of each fixed asset transaction are correct.
+		\item Valuation: The fixed assets annual accounts have to be correctly valued.
+		\item Classification: The fixed assets are conveniently classified.
+		\item Disclosure: The balance sheet of the company and the rest of the information must be properly presented.
+	\end{itemize}
+	
+	\section{How to perform the tests?}
+	\begin{itemize}
+		\item Validity: The auditor must upload a file to the database to certify that it is valid.
+		\item Court: The auditor must upload a document explaining why the test has said result.
+		\item Ownership: The auditor must upload a file that shows the property of the asset.
+		\item Accuracy: The auditor must upload a document that says whether the test is correct or not, because we do not have data with which to test them.
+		\item Valuation: The auditor must upload a document stating whether the useful life corresponds to that of the type of the machine.
+		\item Classification: The auditor must upload a document stating whether the classification of the assets is correct.
+		\item Disclosure: The auditor must upload a document with the justification that the asset is properly presented.
+	\end{itemize}
+
+	\section{Incidents}
+	If a test fails or returns an incident, the information of that incident will be entered in the database in the table of ``incidents'' that will be returned to the main program and will be what the administrator of the application will receive, who will be in charge of talking with the company's staff.
+	
+	\section{Conclusion \& future upgrades}
+	When selecting the test, you can select the test of the table and not its identifier. \\
+	
+\noindent	
+It would also be possible that, in the global table, the type of test, which machine is the test, etc. instead of depending on the name of the file. \\
+
+\noindent
+The table could be better constructed (functionally and aesthetically).
+
+
+\end{document}

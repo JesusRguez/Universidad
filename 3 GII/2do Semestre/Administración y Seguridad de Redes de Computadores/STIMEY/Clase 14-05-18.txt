@@ -1,0 +1,16 @@
+- Nos faltan las tablas de las pruebas y la de las incidencias. En la tabla de incidencias se guarda el id de la prueba, el nombre de la prueba, una descripción, el id del ejecutor, el id del supervisor y la fecha.
+
+- Auditoría: Recolección de evidencia.
+
+- En las pruebas se automatizan las cosas que se puedan, pero a la hora de subir datos (o imagenes) serán los de auditoría los que tengan que subirlas y comparar las cosas, no nosotros.
+
+- Si no se encuentran errores, se pone en incidencias, "no se han encontrado errores". En caso de que sí que haya errores habrá que escribir cuál es la incidencia que se ha encontrado.
+
+- Escribirle a Nieves con lo que se ha comentado en clase.
+
+- En una auditoría:
+0.) Establecer objetivos.
+1.) Dividir el trabajo (organizar).
+2.) Inventario (equipos, licencias, recursos humanos, operaciones).
+3.) Pruebas-Incidencias.
+4.) Reporte.

@@ -1,0 +1,38 @@
+Validez: subir foto de cada máquina.
+Integridad: Lo hace el auditor como tal. Nosotros mostramos los datos (que el dinero sea exactamente el que hay en las cuentas).
+Corte: La fecha del gasto tiene que corresponderse con el año en el que está el ejercicio, no con el año siguiente.
+Propiedad: Foto de factura o mostrar factura.
+Exactitud: Comparar que los importes sean correctos (aunque no tenemos datos con los que constrastar) (lo compara el auditor, que es el que le da al OK).
+Valoración: Confirmar que la vida util que tiene se corresponde con la de su tipo (no tenemos más de un tipo, solo uno).
+Clasificación: La clasificación del inmovilizado es correcta.
+Revelación: La presentación del inmovilizado corresponde con el activo y el pasivo. (Al unir el activo y el pasivo, las cuentas salen correctas. Pero no tenemos pasivo).
+
+La aplicación tiene que tener una opción para mostrar el estado de las pruebas.
+Solo los revisores pueden darle al OK a las pruebas que están realizadas.
+
+
+
+
+--PRUEBAS--
+Validez: Añadir una foto a la columna "relatedFile" de la tabla de pruebas.
+Integridad: Subir una prueba. En "relatedFile" se añade un documento donde el auditor exponga el por qué el resultado de la prueba es ese.
+Corte: Subir un documento en "relatedFile" al igual que en el caso anterior.
+Propiedad: Subir foto o pdf de la factura de la máquina.
+Exactitud: Subir un documento en "relatedFile" donde se exponga si la prueba está en OK o no (porque no tenemos datos con los que contrastarlos).
+Valoración: Subir un documento donde se diga si la vida util se corresponde con la del tipo de la máquina (solo tenemos un tipo).
+Clasificación: Subir un documento donde se siga si la clasificación del inmovilizado es correcta.
+Revelación: Subir fichero con la justificación.
+
+
+En función de quien esté logueado, saldrá un menú u otro con las funciones que tenga permitidas dicho usuario. En esta misma parte se podría hacer el chequeo de las pruebas (fechas y cosas generales que podamos hacer nosotros) para que salgan directamente en incidencias.
+
+Al insertar una nueva máquina, automáticamente y en segundo plano se crean las pruebas relacionadas con la nueva máquina que estarán iniciadas como "por hacer".
+
+El usuario de una prueba es uno de los auditores. Una vez que estos hagan una prueba, tienen que salirse a los supervisores como que está por supervisar y, si esté le da el OK, todo perfecto, no se podría tocar salvo por el administrador. En caso de que no esté OK, se tendría que volver a repetir.
+
+Las incidencias le sirven a los jefes supremos para saber que hay algo mal en el sistema. El campo "test" será el identificador de la prueba que haya fallado. Una incidendia obvia es aquella que se le ha pasado el tiempo de ser realziada.
+
+
+(1) Auditor: Ejecutar las pruebas como tal, si está en "por hacer", sube el fichero y luego, pasa al estado "por revisar". Solo puede ver la prueba que están asignadas a él.
+(2) Supervisor: Ver las pruebas que le están asignadas a él por asignar y que estén en "por revisar", cuando las revisa y da el OK, pasa a correcto. Si las revisa y no da el OK, avisa de nuevo al auditor para que vuelva a realizar la prueba con un estado nuevo "no superada" (el auditor tiene que volver a repetir la prueba y volvería a ponerse en "por revisar" cuando el auditor la rehaga).
+(3) Jefe supremo (Gerente): Solo puede ver todo, pero no tocar nada.

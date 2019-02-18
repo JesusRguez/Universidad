@@ -1,0 +1,70 @@
+#include "alg_grafoPMC.hpp"
+
+using namespace std;
+
+struct casilla {
+    int fil;
+    int col;
+};
+
+template<class tCoste>
+casilla nodoToCasilla(GrafoP<tCoste>::vertice v, unsigned N)
+{
+    casilla c;
+
+    c.fil = v/N;
+    c.col = v%N;
+
+    return c;
+}
+
+template <class tCoste> GrafoP<tCoste>::vertice
+casillaToNodo(casilla c, unsigned N)
+{ return c.fil*N + f.col; }
+
+template <class tCoste>
+bool adyacentes(casilla c1, casilla c2)
+{
+    return (((c1.fil == c2.fil and abs(c1.col - c2.col) = 1)
+             or (c1.col == c2.col and abs(c1.fil - c2.fil) = 1)))
+}
+
+bool hayPiedra(size_t v1, size_t v2, const vector<casilla>& piedras,
+               unsigned N)
+{
+    for(size_t i = 0; i < piedras.size(); ++i)
+        if((casillaToNodo(piedras[i].fil, N) == v1 and
+           casillaToNodo(piedras[i].col, N) == v2) or
+           (casillaToNodo(piedras[i].fil, N) == v2 and
+            casillaToNodo(piedras[i].col, N) == v1))
+            return true;
+
+    return false;
+}
+
+
+template <class tCoste> GrafoP<tCoste>::tCamino
+laberintoPiedras(unsigned N, const vector<casilla>& piedras,
+                 casilla origen, casilla destino)
+{
+    typedef typename GrafoP<tCoste>::vertice vertice;
+
+    GrafoP<tCoste> g(N*N);
+    matriz<tCoste> m(N*N);
+
+    matriz<bool> piedras(N);
+
+    vector<vertice> p;
+
+    //vamos a rellenar con 0 en la diagonal para evitar ciclos
+    //rellenamos con 1 cuando se pueda mover de casilla
+    //INFINITO seran el resto de casillas(las que tienen piedras)
+    for(vertice i = 0; i < g.numVert(); ++i)
+        for(vertice j = 0; j < g.numVert(); ++j) {
+            if(i == j)
+                g[i][j] = 0;
+            else if(adyacentes(casillaToNodo(i, N), casillaToNodo(j, N)) and
+                    !hayPiedra(i, j, piedras, N))
+                g[i][j] = 1;
+        }
+}

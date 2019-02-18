@@ -1,0 +1,884 @@
+\chapter{Estructuras de datos complejas y asignación de memoria}
+\setcounter{section}{0}
+\section{Vectores estáticos}
+Un vector estático (o array) es una colección ordenada de variables del mismo tipo que ocupan posiciones contiguas de memoria y que se referencian utilizando un nombre común. La dirección más baja corresponde al primer elemento y la más alta al último. Para acceder a un elemento específico de un vector se usa un índice. El vector que se usa más frecuentemente es el de caracteres (cadena de caracteres).
+
+La palabra ``ordenada'' no significa que los elementos sigan un determinado orden. Quiere decir que cada elemento tiene asociado un número secuencial (llamado subíndice) que identifica su posición en el vector.
+\subsection{Vectores unidimensionales}{
+El formato general para la declaración de un vector es el siguiente:
+
+\texttt{tipo nombre[tamaño];}
+
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{tipo}: es el tipo base del vector y determina el tipo de datos de cada elemento del vector.
+	\item \texttt{nombre}: es el identificador del vector.
+	\item \texttt{tamaño}: es el número de elementos que componen el vector.
+\end{itemize}
+Veamos como se realiza la declaración de un vector:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+int float[10];
+\end{lstlisting}
+\Explicacion
+Esta sentencia realiza dos operaciones al mismo tiempo:
+\begin{enumerate}
+	\item Reserva espacio en memoria para almacenar 10 valores \texttt{float} (es decir, 10x4 bytes).
+	\item Crea un puntero llamado \texttt{notas} que apunta automáticamente al primer elemento del vector. Este puntero es una variable que contiene la dirección de memoria donde comienza el vector.\\\\
+\end{enumerate}
+\end{Ejemplo}
+Con respecto a los vectores debemos tener en cuenta lo siguiente:
+\begin{itemize}
+	\item En C todos los vectores usan el cero como índice del primer elemento. Así, en el ejemplo anterior, el primer elemento del vector es \texttt{notas[0]} y el último es \texttt{notas[9]}.
+	\item El lenguaje C no realiza comprobación de límites en los vectores. Esto quiere decir que podemos indexar un vector por encima del número de elementos que contiene  sin provocar ningún mensaje de error en tiempo de compilación o ejecución. De esta forma, si sobrepasamos el final del vector durante una operación de asignación, entonces corremos el riesgo de asignar valores a otras variables diferentes o a un trozo de código del programa o al sistema operativo. Como programadores, somos responsables de asegurarnos que los vectores sean lo suficientemente grandes para guardar los datos que necesitamos y de realizar las comprobaciones de límite cuando sea necesario.
+\end{itemize}
+}
+\subsection{Cadena o vector de caracteres}{
+El tipo de vector más usado en C es el vector de caracteres. Es un vector que contiene ne cada celda un carácter del código ASCII. A los vectores de caracteres se les denominan cadenas de caracteres o \texttt{strings}.
+
+En C, una cadena de caracteres se implementa mediante un vector de caracteres terminado en un nulo (``$\backslash{0}$''), que es un cero que indica el final de la cadena. Por esta razón se debe declarar vectores de caracteres con un carácter más que la cadena que vaya a guardar.
+
+La declaración de una cadena de caracteres se realiza de la siguiente forma:
+
+\texttt{char cadena[11];}
+
+En dicha declaración se permite guardar una cadena de hasta 10 caracteres puesto que el último es para el nulo de final de cadena (``$\backslash{0}$'').
+
+Todas las funciones para el uso de las cadenas de caracteres se encuentran definidas en la librería \texttt{string.h}.
+}
+\subsection{Vectores multidimensionales: Matrices}{
+El lenguaje C también permite crear vectores con dos o más dimensiones. El formato general de una declaración de un vector multidimensional es el siguiente:
+
+\texttt{tipo nombre[tamaño1][tamaño2]...[tamañoN];}
+
+Pero el más usado es el vector bidimensional ya que es tratado como una tabla.
+\begin{Ejemplo}
+Para declarar un vector ``notas'' de enteros bidimensional de tamaño 15x4 escribiremos:
+
+\texttt{int notas[15][4];}
+
+Y para acceder al 4º elemento de la undécima fila del vector notas escribiremos:
+
+\texttt{notas[10][3];}
+\Nota
+Los índices son una unidad inferior a los que hemos señalado con anterioridad debido a que el primer elemento de cada vector se encuentra en el índice ``0''. Recordemos que el primer elemento de un vector siempre está en la posición ``0'' como ya se dijo con anterioridad.
+\end{Ejemplo}
+}
+\subsection{Inicialización de vectores}{
+El lenguaje c permite la inicialización de los vectores en el momento de la declaración, aunque no permite la de los vectores locales (a menos que se declaren como \texttt{static}). El formato general de una inicialización de un vector es el siguiente:
+
+\texttt{tipo nombre[tamaño1][tamaño2]...[tamañoN] = {lista\_valores};}
+
+Donde \texttt{lista\_valores} es una lista separada por comas de constantes, las cuales son del mismo tipo que las del tipo base del vector.
+
+Veamos un ejemplo de inicialización de vectores:
+\begin{Ejemplo}
+\texttt{int i[5] = {0, 1, 4, 9, 16};}
+
+Esta declaración es equivalente a la siguiente:
+
+\texttt{int i[5];}\\
+\texttt{i[0] = 0;}\\
+\texttt{i[1] = 1;}\\
+\texttt{i[2] = 4;}\\
+\texttt{i[3] = 9;}\\
+\texttt{i[4] = 16;}\\
+\end{Ejemplo}
+Los vectores de caracteres se pueden declarar como en el ejemplo anterior o de la siguiente forma abreviada:
+
+\texttt{char nombre[tamaño] = ``cadena'';}
+
+De esta forma, el compilador agrega automáticamente el ``$\backslash{0}$'' al final de la cadena.
+
+Por lo tanto tanto la primera como la segunda forma son equivalentes tal como veremos en el siguiente ejemplo:
+\begin{Ejemplo}
+\texttt{char saludo[5] = {``hola''};}\\
+\texttt{char saludo[5] = {'h', 'o', 'l', 'a', '$\backslash{0}$'};}\\
+\end{Ejemplo}
+Los vectores multidimensionales se declararan de la misma forma.
+
+Veamos un ejemplo:
+\begin{Ejemplo}
+\texttt{int datos[5][3] = {1, 1, 1, 2, 4, 5, 3, 9, 27, 4, 16, 64, 5, 25, 125};}
+
+Para facilitar la comprensión de esta inicialización podemos ponerlo así:
+
+\texttt{int datos[5][3] = \{}\\
+\texttt{1, 1, 1,}\\
+\texttt{2, 4, 8,}\\
+\texttt{3, 9, 27,}\\
+\texttt{4, 16, 64,}\\
+\texttt{5, 25, 125}\};
+\Explicacion
+En este ejemplo se inicializa la matriz ``datos'' con los 5 primeros números naturales, sus cuadrados y sus cubos.
+\end{Ejemplo}
+El lenguaje C también permite inicializar vectores sin indicar el tamaño. En una sentencia de inicialización de vectores, si no se especifica el tamaño de los mismo, el compilador creará automáticamente un vector lo suficientemente grande como para albergar todos ls inicializadores presentados.
+
+Además de ser menos tedioso, el método de inicialización de vectores sin tamaño evita que cometamos errores de reserva de espacio a la hora de la inicialización.
+}
+
+\section{Funciones específicas para el uso de cadenas}
+Las funciones para trabajar con cadenas de caracteres se encuentran definidas en la librería \texttt{string.h} y son las siguientes:
+\newpage
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|p{9,5cm} | p{6,5cm}|}
+			\hline 
+			\textbf{Prototipo de función} & \textbf{Acción}  \\
+			\hline
+			\texttt{char *strcpy(char *c1, const char *c2)} & Copia la cadena \texttt{c2} sobre la cadena \texttt{c1}.\\ \hline
+			\texttt{char *strcat(char *c1, const char *c2)} & Concatena la cadena \texttt{c1} con la cadena \texttt{c2}.\\ \hline
+			\texttt{char *strchr(const char *c1, int ch1)} & Busca el carácter \texttt{ch1} en la cadena \texttt{c1}. Devuelve un puntero a la primera ocurrencia de \texttt{ch1} en \texttt{c1}. Si no lo encuentra devuelve \texttt{NULL}.\\ \hline
+			\texttt{int strcmp(const char *c1, const char *c2)} & Compara la cadena \texttt{c1} con al cadena \texttt{c2}. Devuelve un valor que es < 0 si \texttt{c1} es menor que \texttt{c2}; > 0 si \texttt{c1} es mayor que \texttt{c2} y == 0 si \texttt{c1} es igual a \texttt{c2}.\\ \hline
+			\texttt{int strlen(const char *c1)} & Devuelve la longitud de la cadena \texttt{c1} sin contar el terminador nulo ``$\backslash{0}$''\\ \hline
+			\texttt{char *strupr(char *c1)} & Convierte la cadena \texttt{c1} a mayúsculas.\\ \hline	
+			\texttt{char *strlwr(char *c1)} & Convierte la cadena \texttt{c1} a minúsculas.\\ \hline
+			\texttt{char *strset(char *c1, int ch1)} & Rellena toda la cadena \texttt{c1} con el carácter \texttt{ch1}.\\ \hline
+			\texttt{char *strstr(const char *c1, const char *c2)} & Encuentra la primera coincidencia de la subcadena \texttt{c2} dentro de \texttt{c1}. Devuelve \texttt{NULL} si no la encuentra.\\ \hline
+		\end{tabular}
+		\caption{Principales funciones de la librería string.h.}
+		\label{tabla:Principales funciones de la librería string.h}
+	\end{center}
+\end{table}
+Veamos un ejemplo donde se usan algunas de dichas funciones:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char nombre[30], frase[80];
+    printf("Escribe tu nombre: ");
+    scanf("%s", nombre);	//Al ser una cadena no lleva &
+    strcpy(frase, nombre);
+    if (!strcmp(nombre, frase)) {
+        printf("Las cadenas son iguales.\n");
+    }
+    printf("Mi nombre es %s\n", nombre);
+    strcat(frase, "es listo");	//Concatena "es listo" con frase
+    printf("%s\n", frase);
+    printf("La cadena frase tiene %d caracteres.\n", strlen(frase));
+    strcpy(nombre, "");		//Borra la cadena frase
+    return 0;
+}
+\end{lstlisting}
+\end{Ejemplo}
+
+\section{Asignación estática y dinámica de memoria}
+Los programas pueden usar variables globales o locales. Las variables (globales y locales) se almacenan en posiciones fijas de memoria y todas las unciones pueden utilizar las variables globales. Sin embargo, las variables locales existen sólo mientras están activas las funciones en las que están declaradas.
+
+Estas variables se definen cuando se compila el programa. El compilador reserva espacio de memoria para estas variables en tiempo de compilación (antes de comenzar la ejecución del programa) y para ello, el compilador necesita conocer cuántas y de qué tipo son las variables a asignar. Estas variables estáticas sirven para describir estructuras de datos cuya forma y tamaño se conocen de antemano, pudiéndose acceder a sus elementos de una manera estándar.
+
+Sin embargo, no siempre es posible conocer con antelación a la ejecución cuánta memoria se debe reservar al programa. Otras veces necesitamos estructuras de datos que puedan variar de forma y tamaño durante su existencia o ejecución del programa, es decir, necesitamos que sus elementos individuales puedan crearse y conectarse dinámicamente.
+
+Esto se consigue mediante el uso de las variables dinámicas. Estas variables se crean y se destruyen dinámicamente durante la ejecución del programa. Las variables dinámicas no tienen nombre y sólo podemos acceder a ellas mediante punteros.
+
+Las zonas dinámicas de memoria pueden ser reservadas y liberadas durante la ejecución del programa a nuestro antojo, sin embargo, el puntero es gestionado por el sistema ya que es una variable estática más, por tanto, es muy importante no confundir puntero con variable dinámica asociada a dicho puntero.
+
+Así pues, las variables estáticas son aquellas cuya reserva de memoria se hace en tiempo de compilación. no podemos liberar el espacio de memoria que ocupan, ni cambiar su tamaño o volver a reservarlas de nuevo en tiempo de ejecución. El sistema es el que se encarga de asignar las direcciones de memoria correspondientes, de liberarlas y reservarlas, sin que podamos influir en estas acciones mediante instrucciones de nuestro programa.
+
+Las variables dinámicas en cambio, son variables cuya reserva de memoria se hace en tiempo de ejecución. Son variables que se crean cuando nosotros queremos y que podemos destruir a nuestro antojo.
+
+Las diferencias entre la asignación estática y la dinámica se describen en la siguiente tabla:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|p{7,5cm} | p{7,5cm}|}
+			\hline 
+			\textbf{Asignación estática} & \textbf{Asignación dinámica}  \\
+			\hline
+			La reserva de memoria se realiza en tiempo de compilación. & La reserva de memoria se realiza en tiempo de ejecución.\\ \hline
+			La memoria asociada a cada una de las variables es fija y no varía durante la ejecución del programa. & La memoria asociada a cada una de las variables no es fija y puede variar dinámicamente en función de sus necesidades.\\ \hline
+			Necesitamos conocer de antemano que cantidad de memoria debe necesitar la variable. & No es necesario conocer de antemano qué cantidad de memoria necesitamos ya que podemos obtener más según la vayamos necesitando.\\ \hline
+			Necesitamos conocer de antemano la forma (fija) de la estructura de datos que vamos a necesitar. & La forma de las estructuras de datos creadas puede variar durante la ejecución del programa.\\ \hline
+		\end{tabular}
+		\caption{Diferencias entre asignación estática y asignación dinámica.}
+		\label{tabla:Diferencias entre asignación estática y asignación dinámica}
+	\end{center}
+\end{table}
+\\Es decir, en la asignación estática de memoria, el compilador reserva para cada una de las variable, un espacio de memoria igual al tipo de datos con el que ha sido declarado. Lo que se obtuvo durante la compilación es todo lo que se tiene (el área de datos estáticos de un programa se establece en el momento de la compilación y no puede cambiar durante la ejecución del mismo). Esto significa que de antemano tenemos que conocer qué tipo de datos queremos almacenar y qué cantidad de datos vamos a necesitar.
+
+En cambio, la asignación dinámica de memoria, no se realiza en tiempo de compilación, sino en tiempo de ejecución. La ventaja que ofrece la asignación dinámica de memoria es que nos permite una mayor flexibilidad a la hora de crear estructuras de datos y además, nos permite aprovechar la memoria disponible de forma más eficiente, ya que sólo usamos aquella que necesitamos. Mediante la asignación dinámica de memoria,m el programa puede crear o destruir, en tiempo de ejecución, espacio de memoria para sus variables en función de sus necesidades.
+\subsection{Funciones de asignación dinámica en C}{
+En C se utilizan las funciones \texttt{malloc()} y \texttt{free()} para asignar y liberar memoria. La función \texttt{malloc()} asigna memoria, inicializa el vector con la basura que haya en dicha región de memoria y devuelve un puntero al comienzo de esa memoria. Si queremos que el vector quede inicializado sin basura, usaremos la función \texttt{calloc()}, la cual también devuelve un puntero al comienzo de dicha memoria.
+
+Cuando se termina de utilizar un bloque de memoria, se puede liberar el espacio con la función \texttt{free()}, de manera que esa memoria liberada queda disponible para poderla asignar nuevamente cuando haga falta.
+
+Los prototipos de estas tres funciones son:
+\subsubsection{\texttt{malloc()}:}{\texttt{void *malloc(size\_t tamaño);} Siendo \texttt{tamaño} el número de bytes requeridos.}
+\subsubsection{\texttt{calloc()}:}{\texttt{void *calloc(size\_t tamaño);} Siendo \texttt{tamaño} el número de bytes requeridos.}
+\subsubsection{\texttt{free()}:}{\texttt{void free(void *p);}\\}
+
+
+Dichas funciones están definidas en la librería \texttt{alloc.h} o \texttt{stdlib.h}. Tanto la función \texttt{malloc()} como \texttt{calloc()} devuelven \texttt{NULL} si no hyay suficiente memoria para satisfacer la petición.
+
+El argumento de la función \texttt{free()} con un puntero no válido o no inicializado puede causar daños e incluso puede causar un ``cuelgue'' del programa o del propio sistema operativo.
+
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+char *p;
+p = (char *) malloc(50);
+\end{lstlisting}
+\Explicacion
+Este ejemplo asigna 50 bytes de memoria al vector \texttt{p}.
+\end{Ejemplo}
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+int *p;
+p = (int *) malloc(25 * sizeof(int));
+\end{lstlisting}
+\Explicacion
+Este ejemplo reserva espacio para 25 enteros.
+\end{Ejemplo}
+Como podemos observar en este último ejemplo, para asegurar la portabilidad del programa, como los tamaños de los datos pueden cambiar de un compilador a otro, podemos usar el operador de tiempo de compilación \texttt{sixeof(tipo)}, el cual devuelve el tamaño en bytes que ocupa el tipo de datos indicado como argumento.
+\begin{Ejemplo}
+\texttt{sizeof(int)}
+
+Nos devuelve cuanto ocupa un elemento de tipo \texttt{int} en nuestro compilador.\\
+\end{Ejemplo}
+
+Para que la asignación de memoria sea correcta debemos comprobar el valor devuelto por las funciones \texttt{malloc()} y \texttt{calloc()}. El modo correcto de asignar memoria y comprobar que el puntero obtenio es válido es de la siguiente forma:
+\begin{lstlisting}[language=C]
+int *p;
+p = (int *) malloc(100 * sizeof(int));
+if (p == NULL) {
+    printf("No hay memoria suficiente\n");
+    /* Aqui vendria la rutina de tratamiento del error */
+}
+\end{lstlisting}
+}
+
+\section{Vectores dinámicos}
+En muchas situaciones de programación, es imposible saber cómo de grande se necesita un vector, por lo que no es posible usar un vector estático de tamaño predefinido, ya que en ese caso, las dimensiones deben quedar establecidas en tiempo de compilación y no se pueden cambiar durante la ejecución del programa.
+
+La solución está en crear vectores dinámicos. Mientras que los vectores estáticos se crean en tiempo de compilación de manera que su memoria permanece asignada durante toda la ejecución del programa, los vectores dinámicos se crean en tiempo de ejecución de manera que su memoria se asigna solo cuando se ejecuta la sentencia que define su tamaño.
+
+En el siguiente ejemplo, podemos ver como crear y usar un vector dinámico:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stido.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i;
+    float suma = 0, *notas;
+    printf("Cuantas notas vas a introducir?");
+    scanf("%d", &n);
+    notas = malloc(n * sizeof(float));	//Reservamos memoria para n notas
+    if (notas == NULL)	//Comprobamos que la peticion de memoria ha tenido exito
+        printf("Error de asignacion de memoria");
+    else {
+        for (i = 0; i < n, i++) {
+            printf("Introduce la nota del alumno %d: ", i + 1);
+            scanf("%f", &notas[i]);
+            suma = suma + notas[i];
+        }
+        for (i = 0; i < n; i++)
+            printf("La nota del alumno %d es %.2f \n", i+1, notas[i]);
+        printf("La nota media de los %d alumnos es %.2f \n", n, suma/n);
+        free(notas);		//Liberamos la memoria asignada anteriormente
+    }
+    reutrn 0;
+}
+\end{lstlisting}
+\Explicacion
+Como podemos observar en el programa, para prevenir un uso accidental de un puntero nulo, comprobamos el punteo \texttt{notas} para asegurarnos que la petición de memoria ha tenido éxito y que \texttt{malloc()} ha devuelto un puntero válido. Además, para asegurar la portabilidad de este programa a computadoras reales de tamaño diferente, hemos usado el operador \texttt{sizeof} para calcular el número de bytes que se necesitan para un vector de n reales.
+\end{Ejemplo}
+
+\section{Consideraciones}
+\subsection{Paso de cadenas y vectores a funciones}{
+El lenguaje C permite usar un vector como argumento de una función. Para pasar vectores unidimensionales a funciones, en la llamada a la función se pone el nombre del vector sin índice. Esto pasa la dirección del primer elemento del vector a la función. En C no se puede pasar un vector completo como argumento a una función (debido al tiempo prohibitivo que entrañaría tener que copiar el vector por completo), en su lugar, se pasa automáticamente un puntero, es decir, se pasa el vector por referencia, así todos los cambios que hagamos al vector dentro de la función, afectarán al vector original.
+
+Para ilustrar esto, veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+void ver(char c[20], int tope);
+void cambia(char c[20], int salto);
+
+int main() {
+    char letras[20];
+    int i, j = 10;
+    for (i = 0; i < 20; i++)
+        letras[i] = 'a' + 1;
+    ver(letras, j);
+    cambia(letras, j);
+    return 0;
+}
+
+void ver(char c[20], int tope){
+    int i;
+    for (i = 0; i < tope; i++)
+        printf("%c", c[i]);
+    printf("\n");
+}
+
+void cambia(char c[20], int salto) {
+    int i;
+    for (i = 0; i < 20; i++)
+        c[i] = c[i] + salto;
+}
+\end{lstlisting}
+Al ejecutar el programa, el resultado mostrado en pantalla es el siguiente:
+
+\texttt{abcdefghij}\\
+\texttt{fhgijklmno}
+\Explicacion
+Si nos fijamos, tanto en la función \texttt{cambia()} como en la función \texttt{ver()} pasamos como argumento un vector y una variable. La variabla es pasada por valor, es decir, transferimos a las funciones el valor de la variable, no la variable. En cambio, el vector es pasada por referencia, es decir, tranferimos a la función no una copia del vector, sino la dirección del vector (en concreto, la dirección del primer elemento del vector).
+
+Al ser pasado por referencia, cualquier modificación que sufra dicho vector en la función, afectará al vector argumento. De ahí se explica que en la segunda llamada a la función \texttt{ver()}, los resultados obtenidos son diferentes, ya que en la llamada a \texttt{cambia()} hemos alterado el valor de los elementos del vector.
+
+De esta forma, cuando usamos un vector como argumento de una función, el compilador solo pasa la dirección del vector uy no una copia del vector. En C, un nombre de vector sin ningún índice, es un puntero al primer elemento del vector. Por lo tanto, a la hora de implementar la función que recibirá dicho vector como argumento, debemos declarar su correspondiente parámetro como de un tipo puntero compatible.\\
+\end{Ejemplo}
+
+Hay tres formas de declarar un parámetro topo puntero:
+\begin{itemize}
+	\item Declarando el parámetro como un vector indicando su tamaño.
+	\item Declarando el parámetro como un vector sin tamaño.
+	\item Declarando el parámetro como un puntero.
+\end{itemize}
+Veamos otro ejemplo del paso de vectores a funciones:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float nota[10];
+    int i;
+    for (i = 0; i < 10; i++) {
+        printf("Introduce la nota del alumno %d: ", i + 1);
+        scanf("%f", &nota[i]);
+    }
+    aprobados(nota);
+}
+\end{lstlisting}
+Como vemos en este ejemplo, tenemos que implementar la función \texttt{aprobados} que recibe como parámetro un vector. Vamos a ver a continuación tres formas distintas de implementar esta función y de declarar que recibe un vector como parámetro:
+\begin{enumerate}
+	\item Declarando el parámetro como un vector indicando su tamaño:
+	\begin{lstlisting}[language=C]
+void aprobados(float datos[10]) {
+    int i;
+    printf("Han aprobado los siguientes alumnos:\n");
+    for (i = 0; i < 10; i++)
+        if (datos[i] >= 5)
+            printf("Alumno %d: Nota: %5.2f\n", i+1, datos[i]);
+    }
+}
+	\end{lstlisting}
+	\item Declarando el parámetro como un vector sin tamaño:
+	\begin{lstlisting}[language=C]
+void aprobados(float datos[]) {
+    int i;
+    printf("Han aprobado los siguientes alumnos:\n");
+    for (i = 0; i < 10; i++) {
+        if (datos[i] >= 5)
+            printf("Alumno %d: Nota: %5.2f\n", i+1, datos[i]);
+    }
+}
+	\end{lstlisting}
+	\item Declarando el parámetro como un puntero, accediendo como si fuera un vector:
+	\begin{lstlisting}[language=C]
+void aprobados(float *datos) {
+    int i;
+    printf("Han aprobado los siguientes alumnos:\n");
+    for (i = 0; i < 10; i++) {
+        if (datos[i] >= 5)
+            printf("Alumno %d: Nota: %5.2f\n", i+1, datos[i]);
+    }
+}
+	\end{lstlisting}
+\end{enumerate}
+\Explicacion
+Las tres formas anteriormente vistas usan el mismo código en su interior. Aún así, la forma más común de declarar que se recibe un vector es usando un puntero (tercera forma definida anteriormente). En esta implementación, aunque hemos declarado que se recibe un puntero, luego en el código, lo hemos tratado como si fuera un vector, ya que como hemos dicho antes, el C permite indexar cualquier puntero usando [] como si el puntero fuera un vector. Recordemos que en realidad el nombre de un vector es un puntero al comienzo de éste.
+\end{Ejemplo}
+}
+\subsection{Vectores multidimensionales dinámicos}{
+De la misma manera que creamos vectores dinámicos, podemos crear vectores multidimensionales dinámicos (matrices dinámicas), pero es necesario usar una función para acceder a ellos, ya que debe haber una forma de definir el tamaño de todas las dimensiones, excepto la de más a la izquierda.
+
+Para realizar esto, simplemente debemos crear una función que tenga un parámetro declarado con los límites adecuados de la matriz y pasar el puntero de la matriz dinámica a dicha función.
+
+Para ilustrarlo, observemos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int potencia(int base, int exponente);
+void crea_tabla(int t[10][3]);
+void ver_tabla(int t[10][3]);
+
+int main() {
+    int *t;
+    t = malloc(10 * 3 * sizeof(int));	//Reservamos memoria para 10 x 3 enteros
+    if (t == NULL)
+        printf("Error de asignacion de memoria");
+    else{
+        crea_tabla(t);			//t es un puntero a enteros
+        ver_tabla(t);
+        free(t);			//Liberamos la memoria ocupada por t
+    }
+    return 0;
+}
+
+void crea_tabla(int t[10][3]) {
+    int i, j;
+    for (i = 0; i < 10, i++) {
+        for (j = 0; j < 3; j++)
+            t[i][j] = potencia(o + 1, j + 1);
+    }
+}
+
+void ver_tabla(int t[10][3]) {
+    int i, j;
+    printf("%10s %10s %10s\n", "N", "N2", "Cubo(N)");
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 3, j++)
+        printf("%10d", t[i][j]);
+    }
+    printf("\n");
+}
+
+int potencia(int base, int exponente) {
+    int i, pot = 1;
+    for (i = 0; i < exponente; i++)
+        pot = pot * base;
+    return pot;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo se crea una tabla con 10 elementos, su cuadrado y su cubo. Al definir el parámetro de la función con las dimensiones deseadas de la matriz, conseguimos que el compilador de C maneje el puntero \texttt{t} como  si de una matriz bidimensional se tratara (por lo que al compilador concierne, la función \texttt{crea\_tabla()} y \texttt{ver\_tabla()} se tiene una matriz de 10 x 3 enteros).
+\end{Ejemplo}
+}
+\subsection{Vectores de punteros}{
+Al igual que se crean vectores de cualquier tipo de datos, se pueden crear vectores de punteros. Así, por ejemplo, si se necesita reservar muchos punteros a varios valores diferentes, se puede declarar un vector de punteros. Un vector de punteros es un vector que contiene elementos punteros, cada uno de los cuales apunta a un tipo de datos específico.
+
+El formato general para la declaración de un vector de punteros es:
+
+\texttt{tipo *nombre\_vector[tamaño]};
+
+Para asignar una dirección de una variable a un elemento en concreto del vector de punteros, se escribirá:
+
+\texttt{nombre\_vector[elemento] = \&nombre\_variable;}
+
+Para devolver el valor al que apunta ese elemento del vector, se escribirá:
+
+\texttt{*nombre\_vector[elemento]}
+
+De la misma forma, se podría declarar un puntero a un vector de punteros de la siguiente forma:
+\begin{itemize}
+	\item \texttt{(*lista)[] /* puntero a un vector */}
+	\item \texttt{*(*lista)[] /* puntero a un vector de punteros */}
+	\item \texttt{int *(*lista)[] /* puntero a un vector de punteros a int */}
+\end{itemize}
+Si se quiere pasar un vector de punteros a una función, se puede utilizar el mismo método que se utilizaba para pasar cualquier vector a una función (declarando el parámetro de la función como un vector sin índice, como un puntero, etc.).
+
+Por ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Mediante vector de punteros */
+void mostraar(int *a[]);
+
+/* Mediante punteros a punteros */
+void mostrar2(int **a);
+
+int main() {
+    int *t[3], a[] = {2, 4, -1};
+    t[0] = &a[0];
+    t[1] = &a[1];
+    t[2] = &a[2];
+    mostrar(t);
+    mostrar2(t);
+    return 0;
+}
+
+void mostrar(int *a[]) {
+    int i;
+    for (i = 0; *a[i] > 0; i++)
+        printf("%d\n", *a[i]);
+}
+
+void mostrar2(int **a) {
+    for ( ; **a > 0; (*a)++)
+        printf("%d\n", **a);
+}
+\end{lstlisting}
+\Explicacion
+Como se observa en este ejemplo, se han implementado dos versiones, una declarando el parámetro como un vector de punteros sin tamaño y otra declarando el parámetro con un puntero a puntero. Recuérdese que en C, un vector de punteros es básicamente lo mismo que una colección de punteros a punteros.
+\end{Ejemplo}
+}
+\subsection{Relación entre vectores y punteros}{
+Los vectores y los punteros están fuertemente relacionados en C. Se pueden direccionar vectores como si fueran punteros y punteros como si fueran vectores. En esencia, el nombre de un vector es un puntero al comienzo de éste. Por lo tanto, para trabajar con los elementos de un vector se puede utilizar la notación de subíndices o la notación de punteros.
+
+De la misma forma, si definimos un puntero del mismo tipo que un vector al que queremos que apunte, podemos asignar dicho vector al puntero y utilizar éste como si fuere un alias para reconocerlo y manipularlo.
+
+Así pues, el lenguaje C permite dos métodos de acceso a los elementos de un vector: mediante indexación del vector o mediante punteros.
+
+Véase el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+/* Indexar cadena como un vector */
+char *strupr(char * cadena) {
+    int i;
+    for (i = 0; i < strlen(cadena); i++)
+        candea[i] = toupper(cadena[i]);
+    return cadena;
+}
+
+/* Recorrer cadena como puntero */
+char *strupr(char *cadena) {
+    char *p;
+    p = cadena;
+    / * En C todas las cadenas terminan en nulo. Asi, *cadena
+    sera nulo cuando se llegue al final de la cadena */
+    while (*cadena != '\0'){
+        *cadena = toupper(*cadena);
+        cadena++;
+    }
+    return p;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo vemos la implementación de la función de la biblioteca estándar \texttt{strupr()}, que permite convertir a mayúsculas la cadena pasada como parámetro, en el que se ilustran dos métodos de acceso (uno que indexa un vector y otro con punteros). Ambas versiones son totalmente equivalentes. Se debe hacer so de aquella que resulte más fácil de entender, aunque la versión con punteros es mucho más eficiente y rápida. Pero no por ello debemos usar siempre una versión con punteros, sino usar aquella que resulte más cómoda para el programador.
+
+Si se quiere acceder al vector estrictamente en oren ascendente o descendente, entonces los punteros son más fáciles de usar y más rápidos. Sin embargo, si se quiere acceder al vector aleatoriamente, entonces es mejore la indexación ya que es más fácil de programar y entender.
+\end{Ejemplo}
+}
+
+\section{Estructuras}
+Los vectores pueden definirse como una colección ordenada de variables del mismo tipo, las cuales se referencian a través de un nombre común. Con ello, se observa la imposibilidad de manejar en un único vector grupos de elementos con tipos diferentes de datos cada uno.
+
+La solución a este problema es utilizar una estructura. Una estructura es una colección de variables o elementos denominados miembros, cada uno de los cuales puede ser de un tipo de dato diferente, que se referencian bajo el mismo nombre. La estructura se define por la palabra calve \texttt{struct}. Al igual que el identificador de un vector, el identificador de una estructura representa a todos sus componentes, pero a diferencia de un vector, sus miembros no necesitan ser del mismo tipo.
+
+Las estructuras ayudan a organizar datos debido a que permite que un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Generalmente todos los miembros de una estructura están relacionados lógicamente unos con otros.
+
+El formato general para la declaración de una estructura es el siguiente:
+\begin{lstlisting}[language=C]
+struct nombre_estructura {
+    tipo1 campo1;
+    ...
+    tipoN campoN;
+};
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{nombre\_estructura}: Es el nombre con el que se identifica la estructura creada.
+	\item \texttt{campo1...campoN}: Son los diferentes campos o variables contenidas en la estructura.
+	\item \texttt{tipo1...tipoN}: Son los tipos de datos de cada una de las variables o campos de la estructura.
+\end{itemize}
+Cuando se declara una estructura, se está definiendo un tipo complejo de variables compuesto por los elementos de la estructura.
+
+Por lo tanto, debemos tener en cuenta lo siguiente:
+\begin{itemize}
+	\item Las variables declaradas dentro de una estructura (miembros) pueden tener el mismo nombre que una variable ordinaria o que otro miembro de otra estructura diferente sin que ello suponga un conflicto, puesto que siempre se puede distinguir por el contexto.
+	\item Una declaración \texttt{struct} define un tipo. Una declaración de estructura que no está seguida por una lista de variables no reserva un espacio de almacenamiento sino que describe una plantilla o la forma de una estructura. Una vez definida la estructura con un nombre, el nombre puede ser usado posteriormente para crear variables de ese tipo.
+	\item Una estructura se puede inicializar con una lista de inicializadores constantes, al igual que los vectores.
+	\item Las estructuras se pueden copiar y asignar como unidad (enteras), pasar a funciones como argumento y ser devueltas por éstas. También podemos copiar, asignar y pasar a funciones elementos individuales de la estructura.
+	\item Las estructuras no se pueden comparar. Si quisiéramos saber si dos estructuras son iénticas o no, la única solución sería comparar uno a uno cada uno de sus miembros.
+	\item Las estructuras pueden anidarse, es decir, una estructura puede contener como campo miembro otra estructura (estructura anidada).
+\end{itemize}
+Para ilustrar esto, veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+/* Definicion de la estructura direccion */
+struct direccion {
+    char calle[30];
+    char ciudad[20];
+    char provincia[20];
+};
+
+/* Definicion de la estructura datos_persona */
+struct datos_persona {
+    char nombre[35];
+    struct direccion dir;
+    int edad;
+};
+
+/* Declaracion de variables de tipo datos_persona */
+struct datos_persona persona1, persona2;
+\end{lstlisting}
+\Explicacion
+En este ejemplo hemos representado la información de una persona mediante una estructura que contiene una estructura anidada para su dirección.\\
+\end{Ejemplo}
+
+Para hacer referencia a un miembro de la estructura se usa la siguiente sintaxis:
+
+\texttt{nombre\_estructura.nombre\_miembro}
+
+Es decir, el nombre de la variable de estructura seguida del operador punto '.' y del nombre del elemento, referencia a ese elemento individual de la estructura.
+
+\subsection{Vectores de estructuras}{
+Al igual que podemos declarar vectores de cualquier tipo de datos, podemos declarar vectores de estructuras. Implemente debemos definir primero la estructura y luego declarar una variable vector de dicho tipo, como ilustra el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Definicion de la estructura direccion */
+struct direccion {
+    char calle[30];
+    char ciudad[20];
+};
+
+/* Definicion de la estructura datos_persona */
+struct datos_persona {
+    char nombre[35];
+    struct direccion dir;
+    int edad;
+};
+
+int main() {
+    int i, n;
+    char tecla;
+    /* Declaracion de un vector de tipo datos_persona */
+    struct datos_persona personas[5];
+    for (i = 0; i < 5; i++) {
+        printf("Nombre: ");
+        scanf("%s", personas[i].nombre);
+        printf("Calle :");
+        scanf("%s", personas[i].dir.calle);
+        printf("Ciudad: ");
+        scanf("%s", personas[i].dir.ciudad);
+        printf("Edad :");
+        scanf("%d", personas[i].edad);
+    }
+    do {
+        do {
+            system("cls");
+            printf("Introduzca el numero de la persona a visualizar: ");
+            scanf("%d", &n);
+        } while (n < 0 || n > 4);
+        printf("Nombre: %s\n", personas[n].nombre);
+        printf("Calle: %s\n", personas[n].dir.calle);
+        printf("Ciudad: %s\n", personas[n].dir.ciudad);
+        printf("Edad: %d\n", personas[n].edad);
+        printf("Desea ver los datos de otra persona(s/n)?");
+        tecla = getch();
+    } while (tecla == 's');
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo podemos ver como el vector \texttt{personas} contiene 5 estructuras del tipo \texttt{datos\_persona} que se completan en el bucle \texttt{for} con los datos introducidos por el usuario y luego se imprimen en el doble bucle \texttt{do while}.
+\end{Ejemplo}
+}
+\subsection{Paso de estructuras a funciones}{
+El lenguaje C permite pasar estructuras completas a funciones. Para ello, debemos declarar el parámetro de la función del mimo tipo que la estructura que se pasa. La mejor forma de hacer esto es definiendo la estructura globalmente y luego usar su nombre para declarar variables y parámetros de esa estructura.
+
+Cuando se pasa una estructura a una función, se pasa por valor, es decir, lo que se pasa a la función es una copia de la estructura, no la estructura original, con lo que los cambios realizados en los contenidos de la estructura dentro de la función no afectan para nada a la estructura original utilizada como argumento. Si queremos que los cambios realizados en los contenidos de la estructura en una función afecten a la estructura original, habrá que pasarlo explícitamente por referencia (usando punteros), pasando su dirección de memoria mediante el operador \&, al igual que sucede con las variables de los tipos básicos.
+
+Ahora bien, silo que se pasa es un vector de estructuras a una función, lo que se pasa es un puntero al primer elemento del vector, con lo que los cambios efectuados dentro de la función afectan al vector original usado como argumento en la llamada.
+
+Para ilustrar todo esto, veamos el ejemplo anterior implementado mediante funciones:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Definicion de la estructura direccion */
+struct direccion {
+    char calle[30];
+    char ciudad[20];
+};
+
+/* Definicion de la estructura datos_persona */
+struct datos_persona {
+    char nombre[35];
+    struct direccion dir;
+    int edad;
+};
+
+/* Prototipo de funciones */
+void cargar_datos(struct datos_persona p[]);
+void ver_datos(struct datos_persona p);
+
+int main() {
+    int i, n;
+    char tecla;
+    /* Declaracion de un vector de tipo datos_persona */
+    struct datos_persona personas[5];
+    cargar_datos(personas);
+    do {
+        do {
+            system("cls");
+            printf("Introduzca el numero de la persona a visualizar: ");
+            scanf("%d", &n);
+        } while (n < 0 || n > 4);
+        ver_datos(personas[n]);
+        printf("Desea ver los datos de otra persona(s/n)?");
+        tecla = getch();
+    } while (tecla == 's');
+    return 0;
+}
+
+void cargar_datos(struct datos_persona p[]) {
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("Nombre: ");
+        scanf("%s", p[i].nombre);
+        printf("Calle :");
+        scanf("%s", p[i].dir.calle);
+        printf("Ciudad: ");
+        scanf("%s", p[i].dir.ciudad);
+        printf("Edad :");
+        scanf("%d", p[i].edad);
+    }
+}
+
+void ver_datos(struct datos_persona p) {
+    printf("Nombre: %s\n", p.nombre);
+    printf("Calle: %s\n", p.dir.calle);
+    printf("Ciudad: %s\n", p.dir.ciudad);
+    printf("Edad: %d\n", p.edad);
+}
+
+\end{lstlisting}
+\Explicacion
+Este ejemplo hace lo mismo que el anterior pero para la carga de datos y la presentación de los mismos utiliza dos funciones en comparación de cómo lo hacía el ejemplo anterior.
+\end{Ejemplo}
+}
+\subsection{Paso de elementos de estructuras a funciones}{
+Además de pasar una estructura completa a una función, podemos pasar solo un elemento de la estructura. Al igual que antes, al pasar un elemento de una estructura a una fucion solo pasamos una copia de ésta, con lo que los cambios efectuados en la función no afectan para nada al elemento de la estructura usado como argumento.
+
+Si consideramos el ejemplo anterior, las siguientes llamadas solo pasan un elemento determinado de la estructura:
+\begin{lstlisting}[language=C]
+funcion1(personas[2].nombre);	/* Pasa solo el campo nombre */
+funcion2(personas[2].edad);	/* Pasa solo el campo edad */
+funcion3(personas[2].dir);	/* Pasa solo el campo dir que es otra estructura */
+funcion4(personas[2].dir.calle);/* Pasa solo el campo calle */
+\end{lstlisting}
+Los prototipos de estas funciones serán los siguientes:
+\begin{lstlisting}[language=C]
+void funcion1(char *cadena); // O void funcion1(char cadena[]);
+void funcion2(int n);
+void funcion3(struct direccion d);
+void funcion4(char cadena[]);// O void funcion4(char *cadena);
+\end{lstlisting}
+Ahora bien, si lo que queremos es pasar un elemento por referencia, para que los cambios efectuados en la función afecten al elemento pasado como argumento, debemos pasar la dirección de memoria de dicho elemento:
+\begin{lstlisting}[language=C]
+funcion1(personas[2].nombre);	/* Pasa solo el campo nombre */
+funcion2(&personas[2].edad);	/* Pasa solo el campo edad */
+funcion3(&personas[2].dir);	/* Pasa solo el campo dir que es otra estructura */
+funcion4(personas[2].dir.calle);/* Pasa solo el campo calle */
+\end{lstlisting}
+Los prototipos de estas funciones serán los siguientes:
+\begin{lstlisting}[language=C]
+void funcion1(char *cadena);  // O void funcion1(char cadena[]);
+void funcion2(int *n);
+void funcion3(struct direccion *d);
+void funcion4(char cadena[]); // O void funcion4(char *cadena);
+\end{lstlisting}
+Podemos observar como el operador \& debe preceder al nombre de la estructura en la llamada a la función. Además, vemos cómo cuando uno de los elementos de la estructura que pasamos es una cadena de caracteres, no hace falta utilizar el operador \& ya que los vectores se pasan siempre por referencia y no por valor.
+}
+\subsection{Punteros a estructuras}{
+De la misma forma que podemos usar punteros a cualquier tipo de variable, podemos usar punteros a variables de estructuras. Al igual que los demás punteros, lo punteros a estructuras s e declaran anteponiendo un asterisco '*' delante del nombre de la variable de estructura.
+
+La siguiente declaración declara un puntero a una estructura de tipo \texttt{strct datos\_persona}:
+
+\texttt{struct datos\_persona *p;}
+
+La dirección de una variable de estructura, se obtiene, al igual que para cualquier otro tipo de variable, anteponiendo el operador \& delante del nombre de la variable. Por ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+strict datos_persona persona, *p;
+p = &persona;
+\end{lstlisting}
+\Explicacion
+En este ejemplo se coloca la dirección de la estructura \texttt{persona} en el puntero \texttt{p}.\\
+\end{Ejemplo}
+
+Cuando se usan punteros a estructuras no se debe usar el operador punto '.' para acceder a un elemento de la estructura a través del puntero. En su lugar se debe usar el operador '->'. Por ejemplo:
+\newpage
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+p->nombre;	/* Hace referencia al campo nombre */
+p->edad;	/* Hace referencia al campo edad */
+p->dir.calle;	/* Hace referencia al campo calle */
+\end{lstlisting}
+\end{Ejemplo}
+Para ilustrar todo esto, veamos otro ejemplo con una versión del programa anterior implementado con punteros a estructuras:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Definicion de la estructura direccion */
+struct direccion {
+    char calle[30];
+    char ciudad[20];
+};
+
+/* Definicion de la estructura datos_persona */
+struct datos_persona {
+    char nombre[35];
+    struct direccion dir;
+    int edad;
+};
+
+/* Prototipo de funcion */
+void cargar_datos(struct datos_persona *p);
+
+int main() {
+    int i;
+    /* Declaracion de un vector de tipo datos_persona */
+    struct datos_persona personas[5];
+    for (i = 0; i < 5; i++)
+        cargar_datos(&personas[i]);
+    return 0;
+}
+
+void cargar_datos(struct datos_persona *p) {
+    printf("Nombre: ");
+    scanf("%s", p->nombre);
+    printf("Calle :");
+    scanf("%s", p->dir.calle);
+    printf("Ciudad: ");
+    scanf("%s", p->dir.ciudad);
+    printf("Edad :");
+    scanf("%d", p->edad);
+}
+\end{lstlisting}
+\Explicacion
+Este ejemplo hace lo mismo que los otros pero está implementado con punteros a estructuras por lo que se hace obligatorio el uso del operador '->' para acceder a un elemento de la estructura a través de un puntero.
+\end{Ejemplo}
+}
+
+\section{\texttt{typedef}}
+La palabra clave \texttt{typedef} permite definir explícitamente un nuevo nombre de tipo. Realmente no se crea un nuevo tipo sino que se define un ``alias'' para un tipo existente. Esto permite usar nombres más descriptivos para los tipos de datos que usamos y para las estructuras que hallamos creado.
+
+La sintaxis de la sentencia \texttt{typedef} es la siguiente:
+
+\texttt{typedef tipo alias;}
+
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{tipo}: Es cualquier tipo de datos existente en C o la definición de una estructura.
+	\item \texttt{alias}: Es el nuevo nombre para ese tipo.
+\end{itemize}
+Veamos un ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+/* Definicion de la estructura direccion */
+typedef struct {
+    char calle[30];
+    char ciudad[20];
+} direccion;
+
+/* Definicion de la estructura datos_persona */
+typedef struct {
+    char nombre[35];
+    direccion dir;
+    int edad;
+} datos_persona;
+
+/* Declaracion de un vector de tipo datos_persona */
+datos_persona personas[5];
+\end{lstlisting}
+\Explicacion
+Estas estructuras son las mismas que las usadas en los ejemplos anteriores con la diferencia de que en ellas se ha usado \texttt{typedef} para la definición de dichas estructuras, que es el uso más habitual de dicha palabra clave.
+\end{Ejemplo}

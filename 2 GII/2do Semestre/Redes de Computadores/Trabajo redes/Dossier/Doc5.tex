@@ -1,0 +1,52 @@
+\chapter{Justificaciones}
+\section{Cableado horizontal}
+Los Rack de ambas plantas se han colocado en las salas informáticas ya habilitadas, las cuales tienen espacio suficiente para ellos y son también una localización lógica, por razones como seguridad tanto contra intrusiones(ya que solo el personal autorizado tendrá acceso a esta salas) como ambientales (se puede mantener la temperatura adecuada para ellos sin afectar al resto del personal). Están además a suficiente distancia de fuentes de interferencias como pueden ser los ascensores. Desde estas salas se cumplen también los criterios de distancia máxima para el entramado de conexión horizontal del estándar IEEE 802.3
+
+Se han elegido cables categoría 7a, permitiendo la implantación de una red 10 Gigabit Ethernet de hasta 10Gb/s. La red de cableado se ha distribuido por el falso techo, de forma que no supongan ningún estorbo para los trabajadores y permitiendo una distribución más flexible, que podría cambiarse fácilmente si se diera la necesidad.
+
+Las rosetas de conexión constan de 4 puertos (3 de datos y uno de voz) de forma que se pueda dedicar uno para dispositivos como teléfonos (pudiéndose usar uno de datos si el de voz fallara) y permitiendo la conexión simultánea de 3 dispositivos que necesiten acceder a la red, o pudiendo mantener conectado el dispositivo más vital en caso de fallos de algunos de los puertos, hasta que estos se arreglaran.
+
+Hay colocados varios puntos de acceso inalámbricos en zonas donde puedan ser necesarios donde por lo general prevalecen dispositivos como móviles o tabletas. Entre ellas, salas amplias donde la cercanía de conexiones físicas puede ser un problema, salas alejadas de puestos de trabajo donde no se necesita gran velocidad de transferencia de datos, o salas de reuniones donde tampoco se necesite gran velocidad de transferencia y se quiera evitar el uso de cables por comodidad.
+
+El etiquetado usado en el cableado horizontal ya ha sido explicado con anterioridad en el capítulo 1 de este documento.
+\section{Distribuidores}
+Hemos elegido los siguientes elementos para nuestro Racks debido a varias causas. Empezaremos describiendo el Rack de la planta baja, etiquetado como ``Rack 0'' y luego el Rack de la planta alta, etiquetado como ``Rack 1''.
+\subsection{RACK 0}
+En este rack, hemos incorporado cinco switches CISCO Catalyst 2960S para poder abarcar todos los paneles de datos que se encuentran en dicha planta. El quinto switch queda para la conexión entre el Rack 0 y el Rack 1 mediante fibra óptica. Sus 48 puertos restantes quedan por si queremos realizar una ampliación del cableado en un futuro.
+
+Adicionalmente, dichos switches tienen PoE (Power Over Ethernet); de forma que los mencionados switches pueden proveer corriente eléctrica mediante los cables de la red Ethernet.
+
+El etiquetado para cada switch será de tipo \textbf{SW-X-R0}; donde ‘X’ corresponde al número del switch. A su vez cada swtich irá etiquetado con los paneles de datos correspondientes a los que proporciona red. Los switches irán conectados entre sí mediante fibra óptica multimodo.
+
+El router (CISCO 2811), etiquetado como RE también cuenta con tecnología PoE y cuenta con dos conexiones de fibra óptica para ser conectado al primer switch y al ISP.
+
+Los paneles de parcheo correspondientes a datos son cuatro; de forma que son equivalentes al número de switches usados por los hosts; y por lo tanto también son iguales el número de puertos, cuarenta y ocho. El etiquetado será de tipo \textbf{R0-DXXX – R0-DYYY}; siendo ‘XXX’ el puerto inicial e YYY el puerto final correspondiente a cada panel de parcheo.
+
+En cuanto a la voz, contamos con dos paneles de parcheo de voz para abarcar todos los dispositivos de teléfono VoIP que se encuentran en la planta baja.
+
+Para darle señal telefónica a ambas plantas contamos con una centralita telefónica Nexspan A5000 2XS; que cuenta con 112 puertos, que son pocas más de las que necesitamos para que todos nuestros teléfonos VoIP funcionen correctamente.
+
+Contamos con un SAI Lapara Serie On-Rack (UPS) para prevenir perder datos si la corriente eléctrica falla (y con ello que el Rack se apague). De esta forma, tendremos un plazo de tiempo para guardar todos nuestros datos y/o  configuraciones de la red.
+
+\subsection{RACK 1}
+En el Rack 1, debemos tener en cuenta que el etiquetado funciona de la misma forma que en el Rack 0, y que los modelos usados son los mismos.  Con esto:
+\begin{itemize}
+	\item Contamos con cuatro switches en lugar de cinco. Todos están conectados en serie al router del Rack 0 de planta baja.
+	\item El número de paneles de parcheo de datos corresponde al de número de switches que hay en el Rack 1 usados por los hosts, por lo tanto, hay tres.
+	\item Contamos con un panel de parcheo de voz para abarcar todos los teléfonos VoIP que hay en planta.
+\end{itemize}
+
+\section{Cableado vertical}
+Para la conexión entre los distribuidores de ambas plantas utilizamos fibra óptica multimodo, que es ideal para la comunicación en distancias cortas como las de un campus, o el edificio que nos ocupa, con ello disfrutamos de las ventajas que ofrece la fibra sobre el cableado de cobre, como son una mayor velocidad de transmisión, mayor ancho de banda, inmunidad a interferencias, menor peso y tamaño…
+
+Usamos concretamente cableado OM4, que permite el uso del estándar 10 Gigabit Ethernet hasta una distancia máxima aproximada de 500 metros y llega a soportar conexiones de hasta 125 metros con ratios de 40 a 100 Gbps.\\
+En cuanto a presupuesto, la fibra es una opción rentable, con un precio no mucho mayor por metro que la mayoría de cables UTP de categoría 5 o 6.
+
+Los switches de cada rack están conectados entre ellos formando una topología en anillo, lo cual proporciona redundancia para recuperación de fallos (failover).
+
+\section{Plano de conexión}
+Tal como se muestra en la imagen del plano de conexión tenemos un cable categoría 7a que va desde el patch panel hasta la roseta de pared del puesto de trabajo.
+
+En dicho puesto, contamos con cuatro conexiones rj45, tres de datos y una de voz, donde usamos el etiquetado que comentamos en el apartado del cableado horizontal. El cableado que va desde la roseta hasta el host es también categoría 7a.
+
+La decisión de contar con tres tomas de datos en el puesto de trabajo surge de la posibilidad de la existencia de una avería en cualquiera de las tomas que se estén usando actualmente o para la ampliación de dicho puesto de trabajo.

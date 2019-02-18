@@ -1,0 +1,24 @@
+.data
+numero1:	.word 100	
+numero2:	.word 5
+.text
+.globl main
+main:
+
+la $t1, numero1
+la $t2, numero2
+lw $t3, 0($t1)
+lw $t4, 0($t2)
+bne $t3, $t4, imprimir
+sll $a0,$t4,0
+li $v0,1
+syscall
+j fin
+
+imprimir:
+sll $a0, $t3, 0
+li $v0,1
+
+fin:
+li $v0,0xa
+syscall

@@ -1,0 +1,965 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+\title{Pseudocódigo}
+\author{Jesús Rodríguez Heras}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+%%\listoftables
+%%\newpage
+
+%%\listoffigures
+%%\newpage
+
+%%%% REAL WORK BEGINS HERE:
+
+%%Configuracion del paquete listings
+\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1}
+
+\section{Introducción}
+
+El pseudocódigo es un lenguaje natural en español sujeto a determinadas reglas y con estructura similar a la de un programa, lo que facilita su traducción a lenguaje de alto nivel, por ejemplo: C.\\
+Debido a que no se puede implementar ningún algoritmo con pseudocódigo, su objetivo principal se basa en diseñar dichos algoritmos que pueden tener una o varias implementaciones en los lenguajes de programación de alto nivel.
+
+\subsection{Estructura del pseudocódigo}
+
+La estructura general del pseudocódigo es la siguiente:
+\begin{lstlisting}
+//Comentarios que faciliten la comprension del algoritmo como
+//datos de entrada y salida.
+Algoritmo Nombre_algoritmo
+const
+  //Seccion de definicion de constantes
+tipos
+  //Seccion de definicion de tipos creados por el programador
+var
+  //Seccion de declaracion de variables
+inicio
+  //Inicializacion de variables
+  Accion 1
+  Accion 2
+  .
+  .   //Cuerpo del algoritmo
+  Accion n
+fin_algoritmo
+\end{lstlisting}
+
+\subsection{Variables y expresiones}
+\subsubsection{Variables y constantes}
+
+Una variable es un objeto con un nombre significativo en el programa que puede variar su valor durante la ejecución del programa. Será declarada en la sección \texttt{var}.
+\begin{lstlisting}
+var
+entero: suma
+\end{lstlisting}
+Una constante es un objeto que contiene un valor que no varía durante la ejecución de un programa y será declarada en la sección \texttt{const}.
+\begin{lstlisting}
+const
+PI = 3.1415
+\end{lstlisting}
+
+\newpage
+
+\subsubsection{Asignaciones y expresiones aritméticas}
+Las asignaciones se realizan usando el carácter "←". Se utiliza para dar valores a las variables.\\
+Por ejemplo:\\
+\texttt{notas←8}\\
+Si se realiza una siguiente asignación, el valor de la variable será el de la ultima asignación y el anterior desaparece.\\\\
+En cuanto a las expresiones aritméticas tenemos:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			Operador & Significado \\
+			\hline \hline
+			+ & Suma \\ \hline
+			- & Resta \\ \hline
+			* & Multiplicación \\ \hline
+			/ & División entera \\ \hline
+			div & División real \\ \hline
+			mod & Resto (módulo) \\ \hline
+		\end{tabular}
+		\caption{Expresiones aritméticas.}
+		\label{tabla:Expresiones aritméticas}
+	\end{center}
+\end{table}\\
+Las reglas de prioridad de dichas expresiones son muy simples. Primero se evalúan las operaciones que se encuentran entre paréntesis (si hay paréntesis anidados, se empieza por los más internos) y luego se evalúan la multiplicación y la división, y, por último, la suma y la resta. Si aparece más de un operador de la misma propiedad se avanzará de izquierda a derecha.
+
+\subsubsection{Expresiones lógicas}
+
+Se evalúan constantes, variables y expresiones de tipo lógico usando operadores lógicos y relacionales.
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			Operador & Significado \\
+			\hline \hline
+			< & Menor que \\ \hline
+			> & Mayor que \\ \hline
+			= & Igual que \\ \hline
+			$\leq$ & Menor o igual que \\ \hline
+			$\geq$ & Mayor o igual que \\ \hline
+			$\neq$ & Distinto de \\ \hline
+		\end{tabular}
+		\caption{Expresiones lógicas.}
+		\label{tabla:Expresiones lógicas}
+	\end{center}
+\end{table}\\
+Las reglas de prioridad de estas expresiones para datos de tipo numérico son las que se emplean en matemáticas. Para datos de tipo carácter se ordenan según su código ASCII.
+
+\newpage
+
+\subsubsection{Lectura y escritura}
+
+Son las operaciones de entrada y salida básicas.\\
+Por ejemplo:\\
+\texttt{leer (a)} Lee un valor de la entrada estándar (teclado) y lo almacena en la variable \texttt{a}.\\
+\texttt{escribir (a)} Escribe lo que haya en la variable \texttt{a}.
+
+\section{Programación estructurada}
+\subsection{Características de la programación estructurada}
+
+La programación estructurada es el conjunto de técnicas que incorporan:\\
+- Recursos abstractos.\\
+- Diseño descendente.\\
+- Estructuras básicas: secuenciales, selectivas, repetitivas, etc.
+
+\subsection{Estructura secuencial}
+
+La estructura secuencial es el descenso del programa instrucción a instrucción en forma de cascada.
+Un ejemplo en el que podemos ver la secuencia de instrucciones es el siguiente:
+\begin{lstlisting}
+Algoritmo suma_producto
+  Principal
+  var
+    entero: A, B, S, P
+  inicio
+    escribir("Introduce dos numeros")
+    leer (A, B)
+    S <- A+B
+    P <- A*B
+    escribir (S, P)
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+Como podemos observar que en este ejemplo, se tienen que ir cumpliendo las instrucciones una a una para que el programa termine. Si alguna de las instrucciones falla, el programa dejaría de funcionar.\\
+La programación secuencial establece que para cada inicio de un bloque y/o estructura debe haber un final de la misma. Por lo tanto, para cada \texttt{Principal} hay un \texttt{fin\_principal}, para cada \texttt{si} un \texttt{fin\_si}, etc.
+
+\subsection{Estructura selectiva}
+
+En este tipo de estructuras, la ejecución de un conjunto de instrucciones dependerá del resultado de la evaluación previa de una determinada condición como verdadero o falso.\\
+Podemos diferenciar tres tipos de estructuras selectivas:
+
+\subsubsection{Simple}
+
+Las instrucciones que están a continuación del condicional (cláusula \texttt{si}) solo se ejecutarán en caso de que éste resulte verdadero en la evaluación. Si no lo es, sencillamente, se salta dichas instrucciones.\\
+Por ejemplo: Decir si un número es o no mayor que cero.
+\begin{lstlisting}
+Algoritmo mayor_que_cero
+  Principal
+  var
+    entero: numero
+  inicio
+    escribir ("Introduce un numero:")
+    leer (numero)
+    leer(numero)
+    si (numero>0) entonces
+      escribir ("Numero mayor que cero.")
+    fin_si
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo, si el número introducido fuese menor o igual a cero, el programa terminaría y no escribiría nada.
+
+\subsubsection{Doble}
+
+Si el condicional es cierto se ejecutan las instrucciones que están justo después de la evaluación del mismo (cláusula \texttt{si}). Si fuera falso, se ejecutarían las instrucciones que están después, en la cláusula \texttt{si\_no}.\\
+Por ejemplo: Decir si un número es par o impar.
+\begin{lstlisting}
+Algoritmo par_impar
+  Principal
+  var
+    entero: n
+  inicio
+    escribir ("Introduce un numero:")
+    leer (n)
+    si (n mod 2 = 0) entonces
+      escribir("PAR")
+    si_no
+      escribir("IMPAR")
+    fin_si
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo, si el número introducido es par, se ejecuta la cláusula \texttt{si} al evaluarse como verdadera la condición. Si el número es impar, se ejecuta la cláusula \texttt{si\_no} al evaluarse como falsa la condición.
+
+\subsubsection{Múltiple}
+
+Este tipo de estructura selectiva evalúa una condición que, si coincide con alguno de los casos establecidos, realiza las instrucciones que se encuentren en dicho caso.\\
+Por ejemplo: Asignar un número a los días de la semana.
+\begin{lstlisting}
+Algoritmo Nombre_dias_semana
+  Principal
+  var
+    entero: dia
+  inicio
+    escribir ("Introduzca un numero de dia")
+    leer(dia)
+    segun_sea (dia) hacer
+      1: escribir("LUNES")
+      2: escribir("MARTES")
+      3: escribir("MIERCOLES")
+      4: escribir("JUEVES")
+      5: escribir("VIERNES")
+      6: escribir("SABADO")
+      7: escribir("DOMINGO")
+      en_otro_caso
+        escribir("Dia incorrecto")
+    fin_segun
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo, se evalúa el número introducido por el usuario, y si coincide con aluno de los siete casos establecidos, escribirá el día de la semana correspondiente con el número introducido. En caso de que el número introducido no se encuentre entre los casos contemplados, el programa devolverá la frase \texttt{Día incorrecto} correspondiente a la cláusula \texttt{en\_otro\_caso}.
+
+\subsection{Estructuras repetitivas}
+
+Este tipo de estructuras permiten repetir una o varias instrucciones varias veces en función del resultado de la evaluación de una condición. Son los llamados bucles, y se llama iteración a cada repetición de la secuencia de instrucciones del bucle.\\
+Existen tres tipos de estructuras repetitivas:
+
+\subsubsection{Mientras}
+
+En este tipo de estructura, el cuerpo del bucle se ejecuta mientras que la condición del mismo se evalúe como verdadera. Debido a su estructura, la condición del bucle es evaluada antes de entrar por primera vez, es decir, al inicio de cada iteración.\\
+Por ejemplo: Multiplicar mediante sumas sucesivas.
+\newpage
+\begin{lstlisting}
+Algoritmo producto_sumas
+  Principal
+  var
+    entero: a, b, cont, prod
+  inicio
+    escribir("Introduzca dos numeros:")
+    leer(a, b)
+    cont <- 0
+    prod <- 0
+    mientras (cont < B) hacer
+      prod <- prod + A
+      cont <- cont + 1
+    fin_mientras
+    escribir (prod)
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+Como se puede ver en el ejemplo, antes de entrar en el cuerpo del bucle, se evalúa la condición de entrada del mismo. Y así durante todas las iteraciones hasta que la condición sea evaluada como falsa y salga del bucle para continuar por la instrucción que le sigue al \texttt{fin\_mientras}.
+
+\subsubsection{Repetir}
+
+En este tipo de estructura, la condición del bucle se encuentra al final del cuerpo del mismo por lo que las instrucciones que pertenezcan al cuerpo del bucle se ejecutarán como mínimo una vez, hasta llegar a la condición. Estas instrucciones se reiterarán hasta que se evalúe como verdadera la condición del bucle.\\
+Por ejemplo: Hallar el factorial de un número.
+\begin{lstlisting}
+Algoritmo factorial
+  Principal
+  var
+    entero: cont, num
+    real: fact
+  inicio
+    escribir ("Introduzca un numero: ")
+    leer (num)
+    fact <- 1
+    cont <- 1
+    repetir
+      fact <- fact * cont
+      cont <- cont + 1
+    hasta_que (cont > num)
+    escribir ("Factorial", fact)
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo, el cuerpo del bucle se reiterará hasta que la variable \texttt{cont} tenga un valor mayor que la variable \texttt{num}. Cuando se cumpla esa condición sigue con la instrucción escribir.
+
+\subsubsection{Desde}
+
+Esta estructura ejecuta las instrucciones del cuerpo del bucle un número determinado de veces, controlado automáticamente por un contador (normalmente denominado i). Debido a su control automático, esta estructura es ideal para recorrer vectores y matrices (que veremos más adelante).\\
+Por ejemplo: Sumar hasta cien.
+\begin{lstlisting}
+Algoritmo suma_cien
+  Principal
+  var
+    entero: suma, i
+  inicio
+    suma <- 0
+    desde i <- 1 hasta 100 hacer
+      suma <- suma + i
+    fin_desde
+    escribir (suma)
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo, una vez que se recorre el bucle por completo, el valor de suma es 100, que es escrito mediante la instrucción escribir. En cuanto a la variable \texttt{i}, podemos ver que está declarada como entero, pero no se inicializa hasta que no se encuentra en la condición del bucle. Ésta es una característica de la estructura desde que no la tienen las otras estructuras reptetitivas.
+
+\subsubsection{Aclaración de las estructuras repetitivas}
+
+Debemos señalar ciertos aspectos una vez vistas todas las estructuras repetitivas.\\
+- \textbf{Siempre} podemos sustituir una estructura \texttt{desde} por una estructura \texttt{repetir} o por una estructura \texttt{mientras}.\\
+- Una estructura \texttt{repetir} o \texttt{mientras}, solo podemos sustituirlas por una estructura \texttt{desde} si sabemos de antemano el número de veces que van a ejecutarse las acciones del bucle.\\
+- Una estructura \texttt{mientras} puede sustituirse por una estructura \texttt{repetir} cuando no altere el resultado del bucle el hecho de que en la estructura \texttt{mientras}, como mínimo se ejecutarán una vez todas las instrucciones del cuerpo del bucle.
+
+\subsection{Estructuras anidadas}
+
+Debemos tener en cuenta que tanto las estructuras selectivas como las repetitivas se pueden anidar, es decir, pueden estar contenidas unas dentro de otras. Podemos hacer esto siempre que una esté dentro de la otra y que no se salga.\\
+Lo veremos con el siguiente ejemplo, donde podemos encontrar una estructura selectiva dentro de dos bucles, uno dentro de otro.
+\newpage
+\begin{lstlisting}
+Algoritmo primos
+  Principal
+  var
+    logico: encontrado
+    entero: i, divisor
+  inicio
+    desde i <- 2 hasta i <- 100 hacer
+      encontrado <- falso
+      divisor <- 2
+      mientras (divisor <= sqrt(i) and encontrado = falso) hacer
+        si (i mod divisor = 0) entonces
+          encontrado <- verdadero
+        fin_si
+        divisor <- divisor + 1
+      fin_mientras
+      si (encontrado = falso) entonces
+        escribir (i)
+      fin_si
+    fin_desde
+  fin_principal
+fin_algoritmo
+\end{lstlisting}
+En este ejemplo donde se escriben todos los número primos entre 2 y 1000 podemos ver como las estructuras se anidan unas dentro de otras pero ninguna interfiere con la otra.
+
+\section{Abstracción operacional}
+
+Para el diseño de un algoritmo se puede dividir el problema en subproblemas, cada uno de ellos atendido por un subalgoritmo (procedimiento o función).\\
+En todo subalgoritmo se pueden distinguir dos partes fundamentales:\\
+- La especificación: ¿Qué hace el algoritmo?\\
+- La implementación: ¿Cómo lo hace?\\\\
+La especificación de un subalgoritmo se divide en tres cláusulas:\\
+- \textbf{Cabecera:} Proporciona información sintáctica para proceder a la ejecución del subalgoritmo.\\
+- \textbf{Precondición:} Condiciones que deben cumplir los valores de entrada.\\
+- \textbf{Postcondición:} Efecto producido por el subalgoritmo y condiciones que se cumplen al finalizar el mismo.
+
+\subsection{Subalgoritmos}
+\subsubsection{Funciones}
+
+Es un subalgoritmo que tiene valores de entrada llamados argumentos y devuelve un único valor denominado resultado.\\
+La declaración de funciones en pseudocódigo sigue la siguiente estructura:
+\newpage
+\begin{lstlisting}
+<especificacion de la funcion>
+<tipo del resultado>funcion<nombre funcion>(<lista de parametros formales>)
+[declaraciones locales]
+  inicio
+  <instrucciones> //cuerpo
+  devolver (<expresion resultado>)
+fin_funcion
+\end{lstlisting}
+\textbf{<lista\_de\_parametros >:} Será la lista de parámetros formales de la siguiente forma:\\
+	({E|S|E/S} tipoA: parámetro1, {E|S|E/S} tipoB: parámetro2,...\\
+	Siendo, E: Entrada, S: Salida, E/S: Entrada y Salida.\\
+\textbf{<nombre\_función>:} Identificador valido para la función.\\
+\textbf{<instrucciones>:} instrucciones que constituyen el cuerpo de la función, deberán contener una única expresión devolver (<expresión>).\\
+\textbf{<tipo\_de\_resultado>:}\\
+	tipo de dato correspondiente al resultado de la función.\\\\
+Para llamar a la función sería de la siguiente forma:\\
+\texttt{nombre\_función (lista de parámetros actuales)}\\\\
+Por ejemplo: Cálculo del cuadrado de un número.
+\begin{lstlisting}
+Algoritmo elevar_cuadrado
+  Principal
+  var
+    real : numero, res
+  inicio
+    escribir ("Introduzca un numero:")
+    leer (numero)
+    res <- cuadrado(numero)
+    escribir("El cuadrado de", numero, "es", res)
+  fin_principal
+fin_algoritmo
+	
+//Cabecera: real cuadrado(E real: x)
+//Precondicion: recibe x real
+//Postcondicion: devuelve el cuadrado de x (x2)
+real funcion cuadrado(E real: x)
+  inicio
+    devolver (x*x)
+fin_funcion
+\end{lstlisting}
+En este ejemplo se llama a la función \texttt{cuadrado} que calcula y devuelve el cuadrado de un número.
+
+\subsubsection{Procedimientos}
+
+Es un subalgoritmo que solo tiene valores de salida y no devuelve nada.\\
+La declaración de procedimientos en pseudocódigo sigue la siguiente estructura:
+\newpage
+\begin{lstlisting}
+<especificacion del procedimiento>
+procedimiento<nombre_procedimento>(<lista de parametros formales>)
+[declaraciones locales]
+  inicio
+    <instrucciones> //cuerpo
+fin_procedimiento
+\end{lstlisting}
+\textbf{<lista\_de\_parámetros>:} Será la lista de parámetros formales de la siguiente forma:\\
+({E|S|E/S} tipoA: parámetro1,{E|S|E/S} tipoB: parámetro2).\\
+Siendo, E: Entrada, S: Salida, E/S: Entrada y Salida.\\
+\textbf{<nombre\_procedimento>:} Identificador válido para el procedimiento.\\
+\textbf{<instrucciones>:} instrucciones que constituyen el cuerpo del procedimiento (observamos que no
+existe una sentencia devolver como sucedía en las funciones).\\\\
+Para llamar a la función sería de la siguiente forma:\\
+\texttt{nombre\_función (lista de parámetros actuales)}\\\\
+Por ejemplo: Calculo de la división de dos números enteros calculando cociente y resto.
+\begin{lstlisting}
+Algoritmo divide
+  Principal
+  var
+    entero: divdo, divi
+  inicio
+    repetir
+      escribir("Introduce los valores del dividendo y del divisor: ")
+      leer(divdo, divi)
+    hasta_que (divdo >= divi y divi>0 y divdo>0)
+    division(divdo, divi)
+  fin_principal
+fin_algoritmo
+
+//Cabecera: division(E entero: dividendo,E entero: divisor)
+//Precondicion: dividendo > = divisor y ambos mayores que 0
+//Postcondicion: escribe en pantalla el cociente y el resto
+procedimiento division (E entero: dividendo, E entero : divisor)
+  var
+    entero: cociente, resto
+  inicio
+    cociente <- dividendo / divisor
+    resto <- dividendo mod divisor
+    escribir (cociente, resto)
+fin_procedimiento
+\end{lstlisting}
+En este ejemplo se llama al procedimiento \texttt{división} que calcula el cociente y el resto de la división de dos números.
+
+\subsection{Ámbito y persistencia de variables}
+
+El ámbito es el fragmento de código en el cual una variable puede ser referenciada. Podemos distinguir dos ámbitos:
+
+\subsubsection{Ámbito local}
+
+Son las variables declaradas dentro del \texttt{Principal} o dentro de los subalgoritmos como \texttt{procedimientos} o \texttt{funciones}. Pueden estar declaradas en la sección de definición de variables (\texttt{var}) o como parámetro formal y pueden ser referenciadas dentro de ese subalgoritmo.\\
+El uso de variables locales conserva la independencia de los subalgoritmos y hace un uso más eficiente de la memoria.
+
+\subsubsection{Ámbito global}
+
+Son las variables declaradas fuera del principal y de cualquier subalgoritmo y puede ser referenciada desde cualquier punto del cuerpo del \texttt{Principal} o subalgoritmo.\\
+Por ejemplo:
+\begin{lstlisting}
+Algoritmo ejemplo
+  var
+    entero: a, b
+  Principal
+  inicio
+    a <- 2
+    b <- 3
+    proc1(a)
+  Fin_principal
+fin_algoritmo
+	
+procedimiento proc1(E entero: x)
+  var
+    entero: b
+  inicio
+    b <- x+a
+    escribir(b)
+fin_procedimiento
+\end{lstlisting}
+En este ejemplo, \texttt{a} y \texttt{b} están definidas fuera del \texttt{Principal}, por lo que son variables de ámbito global, a su vez, \texttt{a} es el parámetro real (o actual) de la llamada al procedimiento \texttt{proc1}, concretamente, con el valor real 2. La variable \texttt{x} es un parámetro formal y a su vez, variable local de \texttt{proc1}.\\
+\texttt{b} es otra variable local de \texttt{proc1}, distinta de la \texttt{b} global. En la instrucción \texttt{b <- x+a} estamos asignando a la variable local \texttt{b} el resultado de sumar el valor de la variable local \texttt{x} con el valor de la variable global \texttt{a}. Debemos tener en cuenta que tanto \texttt{Principal} como el procedimiento \texttt{proc1} podrían modificar el valor de la vriable global \texttt{a}.
+
+\subsubsection{Persistencia de variables}
+
+La persistencia de una variable es la duración de la variable en memoria. Podemos distinguir dos tipos:\\
+- \textbf{Persistendia indefinida:} Permanece en memoria durante toda la ejecución de un programa.\\
+- \textbf{Persistencia dinámica:} Cuando la variable solo existe durante la ejecución de un fragmento de código (función o procedimiento).\\
+Generalmente suele asociarse una persistencia indefinida al ámbito global y una persistencia dinámica al ámbito local.\\
+En algunos lenguajes de programación es posible modificar el ámbito y la persistencia de las variables a través de determinadas instrucciones siendo posible que existan las cuatro combinaciones posibles: ámbito global y persistencia indefinida, ámbito global y persistencia dinámica, ámbito local y persistencia indefinida, y, ámbito local y persistencia dinámica.\\
+
+\subsection{Correspondencia entre argumento y parámetro formal}
+
+El paso de parámetros es el método mediante el cual los distintos subalgoritmos de un algoritmo pueden comunicarse, compartir valores y variables sin perder su independencia.\\
+Existe una correspondencia automática entre los parámetros formales y los parámetros actuales que puede ser de dos tipos:\\
+- \textbf{Posicional:} De izquierda a derecha entre parámetros formales ya actuales.\\
+- \textbf{Por nombre:} Se indica de forma explícita en la llamada al subalgoritmo cómo ha de realizarse la correspondencia. Por ejemplo: \texttt{porc(a=>x, b=>3)}\\
+El tipo de paso de parámetros puede ser por valor o por referencia:
+
+\subsubsection{Paso por valor}
+
+En el paso por valor se produce una copia del valor de los parámetros acutales (constantes, variables o expresiones) en los formales (variables locales al procedimiento inicializadas con el valor que el parámetro actual les pasa en la llamada).\\
+Los parámetros pasados por valor serán siempre parámetros de entrada y llevarán la letra \texttt{E} en su definición. A través de estos parámetros no se devuelve ningún tipo de información al algoritmo desde el cual se realizó la llamada.\\
+Cuando el subalgoritmo devuelve el control al algoritmo que realizó la llamada, los parámetros actuales conservarán el valor que tenían antes de realizar la llamada.
+
+\subsubsection{Paso por referencia}
+En el paso por referencia, el parámetro formal recibe una referencia (dirección de memoria) del parámetro actual, lo que obliga a que dichos parámetros sean siempre variables.\\
+Como tanto los parámetros formales como los actuales comparten la misma dirección de memoria, todo cambio realizado en el parámetro formal tendrá repercusión en el parámetro actual.\\
+Estos parámetros siempre serán de salida o entrada/salida y llevarán en su definición las letras \texttt{S} o \texttt{E/S}.\\
+Gracias a este paso de parámetros se consigue que el subalgoritmo devuelva valores al algoritmo que realizó la llamada.\\
+En el siguiente ejemplo podemos ver dos pasos por valor y dos pasos por referencia.
+\begin{lstlisting}
+Algoritmo divide
+  Principal
+  var
+    entero: dividendo, divisor, cociente, resto
+  inicio
+    escribir("Introduce los valores del dividendo y divisor: ")
+    repetir
+      leer (dividendo, divisor)
+    hasta que (dividendo >= divisor)
+    division (dividendo, divisor, cociente, resto)
+    escribir (cociente, resto)
+  fin_principal
+fin_algoritmo
+	
+//Cabecera: division(E entero: divi,E entero: d, S entero: c,
+            S entero: r)
+//Precondicion: divi >= divi y ambos mayores que 0
+//Postcondicion: devuelve a traves de los parametros de salida
+         c y r, el cociente y el resto de dividir divi entre d
+procedimiento division (E entero: divi, E entero: d, S entero: c,
+                         S entero: r)
+  Inicio
+    c <- divi div d
+    r <- divi mod d
+fin_procedimiento
+\end{lstlisting}
+En este ejemplo podemos ver como los parámetros formales \texttt{divi} y \texttt{d} son pasados por valor y parámetros formales \texttt{c} y \texttt{r} son pasados por referencia al procedimiento \texttt{division} que devuelve al programa principal el valor del cociente y del resto tras la ejecución del mismo.
+
+\subsubsection{Efectos laterales}
+
+Los efectos laterales son los cambios o modificaciones que se producen en las variables de un subalgoritmo como consecuencia de la instrucción de otro subalgoritmo.\\
+Si la comunicación entre un subalgoritmo y otro no se realiza mediante el paso de parámetros, se pueden provocar efectos laterales como cambiar el contenido de una variable global.\\
+Si se necesita una variable local en un subalgoritmo se utiliza localmente, nunca una variable global, salvo que se quiera que se modifique el valor de la misma y deberá ser pasado por referencia (\texttt{E/S} o \texttt{S}).\\
+Dichos efectos laterales están considerados como una mala técnica de programación debido a que disminuye la legibilidad del código y dificulta la depuración y detección de errores.
+
+\section{Tipos de datos}
+\subsection{Tipos de datos estructurados}
+
+Un tipo de dato estructurado o una estructura de datos es un conjunto de datos que se trata como una sola unidad pero que a su vez permite referenciar independientemente cada uno de sus componentes.\\
+La mayoría de los lenguajes de programación permiten al programador definir estructuras de daos cuyos elementos son a su vez tipos de datos estructurados.\\
+La elección del tipo de dato adecuado dependerá de la complejidad del problema a resolver y del lenguaje de programación utilizado para su implementación y los definiremos en la sección \texttt{tipo}.\\
+Las estructuras de datos se clasifican en dos tipos:
+
+\subsubsection{Momento de reserva de memoria}
+\noindent
+- \textbf{Estáticas:} El espacio de memoria ocupado por la estructura es fijo y se define en tiempo de compilación por lo que no puede ser modificado mediante la ejecución del programa.\\
+- \textbf{Dinámicas:} El espacio de memoria ocupado por la estructura es dinámico, se define en tiempo de ejecución y además puede ser modificado durante la ejecución del programa en función de las necesidades del mismo.
+
+\subsubsection{Tipos de datos que forman la estructura}
+\noindent
+- \textbf{Homogéneas:} Estructuras que están compuestas por componentes del mismo tipo. Por ejemplos, vectores y matrices.\\
+- \textbf{Heterogéneas:} Estructuras que están compuestas por elementos de distinto tipo. Por ejemplo, registros.
+
+\subsection{Vectores y matrices}
+
+Los vectores y matrices son estructuras de datos homogéneas y puede ser estático o dinámico según convenga para la resolución del problema.
+
+\subsubsection{Vectores. Matrices unidimensionales}
+
+Es un conjunto finito del mismo tipo que están relacionados consecutivamente y pueden ser identificados de forma independiente.\\
+Es importante tener en cuenta que los vectores en pseudocódigo empiezan por la posición 1, sin embargo en los lenguajes de programación como C, empiezan por la posición 0.\\
+La definición de un vector es la siguiente:
+\begin{lstlisting}
+Tipo
+  vector [tamano] de <tipo de dato> : <identificador_del_tipo_vector>
+\end{lstlisting}
+En cuanto a las operaciones que podemos realizar con un vector tenemos:\\
+- \textbf{Asignación:} \texttt{V[2]<-5}\\
+En algunos lenguajes tenemos la opción de realizar asignaciones entre vectores.\\
+\newpage
+\noindent
+- \textbf{Recorrido de un vector:} Se recorre el vector posición a posición con la finalidad de introducir o leer datos de él.\\
+Un ejemplo de cómo recorrer un vector para introducir datos en él es el siguiente:
+\begin{lstlisting}
+desde i <- 1 hasta 7 hacer
+  escribir ("Inserte el elemento", i)
+  leer (V[i])
+fin_desde
+\end{lstlisting}
+Y un ejemplo para leer los datos del vector y mostrarlos por pantalla es el siguiente:
+\begin{lstlisting}
+desde i <- 1 hasta 7 hacer
+  escribir (V[i])
+fin_desde
+\end{lstlisting}
+Cabe mencionar que en en estos dos ejemplos, solo hemos visualizado el bucle que lo recorre sin mostrar el algoritmo completo con la única razón de darle claridad.\\\\
+Por último veamos un ejemplo del trabajo con vectores:\\
+Diseña un algoritmo que almacena en un vector de 20 elementos los valores correspondientes a las notas de 20 alumnos de una clase. Además el algoritmo debe calcular la nota media y escribirla por pantalla.
+\begin{lstlisting}
+Algoritmo media_vector
+  const
+    MAX = 20
+  tipo
+    vector [MAX] de real : Nota
+  Principal
+  var
+    Nota: V
+    real: media
+  inicio
+    leer_vector(V)
+    media <- calcula_media(V)
+    escribir ("La media es", media)
+  fin_principal
+Fin_algoritmo
+	
+//Cabecera: leer_vector(S Nota: V).
+//Precondicion: V es una variable de tipo Nota.
+//Postcondicion: inicializa V con los datos introducidos por el usuario.
+procedimiento leer_vector(S Nota: V)
+  var
+    entero: i
+  inicio
+    desde i <- 1 hasta MAX hacer
+      escribir("Introduzca el elemento: ", i)
+      leer(V[i])
+    fin_desde
+fin_procedimiento
+	
+//Cabecera: real calcula_media(E Nota: V)
+//Precondicion: V es una variable de tipo Nota que debe estar inicializada.
+//Postcondicion: devuelve la media de todos los elementos del vector.
+real funcion calcula_media(E Nota: V)
+  var
+    real: suma, media
+  inicio
+    suma <- 0
+    desde i <- 1 hasta MAX hacer
+      suma <- suma + V[i]
+    fin_desde
+    media <- suma/MAX
+    devolver media
+fin_funcion
+\end{lstlisting}
+En este ejemplo podemos ver como el algoritmo principal tiene dos subalgoritmos para resolver el problema planteado en los cuales se trabaja con los elementos de un vector llamado \texttt{Nota}.
+
+\subsubsection{Matrices multidimensionales}
+
+Una matriz multidimensional es una estructura homogénea, en la cual para hacer referencia a un elemento necesitamos dos o más índices, dependiendo de su dirección. Lo más frecuente es usar matrices bidimensionales (también llamadas tablas por su símil a la hora de establecer dos índices: fila y columna).\\
+Básicamente, una matriz multidimensional se puede entender como un vector de vectores.\\
+La definición de una matriz multidimensional es la siguiente:
+\begin{lstlisting}
+tipo
+  matriz [tam_1, tam_2, ..., tam_n] de <tipo de dato>:
+                         <identificador_del_tipo_matriz>
+\end{lstlisting}
+En cuanto a las operaciones que podemos realizar con una matriz multidimensional tenemos:\\
+- \textbf{Asignación:} \texttt{M[2][3]<-8}\\
+- \textbf{Recorrido de una matriz:} Se recorre la matriz posición a posición con la finalidad de introducir o leer datos de ella.\\
+Un ejemplo de cómo recorrer una matriz para introducir datos en ella es la siguiente:
+\begin{lstlisting}
+desde i <- 1 hasta 3 hacer
+  desde j <- 1 hasta 10 hacer
+    M[i][j] <- 0
+  fin_desde
+fin_desde
+\end{lstlisting}
+En este ejemplo, al igual que con los vectores, solo hemos visualizado el bucle que recorre la matriz sin mostrar el algoritmo completo con la única razón de aportar mayor claridad.\\\\
+Por último veamos un ejemplo del trabajo con matrices multidimensionales:\\
+Diseña un algoritmo que suma dos matrices de dimensión \texttt{f}x\texttt{c}, siendo \texttt{f} y \texttt{c} introducidos por teclado y menores o iguales que 100.
+\begin{lstlisting}
+Algoritmo suma_matrices
+  const
+    MAX = 100
+  tipo
+    matriz [MAX,MAX] de entero: Tabla
+  Principal
+  var
+    entero: i,j,f,c
+    Tabla: A,B,S
+  inicio
+    escribir("Introduzca el numero de filas y columnas de la matriz: ")
+    leer(f,c)
+    leer_matriz(A,f,c)
+    leer_matriz(B,f,c)
+    calcula_suma(A,B,f,c,S);
+    escribir_matriz(S)
+  fin_principal
+Fin_algoritmo
+	
+//Cabecera: leer_matriz(S Tabla: M, E entero: f, E entero: c).
+//Precondicion: M es una variable de tipo Tabla, f y c son dos
+             //variables enteras que deben estar inicializadas.
+//Postcondicion: M se inicializa a los valores introducidos
+                 //por el usuario.
+procedimiento leer_matriz (S Tabla: M, E entero: f, E entero: c )
+  var
+    entero i, j
+  inicio
+    desde i <- 1 hasta f hacer
+      desde j <- 1 hasta c hacer
+        escribir("Introduzca el elemento de la posicion ", i, j)
+        leer(M[i][j])
+      fin_desde
+    fin_desde
+fin_procedimiento
+	
+//Cabecera: calcula_matriz(E Tabla: A, E Tabla: B, E entero: fil,
+                                      E entero: col, S Tabla: C).
+//Precondicion: A, B y C son matrices de tipo Tabla, fil y col
+       //son dos variables enteras que deben estar inicializadas.
+//Postcondicion: C contiene la matriz suma de A y B.
+procedimiento calcula_suma(E Tabla: A, E Tabla: B, E entero: fil,
+                                       E entero: col, S Tabla: C)
+  var
+    entero i, j
+  inicio
+    desde i <- 1 hasta fil hacer
+      desde j <- 1 hasta col hacer
+        C[i][j] <- A[i][j]+B[i][j]
+      fin_desde
+    fin_desde
+fin_procedimiento
+	
+//Cabecera: escribir_matriz(E Tabla: M, E entero: f, E entero: c).
+//Precondicion: M es una variable de tipo Tabla, f y c son dos
+//variables enteras. Todas las variables deben estar inicializadas.
+//Postcondicion: Se visualiza el contenido de la matriz.
+procedimiento escribir_matriz (E tabla: M, E entero: f, E entero: c )
+  var
+    entero i, j
+  inicio
+    desde i <- 1 hasta f hacer
+      desde j <- 1 hasta c hacer
+        escribir(M[i][j])
+      fin_desde
+    fin_desde
+fin_procedimiento
+\end{lstlisting}
+En este ejemplo podemos ver como el algoritmo principal tiene tres subalgortimos para resolver el problema planteado en los cuales se trabaja con los elementos de una matriz llamada \texttt{Tabla}.
+
+\subsection{Cadenas de caracteres}
+
+Una cadena de caracteres es una secuencia de caracteres consecutivos. Existen lenguajes de programación que incorporan el tipo cadena como uno de sus tipo básicos (\texttt{string}).\\
+Otros lenguajes no incorporan esta posibilidad y es el programador quien debe definir y utilizar las cadenas de caracteres como vectores de tipo carácter y la longitud de la cadena (vector) será el número de caracteres que contiene.\\
+La definición de una cadena de caracteres se realiza en la sección \texttt{var} así \texttt{cadena: cad}.
+
+\subsubsection{Operaciones con cadenas de caracteres}
+
+Las operaciones más comunes en las cadenas de caracteres son:\\
+- \textbf{Asignación:} Podemos asignar una variable de tipo cadena a una constante de cadena:\\ \texttt{cad <- "Hola a todos."}.\\
+- \textbf{Lectura/escritura:} Podemos utilizar las operaciones de lectura y escritura con cadenas de caracteres: \texttt{leer(cad)} o \texttt{escribir(cad)}.\\
+- \textbf{Cálculo de longitud:}Función que devuelve el número de caracteres que contiene la cadena:\\ \texttt{n <- longitud(cad)}.\\
+- \textbf{Comparación:} Realiza comparaciones entre caracteres. Para ello utiliza el código ASCII y devuelve: un número negativo si la cadena1 es mayor que la cadena2; un número positivo si la cadena1 es mayor que la cadena2; o cero, si la cadena1 es igual que la cadena2:\\
+\texttt{n <- compara(cad1,cad2)}\\
+- \textbf{Concatenación:} Consiste en unir varias cadenas en una: \texttt{cad3 <- concatena(cad1,cad2)}.
+
+\subsection{Registros}
+
+Un registro es una estructura de datos formada por un conjunto de elementos que van a contener información relativa a un mismo objeto. Los elementos que constituyen un registro se llaman campos y cada campo puede ser de un tipo diferente al resto.\\
+En un registro también se pueden introducir tipos creados por el propio usuario.\\
+La definición de un registro se realiza en la sección \texttt{tipo} y es la siguiente:
+\begin{lstlisting}
+tipo
+  registro: nombre_reg
+    tipo 1: id_campo 1
+    tipo 2: id_campo 2
+    . . .
+    tipo n: id_campo n
+  fin_registro
+\end{lstlisting}
+Por ejemplo: para representar la información relativa a un estudiante matriculado en una asignatura concreta, se puede emplear un registro con los campos: nombre, apellidos, edad, DNI y nota.
+\begin{lstlisting}
+tipo
+  registro: reg_estudiante
+    cadena: apellidos, nombre
+    entero: edad
+    entero: dni
+    entero: nota
+  fin_registro
+  Principal
+  var
+    reg_estudiante: estudiante
+\end{lstlisting}
+Una vez creado el tipo \texttt{reg\_estudiante} y definido como \texttt{estudiante}, cada vez que nos refiramos a ese registro lo haremos con \texttt{estudiante}. Para seleccionar el campo \textit{identificador\_campo} del registro \textit{nombre\_reg} se utiliza el formato \textit{nombre\_reg.identificador\_campo}.\\\\
+Siempre que tengamos dos registros del mismo tipo se puede realizar la operación de asignación.\\
+Cada campo de un registro puede usarse en cualquier tipo de expresión, ser asignado, pasado como argumento en llamadas a subalgoritmos o ser devuelto como resultado de una función.\\
+También debemos saber que un registro también puede contener dentro de sí a otros registros y vectores o matrices.\\
+Por ejemplo: si queremos conocer el mes de la fecha de nacimiento del estudiante \texttt{i}, el acceso al registro en el cuerpo del algoritmo sería \texttt{estudiantes[i].nacimiento.mes}.
+\begin{lstlisting}
+const
+  N=100
+tipo
+  registro: reg_fecha
+    entero: dia
+    cadena: mes
+    entero: ano
+  fin_registro
+  registro: reg_estudiante
+    cadena: apellidos, nombre
+    entero: edad
+    entero: dni
+    entero: nota
+    reg_fecha: nacimiento
+  fin_registro
+  vector [N] de reg_estudiante : Testudiantes
+Principal
+var
+  TEstudiantes: estudiantes
+\end{lstlisting}
+
+\subsection{Ficheros}
+
+Los ficheros son una estructura de datos no acotada y almacenada en memoria masiva o externa. Aporta la ventaja de ser permanente y que la mayor limitación que tiene es la del soporte donde se encuentra.\\
+Para trabajar con un fichero almacenado en memoria masiva, definiremos una variable de tipo fichero en la memoria principal a la que le asociaremos dicho fichero mediante la operación de apertura del mismo.\\
+La declaración de un fichero se realiza en las secciones \texttt{tipo} y \texttt{var} de la siguiente forma:
+\begin{lstlisting}
+tipo
+  archivo de tipo: tipo_fich
+var
+  tipo_fich: id_var
+\end{lstlisting}
+Aquí lo podemos ver en un ejemplo:
+\begin{lstlisting}
+tipo
+  archivo de entero: tipo_fich
+Principal
+var
+  tipo_fich: fich_notas_act, fich_notas_ant
+\end{lstlisting}
+En este ejemplo se ha definido un tipo fichero que va a corresponder a ficheros cuyos elementos son enteros, y en la sección \texttt{var} se han declarado dos variables, que serán posteriormente asociadas a ficheros mediante la función de apertura.
+
+\subsubsection{Apertura de un fichero}
+
+La función \texttt{abrir(var\_fichero)} asocia una variable de tipo fichero con un archivo almacenado en memoria secundaria. El formato de la operación de apertura es el siguiente:\\
+\texttt{abrir(var\_fichero, modo, nombre\_fichero)}\\
+- \textbf{nombre\_fichero:} Es el nombre del fichero que se encuentra almacenado en memoria masiva.\\
+- \textbf{var\_fichero:} Es la variable definida previamente a la que se le asociará el fichero físico. A partir de este momento cualquier referencia a lfichero se hará a través de esta variable.\\
+- \textbf{modo:} Indica el modo de acceso al fichero, es decir, si la operación que se desea realizar es de lectura, escritura, o lectura/escritura.\\
+Si el fichero es abierto en modo escritura, el sistema comprueba si existe un fichero con ese nombre situando el indicador de posición al inicio del fichero y cada vez que se realice una operación de escritura, el indicador irá avanzando a la siguiente posición. Si no existe, entonces, se crea uno vacío con ese nombre. Si existe, lo borra y crea uno nuevo.\\
+Si el fichero es abierto en modo lectura o lectura/escritura, el indicador de posición se situará al inicio del mismo y avanzará a la posición siguiente cada vez que se realice una operación de lectura. Si el fichero solo se abre en modo lectura no podrá ser modificado.\\
+La función \texttt{feof(var\_vichero)} comprueba si se ha llegado al final del fichero y la función \texttt{cerrar(var\_fichero)} cierra y guarda el fichero.\\\\
+Veamos un ejemplo del trabajo con ficheros:
+Diseña un algoritmo que lea caracteres y los escriba en un fichero. Posteriormente lea del fichero para escribir en pantalla.
+\begin{lstlisting}
+Algoritmo lee_escribe_fichero
+  tipo
+    archivo de caracteres: tipo_fich
+  Principal
+  var
+    tipo_fich: fichero
+  inicio
+    lectura (fichero)
+    escritura(fichero)
+  Fin_principal
+fin_algoritmo
+	
+//Cabecera: lectura(E/S tipo_fich f)
+//Precondicion:
+//Postcondicion: escribe en f los caracteres introducidos por el usuario.
+Procedimiento lectura (E/S tipo_fich f)
+  var
+    caracter: c
+  inicio
+    abrir (f, "escritura", "fichero_caracteres.txt")
+    escribir("Introduzca los caracteres. Caracter '*' para terminar")
+    mientras (leer(c) != '*') hacer
+      escribir(f,c)
+    fin_mientras
+    cerrar(f)
+fin_procedimiento
+	
+//Cabecera: escritura (E tipo_fich f)
+//Precondicion:
+//Postcondicion: lee todo el contenido de f y lo escribe en pantalla.
+Procedimiento escritura (E tipo_fich f)
+  var
+    caracter : c
+  inicio
+    abrir (f, "lectura", "fichero_caracteres.txt")
+    mientras (no feof(f)) hacer
+      leer(f,c)
+      escribir(c)
+    fin_mientras
+    cerrar(f)
+fin_procedimiento
+\end{lstlisting}
+En este ejemplo podemos ver como el algoritmo principal tiene dos subalgoritmos para resolver el problema que coinciden con la escritura y la lectura de datos del fichero.
+
+\end{document}

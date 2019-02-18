@@ -1,0 +1,350 @@
+\chapter{Ficheros}
+\setcounter{section}{0}
+\section{Introducción}
+\subsection{La necesidad de archivar la información}{
+El sentido que utilizamos en este capítulo de fichero es el de fichero en disco o archivo.
+
+En estos apuntes, hasta ahora se ha visto que los programas almacenan y tratan información, pero solo de modo interno, en lo que se llama almacenamiento principal o primario. El almacenamiento primario generalmente está implantado físicamente en la memoria RAM del ordenador. El almacenamiento interno tiene las siguientes características:
+\begin{itemize}
+	\item Cuando el programa deja de ejecutarse, sus datos internos desaparecen por completo. La información que fue introducida desaparece y cuando se vuelva a ejecutar el programa deberán introducirse de nuevo los datos.
+	\item Es de muy rápido acceso. La información puede ser accedida de un modo muy rápido para su consulta o tratamiento.
+\end{itemize}
+El nuevo modo de almacenamiento que estudiamos en este capítulo es el del almacenamiento secundario o externo. EL almacenamiento en archivos, implantado generalmente en disco, tiene las siguientes características:
+\begin{itemize}
+	\item Es permanente. Una vez terminada la ejecución de un programa, los datos almacenados en disco en forma de archivos, permanecen. Los datos introducidos en una ejecución anterior del programa pueden almacenarse en arcchivos para la próxima ejecucion, incluso apagando el ordenador.
+	\item Su acceso es mucho más lento que el acceso a los datos en la memoria RAM del ordenador.
+	\item La capacidad del almacenamiento secundario es mucho mayor que la del almacenamiento primario.
+\end{itemize}
+Los dispositivos del ordenador que físicamente acogen el almacenamiento primario suele ser, principalmente la memoria RAM. Los dispositivos que físicamente acogen el almacenamiento secundario suelen ser soportes magnéticos y ópticos, es decir discos o cintas.
+}
+\subsection{Definiciones de archivos}{
+Un fichero o archivo podría definirse como un elemento de almacenamiento de datos sobre un medio permanente que presenta las siguientes características:
+\begin{itemize}
+	\item Es una estructura de datos dinámica, en tanto que su tamaño puede cambiar durante la ejecución del programa.
+	\item Permite el almacenamiento permanente de la información.
+	\item No tiene un tamaño fijo preestablecido ni un máximo, salvo la propia capacidad de todo el soporte físico (generalmente el disco).
+	\item Tiene un acceso lento a la información, si lo comparamos con los accesos a memoria principal.
+\end{itemize}
+En la mayor parte de los lenguajes de programación, el concepto de archivo o fichero se define como un conjunto de datos estructurados en una colección e entidades elementales o básicas del mismo tipo base de datos. En el lenguaje C, la visión de los ficheros o archivos se verá como una colección de caracteres (ficheros de texto) o de bytes (ficheros binarios).
+}
+\section{Tipos de archivos}
+\subsection{En cuanto al método de acceso}{
+El modo de acceso a los archivos depende principalmente del soporte empleado para los mismos y del modo físico en el que se ha organizado su información.
+
+Básicamente, los dos tipos de acceso que pueden darse son:
+\begin{itemize}
+	\item Acceso secuencial: Se accederá a cada elemento del archivo uno tras otro en el mismo orden en el que se situaron.
+	\item Acceso directo: Permite acceder a un elemento determinado sin tener que acceder previamente a otros precedentes.
+\end{itemize}
+}
+\subsection{En cuanto al tipo que almacenan}{
+Frecuentemente, los lenguajes de programación recurren a especializaciones, matices o peculiaridades en cuanto a la forma de utilizar archivos en función de los tipos de elementos que va a almacenar. La clasificación en este sentido sería:
+\begin{itemize}
+	\item Archivos de datos: Almacenan un tipo de datos. Este tipo de datos puede ser simple o estructurado, así un archivo de datos pude ser pro ejemplo de enteros, reales, caracteres, bytes, estructuras, etc. Un archivo no puede ter un tipo dinámico sino estático.
+	\item Archivos binarios: No tienen tipo. Son de acceso muy rápido y sobre ellos es posible implementar los archivos de datos. Algunos lenguajes de programación solo disponen de este tipo de archivos.
+\end{itemize}
+}
+\section{Operaciones con ficheros}
+\subsection{Declaración de ficheros lógicos}{
+La declaración de un fichero consiste en dar un identificador y decir que el tipo de sus datos es puntero a \texttt{FILE (FILE *)}. Para que un programa pueda leer o escribir en un fichero, necesita utilizar puntero a fichero. El puntero identifica el archivo en disco y utiliza la secuencia asociada a él mediante las funciones que emplean buffer. Por lo tanto, la declaración de un fichero sería como sigue:
+
+\texttt{FILE * identificador;}
+
+Un puntero a un fichero es un puntero a una información que define varios aspectos sobre el fichero como son:
+\begin{itemize}
+	\item Nombre.
+	\item Estado.
+	\item Posición actual del localizador
+\end{itemize}
+El tipo de datos \texttt{FILE} viene definido en la librería \texttt{stdio.h}.
+
+En esencia, el puntero al archivo identifica un archivo de disco específico, siempre que se  produzca la asociación de fichero lógico con fichero físico. El puntero al fichero no debe ser alterado nunca por el código, pues es usado por la mayoría de las  unciones del sistema de archivos.
+}
+\subsection{Asignación y apertura de ficheros}{
+El identificador utilizado para la declaración del fichero es el nombre con el que nos referimos al fichero en nuestro programa. Sin embargo, hay que asociar o asignar a dicho identificador lógico el nombre físico que tiene en el dispositivo.
+
+Por otro lado, la operación de apertura consiste en abrir el fichero para que éste pueda ser utilizado. En la apertura de un fichero hay que indicar si se abre para:
+\begin{itemize}
+	\item Lectura: Extraer información del archivos. No altera el contenido previo del fichero.
+	\item Escritura: Escribir el fichero desde el principio. Si el fichero no se encontrase vacío (fue utilizado con anterioridad), una operación de apertura para escritura borraría automáticamente la información anterior. Si el fichero no existe, lo crea.
+	\item Lectura y escritura: Se van a realizar operaciones de ambos tipos. Como veremos, puede darse el caso tanto que el fichero físico aya exista como que no.
+	\item Añadir al final: Para añadir información al final del archivo. Si no existe el archivo, se creará.
+\end{itemize}
+Además de identificar qué tipo de operaciones vamos a realizar con el fichero que estamos abriendo, debemos indicar si abrimos el fichero en modo texto o en modo binario.
+
+Si se abre en modo texto, las secuencias retorno de carro/salto de línea se convierten a caracteres de salto de línea en la lectura. En la escritura, ocurre lo contrario: los caracteres de salto de línea se convierten a retorno de carro/salto de línea. En los archivos binarios no tienen lugar estas conversiones.
+
+La función de apertura tiene el siguiente prototipo:
+
+\texttt{FILE *fopen(const char *nombre\_fichero, cont char *modo);}
+
+Donde \texttt{nombre\_fichero} es una cadena de caracteres que representa el nombre del fichero físico que deseamos abrir, pudiendo llevar una especificación de encaminamiento (ruta de directorio).
+
+Si se produce algún error en la apertura (disco protegido contra escritura, lleno, nombre de fichero incorrecto, etc) la función devolverá nulo (\texttt{NULL}).
+
+En cuanto al \texttt{modo} de apertura, un fichero solo puede ser usado para aquel modo de operación para el que se abrió y no para otro. Nos vamos a centrar en hacer uso de los que se expresan en la siguiente tabla:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline 
+			\textbf{Modo} & \textbf{Significado}  \\
+			\hline
+			``r'' & Abre un archivo de texto para lectura.\\ \hline
+			``w'' & Crea un archivo de texto para escritura.\\ \hline
+			``a'' & Abre un archivo de texto para añadir.\\ \hline
+			``r+'' & Abre un archivo de texto para lectura/escritura. \\ \hline
+			``w+'' & Crea un archivo de texto para lectura/escritura.\\ \hline
+			``a+'' & Abre o crea un archivo de texto para lectura/escritura.\\ \hline
+			``rb'' & Abre un archivo binario para lectura.\\ \hline
+			``wb'' & Crea un archivo binario para escritura.\\ \hline
+			``ab'' & Abre un archivo binario para añadir.\\ \hline
+			``r+b'' & Abre un archivo binario para lectura/escritura.\\ \hline
+			``w+b'' & Crea un archivo binario para lectura/escritura.\\ \hline
+			``a+b'' & Abre o crea un archivo binario para lectura/escritura.\\ \hline
+		\end{tabular}
+		\caption{Modos de apertura.}
+		\label{tabla:Modos de apertura}
+	\end{center}
+\end{table}
+
+La forma adecuada de declarar un fichero de texto es la siguiente:
+\begin{lstlisting}[language=C]
+FILE *f;
+
+if ((f = fopen("datos.txt", "w")) == NULL)
+    printf("No se puede arbir el fichero.\n");
+else {
+/* Resto de codigo */
+}
+\end{lstlisting}
+}
+\subsection{Cierre de ficheros}{
+El cierre de un fichero debe realizarse siempre que se deje de utilizar un fichero (bien porque ya no lo requiere el programa o porque termina la ejecución del mismo). Su sintaxis es la siguiente:
+
+\texttt{int flcose(FILE *f);}
+
+Siendo \texttt{f} el fichero lógico a cerrar. La función \texttt{fclose()} devuelve 0 si no hay error y \texttt{EOF} si se produce algún error (por ejemplo, haber retirado el disquete, haber perdido la conexión de red, etc).
+
+En las operaciones de escritura, las mismas no se llevan acabo de forma automática, sino hasta que se llena un sector o se indica la operación de cierre del mismo. Cuando un programa finaliza, los ficheros abiertos son cerrados automáticamente, aún cuando no se haya ejecutado instrucción de cierre para los mismos, pero existen casos en los que si no se realiza una operación de cierre específica pude llevar a la pérdida de información. Éstas y otras circunstancias remarcan la necesidad de cerrar expresamente el fichero después de su uso.
+
+Si un fichero ha sido abierto en modo escritura y posteriormente precisa ser leído por el propio programa, lo correcto es realizar antes de la apertura en modo lectura, un cierre del mismo.
+
+Los ficheros tienen al final de los mismos una marca que indica que ya no hay más elementos tras ése. Esa marca es \texttt{EOF} (End Of File). Ese valor de \texttt{EOF} es un valor entero, que en ficheros binarios podría confundirse con algún valor válido del fichero. Por ello, para no entrar en una casuística distinta dependiendo de si estamos manejando ficheros de texto o binarios, para comprobar el estado de fin de un fichero (si se ha llegado o no al \texttt{EOF}) nos apoyaremos siempre en la función \texttt{feof()}, cuyo prototipo es el siguiente:
+
+\texttt{int feof(FILE *f);}
+
+Devuelve, aplicado a un fichero \texttt{f}, un valor distinto de 0 si se ha alcanzado el final de dicho fichero o 0 en caso contrario.
+
+Cuando un fichero se cierra se añade automáticamente la marca de \texttt{EOF} a la posición siguiente a la última útil. Las operaciones de apertura para añadir también reubican adecuadamente la marca \texttt{EOF}.
+}
+\subsection{Lectura}{
+Las operaciones de lectura consisten en la copia de la información contenida en un elemento del fichero sobre una variable del programa localizada en memoria principal. Destacamos las siguientes funciones:
+\begin{itemize}
+	\item \textbf{\texttt{getc()}:} Lee un carácter de un fichero abierto. Su prototipo es:
+	
+	\texttt{int getc(FILE *f);}
+	
+	Siendo \texttt{f} el fichero previamente abierto con \texttt{fopen()} en modo compatible con la operación de lectura. Cada vez que empleemos la instrucción \texttt{getc()} leeremos un carácter o bien \texttt{EOF} si llegamos al final del fichero.
+	
+	\item \textbf{\texttt{fgets()}:} Su prototipo es:
+	
+	\texttt{char *fgets(char *cad, int n, FILE *f);}
+	
+	Lee del fichero \texttt{f} los \texttt{n-1} caracteres almacenándolos en la cadena \texttt{cad}, añadiendo el carácter de fin de cadena ``$\backslash{0}$''. Si se encuentra un salto de línea antes de llegar a la longitud de \texttt{n-1} caracteres indicada, se detiene la lectura (se lee en este caso hasta el fin de la línea).
+	
+	\item \textbf{\texttt{fcanf()}:} Su prototipo es:
+	
+	\texttt{int fscanf(FILE *f, const char *formato, lista-arg);}
+	
+	La función \texttt{fscanf()} funciona de forma análoga a la función \texttt{scanf()}, descrita con anterioridad en el capítulo 1 de estos apuntes. Como única diferencia tiene que la lectura de la información no se realiza desde \texttt{stdin} (teclado), sino de la información existente en el fichero \texttt{f}. \texttt{lista\_arg} es la lista de argumentos.
+	
+	La función devuelve el número de argumentos realmente leídos (a los que se les asigna valores), pudiendo devolver el valor \texttt{EOF} si se trata de leer más allá del final del archivo.
+	
+	\item \textbf{\texttt{fread()}:} Su prototipo es:
+	
+	\texttt{size\_t fread(void *destino, size\_t tam\_elem, size\_t numelem, FILE *f);}
+	
+	Donde \texttt{destino} es un puntero a la zona de memoria donde escribir los datos leídos del fichero \texttt{f}. La forma cómo se indica qué cantidad de bytes se desea leer se expresa a través de los parámetres \texttt{tam\_elem} (número de bytes que ocupa el elemento  que deseamos leer) y de \texttt{numelem} (número de elementos que deseamos leer conjuntamente a través de esta operación de lectura).
+	
+	La función devuelve el número de elementos leídos, que puede ser menor que \texttt{numelem} si se produce un error o e llega al final del fichero.
+\end{itemize}
+}
+\subsection{Escritura}{
+Las operaciones de escritura consisten en la copia de la información contenida en una variable del programa sobre un elemento del fichero. Destacamos las siguientes instrucciones:
+\begin{itemize}
+	\item \textbf{\texttt{putc()}:} Escribe caracteres en un fichero abierto con \texttt{fopen()} en modo compatible con escritura. Su prototipo es:
+	
+	\texttt{int putc(int c, FILE *f);}
+	
+	Siendo \texttt{f} el fichero y \texttt{c} el carácter que queremos escribir. La función \texttt{putc()} devuelve \texttt{EOF} si se produce un error en la escritura.
+	
+	\item \textbf{\texttt{fputs()}:} Su prototipo es:
+	
+	\texttt{int fputs(const char *cad, FILE *f);}
+	
+	Esta función sirve para escribir la cadena de caracteres \texttt{cad} en el fichero \texttt{f}.
+	
+	\item \textbf{\texttt{fprintf()}:} Su prototipo es:
+	
+	\texttt{int fprintf(FILE *f, const char *formato, lista\_arg)}
+	
+	Esta función permite escribir en el fichero \texttt{f}, los valores de los argumentos \texttt{lista\_arg} según el formato especificado en \texttt{formato}.
+	
+	La función \texttt{fprintf()} es similara la función \texttt{printf()} estudiada en el capítulo 1, excepto que la salida, en vez de producirse hacia \texttt{stdout} (pantalla) se produce hacia el fichero \texttt{f}. Por ello, los posibles formatos y uso de la instrucción son idénticos a los expuestos para \texttt{printf()}.
+	
+	\item \textbf{\texttt{fwrite()}:} Su prototipo es:
+	
+	\texttt{size\_t fwrite(const void *origen, size\_t tam\_el, size\_t num\_el, FILE *f);}
+	
+	Escribe en el fichero \texttt{f} la información contenida en la zona de memoria apuntada por \texttt{origen}. El número de bytes a escribir en el fichero se obtiene conjuntamente del tamaño indicado en \texttt{tam\_el} (tamaño del elemento a escribir) y del número de elementos indicados en \texttt{num\_el}. La función devuelve el número de elementos escritos, que puede ser menor que \texttt{num\_el} si se produce un error.
+\end{itemize}
+Veamos un ejemplo para ilustrar algunas de las funciones comentadas:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stido.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *f;
+    FILE *f2;
+    char nombre[30];
+    char c;
+    
+    printf("Introduzca el nombre del fichero a copiar: ");
+    gets(nombre);
+    if ((f = fopen(nombre "r")) == NULL)
+        printf("No se puede abir el fichero.\n");
+    else {
+        f2 = fopen("Copia.txt", "w");
+        c = getc(f);
+        while (!feof(f)){
+            putc(c, f2);
+            c = getc(f);
+        }
+        fclose(f);
+        fclose(f2);
+    }
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+Este ejemplo copia de un fichero a otro carácter a carácter.
+\end{Ejemplo}
+}
+\subsection{Acceso directo}{
+El acceso directo expresa la posibilidad de acceder a un elemento determinado sin tener que acceder previamente a otros precedentes. Este caso se puede realizar a través de la función \texttt{fseek()}, dado que dicha función permite colocar el indicador de posición del fichero en la posición que se le indique, siempre que la misma sea correcta. El acceso directo se empleará preferentemente en ficheros binarios, pues existen casos en los que dicha operación no funciona correctamente con ficheros de texto, en el proceso de traducción de caracteres, llegando a producir errores en la localización o posicionamiento. Su prototipo es el siguiente:
+
+\texttt{int fseek(FILE *f, long num\_bytes, int origen);}
+
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{f} es el fichero que tengamos abierto usando \texttt{fopen()}.
+	\item \texttt{num\_bytes} es el número de bytes que queremos desplazarnos desde la posición indicada por \texttt{origen}, siendo \texttt{origen} uno de estos posibles valores:
+	\begin{itemize}
+		\item \texttt{SEEK\_SET} (o valor 0): Indica el principio del fichero.
+		\item \texttt{SEEK\_CUR} (o valor 1): Indica la posición actual del fichero.
+		\item \texttt{SEEK\_END} (o valor 2): Indica la posición desde el final del fichero.
+	\end{itemize}
+\end{itemize}
+Veamos a continuación un ejemplo con cada una de dichos valores:
+\begin{Ejemplo}
+	\texttt{fseek(f, 250, SEEK\_SET);}
+\Explicacion
+Se sitúa en la posición (byte) 250 desde el comienzo del fichero.
+\end{Ejemplo}
+\begin{Ejemplo}
+	\texttt{fseek(f, 250, SEEK\_CUR);}
+	\Explicacion
+	Se sitúa en la posición (byte) 250 desde la posición que ocupa actualmente en el fichero.
+\end{Ejemplo}
+\begin{Ejemplo}
+	\texttt{fseek(f, 250, SEEK\_END);}
+	\Explicacion
+	Se sitúa en la posición (byte) 250 a partir del final del fichero.\\
+\end{Ejemplo}
+
+La función \texttt{fseek()} devuelve 0 cuando tiene éxito y un valor distinto de 0 cuando se produce un error.
+
+En base a la operación de posicionamiento, se pueden desarrollar las operaciones de lectura y escritura en cualquier posición de un fichero y por tanto, llevar a cabo los accesos directos.
+\subsubsection{Lectura en acceso directo}{
+Al igual que en acceso secuancial, las operaciones de lectura en acceso directo consissten en copiar la información contenida en un elemento del fichero sobre una variable del programa localizada en memoria principal, pero en este caso indicaremos necesariamente la posición del elemento del fichero desde la que deseamos realizar la lectura. Para ello, actuamos del siguiente modo:
+\begin{itemize}
+	\item Uso de \texttt{fseek()} para posicionarnos.
+	\item Uso de \texttt{fread()} para leer.
+\end{itemize}
+}
+\subsubsection{Escritura en acceso directo}{
+De igual modo que en el acceso secuencial, se trata de copiar la información contenida en una variable del programa sobre un elemento del fichero, pero en este caso debemos indicar la posición del fichero en al que deseamos situar el elemento.Para ello, actuamos del siguiente modo:
+\begin{itemize}
+	\item Uso de \texttt{fseek()} para posicionarnos.
+	\item Uso de \texttt{fwrite()} para escribir.
+\end{itemize}
+Es importante destacar que la escritura en una posición del fichero no inserta, sino que sobrescribe el contenido del elemento de esa posición.\\
+}
+
+Veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    char nombre[20];
+    float nota;
+}ficha;
+
+int main() {
+    ficha f;
+    FILE *p;
+    int i;
+    char opcion;
+    if (!(p = fopen("Datos.bat", "rb+"))) {
+        printf("No se puede abrir.");
+        p = fopen("Datos.bat", "wb+"); //Lo creamos
+    }
+    else {
+        do {
+            printf("1.-Mostrar ficha\n");
+            printf("2.-Escribir ficha\n");
+            printf("3.-Salir\n");
+            opcion = getch();
+            switch (opcion) {
+                case '1':
+                    printf("Indique la posicion: ");
+                    scanf("%d", &i);
+                    if (fseek(p, (i-1) + sizeof(f), SEEK_SET) == 0) {
+                        if (fread(&f, sizeof(f), 1, p) == 1) {
+                            printf("Nombre: %s\n", f.nombre);
+                            printf("Nota: %f\n", f.nota);
+                        }
+                        else
+                            printf("Dicha posicion no existe.\n");
+                    }
+                    else
+                        printf("No existe esa posicion\n");
+                    break;
+                case '2':
+                    printf("Indique la posicion: ");
+                    scanf("%d", &i);
+                    if (fseel(p, (i-1) * sizeof(f), SEEK_SET) == 0) {
+                        printf("Nombre: ");
+                        scanf("%s", f.nombre);
+                        printf("Nota: ");
+                        scanf("%f", &f.nota);
+                        fwrite(&f, sizeof(f), 1, p);
+                        printf("Operacion realizada.\n");
+                    }
+                    else
+                        printf("Error en posicionamiento");
+                    break;
+            }
+        } while (opcion != '3');
+        fclose(p);
+    }
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo se maneja una serie de fichas con notas de los alumnos para ejemplificar el uso de las funciones anteriormente vistas.
+\end{Ejemplo}
+}

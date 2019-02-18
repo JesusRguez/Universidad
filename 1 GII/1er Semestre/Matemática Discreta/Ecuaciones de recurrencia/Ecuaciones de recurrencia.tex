@@ -1,0 +1,237 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{dsfont}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+\title{¿Cómo resolver ecuaciones de recurrencia homogéneas y no homogéneas paso a paso?}
+\author{Jesús Rodríguez Heras}
+
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1}
+
+\part{Homogéneas}
+\noindent
+Utilizaremos el ejemplo siguiente (sacado de los apuntes) para ver los pasos de la resolución de una ecuación de recurrencia homogénea:\\\\
+\textbf{Resolver la ecuación de recurrencia:
+	\begin{center}
+		$a_{n+2}+2a_{n+1}-3a_{n}=0, n\geq1$
+	\end{center}
+	con las condiciones iniciales, $a_{1}=0$ y $a_{2}=-12$.}
+\section{Escribimos la ecuación dada en su forma general:}
+\begin{center}
+	$a_{1}=0$\\
+	$a_{2}=-12$\\
+	$a_{n+2}+2a_{n+1}-3a_{n}=0$
+\end{center}
+
+\section{Obtenemos la ecuación característica de la ecuación dada:}
+\begin{center}
+	$\lambda^{2}+2\lambda-3=0$
+\end{center}
+Resolviendo dicha ecuación característica obtenemos:
+\begin{center}
+	$\lambda=1$ o $\lambda=-3$
+\end{center}
+
+\section{La solución general de la ecuación característica es la sucesión \{$a_n$\}, tal que:}
+\begin{center}
+	$a_{n}=n^q\cdot\lambda^n$, $0\leq$$q$$\leq$$m-1$
+\end{center}
+Por lo tanto, siguiendo el ejemplo, nuestro $a_{n}$ será:
+$a_{n}=\alpha_{1}+\alpha_{2}\cdot (-3)^n$, $n\leq 1$ y $\alpha_{1}, \alpha_{2} \in \mathds{R}$
+
+\section{Obtenemos la solución única de la ecuación propuesta mediante las condiciones iniciales dadas:}
+$a_1=0$ $\Rightarrow$ $\alpha_1-3\alpha_2=0$ $\Rightarrow$ $-\alpha_1+3\alpha_2=0$\\
+$a_2=-12$ $\Rightarrow$ $\alpha_1+9\alpha_2=-12$ $\Rightarrow$ $\alpha_1+9\alpha_2=-12$\\
+Despejando $\alpha_1$ tenemos: $\alpha_2=-1$.\\
+Sustituyendo y despejando tenemos: $\alpha_1=-3$.
+
+\section{Por lo tanto, la solución única a la ecuación propuesta es la sucesión \{$a_n$\}, tal que:}
+\begin{center}
+	$a_n=-3-1(-3)^n$, $n\geq1$
+\end{center}
+
+\newpage
+\setcounter{section}{0}
+\part{No homogéneas}
+Utilizaremos el ejemplo siguiente (sacado de los apuntes) para ver los pasos de la resolución de una ecuación de recurrencia no homogénea:\\\\
+\textbf{Resolver la ecuación de recurrencia:
+	\begin{center}
+		$a_{n+2}-2a_{n+1}+a_{n}=1, n\geq1$
+	\end{center}
+	con las condiciones iniciales, $a_{1}=1$ y $a_{2}=0$.}
+
+\section{Escribimos la ecuación dada en su forma general:}
+\begin{center}
+	$a_{1}=1$\\
+	$a_{2}=0$\\
+	$a_{n+2}-2a_{n+1}+a_{n}=1$
+\end{center}
+
+\section{Obtenemos la ecuación homogénea asociada a la ecuación propuesta:}
+\begin{center}
+	$a_{n+2}-2a_{n+1}+a_{n}=0$
+\end{center}
+
+\section{Obtenemos la ecuación característica de la ecuación homogénea asociada:}
+\begin{center}
+	$\lambda^{2}-2\lambda+1=0$
+\end{center}
+\noindent
+Resolviendo dicha ecuación característica obtenemos:
+\begin{center}
+	$\lambda=1$ o $\lambda=1$\\
+\end{center}
+Es decir, $\lambda=1$ com multiplicidad $m=2$.
+
+\section{La solución general de la ecuación homogénea asociada será la sucesión \{$a_{n}^{(h)}$\}, tal que:}
+\begin{center}
+	$a_{n}^{(h)}=n^q\cdot\lambda^n$, $0\leq$$q$$\leq$$m-1$
+\end{center}
+Por lo tanto, siguiendo el ejemplo, nuestro $a_{n}^{(h)}$ será:
+$a_{n}^{(h)}=\alpha_{1}+\alpha_{2}\cdot n$, $n\leq 1$ y $\alpha_{1}, \alpha_{2} \in \mathds{R}$
+
+\section{Obtenemos la solución particular de la ecuación propuesta usando el método de los coeficientes indeterminados:}
+\noindent
+Usando el término $h(n)$ de la ecuación dada, tenemos:
+\begin{center}
+	$h(n)=r^n\cdot p_{0}$\\
+	$h(n)=1\Rightarrow h(n)=1^n\cdot 1$
+\end{center}
+Luego, $r=1$.\\\\
+Llegados a este punto se nos presentan dos casos:
+
+\subsection{r no es raíz de la ecuación característica de la homogénea asociada:}
+\noindent
+Si se da este caso, ontinuaremos de la siguiente forma:\\
+$a_n^{(p)}=r^n(A_0+A_1n+A_2n^2+A_3n^3+...+A_tn^t)$\\
+Este caso no se da en este ejemplo pero se continuaría igual con el punto 6 en adelante.
+
+\subsection{r sí es raíz de la ecuación característica de la homogénea asociada:}
+\noindent
+Si se da este caso, ontinuaremos de la siguiente forma:\\
+$a_n^{(p)}=n^m\cdot r^n(A_0+A_1n+A_2n^2+A_3n^3+...+A_tn^t)$, siendo $m$ la multiplicidad.\\
+Este es el caso que nos plantea este ejercicio ya que $r=\lambda$, por lo tanto:\\
+\begin{center}
+	$a_n^{(p)}=n^2\cdot 1^n(A_0)$ $\Rightarrow$ $a_n^{(p)}=n^2\cdot A_0$
+\end{center}
+
+\section{Sustituyendo en la ecuación dada obtendremos su solución particular:}
+\noindent
+\begin{center}
+	$a_{n+2}^{(p)}-2a_{n+1}^{(p)}+a_n^{(p)}=1 \Rightarrow (n+2)^2A_0-2(n+1)^2A_0+n^2A_0=1$ $\Rightarrow$\\
+	$\Rightarrow$ $(n^2+4n+4)A_0-2(n^2+2n+1)A_0+n^2A-0=1$ $\Rightarrow$\\
+	$\Rightarrow$ $n^2A_0+4nA_0+4A_0-2n^2A_0-4nA_0-2A_0-n^2A_0=1$ $\Rightarrow$\\
+	$\Rightarrow$ $2A_0=1$ $\Rightarrow$\\
+	$\Rightarrow$ $A_0=\frac{1}{2}$
+\end{center}
+
+\section{La solución particular de la ecuación propuesta es la sucesión\{$a_n^{(p)}$\}, tal que:}
+\begin{center}
+	$a_n^{(p)}=\frac{1}{2}\cdot n^2$, $n\geq 1$
+\end{center}
+
+\section{La solución general de la ecuación propuesta es la sucesión \{$a_n$\}, tal que:}
+\begin{center}
+	$a_n=a_n^{(h)}+a_n^{(p)}$ $\Longrightarrow$ $a_n=\alpha_1+\alpha_2n+\frac{1}{2}n^2$, $n\geq 1$
+\end{center}
+
+\section{Obtendremos la solución única de la ecuación propuesta mediante las condiciones iniciales dadas:}
+\noindent
+$a_1=1$ $\Rightarrow$ $\alpha_1+\alpha_2+\frac{1}{2}=1$ $\Longrightarrow$ $\alpha_1+\alpha_2+\frac{1}{2}=1$\\
+$a_2=0$ $\Rightarrow$ $\alpha_1+2\alpha_2+2^2\cdot \frac{1}{2}=0$ $\Rightarrow$ $-\alpha_1-2\alpha_2-2=0$\\
+Despejando $\alpha_1$ tenemos: $\alpha_2=-\frac{5}{2}$.\\
+Sustituyendo y despejando tenemos: $\alpha_1=3$.
+
+\section{Por lo tanto, la solución única a la ecuación propuesta es la sucesión \{$a_n$\}, tal que:}
+\begin{center}
+	$a_n=3-\frac{5}{2}n+\frac{1}{2}n^2$, $n\geq1$
+\end{center}
+
+\end{document}

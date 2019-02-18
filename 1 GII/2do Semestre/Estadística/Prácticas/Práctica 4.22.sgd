@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<statgraphics_data>
+  <FORMAT>
+    <DECIMALSYMBOL>,</DECIMALSYMBOL>
+    <DATESEPARATOR>/</DATESEPARATOR>
+    <DATEORDER>DMY</DATEORDER>
+  </FORMAT>
+  <COLUMNS>
+    <C1 Name="X" Comment="Horas de estudio" Type="N" Width="13"/>
+    <C2 Name="Y" Comment="Respuestas correctas" Type="N" Width="13"/>
+  </COLUMNS>
+  <ROW>
+    <C1>22</C1>
+    <C2>76</C2>
+  </ROW>
+  <ROW>
+    <C1>23</C1>
+    <C2>70</C2>
+  </ROW>
+  <ROW>
+    <C1>24</C1>
+    <C2>80</C2>
+  </ROW>
+  <ROW>
+    <C1>25</C1>
+    <C2>82</C2>
+  </ROW>
+  <ROW>
+    <C1>26</C1>
+    <C2>70</C2>
+  </ROW>
+  <ROW>
+    <C1>27</C1>
+    <C2>85</C2>
+  </ROW>
+</statgraphics_data>

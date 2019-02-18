@@ -1,0 +1,45 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Estructura del pseudoc\IeC {\'o}digo}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Variables y expresiones}{4}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Variables y constantes}{4}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Asignaciones y expresiones aritm\IeC {\'e}ticas}{5}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Expresiones l\IeC {\'o}gicas}{5}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Lectura y escritura}{6}{subsubsection.1.2.4}
+\contentsline {section}{\numberline {2}Programaci\IeC {\'o}n estructurada}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Caracter\IeC {\'\i }sticas de la programaci\IeC {\'o}n estructurada}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Estructura secuencial}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Estructura selectiva}{6}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Simple}{7}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Doble}{7}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}M\IeC {\'u}ltiple}{8}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}Estructuras repetitivas}{8}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Mientras}{8}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Repetir}{9}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Desde}{10}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Aclaraci\IeC {\'o}n de las estructuras repetitivas}{10}{subsubsection.2.4.4}
+\contentsline {subsection}{\numberline {2.5}Estructuras anidadas}{10}{subsection.2.5}
+\contentsline {section}{\numberline {3}Abstracci\IeC {\'o}n operacional}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Subalgoritmos}{11}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Funciones}{11}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Procedimientos}{12}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}\IeC {\'A}mbito y persistencia de variables}{14}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}\IeC {\'A}mbito local}{14}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}\IeC {\'A}mbito global}{14}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Persistencia de variables}{15}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Correspondencia entre argumento y par\IeC {\'a}metro formal}{15}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Paso por valor}{15}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Paso por referencia}{15}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Efectos laterales}{16}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {4}Tipos de datos}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}Tipos de datos estructurados}{17}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Momento de reserva de memoria}{17}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Tipos de datos que forman la estructura}{17}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Vectores y matrices}{17}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Vectores. Matrices unidimensionales}{17}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Matrices multidimensionales}{19}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}Cadenas de caracteres}{21}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Operaciones con cadenas de caracteres}{21}{subsubsection.4.3.1}
+\contentsline {subsection}{\numberline {4.4}Registros}{22}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Ficheros}{23}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Apertura de un fichero}{23}{subsubsection.4.5.1}

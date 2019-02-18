@@ -1,0 +1,701 @@
+\chapter{Elementos básicos de la programación en C}
+\section{Palabras reservadas del lenguaje C}
+El lenguaje C, como cualquier otro lenguaje de programación, posee un conjunto de palabras clave que tienen un especial significado para el compilador y sirven para indicar al computador que realice una tarea determinada. Estas palabras no pueden utilizarse como identificadores y son las siguientes:
+\begin{itemize}
+	\item \textbf{break:} Se utiliza para salir de una sentencia \texttt{switch}.
+	\item \textbf{case:} Sirve para etiquetar los diferentes casos de una sentencia \texttt{switch}.
+	\item \textbf{char:} Tipo de dato para declarar variables de tipo carácter. Permite guardar un único carácter perteneciente al código ASCII comprendido entre 0 y 255.
+	\item \textbf{const:} Indica que la variable que la acompaña no puede modificar su valor durante la ejecución del programa.
+	\item \textbf{default:} Se utiliza en la sentencia \texttt{switch} para indicar el código que se ejecutará cuando ninguna de las etiquetas de \texttt{case} se corresponde con la expresión \texttt{switch}.
+	\item \textbf{do:} Se usa para construir bucles iterativos que, al menos, se ejecutan una vez, ya que la condición de continuación del bucle se encuentra al final de éste.
+	\item \textbf{double:} Tipo de dato para declarar variables de coma flotante de doble precisión.
+	\item \textbf{else:} Se utiliza con \texttt{if} para controlar el flujo de ejecución del programa.
+	\item \textbf{extern:} Se usa para indicar al compilador que una variable se declara en otro módulo del programa.
+	\item \textbf{float:} Tipo de datos utilizado para declarar variables de coma flotante de simple precisión.
+	\item \textbf{for:} Se usa para realizar bucles iterativos que se ejecutan mientras se cumple una determinada condición. La condición es evaluada antes de la ejecución del bucle por lo que puede que el bucle no se llegue a ejecutar si la condición no es cumplida.
+	\item \textbf{if:} Se utiliza para indicar que el código asociado se ejecuta solo en el caso de que se cumpla la condición impuesta.
+	\item \textbf{int:} Tipo de dato para declarar variables de tipo entero.
+	\item \textbf{long:} Tipo de datos utilizado para declarar variables enteras que ocupan dos veces más bytes que los enteros de tipo \texttt{short}.
+	\item \textbf{register:} es un especificador de almacenamiento para datos enteros, que se utiliza para informar al compilador de que el acceso a los datos debe ser tan rápido como sea posible, con lo cual el compilador almacenará los datos enteros en un registro de la CPU en lugar de situarlos en memoria.
+	\item \textbf{return:} Se utiliza para detener la ejecución de la función actual y devolver el control a la sentencia que realiza la llamada a dicha función.
+	\item \textbf{short:} Sirve para asegurar que el tamaño de las variables enteras es tan pequeño como sea posible.
+	\item \textbf{static:} Es un modificador del tipo de datos que indica al compilador que cree un almacenamiento permanente para la variable local a la que precede, de forma que la variable tendrá un tiempo de vida global y retendrá su valor entre las distintas llamadas a la función en la que está definida.
+	\item \textbf{struct:} Se utiliza para representar el tipo de datos estructura, que permite agrupar variables de diferentes tipos bajo un único identificador.
+	\item \textbf{switch:} Se usa para realizar una bifurcación múltiple dependiendo del valor de una expresión.
+	\item \textbf{typedef:} Se utiliza para dar un nuevo nombre (crear un alias) a un tipo de dato existente.
+	\item \textbf{union:} Es un tipo de dato que permite almacenar en la misma posición de memoria diferentes datos (que generalmente son del mismo tipo).
+	\item \textbf{unsigned:} Se utiliza para indicar al compilador que los tipos de datos enteros son solo positivos, con lo que no es necesario bit de signo y por lo tanto el rango de valores positivos queda duplicado.
+	\item \textbf{void:} es un tipo de dato que se utiliza para indicar la inexistencia de un valor de retorno o argumentos en una declaración y definición de una función. También se utiliza para declarar un puntero a cualquier tipo de objeto dado.
+	\item \textbf{while:} Permite construir un bucle cuyas sentencias interiores se ejecutan hasta que una condición o expresión se hace falsa. La condición es evaluada al principio, por lo que, de no cumplirse, las sentencias asociadas no llegan a ejecutarse ni siquiera una vez.
+\end{itemize}
+
+\section{Estructura de un programa en C}
+La estructura general de un programa en C es la siguiente:
+\begin{itemize}
+	\item \textbf{Inicio del programa:} Contiene la lista de importación (llamadas a bibliotecas), declaraciones globales, tipos, constantes y prototipos de funciones.
+	\item \textbf{Programa principal (\texttt{main()}):} La función \texttt{main} es la primera función que es llamada cuando comienza la ejecución del programa. Esboza lo que el programa hace, y básicamente está compuesto por llamadas a otras funciones. Todo el cuerpo de la función debe ir comprendido entre llaves \texttt{\{}...\texttt{\}}. Las llaves, son la forma utilizada por el lenguaje C para agrupar varias sentencias de modo que se comporten como una única.
+	\item \textbf{Implementación de las funciones:} Contiene la implementación de las funciones cuyos prototipos estaban declarados al inicio del programa. Una función es una porción de código agrupada bajo un nombre o identificador que realiza una determinada tarea.
+\end{itemize}
+A continuación veremos un ejemplo sencillo donde se emplea dicha estructura.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+/* Primer bloque: Inicio del programa */
+#include <stdio.h>		//Ficheros de cabecera
+#include <conio.h>
+#include <stdlib.h>
+
+float factorial (int n);	//Proptotipos de funciones
+float e;			//Variables globales
+
+/* Segundo bloque: Implementacion de las funciones */
+float factorial (int n) {
+    int j;
+    float fact;
+    fact = 1;
+    for (j = 1; j <= n; j++)
+        fact = fact * j;
+    return fact;
+}
+
+/* Tercer bloque: Programa principal main() */
+int main() {
+    int i, n;
+    do {
+        system("cls");
+        printf("Calculo del factorial de e segun la formula:\n");
+        printf("e = 1 + 1/1! + 1/2! + ... + 1/10! + ... \n");
+        printf("Indica el numero de terminos para clacular el numero e (max 10): ");
+        scanf("%d", &n);
+    } while (n < 1 || n > 10);
+    e = 1;
+    printf("e = 1");
+    for (i = 1; i <= n-1; i++) {
+        printf("+ 1/%d!", i);
+        e = e + 1 / factorial(i);
+    }
+    printf("El numero e vale %f \n", e);
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+El primer bloque comprende la primera declaración de las bibliotecas de funciones que el programa utilizará, junto con otras directivas como los prototipos de las funciones. También contiene la declaración de las estructuras de datos que serán globales al programa.
+
+El segundo bloque incluye el código de todas las funciones definidas por el usuario, cuyos prototipos se encuentran declarados en el primer bloque. Este bloque puede ir en la posición que vemos en el ejemplo, o después del tercer bloque, dejando el tercer bloque (función \texttt{main} en segundo lugar).
+
+El tercer bloque está formado por la función \texttt{main} que contiene el programa principal y dentro de ella se efectúan las llamadas l resto de funciones que hay en el programa. Esta función es obligatoria en todo programa en C, a diferencia de los bloques anteriores, que aparecen en el código solamente si son necesarios.
+
+Las líneas que comienzan por \texttt{\#include} indican cuales de las bibliotecas, de las definidas en C, van a ser utilizadas en el programa.
+\end{Ejemplo}
+
+\subsection{Funciones de biblioteca y de usuario}{
+Las funciones de biblioteca son aquellas que vienen definidas e implementadas en alguna de las bibliotecas de C. Por ejemplo: \texttt{printf}, \texttt{scanf}, etc.
+
+Por otra parte, las funciones de usuario son aquellas que están definidas e implementadas por el programador y realizan una función determinada para la cual han sido diseñadas.
+}
+\subsection{Comentarios}{
+El lenguaje C permite incluir comentarios dentro del código de cualquier programa. Los comentarios son anotaciones que el programador hace en el programa para explicar y facilitar la comprensión del mismo, con idea de que sea fácilmente entendible por cualquier otro programador distinto al que realiza el programa (o por el propio programador).
+
+Los comentarios ignorados por el compilador cuando convierte el código fuente a código máquina, por lo que no influyen en la ejecución del mismo y pueden ser muy útiles a la hora de corregir un programa o comprender cómo está elaborado.
+
+En C podemos usar dos tipos de comentarios:
+\begin{lstlisting}[language=C]
+/* Este tipo de comentario puede ocupar
+tantas lineas como nos interese. */
+// Este tipo solo puede ocupar una linea
+\end{lstlisting}
+}
+\subsection{Identificadores}{
+Un \textbf{identificador} es el nombre con el que se hace referencia a una variable, constante o función. Cada identificador propio que utilicemos en un programa debe tener un nombre y ha de cumplir las siguientes reglas:
+\begin{itemize}
+	\item La longitud de un identificador puede variar entre 1 y 32 caracteres. El primer carácter ha de ser una letra o "\_", pero nunca un número (los siguientes caracteres si pueden ser números).
+	\item Un identificador no puede contener espacios en blanco.
+	\item Un identificador no puede ser una palabra reservada para el lenguaje C ni tener el mismo nombre que una función que se encuentre en la biblioteca de C.
+	\item El lenguaje C distingue ente mayúsculas y minúsculas.
+	\item Es aconsejable elegir un nombre significativo para una variable o función.
+\end{itemize}
+}
+\section{Tipos, variables y constantes}
+\subsection{Tipos de datos fundamentales}{
+En C existen cinco tipos de datos simples (\texttt{void}, \texttt{char}, \texttt{int}, \texttt{float} y \texttt{double}) y cada cual tiene un rango de valores definido y ocupa un determinado tamaño en memoria.
+\begin{center}
+	\begin{table}[htbp]
+		\begin{center}
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{Tipo} & \textbf{Tamaño (bits)} & \textbf{Rango}  \\
+				\hline 
+				void & 0 & Sin valor\\ \hline
+				char & 8 & $-128$ a 127\\ \hline
+				int & 16 & $-32768$ a 32767\\ \hline
+				float & 32 & $-3.4\cdot10^{38}$ a $3.4\cdot10^{38}$\\ \hline
+				double & 64 & $-1.7\cdot10^{308}$ a $1.7\cdot10^{308}$		\\ \hline	
+			\end{tabular}
+			\caption{Tipos de datos básicos en C.}
+			\label{tabla:Tipos de datos básicos en C}
+		\end{center}
+	\end{table}
+\end{center}
+
+El tipo \texttt{void} se usa generalmente en la declaración de funciones para indicar que la función no devuelve valor alguno y/o para indicar que la función no tiene parámetros.
+
+Todos los tipos básicos, excepto el tipo \texttt{void} y \texttt{float} tienen varios modificadores que alteran el rango de datos del tipo base y son los siguientes:
+\begin{itemize}
+	\item \texttt{signed}: Indica que el tipo base puede ser positivo o negativo.
+	\item \texttt{unsigned}: Indica que el tipo base no tiene signo (solo es positivo).
+	\item \texttt{long}: Indica que el tipo base tiene un tamaño (rango) doble.
+	\item \texttt{short}: Indica que el tipo base tiene un tamaño (rango) corto.
+\end{itemize}
+}
+\subsection{Duración y visibilidad de variables: Modos de almacenamiento}{
+Además del tipo de una variable, el lenguaje C permite indicar como va a ser almacenada la variable. En C existen cuatro modos de almacenamiento fundamentales:
+\begin{itemize}
+	\item \texttt{auto} (automático): Es la opción por defecto y la forma en que se guardan todas las variables que no especificamos cómo queremos que sean almacenadas. No se suele usar debido a que el compilador sobreentiende que si no se ha usado es porque se elige el almacenamiento automático.
+	\item \texttt{extern}: Se aplica a variables globales que ha sido definida con el mismo identificador en otro fichero fuente, se usa en un programa implementado en módulos.
+	\item \texttt{static}: Las variables así declaradas dentro de un bloque conservan su valor entre distintas ejecuciones de este bloque, es decir, permanecen en memoria durante toda la ejecución del programa. Cuando se llama a una función que utiliza variables así declaradas, éstas no pierden su valor inicial.
+	\item \texttt{register}: Las variables así declaradas son almacenadas en los registros de la CPU en lugar de en la memoria, con objeto de que su acceso se más rápido. Se utiliza cuando nos interesa disminuir el tiempo de acceso a una variable y, como consecuencia, hacer que los cálculos que se realicen con ella sean más rápidos.
+\end{itemize}
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+int cuenta() {
+    int valor = 1;		//variable auto
+    static int n = 0;		//variable static
+    if (n < 10)
+        n++;
+    else
+        valor = 0;
+    return valor;
+}
+
+int main() {
+    register int n;		//variable register
+    ...
+    do {
+        ...
+    } while (cuenta() != 0);
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+Si observamos el ejemplo, en la función \texttt{cuenta()} tenemos declaradas dos variables locales \texttt{valor} y \texttt{n}. La variable \texttt{valor} tiene un modo de almacenamiento \texttt{auto} mientras que la variable \texttt{n} está declarada como \texttt{static}. Esto implica que la variable \texttt{valor} sea creada y destruida cada vez que se ejecuta la función \texttt{cuenta()}, mientras que, la variable \texttt{n} es creada e inicializada una única vez (la primera vez que se ejecuta la función \texttt{cuenta()}) y no se destruye cuando la función finaliza.
+
+En la función \texttt{main()} tenemos declarada una variable local \texttt{n} en modo \texttt{register} lo cual, indica al compilador que almacene dicha variable en los registros de la CPU.
+\end{Ejemplo}
+}
+\subsection{Declaración de variables}{
+Para poder usar una variable es necesario declararla previamente ya que en caso de que no lo esté producirá un mensaje de error de compilación. Es posible dar un valor inicial a las variables en el momento de la declaración. Si una variable no es inicializada, el valor asociado a dicha variable es impredecible (basura informática).
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+char letra1, letra2;
+unsigned edad;
+int valor;
+long num_habitantes = 157956;
+float precio = 27.45;
+double microcalculo;
+\end{lstlisting}
+\Explicacion
+Como podemos ver en este ejemplo, el la primera línea hemos declarado dos variables que nos permiten guardar un carácter en cada una de ellas. En la segunda línea declaramos una variable para almacenar la edad de una persona, que, como no puede ser negativa, la declaramos como \texttt{unsigned}. En la tercera línea declaramos una variable para almacenar un valor entero. En la cuarta línea declaramos una variable para almacenar el número de habitantes de una ciudad (declarado como \texttt{long} porque pueden ser más de 32767 habitantes). Finalmente, en las dos últimas líneas creamos dos variables, una para almacenar el precio de un productor y otra para almacenar un valor muy pequeño.
+\end{Ejemplo}
+}
+\subsection{Constantes}{
+Las constantes son datos cuyo valor no puede ser alterado durante la ejecución del programa. Un ejemplo típico de constante es el número PI (3.14159) o la constante de gravitación universal G (9.81).
+
+En el código de un programa en C pueden aparecer diversos tipos de constantes:
+\begin{itemize}
+	\item \textbf{Constantes enteras:} Están formadas por una secuencia de dígitos que representan un número entero. Dichas constantes están sujetas a las mismas restricciones de rangoque las variables de tipo \texttt{int} y \texttt{long}.
+	\item \textbf{Constantes de coma flotante:} Pueden ser de tipo \texttt{float}, \texttt{double} o \texttt{long double} (si no se indica nada se supone de tipo \texttt{double}).
+	\item \textbf{Constantes carácter:} Una constante carácter es un carácter cualquiera encerrado entre comillas simples. El valor de una constante carácter es el valor numérico asignado a ese carácter según el código ASCII. En C no existen constantes de tipo \texttt{char}, lo que se llama aquí constantes carácter son e realidad  constates enteras.
+	\item \textbf{Cadenas de caracteres:} Una cadena de caracteres es una secuencia de caracteres delimitada por comillas dobles (").
+\end{itemize}
+En C existen dos formas de cerar constantes:
+}
+\subsubsection{\texttt{const}}{
+El modificador de acceso \texttt{const} se usa para indicar que una variable no puede cambiar de valor durante la ejecución del programa. Se usa para crear constante,s, únicamente podremos asignar un valor a dichas variables en el momento de la declaración.
+
+Si intentamos modificar el valor de una variable \texttt{const} el compilador dará un mensaje de error en la compilación.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+const int i = 10;	//Declaramos la variable i como constante
+\end{lstlisting}
+\end{Ejemplo}
+}
+\subsubsection{\texttt{define}}{
+Otra forma de crear constantes o macros es mediante la directiva del preprocesador \texttt{\#define} la cual se usa para crear macros.
+
+La sintaxis de \texttt{\#define} es la siguiente:
+
+\texttt{\#define nombre\_macro expresion\_macro}
+
+La directiva \texttt{\#define} no es una sentencia, por lo tanto, no termina en ";".
+
+Las macros se eliminan con la directiva del preprocesador \texttt{\#undef}.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#define TRUE 1
+#define MENSAJE "Pulse una tecla para continuar\n"
+#undef TRUE
+#undef MENSAJE
+\end{lstlisting}
+\Explicacion
+En la línea 1 y 2 se definen las macros \texttt{TRUE} y \texttt{MENSAJE} y en las líneas 3 y 4 se eliminan dichas macros.\\
+\end{Ejemplo}
+Cuando creamos una macro y la usamos, el compilador, al crear el fichero objeto, sustituye dicha macro por su definición cada vez que se la encuentra.
+\newpage
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+#define MENSAJE "Pulse una tecla para continuar\n"
+
+int main() {
+    printf(MENSAJE);
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, el compilador sustituiría la palabra \texttt{MENSAJE} por su valor, por lo que al ejecutar este programa obtendríamos lo siguiente: \texttt{Pulse una tecla para continuar}.
+\end{Ejemplo}
+}
+\section{Operaciones aritmeticológicas}
+Los operadores son símbolos que indican la realización de una determinada operación sobre las variables, constantes o funciones sobre las que actúan en una expresión.
+
+Los operadores pueden clasificarse atendiendo al número de operandos a los que afectan. Según esta clasificación pueden ser \textbf{unarios} o \textbf{binarios}: los primeros afectan a un solo operando mientras que los segundos a dos.
+
+En C podemos distinguir varios tipos deoperadores, clasificados, según el tipo de acción que realizan: aritméticos, relacionales, lógicos y a nivel de bits.
+\subsection{Operador de asignación}{
+El operador de asignación "\texttt{=}"\ es un operador unario. La asignación es la acción que permite establecer un valor a una variable.
+
+La forma general de la sentencia de asignación es la siguiente:
+
+\texttt{<nombre\_variable>\ = <expresion>}
+
+Donde \texttt{expresion} es una constante, una variable o una combinación de ambas. El destino (o parte izquierda de la asignación) ha de ser una variable, no una función ni una constante (que sí podría estar en el lado derecho de la asignación).
+}
+\subsection{Operadores aritméticos}{
+%Los operadores aritméticos se pueden aplicar a constantes, variables y expresiones. Son los siguientes:
+\begin{center}
+	\begin{table}[htbp]
+		\begin{center}
+			\begin{tabular}{|c|l|}
+				\hline
+				\textbf{Operador} & \textbf{Acción}  \\
+				\hline 
+				$+$ (unario) & Suma\\ \hline
+				$-$ (unario) & Resta\\ \hline
+				$*$ (unario) & Multiplicación\\ \hline
+				$/$ (unario) & División\\ \hline
+				$\%$ (unario) & Resto de la división (módulo)\\ \hline
+				$++$ (binario) & Incremento\\ \hline
+				$--$ (binario) & Decremento\\ \hline	
+			\end{tabular}
+			\caption{Operadores aritméticos.}
+			\label{tabla:Operadores aritméticos}
+		\end{center}
+	\end{table}
+\end{center}
+
+\begin{itemize}
+	\item Estos operadores aritméticos se pueden aplicar a constantes, variables y expresiones.
+	\item Cuando el operador división (/) se aplica a operandos de tipo entero o de tipo carácter, se realiza una división entera.
+	\item El operador "\%" proporciona el resto de una división entera, por lo que no puede ser usado con tipos de coma flotante (\texttt{float}, \texttt{double}). Solo se aplica a los tipos entero (\texttt{int}, \texttt{long}).
+	\item Si los operadores de incremento ($++$) o decremento ($--$) aparecen delante de la variable, ésta es incrementada/decrementada antes de que el valor de dicha variable sea utilizado en la expresión en la que aparece. Si por el contrario, el operador aparece detrás de la variable, ésta es incrementada/decrementada después de ser utilizada en la expresión.
+	\item Los operadores del mismo nivel de precedencia son evaluados por el compilador de izquierda a derecha.
+\end{itemize}
+}
+\subsection{Operadores relacionales}{
+Son operadores binarios que permiten comparar unas expresiones con otras, devolviendo el valor 1 cuando es cierta la comparación y 0 en caso contrario.
+
+La forma general de los operadores relacionales es la siguiente:
+
+\texttt{<expresion1>\ operador <expresion2>;}
+
+Donde \texttt{operador} es uno de los siguientes operadores:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|c|l|}
+			\hline
+			\textbf{Operador} & \textbf{Acción}  \\
+			\hline 
+			$>$  & Mayor que\\ \hline
+			$>=$  & Mayor o igual que\\ \hline
+			$<$  & Menor que\\ \hline
+			$<=$  & Menor o igual que\\ \hline
+			$==$  & Igual que\\ \hline
+			$!=$  & Distinto que\\ \hline	
+		\end{tabular}
+		\caption{Operadores relacionales.}
+		\label{tabla:Operadores relacionales}
+	\end{center}
+\end{table}
+}
+\subsection{Operadores lógicos}{
+Son operadores binarios (a excepción de la negación) que permiten combinar de forma lógica los resultados de los operadores relacionales y son los siguientes:\\
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Operador} & \textbf{Acción}  \\
+			\hline 
+			\&\&  & Y\\ \hline
+			| |  & O\\ \hline
+			!  & No\\ \hline	
+		\end{tabular}
+		\caption{Operadores lógicos.}
+		\label{tabla:Operadores lógicos}
+	\end{center}
+\end{table}\\
+La tabla de verdad de los operadores lógicos es la siguiente:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|c|c|l|}
+			\hline
+			\textbf{p} & \textbf{q} & \textbf{p\&\&q} & \textbf{p| |q} & \textbf{!p}  \\
+			\hline 
+			0 & 0 & 0 & 0 & 1\\ \hline
+			0 & 1 & 0 & 1 & 1\\ \hline
+			1 & 0 & 0 & 1 & 0\\ \hline
+			1 & 1 & 1 & 1 & 0\\ \hline	
+		\end{tabular}
+		\caption{Tabla de verdad de los operadores lógicos.}
+		\label{tabla:Tabla de verdad de los operadores lógicos}
+	\end{center}
+\end{table}
+}
+\section{Punteros}
+Una variable puntero es una variable estática como cualquier otra que, en vez de contener valores de datos, contiene valores que representan direcciones de memoria. Estas direcciones, generalmente, representan la dirección de memoria donde se encuentra otra variable. Cuando el puntero contiene la dirección de otra variable decimos que el puntero apunta a dicha variable.
+
+Para que pueda acceder correctamente a la variable a la que apunta, el puntero debe conocer que tipo de datos almacena. Así pues, el tipo del puntero debe coincidir con el de los datos a los que apunta.
+
+El puntero se declara como cualquier otra variable, pero poniendo un asterisco (*) antes del nombre de la siguiente forma:
+
+\texttt{tipo *nombre\_puntero;}
+
+Lo veremos con el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+int *p;
+\end{lstlisting}
+\Explicacion
+En este ejemplo, el asterisco le indica al compilador que \texttt{p} no va a guardar un dato de tipo \texttt{int}, sino una dirección para apuntar a una variable de tipo \texttt{int}.\\
+\end{Ejemplo}
+Los punteros ofrecen las siguientes ventajas:
+\begin{itemize}
+	\item Mediante los punteros las funciones pueden modificar sus argumentos de llamada.
+	\item Son indispensables para soportar las rutinas de asignación dinámica de memoria.
+	\item El uso de punteros permite mejorar la eficiencia de ciertas rutinas.
+	\item Los punteros se usan como soporte para la creación de ciertas estructuras de datos más complejas y dinámicas tales como las listas enlazadas, árboles, etc.
+\end{itemize}
+\subsection{Inicialización de punteros}{
+Al igual que otras variables, C no inicializa los punteros cuando se declaran sino que contienen un valor "basura" que no nos sirve para lo que lo queremos usar. Por lo tanto, es necesario inicializarlos antes de usarlos o hacer que no apunte qa ningún sitio (puntero nulo).
+
+Para hacer que un puntero no apunte a ningún sitio le asignamos un valor especial llamado \texttt{NULL}.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+int *p;
+p = NULL;
+\end{lstlisting}
+\Explicacion
+En este ejemplo, el puntero \texttt{p} no apunta a nada. Utilizar un puntero con un valor \texttt{NULL} es más seguro que utilizar un puntero indefinido.
+\end{Ejemplo}
+}
+\subsection{Los operadores punteros}{
+Existen dos operadores especiales que se usan con los punteros: * y \&.
+
+El operador \& (operador de dirección), aplicado sobre el nombre de una variable, devuelve su dirección de memoria.
+
+Así, por ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+int x, b, *p;
+p = &x;
+\end{lstlisting}
+\Explicacion
+En este ejemplo, se establece la dirección de memoria de la variable \texttt{x} en el puntero \texttt{p}, por lo que \texttt{p} apunta a \texttt{x}. El puntero tiene que ser del mismo tipo que la variable a la que apunta.
+
+Dicha dirección es la posición interna de la variable en la memoria principal del ordenador, por lo tanto no tiene nada que ver con el valor de \texttt{x}. Se puede pensar en el operador \& como devolviendo "la dirección de". ASí, la operación anterior significa: asigna a \texttt{p} la dirección de \texttt{x}.\\
+\end{Ejemplo}
+
+El operador * (operador de contenido) aplicado sobre una dirección de memoria (variable de tipo puntero), permite acceder al dato al que apunta dicho puntero.
+
+Siguiendo con el ejemplo anterior, para asignar el valor de \texttt{x} a otra variable, \texttt{b}, del mismo tipo, podríamos hacer dos cosas:
+
+\texttt{b = x;}
+
+O bien:
+
+\texttt{b = *p;}
+
+Como la variable puntero \texttt{p} contiene la dirección de memoria donde está almacenada la variable \texttt{x}, entonces \texttt{*p} nos devuelve el valor que existe en dicha dirección de memoria.
+
+Por lo tanto podemos pensar en \texttt{*p} como el contenido de la dirección con lo que la sentencia anterior significa: asigna a \texttt{b} el valor contenido en la dirección \texttt{p}.
+
+El concepto importante es comprender que la expresión \texttt{*p} no es más que otra forma de referirse a \texttt{x}. Por lo que cualquier cosa que hagamos con una se verá reflejada en la otra debido a que en realidad son el mismo objeto.
+\newpage
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+/* Ejemplo de manejo de punteros */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int dato, num = 527;	//Variable objetivo
+    int *punt;			//Puntero
+    punt = &num;		//Asigna al puntero punt la direccion de num
+    dato = *punt;		//Asigna a dato el valor contenido en la direccion
+    				de memoria apuntada por punt
+    printf("El valor de num es %d\n", num);
+    printf("El valor de *punt es %d\n", *punt);
+    printf("El valor de dato es %d\n", daato);
+    printf("La direccion de num es %u\n", &num);
+    printf("El valor de punt es %u\n", punt);
+    return 0;
+}  /* Fin del programa */
+\end{lstlisting}
+El resultado en pantalla es el siguiente:
+
+\texttt{El valor de num es 527}\\
+\texttt{El valor de *punt es 527}\\
+\texttt{El valor de dato es 527}\\
+\texttt{La direccion de num es 65627}\\
+\texttt{El valor de punt es 65627}\\
+\Explicacion
+En este ejemplo se declara una variable y un puntero. A continuación, se asigna al puntero la dirección de la variable, y termina accediendo al dato de las dos formas: directa e indirectamente. Obsérvese que en dos \texttt{printf()} usamos el modificador \texttt{\%u (unsigned)} cuando queremos representar direcciones, pues son números de 16 bits sin signo.
+
+Debemos tener en cuenta que si ejecutamos este ejemplo en otro ordenador, la dirección de memoria no tiene que ser la que aquí aparece.\\
+\end{Ejemplo}
+}
+\subsection{Aritmética, asignación y comparación de punteros}{
+Los punteros se pueden sumar, restar, incrementar y decrementar como cualquier otra variable, ya que, en el fondo, las direcciones que almacenan los punteros son números enteros.
+
+La única particularidad que tienen es que la ``unidad'' con la que se opera no es siempre igual a 1 (una celda de memoria), sino que los valores se incrementan o disminuyen en unidades iguales al número de bytes que ocupe el tipo del puntero.
+\begin{Ejemplo}
+Dada la siguiente sentencia:
+
+\texttt{int *p;}
+
+Suponiendo que el puntero \texttt{p} apunta a la dirección 1000.
+
+Si incrementamos de la siguiente forma: \texttt{p++;}
+
+La variable \texttt{p} toma el valor 1002 debido a que el tipo \texttt{int} ocupa 2 bytes.
+\end{Ejemplo}
+}
+\subsection{Punteros a punteros}{
+De la misma forma que existen variables punteros que apuntan a la dirección de memoria de una variable, podemos tener punteros que apunten a la dirección de memoria donde se encuentra otra variable puntero. Es lo que se llama una forma de indirección múltiple o encadenamiento de punteros.
+
+En el caso del puntero normal, el valor del puntero representa la dirección de memoria donde se encuentra la variable a la que apunta. En el caso de un puntero a puntero, el primer puntero contiene como valor la dirección de memoria del segundo puntero, el cual contendrá la dirección de memoria de la variable a al a que apunta.
+
+Para declarar un puntero a puntero tiene que aneponerse un asterisco adiccional delante del nombre de la variable de la siguiente forma:
+
+\texttt{int **datos;}
+
+Donde \texttt{datos} es un puntero a un puntero a entero.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+int main() {
+    int n, *a, **b;
+    n = 10;
+    a = &n;
+    b = &a;
+    printf("&n: %p, n: %d \n", &n, n);
+    printf("&a: %p, a: %p, *a: %d \n", &a, a, *a);
+    printf("&b: %p, b: %p, *b: %p, **b: %d \n", &b, b, *b, **b);
+    return 0;
+}
+\end{lstlisting}
+El resultado en pantalla es el siguiente:
+
+\texttt{\&n: FFD0, n: 10}\\
+\texttt{\&a: FFD2, a: FFD=, *a: 10}\\
+\texttt{\&b: FFD4, b: FFD2, *b: FFD0, **b: 10}\\
+\end{Ejemplo}
+}
+\section{Operaciones básicas de entrada-salida por consola}
+La entrada/salida por consola se refiere a las operaciones que se producen en el teclado (entrada estándar) y la pantalla (salida estándar) de la computadora. El lenguaje C no posee sentencias de entrada/salida sino que utiliza funciones de la librería estándar del compilador \texttt{stdio.h} donde se encuentran definidos los prototipos de estas funciones de entrada/salida.
+\subsection{Funciones para leer o escribir un carácter}{
+Prototipos de funciones que nos permiten leer o escribir un carácter son:
+
+\texttt{int getche (void);}\\
+\texttt{int gecth (void);}\\
+\texttt{int putchar (int c);}\\
+\texttt{int putch (int c);}
+
+Estas funciones están definidas en la librería \texttt{conio.h} y se utilizan para:
+\begin{itemize}
+	\item \textbf{\texttt{getche()}:} Lee un carácter del teclado y lo muestra en pantalla. Esta función espera hasta que se pulsa una tecla y entonces devuelve su valor. No hace falta pulsar ENTER para procesar la tecla pulsada. En el momento en que la tecla es pulsada, ésta es capturada y mostrada en pantalla.
+	\item \textbf{\texttt{getch()}:} Lee un carácter del teclado sin mostrarlo en pantalla. Esta función es idéntica a la función \texttt{getche()} excepto que no muestra en pantalla el carácter introducido.
+	\item \textbf{\texttt{putchar()}:} Imprime un carácter en la pantalla en la posición actual del cursor. Devuelve el carácter escrito si todo va bien o EOF (fin de fichero) si se ha producido un error.
+	\item \textbf{\texttt{putch()}:} Imprime un carácter en la ventana activa, en la posición actual del cursor. Esta función es idéntica a la función \texttt{putchar()} salvo que el carácter se imprime en la ventana activa, en lugar de la pantalla.
+\end{itemize}
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main() {
+    char ch;
+    printf("Introduce una letra: \n");
+    ch = getche();
+    printf("Has pulsado la tecla '%c'\n", ch);
+    printf("Introduce otra letra: \n");
+    ch = getch();
+    system("pause");
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo se muestra el funcionamiento de \texttt{getche()} y \texttt{getch()} descrito anteriormente.
+\end{Ejemplo}
+}
+\subsection{Funciones para leer o escribir una cadena de caracteres}{
+Prototipos de funciones que nos permiten leer o escribir cadenas de caracteres son:
+
+\texttt{chat *gets (char *cad);}\\
+\texttt{char *cgets (char *cad);}\\
+\texttt{char *cputs (const char *cad);}\\
+\texttt{char *puts (conts char *cad);}
+
+En todas ellas \texttt{cad} es una cadena de caracteres (vector de caracteres).
+
+Estas funciones están definidas en la librería \texttt{conio.h} y se utilizan para:
+\begin{itemize}
+	\item \textbf{\texttt{gets()}:} Lee una cadena de caracteres introducida por teclado hasta que se pulsa ENTER (dicho ENTER no forma parte de la cadena).
+	\item \textbf{\texttt{puts()}:} Imprime en pantalla la cadena de caracteres pasada como parámetro. A la cadena pasada como parámetro se le añade un carácter de retorno de carro al final, con lo que tras imprimirlo en pantalla, posiciona el cursor en la siguiente línea.
+\end{itemize}
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main() {
+    char nombre[80];
+    puts ("Introduce tu nombre: ");
+    gets(nombre);
+    puts("Tu nombre es: ");
+    puts(nombre);
+    getch();
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo se muestra el funcionamiento de \texttt{gets()} y \texttt{puts()} descrito anteriormente.
+\end{Ejemplo}
+}
+\subsection{Funciones para leer o escribir con formato}{
+Además de las funciones vistas anteriormente, el estándar ANSI de C define varias funciones de entrada/salida a las cuales se puede aplicar un formato determinado. Estas funciones son \texttt{printf()} y \texttt{scanf()}.
+}
+\subsubsection{\texttt{printf()}}{
+Esta funcion imprime en la salida estándar (la pantalla, por defecto) la cadena indicada como primer argumento junto con el valor de los otros argumentos, tras formatear en dicha cadena el resto de argumentos pasados como parámetros, de acuerdo a los formatos indicados en la cadena de formato. Si se produce algún error devuelve EOF (marca de fin de fichero).
+
+El prototipo de esta función es el siguiente:
+
+\texttt{int printf("cadena\_de\_formato", argumento1, argumento2, ...);}
+
+Los puntos suspensivos indican que pueden existir un número variable de argumentos y la \texttt{cadena\_de\_formato} está formada por caracteres y por órdenes de formato.
+
+Las órdenes de formato indican la forma en la que se muestran los argumentos posteriores. Los principales indicadores de formato son los siguientes:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|c|l|}
+			\hline
+			\textbf{Código} & \textbf{En dicha posición se mostrará:}  \\
+			\hline 
+			\%c  & Un carácter\\ \hline
+			\%i o \%d  & Un entero\\ \hline
+			\%e  & Un número en notación científica\\ \hline
+			\%f  & Un número con decimales (coma flotante)\\ \hline
+			\%g  & Un número en formato \%e o \%f (el más corto)\\ \hline
+			\%o  & Un entero en formato octal\\ \hline	
+			\%s  & Una cadena de caracteres\\ \hline
+			\%u  & Un entero sin signo\\ \hline
+			\%x  & Un entero en formato hexadecimal\\ \hline
+			\%p  & Un puntero\\ \hline
+			\%\%  & El signo \%\\ \hline
+		\end{tabular}
+		\caption{Indicadores de formato de printf()}
+		\label{tabla:Indicadores de formato de printf()}
+	\end{center}
+\end{table}\\
+En la lista de argumentos debe haber exactamente el mismo número de argumentos que de indicadores de formato y ambos han de coincidir en su orden de aparición de izquierda a derecha.
+}
+\subsubsection{\texttt{scanf()}}{
+Esta función permite la entrada por consola de propósito general. Permite leer datos de la entrada estándar (que por defecto es el teclado) e interpretarlos y convertirlos en cualquiera de los tipos de datos que soporta el lenguaje C.
+
+El prototipo de esta función y su funcionamiento es muy similar a la función \texttt{printf()}:
+
+\texttt{int scanf("\%x1\%x2...", \&argumento1, \&argumento2);}
+
+Donde \texttt{x1, x2, ...} son los indicadores de formato, que representan los formatos con los que espera encontrar los datos.
+
+En la lista de argumentos debe haber exactamente el número de argumentos que de indicadores de formato y ambos deben coincidir en su orden de aparición de izquierda a derecha.
+
+Los indicadores de formato son los mismos que los usados en la función \texttt{printf()}.
+\begin{Ejemplo}
+En este ejemplo haremos uso de las funciones \texttt{printf()} y \texttt{scanf()}.
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+    char nombre[20];
+    int edad;
+    float altura;
+    
+    printf("Introduce tu nombre: ");
+    scanf("%19s", nombre);	//Acepta 19 caracteres como maximo
+    fflush(stdin);		//Limpia el flujo de entrada por si queda basura
+    
+    printf("Introduce tu edad: ");
+    scanf("%d", edad);
+    fflush(stdin);
+    
+    printf("Introduce tu altura: ");
+    scanf("%f", altura);
+    fflush(stdin);
+    
+    printf("Tu nombre es: %s\n", nombre);
+    printf("Tienes %d anos y mides %.2f metros.", edad, altura);
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo hay dos aspectos a tener en cuenta:
+\begin{itemize}
+	\item Lo primero es la función \texttt{fflush(stdin);} la cual realiza una limpieza del flujo de entrada para que, si queda basura, el \texttt{scanf()} no tome esa basura, sino el valor que nosotros estamos introduciendo por teclado.
+	\item El segundo se encuentra en las líneas 5 y 10 del código. En la línea 5 reservamos espacio para almacenar 20 caracteres, con lo que podremos introducir un nombre de hasta 19 caracteres debido a que en C, las cadenas de caracteres terminan con un carácter terminador nulo (\textbackslash0), el cual también hay que almacenarlo.
+\end{itemize}
+\end{Ejemplo}
+}
+\subsection{Constantes de carácter con barra invertida}{
+Además de imprimir en pantalla caracteres simples, también podemos enviar a la consola ciertos caracteres especiales. Estas constantes especiales están formadas por la barra invertida (\textbackslash) seguida de un carácter. las principales constantes son las siguientes:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|c|l|}
+			\hline
+			\textbf{Código} & \textbf{Significado}  \\
+			\hline 
+			\textbackslash b  & Espacio atrás\\ \hline
+			\textbackslash f  & Salto de página\\ \hline
+			\textbackslash n  & Salto de línea\\ \hline
+			\textbackslash r  & Retorno de carro\\ \hline
+			\textbackslash t  & Tabulación horizontal\\ \hline
+			\textbackslash "  & Comilla doble\\ \hline	
+			\textbackslash '  & Comilla simple\\ \hline
+			\textbackslash0  & Nulo\\ \hline
+			\textbackslash\textbackslash  & Barra invertida\\ \hline
+			\textbackslash v  & Tabulación vertical\\ \hline
+			\textbackslash a  & Alerta \%\\ \hline
+			\textbackslash o  & Constante octal \%\\ \hline
+			\textbackslash x  & Constante hexadecimal \%\\ \hline
+		\end{tabular}
+		\caption{Constantes de carácter especial.}
+		\label{tabla:Constantes de carácter especial}
+	\end{center}
+\end{table}\\
+
+}

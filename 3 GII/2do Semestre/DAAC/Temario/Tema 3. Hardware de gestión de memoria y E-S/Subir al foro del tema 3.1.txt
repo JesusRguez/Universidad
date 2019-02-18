@@ -1,0 +1,37 @@
+1.) Definir qué elementos nos hacen falta para poder crear un sistema de gestión de memoria paginada-segmentada a nivel de hardware (chipset). Utilizar el esquema previo como guía.
+
+- Un registro para guardar la dirección lógcia.
+
+- Una memoria para guardar la función del segmento.
+
+- Un registro para guardar la dirección del segmento.
+
+- Una memoria para la dirección de la página donde se encuentra el segmento.
+
+- Una memoria para guardar la dirección donde se encuentra el segmento dentro de la página.
+
+- Una memoria para guardar el la dirección de memoria del segmento.
+
+- Divisores de bits para poder realizar las operaciones intermedias entre los registros y las memorias.
+
+
+
+2.) Realizar un esquema funcional (bloques) básico que sirva para desarrollar e implementar lo realizado en las prácticas.
+
+
+
+
+
+3.) Proponer cómo modificar la estructura de paginación previa para introducir un sistema de permisos de acceso.
+
+¿Dónde los almacenaré?
+
+Los bits de permisos de acceso a los segmentos se guardarán en la tabla de segmentos.
+
+¿Qué bits me harán falta?
+
+Como mínimo nos harán falta dos: lectura, escritura, ambos o ninguno de los dos.
+
+¿Cómo se gestionarán? - Elementos de control necesarios.
+
+Estarán controlados por puertas lógicas para que no haya malentendidos con los permisos.

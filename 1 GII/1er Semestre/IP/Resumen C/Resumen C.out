@@ -1,0 +1,93 @@
+\BOOKMARK [0][-]{chapter.1}{Elementos b\341sicos de la programaci\363n en C}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Palabras reservadas del lenguaje C}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Estructura de un programa en C}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Funciones de biblioteca y de usuario}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{Comentarios}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{Identificadores}{section.1.2}% 6
+\BOOKMARK [1][-]{section.1.3}{Tipos, variables y constantes}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.3.1}{Tipos de datos fundamentales}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.2}{Duraci\363n y visibilidad de variables: Modos de almacenamiento}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.3}{Declaraci\363n de variables}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.4}{Constantes}{section.1.3}% 11
+\BOOKMARK [1][-]{section.1.4}{Operaciones aritmeticol\363gicas}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.4.1}{Operador de asignaci\363n}{section.1.4}% 13
+\BOOKMARK [2][-]{subsection.1.4.2}{Operadores aritm\351ticos}{section.1.4}% 14
+\BOOKMARK [2][-]{subsection.1.4.3}{Operadores relacionales}{section.1.4}% 15
+\BOOKMARK [2][-]{subsection.1.4.4}{Operadores l\363gicos}{section.1.4}% 16
+\BOOKMARK [1][-]{section.1.5}{Punteros}{chapter.1}% 17
+\BOOKMARK [2][-]{subsection.1.5.1}{Inicializaci\363n de punteros}{section.1.5}% 18
+\BOOKMARK [2][-]{subsection.1.5.2}{Los operadores punteros}{section.1.5}% 19
+\BOOKMARK [2][-]{subsection.1.5.3}{Aritm\351tica, asignaci\363n y comparaci\363n de punteros}{section.1.5}% 20
+\BOOKMARK [2][-]{subsection.1.5.4}{Punteros a punteros}{section.1.5}% 21
+\BOOKMARK [1][-]{section.1.6}{Operaciones b\341sicas de entrada-salida por consola}{chapter.1}% 22
+\BOOKMARK [2][-]{subsection.1.6.1}{Funciones para leer o escribir un car\341cter}{section.1.6}% 23
+\BOOKMARK [2][-]{subsection.1.6.2}{Funciones para leer o escribir una cadena de caracteres}{section.1.6}% 24
+\BOOKMARK [2][-]{subsection.1.6.3}{Funciones para leer o escribir con formato}{section.1.6}% 25
+\BOOKMARK [2][-]{subsection.1.6.4}{Constantes de car\341cter con barra invertida}{section.1.6}% 26
+\BOOKMARK [0][-]{chapter.2}{Control de flujo del programa}{}% 27
+\BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 28
+\BOOKMARK [1][-]{section.2.2}{Sentencias}{chapter.2}% 29
+\BOOKMARK [1][-]{section.2.3}{Sentencias compuestas \(bloques\)}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.4}{Estructuras de selecci\363n}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.4.1}{if}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.2}{El operador ?}{section.2.4}% 33
+\BOOKMARK [2][-]{subsection.2.4.3}{switch}{section.2.4}% 34
+\BOOKMARK [1][-]{section.2.5}{Estructuras de repetici\363n}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.5.1}{while}{section.2.5}% 36
+\BOOKMARK [2][-]{subsection.2.5.2}{do while}{section.2.5}% 37
+\BOOKMARK [2][-]{subsection.2.5.3}{for}{section.2.5}% 38
+\BOOKMARK [0][-]{chapter.3}{Subprogramas y modularidad}{}% 39
+\BOOKMARK [1][-]{section.3.1}{Introducci\363n}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.2}{Procedimientos y funciones}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.2.1}{\301mbito o alcance de las funciones}{section.3.2}% 42
+\BOOKMARK [1][-]{section.3.3}{Par\341metros y variables locales. Variables globales}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.3.1}{\301mbito o alcance de las variables}{section.3.3}% 44
+\BOOKMARK [2][-]{subsection.3.3.2}{Variables locales}{section.3.3}% 45
+\BOOKMARK [2][-]{subsection.3.3.3}{Par\341metros}{section.3.3}% 46
+\BOOKMARK [2][-]{subsection.3.3.4}{Variables globales}{section.3.3}% 47
+\BOOKMARK [1][-]{section.3.4}{Tiempo de vida}{chapter.3}% 48
+\BOOKMARK [1][-]{section.3.5}{Paso de par\341metros a las funciones}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.5.1}{Par\341metros por valor y por referencia}{section.3.5}% 50
+\BOOKMARK [2][-]{subsection.3.5.2}{Creaci\363n de una llamada por referencia}{section.3.5}% 51
+\BOOKMARK [1][-]{section.3.6}{Prototipos de funciones}{chapter.3}% 52
+\BOOKMARK [1][-]{section.3.7}{Macros como alternativa a las funciones}{chapter.3}% 53
+\BOOKMARK [2][-]{subsection.3.7.1}{\043define para constantes}{section.3.7}% 54
+\BOOKMARK [2][-]{subsection.3.7.2}{\043define para macros}{section.3.7}% 55
+\BOOKMARK [1][-]{section.3.8}{M\363dulos: definici\363n}{chapter.3}% 56
+\BOOKMARK [1][-]{section.3.9}{Secci\363n de includes: Ficheros de cabecera}{chapter.3}% 57
+\BOOKMARK [1][-]{section.3.10}{Compilaci\363n condicional}{chapter.3}% 58
+\BOOKMARK [0][-]{chapter.4}{Estructuras de datos complejas y asignaci\363n de memoria}{}% 59
+\BOOKMARK [1][-]{section.4.1}{Vectores est\341ticos}{chapter.4}% 60
+\BOOKMARK [2][-]{subsection.4.1.1}{Vectores unidimensionales}{section.4.1}% 61
+\BOOKMARK [2][-]{subsection.4.1.2}{Cadena o vector de caracteres}{section.4.1}% 62
+\BOOKMARK [2][-]{subsection.4.1.3}{Vectores multidimensionales: Matrices}{section.4.1}% 63
+\BOOKMARK [2][-]{subsection.4.1.4}{Inicializaci\363n de vectores}{section.4.1}% 64
+\BOOKMARK [1][-]{section.4.2}{Funciones espec\355ficas para el uso de cadenas}{chapter.4}% 65
+\BOOKMARK [1][-]{section.4.3}{Asignaci\363n est\341tica y din\341mica de memoria}{chapter.4}% 66
+\BOOKMARK [2][-]{subsection.4.3.1}{Funciones de asignaci\363n din\341mica en C}{section.4.3}% 67
+\BOOKMARK [1][-]{section.4.4}{Vectores din\341micos}{chapter.4}% 68
+\BOOKMARK [1][-]{section.4.5}{Consideraciones}{chapter.4}% 69
+\BOOKMARK [2][-]{subsection.4.5.1}{Paso de cadenas y vectores a funciones}{section.4.5}% 70
+\BOOKMARK [2][-]{subsection.4.5.2}{Vectores multidimensionales din\341micos}{section.4.5}% 71
+\BOOKMARK [2][-]{subsection.4.5.3}{Vectores de punteros}{section.4.5}% 72
+\BOOKMARK [2][-]{subsection.4.5.4}{Relaci\363n entre vectores y punteros}{section.4.5}% 73
+\BOOKMARK [1][-]{section.4.6}{Estructuras}{chapter.4}% 74
+\BOOKMARK [2][-]{subsection.4.6.1}{Vectores de estructuras}{section.4.6}% 75
+\BOOKMARK [2][-]{subsection.4.6.2}{Paso de estructuras a funciones}{section.4.6}% 76
+\BOOKMARK [2][-]{subsection.4.6.3}{Paso de elementos de estructuras a funciones}{section.4.6}% 77
+\BOOKMARK [2][-]{subsection.4.6.4}{Punteros a estructuras}{section.4.6}% 78
+\BOOKMARK [1][-]{section.4.7}{typedef}{chapter.4}% 79
+\BOOKMARK [0][-]{chapter.5}{Ficheros}{}% 80
+\BOOKMARK [1][-]{section.5.1}{Introducci\363n}{chapter.5}% 81
+\BOOKMARK [2][-]{subsection.5.1.1}{La necesidad de archivar la informaci\363n}{section.5.1}% 82
+\BOOKMARK [2][-]{subsection.5.1.2}{Definiciones de archivos}{section.5.1}% 83
+\BOOKMARK [1][-]{section.5.2}{Tipos de archivos}{chapter.5}% 84
+\BOOKMARK [2][-]{subsection.5.2.1}{En cuanto al m\351todo de acceso}{section.5.2}% 85
+\BOOKMARK [2][-]{subsection.5.2.2}{En cuanto al tipo que almacenan}{section.5.2}% 86
+\BOOKMARK [1][-]{section.5.3}{Operaciones con ficheros}{chapter.5}% 87
+\BOOKMARK [2][-]{subsection.5.3.1}{Declaraci\363n de ficheros l\363gicos}{section.5.3}% 88
+\BOOKMARK [2][-]{subsection.5.3.2}{Asignaci\363n y apertura de ficheros}{section.5.3}% 89
+\BOOKMARK [2][-]{subsection.5.3.3}{Cierre de ficheros}{section.5.3}% 90
+\BOOKMARK [2][-]{subsection.5.3.4}{Lectura}{section.5.3}% 91
+\BOOKMARK [2][-]{subsection.5.3.5}{Escritura}{section.5.3}% 92
+\BOOKMARK [2][-]{subsection.5.3.6}{Acceso directo}{section.5.3}% 93

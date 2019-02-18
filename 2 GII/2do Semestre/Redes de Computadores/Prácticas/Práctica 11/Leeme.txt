@@ -1,0 +1,26 @@
+Para afrontar adecuadamente la práctica de laboratorio Nº 12 es necesario realizar las siguientes actividades en casa:
+
+
+**Actividad 1.- Realizar la PRIMERA PARTE de la hoja de problemas Nº 18.
+
+**Actividad 2.- Leer la siguiente documentación: Analysis of the File Transfer Protocol (FTP) by Priscilla Oppenheimer. http://www.priscilla.com/troubleshootingnetworks/ftpinfo.html
+
+Objetivos de la lectura:
+- Diferenciar una conexión FTP en modo activo de una conexión FTP en modo pasivo.
+- Comprender los usos de los puertos 20 y 21.
+
+**Actividad 3.- Leer la siguiente documentación: Wireshark/Tshark, análisis protocolo FTP by Alfon. https://seguridadyredes.wordpress.com/2009/10/20/wireshark-tshark-analisis-protocolo-ftp/
+
+Objetivos de la lectura:
+- Comprender el análisis de la captura en su totalidad.
+
+**Actividad 4.- Analizar la captura Captura_FTP.pcapng. Los frames capturados son el resultado de una conexión FTP al servidor ftp.uvigo.es. 
+En esta conexión, tras introducir usuario y contraseña, se ha ejecutado el comando ls para mostrar el contenido del directorio raíz. Finalmente, se ha 
+ejecutado el comando get para descargar el archivo welcome.msg. La secuencia de comandos introducidos puede verse en Comandos_ConexionFTP.pdf  
+
+NOTA.- Si quieres realizar tu propia captura, el filtro que hay que introducir en Wireshark para mostrar solo los frames que pertencen a la conexión FTP con ftp.uvigo.es:
+
+(ftp and ip.addr==193.146.32.73) || (tcp and ip.addr==193.146.32.73)
+
+donde 193.146.32.73 es la IP del servidor ftp.uvigo.es
+ 

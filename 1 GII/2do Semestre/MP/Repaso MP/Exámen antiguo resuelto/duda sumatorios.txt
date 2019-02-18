@@ -1,0 +1,68 @@
+alguien me puede explicar de donde sale log en base 2 de raiz de n...no lo veo. gracias
+
+Alvaro: digo lo mismo y tb tengo dudas con el ejercicio 1
+
+es el numero de iteraciones que tiene el bucle, sale de ahi. lo facil para calcularlo,
+es realizar varios ejemplos con varias 'n', para ver el numero de iteraciones. eso se coge con la practica
+
+Alvaro: si pero por ejemplo lo de raiz de n si lo veo..lo q no entiendo es pq es log en base 2 de raiz de n
+
+esteban: normalmente, los bucles con incremento tipo "i<-i*2" se ejecutan "log en base 2 de n".
+
+Alvaro: pero habra alguna forma de demostrarlo o por lo menos de sacarlo...
+
+esteban: no caigo como explicarlo por aqui, yo ya la aprobe en junio xD.
+Yo no me comí mucho la cabeza, vi unos cuantos ejemplos en clases de esos,
+y luego haciendo ejercicios se ve, solo hay q contar las iteraciones de los bucles.
+
+si un bucle con una condicion i<=n (empieza con i=1)
+si se incrementa i<-i+1 se ejecuta n veces
+si se incrementa i<-i+a se ejecuta n/a veces
+si se incrementa i<-i*a se ejecuta log_a n veces
+etc...
+
+Bombi: Como conviertes el sumatorio de alfa/2 en logaritmo en base 2 de n? Gracias
+
+Marcos: Pues el 2º sumatorio tiene alfa/2 y eso se multiplica por el 5 y luego como el primer sumatorio engloba al segundo, pues lo que esta 
+en el primero pasa al segundo, nose si me explico.
+
+t(n) = 4 + E [ 6 + E [ 5 ] ] es algo asi.
+
+Marcos: Como se ponen en los ejercicios de orden de complejidad (tc+ta...) las t cuando nos encontramos un if y else??
+
+Alvaro: yo las pondria como tc pq son comparaciones
+
+Marcos: Si pero en las transparencias hay un ejemplo y las pone como tu dices pero nose muy bien si se pondrian las del if o las del else o de los 2, en el ejemplo 
+solo pone el del if creo.
+O por ejemlo si te pone un ejercicio asi:
+Calcular el orden de complejidad del algoritmo en función del valor de n:
+	a) Suponiendo que el tiempo de la función producto es constante.
+	b) Suponiendo que el tiempo de la función producto estará en O(n).
+Que significan el apartado a y b, o en que se suponen que influyen en el programa??
+
+Alvaro: supongo q sera de los 2 no estoy seguro...y lo d la otra pregunta pues influye q si esta en el orden de n lo mas logico es q haya q ponerlo como una operacion, normalmente en esos ejercicios te pondra una variable desconocida como en el examen d junio (la d opera)..pero amos q tampoco estoy mu seguro eh
+
+Alvaro: marcos tengo otra duda!! en el segundo sumatorio pq es alfa/2 pq si aces 5/2 da 2 y no 3 q es lo q se ejecuta el bucle interno!! y otra cosa...como pasas de tener 29/4 * log raiz (n) y 5/4* (log raiz (n))^2 a lo siguiente?
+
+MArcos: el alfa/2 sale del bucle interno que x=x-2 xk si es suma o resta se ejecuta n veces/de lo k sumes o restes, si multiplica o divide es logaritmo en base de lo k multipliques o dividas.
+
+ejemplo:
+
+x=x-2 se ejecuta n/2 veces
+x=x+4 se ejecuta n/4 veces
+x=x*3 se ejecuta log3 n veces
+es que si haces la traza jamas vas a saber si se ejecuta log 2 n mirando la traza.
+
+lo otro es 5/4Log2 raiz(n)^2 pues el elevado multiplica por el 5 y la raiz multiplica al 4 y te queda 10/8 y en el otro 29/4Log2 raiz(n) la raiz se kita y multiplica al 4 y te queda 29/8 sumas y te queda 39/8.
+
+No se si me entiendes jeje.
+
+Andres Kamela: si te fijas raiz(n) es lo mismo que n^(1/2), por lo que 1/2 pasaria a multiplicar a 5/4 quedando 5/8. Una vez k tengas esto el exponente k seria 2 lo multiplicas por 5/8 para quitarte la potencia den en medio, kedando 10/8. PD: no veas si es xungo explicarlo x aki)ç
+
+Alvaro: vale gracias a los 2..la verda es q con la d andres me lio menos jeje!! y bueno si en vez de alfa/2 pusiera n/2 tb estaria bien no?
+
+Andres Kamela: el motivo de poner alfa/2 en lugar de n/2, por lo que yo entiendo, es que se pone uno envede otro por no repetir la variable, porque a la hora de hacer los calculos va a salir el mismo resultado.
+
+Alvaro: es q lo pregunto pq he visto ejercicios (resueltos en clase) que en si por ejemplo en vez d n/2 es n lo pone como n y no como alfa
+
+Andres: pero afecta al resultado?

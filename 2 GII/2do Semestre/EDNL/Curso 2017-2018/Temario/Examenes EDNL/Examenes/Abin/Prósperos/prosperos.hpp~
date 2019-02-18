@@ -1,0 +1,97 @@
+/*Contar nodos prosperos*/
+
+/*Un nodo es prospero si es mas rico que sus ancestros y 
+  mas pobre que sus descendientes */
+
+template<class T>
+int cuentaProsperos(const Abin<T>& A)
+{ return cuentaProsperosRec(A.raizB(), A); }
+
+template<class T>
+int cuentaProsperosRec(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    if(n == A.NODO_NULO)
+        return 0;
+    else
+    {
+        if(esProspero(n, A))
+            return 1 + cuentaProsperosRec(A.hijoIzqdoB(n), A)
+                + cuentaProsperosRec(A.hijoDrchoB(n), A);
+        else 
+            return cuentaProsperosRec(A.hijoIzqdoB(n), A)
+                + cuentaProsperosRec(A.hijoDrchoB(n), A);
+    }
+}
+
+template<class T>
+bool esProspero(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    T valor = A.elemento(n);
+
+    unsigned n_anc = numAncestros(n, A);
+    unsigned n_des = numDescendientes(n, A);
+
+    unsigned n_ancRicos = numAncestrosRicos(n, valor, A);
+    unsigned n_desPobres = numDescendientesPobres(n, valor, A);
+    
+    if(n_anc == n_des) //solo hay un nodo
+        return true;
+    else
+    {
+        if(n_anc > 0 and n_des > 0) //nodo intermedio del arbol
+            if(n_anc == n_ancRicos and n_des == n_desPobres)
+                return true;
+            else
+                return false;
+        else if(n_anc > 0 and n_des == 0) //nodo hoja
+            if(n_anc == n_ancRicos)
+                return true;
+            else
+                return false;
+        else if(n_and == 0 and n_des > 0)
+            if(n_des == n_desPobres)
+                return true;
+            else
+                return false;
+    }
+}
+
+template<class T>
+int numAncestros(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    if(n == A.raizB())
+        return 0;    
+    else
+        return 1 + numAncestros(A.padreB(n), A);
+}
+
+template<class T>
+int numAncestrosRicos(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    if(A.padre(n) == A.NODO_NULO)
+        return 0;
+    else
+        if(A.elemento(n) > A.elemento(A.padreB(n)))
+            return 1 + numAncestrosRicos(A.padreB(n), A);
+        else
+            return numAncestrosRicos(A.padreB(n), A);
+}
+
+template<class T>
+int numDescendientes(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    if(n == A.NODO_NULO)
+        return 0;
+    else 
+        return 1 + numDescendientes(A.hijoIzqdoB(n), A) 
+            + numDescendientes(A.hijoDrchoB(n), A);
+}
+
+template<class T>
+int numDescendientesPobre(typename Abin<T>::nodo n, const Abin<T>& A)
+{
+    if(A.hijoIzqdoB(n) == A.NODO_NULO and A.hijoDrchoB(n) == A.NODO_NULO)
+        return 0;
+    else if(A.hijoIzqdoB(n) == A.NODO_NULO and A.hijoDrchoB(n) != A.NODO_NULO)
+        if(A.elemento(n) < (A.hijoDrchoB(n)) 
+}

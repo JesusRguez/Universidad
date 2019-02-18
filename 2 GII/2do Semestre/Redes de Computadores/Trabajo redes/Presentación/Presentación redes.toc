@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Planos de cableado horizontal}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Planta baja}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Planta alta}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{Etiquetado}{6}{0}{1}
+\beamer@sectionintoc {2}{Plano de conexi\IeC {\'o}n}{7}{0}{2}
+\beamer@sectionintoc {3}{Plano de cableado vertical}{8}{0}{3}
+\beamer@sectionintoc {4}{Distribuidores}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Rack 0}{9}{0}{4}
+\beamer@subsectionintoc {4}{2}{Rack 1}{11}{0}{4}
+\beamer@sectionintoc {5}{Preguntas}{12}{0}{5}

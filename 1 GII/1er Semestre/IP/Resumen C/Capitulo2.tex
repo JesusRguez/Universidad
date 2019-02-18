@@ -1,0 +1,372 @@
+\chapter{Control de flujo del programa}
+\setcounter{section}{0}
+\section{Introducción}
+Las sentencias de un programa en C se ejecutan una detrás de otra en el orden en el que éstas aparecen en el código fuente, a menos que una sentencia de control de flujo cambie ese orden. Con el fin de dirigir el flujo de ejecución del programa, C ofrece varias sentencias de control de flujo. Estas sentencias se basan en la evaluación de una prueba condicional que determina la acción a realizar. Una prueba condicional produce o bien un valor cierto o un valor falso. En C cualquier valor distinto de cero es cierto, siendo el cero el único valor falso.
+\section{Sentencias}
+Una sentencia en C es una expresión (combinación de operadores y operandos) terminada en punto y coma (;).
+
+Las sentencias más comunes son las que incluyen expresiones de asignación, expresiones de función o una combinación de ambas.
+\section{Sentencias compuestas (bloques)}
+Una sentencia compuesta o bloque es un grupo de sentencias agrupadas entre llaves (\{ y \}). Las llaves se utilizan para agrupar declaraciones y sentencias dentro de un bloque, de modo que son sintácticamente equivalentes a una sentencia simple.
+
+Los bloques presentan la siguiente sintaxis:
+\begin{lstlisting}[language=C]
+{  //Comienzo del bloque
+    [directivas]	//directivas del preprocesador: #include, etc.
+    [declaraciones]	//declaraciones de variables locales
+    [sentencias]	//conjunto de sentencias
+}  //Final del bloque
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item Pueden declararse variables dentro de un bloque. Estas variables serán locales a dicho bloque, es decir, sólo podrán usarse dentro de del bloque en el que han sido declaradas.
+	\item Puede existir un bloque nulo, es decir, un bloque sin directivas, ni declaraciones ni sentencias.
+	\item Un bloque no termina en punto y coma, ya que  éste solo se emplea para terminar las sentencias de expresión.
+\end{itemize}
+Las sentencias compuestas o bloques se utilizan con frecuencia en combinación con las estructuras de selección y de repetición, cuando nos interesa que un conjunto de instrucciones se ejecuten al cumplirse o mientras que se cumple una determinada condición.
+\section{Estructuras de selección}
+Las estructuras de selección nos permiten dirigir el flujo de ejecución de un programa a un determinado bloque de sentencias u otro en función del resultado de la evaluación de una expresión o condición.
+
+Las estructuras de selección que nos ofrece el lenguaje C son las siguientes:
+\subsection{\texttt{if}}{
+Esta sentencia se utiliza para expresar decisiones. Permite ejecutar un conjunto de sentencias y otro en función de si se cumple o no una determinada condición.
+
+La sintaxis general es la siguiente:
+\begin{lstlisting}[language=C]
+if (condicion)
+    sentencia1;	//se ejecuta si condicion es verdadera
+else
+    sentencia2;	//se ejecuta si condicion es falsa
+\end{lstlisting}
+En esta sintaxis podemos destacar lo siguiente:
+\begin{itemize}
+	\item \texttt{condicion} es una expresión cuyo valor es un entero (0=falso, <>0=verdadero).
+	\item \texttt{else} es una palabra clave opcional, es decir, la parte \texttt{else} es optativa (podemos tener una setnencia \texttt{if} que no tenga asociado ningún \texttt{else}).
+	\item \texttt{sentencia1} y \texttt{sentencia2} es una sentencia o un conjunto de sentencias (bloques).
+\end{itemize}
+El funcionamiento de la sentencia \texttt{if} es el siguiente:
+
+Una vez evaluada la condición pueden suceder dos cosas:
+\begin{itemize}
+	\item Si es verdadera (tiene un valor distinto de cero), se ejecuta el bloque de sentencias asociado al \texttt{if}.
+	\item Si es falsa (expresión igual a cero), se ejecuta, si existe, el bloque de sentencias asociado al \texttt{else} (si no existe no se ejecuta nada).
+\end{itemize}
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int edad;
+    printf("Introduce tu edad: ");
+    scanf("%i", &edad);
+    if(edad >= 100)
+        printf("Eres muy mayor.\n");
+    else
+        printf("Aun no has vivido un siglo.\n");
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo podemos ver como se pide al usuario que introduzca su edad y en función de si la condición (línea 8) es verdadera o falsa mostrará en pantalla una u otra expresión.
+\end{Ejemplo}
+}
+\subsubsection{\texttt{if} anidados}{
+Una sentencia \texttt{if} puede tener anidada otra sentencia \texttt{if} en su interior y así sucesivamente.
+
+En el siguiente ejemplo podemos ver un caso de \texttt{if} anidados.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float nota;
+    float practica;
+    printf("Introduce la nota del alumno: ");
+    scanf("%i", &nota);
+    if (nota < 5)
+    {
+        if (practica > 6)
+            nota = nota + 1;
+        else
+            nota = nota - 0.5;
+    }
+    printf("La nota final del alumno es %.2f.", nota);
+return 0;
+}
+\end{lstlisting}
+\Explicacion
+Como vemos en el ejemplo, si un alumno suspende, puede ver incrementada su nota en un punto si en las prácticas ha sacado más de un seis. Si en las prácticas ha sacado menos de un seis, encima de que no ha aprobado, su nota se penaliza en medio punto. Para aquellas personas que han aprobado, su nota no se ve alterada en nada por el resultado de las prácticas.
+\end{Ejemplo}
+}
+\subsubsection{\texttt{if}...\texttt{else} múltiples}{
+Es la forma más general de escribir una decisión múltiple, de forma que solo se ejecuta, de entre todas las existentes, aquella sentencia o bloque de sentencias que cumpla la condición impuesta.
+
+El funcionamiento es el siguiente:
+
+Las condiciones se evalúan en el orden en el que aparecen y en el momento en el que una de las condiciones se cumple (es verdadera), la sentencia o bloque asociada con ella se ejecuta, siguiendo posteriormente la ejecución del programa en la instrucción siguiente existente fuera del bloque \texttt{if} (se pasa por alto el resto de sentencias \texttt{else} restantes).
+
+Para entenderlo bien veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+    int main() {
+    float nota;
+    printf("Introduce tu nota: ");
+    scanf("%i", &nota);
+    if (nota == 10)
+    {
+        puts("Matricula de honor.");
+        puts("Enhorabuena.");
+    }
+    else if (nota >= 9)
+    {
+        puts("Sobresaliente.");
+        puts("Muy bien hecho.");
+    }
+    else if (nota >= 7)
+        puts("Notable.");
+    else if (nota >= 5)
+        puts("Aprobado.");
+    else
+    {
+        puts("Suspenso.");
+        puts("Lo siento mucho.");
+    }
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, solo se ejecuta aquella sentencia o bloque de sentencias asociadas a la condición que se cumple. El resto de sentencias existentes en las restantes condiciones no se ejecutan.
+\end{Ejemplo}
+}
+\subsection{El operador \texttt{?}}{
+Podemos usar el operador ternario \texttt{?} para reemplazar una sentencia \texttt{if else}, siempre y cuando la parte asociada al \texttt{if} y al \texttt{else} sean expresiones simples. Al ser un operador ternario usa tres operandos y tiene la siguiente sintaxis:
+
+\texttt{condicion ? expresion1 : expresion2;}
+
+Una vez que la condición se evalúa tenemos:
+\begin{itemize}
+	\item Si la condición es cierta, se ejecuta \texttt{expresion1} y se convierte en el valor de la expresión completa.
+	\item Si la condición es falsa, se ejecuta \texttt{expresion2} y su valor se convierte en el valor de la expresión completa.
+\end{itemize}
+Un ejemplo con este operador es el siguiente:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num = 25, valor;
+    printf("Adivina el numero: ");
+    scanf("%d", &valor);
+    valor == num ? printf("Has acertado.") : printf("No has acertado.");
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+Como podemos observar, el operador \texttt{?} contiene dos mensajes, el primero para cuando se cumple la condición y el segundo para cuando no se cumple la condición.
+\end{Ejemplo}
+}
+\subsection{\texttt{switch}}{
+Una alternativa al uso de construcciones \texttt{if...else} múltiples es el uso de la sentencia \texttt{switch}. Esta sentencia es una estructura de decisión múltiple que comprueba si una expresión coincide con uno de los valores constantes enteros especificados en cada una de las etiquetas que contiene, y traslada el control de ejecución al conjunto de instrucciones contenidas en al correspondiente etiqueta.
+
+La sintaxis de la sentencia \texttt{switch} es la siguiente:
+\begin{lstlisting}[language=C]
+switch(expresion_entera)
+{
+    case constante1: sentencia1; [break;]
+    case constante2: sentencia2; [break;]
+    ...
+    case constanteN: sentenciaN; [break;]
+    [default: sentencia;]	//Opcional
+}
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{expresion\_entera} es una expresión cuyo valor es un entero.
+	\item \texttt{constante1...constanteN} es un valor o expresión constante entera, es decir, no contiene variables.
+	\item \texttt{default} es una etiqueta opcional.
+	\item \texttt{sentencia1...sentenciaN} es una sentencia o un conjunto de sentencias (bloques).
+	\item \texttt{break} es una sentencia opcional que rompe el \texttt{switch} para que no se sigan ejecutando el resto de sentencias \texttt{case}.
+\end{itemize}
+Cuando se ejecuta la sentencia \texttt{switch}, se evalúa \texttt{expresion\_entera} y se compara con cada una de las constantes etiquetadas en los \texttt{case}. Si una de las constantes de los \texttt{case} coincide con el valor de \texttt{expresion\_entera}, el control del programa es transferido a las sentencias de dicha etiqueta \texttt{case} ejecutándose todas sus sentencias y las del resto de case existentes desde ese punto hasta el final de la sentencia \texttt{switch}, a menos que una sentencia \texttt{break} rompa el \texttt{switch} y transfiera el control a la sentencia inmediatamente posterior al bloque \texttt{switch}.
+
+Si ninguna de las sentencias \texttt{case} coincide con \texttt{expresion\_entera}, se ejecutan las sentencias contenidas en la etiqueta \texttt{default} en el caso de que existiese.
+
+Si ningún \texttt{case} coincide con \texttt{expresion\_entera} y no existe la etiqueta \texttt{default}, entonces no se ejecuta ninguna acción dentro del \texttt{switch}, sino que continúa la ejecución del programa por el conjunto de sentencias existentes a continuación de la estructura \texttt{switch}.
+
+Un uso muy común de la sentencia \texttt{switch} es la creación de un menú como vemos en el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+void ver_menu() {
+    char c;
+    printf("1. Insertar.\n");
+    printf("2. Modificar.\n");
+    printf("3. Eliminar.\n");
+    printf("Introduzca una opcion: ");
+    scanf("%c", &c);
+    switch(c)
+    {
+        case '1': insertar();	//Llamada a la funcion insertar
+            break;
+        case '2': modificar();	//Llamada a la funcion modificar
+            break;
+        case '3': elmiminar();	//Llamada a la funcion eliminar
+            break;
+        default: printf("Elija una opcion correcta.");
+    }
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, en función de la tecla pulsada (opción elegida), se ejecutará una u otra función.
+
+Al igual que en este ejemplo se han utilizado los \texttt{case} para llamar a otras funciones también podemos escribir código normal en función de cada \texttt{case}.\\
+
+\end{Ejemplo}
+Con respecto a la sentencia \texttt{switch} hay que tener en cuenta lo siguiente:
+\begin{itemize}
+	\item No siempre es posible sustituir una construcción \texttt{if...else} múltiple por una sentencia \texttt{switch} debido a que ésta solo puede comprobar la igualdad, mientras que el \texttt{if...else} múltiple puede evaluar cualquier tipo de expresión relacional o lógica.
+	\item Todos los \texttt{case} pertenecientes al mismo \texttt{switch} deben tener valores diferentes.
+	\item Pueden existir etiquetas \texttt{case} vacías, en ese caso se ejecutarán las sentencias existentes en la etiqueta \texttt{case} siguiente a no ser que exista una sentencia \texttt{break}.
+	\item Una sentencia \texttt{switch} puede tener anidada otra sentencia \texttt{switch} (o cualquier otra estructura de selección o repetición) en alguno de sus \texttt{case}. En este caso, las constantes \texttt{case} existentes en el \texttt{switch} anidado pueden tener el mismo valor que la de los \texttt{case} del \texttt{switch} más exterior, ya que son independientes.
+\end{itemize}
+}
+\section{Estructuras de repetición}
+Las estructuras de repetición nos permiten iterar el flujo de ejecución de un programa dentro de un de terminado bloque de sentencias mientras que se verifique una determinada condición o expresión. De modo genérico, a estas sentencias se las denomina bucles y son las siguientes:
+\subsection{\texttt{while}}{
+Esta sentencia permite ejecutar repetidamente, mientras se cumpla una determinada condición, una sentencia o bloque de sentencias y su sintaxis es la siguiente:
+\begin{lstlisting}[language=C]
+while (condicion) {
+    sentencia_bloque;	//Se ejecuta mientras se verifique la condicion
+}
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{condicion} es una expresión cuyo valor es un entero (0=falso, <>0=verdadero).
+	\item \texttt{sentencia\_bloque} es una sentencia simple, una sentencia de control condicional o iterativa, o un conjunto de sentencias (bloque).
+\end{itemize}
+Las llaves no son necesarias si solo existe una sentencia asociada al bucle \texttt{while}. Si son varias sentencias las que queremos que se ejecuten cuando la condición del bucle sea verdad, debemos usar las llaves para así formar un bloque de sentencias.
+
+La sentencia o bloque de sentencias se ejecuta repetidamente mientras que se verifique \texttt{condicion} (mientras que \texttt{condicion} sea distinta de cero). La expresión de \texttt{condicion} es evaluada antes de la ejecución de las sentencias, de manera que si no se verifica la expresión, no se ejecutan las sentencias del bucle \texttt{while}. Es decir, en cada iteración, antes de ejecutar las sentencias se vuelve a evaluar \texttt{condicion} y en función del resultado de la evaluación se ejecutarán las sentencias o se terminará el bucle.
+
+Una vez terminado el bucle, el flujo del programa continúa por las sentencias existentes a continuación del bucle \texttt{while}.
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int i=1;
+    char tecla;
+    tecla = getch();
+    while (tecla != 's' && i <= 20) {
+        printf("%d\n", i++);
+        tecla = getch();
+    }
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, antes de imprimir un número, el programa espera la pulsación de una tecla. Si la tecla pulsada es distinta de la letra 's', imprime un valor entero, empezando por el uno e incrementa dicho valor, repitiendo este proceso una y otra vez hasta que el usuario pulse la tecla 's' o hasta que haya pulsado un total de 20 teclas.
+
+Si nunca pulsamos la tecla 's', el bucle irá iterando una y otra vez y en cada iteración se irá incrementando en una unidad la variable \texttt{i}, por lo que cuando llevemos un total de 20 iteraciones, la variable \texttt{i} alcanzará el valor 21. Esto provocará que el bucle termine al dejar de verificarse la condición \texttt{i <= 20}.
+\end{Ejemplo}
+}
+\subsection{\texttt{do while}}{
+Esta sentencia es similar a la sentencia \texttt{while}, excepto que la condición se evalúa después de haberse ejecutado la sentencia o bloque de sentencias existentes en el bucle. Su sintaxis es la siguiente:
+\begin{lstlisting}[language=C]
+do {
+    sentencia_bloque;
+} while (condicion);
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{condicion} es una expresión cuyo valor es un entero (0=falso, <>0=verdadero).
+	\item \texttt{sentencia\_bloque} es una sentencia simple, una sentencia de control condicional o iterativa, o un conjunto de sentencias (bloque).
+\end{itemize}
+Al igual que en la sentencia \texttt{while} las llaves no son necesarias cuando solo hay una sentencia. No obstante, se suelen utilizar para evitar confusiones con el bucle \texttt{while}.
+
+Al contrario que con el bucle \texttt{while} la sentencia o bloque de sentencias se ejecuta al menos una vez, ya que la ecaluación de la condición se produce con posterioridad. Al final de cada iteración, la expresión de \texttt{condicion} es evaluada de nuevo y mientras que esta se verifique (mientras que \texttt{condicion} sea distinta de cero) se seguirá ejecutando el bucle. Una vez terminado el bucle (por dejarse de cumplir \texttt{condicion}), el flujo del programa continua por las sentencias existentes a continuación del bucle \texttt{do while}.
+
+El bucle \texttt{do while} se usa frecuentemente junto con el \texttt{switch} para procesar menús. Podemos verlo en acción en el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+void ver_menu() {
+    char c;
+    do {
+        printf("1. Insertar.\n");
+        printf("2. Modificar.\n");
+        printf("3. Eliminar.\n");
+        printf("4. Salir.\n");
+        printf("Introduzca una opcion: ");
+        scanf("%c", &c);
+        switch(c)
+        {
+            case '1': insertar();	//Llamada a la funcion insertar
+                break;
+            case '2': modificar();	//Llamada a la funcion modificar
+                break;
+            case '3': elmiminar();	//Llamada a la funcion eliminar
+                break;
+            case '4': break;
+            default: printf("Elija una opcion correcta.");
+        }
+    } while (c != '4');
+}
+\end{lstlisting}
+\Explicacion
+Este ejemplo es una adaptación del utilizado en el apartado de la sentencia \texttt{switch}. El programa mostrará el menú hasta que no se seleccione una de las cuatro opciones. Para salir, solo hay que elegir la opción 4.
+\end{Ejemplo}
+}
+\subsection{\texttt{for}}{
+Esta sentencia es el bucle más flexible y utilizado en el lenguaje C. Este bucle es utilizado cuando el número de veces que debe ser repetida la sentencia o bloque del bucle está definido, o cuando las sentencias de un bucle \texttt{while} o \texttt{do while} se repitan un número indefinido de veces. Por lo tanto, cualquier sentencia \texttt{while} puede ser transformada en una sentencia \texttt{for} de forma mecánica y sin ninguna ambigüedad.
+
+La sintaxis de la sentencia \texttt{for} es la siguiente:
+\begin{lstlisting}[language=C]
+for (inicializacion; condicion; incremento)
+    sentencia_bloque;	//Se ejecuta mientras condicion es verdad
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{inicializacion} es una expresión que normalmente inicializa el bucle.
+	\item \texttt{condicion} es una expresión cuyo valor es un entero y determina si el bucle se ejecuta o no.
+	\item \texttt{incremento} es una expresión que incrementa o decrementa el índice del bucle cada vez que éste se itera.
+	\item \texttt{sentencia\_bloque} es una sentencia simple, una sentencia de control condicional o iterativa, o un conjunto de sentencias (bloque).
+\end{itemize}
+Cualquiera de las tres partes del bucle \texttt{for} se puede omitir, aunque deben permanecer los puntos y comas (;). Si \texttt{condicion} se omite, se toma como que \texttt{condicion} siempre se verifica, por lo que en principio un bucle \texttt{for} sin \texttt{condicion} es un bucle infinito, es decir, un bucle que siempre se ejecutará, a menos que sea interrumpido por otros medios, como un \texttt{break} o un \texttt{return}.
+
+Las expresiones de \texttt{inicializacion}, \texttt{condicion}, e \texttt{incremento} de una sentencia \texttt{for} se evalúan en el siguiente orden:
+\begin{enumerate}
+	\item La expresión de \texttt{inicializacion} solo se evalúa una vez, al entrar en el \texttt{for}.
+	\item A continuación se evalúa \texttt{condición}.
+	\item Si \texttt{condicion} es verdadera, la \texttt{sentencia\_bloque} del bucle se ejecuta.
+	\item A continuación se ejecuta la expresión de \texttt{incremento}.
+	\item Los pasos 2, 3 y 4 se repiten hasta que \texttt{condicion} sea falsa.
+\end{enumerate}
+Una vez terminado el bucle, el flujo del programa continúa por las sentencias existentes a continuación del bucle \texttt{for}.
+
+Para ver su funcionalidad observemos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int i, j;
+    for (i = 1; i <= 10; i++)
+    {
+        printf("La tabla del %d es:\n",i);
+        for (j = 1; j <= 10; j++)
+            printf("%d x %d = %d\n", i, j, i*j);
+    }
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo podemos ver como tenemos un bucle \texttt{for} dentro de otro bucle \texttt{for} que van pasando por todos los números naturales del 1 al 10 (ambos inclusive) y por pantalla se van mostrando las tablas de multiplicar de los 10 primero números naturales.
+\end{Ejemplo}
+}

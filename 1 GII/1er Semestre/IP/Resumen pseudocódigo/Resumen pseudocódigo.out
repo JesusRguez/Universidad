@@ -1,0 +1,44 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Estructura del pseudoc\363digo}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Variables y expresiones}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Variables y constantes}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Asignaciones y expresiones aritm\351ticas}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Expresiones l\363gicas}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Lectura y escritura}{subsection.1.2}% 7
+\BOOKMARK [1][-]{section.2}{Programaci\363n estructurada}{}% 8
+\BOOKMARK [2][-]{subsection.2.1}{Caracter\355sticas de la programaci\363n estructurada}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.2}{Estructura secuencial}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Estructura selectiva}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Simple}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Doble}{subsection.2.3}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.3}{M\372ltiple}{subsection.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.4}{Estructuras repetitivas}{section.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Mientras}{subsection.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Repetir}{subsection.2.4}% 17
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Desde}{subsection.2.4}% 18
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Aclaraci\363n de las estructuras repetitivas}{subsection.2.4}% 19
+\BOOKMARK [2][-]{subsection.2.5}{Estructuras anidadas}{section.2}% 20
+\BOOKMARK [1][-]{section.3}{Abstracci\363n operacional}{}% 21
+\BOOKMARK [2][-]{subsection.3.1}{Subalgoritmos}{section.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Funciones}{subsection.3.1}% 23
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Procedimientos}{subsection.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.2}{\301mbito y persistencia de variables}{section.3}% 25
+\BOOKMARK [3][-]{subsubsection.3.2.1}{\301mbito local}{subsection.3.2}% 26
+\BOOKMARK [3][-]{subsubsection.3.2.2}{\301mbito global}{subsection.3.2}% 27
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Persistencia de variables}{subsection.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.3}{Correspondencia entre argumento y par\341metro formal}{section.3}% 29
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Paso por valor}{subsection.3.3}% 30
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Paso por referencia}{subsection.3.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Efectos laterales}{subsection.3.3}% 32
+\BOOKMARK [1][-]{section.4}{Tipos de datos}{}% 33
+\BOOKMARK [2][-]{subsection.4.1}{Tipos de datos estructurados}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Momento de reserva de memoria}{subsection.4.1}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Tipos de datos que forman la estructura}{subsection.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.2}{Vectores y matrices}{section.4}% 37
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Vectores. Matrices unidimensionales}{subsection.4.2}% 38
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Matrices multidimensionales}{subsection.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.3}{Cadenas de caracteres}{section.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Operaciones con cadenas de caracteres}{subsection.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.4}{Registros}{section.4}% 42
+\BOOKMARK [2][-]{subsection.4.5}{Ficheros}{section.4}% 43
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Apertura de un fichero}{subsection.4.5}% 44

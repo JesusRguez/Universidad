@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{A good exapmle: Ketera}{2}{0}{1}
+\beamer@sectionintoc {2}{Factors}{3}{0}{2}
+\beamer@sectionintoc {3}{Legal problems}{4}{0}{3}
+\beamer@sectionintoc {4}{How to choose the place?}{5}{0}{4}
+\beamer@sectionintoc {5}{Beneffits of offshoring}{6}{0}{5}
+\beamer@sectionintoc {6}{Summary}{7}{0}{6}

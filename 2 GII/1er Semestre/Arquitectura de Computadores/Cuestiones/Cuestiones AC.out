@@ -1,0 +1,37 @@
+\BOOKMARK [1][-]{section.1}{Contrastar SISD, SIMD y MIMD}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{SISD}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{SIMD}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{MIMD}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Memoria compartida \(multiprocesadores\)}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Memoria distribuida \(multicomputadores\)}{subsection.1.3}% 6
+\BOOKMARK [1][-]{section.2}{Arquitectura escalar vs Arquitectura vectorial}{}% 7
+\BOOKMARK [1][-]{section.3}{Arquitectura vectorial: Procesador con extensiones SIMD vs Procesador vectorial}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Procesador con extensiones SIMD}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Procesador vectorial}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Paralelismo subword}{}% 11
+\BOOKMARK [1][-]{section.5}{Cach\351 directa}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Funcionamiento}{section.5}% 13
+\BOOKMARK [1][-]{section.6}{Cach\351 asociativa por conjuntos}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Funcionamiento}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Contrastar cach\351s L1, L2 y L3}{}% 16
+\BOOKMARK [1][-]{section.8}{ILP \(paralelismo a nivel de instrucci\363n\)}{}% 17
+\BOOKMARK [2][-]{subsection.8.1}{Procesador segmentado \(pipelined\)}{section.8}% 18
+\BOOKMARK [2][-]{subsection.8.2}{Procesador supersegmentado \(profundidad del pipeline incrementada\)}{section.8}% 19
+\BOOKMARK [2][-]{subsection.8.3}{Procesador con ejecuci\363n m\372ltiple}{section.8}% 20
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Procesador superescalar \(planificaci\363n din\341mica\)}{subsection.8.3}% 21
+\BOOKMARK [3][-]{subsubsection.8.3.2}{Procesador VLIW \(planificaci\363n est\341tica\)}{subsection.8.3}% 22
+\BOOKMARK [1][-]{section.9}{ILP vs PLP}{}% 23
+\BOOKMARK [1][-]{section.10}{Hyperthreading}{}% 24
+\BOOKMARK [2][-]{subsection.10.1}{Grano fino}{section.10}% 25
+\BOOKMARK [2][-]{subsection.10.2}{Grano grueso}{section.10}% 26
+\BOOKMARK [2][-]{subsection.10.3}{SMT}{section.10}% 27
+\BOOKMARK [1][-]{section.11}{Contrastar ILP, PLP e Hyperthreading}{}% 28
+\BOOKMARK [1][-]{section.12}{Elementos principales de un DIE}{}% 29
+\BOOKMARK [2][-]{subsection.12.1}{Cach\351s L1 [4], L2 [5] y L3 [6]}{section.12}% 30
+\BOOKMARK [2][-]{subsection.12.2}{N\372cleos [4]}{section.12}% 31
+\BOOKMARK [2][-]{subsection.12.3}{GPU \(gr\341fica\) [7]}{section.12}% 32
+\BOOKMARK [2][-]{subsection.12.4}{Socket}{section.12}% 33
+\BOOKMARK [2][-]{subsection.12.5}{Puente Norte [8]}{section.12}% 34
+\BOOKMARK [2][-]{subsection.12.6}{Interfaz de la memoria RAM [9]}{section.12}% 35
+\BOOKMARK [1][-]{section.13}{Tick-Tock y familias de procesadores}{}% 36
+\BOOKMARK [1][-]{section.14}{RISC vs CISC}{}% 37

@@ -1,0 +1,12 @@
+.data
+numero1:	.word 100	
+numero2:	.word -10
+.text
+.globl main
+main:
+
+la $t1, numero1
+la $t2, numero2
+lw $t3, 0($t1)
+lw $t4, 0($t2)
+sub $t5, $t3, $t4 

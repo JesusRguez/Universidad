@@ -1,0 +1,8 @@
+Ponerle la r y la p bien pero cuando te pide el valor buscado, le ponemos k-r.
+Por ejemplo:
+Siendo X el número de veces que lanzamos un dado hasta que obtenemos cuatro "5".
+X=BN(4,1/6)
+Para x=10, P[X=10]=2,17*10^-2
+
+En el statgraphics en vez de buscar el valor 10, tenemos que buscar el valor (k-r), es decir, debemos buscar el valor para
+x=6 (ya que 10-4=6).

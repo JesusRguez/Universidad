@@ -1,0 +1,19 @@
+Antes que nada miraos las reglas de orden teóricas en el pdf de 
+análisis que suele ser una regunta de teoría.
+Os piden las reglas de orden y su uso para demostrar un orden
+que os dan.(Es muy fácil no os ocupará más de 3 líneas y es 
+medio punto asegurado.)
+
+
+
+Reglas orden prácticas(las teóricas en el pdf de análisis):
+
+Mientras x=y, x<y... es un entero o en n+c veces.
+Mientras x^2=y, x^2<y... es log en base 2 de raiz de n.
+Mientras 2^x=y, 2^x<y... es log en base 2 de n.
+
+Fin de bucles bucles:
+Resta=División: Si al final del bucle tengo a<-a-2. se repite (a/2)+x veces.
+Suma=Producto: Si al final del bucle tengo a<-a+2. se repite (2*a)+x veces.
+Producto= exponencial: Si al final del bucle tengo a<-a*2. se repite (a^2)+x veces.
+División= logarítmico: Si al final del bucle tengo a<-a/2. se repite (log (raíz de a))+x veces.

@@ -1,0 +1,457 @@
+\chapter{Subprogramas y modularidad}
+\setcounter{section}{0}
+\section{Introducción}
+A la hora de resolver un problema complejo, el método seguido para su resolución consiste en descomponer el problema inicial en una serie de subproblemas más simples. De esta forma, el problema puede ir resolviéndose por partes, centrándose en cada momento en uno de los subproblemas concretos a resolver.
+
+A estas partes se les llama subprogramas y son llamados por el programa principal o por otros subprogramas. Cada subprograma debe tener un nombre o identificador. Una vez implementado, el subprograma puede ser llamado desde cualquier otro punto del programa principal por medio de una instrucción de llamada, la cual designa el nombre del subprograma correspondiente.
+
+Los subprogramas ofrecen tres ventajas:
+\begin{itemize}
+	\item \textbf{Mejoran la legibilidad del programa:} Cada subprograma, al realizar una tarea determinada y concreta, no tiene un número de líneas excesivo, por lo que es fácil de entender y programar. Además, cada subprograma puede ser desarrollado y comprobado de forma independiente uno de otro.
+	\item \textbf{Acortan los programas:} Si el subprograma se utiliza varias veces a lo largo del programa se evita tener que escribir repetidamente las mismas instrucciones, disminuyendo así la probabilidad de introducir errores en el programa.
+	\item \textbf{Acortan el tiempo de desarrollo:} Los subprogramas, al poder ser reutilizados en otros programas, minimizan el tiempo de corrección y desarrollo de éstos, evitando la necesidad de reprogramar y verificare tareas ya implementadas en otros programas.
+\end{itemize}
+Los subprogramas pueden ser de dos tipos:
+\begin{itemize}
+	\item \textbf{Procedimiento:} Subprograma que realiza una determinada tarea pero no devuelve ningún valor. Los procedimientos normalmente se utilizan para estructurar un programa y para mejorar su claridad y generalidad.
+	\item \textbf{Función:} Subprograma que realiza una determinada tarea y devuelve un valor, el cual puede ser utilizado por la sentencia que llama a la función. Las funciones se utilizan para crear operaciones y tareas nuevas no implementadas en el lenguaje de programación.
+\end{itemize}
+\section{Procedimientos y funciones}
+Un subprograma en C, por definición, consta de una o más funciones. Todos los subprogramas en C son funciones, no existen los procedimientos como tal (lo que si existen son funciones que no devuelven ningún valor).
+
+Normalmente una función tiene la siguiente sintaxis:
+\begin{lstlisting}[language=C]
+static tipo_devuelto nombre_funcion(declaracion_parametros){
+    directivas
+    declaraciones
+    sentencias;
+    return valor_devuelto;
+}
+\end{lstlisting}
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{static} es una palabra clave opcional que especifica que la función es accesible únicamente dentro del fichero en el cual se ha definido (alcance de módulo). Si omitimos esta palabra clave, la función es accesible desde todos los módulos que componen el proyecto o aplicación (alcance global).
+	\item \texttt{tipo\_devuelto} declara el tipo de datos (\texttt{int}, \texttt{float}, etc) del valor que la función devolverá al ser invocada (si es que devuelve alguno). Si no especificamos el tipo, el compilador asume por defecto que el valor devuelto por la función, si lo hay, es de tipo entero (\texttt{int}). Si la función no devuelve ningún valor, se indica especificando el tipo \texttt{void}.
+	\item \texttt{nombre\_función} es el identificado que da nombre a la función. El nombre puede contener legras, dígitos y el guión bajo ('\_'), pero no puede empezar por un número (el primer carácter debe ser por tanto una letra o el guión bajo).
+	\item \texttt{declaracion\_parametros} es una lista de nombres de variables separados por comas con sus tipos asociados que representa los valores que deben ser pasados a la función. los paréntesis son necesarios, aunque la función no tenga argumentos.
+	\item Las llaves del bloque delimitan el cuerpo de la función.
+	\item El cuerpo de la función está formado por \texttt{directivas}, \texttt{declaraciones} y \texttt{sentencias}. Ninguna de ellas es obligatoria, por lo que podemos omitir cualquiera de ellas.
+	\item Las \texttt{sentencias} pueden ser expresiones (asignación, función) o sentencias de control (\texttt{if}, \texttt{for}, etc.).
+	\item \texttt{return} es la palabra clave opcional, que devuelve inmediatamente el control al punto en el que se hizo la llamada a la función. Se usa para forzar una salida inmediata de la función o para devolver un valor, el indicado en la expresión \texttt{valor\_devuelto} (este valor debe ser del tipo especificado en \texttt{tipo\_devuelto}). Todo lo que haya en secuencia tras la sentencia \texttt{return} no se ejecuta, ya que termina la función. Una función puede tener varias sentencias \texttt{return} o ninguna.
+\end{itemize}
+Respecto a la lista de parámetros de una función, todos los argumentos que lo forman tienen que incluir obligatoriamente tanto el tipo como el nombre. De modo que la declaración de una función adquiere la siguiente sintaxis:
+
+\texttt{static tipo funcion(tipo var1, tipo var2, ..., tipo varN)}
+
+En cuanto a las funciones, hay que tener en cuenta las siguientes consideraciones generales:
+\begin{itemize}
+	\item Las funciones tienen tiempo de vida global: existen mientras dura el programa. Las funciones ni se crean ni se destruyen mientras el programa se está ejecutando.
+	\item Las funciones tienen alcance global: pueden ser utilizadas en cualquier parte del programa, independientemente del módulo en el que se encuentren definidos. La excepción son las funciones \texttt{static}, que sólo son visibles y accesibles en el módulo en el que están definidas (solo tienen alcance de módulo) e invisibles para el resto de módulos que componen la aplicación.
+	\item Las funciones no pueden anidarse: una función no puede ser definida dentro de otra función. Todas las funciones se declaran y definen en un nivel externo.
+	\item Las funciones pueden ser recursivas: una función puede llamarse a sí misma. De igual forma, una función puede llamar a cualquier función (visible) del programa.
+	\item Las funciones no pueden ser destino de una asignación: no pueden aparecer en la parte izquierda de una sentencia de asignación.
+	\item Todas las funciones, excepto aquellas tipo \texttt{void}, devuelven un valor. El valor devuelto es indicado explícitamente en la sentencia \texttt{return}. Mientras una función no se declara como \texttt{void} puede ser usada como operando en cualquier expresión de C. Por lo tanto una función tipo \texttt{void} no puede ser usada en una sentencia de asignación.
+\end{itemize}
+Para ver el funcionamiento de las funciones, veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int max(int a, int b);	//Protoripo de funcion
+
+int main() {
+    int x, y, maximo;
+    printf("Introduce dos enteros: ");
+    scanf("%d", &x);
+    scanf("%d", &y);
+    maximo = max(x, y);	//Llamada a la funcion max
+    printf("El mayor valor introducido es %d", maximo);
+    return 0;
+}
+
+int max(int a, int b) {
+    return (a > b ? a : b);
+}
+\end{lstlisting}
+\Explicacion
+En la llamada a la función \texttt{max()}, el valor devuelto es asignado a la variable \texttt{maximo} que luego es impresa en pantalla en el \texttt{printf()} que le precede. En la sentencia \texttt{return} de la función \texttt{max()}, se realiza una evaluación condicional con el operador \texttt{?}.
+\end{Ejemplo}
+\subsection{Ámbito o alcance de las funciones}{
+El ámbito o alcance de una función determina el lugar donde una función es visible y puede ser usada. Una función puede tener alcance global o alcance de módulo.
+
+Por defecto, las funciones declaradas en un programa tienen alcance global, a menos que se declaran con la palabra clave \texttt{static} que indican al compilador que tienen alcance de módulo.
+
+Una función de alcance global puede usarse en cualquiera de los módulos que componen la aplicación. Tan solo hay que declarar su prototipo en el resto de módulos donde se utilice.
+
+Una función \texttt{static} (alcance de módulo) solo puede ser usada en el fichero (módulo) donde está definida y no es accesible en el resto de módulos que componen la aplicación.
+}
+\section{Parámetros y variables locales. Variables globales}
+Cuando se llama a una función, puede que la función tenga que realizar cálculos internos. Por lo tanto podemos definir y utilizar variables dentro de una función con este fin. De la misma forma, si tenemos que pasarle algún tipo de información a dicha función podemos hacerlo mediante el uso de parámetros o mediante variables globales.
+
+Las variables definidas dentro de una función son locales a ésta y no pueden utilizarse fuera de ella. A la inversa, una variable definida en la cabecera del programa es global y puede utilizarse en cualquier lugar del programa, incluyendo cualquier función o bloque.
+
+Por lo tanto, deducimos que podemos distinguir varios tipo de variables, dependiendo del alcance, visibilidad y tiempo de vida que éstas tengan. En concreto, en C hay tres tipos de variables: variables locales, parámetros y variables globales.
+\subsection{Ámbito o alcance de las variables}{
+El ámbito de una variable determina su accesibilidad (alcance o zona de actuación) y visibilidad en otras partes del programa. Una variable puede tener tres tipos de ámbitos:
+\begin{itemize}
+	\item \textbf{Ámbito local:} Una variable de alcance local es aquella que es declarada dentro de un bloque delimitado por llaves o de una función. Únicamente es visible y puede ser usada en el interior del bloque o función en el cual está definida.
+	\item \textbf{Ámbito de módulo:} Una variable con alcance de módulo es aquella que es declarada como \texttt{static} fuera de cualquier bloque o función. Es visible  puede ser usada en el módulo en el cual está definida, pero no puede usarse en los demás módulos que componen la aplicación. De hecho en los demás módulos pueden existir variables globales que tengan el mismo nombre o identificador.
+	\item \textbf{Ámbito global:} Una variable con alcance global es aquella que es declarada al principio de un módulo, fuera de cualquier bloque o función. Es visible y puede ser usada tanto en el módulo en el cual está declarada, como en el resto de módulos que componen la aplicación. Para ello, en cada módulo donde se quiera usar, hay que redeclararla al principio del fichero usando la palabra clave \texttt{extern}. El tipo de almacenamiento \texttt{extern} indica al compilador que la variable está definida con el mismo identificador en otro fichero fuente (módulo) del programa y que por tanto no tiene que reservar de nuevo espacio en memoria para ella.
+\end{itemize}
+}
+\subsection{Variables locales}{
+Las variables locales son aquellas que están definidas dentro de una función o de un bloque Las variables locales no pueden usarse fuera del bloque en el que están definidas (solo pueden ser usadas por las sentencias que están dentro del mismo bloque). Además solo existen durante la ejecución del bloque de código en el que se declaran: una variable local se crea al entrar en su bloque y se destruye al salir. Por tanto, sus contenidos se pierden una vez que el flujo del programa deja el bloque.
+
+La excepción a esta regla viene determinado por las variables locales estáticas (\texttt{static})  cuyos contenidos no se pierden una vez que el flujo del programa deja el bloque donde están (ámbito local, pero tiempo de vida global). Las variables locales de tipo \texttt{static} se utilizan cuando interesa que la variable conserve el valor entre cada llamada a la función o bloque donde están.
+
+Dentro de un mismo programa podemos tener varias variables locales con el mismo nombre, siempre y cuando estén definidas en bloques o funciones diferentes.. Al ser locales a sus respectivos bloques no son visibles unas a otras por lo que no presentan ningún conflicto ni ambigüedad.
+
+De la misma forma, dentro de un mismo programa podemos tener variables locales con el mismo nombre que variables globales. En ese caso, todas las referencias a ese nombre de variable dentro de la función donde se declara como local se referirá a la local y no afectará a la variable global ya que el compilador asume que la variable a la que nos referimos siempre es la local.
+
+Observemos el siguiente ejemplo que hace uso de variables globales y locales:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+void ver();
+
+int a= 1, b = 1, c = 1;
+
+int main() {
+    printf("A: %d B: %d C: %d\n", a, b, c);	//a, b, c globales
+    ver();
+    printf("A: %d B: %d C: %d\n", a, b, c);	//a, b, c globales
+    return 0;
+}
+
+void ver() {
+    int a = 5;					//a local
+    c++;					//Incrementa c global
+    printf("a: %d b: %d c: %d\n", a, b, c);	//a local, b, c globales
+    int c = 50;	//c local
+    c++;					//Incrementa c local
+    printf("a: %d b: %d c: %d\n", a, b, c);	//a, c local, b global
+}
+\end{lstlisting}
+La salida generada por el programa, tras su ejecución, es la siguiente:
+
+\texttt{A: 1 B: 1 C: 1}\\
+\texttt{a: 5 b: 1 c: 2}\\
+\texttt{a: 5 b: 1 c: 51}\\
+\texttt{A: 1 B: 1 C: 2}
+\Explicacion
+En este programa se muestran claramente los dos casos comentados anteriormente:
+\begin{itemize}
+	\item Podemos usar en una función una variable local con el mismo nombre que una variable global, sin ninguna ambigüedad.
+	\item Podemos declarar variables en cualquier parte del bloque o función. Es por esto que debemos tenenr en cuenta que hasta que el lujo del programa no llegue hasta la sentencia donde se realiza la declaración, el compilador no crea realmente esa variable. Es por ello por lo que en la función \texttt{ver()}, el primer incremento de la variable \texttt{c} se refiere a la variable global, mientras que a partir del instante en el que el flujo dl programa lega hasta la sentencia donde se crea la variable \texttt{c} local, todas las referencias posteriores de la variable \texttt{c} en la función \texttt{ver()} se refieren a la variable local y no a la local.\\
+\end{itemize}
+\end{Ejemplo}
+}
+\subsection{Parámetros}{
+Los parámetros son los valores que se le pasan a la función al ser llamada. los parámetros son el medio de comunicación entre la sentencia de la llama a la función y la función que es llamada.
+
+Los parámetros funcionan dentro de la función como si de variables locales se trataran: se crean al entrar en la función y se  destruyen al salir de ésta. Tienen por tanto un tiempo de vida y ámbito local.
+
+Los parámetros que se escriben en la sentencia de llamada a la función se llaman parámetros reales o argumentos. Los que aparecen en la descripción de la función se llaman parámetros formales.
+
+La relación entre los parámetros formales y los reales (argumentos) vienen dada por el orden en que aparecen. Los parámetros formales son sustituidos por los parámetros reales (argumentos) y el orden de sustitución es el de la llamada. Al emparejarse los parámetros reales y los formales deben coincidir en número y en tipo, aunque no es necesario que coincidan los nombres de los identificadores. Si al realizar una llamada, los parámetros reales (argumentos) pasados a la función no son del mismo tipo que los parámetros formales declarados en la función, el compilador no da´ra mensaje de error, pero se producirán resultados inesperados.
+}
+\subsection{Variables globales}{
+Al contrario de las variables locales, las variables globales son accesibles y visibles en todo el programa y pueden utilizarse en cualquier lugar de éste, incluyendo cualquier función. La excepción viene dada por las variables globales estáticas, las cuales solo son accesibles y visibles en el módulo en el cual están definidas.
+
+Las variables globales mantienen sus valores durante toda la ejecución del programa (tiempo de vida global). Las variables globales se declaran fuera de cualquier función, generalmente al principio del programa. Cualquier función puede acceder a ellas y modificar su valor independientemente del lugar donde se encuentren. No es por tanto necesario pasar una variable global como parámetro a una función ya que esta puede acceder directamente a ella. Por tanto las variables globales representan una alternativa al uso de parámetros. Sin embargo, se debe evitar el abuso de las variables globales por varias razones:
+\begin{itemize}
+	\item Ocupan memoria durante toda la ejecución del programa )no solo cuando se necesitan.
+	\item El uso de variables globales puede conducir a errores de programación debido a efectos laterales (podemos accidentalmente cambiar el valor de una variables global debido a que se puede usar en cualquier función o bloque del programa).
+	\item El uso de variables globales en lugar de parámetros hace que las funciones no sean genéricas al depender de variables que no están definidas dentro de sí misma.
+\end{itemize}
+}
+\section{Tiempo de vida}
+El tiempo de vida de un objeto (variables, funciones, etc.). puede ser global o local.
+
+Tiempo de vida global significa que una vez que el objeto ha sido definido, su espacio y posición en memoria, así como sus valores, solo se conservan durante la ejecución del bloque de código en el cual el objeto está definido. Una vez que el bloque de código ha terminado de ejecutarse, la posición de memoria que ocupa se libera y el valor del objeto queda indefinido. Un objeto con tiempo de vida local solo existe mientras el flojo del programa permanece en el bloque o función en el cual está definido. Una vez que el flujo del programa pasa a otro lugar el objeto es destruido.
+
+El tiempo de vida de un objeto viene determinado por cómo y dónde está declarado el objeto. Por lo que tenemos que tener en cuenta las siguientes reglas:
+\begin{itemize}
+	\item Una función tiene tiempo de vida global: Una vez que la función está definida permanece en memoria hasta que el programa termina.
+	\item Las variables globales tienen un tiempo de vida global. Generalmente estas variables suelen ponerse al principio del programa o incluidas en un fichero de cabecera.
+	\item Las variables locales tienen tiempo de vida local. La excepción viene determinada por las variables locales \texttt{static}, las cuales se crean en el momento en el que el flujo del programa llega a ala función o bloque donde están definidas y no se destruyen hasta que el programa (no la función o bloque donde están) finaliza.
+\end{itemize}
+\section{Paso de parámetros a las funciones}
+\subsection{Parámetros por valor y por referencia}{
+Los parámetros son los valores que se le pasan a la función al ser llamada. Los parámetros pueden ser de dos tipos: parámetros por valor o parámetros por referencia en función de si se pasa el valor del argumento o la dirección de memoria del argumento.
+\begin{itemize}
+	\item Los parámetros por valor o copia son aquellos para los que los cambios en el valor del parámetro formal no afecta al del parámetro real o argumento.
+	\item Los parámetros por variable o referencia son aquellos para los que los cambios en el valor del parámetro formal afecta al del parámetro real o argumento.
+\end{itemize}
+En la llamada por valor se copia el valor del argumento en el correspondiente parámetro formal de la función, por lo que, al transferirse únicamente una copia del valor del argumento, los cambios en los parámetros de la función no afectan a la variable usada como argumento en la llamada.
+
+En la llamada por referencia, se transfiere en la llamada la dirección de memoria del argumento al parámetro. Dentro de la función, la dirección se utiliza para acceder a la variable usada como argumento en la llamada, de manera que lo que se hace con el parámetro formal afectará a la variable usada como argumento.
+}
+\subsection{Creación de una llamada por referencia}{
+El lenguaje C usa el método de llamada por valor para pasar argumentos. Para forzar una llamada por referencia es necesario hacer uso de los punteros. Se pueden pasar punteros a las funciones de la misma forma que se puede pasar cualquier otro tipo de dato. Para ellos, debemos declarar los correspondientes parámetros como tipo puntero.
+
+Para observar esto, veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.>
+
+int triple(int a);	//Prototipo de funciones
+void cambia(int *a);
+
+int main() {
+    int x = 5;		//Variable local
+    printf("El valor de x es %d.\n", x);
+    printf("El triple de x es %d.\n", triple(x));
+    printf("El valor de x es %d.\n", x);
+    cambia(&x);
+    printf("El valor de x es %d.\n", x);
+    return 0;
+}
+
+int triple(int a) {
+    a = a * 3;
+    return a;
+}
+
+void cambia(int *a) {
+    *a = *a + 2;
+}
+\end{lstlisting}
+Tras la ejecución del programa, el resultado mostrado en pantalla es el siguiente:
+
+\texttt{El valor de x es 5}\\
+\texttt{El triple de x es 15}\\
+\texttt{El valor de x es 5}\\
+\texttt{El valor de x es 7}
+\Explicacion
+En este ejemplo, en la llamada a la función \texttt{triple()}, no se transfiere a la función la variable x, sino una copia de dicho valor, que es 5, el cual es tomado por el parámetro \texttt{a} de la función. Este parámetro \texttt{a} es local a la función y es distinto a la variable \texttt{x}. Cuando se realiza la asignación dentro de la función, el único valor que se modifica es el de la variable \texttt{a} y no el de la variable \texttt{x} de la función \texttt{main()}. Sin embargo, cuando se realiza la llamada a la función \texttt{cambia()}, se realiza una llamada por referencia ya que se transfiere el parámetro \texttt{a} de la función a la dirección de memoria de la variable \texttt{x}, en lugar de su valor. Dentro de la función \texttt{cambia()}, a través del operador \texttt{*}, se accede a la dirección de memoria de la variable \texttt{x}, almacenada en \texttt{a}, y se incrementa en dos unidades el valor almacenado en dicha dirección de memoria. De esta forma conseguimos modificar el valor de la variable \texttt{x}. Es por esto que la última sentencia \texttt{printf()} muestra el valor 7, en lugar de 5.
+\end{Ejemplo}
+}
+\section{Prototipos de funciones}
+Como comentamos anteriormente, el tipo devuelto por defecto por una función es un entero (\texttt{int}). Por lo que, cuando no es así, debemos indicar en la función explícitamente qué tipo de dato es el que devuelve dicha función.
+
+Antes de que se pueda usar una función que devuelva un tipo no entero, se debe hacer saber su tipo al resto del programa. Si en el programa se llama a una función que devuelve un tipo no entero y esa llamada se produce antes de la declaración de la función, el compilador supondrá que esa función llamada devuelve un tipo entero y generará erróneamente el código de la llamada a al función.
+
+Este problema puede ser evitado definiendo la función antes de que sea llamada. Es decir, si en el programa una función llama a otra, lo que tendremos que hacer es definir antes la función que es llamada y posteriormente definir y escribir la función que llama a la anterior. Teniendo esta precaución a la hora de escribir un programa evitamos el problema anterior.
+
+Para evitar dicho problema están los prototipos o declaraciones de funciones. Un prototipo de función básicamente informa al compilador del número de tipos de datos de los argumentos de una función así como del tipo de valor que ésta devuelve. Los prototipos de funciones consisten en la declaración del número y tipo de los argumentos de la función antes de su definición.
+
+La declaración del prototipo de una función tiene dos propósitos principales:
+\begin{itemize}
+	\item Evitar las conversiones erróneas de los valores cuando los argumentos y parámetros no son del mismo tipo.
+	\item Evitar errores en el número y tipo de argumentos usados al llamar y/o definir una función.
+\end{itemize}
+Los prototipos de funciones permiten que el compilador pueda llevar a cabo una fuerte comprobación de tipos y hacer que éste realice las conversiones adecuadas (si el tipo de los argumentos y el de los parámetros no coinciden) cuando éstas sean posibles, así como informar de cualquier conversión ilegal cuando ésta no sea posible. Ademas permiten que el compilador pueda detectar si en una llamada a una función faltan o sobran argumentos, ya que gracias al prototipo, el compilador conoce exactamente el número de parámetros que espera la función.
+
+Los prototipos van al principio del programa, debiendo aparecer antes de que se produzca alguna llamada a las funciones que declaran. La forma general de un prototipo es la siguiente:
+
+\texttt{tipo\_devuelto nombre\_funcion(tipo var1, tipo var2, ..., tipo varN);}
+
+Como podemos observar es exactamente como la primera línea de la definición de función, terminada en punto y coma.
+
+El prototipo de una función que no tiene parámetros tiene la palabra clave \texttt{void} como lista de parámetros.
+
+Para entender la importancia de los prototipos, veamos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int min(int x, int y);	//Prototipo de funcion
+
+int main() {
+    float a = 29.57, b;
+    printf("Introduce un numero: ");
+    scanf("%f", &b);
+    printf("El numero mas pequeno es %d\n", min(a, b));
+    return 0;
+}
+
+int min(int x, int y) {	//Defunicion de funcion
+    return (x < y ? x : y);
+}
+\end{lstlisting}
+\Explicacion
+Como podemos observar, cuando llamamos a la función \texttt{min()}, los argumentos que pasamos son de tipo \texttt{float}, cuando la función espera que le pasemos enteros. Gracias a que se ha especificado el prototipo de la función, el compilador realiza previamente una conversión y convierte los valores tipo \texttt{float} a \texttt{int}: el valor de \texttt{a}, 29.57, se convierte en 29 y el de \texttt{b} a su respectivo valor entero.
+\end{Ejemplo}
+\section{Macros como alternativa a las funciones}{
+Las macros pueden representar a veces una alternativa al uso de funciones. Es más, el uso de macros en lugar de funciones puede llevar a una mayor velocidad de ejecución del código ya que no hay que perder tiempo en llamar a una función. No obstante debemos tener en cuenta que no es lo mismo una macro y una función y por lo tanto debemos conocer sus diferencias. El lenguaje C permite definir y eliminar constates y macros mediante las directivas \texttt{\#define} y \texttt{\#undef}.
+
+La directiva \texttt{\#define} define un identificador y una cadena asociada. El compilador, más concretamente, el preprocesador, sustituirá en el fichero fuente cualquier aparición del identificador por su cadena asociada.
+\subsection{\texttt{\#define} para constantes}
+Cuando la directiva \texttt{\#define} se usa para definir constantes, sus sintaxis es la siguiente:
+
+\texttt{\#define NOMBRE\_CONSTANTE expresion\_constante}
+
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{NOMBRE\_CONSTANTE} es un identificador (por convenio, con los caracteres en mayúsculas, aunque puede definirse en minúsculas o como se quiera).
+	\item \texttt{expreison\_constante} es cualquier expresión constante válida. No puede constener variables, aunque si constantes definidas previamente.
+\end{itemize}
+Para ver su uso, observemos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+#define PI 3.1416	//No debe terminar en punto y coma
+
+int main() {
+    float area, radio;
+    printf("Introduce el radio del circulo :");
+    scanf("%f", &radio);
+    area = 2 * PI * radio;
+    printf("El area del circulo de radio %.2f es %.2f.\n", radio, area);
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, el preprocesador sustituirá toda aparición de \texttt{PI} por el valor asignado: 3.1416 y el programa se ejecutará correctamente. Es importante observar que la sentencia \texttt{\#define} no termina en punto y coma, ya que si así fuera, sustituiría el valor de \texttt{PI} por ``3.1416;'', lo que produciría errores.
+\end{Ejemplo}
+\Nota
+Para eliminar las constantes usamos la directiva \texttt{\#undef NOMBRE\_CONSTANTE}.
+}
+\subsection{\texttt{\#define} para macros}{
+Cuando la directiva \texttt{define} se usa para definir macros, su sintaxis es la siguiente:
+
+\texttt{\#define nombre\_macro(lista\_argumentos)(expresion\_macro)}
+
+Analizando esta sintaxis podemos observar que:
+\begin{itemize}
+	\item \texttt{nombre\_macro} es el identificador o nombre dado a la macro. No debe haber ningún espacio en blanco entre el nombre de la macro y el paréntesis de la lista de argumentos.
+	\item \texttt{lista\_argumentos} es una lista de argumentos separados por comas.
+	\item \texttt{expresion\_macro} es una expresión que implementa la macro haciendo uso de los identificadores de la lista de argumentos.
+\end{itemize}
+Para ver su uso, observemos el siguiente ejemplo:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+	
+#define CUBO(x) (x)*(x)*(x)	//No debe terminar en punto y coma
+	
+int main() {
+    int x;
+    printf("Introduce un numero para elevarlo al cubo :");
+    scanf("%f", &x);
+    printf("El cubo de %d es %d \n", x, CUBO(x));
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+En este ejemplo, el preprocesador sustituirá toda la aparición de \texttt{CUBO} por su expresión definida anteriormente y el programase ejecutará correctamente.
+\end{Ejemplo}
+\Nota
+Para anular las macros usamos la directiva \texttt{\#indef nombre\_macro}.
+}
+\section{Módulos: definición}
+Un módulo es una colección de declaraciones (constantes, tipos, funciones, etc.) definidas, en principio en un ámbito de visibilidad cerrada, es decir, ocultas a toda acción o declaración ajena al propio módulo.
+
+Una de las ventajas que ofrece el lenguaje C es que permite la posibilidad de escribir un programa en múltiples ficheros o módulos. Es decir, no solo podemos dividir el programa en diferentes funciones cada una de las cuales resuelve un problema determinado sino que, además, las funciones que componen un programa pueden agruparse en uno o varios ficheros o módulos. De esta forma, un programa puede residir en uno o más archivos fuente (módulos), cada uno de los cuales contiene una serie de funciones y variables relacionadas.
+
+Estas funciones existentes en un determinado módulo pueden ser visibles al resto del programa o no dependiendo si las funciones son declaradas como estáticas (\texttt{static}) o no. Las funciones estáticas solo son visibles y accesibles en el módulo en el cual están definidas. Las funciones normales (no estáticas) son visibles y accesibles en todo el programa, es decir, pueden ser usadas en cualquiera de los módulos que componen la aplicación.
+
+De la misma forma, las variables globales existentes en un módulo pueden ser visibles y accesibles o no al resto de módulos que componen la aplicación. Las variables globales declaradas como \texttt{static} solo pueden ser usadas en el módulo en el cual están definidas. Para que una variable pueda ser usada en todos los módulos que componen una aplicación hay que declararla como global en uno de ellos y declararla como global \texttt{extern} en el resto de módulos. El modificador de almacenamiento \texttt{extern} indica al compilador que se hace referencia a una variable definida en otro módulo.
+
+Por lo tanto, en un programa compuesto de varios módulos, aquellas funciones que sean necesarias para la implementación de un módulo pero que sean indiferentes para el resto de módulos del programa, serán declaradas estáticas (\texttt{static}) al igual que aquellas variables usadas en el módulo para la implementación de éste.
+
+En cambio, aquellas funciones y variables que sean necesarias para el resto del programa serán declaradas globales para que puedan ser utilizadas por el reto de módulos que componen la aplicación.
+
+Con el uso de los módulos se da un paso más en el proceso de creación de una aplicación por un grupo de personas. Cada persona o grupo de ellas puede dedicarse a implementar un módulo específico, en el que incluirán funciones relacionadas, las cuales podrán ser visibles o no al resto de módulos.
+
+De hecho, nada impide que, por ejemplo, cada módulo sea desarrollado por un programador o grupo diferente: cuando otro grupo tuviese que utilizar varias funciones externas implementadas en otro módulo, ni siquiera tendría que conocer como realmente están implementadas, sino qué es lo que hacen. Simplemente deben especificar en su módulo el prototipo de las funciones que necesiten definidas en otro módulo para poder utilizarlas.
+
+Los módulos pueden ser vistos como cajas negras en las que el programador conoce qué variables y qué funciones implementan esos módulos y qué es lo que hacen, pero no cómo lo hacen.
+
+Las razones para dividir un programa en diferentes módulos son las siguientes:
+\begin{itemize}
+	\item Se facilita la edición: Un archivo muy grande es difícil de editar, mientras que uno más pequeño es más manejable y fácil de mantener.
+	\item La compilación se realiza más rápidamente: Un cambio pequeño en un programa escrito en un único módulo requiere que se recompile todo el programa entero. En cambio, en un programa dividido en múltiples módulos, solo se compilan los módulos en los que se han producido cambios, en lugar de compilarlos todos, con lo que la compilación se realiza más rápidamente.
+	\item La programación es más estructurada: Al situar funciones y variables relacionadas en un mismo módulo aumentamos la comprensión del programa y por lo tanto disminuimos los errores de programación y hacemos el código más fácil de depurar.
+	\item Aumentamos y promovemos la reusabilidad del software: Al colocar las funciones más usadas en ficheros separados del programa principal, nos permite poder enlazar el código objeto de este módulo al de cualquier nuevo programa, sin necesidad de tener que rediseñar, reescribir y recompilar el código, haciendo la programación más rápida y eficiente.
+\end{itemize}
+En el entorno integrado de desarrollo del compilador de C, los programas de múltiples módulos se llaman proyectos. Cada proyecto se asocia a un fichero de proyecto, que determina que módulos son parte del proyecto.
+
+Un proyecto en C es por tanto, un sistema software de múltiples módulos. El proyecto normalmente comprende un fichero proyecto, uno o más ficheros de cabecera (\texttt{.h}) y do o más ficheros fuente (\texttt{.c}).
+
+\section{Sección de includes: Ficheros de cabecera}
+Muchas de las funciones incluidas en la biblioteca estándar de C trabajan con sus propios tipos de datos y estructuras. Estas estructuras y tipos, junto con los prototipos de las funciones de la biblioteca estándar están definidas en los ficheros de cabecera proporcionados por el compilador.
+
+Como ocurre con cualquier otra función, las funciones de la biblioteca estándar de C que se utilicen en un programa deben estar identificadas por su correspondiente prototipo. Por tanto, para poder utilizar las funciones de biblioteca de C es necesario insertar sus correspondientes archivos de cabecera en nuestros programas.
+
+Los ficheros de cabecera tienen la extensión \texttt{.h}, aunque pueden tener cualquier extensión. Estos archivos, además de contener prototipos de funciones, contienen los siguientes elementos:
+\begin{enumerate}
+	\item Ciertas definiciones, macros y constantes que utilizan las funciones (\texttt{\#define}).
+	\item Referencias externas, es decir, variables \texttt{extern} que están definidas en otros módulos.
+	\item Enumeraciones (\texttt{enum}) y declaraciones de estructuras (\texttt{struct}).
+\end{enumerate}
+Los archivos de cabecera se insertan en el programa fuente con la directiva \texttt{\#include} y a continuación el nombre o ruta completa del fichero. Un fichero fuente puede tener tantas directivas \texttt{\#include} como necesite y se ponen al principio del fichero fuente.
+
+Además de los ficheros de cabecera suministrados por el compilador (\texttt{stdio.h}, \texttt{stdlib.h}, etc), el usuario puede definir y crear los suyos propios con prototipos y funciones que él mismo haya implementado.
+
+La directiva \texttt{\#include} tiene dos tipos de sintaxis:
+
+\texttt{\#include <nombre\_fichero.h>}
+
+\texttt{\#include "nombre\_fichero\_con\_ruta\_acceso.h"}
+
+La diferencia entre la primera y la segunda se encuentra en el directorio de búsqueda de los archivos de cabecera.
+
+Cuando se escribe de la primera forma el compilador busca el fichero en el directorio estándar de librerías. Pero cuando se escribe de la segunda forma, el compilador busca el fichero en la ruta de acceso especificada, si ésta se indica, o en el directorio actual y posteriormente, en caso de que no lo encuentre, en los directorios por defecto y en el directorio estándar de librerías.
+
+El uso de ficheros de cabecera ofrece las siguientes ventajas:
+\begin{itemize}
+	\item Cuando es necesaria una nueva declaración o definición en el sistema, o hay que redefinir alguna de las existentes, ésta solo debe ser añadida o modificada en el fichero de cabecera y no en los módulos que lo utilizan. Los módulos, al contener la directiva \texttt{\#include} automáticamente quedan actualizados.
+	\item Cuando un fichero objeto es utilizado por más de un proyecto de software, el fichero de cabecera contiene todas las declaraciones y definiciones necesarios para que ese módulo pueda ser incluido y utilizado en los nuevos ficheros fuente, simplificando así el desarrollo y mantenimiento de programas.
+\end{itemize}
+
+\section{Compilación condicional}
+El compilador de C contiene varias directivas que permiten que se compilen o no determinadas partes del código fuente en función de una condición. La compilación condicional se usa principalmente para:
+\begin{itemize}
+	\item Crear diferentes versiones del mismo programa. Mediante la compilación condicional podemos compilar ciertas líneas de código o no dependiendo de la versión particular que deseemos generar. De esta forma, podemos tener un programa en el que una versión se ejecute con un determinado hardware y otra con otro diferente.
+	\item Depurar y corregir programas. Si sospechas que una parte del programa es la causante de ciertos errores, podemos temporalmente omitirla de la compilación para ver si verdaderamente es la causante de los errores.
+\end{itemize}
+
+En la siguiente tabla se muestra el uso de las directivas de compilación condicional:
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|p{2cm} | p{14cm}|}
+			\hline 
+			\textbf{Directiva} & \textbf{Función}  \\
+			\hline
+			\texttt{\#if} & Realiza un test sobre las constantes que siguen. Si el test es verdadero (distinto de cero), el código se incluye en la compilación. Si es falso el código no se compila.\\ \hline
+			\texttt{\#endif} & Termina el segmento del código especificado para la compilación condicional utilizando la directiva \texttt{\#if}.\\ \hline
+			\texttt{\#else} & Es opcional y se usa en combinación de la directiva \texttt{\#if} y \texttt{\#endif}. El códigoincluido a continuación del \texttt{\#else} se compila si no se verifica la condición \texttt{\#if}.\\ \hline
+			\texttt{\#elif} & Es opcional y equivale a un ``\texttt{\#else \#if}''\\ \hline
+			\texttt{\#ifdef} & Comprueba si una constante ha sido definida (con la directiva \texttt{\#define}). Si lo ha sido, no se compila el código que viene a continuación, en caso contrario sí se compila.\\ \hline
+			\texttt{\#ifndef} & Comprueba si una constante no ha sido definida (con la directiva \texttt{\#define}). Si no lo ha sido, se compila el código que viene a continuación, en caso contrario no se compila.\\ \hline	
+		\end{tabular}
+		\caption{Directivas de compilación condicional.}
+		\label{tabla:Directivas de compilación condicional}
+	\end{center}
+\end{table}
+\\Un ejemplo muy simple es el siguiente:
+\begin{Ejemplo}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+int main() {
+#if (MAX < 100)
+    printffff("Esta linea esta mal escrita.");	//Sentencia erronea
+#else
+    printf("Esta linea esta bien escrita.");
+#endif
+    return 0;
+}
+\end{lstlisting}
+\Explicacion
+Este programa no produce ningún error al compilar ya que, aunque en la línea 7 encontramos una sentencia mal escrita, al comparar \texttt{MAX} con 100 y no cumplirse la condición salta al bloque asociado a la directiva \texttt{\#else}. Por lo que el programa escribirá por pantalla la siguiente línea:
+
+\texttt{Esta linea esta bien escrita.}
+\end{Ejemplo}

@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{ModSecurity}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Definici\IeC {\'o}n}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Caracter\IeC {\'\i }sticas}{4}{0}{1}
+\beamer@sectionintoc {2}{Historia}{5}{0}{2}
+\beamer@sectionintoc {3}{Implementaci\IeC {\'o}n}{7}{0}{3}
