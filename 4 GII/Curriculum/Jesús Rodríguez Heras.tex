@@ -1,0 +1,148 @@
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} 
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{5cm}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\noindent\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Jesús Rodríguez Heras}
+\MySlogan{Ingeniería Informática}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Datos personales}{}
+
+\PersonalEntry{Nacimiento}{25 de marzo, 1997}
+%\PersonalEntry{Address}{111 First St, New York}
+\PersonalEntry{Teléfono}{(+34) 628-576-107}
+\PersonalEntry{E--Mail}{\url{jesusrh1997@gmail.com}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Educación}{}
+
+\EducationEntry{Ingeniería Informática}{2015-2019}{Escuela Superior de Ingeniería, Universidad de Cádiz}{
+Mención en Ingeniería de Computadores
+%\begin{itemize}
+%\item{Ingeniería de Computadores}
+%\item{Asignaturas más relevantes de carrera/especialidad}
+%\item{Proyecto de fin de carrera: \emph{título del proyecto}}
+%\end{itemize}
+}
+
+\sepspace
+
+\EducationEntry{CCNA Routing and Switching}{2016-2017}{Online}{Curso de introducción a las redes de computadores, 70 horas, Habilidad para montar y gestionar redes de computadores de medio-alto calibre}
+\EducationEntry{CCNA Security}{2017-2018}{Online}{Curso de seguridad de redes de computadores, 70 horas, Habilidad para montar y securizar redes de computadores de medio-alto calibre}
+\EducationEntry{CCNP Switch}{2018-2019}{Online}{Curso de switches en redes de computadores, 70 horas, Habilidad para montar redes de computadores de alto calibre en sus distintas capas}
+\EducationEntry{CCNP Route}{2018-2019}{Online}{Curso de routers en redes de computadores, 70 horas, Habilidad para montar redes de computadores de alto calibre}
+%\EducationEntry{Curso extracurricular}{Verano 2001}{Lugar}{Descripcion del curso, horas invertidas, habilidades ganadas}
+
+%%% Work experience
+%%% ------------------------------------------------------------
+%\NewPart{Experiencia laboral}{}
+%
+%\EducationEntry{Título trabajo 1}{Periodo}{Empresa}{
+%\begin{itemize}
+%\item{Función 1}
+%\item{Función 2}
+%\item{Función 3}
+%\end{itemize}
+%}
+%\sepspace
+%
+%\EducationEntry{Título trabajo 2}{Periodo}{Empresa}{Descripción, habilidades}
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Habilidades personales}{}
+
+\SkillsEntry{Idiomas}{Español (nativo)}
+\SkillsEntry{}{Inglés (B1)}
+
+\SkillsEntry{Software}{LaTeX, Windows, Linux, Java, C, C++}
+\SkillsEntry{Soft skills}{Trabajo en equipos multiculturales}
+\SkillsEntry{}{Flexibilidad y adaptación ante cambios en el proyecto}
+\SkillsEntry{}{Gran capacidad de comunicación}
+\SkillsEntry{}{Análisis y resolución de problemas}
+%\SkillsEntry{}{}
+
+
+
+
+%%% References
+%%% ------------------------------------------------------------
+%\NewPart{References}{}
+%Available upon request
+\end{document}
