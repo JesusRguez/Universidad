@@ -1,19 +1,38 @@
 PREGUNTAS TIPO TEST:
-1. 
+1. Los procesadores escalares...
+- Son procesadores ILP
+- Reducen el número de ciclos necesarios para una instrucción
+- Explotan el paralelismo usando técnicas de réplica y/o segmentación
+* Todas son correctas
+
+2. ¿Qué se guarda en un cambio de contexto?
+- Solo el contador  de programa y los registros especiales
+- El contador de programa y los registros generales
+* El contador de programa, los registros generales, lo registros especiales y los datos de memoria
+- Los datos de memoria y los registros generales
+
+3. ¿Cuántos procesadores pueden acceder concurrentemente al bus de datos en máquinas UMA?
+* Solo uno
+- Dieciséis
+- Un número indeterminado entre uno y dieciséis
+- Todos los que se necesiten
+
+4. ¿Cuándo se consigue una eficiencia en la computación paralela?
+- Cuando el programa tarda menos en ejecutarse
+* Cuando se logra un balance de carga entre procesadores
+- Cuando se maximiza la interacción entre las tareas
+- Cuando conseguimos un speed-up menos o igual a 1
 
 
-2.
+PREGUNTAS DE RESPUESTA CORTO:
+1. ¿Qué hacen las técnicas multithread?
+Estas técnicas intentan generar varios procesadores lógicos con un procesador físico, lo que hace que se aprovechen los tiempos de espera manteniendo ocupados los recursos del procesador aun con fallos de caché o predicción de slato.
 
 
-3.
+2. ¿Qué ocurre con la memoria en los multicomputadores?
+En estos, no existe memoria global, sino que, cada procesador tiene su propio espacio de direcciones al que ningún otro procesador tiene acceso.
+La comunicación entre los procesadores se realiza mediante paso de mensajes.
 
 
-4.
-
-
-
-PREGUNTAS DE DESARROLLO CORTO:
-1.
-
-
-2.
+PREGUNTA DE DESARROLLO:
+1. Desarrolle las formas básicas de paralelismo estudiadas en clase.
