@@ -1,0 +1,4 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Fantasy}{2}{0}{1}
+\beamer@sectionintoc {2}{Workspace}{3}{0}{2}
+\beamer@sectionintoc {3}{Caracter\IeC {\'\i }sticas}{4}{0}{3}
