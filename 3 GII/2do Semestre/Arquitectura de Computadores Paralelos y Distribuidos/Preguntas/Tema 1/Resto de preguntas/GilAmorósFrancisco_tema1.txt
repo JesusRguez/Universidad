@@ -1,0 +1,35 @@
+1 ¿Cuales son ventajas de VLIW?
+Menor consumo
+Mejora la paralelización
+Permite incrementar la velocidad de reloj
+* Todas son correctas
+
+2 En el cambio de contexto tradicional, el SO es el encargado de gestionarlo en el siguiente orden:
+* Parando, guardando, restaurando y reejecutando el thread.
+Guardando, parando, restaurando y reejecutando el thread.
+Guardando, restaurando y reiniciando el thread.
+Ninguna es correcta
+
+3 Según la clasificación Hwang-Briggs, SIMD sería:
+* Paralelismo espacial síncrono
+Paralelismo espacial asíncrono
+Paralelismo temporal síncrono
+Paralelismo temporal
+
+4 Indica la característica no correcta de los clusters:
+Mayor disponibilidad por la redundancia en número de procesadores
+* Menor disponibilidad por la redundancia en número de procesadores
+Es necesario un balanceo de carga
+Son sistemas muy escalables.
+
+5 ¿Qué diferencia un clusters y un grids?
+La distinción básica entre un clustery un grides que en este último no hay un punto común de administración de los recursos.
+
+6 Desarrolle brevemente qué es MPP.
+MPP -MassivelyParallelProcessors-
+Procesadores con una red de interconexión estática de altas prestaciones (baja latencia y elevado ancho de banda). 
+* Especialmente diseñada para el desarrollo de algún proceso concreto.
+* Suelen tener un número no muy elevado de procesadores debido al coste de mantenimiento.
+* Sistemas difícilmente escalables.
+ 
+7 Ventajas e inconvenientes de los multicomputadores

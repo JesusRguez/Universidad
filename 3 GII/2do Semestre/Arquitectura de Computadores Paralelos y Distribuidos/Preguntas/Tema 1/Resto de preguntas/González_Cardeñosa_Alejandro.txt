@@ -1,0 +1,48 @@
+Alejandro González Cardeñosa
+
+·¿Cuál de los siguientes NO es un tipo de paralelismo?:
+	-A nivel de Datos.
+	*-A nivel de Núcleos.
+	-A nivel de Tarea.
+	-A nivel de Instrucción.
+
+·Al realizarse un cambio de contexto, ha de guardarse:
+	-Contador de programa, registros generales y datos de memoria.
+	-Contador de programa, registros generales y registros especiales.
+	*-Contador de programa, registros generales, registros especiales, datos de memoria.
+	-Contador de programa, registros generales, registros especiales, pila de llamadas.
+
+·Los procesadores vectoriales:
+	-Utilizan paralelismo a nivel de instrucción.
+	-Reducen el número de ciclos necesarios para ejecutar una instrucción.
+	*-Todas son correctas(salvo la de "Ninguna es correcta").
+	-Ninguna es correcta.
+
+·¿Cuál de las siguientes afirmaciones sobre los clusters es FALSA?:
+	*-Deben estar construidos sobre un rack, en caso contrario, se considera un grid de computadores.
+	-Se trata de sistemas muy escalables
+	-Pueden estar conectados mediante una red inalámbrica.
+	-Pueden estar conectados mediante una red de fibra óptica.
+
+
+·Enumera al menos 3 ventajas y 3 desventajas de los multicomputadores:
+	-Ventajas:
+		.Pocos o ningún conflicto de acceso a memoria.
+		.Permiten conseguir un paralelismo masivo.
+		.Son muy escalables.
+		.Su precio es asequible.
+		.Implementación sencilla a partir de ordenadores personales.
+		.Adecuados para integrarse con técnicas VLSI(esta ventaja no la va a enumerar nadie).
+	-Desventajas:
+		.Su programación es más compleja.
+		.Es más difícil diseñar algoritmos paralelos eficientes para ellos.
+		.Tiempo adicional en la transmisión de mensajes.
+		.Es difícil equilibrar la carga computacional.
+		.Memoria desperdiciada al requerir una copia del SO y de los programas por cada nodo.
+	*Solo es necesario enumerar 3 de cada una.		
+
+·Enumera y describe brevemente los protocolos de escritura concurrente en memoria compartida:
+	-Common: Solo se realiza cuando los valores a escribir son iguales.
+	-Arbitrary: Solo se escribe uno de los valores, elegido al azar.
+	-Priority: Solo se escribe el valor que tenga más prioridad.
+	-Sum: Se escribe la suma de los valores a guardar.

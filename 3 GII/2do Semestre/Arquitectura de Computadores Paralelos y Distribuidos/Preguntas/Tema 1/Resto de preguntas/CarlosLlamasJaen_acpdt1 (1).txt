@@ -1,0 +1,29 @@
+¿Cómo se mejora el rendimiento global del sistema?
+-	Incrementando la memoria
+-	Incrementando el número de procesadores
+-	* Realizando un correcto balanceo de carga
+-	Incrementando el almacenamiento del equipo
+¿Cuáles son los pasos que hay que realizar en un cambio de contexto?
+-	* Detener hilo,  guardar contexto actual, cargar contexto nuevo, reiniciar el hilo
+-	Guardar el contexto actual, cargar contexto nuevo, reiniciar hilo
+-	Detener hilo, guardar contexto actual, reiniciar hilo, cargar contexto nuevo
+-	Cargar contexto nuevo sin guardar el anterior
+¿Cuáles de los siguientes tipos de computadores pueden hacer muchas operaciones y muy complejas?
+-	Computadores de grano fino
+-	Computadores monoprocesadores
+-	* Computadores de grano grueso
+-	Computadores multiprocesadores
+¿Dónde se sitúa la memoria en los multiprocesadores de memoria distribuida?
+-	*Cada procesador dispone de su espacio de memoria
+-	Existe una memoria global donde todos los procesadores acceden
+-	Cada computador dispone de su espacio de memoria
+-	La memoria se encuentra dividida entre los distintos equipos, y un equipo solo puede acceder a la memoria de determinados equipos
+Preguntas cortas:
+¿Qué restricciones existen en la conexión de los equipos de los multicomputadores?
+- El envío de datos a través de una red puede provocar una ralentización en el sistema ya sea por situaciones indeseadas: sobrecarga de la red, caída, etc como necesario para el funcionar el sistema: enrutamiento
+
+Definir tipos de clusters
+- Centralizados en un rack o descentralizados en distintas localizaciones
+
+Pregunta de desarrollo:
+Describir las ventajas e inconvenientes de los multicomputadores

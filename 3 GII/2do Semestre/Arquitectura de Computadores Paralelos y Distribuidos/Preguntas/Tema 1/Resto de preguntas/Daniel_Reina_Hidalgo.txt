@@ -1,0 +1,42 @@
+1) Un operando cuyo valor se obtiene de la instrucción anterior, ¿cómo se podría evitar este problema?
+
+  a) No haría falta, ya que no se produce ningún error.
+  b) Usar diferentes tipos de organizaciones segmentadas para cada juego de instrucciones.
+  c) Duplicamos las unidades funcionales. 
+ *d) Reordenar las instrucciones para evitar dependencias de datos
+
+2) Reducir el número de ciclos necesarios para una instrucción, ¿a que tipo de procesador corresponde esta característica?
+
+  a) Procesador vectorial.
+ *b) Procesador escalar
+  c) Procesador VLIW.
+  d) Técnicas Multithread.
+
+3) ¿Qué paralelismo es correcto según la clasificación Hwang-Briggs?
+
+ *a) MIMD sería paralelismo espacial asíncrono 
+  b) SISD sería paralelismo espacial síncrono.
+  c) SIMD sería paralelismo espacial asíncrono.
+  d) MISD sería paralelismo espacial síncrono.
+
+4) ¿Qué signfica MPP?
+
+  a) Massively Processors Parallel. 
+  b) Multiple Parallel Processors.
+ *c) Massively Parallel Processors
+  d) Mighty Parallel Processors.
+
+
+1) Ventajas de VLIW.
+
+- Planificación de ejecución realizada por el compilador.
+- Genera arquitecturas mas simples con menos lógica de control.
+- Menor consumo.
+- Mejora la paralización.
+- La simplicidad permite incrementar la velocidad del reloj.
+
+2) Definición de un grid y de que se diferencia de un cluster.
+
+Sistemas que combinan sistemas distribuidos, de recursos heterogéneos, que están conectados a través de una LAN o WAN, incluso ambas a la vez. 
+Se diferencia de un cluster, de que el grid no tiene un punto común de administración de los recursos. 
+

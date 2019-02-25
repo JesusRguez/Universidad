@@ -1,0 +1,41 @@
+1- ¿Quién es el encargado de realizar los cambios de contextos tradicionales?
+a) El sistema operativo. *
+b) El hardware.
+c) El procesador.
+d) Ninguna de las anteriores.
+
+2- ¿Qué tamaño tienen las instrucciones en un procesador VLIW?
+a) 16-32 bits.
+b) 64 bits.
+c) 128-512 bits.
+d) 128-1024 bits. *
+3- ¿Qué se encarga de gestionar el paralelismo en los procesadores VLIW?
+a) El sistema operativo.
+b) El debugger.
+c) El compilador. *
+d) El programador.
+4- ¿Qué modelo de computación sigue la Arquitectura Von Neuman?
+a) Computación escalar.
+b) Computación secuencial. *
+c) Computación paralela.
+d) Computación MIMD.
+
+
+
+Describe brevemente los distintos modelos de paralelismo que hay a nivel de hardware.
+
+Respuesta:
+* Computador paralelo con memoria compartida: distintos procesadores comparten una sola dirección de memoria.
+* Computador paralelo con memoria distribuida: distintos procesadores poseen su propia memoria.
+
+Describe brevemente las diferentes técnicas de Multithread que existen:
+
+Respuesta:
+* Grano grueso: cambia de thread cuando el actual está un tiempo en espera, ya sea por un I/O o por fallos en la caché.
+* Grano fino: el thread en ejecución es cambiado en cada ciclo de reloj.
+* SMT: Parecido al grano fino pero permite ejecutar múltiples thread en cada ciclo de reloj.
+* CMP: procesadores capaces de ejecutar varios thread a la vez, cada uno en un núcleo distinto.
+
+
+
+Desarrolla los distintos tipos de paralelismo.

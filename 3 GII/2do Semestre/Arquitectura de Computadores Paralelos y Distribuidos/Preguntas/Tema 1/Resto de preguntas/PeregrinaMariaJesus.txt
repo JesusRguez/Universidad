@@ -1,0 +1,39 @@
+Desventaja cluster
+
+-El coste de administrar un cluster con n computadores es prácticamente el mismo que el de administrar n computadores independientes.
+-Los procesadores están normalmente conectados a través de puertos E/S de cada computador.
+-Sobrecoste de la división de memoria: n memorias independientes y n copias del sistema operativo.
+-*Todas las anteriores son verdaderas. 
+
+¿Cuál de estas afirmaciones sobre ejecución multihilo es falsa?
+
+-La memoria puede compartirse gracias a la memoria virtual, que ya incluye soporte para la multiprogramación.
+-Un inconveniente de la ejecución multihilo de grano grueso es su limitada capacidad de reducir las pérdidas en las prestaciones debidas a las paradas cortas.
+-*En SMT explota el paralelismo solo a nivel de hilo. 
+-La principal desventaja del grano fino es la pérdida de velocidad en la ejecución de un hilo individual.
+
+¿Cuál de estas afirmaciones es falsa?
+
+-*En los multiprocesadores UMA y NUMA no hace falta bloqueos para una variable compartida. 
+-Es más fácil sencillo escribir aplicaciones con paralelismo a nivel de datos con arquitecturas y compiladores vectoriales que con multiprocesadores MIMD.
+-Solo hay que comprobar dependencias de datos entre dos instrucciones vectoriales una vez por operando, en lugar de una vez para cada elemento del vector.
+-Una combinación eficiente es un procesador superescalar con ejecución multihilo de grano grueso.
+
+¿Qué indica template en VLIW?
+
+-El tipo de operación
+-En que unidad funcional se ejecuta cada operación
+-La dependencia entre este bundle y los siguientes
+-*Todas son correctas.
+
+¿Qué estrategias podemos seguir para incrementar la cantidad de potencial del ILP?
+
+La primera es aumentar las etapas del pipeline para solapar la ejecución de más instrucciones, de esta forma la cantidad de paralelismo que se aprovecharía es mayor, al solaparse la ejecución de más instrucciones.
+La segunda consiste en replicar los componentes internos para poder ejecutar múltiples instrucciones dentro de cada etapa de segmentación.
+
+Ventajas e incovenientes de los multicomputadores
+
+Las ventajas son: muy escalable, pocos o ningún conflicto de acceso a memoria, permiten muchos procesadores, precio asequible, adecuado para integrarse con técnicas VLSI e implementaciones sencillas a partir de PC.
+
+Los incovenientes son: programación compleja, difícil concebir algoritmos paralelos eficientes, tiempo adicional en la transmisión de mensajes, difícil equilibrar la carga computacional, memoria "desperdiciada" en replicar SO y programas.
+

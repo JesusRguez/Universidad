@@ -1,0 +1,44 @@
+PREGUNTAS TIPO TEST:
+
+1)¿Cual es el rango de tamaño de las instrucciones de los procesadores vliw?
+
+a)desde 8 a 64 bits
+b)desde 128 a 1024 bits *
+c)desde 16 a 128 bits
+d)desde 32 a 256 bits
+
+2)¿Cual es una caracteristica de Multithreading de grano fino?
+
+a)El thread en ejecución es cambiado en cada ciclo de reloj*
+b)Los threads son desalojados del procesador con baja frecuencia.
+c)Multiples Thread son ejecutados en un ciclo de reloj
+d)El thread es cambiado ante un fallo de caché
+
+
+3)Tamaño del registro predicado de vliw
+a) 7 bits
+b) 8 bits
+c)16 bits
+d) 6 bits*
+
+4)¿Cual es una forma de DLP?
+a)Multi core processors
+b)Fine Grain
+c)SMT
+d)short vector processing*
+
+
+
+Respuesta corta:
+
+1)Diferencia básica entre cluster y grid
+
+un cluster tiene un punto común de administrador mientras que en el grid no existe punto común.
+
+2)¿Cuales son los protocolos para evitar conflictos en concurrent write?
+
+common,arbitrary,priority y sum
+
+Pregunta de desarrollo:
+
+1)Niveles de paralelismo y una breve descripcion de cada uno.

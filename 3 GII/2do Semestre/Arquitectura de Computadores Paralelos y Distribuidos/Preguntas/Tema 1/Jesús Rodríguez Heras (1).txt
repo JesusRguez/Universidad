@@ -1,0 +1,27 @@
+PREGUNTAS TIPO TEST:
+1. ¿A qué nos referimos con "Planificación"?
+- Dónde y cuándo se ejecutará una tarea.
+- Dónde se ejecutará una tarea.
+* Dónde, cuándo se ejecutará una tarea y las dependencias entre ellas.
+- Cuándo se ejecutará una tareá y las dependencias entre ellas.
+
+2. ¿Dónde es importante el balanceo de carga?
+* En entornos de cómputo no dedicados.
+- En entornos de cómputo dedicados.
+- En ninguno de ellos.
+- Es indiferente porque siempre debemos tenerlo en cuenta.
+
+3. ¿Cuáles de los sistemas RAID es el más usado actualmente?
+- RAID 0.
+- RAID 5.
+- RAID 10.
+* RAID 50.
+
+
+PREGUNTAS DE RESPUESTA CORTA:
+1. ¿Qué es el balanceo de carga? ¿Cuál es su objetivo?
+Es la técnica usada para compartir el trabajo a realizar entre varios procesos, ordenadores, discos u otros recursos. Es un factor relevante sobre el rendimiento de aplicaciones paralelas y distribuidas ejecutando en un computador paralelo.
+El objetivo es evitar que el rendimiento global del sistema se degrade a causa del retraso en tareas individuales.
+
+PREGUNTA DE DESARROLLO:
+1. Comente qué es y para qué sirven los discos SPARE y si tienen alguna relación con los sistemas RAID en la actualidad.

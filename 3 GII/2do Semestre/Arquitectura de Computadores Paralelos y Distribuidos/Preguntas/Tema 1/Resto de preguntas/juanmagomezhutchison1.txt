@@ -1,0 +1,45 @@
+JUAN MANUEL GOMEZ HUTCHISON
+
+PREGUNTAS TIPO TEST
+
+1. Las formas básicas de paralelismo son:
+	- PLP,TLP,DLP,ILP (*)
+	- SLP,TLP,YLP,FLP
+	- FLP,ALP,ELP,ILP
+	- PLP,TLP,DLP,OLP
+	
+2. La segmentación trata de:
+	- Dividir una unidad funcional en etapas independientes para disminuir el tiempo entre instrucciones. (*)
+	- Dividir una unidad funcional en etapas dependientes para disminuir el tiempo entre instrucciones.
+	- Ninguna de las anteriores es correcta.
+	- Ejecutar una instrucción en una unidad funcional sin dividirla en etapas.
+	
+3. Un procesador escalar supersegmentado es aproximadamente la combinación de:
+	- Un superescalar y un segmentado.
+	- La combinacion de dos segmentados. (*)
+	- Ninguna de las anteriores es correcta.
+	- Ambas afirmaciones son correctas.
+	
+4. ¿Qué es un cluster?
+	- Cientos o miles de PC o estaciones de trabajo autónomas conectadas por una red de comunicación. (*)
+	- Una serie de PC que comparten memoria.
+	- Un conjunto de ordenadores autónomos.
+	- Cientos o miles de PC o estaciones de trabajo que comparten memoria de un único PC.	
+	
+PREGUNTAS DE RESPUESTA CORTA
+
+¿Qué es un Grid?
+ - Sistemas qeu combinan sistemas distribuidos, de recursos heterogéneos que están conectados a través de LANs o/y WANs, soliendo ser Internet.
+ 
+Enumere dos ventajas de la memoria distribuida sobre la memoria compartida:
+	- Pocos o ningún conflicto de acceso a memoria.
+	- Permiten muchos procesadores, paralelismo masivo.
+	- Muy escalable.
+	- Precios asequibles.
+	- Adecuados para integrarse con técnicas VLSI. Incorporándose procesador, memoria, y enlaces en un chip.
+	- Implementaciones sencillas a partir de computadores personales.
+	
+	(ELEGIR SOLO 2)
+
+PREGUNTA DE DESARROLLO
+Describa la taxonomía de Flynn y enumere las posibles formas de clasificación de esta taxonomía.

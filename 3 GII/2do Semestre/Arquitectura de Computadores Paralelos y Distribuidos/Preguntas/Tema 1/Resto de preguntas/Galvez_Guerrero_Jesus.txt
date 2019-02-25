@@ -1,0 +1,41 @@
+PREGUNTAS TIPO TEST:
+Cual de las siguientes afirmaciones sobre la segmentacion es falsa:
+	-La segmentacion puede producir problemas de dependencias de datos
+	*Los bucles desenrollados producen problemas a la hora de la ejecucion repetida de operaciones sobre una misma direccion de memoria
+	-Las instrucciones de salto pueden llegar a invalidar toda la busqueda anticipada de instrucciones
+	-Es necesario diseñar dos tipos de memorias cache, una para datos y otra para instrucciones, para asi evitar conflictos de acceso a la misma
+
+Cual de estas arquitecturas NO estan asociadas a los procesadores vectoriales:
+	*Extensiones MIMD
+	-Procesadores de Array
+	-Procesadores Vectoriales
+	-Extensiones SIMD
+
+La tecnica de paralelismo SMT:
+	-Permite ejecutar múltiples threads en cada ciclo de reloj, y lo realiza con concurrencia virtual
+	-Realiza intercambio de contexto de los threads a mitad de cada ciclo de reloj para emular una ejecición simultanea de varios threads por ciclo de reloj
+	*Permite ejecutar multiples threads en cada ciclo de reloj, permitiendo la concurrencia fisica, ademas de la virtual
+	-Ninguna de las anteriore es correcta
+
+El cambio de contexto rápido:
+	-Se basa en replicar registros de contexto(PC, estado, etc)
+	-Necesita una arquitectura mas compleja
+	-El rendimiento por cada thread es menor
+	*Todas las anteriores es correcta
+
+
+PREGUNTAS CORTAS:
+¿Cuales son los protocolos para evitar conflictos en la escritura concurrente en memoria?
+	Common, Arbitrary, Priority y Sum
+
+¿Cuantos tipos de instrucciones se pueden encontrar en el modelo de paso de mensajes?¿Cuales son?
+	En el modelo del paso de mensajes hay 2 tipos de instrucciones, las instrucciones locales y las de comunicacion.
+	
+	
+PREGUNTA DE DESARROLLO:
+Diga cuales son los modelos de paralelismo segun la clasificacion de Hwang-Briggs y explicalos brevemente:
+	En la clasificacion de Hwang-Briggs se diferencian 2 tipos de paralelismos:
+		-Paralelismo temporal, donde los procesadores solapan varias operaciones durante el mismo instante de tiempo en una sola unidad funcional, al igual que funciona con la segmentacion
+		-Paralelismo espacial, donde los procesadores replican los elementos del proceso, y este paralelismo se puede dar de dos formas;
+			-Sincrona: Todos los elementos de proceso ejecutan sus instrucciones al ritmo de una señal de reloj
+			-Asincrona: Cada elementos independiente de proceso ejecutan su propio juego de instrucciones sin una señal de reloj que marque el ritmo

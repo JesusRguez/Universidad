@@ -1,0 +1,31 @@
+Preguntas tipo test:
+1. El nivel de paralelismo de Software medio consta de:
+a) Herramientas de programación para implementar programas paralelos de alto nivel (correcta)
+b) Programas que abordan la problemática de un determinado campo específico
+c) Elementos software que hacen posible la gestión de elementos a nivel hardware
+d) Ninguna es correcta
+2. Los tres tipos principales de procesadores escalares son:
+a) Escalares, superseccionados y seccionados
+b) Segmentados, supersegmentados y superescalares (correcta)
+c) Segmentados, seccionados y superescalares
+d) Fraccionados, supersegmentados y superescalares
+3. Los computadores paralelos pueden clasificarse respecto a:
+a) Forma de comunicación, sistema de almacenamiento utilizado, sistema operativo utilizado
+b) Numero de procesadores, mecanimos global de control, funcionamiento sincrono/asincrono, forma de comunicación
+c) Tipo de procesadores, sistema de almacenamiento utilizado, sistema operativo utilizado, forma de comunicación
+d) Tipo y numero de procesadores, mecanimo global de control, funcionamiento sincrono/asincrono, forma de comunicación (correcta)
+4. La taxonomía de Flynn da a lugar a los siguientes tipos de procesadores:
+a) SISD, SIMD, MISD, MIMD (correcta)
+b) SISD, SIMD, MDSI, MDMI
+c) SSD, HDD, SSHD
+d) Ninguna es correcta
+Preguntas de respuesta corta:
+1. Defina los conceptos "thread" y "multithreading" y explique la relación entre ambos.
+R- Los threads (hilos, hebras) son procesos ligeros que comparten el procesador físico. La técnica hardware que permite compartir un recurso con varios Threads estableciendo prioridades se denomina Multithreading.
+2. Explique que es un "cluster", enumerando y definiendo sus tipos
+R- Los clusters son una estructura de red formada por cientos de PC conectados por medio de una red comercial. Pueden ser de tipo:
+Centralizados: montan el conjunto de PC que lo forman en un rack
+No centralizados: sistemas cuyos PC se encuentran repartidos a lo largo de una superficie
+Pregunta de desarrollo:
+1. Liste y explique las distintas formas básicas de paralelismo, exponiendo ejemplos de cada una de ellas.
+

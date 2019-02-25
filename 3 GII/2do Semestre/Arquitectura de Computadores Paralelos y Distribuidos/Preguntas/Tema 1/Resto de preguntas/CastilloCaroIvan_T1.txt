@@ -1,0 +1,37 @@
+1) La segmentación presenta uno de los siguientes problemas:
+	a) El tiempo de cada etapa se establece en base al tiempo menor de todas ellas.
+	b) El tiempo de cada etapa se establece en base al tiempo mayor de todas ellas. *
+	c) El tiempo de cada etapa se establece en base al tiempo medio de todas ellas.
+	d) El tiempo de cada etapa no es crucial para la segmentación.
+
+2) Para incrementar las prestaciones de computadores secuenciales, se utilizan los siguientes conceptos de paralelismo:
+	a) Decremento de la longitud de palabra y unicidad de unidades funcionales, entre otros.
+	b) Unicidad de unidades funcionales e incremento de la longitud de palabra, entre otros.
+	c) Incremento de la longitud de palabra y multiplicidad de unidades funcionales, entre otros. *
+	d) Ninguna respuesta es correcta.
+
+3) ¿Qué podemos afirmar de los procesadores con memoria distribuida?
+	a) Existe memoria global.
+	b) No existe memoria global. *
+	c) Todos los procesadores pueden acceder a todo el espacio de direcciones.
+	d) Cada procesador tiene su propio espacio de direcciones, pero todos tienen acceso.
+
+4) Indica qué afirmación NO es correcta sobre el DLP (Data Level Paralelism):
+	a) Posibilidad de operar únicamente sobre dos datos con una única instrucción.
+	b) Necesaria la implicación del programador.
+	c) Se realiza el mismo cálculo sobre los mismos grupos de datos.
+	d) Posibilidad de operar sobre dos o más datos con una única instrucción. *
+
+
+¿Cuales son las dos técnicas básicas de paralelismo? Coméntalas
+
+	La segmentación y la réplica son las dos técnicas básicas de paralelismo. La primera consiste en descomponer la ejecución de cada instrucción en varias etapas para poder empezar a procesar una instrucción diferente en cada una de ellas y trabajar con varias a la vez. La réplica consiste en duplicar circuitería del procesador para conseguir ejecutar más de una instrucción a la vez.
+
+-Pregunta de desarrollo:
+	Explica los tipos de procesadores recogidos en la Taxonomía de Flynn.
+
+
+
+
+
+
