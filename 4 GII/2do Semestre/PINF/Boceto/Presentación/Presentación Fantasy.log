@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  25 FEB 2019 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  27 FEB 2019 09:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,8 +1088,16 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [3
 
 ]
-Package atenddvi Info: Last page = 4.
+<Boceto.jpeg, id=118, 1606.0pt x 903.375pt>
+File: Boceto.jpeg Graphic file (type jpg)
+ <use Boceto.jpeg>
+Package pdftex.def Info: Boceto.jpeg used on input line 140.
+(pdftex.def)             Requested size: 337.26996pt x 189.71434pt.
  [4
+
+ <./Boceto.jpeg>]
+Package atenddvi Info: Last page = 5.
+ [5
 
 ]
 \tf@nav=\write6
@@ -1101,15 +1109,14 @@ Package atenddvi Info: Last page = 4.
 \tf@snm=\write8
 \openout8 = `"Presentación Fantasy.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 146.
-
-(./Presentación Fantasy.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 153.
+ (./Presentación Fantasy.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `"Presentación Fantasy".out' has not changed
 .
 (rerunfilecheck)             Checksum: E67BC21DDE34857673D648E1EB919D52;139.
@@ -1120,20 +1127,20 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 26069 strings out of 493013
- 495614 string characters out of 6135682
- 568041 words of memory out of 5000000
- 29138 multiletter control sequences out of 15000+600000
+ 26079 strings out of 493013
+ 495725 string characters out of 6135682
+ 568038 words of memory out of 5000000
+ 29144 multiletter control sequences out of 15000+600000
  5759 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,10406b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on "Presentación Fantasy.pdf" (4 pages, 46170 bytes).
+Output written on "Presentación Fantasy.pdf" (5 pages, 215841 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 12 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 189 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
