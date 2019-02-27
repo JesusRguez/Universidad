@@ -1,0 +1,5 @@
+El proyecto lo encarga un profesor del laboratorio de ingeniería biomédica haciendo un cuestionario médico para diagnosticar un paciente frente al alzheimer.
+
+También una aplicación para que el paciente siga una línea con el dedo para ver si padece alzheimer.
+
+Se desarrollará en Android para dispositivos móviles y tablets.

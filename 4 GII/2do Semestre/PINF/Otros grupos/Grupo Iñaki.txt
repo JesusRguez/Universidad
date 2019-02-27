@@ -1,0 +1,5 @@
+Página web sobre dermatología donde el cliente aún no ha contactado con ellos.
+
+Deben grabar escenas de las operaciones dermatológicas y añadirlas en la página web.
+
+Nunca dejar al cliente decidir ni darle la opción de decidir en los temas técnicos.

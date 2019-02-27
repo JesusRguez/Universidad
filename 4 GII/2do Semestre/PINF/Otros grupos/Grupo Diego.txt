@@ -1,0 +1,5 @@
+Exoesqueleto de una mano para ayudar a las personas con poca fuerza o movilidad reducida.
+
+El guante es parte del proyecto de otro alumno y ellos están encargados del software a la vez que recopilan la información del propio exoesqueleto.
+
+El fin principal es que las personas que se pongan el guante, puedan recuperar la movilidad en la mano.

@@ -1,0 +1,9 @@
+Proyecto de Konversat.io.
+
+Tenemos un problema en la hostelería debido a que todo el procedimiento de reserva de restaurantes y hoteles se hacen mediante lenguaje natural mientras que se podría implementar con una aplicación de forma que se pueda reservar una mesa o un hotel con la voz.
+
+Ellos se encargan de la diseminación digital para elaborar un plan de comercilización y visibilidad de marketing digital. Todo dirigido a hoteles y agencias de marketing basados en el mapa de empatía.
+
+Tendrán que crear una plataforma de tipo plantilla para que la empresa tenga facilidad de modificar el robot/aplicación en función de quién contrate el servicio.
+
+

@@ -1,0 +1,7 @@
+Proyecto sobre farmacia Prada en el Puerto de Santa María.
+
+Rediseñar la página web de la farmacia con char en tiempo real y marketing activo.
+
+Plataforma de mensajería e intercambios de archivos para no depender de otras aplicaciones externas basada en android e iOS.
+
+Parece una carga de trabajo excesiva para la asignatura, cosa que se verá cuando tengan todo lo necesario para ponerse a trabajar debido a que el cliente quiere aprovechar lo que ya tiene hecho sin empezar de cero.

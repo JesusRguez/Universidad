@@ -1,0 +1,9 @@
+Aplicación de gestion de Aquaterapia.
+
+La clienta trabaja en hoteles y piscinas y da clases a gente con fobias y bebés.
+
+La clienta trabaja con archivos excel mediante dropbox. Necesita una aplicación donde pueda gestionar las clases, grupos, horarios, trabajadores y una lista de asistencia y gestión.
+
+Dos opciones (niniguna clara hasta el momento):
+	- Aplicación web.
+	- Aplicación de escritorio.
