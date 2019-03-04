@@ -1,0 +1,14 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Crear fantas\IeC {\'\i }a}{3}{section.1}
+\contentsline {section}{\numberline {2}Elegir idioma}{3}{section.2}
+\contentsline {section}{\numberline {3}Insertar imagen}{4}{section.3}
+\contentsline {section}{\numberline {4}Insertar texto}{5}{section.4}
+\contentsline {section}{\numberline {5}Crear cuestionario peque\IeC {\~n}o}{5}{section.5}
+\contentsline {section}{\numberline {6}Asignar puntos activos}{7}{section.6}
+\contentsline {section}{\numberline {7}Insertar contenido}{7}{section.7}
+\contentsline {section}{\numberline {8}Crear cuestionario final}{7}{section.8}
+\contentsline {section}{\numberline {9}Autorizar conexi\IeC {\'o}n}{8}{section.9}
+\contentsline {section}{\numberline {10}Gestionar porcentaje punto activo}{8}{section.10}
+\contentsline {section}{\numberline {11}Gestionar ficha alumno}{9}{section.11}
+\contentsline {section}{\numberline {12}Asignar nota final}{9}{section.12}
+\contentsline {section}{\numberline {13}Asignar fantas\IeC {\'\i }a}{9}{section.13}
