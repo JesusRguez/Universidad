@@ -15,12 +15,24 @@
 \BOOKMARK [2][-]{subsection.6.1}{Crear imagen}{section.6}% 15
 \BOOKMARK [2][-]{subsection.6.2}{Modificar imagen}{section.6}% 16
 \BOOKMARK [2][-]{subsection.6.3}{Borrar imagen}{section.6}% 17
-\BOOKMARK [1][-]{section.7}{Insertar texto}{}% 18
-\BOOKMARK [1][-]{section.8}{Crear cuestionario peque\361o}{}% 19
-\BOOKMARK [1][-]{section.9}{Insertar contenido}{}% 20
-\BOOKMARK [1][-]{section.10}{Crear cuestionario final}{}% 21
-\BOOKMARK [1][-]{section.11}{Autorizar conexi\363n}{}% 22
-\BOOKMARK [1][-]{section.12}{Gestionar porcentaje punto activo}{}% 23
-\BOOKMARK [1][-]{section.13}{Gestionar ficha alumno}{}% 24
-\BOOKMARK [1][-]{section.14}{Asignar nota final}{}% 25
-\BOOKMARK [1][-]{section.15}{Asignar fantas\355a}{}% 26
+\BOOKMARK [1][-]{section.7}{CRUD texto}{}% 18
+\BOOKMARK [1][-]{section.8}{CRUD Quiz}{}% 19
+\BOOKMARK [2][-]{subsection.8.1}{Crear Quiz}{section.8}% 20
+\BOOKMARK [2][-]{subsection.8.2}{Leer Quiz}{section.8}% 21
+\BOOKMARK [2][-]{subsection.8.3}{Modificar Quiz}{section.8}% 22
+\BOOKMARK [2][-]{subsection.8.4}{Borrar Quiz}{section.8}% 23
+\BOOKMARK [1][-]{section.9}{CRUD efecto de audio}{}% 24
+\BOOKMARK [2][-]{subsection.9.1}{Crear efecto de audio}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.2}{Modificar efecto de audio}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.3}{Borrar efecto de audio}{section.9}% 27
+\BOOKMARK [1][-]{section.10}{CRUD informaci\363n adicional}{}% 28
+\BOOKMARK [1][-]{section.11}{Organizar puntos activos}{}% 29
+\BOOKMARK [1][-]{section.12}{CRUD cuestionario final}{}% 30
+\BOOKMARK [2][-]{subsection.12.1}{Crear Quiz final}{section.12}% 31
+\BOOKMARK [2][-]{subsection.12.2}{Leer Quiz final}{section.12}% 32
+\BOOKMARK [2][-]{subsection.12.3}{Modificar Quiz final}{section.12}% 33
+\BOOKMARK [2][-]{subsection.12.4}{Borrar Quiz final}{section.12}% 34
+\BOOKMARK [1][-]{section.13}{Gestionar porcentaje de un punto activo}{}% 35
+\BOOKMARK [1][-]{section.14}{Gestionar ficha alumno}{}% 36
+\BOOKMARK [1][-]{section.15}{Asignar nota final}{}% 37
+\BOOKMARK [1][-]{section.16}{Asignar fantas\355a}{}% 38

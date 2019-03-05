@@ -1,27 +1,39 @@
 \select@language {spanish}
-\contentsline {section}{\numberline {1}CRUD fantas\IeC {\'\i }a}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Crear fantas\IeC {\'\i }a}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Leer fantas\IeC {\'\i }a}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Modificar fantas\IeC {\'\i }a}{4}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Borrar fantas\IeC {\'\i }a}{5}{subsection.1.4}
-\contentsline {section}{\numberline {2}Elegir idioma}{5}{section.2}
-\contentsline {section}{\numberline {3}Copiar fantas\IeC {\'\i }a}{6}{section.3}
-\contentsline {section}{\numberline {4}CRUD background}{6}{section.4}
-\contentsline {section}{\numberline {5}CRUD punto activo}{7}{section.5}
-\contentsline {subsection}{\numberline {5.1}Crear punto activo}{7}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Leer punto activo}{8}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Modificar punto activo}{8}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Borrar punto activo}{9}{subsection.5.4}
-\contentsline {section}{\numberline {6}CRUD imagen}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}Crear imagen}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Modificar imagen}{11}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Borrar imagen}{11}{subsection.6.3}
-\contentsline {section}{\numberline {7}Insertar texto}{12}{section.7}
-\contentsline {section}{\numberline {8}Crear cuestionario peque\IeC {\~n}o}{12}{section.8}
-\contentsline {section}{\numberline {9}Insertar contenido}{13}{section.9}
-\contentsline {section}{\numberline {10}Crear cuestionario final}{14}{section.10}
-\contentsline {section}{\numberline {11}Autorizar conexi\IeC {\'o}n}{14}{section.11}
-\contentsline {section}{\numberline {12}Gestionar porcentaje punto activo}{14}{section.12}
-\contentsline {section}{\numberline {13}Gestionar ficha alumno}{15}{section.13}
-\contentsline {section}{\numberline {14}Asignar nota final}{15}{section.14}
-\contentsline {section}{\numberline {15}Asignar fantas\IeC {\'\i }a}{16}{section.15}
+\contentsline {section}{\numberline {1}CRUD fantas\IeC {\'\i }a}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Crear fantas\IeC {\'\i }a}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Leer fantas\IeC {\'\i }a}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Modificar fantas\IeC {\'\i }a}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Borrar fantas\IeC {\'\i }a}{6}{subsection.1.4}
+\contentsline {section}{\numberline {2}Elegir idioma}{6}{section.2}
+\contentsline {section}{\numberline {3}Copiar fantas\IeC {\'\i }a}{7}{section.3}
+\contentsline {section}{\numberline {4}CRUD background}{7}{section.4}
+\contentsline {section}{\numberline {5}CRUD punto activo}{8}{section.5}
+\contentsline {subsection}{\numberline {5.1}Crear punto activo}{8}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Leer punto activo}{9}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Modificar punto activo}{9}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Borrar punto activo}{10}{subsection.5.4}
+\contentsline {section}{\numberline {6}CRUD imagen}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Crear imagen}{11}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Modificar imagen}{12}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Borrar imagen}{13}{subsection.6.3}
+\contentsline {section}{\numberline {7}CRUD texto}{13}{section.7}
+\contentsline {section}{\numberline {8}CRUD Quiz}{14}{section.8}
+\contentsline {subsection}{\numberline {8.1}Crear Quiz}{14}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Leer Quiz}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Modificar Quiz}{16}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Borrar Quiz}{16}{subsection.8.4}
+\contentsline {section}{\numberline {9}CRUD efecto de audio}{17}{section.9}
+\contentsline {subsection}{\numberline {9.1}Crear efecto de audio}{17}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Modificar efecto de audio}{18}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Borrar efecto de audio}{19}{subsection.9.3}
+\contentsline {section}{\numberline {10}CRUD informaci\IeC {\'o}n adicional}{19}{section.10}
+\contentsline {section}{\numberline {11}Organizar puntos activos}{20}{section.11}
+\contentsline {section}{\numberline {12}CRUD cuestionario final}{21}{section.12}
+\contentsline {subsection}{\numberline {12.1}Crear Quiz final}{21}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Leer Quiz final}{22}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Modificar Quiz final}{22}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Borrar Quiz final}{23}{subsection.12.4}
+\contentsline {section}{\numberline {13}Gestionar porcentaje de un punto activo}{24}{section.13}
+\contentsline {section}{\numberline {14}Gestionar ficha alumno}{24}{section.14}
+\contentsline {section}{\numberline {15}Asignar nota final}{24}{section.15}
+\contentsline {section}{\numberline {16}Asignar fantas\IeC {\'\i }a}{25}{section.16}

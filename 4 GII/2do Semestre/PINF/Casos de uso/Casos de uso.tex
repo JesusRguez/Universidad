@@ -109,8 +109,8 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
 \section{CRUD fantasía}
-\subsection{Crear fantasía}
 \hypertarget{crearfantasia}{}
+\subsection{Crear fantasía}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea una nueva fantasía.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -377,8 +377,8 @@
 \end{itemize}
 
 \section{CRUD imagen} %suponemos que es para un punto activo
-\subsection{Crear imagen}
 \hypertarget{crearimagen}{}
+\subsection{Crear imagen}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta una imagen en un punto activo.
 	\item \textbf{Actores:} Profesor o alumno (usuario).
@@ -386,6 +386,8 @@
 	\item \textbf{Postcondiciones:} Inserta una imagen en el punto activo seleccionado.
 	\item \textbf{Escenario principal:}
 	\begin{enumerate}
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
 		\item El usuario selecciona la opción de insertar imagen.
 		\item El sistema muestra una ventana en la que da a elegir al usuario de donde quiere seleccionar la imagen (Internet, local, imagen ya usada en la fantasía).
 		\item El usuario elige la opción ``Internet'' para incluir una imagen de internet.
@@ -393,24 +395,24 @@
 		\item El usuario inserta la url correcta de la imagen.
 		\item El punto activo toma la forma de la imagen.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\3. a) El usuario elige la opción ``Local'' para incluir una imagen desde su ordenador.
+	\item \textbf{Extensiones:} \\5. a) El usuario elige la opción ``Local'' para incluir una imagen desde su ordenador.
 	\begin{enumerate}
 		\item El sistema abre una ventana del explorador de archivos.
 		\item El usuario selecciona la imagen deseada y pulsa ``Aceptar''.
 		\item El sistema cierra la ventana del explorador de archivos.
-		\item Paso 6.
+		\item Paso 8.
 	\end{enumerate}
-	3. b) El usuario elige la opción ``Imagen usada anteriormente'' para incluir una imagen ya usada.
+	5. b) El usuario elige la opción ``Imagen usada anteriormente'' para incluir una imagen ya usada.
 	\begin{enumerate}
 		\item El sistema abre una ventana con las imágenes usadas anteriormente.
 		\item El usuario selecciona la imagen deseada y pulsa ``Aceptar''.
 		\item El sistema cierra la ventana emergente.
-		\item Paso 6.
+		\item Paso 8.
 	\end{enumerate}
-	5. a) La url no es correcta.
+	7. a) La url no es correcta.
 	\begin{enumerate}
 		\item El sistema muestra un mensaje de error.
-		\item Paso 4.
+		\item Paso 6.
 	\end{enumerate}
 	\item \textbf{Variaciones:} Ninguna.
 	\item \textbf{No-funcional:} Ninguna.
@@ -419,59 +421,81 @@
 
 \subsection{Modificar imagen}
 \begin{itemize}
-	\item \textbf{Descripción:}
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
+	\item \textbf{Descripción:} Modifica una imagen.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir una imagen.
+	\item \textbf{Postcondiciones:} La imagen queda modificada.
 	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo.
+		\item El sistema abre una ventana emergente con la información del punto activo.
+		\item Caso de uso \hyperlink{crearimagen}{\textcolor{blue}{Crear imagen}}.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
 \subsection{Borrar imagen}
 \begin{itemize}
-	\item \textbf{Descripción:}
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
+	\item \textbf{Descripción:} Borra una imagen de un punto activo.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir una imagen.
+	\item \textbf{Postcondiciones:} Borra la imagen y deja el punto activo en su estado por defecto.
 	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo.
+		\item El sistema abre una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la imagen y pulsa el botón ``Suprimir''.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra la imagen del punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 1.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-
-\section{Insertar texto} %suponemos que es para un punto activo
+\section{CRUD texto}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta un texto en un punto activo.
-	\item \textbf{Actores:} Profesor o alumno (usuario).
+	\item \textbf{Actores:} Creador-editor (usuario).
 	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
 	\item \textbf{Postcondiciones:} Inserta un texto en el punto activo seleccionado.
 	\item \textbf{Escenario principal:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción de insertar texto.
-		\item El sistema muestra una ventana emergente para que el usuario inserte el texto deseado.
-		\item El usuario inserta el texto en la ventana emergente mostrada por el sistema. Cuando termina, pulsa en el botón ``Aceptar''.
+		\item El usuario selecciona el punto activo al que le quiere añadir-editar el texto.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona introduce el texto deseado en el campo ``Texto''. 
+		\item El usuario pulsa en el botón ``Aceptar''.
 		\item El sistema guarda el texto en el punto activo correspondiente.
 	\end{enumerate}
-	\item \textbf{Extensiones:} Ninguna.
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
 	\item \textbf{No-funcional:} Ninguna.
 	\item \textbf{Cuestiones:} ¿Podrá tener opciones de formato?
 \end{itemize}
 
-\section{Crear cuestionario pequeño}
+\section{CRUD Quiz}
+\hypertarget{crearquiz}{}
+\subsection{Crear Quiz}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea un pequeño cuestionario sobre el tema del que trata el punto activo.
-	\item \textbf{Actores:} Profesor o alumno (usuario).
-	\item \textbf{Precondiciones:} Estar logueado en la plataforma Stimey.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
 	\item \textbf{Postcondiciones:} Crea un pequeño cuestionario en relación al punto activo correspondiente.
 	\item \textbf{Escenario principal:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción de crear un cuestionario pequeño.
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la opción de ``Crear \textit{quiz}''.
 		\item El sistema muestra las posibles opciones.
 		\item El usuario selecciona ``Respuesta simple''.
 		\item El sistema muestra una ventana emergente para crear la pregunta con sus posibles respuestas.
@@ -483,69 +507,329 @@
 	\begin{enumerate}
 		\item El sistema abre una ventana emergente para crear la pregunta y su respuesta.
 		\item El usuario rellena la ventana emergente con la pregunta y la respuesta conveniente y pulsa ``Aceptar'' cuando termina.
-		\item El sistema cierra la ventana emergente.
-		\item Paso 7.
+		\item Paso 8.
 	\end{enumerate}
 	3. b) El usuario elige la opción ``Quiz con imágenes''.
 	\begin{enumerate}
 		\item El sistema abre una ventana emergente para crear la pregunta con la imagen y su respuesta.
 		\item El usuario rellena la ventana emergente con la pregunta, la imagen y la respuesta conveniente, y pulsa ``Aceptar'' cuando termina.
-		\item El sistema cierra la ventana emergente.
-		\item Paso 7.
+		\item Paso 8.
 	\end{enumerate}
 	3. c) El usuario elige la opción ``Unir''.
 	\begin{enumerate}
 		\item El sistema abre una ventana emergente para crear el quiz de unión.
 		\item El usuario rellena la ventana emergente con las posibles respuestas y su respuesta correcta y pulsa ``Aceptar'' cuando termina.
-		\item El sistema cierra la ventana emergente.
-		\item Paso 7.
+		\item Paso 8.
 	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Leer Quiz}
+\begin{itemize}
+	\item \textbf{Descripción:} Muestra el estado del \textit{quiz}.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un \textit{quiz}.
+	\item \textbf{Postcondiciones:} Muestra el estado del \textit{quiz} en el punto activo correspondiente.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la opción de ``Leer \textit{quiz}''.
+		\item El sistema muestra una ventana emergente con la visión final del \textit{quiz}.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Modificar Quiz}
+\begin{itemize}
+	\item \textbf{Descripción:} Permite modificar el \textit{quiz}.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un \textit{quiz}.
+	\item \textbf{Postcondiciones:} Modifica el \textit{quiz} de un punto activo.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la opción ``Modificar \textit{quiz}''.
+		\item Caso de uso \hyperlink{crearquiz}{\textcolor{blue}{Crear \textit{Quiz}}}
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Borrar Quiz}
+\begin{itemize}
+	\item \textbf{Descripción:} Borra el \textit{quiz} del punto activo seleccionado.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un \textit{quiz}.
+	\item \textbf{Postcondiciones:} Borra el \textit{quiz} del punto activo seleccionado.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la opción de ``Borrar \textit{quiz}''.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra el \textit{quiz} del punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 1.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\section{CRUD efecto de audio}
+\hypertarget{crearaudio}{}
+\subsection{Crear efecto de audio}
+\begin{itemize}
+	\item \textbf{Descripción:} Establece un efecto de audio de fondo en el punto activo.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
+	\item \textbf{Postcondiciones:} Establece el efecto de audio de fondo.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo correspondiente.
+		\item El sistema muestra una ventana emergente con la información del punto activo.
+		\item El usuario selecciona la opción de ``Añadir efecto de audio''.
+		\item El sistema muestra una ventana emergente en la que da a elegir al usuario de donde quiere seleccionar el audio (Internet, local, audio ya usado en la fantasía).
+		\item EL usuario elige la opción ``Internet'' para incluir un audio de Internet.
+		\item El sistema le pide al usuario la url del audio.
+		\item El usuario inserta la url del audio.
+		\item El sistema guarda el audio en el punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 5. a) El usuario elige la opción ``Local'' para incluir un audio desde su ordenador.
+	\begin{enumerate}
+		\item El sistema abre una ventana del explorador de archivos.
+		\item El usuario selecciona el audio deseado y pulsa ``Aceptar''.
+		\item El sistema cierra la ventana del explorador de archivos.
+		\item Paso 8.
+	\end{enumerate}
+	5. b) El usuario elige la opción ``Audio usado anteriormente'' para incluir un audio ya usado.
+	\begin{enumerate}
+		\item El sistema abre una ventana con los audios usados anteriormente.
+		\item El usuario selecciona el audio deseado y pulsa aceptar.
+		\item El sistema cierra la ventana emergente.
+		\item Paso 8.
+	\end{enumerate}
+	7. a) La url no es correcta.
+	\begin{enumerate}
+		\item El sistema muestra un mensaje de error.
+		\item Paso 6.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Modificar efecto de audio}
+\begin{itemize}
+	\item \textbf{Descripción:} Modificar efecto de audio.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un audio.
+	\item \textbf{Postcondiciones:} Modifica el audio.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo.
+		\item El sistema abre una ventana emergente con la información del punto activo.
+		\item Caso de uso \hyperlink{crearaudio}{\textcolor{blue}{Crear audio}}
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Borrar efecto de audio}
+\begin{itemize}
+	\item \textbf{Descripción:} Borra un efecto de audio de un punto activo.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un audio.
+	\item \textbf{Postcondiciones:} Borra un efecto de audio de un punto activo.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo.
+		\item El sistema abre una ventana emergente con la información del punto activo.
+		\item El usuario selecciona el audio y pulsa el botón ``Suprimir''.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra el audio del punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 1.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
 	\item \textbf{No-funcional:} Ninguna.
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
 
-\section{Insertar contenido}
+\section{CRUD información adicional}
 \begin{itemize}
-	\item \textbf{Descripción:}
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
+	\item \textbf{Descripción:} Inserta un texto como información adicional de la fantasía.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Se debe estar editando la fantasía correspondiente.
+	\item \textbf{Postcondiciones:} Inserta un texto como información adicional de la fantasía.
 	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Información adicional''.
+		\item El sistema muestra una ventana emergente con un cuadro de texto.
+		\item El usuario introduce el texto deseado en el cuadro de texto. 
+		\item El usuario pulsa en el botón ``Aceptar''.
+		\item El sistema guarda la información adicional en la fantasía correspondiente.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} ¿Podrá tener opciones de formato?
 \end{itemize}
 
-\section{Crear cuestionario final}
+\section{Organizar puntos activos}
 \begin{itemize}
-	\item \textbf{Descripción:}
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
+	\item \textbf{Descripción:} Organiza la aparición de los puntos activos.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía debe estar creada.
+	\item \textbf{Postcondiciones:} Establece el orden de aparición de los puntos activos de la fantasía.
 	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Organizar puntos activos''.
+		\item El sistema muestra una ventana emergente con el nombre de los puntos activos existentes en la fantasía y un recuadro para establecer el orden de aparición.
+		\item El usuario establece el orden de aparición en los recuadros junto al nombre de los puntos activos de la fantasía.
+		\item El usuario pulsa ``Aceptar'' para guardar los cambios realizados.
+		\item El sistema guarda el orden de aparición de los puntos activos.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Autorizar conexión}
+\section{CRUD cuestionario final}
+\hypertarget{crearquizfinal}{}
+\subsection{Crear Quiz final}
 \begin{itemize}
-	\item \textbf{Descripción:}
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
+	\item \textbf{Descripción:} Crea un cuestionario sobre el tema del que trata la fantasía.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir y se debe estar editando la fantasía.
+	\item \textbf{Postcondiciones:} Crea un cuestionario en relación al tema de la fantasía..
 	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
+	\begin{enumerate}
+		\item El usuario pulsa el botón de ``Cuestionario final''.
+		\item El sistema muestra las posibles opciones.
+		\item El usuario selecciona ``Crear nuevo quiz''.
+		\item El sistema muestras las posibles opciones de creación.
+		\item El usuario selecciona ``Respuesta simple''.
+		\item El sistema muestra una ventana emergente para crear la pregunta con sus posibles respuestas.
+		\item El usuario rellena la ventana emergente con la pregunta y las respuestas convenientes y pulsa ``Aceptar'' cuando termina.
+		\item El sistema cierra la ventana emergente.
+		\item El cuestionario queda registrado en la fantasía.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\5. a) El usuario elige la opción ``Palabra''.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente para crear la pregunta y su respuesta.
+		\item El usuario rellena la ventana emergente con la pregunta y la respuesta conveniente y pulsa ``Aceptar'' cuando termina.
+		\item Paso 8.
+	\end{enumerate}
+	5. b) El usuario elige la opción ``Quiz con imágenes''.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente para crear la pregunta con la imagen y su respuesta.
+		\item El usuario rellena la ventana emergente con la pregunta, la imagen y la respuesta conveniente, y pulsa ``Aceptar'' cuando termina.
+		\item Paso 8.
+	\end{enumerate}
+	5. c) El usuario elige la opción ``Unir''.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente para crear el quiz de unión.
+		\item El usuario rellena la ventana emergente con las posibles respuestas y su respuesta correcta y pulsa ``Aceptar'' cuando termina.
+		\item Paso 8.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Gestionar porcentaje punto activo}
+\subsection{Leer Quiz final}
+\begin{itemize}
+	\item \textbf{Descripción:} Muestra el estado del \textit{quiz}.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir y se debe estar editando la fantasía, y debe existir el \textit{quiz} final.
+	\item \textbf{Postcondiciones:} Muestra el estado del \textit{quiz} final.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el botón de ``Cuestionario final''.
+		\item El sistema muestra las posibles opciones.
+		\item El usuario selecciona la opción de ``Leer \textit{quiz} final''.
+		\item El sistema muestra una ventana emergente con la visión final del \textit{quiz}.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Modificar Quiz final}
+\begin{itemize}
+	\item \textbf{Descripción:} Permite modificar el \textit{quiz} final.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir y se debe estar editando la fantasía, y debe existir el \textit{quiz} final.
+	\item \textbf{Postcondiciones:} Modifica el \textit{quiz} final de la fantasía.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario pulsa el botón de "Cuestionario final".
+		\item El sistema muestra las posibles opciones.
+		\item El usuario selecciona la opción ``Modificar \textit{quiz} final''.
+		\item Caso de uso \hyperlink{crearquizfinal}{\textcolor{blue}{Crear \textit{Quiz} final}}
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Borrar Quiz final}
+\begin{itemize}
+	\item \textbf{Descripción:} Borra el \textit{quiz} final de la fantasía.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} Debe existir y se debe estar editando la fantasía, y debe existir el \textit{quiz} final.
+	\item \textbf{Postcondiciones:} Borra el \textit{quiz} final de la fantasía.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario pulsa el botón de ``Cuestionario final''.
+		\item El sistema muestra las posibles opciones.
+		\item El usuario selecciona la opción de ``Borrar \textit{quiz}'' final.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra el \textit{quiz} final de la fantasía.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 1.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+
+\section{Gestionar porcentaje de un punto activo}
 \begin{itemize}
 	\item \textbf{Descripción:}
 	\item \textbf{Actores:}
