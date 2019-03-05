@@ -1,0 +1,198 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+%\usepackage{hyperref}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+%\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+\title{Tarea 1.2}
+\author{Jesús Rodríguez Heras\\
+	Lucía Caro Barrera}
+
+\begin{document}
+	
+	\maketitle
+%	\begin{abstract} %Poner esto en todas las prácticas de PCTR
+%%		\begin{center}
+%%			\noindent
+%			
+%%		\end{center}
+%	\end{abstract}
+	\thispagestyle{empty}
+	\newpage
+	
+%	\tableofcontents
+%	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
+	
+	\begin{enumerate}
+		\item \textbf{¿Cuáles son los elementos/componentes que caracterizan un sistema software
+		desarrollado mediante una metodología orientada a objetos?}
+		
+		Los elementos que caracterizan un sistema software orientado a objetos son los objetos	y las clases.
+		
+		\item \textbf{Diferencia entre clase y objeto.}
+		
+		Los objetos son entidades dentro de un programa que consta de un estado y de un comportamiento.
+		
+		Las clases son abstracciones que representan un conjunto de objetos con un comportamiento e interfaz común.
+		
+		Una clase no es más que una plantilla para la creación de objetos.
+		
+		\item \textbf{Relación entre encapsulamiento y ocultación de información.}
+		
+		La encapsulación es un mecanismo que consiste en organizar datos y métodos de una estructura, conciliando el modo en que el objeto se implementa. La encapsulación garantiza la integridad de los datos que contiene un objeto.
+		
+		La ocultación de la información establece que el usuario de una clase no necesita saber cómo están estructurados los datos dentro de ese objeto, es decir, un usuario no necesita
+		conocer la implementación. Al evitar que el usuario modifique los atributos directamente y obligándole a utilizar funciones definidas (interfaces) se garantiza la
+		integridad de los datos del objeto.
+		
+		Con ambos métodos garantizamos la integridad de los datos del objeto de la clase que estamos creando.
+		
+		\item \textbf{Comenta la siguiente afirmación: La ocultación de información limita la comunicación entre los objetos.}
+		
+		Se refiere a que los atributos privados de un objeto no pueden ser modificados ni obtenidos a no ser que se haga a través del paso de un mensaje. Esto supone proporcionar una interfaz estable que proteja el resto del programa de la
+		implementación que es susceptible a cambios. Ejemplo: encapsulación.
+		
+		\item \textbf{Ventajas que proporciona la herencia a las tareas de programación.}
+		
+		\begin{itemize}		
+			\item Ayuda ahorrar código y tiempo, ya que la clase padre ha sido implementada y verificada con anterioridad, solo hay que referenciar desde la clase derivada a la clase base.
+			
+			\item Los objetos pueden ser construidos a partir de otros similares (Se necesita que exista una clase base).
+			
+			\item La clase derivada hereda el comportamiento y los atributos de la clase base.
+			
+			\item Toda clase puede servir como clase base para crear otras.
+		\end{itemize}
+	
+		\item \textbf{Clasifica por niveles de importancia, según tu criterio, los factores externos de calidad del software. Justifica la respuesta.}
+		\begin{itemize}
+			\item \textbf{Corrección:} Es la capacidad de los productos software de realizar con exactitud sus tares
+			tal y como se definen en las especificaciones.
+			\item \textbf{Robustez:} Capacidad de los sistemas software de reaccionar apropiadamente ante condiciones excepcionales.
+			\item \textbf{Facilidad de uso:} Facilidad con la cual personas con diferentes formaciones y aptitudes
+			pueden aprender a usar los productos software y aplicarlos a la resolución de problemas, facilidad de instalación, operación y supervisión.
+			\item \textbf{Eficiencia:} Capacidad de un sistema software para exigir la menos cantidad de recursos
+			hardware.
+			\item \textbf{Extensibilidad:} Facilidad de adaptar productos software a los cambios de especificación
+			Reutilización: Capacidad de los elementos software de servir para la construcción de muchas aplicaciones diferentes.
+			\item \textbf{Compatibilidad:} Facilidad de combinar unos elementos de software con otros.
+			\item \textbf{Portabilidad:} Facilidad de transferir los productos software a diferentes entornos hardware y software.
+			\item \textbf{Funcionalidad:} Conjunto de posibilidades que proporciona un sistema.
+			\item \textbf{Oportunidad:} Capacidad de un sistema de software de ser lanzado cuando los usuarios lo desean o antes.
+		\end{itemize}
+	
+		\item \textbf{¿En qué medida afecta la eficiencia a la corrección de un programa?}
+		
+		Un programa eficiente es aquel que consume los mínimos recursos posibles del ordenador.
+		
+		Un programa correcto es aquel que cumple el objetivo para el cual fue creado.
+		
+		Por lo tanto, si disponemos de un programa para una tarea aleatoria y conseguimos que sea eficiente, será también correcto si sigue el algoritmo de resolución de dicha tarea.
+		
+		\item \textbf{Diferencia entre compatibilidad y portabilidad.}
+		
+		La compatibilidad es la propiedad de un programa que hace que un sistema logre comprender a ese programa correctamente.
+		
+		La portabilidad es aquella propiedad de los programas que les permite ejecutarse sobre plataformas diferentes. En muchas ocasiones, para referirse al término portabilidad se
+		dice que un programa es ``multiplataforma''.
+		
+		\item \textbf{Factores de calidad que contribuyen a la fiabilidad del software.}
+		
+		\begin{itemize}
+			\item \textbf{Funcionalidad:} Capacidad de un programa para proporcionar funciones que cubran las necesidades requeridas cuando es utilizado bajo las condiciones especificadas.
+			\item \textbf{Fiabilidad:} Capacidad de un programa para mantener el nivel especificado de rendimiento cuando es usado bajo las condiciones especificadas.
+			\item \textbf{Usabilidad:} Capacidad de un programa para ser entendido, aprendido, usado y atractivo para el usuario, cuando es usado bajo las condiciones especificadas.
+			\item \textbf{Eficiencia:} Capacidad de un programa para proporcionar un rendimiento adecuado, relativo a la cantidad de recursos utilizados, bajo unas condiciones establecidas.
+			\item \textbf{Mantenibilidad:} Capacidad de un programa para ser modificado. Las modificaciones pueden incluir correcciones, mejoras o adaptaciones del programa a cambios en el entorno, en los requerimientos o las especificaciones funcionales.
+			\item \textbf{Portabilidad:} Capacidad de un programa para ser transferido de un sistema a otro.
+			\item \textbf{Efectividad:} Capacidad para permitir al usuario alcanzar objetivos especificados con precisión e integridad en un contexto especificado de uso.
+			\item \textbf{Productividad:} Capacidad para permitir al usuario utilizar cantidades apropiadas de recursos con relación a la efectividad alcanzada en un contexto especificado de uso.
+			\item \textbf{Seguridad:} Capacidad para alcanzar niveles aceptables de riesgo de daño para las personas, software, equipos o entorno en un contexto especificado de uso.
+			\item \textbf{Satisfacción:} Capacidad para satisfacer a los usuarios en un contexto especificado de uso.
+			\item \textbf{Corrección:} Es el grado en el que un programa satisface sus especificaciones y consigue los objetivos encomendados por el cliente.
+			\item \textbf{Integridad:} Es el grado con que puede controlarse el acceso al programa o a los datos a personal no autorizado.
+			\item \textbf{Reusabilidad:} Es el grado en que partes de un programa pueden utilizarse en otros programas.
+		\end{itemize}
+	\end{enumerate}
+
+\end{document}
