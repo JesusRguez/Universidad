@@ -108,34 +108,100 @@
 	%%Configuracion del paquete listings
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
-\section{Crear fantasía}
+\section{CRUD fantasía}
+\subsection{Crear fantasía}
+\hypertarget{crearfantasia}{}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea una nueva fantasía.
-	\item \textbf{Actores:} Profesor o alumno (usuario).
-	\item \textbf{Precondiciones:} Estar logeado en la plataforma de Stimey.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey.
 	\item \textbf{Postcondiciones:} La fantasía queda almacenada y lista para ser modificada, compartida, etc.
 	\item \textbf{Escenario principal:}
 	\begin{enumerate}
 		\item El sistema solicita el identificador de usuario para saber a qué rol pertenece.
 		\item El usuario introduce el identificador.
-		\item Include (Autorizar conexión).
 		\item El usuario selecciona la opción ``Crear nueva fantasía''.
-		\begin{enumerate}
-			\item 
-		\end{enumerate}
 		\item El sistema solicita el nombre de la fantasía.
 		\item El usuario introduce el nombre de la fantasía.
 		\item El sistema da a elegir si la fantasía será pública (por defecto) o privada.
-		\item La fantasía queda almacenada en el sistema y se abre el menú de creación.
+		\item El usuario crea la fantasía.
+		\item La fantasía queda almacenada en el sistema.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\7. a) El usuario selecciona que la fantasía será privada, en lugar de pública.
+	\item \textbf{Extensiones:} \\6. a) El usuario selecciona que la fantasía será privada, en lugar de pública.
 	\begin{enumerate}
-		\item El sistema muestra permite insertar en una lista los identificadores de otros usuarios con los que quedará compartida la fantasía. Si no introduce ninguno, la fantasía queda almacenada de forma privada, solo para dicho usuario.
+		\item El sistema permite insertar en una lista los identificadores de otros usuarios con los que quedará compartida la fantasía. Si no introduce ninguno, la fantasía queda almacenada de forma privada, solo para dicho usuario.
 	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás al menú principal.
 	\item \textbf{Variaciones:} Ninguna.
 	\item \textbf{No-funcional:} Ninguna.
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
+
+\subsection{Leer fantasía}
+\begin{itemize}
+	\item \textbf{Descripción:} Lee una fantasía ya existente.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía debe existir en el sistema.
+	\item \textbf{Postcondiciones:} No se producen cambios en la fantasía.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Leer fantasía''.
+		\item El sistema muestra la fantasía.
+		\item El usuario lee la fantasía sin hacer ningún cambio y, cuando acaba, cierra la fantasía.
+		\item La fantasía queda sin modificar.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Modificar fantasía}
+\begin{itemize}
+	\item \textbf{Descripción:} Modifica una fantasía ya existente.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía debe existir en el sistema.
+	\item \textbf{Postcondiciones:} La fantasía queda modificada. %si haces cambios
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Modificar fantasía''.
+		\item El sistema muestra una lista con las fantasías accesibles por el usuario.
+		\item El usuario selecciona la fantasía que desea modificar.
+		\item El sistema muestra la pantalla de creación de la fantasía para su modificación.
+		\item Paso 7 de \hyperlink{crearfantasia}{\textcolor{blue}{Crear fantasía}}.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Borrar fantasía}
+\begin{itemize}
+	\item \textbf{Descripción:} Borra una fantasía ya existente.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe esta logeado en la plataforma de Stimey y la fantasía debe existir en el sistema.
+	\item \textbf{Postcondiciones:} La fantasía queda borrada del sistema.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Borrar fantasía''.
+		\item El sistema muestra una lista con las fantasías accesibles por el usuario.
+		\item El usuario selecciona la fantasía que desea borrar.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra la fantasía.
+	\end{enumerate}
+	\item \textbf{Extensiones:}  \\5. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 2.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás al menú principal.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
 
 \section{Elegir idioma}
 \begin{itemize}
@@ -156,7 +222,163 @@
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Insertar imagen} %suponemos que es para un punto activo
+\section{Copiar fantasía}
+\begin{itemize}
+	\item \textbf{Descripción:} Clona una fantasía.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía debe existir en el sistema.
+	\item \textbf{Postcondiciones:} Crea una copia de la fantasía seleccionada.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Copiar fantasía''.
+		\item El sistema muestra una lista con las fantasías accesibles por el usuario.
+		\item El usuario selecciona la fantasía que desea copiar.
+		\item El sistema crea una copia de la fantasía seleccionada.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\section{CRUD background}
+\begin{itemize}
+	\item \textbf{Descripción:} Permite seleccionar, modificar y borrar el background.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía debe existir en el sistema.
+	\item \textbf{Postcondiciones:} Se establece el fondo que el usuario haya elegido.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Background``.
+		\item El sistema muestra una ventana para añadir un background al workspace.
+		\item El usuario selecciona una imagen. %puede ser un color
+		\item El sistema establece el background seleccionado por el usuario.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal. 
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+
+\section{CRUD punto activo}
+\subsection{Crear punto activo}
+\begin{itemize}
+	\item \textbf{Descripción:} Crea un punto activo nuevo.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey y la fantasía donde se colocará el punto activo debe existir en el sistema.
+	\item \textbf{Postcondiciones:} Se crea un punto activo vacío en el workspace.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Nuevo punto activo''.
+		\item El sistema crea un nuevo punto activo en el workspace.
+		\item El usuario puede mover el punto activo a la zona del workspace que desee.
+		\item El sistema guardará el punto activo en la fantasía.
+	\end{enumerate}
+	\item \textbf{Extensiones:} Ninguna.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Leer punto activo}
+\begin{itemize}
+	\item \textbf{Descripción:} Muestra un punto activo existente para su lectura.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey, la fantasía de la que se leerá el punto activo debe existir en el sistema y el punto activo debe existir.
+	\item \textbf{Postcondiciones:} Se muestra el punto activo para su lectura.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Ver resumen'' de un punto activo ya creado.
+		\item El sistema muestra una ventana con el resumen de dicho punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} Ninguna.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Modificar punto activo}
+\begin{itemize}
+	\item \textbf{Descripción:} Modifica un punto activo existente.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey, la fantasía de la que se modificará el punto activo debe existir en el sistema y el punto activo debe existir.
+	\item \textbf{Postcondiciones:} Modifica el punto activo.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona la opción ``Modificar'' de un punto activo.
+		\item El sistema muestra una ventana emergente con las opciones disponibles.
+		\item El usuario introduce el texto en el campo de texto.
+		\item El sistema guarda los cambios realizados.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\3. a) El usuario introduce la url de un vídeo en el campo vídeo.
+	\begin{enumerate}
+		\item Paso 4.
+	\end{enumerate}
+	3. b) El usuario selecciona un vídeo de su ordenador.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente del explorador de archivos.
+		\item El usuario selecciona el vídeo deseado y pulsa ``Aceptar''.
+		\item Paso 4.
+	\end{enumerate}
+	3. c) Caso de uso \hyperlink{crearimagen}{\textcolor{blue}{Crear imagen}}.
+	\begin{enumerate}
+		\item Paso 4.
+	\end{enumerate}
+	3. d) El usuario introduce un audio de su ordenador como contenido.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente del explorador de archivos.
+		\item El usuario selecciona el audio deseado y pulsa ``Aceptar''.
+		\item Paso 4.
+	\end{enumerate}
+	3. e) El usuario introduce un audio de su ordenador de fondo.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente del explorador de archivos.
+		\item El usuario selecciona el audio deseado y pulsa ``Aceptar''.
+		\item Paso 4.
+	\end{enumerate}
+	3. f) El usuario introduce una animación.
+	\begin{enumerate}
+		\item El sistema abre una ventana emergente del explorador de archivos.
+		\item El usuario selecciona la animación deseada y pulsa ``Aceptar''.
+		\item Paso 4.
+	\end{enumerate}
+	3. g) El usuario establece el orden de aparición del punto activo.
+	\begin{enumerate}
+		\item Paso 4.
+	\end{enumerate}
+	*a) En cualquier momento, el usuario puede volver atrás.
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\subsection{Borrar punto activo}
+\begin{itemize}
+	\item \textbf{Descripción:} Borra un punto activo existente.
+	\item \textbf{Actores:} Creador-editor (usuario).
+	\item \textbf{Precondiciones:} El usuario debe estar logeado en la plataforma de Stimey, la fantasía de la que se modificará el punto activo debe existir en el sistema y el punto activo debe existir.
+	\item \textbf{Postcondiciones:} Borra el punto activo.
+	\item \textbf{Escenario principal:}
+	\begin{enumerate}
+		\item El usuario selecciona el punto activo que desea borrar y selecciona la opción ``Borrar''.
+		\item El sistema muestra un mensaje de confirmación.
+		\item El usuario selecciona ``Aceptar''.
+		\item El sistema borra el punto activo.
+	\end{enumerate}
+	\item \textbf{Extensiones:} \\ 3. a) El usuario selecciona ``Cancelar''.
+	\begin{enumerate}
+		\item El sistema cierra la ventana emergente.
+		\item Paso 1.
+	\end{enumerate}
+	\item \textbf{Variaciones:} Ninguna.
+	\item \textbf{No-funcional:} Ninguna.
+	\item \textbf{Cuestiones:} Ninguna.
+\end{itemize}
+
+\section{CRUD imagen} %suponemos que es para un punto activo
+\subsection{Crear imagen}
+\hypertarget{crearimagen}{}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta una imagen en un punto activo.
 	\item \textbf{Actores:} Profesor o alumno (usuario).
@@ -194,6 +416,33 @@
 	\item \textbf{No-funcional:} Ninguna.
 	\item \textbf{Cuestiones:} ¿Podrá modificar el tamaño original de la imagen o hacer recortes?
 \end{itemize}
+
+\subsection{Modificar imagen}
+\begin{itemize}
+	\item \textbf{Descripción:}
+	\item \textbf{Actores:}
+	\item \textbf{Precondiciones:}
+	\item \textbf{Postcondiciones:}
+	\item \textbf{Escenario principal:}
+	\item \textbf{Extensiones:}
+	\item \textbf{Variaciones:}
+	\item \textbf{No-funcional:}
+	\item \textbf{Cuestiones:}
+\end{itemize}
+
+\subsection{Borrar imagen}
+\begin{itemize}
+	\item \textbf{Descripción:}
+	\item \textbf{Actores:}
+	\item \textbf{Precondiciones:}
+	\item \textbf{Postcondiciones:}
+	\item \textbf{Escenario principal:}
+	\item \textbf{Extensiones:}
+	\item \textbf{Variaciones:}
+	\item \textbf{No-funcional:}
+	\item \textbf{Cuestiones:}
+\end{itemize}
+
 
 \section{Insertar texto} %suponemos que es para un punto activo
 \begin{itemize}
@@ -256,18 +505,6 @@
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Asignar puntos activos}
-\begin{itemize}
-	\item \textbf{Descripción:} 
-	\item \textbf{Actores:}
-	\item \textbf{Precondiciones:}
-	\item \textbf{Postcondiciones:}
-	\item \textbf{Escenario principal:}
-	\item \textbf{Extensiones:}
-	\item \textbf{Variaciones:}
-	\item \textbf{No-funcional:}
-	\item \textbf{Cuestiones:}
-\end{itemize}
 
 \section{Insertar contenido}
 \begin{itemize}

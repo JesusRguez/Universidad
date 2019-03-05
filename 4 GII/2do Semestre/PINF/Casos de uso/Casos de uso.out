@@ -1,13 +1,26 @@
-\BOOKMARK [1][-]{section.1}{Crear fantas\355a}{}% 1
-\BOOKMARK [1][-]{section.2}{Elegir idioma}{}% 2
-\BOOKMARK [1][-]{section.3}{Insertar imagen}{}% 3
-\BOOKMARK [1][-]{section.4}{Insertar texto}{}% 4
-\BOOKMARK [1][-]{section.5}{Crear cuestionario peque\361o}{}% 5
-\BOOKMARK [1][-]{section.6}{Asignar puntos activos}{}% 6
-\BOOKMARK [1][-]{section.7}{Insertar contenido}{}% 7
-\BOOKMARK [1][-]{section.8}{Crear cuestionario final}{}% 8
-\BOOKMARK [1][-]{section.9}{Autorizar conexi\363n}{}% 9
-\BOOKMARK [1][-]{section.10}{Gestionar porcentaje punto activo}{}% 10
-\BOOKMARK [1][-]{section.11}{Gestionar ficha alumno}{}% 11
-\BOOKMARK [1][-]{section.12}{Asignar nota final}{}% 12
-\BOOKMARK [1][-]{section.13}{Asignar fantas\355a}{}% 13
+\BOOKMARK [1][-]{section.1}{CRUD fantas\355a}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Crear fantas\355a}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Leer fantas\355a}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Modificar fantas\355a}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Borrar fantas\355a}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Elegir idioma}{}% 6
+\BOOKMARK [1][-]{section.3}{Copiar fantas\355a}{}% 7
+\BOOKMARK [1][-]{section.4}{CRUD background}{}% 8
+\BOOKMARK [1][-]{section.5}{CRUD punto activo}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Crear punto activo}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Leer punto activo}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{Modificar punto activo}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.4}{Borrar punto activo}{section.5}% 13
+\BOOKMARK [1][-]{section.6}{CRUD imagen}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Crear imagen}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Modificar imagen}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Borrar imagen}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Insertar texto}{}% 18
+\BOOKMARK [1][-]{section.8}{Crear cuestionario peque\361o}{}% 19
+\BOOKMARK [1][-]{section.9}{Insertar contenido}{}% 20
+\BOOKMARK [1][-]{section.10}{Crear cuestionario final}{}% 21
+\BOOKMARK [1][-]{section.11}{Autorizar conexi\363n}{}% 22
+\BOOKMARK [1][-]{section.12}{Gestionar porcentaje punto activo}{}% 23
+\BOOKMARK [1][-]{section.13}{Gestionar ficha alumno}{}% 24
+\BOOKMARK [1][-]{section.14}{Asignar nota final}{}% 25
+\BOOKMARK [1][-]{section.15}{Asignar fantas\355a}{}% 26
