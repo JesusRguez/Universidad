@@ -1,0 +1,168 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+%\usepackage{hyperref}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+%\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+\title{Documento de plan de proyecto}
+\author{Luis Gutiérrez Flores\\
+	Nicolás Ruiz Requejo\\
+	Jesús Rodríguez Heras\\
+	Arantzazu Otal Alberro\\
+	Alejandro Segovia Gallardo\\
+	Alejandro José Caraballo García\\
+	Gabriel Fernando Sánchez Reina}
+
+\begin{document}
+	
+	\maketitle
+%	\begin{abstract} %Poner esto en todas las prácticas de PCTR
+%%		\begin{center}
+%%			\noindent
+%%		\end{center}
+%	\end{abstract}
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
+
+\section{Visión general}
+Este documento recoge la planificación, el planteamiento y el principio de un proyecto al que hemos denominado ``Fantasy'', un portal web en el que los profesores pueden realizar una serie de tareas (fantasías) con el objetivo de que los alumnos puedan jugarlas y así aprendan de forma creativa.
+
+Los alumnos, también tendrán la posibilidad de crear las fantasías que el profesor les mande como trabajo y luego serán evaluadas por dicho profesor.
+
+\section{Roles}
+\begin{enumerate}
+	\item \textbf{Scrum master:} Luis Gutiérrez Flores.
+	\item \textbf{Administrador de sistemas:} Alejandro José Caraballo García.
+	\item \textbf{Producto owner:} Jesús Rodríguez Heras.
+	\item \textbf{Analista:} Nicolás Ruiz Requejo.
+	\item \textbf{Arquitecto Software:} Arantzazu Otal Alberro.
+	\item \textbf{Desarrollador:} Todos.
+	\item \textbf{Diseñador de interfaz de usuario:} Alejandro Segovia Gallardo.
+	\item \textbf{Tester:} Gabriel Fernando Sánchez Reina.
+\end{enumerate}
+
+\section{Política de equipo}
+\subsection{Política de reuniones}
+El equipo ha decidido hacer reuniones con una periodicidad de una semana con el cliente, a lo largo de la semana, los integrantes del equipo intentarán establecer reuniones entre ellos con la duración necesaria para continuar avanzando en el proyecto (tiempo estimado: dos horas).
+
+\subsection{Concepto de tarea realizada}
+Cuando está implementada una funcionalidad y testeada tanto por el grupo de programadores como por el tester. Se da el visto bueno y se le encarga al propietario (producto owner) que marque como realizada dicha tarea.
+
+\section{Hitos} %Seguir poniendo los demás sprints
+\subsection{Sprint 0 (27 de febrero al 6 de marzo)}
+\begin{enumerate}
+	\item Creación de plataformas de trabajo y control de versiones (GitHub).
+	\item Creación del boceto de requisitos.
+	\item Creación de casos de uso y sus descripciones.
+\end{enumerate}
+\subsection{Sprint 1 (6 de marzo al 27 de marzo)}
+\begin{enumerate}
+	\item Creación de mockups de la plataforma.
+	\item Implementación de la base de datos.
+\end{enumerate}
+
+\section{Reuniones}
+\subsection{Reunión 0 (27 de febrero)}
+\begin{enumerate}
+	\item Análisis de requisitos del sistema.
+	\item Distribución de las tareas del sprint 0.
+\end{enumerate}
+
+\subsection{Reunión 1 (4 de marzo)}
+\begin{enumerate}
+	\item Corrección de casos de uso y creación de las descripciones de todos los casos de uso.
+	\item Planteamiento de la base de datos del sistema.
+\end{enumerate}
+
+\subsection{Reunión 2 (6 de marzo)}
+\begin{enumerate}
+	\item Finalización del sprint 0.
+	\item Distribución de la información a buscar.
+	\item Comienzo del sprint 1.
+\end{enumerate}
+
+\end{document}

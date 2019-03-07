@@ -1,0 +1,13 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Visi\IeC {\'o}n general}{3}{section.1}
+\contentsline {section}{\numberline {2}Roles}{3}{section.2}
+\contentsline {section}{\numberline {3}Pol\IeC {\'\i }tica de equipo}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Pol\IeC {\'\i }tica de reuniones}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Concepto de tarea realizada}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Hitos}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Sprint 0 (27 de febrero al 6 de marzo)}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Sprint 1 (6 de marzo al 27 de marzo)}{4}{subsection.4.2}
+\contentsline {section}{\numberline {5}Reuniones}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}Reuni\IeC {\'o}n 0 (27 de febrero)}{4}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Reuni\IeC {\'o}n 1 (4 de marzo)}{4}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Reuni\IeC {\'o}n 2 (6 de marzo)}{4}{subsection.5.3}
