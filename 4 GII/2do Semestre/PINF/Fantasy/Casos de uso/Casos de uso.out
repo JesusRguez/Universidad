@@ -1,6 +1,6 @@
 \BOOKMARK [1][-]{section.1}{CRUD fantas\355a}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Crear fantas\355a}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Leer fantas\355a}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.2}{Visualizar fantas\355a}{section.1}% 3
 \BOOKMARK [2][-]{subsection.1.3}{Modificar fantas\355a}{section.1}% 4
 \BOOKMARK [2][-]{subsection.1.4}{Borrar fantas\355a}{section.1}% 5
 \BOOKMARK [1][-]{section.2}{Elegir idioma}{}% 6
@@ -8,31 +8,35 @@
 \BOOKMARK [1][-]{section.4}{CRUD background}{}% 8
 \BOOKMARK [1][-]{section.5}{CRUD punto activo}{}% 9
 \BOOKMARK [2][-]{subsection.5.1}{Crear punto activo}{section.5}% 10
-\BOOKMARK [2][-]{subsection.5.2}{Leer punto activo}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Visualizar punto activo}{section.5}% 11
 \BOOKMARK [2][-]{subsection.5.3}{Modificar punto activo}{section.5}% 12
 \BOOKMARK [2][-]{subsection.5.4}{Borrar punto activo}{section.5}% 13
 \BOOKMARK [1][-]{section.6}{CRUD imagen}{}% 14
 \BOOKMARK [2][-]{subsection.6.1}{Crear imagen}{section.6}% 15
 \BOOKMARK [2][-]{subsection.6.2}{Modificar imagen}{section.6}% 16
 \BOOKMARK [2][-]{subsection.6.3}{Borrar imagen}{section.6}% 17
-\BOOKMARK [1][-]{section.7}{CRUD texto}{}% 18
-\BOOKMARK [1][-]{section.8}{CRUD Quiz}{}% 19
-\BOOKMARK [2][-]{subsection.8.1}{Crear Quiz}{section.8}% 20
-\BOOKMARK [2][-]{subsection.8.2}{Leer Quiz}{section.8}% 21
-\BOOKMARK [2][-]{subsection.8.3}{Modificar Quiz}{section.8}% 22
-\BOOKMARK [2][-]{subsection.8.4}{Borrar Quiz}{section.8}% 23
-\BOOKMARK [1][-]{section.9}{CRUD efecto de audio}{}% 24
-\BOOKMARK [2][-]{subsection.9.1}{Crear efecto de audio}{section.9}% 25
-\BOOKMARK [2][-]{subsection.9.2}{Modificar efecto de audio}{section.9}% 26
-\BOOKMARK [2][-]{subsection.9.3}{Borrar efecto de audio}{section.9}% 27
-\BOOKMARK [1][-]{section.10}{CRUD informaci\363n adicional}{}% 28
-\BOOKMARK [1][-]{section.11}{Organizar puntos activos}{}% 29
-\BOOKMARK [1][-]{section.12}{CRUD cuestionario final}{}% 30
-\BOOKMARK [2][-]{subsection.12.1}{Crear Quiz final}{section.12}% 31
-\BOOKMARK [2][-]{subsection.12.2}{Leer Quiz final}{section.12}% 32
-\BOOKMARK [2][-]{subsection.12.3}{Modificar Quiz final}{section.12}% 33
-\BOOKMARK [2][-]{subsection.12.4}{Borrar Quiz final}{section.12}% 34
-\BOOKMARK [1][-]{section.13}{Gestionar porcentaje de un punto activo}{}% 35
-\BOOKMARK [1][-]{section.14}{Gestionar ficha alumno}{}% 36
-\BOOKMARK [1][-]{section.15}{Asignar nota final}{}% 37
-\BOOKMARK [1][-]{section.16}{Asignar fantas\355a}{}% 38
+\BOOKMARK [1][-]{section.7}{CRUD v\355deo}{}% 18
+\BOOKMARK [2][-]{subsection.7.1}{Crear v\355deo}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.2}{Modificar v\355deo}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.3}{Borrar v\355deo}{section.7}% 21
+\BOOKMARK [1][-]{section.8}{CRUD texto}{}% 22
+\BOOKMARK [1][-]{section.9}{CRUD quiz}{}% 23
+\BOOKMARK [2][-]{subsection.9.1}{Crear quiz}{section.9}% 24
+\BOOKMARK [2][-]{subsection.9.2}{Visualizar quiz}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.3}{Modificar quiz}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.4}{Borrar quiz}{section.9}% 27
+\BOOKMARK [1][-]{section.10}{CRUD efecto de audio}{}% 28
+\BOOKMARK [2][-]{subsection.10.1}{Crear efecto de audio}{section.10}% 29
+\BOOKMARK [2][-]{subsection.10.2}{Modificar efecto de audio}{section.10}% 30
+\BOOKMARK [2][-]{subsection.10.3}{Borrar efecto de audio}{section.10}% 31
+\BOOKMARK [1][-]{section.11}{CRUD informaci\363n adicional}{}% 32
+\BOOKMARK [1][-]{section.12}{Organizar puntos activos}{}% 33
+\BOOKMARK [1][-]{section.13}{CRUD quiz final}{}% 34
+\BOOKMARK [2][-]{subsection.13.1}{Crear quiz final}{section.13}% 35
+\BOOKMARK [2][-]{subsection.13.2}{Visualizar quiz final}{section.13}% 36
+\BOOKMARK [2][-]{subsection.13.3}{Modificar quiz final}{section.13}% 37
+\BOOKMARK [2][-]{subsection.13.4}{Borrar quiz final}{section.13}% 38
+\BOOKMARK [1][-]{section.14}{Gestionar porcentaje de un punto activo}{}% 39
+\BOOKMARK [1][-]{section.15}{Gestionar ficha alumno}{}% 40
+\BOOKMARK [1][-]{section.16}{Asignar nota final}{}% 41
+\BOOKMARK [1][-]{section.17}{Asignar fantas\355a}{}% 42

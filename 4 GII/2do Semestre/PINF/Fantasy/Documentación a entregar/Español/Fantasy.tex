@@ -48,12 +48,13 @@
 \usepackage{mathptm}
 
 %%% VARIOS:
-\usepackage{slashbox}
+%\usepackage{slashbox}
 \usepackage{verbatim}
 \usepackage{array}
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage{hhline}
+\usepackage{titling}
 
 %% MARCA DE AGUA
 %% Este package de "draft copy" NO funciona con pdflatex
@@ -74,36 +75,69 @@
 % }
 % \end{verbatim}
 
-\title{{\Huge Robot móvil}\\\textcolor{White}{ }\\
-	\begin{LARGE} 
-		Diseño de Computadores Empotrados
-	\end{LARGE}}
-\author{Juan Pedro Rodríguez Gracia\\Jesús Rodríguez Heras\\Gabriel Fernando Sánchez Reina}
+
+\title{\huge{Fantasy}}
+\author{Luis Gutiérrez Flores\\
+	Nicolás Ruiz Requejo\\
+	Jesús Rodríguez Heras\\
+	Arantzazu Otal Alberro\\
+	Alejandro Segovia Gallardo\\
+	Alejandro José Caraballo García\\
+	Gabriel Fernando Sánchez Reina}
+
 
 %%Configuracion del paquete listings
 \lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1}
 
 \begin{document}
-	\maketitle
-	\thispagestyle{empty}
+%	\maketitle
+
+	\begin{titlepage}
+		\centering
+		
+		{\scshape\LARGE Escuela Superior de Ingeniería \par}
+		\vspace{1cm}
+		{\scshape\Large Universidad de Cádiz\par}
+		\vspace{1.5cm}
+		{\huge\bfseries Fantasy\par}
+		\vspace{1cm}
+		{\Large\itshape Luis Gutiérrez Flores\\
+			Nicolás Ruiz Requejo\\
+			Jesús Rodríguez Heras\\
+			Arantzazu Otal Alberro\\
+			Alejandro Segovia Gallardo\\
+			Alejandro José Caraballo García\\
+			Gabriel Fernando Sánchez Reina\par}
+		\vspace{1cm}
+		\begin{table}[htb]
+			\centering
+			\begin{tabular}{ccc}
+				\includegraphics[width=0.2\textwidth]{UCA.png}\par\vspace{1.2cm} & \includegraphics[width=0.2\textwidth]{ESI.png}\par\vspace{1.2cm} & \includegraphics[width=0.2\textwidth]{Stimey.png}\par\vspace{1.2cm}
+			\end{tabular}
+		\end{table}
+%		\vfill
+		\large{Stimey}\par
+		
+		
+		% Bottom of the page
+%		{\large \today\par}
+	\end{titlepage}
+	
+%	\thispagestyle{empty}
 	\newpage
 	
 	\tableofcontents
 	\newpage
 	
-	\part{Memoria}
-	\include{Doc1}
-	\include{Doc2}
-	\include{Doc3}
-	\include{Doc4}
-	\include{Doc5}
-	\include{Doc6}
-	\include{Doc7}
-	\include{Doc8}
-	\include{Doc9}
-	\include{Doc10}
-	
-	\part{Anexo de códigos}
-	\include{Anexo}
+	\include{Requisitos}
+	\include{Casos}
+%	\include{Doc3}
+%	\include{Doc4}
+%	\include{Doc5}
+%	\include{Doc6}
+%	\include{Doc7}
+%	\include{Doc8}
+%	\include{Doc9}
+%	\include{Doc10}
 	
 \end{document}
