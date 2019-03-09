@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Juego de caracteres usado en el archivo fuente: UTF-8
 \usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,8 +38,8 @@
 \usepackage{amsmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{multirow} % para las tablas
-\usepackage[spanish,es-tabla]{babel}
+%\usepackage{multirow} % para las tablas
+%\usepackage[spanish,es-tabla]{babel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fuentes matematicas lo mas compatibles posibles con postscript (times)
@@ -48,7 +48,7 @@
 \usepackage{mathptm}
 
 %%% VARIOS:
-\usepackage{slashbox}
+%\usepackage{slashbox}
 \usepackage{verbatim}
 \usepackage{array}
 \usepackage{listings}
@@ -62,7 +62,7 @@
 %%%\usepackage{pdfdraftcopy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Indenteacion en español...
-\usepackage[spanish]{babel}
+\usepackage[spanish,USenglish]{babel}
 \usepackage{Estilos/Apuntes}
 \usepackage[svgnames,x11names,table]{xcolor}
 \usepackage{listings}
@@ -74,36 +74,50 @@
 % }
 % \end{verbatim}
 
-\title{{\Huge Robot móvil}\\\textcolor{White}{ }\\
-	\begin{LARGE} 
-		Diseño de Computadores Empotrados
-	\end{LARGE}}
-\author{Juan Pedro Rodríguez Gracia\\Jesús Rodríguez Heras\\Gabriel Fernando Sánchez Reina}
+
 
 %%Configuracion del paquete listings
 \lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1}
 
 \begin{document}
-	\maketitle
-	\thispagestyle{empty}
-	\newpage
-	
+	\begin{titlepage}
+		\centering
+		
+		{\scshape\huge Higher School of Engeneering \par}
+		\vspace{1cm}
+		{\scshape\LARGE University of Cádiz\par}
+		\vspace{1cm}
+		{\scshape\Large{Stimey}\par}
+		\vspace{1cm}
+		{\Huge\bfseries Fantasy\par}
+		\vspace{1cm}
+		{\Large\itshape Luis Gutiérrez Flores\\
+			Nicolás Ruiz Requejo\\
+			Jesús Rodríguez Heras\\
+			Arantzazu Otal Alberro\\
+			Alejandro Segovia Gallardo\\
+			Alejandro José Caraballo García\\
+			Gabriel Fernando Sánchez Reina\par}
+		\vspace{2.5cm}
+		\begin{table}[htb]
+			\centering
+			\begin{tabular}{ccc}
+				\includegraphics[width=0.15\textwidth]{UCA.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{ESI.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{Stimey.png}\par\vspace{1.2cm}
+			\end{tabular}
+		\end{table}
+		%		\vfill
+		
+		
+		
+		% Bottom of the page
+		%		{\large \today\par}
+	\end{titlepage}
+
 	\tableofcontents
 	\newpage
 	
-	\part{Memoria}
-	\include{Doc1}
-	\include{Doc2}
-	\include{Doc3}
-	\include{Doc4}
-	\include{Doc5}
-	\include{Doc6}
-	\include{Doc7}
-	\include{Doc8}
-	\include{Doc9}
-	\include{Doc10}
+	\include{RequirementsAnalisys}
+	\include{UseCase}
 	
-	\part{Anexo de códigos}
-	\include{Anexo}
 	
 \end{document}
