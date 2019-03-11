@@ -1,0 +1,26 @@
+PREGUNTAS TIPO TEST:
+1. ¿Qué se usa cuando la longitud del vector es mayor que el tamaño de los registros vectoriales?
+* Strip-mining.
+- Usar más registros.
+- Dividir el vector.
+- Usar vectores del tamaño de los registros.
+
+2. 
+
+3. 
+
+
+
+PREGUNTAS DE RESPUESTA CORTA:
+1. Defina "vector":
+Estructura de datos que se puede definir por tres parámetros:
+- Dirección de comienzo: Dirección en memoria del primer elemento del vector.
+- Longitud: Número de elementos del vector.
+- Paso: Distancia en memoria de dos elementos consecutivos.
+
+
+2. 
+
+
+PREGUNTA DE DESARROLLO:
+1. 
