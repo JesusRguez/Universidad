@@ -111,37 +111,47 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 
 \section{Workspace}
-El diseño gráfico usado deberá ser el mismo que el de la página de Stimey en todos los iconos usados: \url{https://stimey.eu/home}. Si necesitamos algo más, Alicia, nos lo podría facilitar.
+El diseño gráfico usado deberá ser el mismo que el de la página de Stimey en todos los iconos usados: \url{https://stimey.eu/home}. Si necesitamos algo más, Alecia, nos lo podría facilitar.
 
 El profesor tendrá más permisos y privilegios que el alumno, de forma que pueda crear fantasías para evaluar a sus alumnos y ellos tendrán que completarlas o crear las que el profesor les ponga como trabajo.
 
 En el workspace tendremos una serie de opciones que estarán disponibles tanto para el rol de profesor como de alumno en función de los permisos de cada rol:
+
+\subsection{Profesorado}
 \begin{itemize}
-	\item \textbf{Background:} Se abre una ventana donde se podrá seleccionar una imagen usada anteriormente, de google o del ordenador. Esta imagen cubrirá todo el workspace. También será posible introducir texto añadiéndolo manualmente o mediante un link.
-	\item \textbf{Punto Activo:} Establece un punto activo en el workspace (arrastrando y soltando).
-	\begin{itemize}
-		\item Será posible moverlo y modificar los contenidos del mismo.
-		\item Si se añade una imagen al puto activo, dicho punto, se adapta a la forma de la imagen.
-		\item Una vez originado el punto activo se abre un pop\_up con un texto.
-		\item También se puede asignar un vídeo, que abrirá una ventana para reproducirlo, o un audio. En caso de que no exista audio o vídeo, no se mostrará el respectivo botón.
-		\item Los puntos activos podrán tener música de fondo que será silenciada si se inicia la reproducción de audio o vídeo asignados a dicho punto por el profesorado. La música será restablecida al terminar el audio o vídeo correspondiente.
-		\item Los puntos activos pueden ser reorganizados por el profesorado para que emerjan en el orden que ellos quieran.
-		\item Un alumno no puede continuar con el siguiente punto activo sin terminar el actual.
-		\item El quiz de los puntos activos debe ser divertido.
-		\item Las cuestiones planteadas en los quiz de los puntos activos deberán ser 2 y no demasiado difíciles (respuesta múltiple, escribir una palabra, quiz con imágenes y preguntas sobre ésta, unir items, etc).
-		\item El quiz saldrá en pantalla cuando se cierra el punto activo actual.
-		\item Una vez acabado el quiz, aparece el siguiente punto activo en el orden establecido por el profesorado en el workspace.
-		\item Cada punto activo tendrá una puntuación hasta sumar entre todos un máximo de 100 puntos.
-		\item Al asignar una puntuación a un punto activo, ésta se restará al total que llevemos (máximo 100 puntos). Si un punto activo es eliminado, el contador general recupera la puntuación que tenía asignada dicho punto activo.
-		\item El alumno no sabe el total de puntos activos que hay en total.
-		\item Cuando el alumno obtiene una puntuación al completar un punto activo, dicha cantidad se suma al contador global.
-		\item Finalmente, podremos tener un resumen estadístico con las preguntas acertadas/falladas de cada punto activo.
-		\item Solo se guardará la puntuación obtenida la primera vez que se realice un quiz, luego, se podrán hacer más veces, pero la nota no se registrará.
-		\item El alumno tendrá la opción de guardar su progreso con un botón de guardar manualmente o mediante la opción de autoguardado.
-	\end{itemize}
+	\item \textbf{Background:} Abre una ventana donde se podrá seleccionar una imagen de Internet, del ordenador o una imagen ya usada anteriormente. Esta imagen, cubrirá todo el workspace.
+	\item \textbf{Punto Activo:} Podrán establecer puntos activos en el workspace y modificarlos convenientemente añadiendo imágenes, texto, vídeo, audio, etc. También podrán establecer una puntuación por cada punto activo de la fantasía para evaluar al alumnado.
 \end{itemize}
 
-\section{Características}
+\subsection{Alumnado}
+\begin{itemize}
+	\item \textbf{Background:} Podrá hacer lo mismo que el profesorado.
+	\item \textbf{Punto Activo:} Podrán establecer puntos activos en el workspace y modificarlos convenientemente añadiendo imágenes, texto, vídeo, audio, etc. No podrá establecer una puntuación a los puntos activos.
+\end{itemize}
+
+
+\section{Características de los puntos activos}
+\begin{itemize}
+	\item Será posible moverlo dentro del background y modificar los contenidos del mismo.
+	\item Si se añade una imagen al puto activo, dicho punto, se adapta a la forma de la imagen.
+	\item También se puede asignar un vídeo, que abrirá una ventana para reproducirlo, o un audio. En caso de que no exista audio o vídeo, no se mostrará el respectivo botón.
+	\item Los puntos activos podrán tener música de fondo que será silenciada si se inicia la reproducción de audio o vídeo asignados a dicho punto por el profesorado. La música será restablecida al terminar el audio o vídeo correspondiente.
+	\item Los puntos activos pueden ser reorganizados por el profesorado y alumnado para que emerjan en el orden deseado.
+	\item Mediante la realización (y no creación) de una fantasía, un alumno no puede continuar con el siguiente punto activo sin terminar el actual.
+	\item El quiz de los puntos activos debe ser divertido e intuitivo.
+	\item Las cuestiones planteadas en los quiz de los puntos activos deberán ser 2 y no demasiado difíciles (respuesta múltiple, escribir una palabra, quiz con imágenes y preguntas sobre ésta, unir items).
+	\item El quiz del punto activo saldrá en pantalla cuando se cierra dicho punto activo.
+	\item Una vez acabado el quiz, aparece el siguiente punto activo en el orden establecido por el profesorado/alumnado en el workspace.
+	\item Cada punto activo tendrá una puntuación hasta sumar (entre todos) un máximo de 100 puntos.
+	\item Al asignar una puntuación a un punto activo, ésta se restará al total que llevemos (máximo 100 puntos). Si un punto activo es eliminado, el contador general recupera la puntuación que tenía asignada dicho punto activo.
+	\item El alumno no sabe el total de puntos activos que hay en la fantasía.
+	\item Cuando el alumno obtiene una puntuación al completar un punto activo, dicha cantidad se suma al contador global.
+	\item Finalmente, podremos tener un resumen estadístico con las preguntas acertadas/falladas de cada punto activo.
+	\item Solo se guardará la puntuación obtenida la primera vez que se realice un quiz, luego, se podrán realizar más veces, pero la nota no se registrará en el sistema.
+	\item El alumno tendrá la opción de guardar su progreso con un botón de guardar manualmente o mediante la opción de autoguardado.
+\end{itemize}
+
+\section{Características de las fantasías}
 \begin{itemize}
 	\item Al finalizar todos los puntos activos habrá un botón abajo a la derecha de ``\textbf{más información}'' y en el centro un nuevo quiz que será el examen final. Este examen tendrá una puntuación independiente al de todos los puntos activos y no tendrá el resumen estadístico. Si se repite este quiz, la nota del mismo se actualizaría con un tanto por ciento de la nueva nota, más la nota anterior con el objetivo de que un alumno que repita un quiz no pueda obtener la mejor nota por repetición del mismo.
 	\item El profesorado podrá mandar a los alumnos hacer fantasías para aprender como tarea. Estas tareas podrán realizarse en grupos de alumnos en función de dos ideas:
@@ -152,8 +162,8 @@ En el workspace tendremos una serie de opciones que estarán disponibles tanto p
 	\item Cada fantasía tendrá un código para poder ser compartida.
 	\item Tendremos dos tipos de permisos en las fantasías: ``\textbf{ver}'' y ``\textbf{ver y editar}''.
 	\item La plataforma notificará al profesorado cuando los alumnos hayan terminado sus respectivos trabajos.
-	\item Las fantasías podrán ser privadas o públicas. Por defecto, siempre serán públicas y podrán ser accedidas por todo el que utilice la plataforma.
-	\item Las fantasías privadas podrán ser accedidas por otras personas mediante una contraseña.
+	\item Las fantasías podrán ser privadas, compartidas o públicas. Por defecto, siempre serán públicas y podrán ser accedidas por todo el que utilice la plataforma.
+	\item Las fantasías compartidas podrán ser accedidas por otras personas mediante una contraseña.
 	\item Las fantasías podrán ser clonadas.
 \end{itemize}
 
