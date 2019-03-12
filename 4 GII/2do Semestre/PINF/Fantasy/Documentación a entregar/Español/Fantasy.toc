@@ -1,47 +1,50 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}An\IeC {\'a}lisis de requisitos}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Workspace}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Caracter\IeC {\'\i }sticas}{6}{section.1.2}
-\contentsline {chapter}{\numberline {2}Casos de uso}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}CRUD fantas\IeC {\'\i }a}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Crear fantas\IeC {\'\i }a}{7}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Visualizar fantas\IeC {\'\i }a}{8}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Modificar fantas\IeC {\'\i }a}{9}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Borrar fantas\IeC {\'\i }a}{9}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Elegir idioma}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Copiar fantas\IeC {\'\i }a}{10}{section.2.3}
-\contentsline {section}{\numberline {2.4}CRUD background}{11}{section.2.4}
-\contentsline {section}{\numberline {2.5}CRUD punto activo}{11}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Crear punto activo}{11}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Visualizar punto activo}{12}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Modificar punto activo}{12}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Borrar punto activo}{13}{subsection.2.5.4}
-\contentsline {section}{\numberline {2.6}CRUD imagen}{13}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Crear imagen}{13}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Modificar imagen}{14}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Borrar imagen}{15}{subsection.2.6.3}
-\contentsline {section}{\numberline {2.7}CRUD v\IeC {\'\i }deo}{15}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Crear v\IeC {\'\i }deo}{15}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Modificar v\IeC {\'\i }deo}{16}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Borrar v\IeC {\'\i }deo}{17}{subsection.2.7.3}
-\contentsline {section}{\numberline {2.8}CRUD texto}{17}{section.2.8}
-\contentsline {section}{\numberline {2.9}CRUD \textit {quiz}}{18}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Crear \textit {quiz}}{18}{subsection.2.9.1}
-\contentsline {subsection}{\numberline {2.9.2}Visualizar \textit {quiz}}{19}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Modificar \textit {quiz}}{19}{subsection.2.9.3}
-\contentsline {subsection}{\numberline {2.9.4}Borrar \textit {quiz}}{20}{subsection.2.9.4}
-\contentsline {section}{\numberline {2.10}CRUD efecto de audio}{20}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}Crear efecto de audio}{20}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Modificar efecto de audio}{21}{subsection.2.10.2}
-\contentsline {subsection}{\numberline {2.10.3}Borrar efecto de audio}{22}{subsection.2.10.3}
-\contentsline {section}{\numberline {2.11}CRUD informaci\IeC {\'o}n adicional}{22}{section.2.11}
-\contentsline {section}{\numberline {2.12}Organizar puntos activos}{23}{section.2.12}
-\contentsline {section}{\numberline {2.13}CRUD \textit {quiz} final}{23}{section.2.13}
-\contentsline {subsection}{\numberline {2.13.1}Crear \textit {quiz} final}{23}{subsection.2.13.1}
-\contentsline {subsection}{\numberline {2.13.2}Visualizar \textit {quiz} final}{24}{subsection.2.13.2}
-\contentsline {subsection}{\numberline {2.13.3}Modificar \textit {quiz} final}{25}{subsection.2.13.3}
-\contentsline {subsection}{\numberline {2.13.4}Borrar \textit {quiz} final}{25}{subsection.2.13.4}
-\contentsline {section}{\numberline {2.14}Gestionar porcentaje de un punto activo}{26}{section.2.14}
-\contentsline {section}{\numberline {2.15}Gestionar ficha alumno}{26}{section.2.15}
-\contentsline {section}{\numberline {2.16}Asignar nota final}{26}{section.2.16}
-\contentsline {section}{\numberline {2.17}Asignar fantas\IeC {\'\i }a}{27}{section.2.17}
+\contentsline {subsection}{\numberline {1.1.1}Profesorado}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Alumnado}{5}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Caracter\IeC {\'\i }sticas de los puntos activos}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Caracter\IeC {\'\i }sticas de las fantas\IeC {\'\i }as}{6}{section.1.3}
+\contentsline {chapter}{\numberline {2}Casos de uso}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}CRUD fantas\IeC {\'\i }a}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Crear fantas\IeC {\'\i }a}{9}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Visualizar fantas\IeC {\'\i }a}{10}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Modificar fantas\IeC {\'\i }a}{11}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Borrar fantas\IeC {\'\i }a}{11}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Elegir idioma}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Copiar fantas\IeC {\'\i }a}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}CRUD background}{13}{section.2.4}
+\contentsline {section}{\numberline {2.5}CRUD punto activo}{13}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Crear punto activo}{13}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Visualizar punto activo}{14}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Modificar punto activo}{14}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Borrar punto activo}{15}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}CRUD imagen}{15}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Crear imagen}{15}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Modificar imagen}{16}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Borrar imagen}{17}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.7}CRUD v\IeC {\'\i }deo}{17}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Crear v\IeC {\'\i }deo}{17}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Modificar v\IeC {\'\i }deo}{18}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Borrar v\IeC {\'\i }deo}{19}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}CRUD texto}{19}{section.2.8}
+\contentsline {section}{\numberline {2.9}CRUD \textit {quiz}}{20}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Crear \textit {quiz}}{20}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}Visualizar \textit {quiz}}{21}{subsection.2.9.2}
+\contentsline {subsection}{\numberline {2.9.3}Modificar \textit {quiz}}{21}{subsection.2.9.3}
+\contentsline {subsection}{\numberline {2.9.4}Borrar \textit {quiz}}{22}{subsection.2.9.4}
+\contentsline {section}{\numberline {2.10}CRUD efecto de audio}{22}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Crear efecto de audio}{22}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Modificar efecto de audio}{23}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}Borrar efecto de audio}{24}{subsection.2.10.3}
+\contentsline {section}{\numberline {2.11}CRUD informaci\IeC {\'o}n adicional}{24}{section.2.11}
+\contentsline {section}{\numberline {2.12}Organizar puntos activos}{25}{section.2.12}
+\contentsline {section}{\numberline {2.13}CRUD \textit {quiz} final}{25}{section.2.13}
+\contentsline {subsection}{\numberline {2.13.1}Crear \textit {quiz} final}{25}{subsection.2.13.1}
+\contentsline {subsection}{\numberline {2.13.2}Visualizar \textit {quiz} final}{26}{subsection.2.13.2}
+\contentsline {subsection}{\numberline {2.13.3}Modificar \textit {quiz} final}{27}{subsection.2.13.3}
+\contentsline {subsection}{\numberline {2.13.4}Borrar \textit {quiz} final}{27}{subsection.2.13.4}
+\contentsline {section}{\numberline {2.14}Gestionar porcentaje de un punto activo}{28}{section.2.14}
+\contentsline {section}{\numberline {2.15}Gestionar ficha alumno}{28}{section.2.15}
+\contentsline {section}{\numberline {2.16}Asignar nota final}{28}{section.2.16}
+\contentsline {section}{\numberline {2.17}Asignar fantas\IeC {\'\i }a}{29}{section.2.17}
