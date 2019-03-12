@@ -5,10 +5,23 @@ PREGUNTAS TIPO TEST:
 - Dividir el vector.
 - Usar vectores del tamaño de los registros.
 
-2. 
+2. ¿Cómo optimizar la velocidad de transferencia memoria-procesador?
+- Usando buses más rápidos.
+* Usando entrelazado de memoria.
+- Aumentando la velocidad del procesador.
+- Aumentando la velocidad de la memoria.
 
-3. 
+3. ¿Cuál es el tamaño de los registros YMM de las extensiones AVX?
+- 64 bits.
+- 128 bits.
+* 256 bits.
+- 512 bits.
 
+4. ¿En qué se basan los procesadores vectoriales?
+- Replica.
+* Segmentación.
+- Replica y segmentación.
+- Ninguna de las anteriores, es una tecnología diferente.
 
 
 PREGUNTAS DE RESPUESTA CORTA:
@@ -19,8 +32,9 @@ Estructura de datos que se puede definir por tres parámetros:
 - Paso: Distancia en memoria de dos elementos consecutivos.
 
 
-2. 
+2. ¿Qué permite el encadenamiento?
+El encadenamiento permite que las operaciones vectoriales empiecen tan pronto como los elementos individuales de sus vectores estén disponibles.
 
 
 PREGUNTA DE DESARROLLO:
-1. 
+1. Comente el desarrollo de las extensiones vectoriales desde su inicio hasta la actualidad.
