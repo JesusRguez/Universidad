@@ -142,8 +142,41 @@
 
 \section{Procesos}
 \begin{enumerate}
-	\item \textbf{Encuentra usando find y perm los programas con el setuid activado. ¿Cuáles son?.}
-	
+	\item \textbf{Encuentra usando find y perm los programas con el setuid activado. ¿Cuáles son?.} \\ 
+	\texttt{find / -perm -4000 2>/dev/null}
+	\item \textbf{Identificar los 3 procesos que se ejecutan con permisos de root que requieren más memoria.} \\
+	\texttt{ps aux --sort -rss | grep ``root'' | head -n 3}
+	\item \textbf{Monitorizar (con watch) la memoria libre. Deberá mostrarse cada 10 segundos la actual memoria libre (únicamente ese valor, sin ningún texto adicional).} \\
+	\texttt{watch -n 10 'cat /proc/meminfo | grep "MemFree" | cut -d : -f 2'}
 \end{enumerate}
 
+\section{Gestión de usuarios}
+\begin{enumerate}
+	\item \textbf{Crear un usuario llamado con nuestras iniciales. El usuario tendrá home, bash y podrá iniciar sesión.}
+	\texttt{sudo useradd -m -s /bin/bash JAROHA}
+	\item \textbf{Crear un usuario llamado \textit{webuser} sin bash, ni home y que no pueda iniciar sesión.} \\
+	\texttt{sudo useradd -M -s /bin/false webuser}
+	\item \textbf{Crear un usuario llamado antonio que se pueda identificar como webuser (usando sudo) pero no como root.}
+	\texttt{sudo useradd -m -s /bin/bash antonio} \\
+	Luego, debemos cambiar en el archivo /etc/sudoers añadiendo al usuario antonio de la siguiente forma: \\
+	\texttt{antonio ALL=(webuser) ALL}
+\end{enumerate}
+
+\section{/proc}
+\begin{enumerate}
+	\item \textbf{Identificar tres archivos y explicar su contenido.}
+	\begin{itemize}
+		\item \texttt{meminfo:} Nos muestra información de la memoria. Por ejemplo: memoria libre, memoria ocupada, etc.
+		\item \texttt{version:} Nos muestra información sobre la versión del sistema.
+		\item \texttt{partitions:} Nos muestra información a cerca de las particiones de nuestro sistema.
+	\end{itemize}
+	\item \textbf{Identificar al menos dos archivos que permitan escritura.} \\
+	Con el comando \texttt{ls -l} podemos fijarnos en los permisos que tiene cada fichero. Dos ejemplos de archivos que permiten escritura son: \texttt{timer\_stats} y \texttt{mtrr}
+\end{enumerate}
+
+\section{Bash scripting}
+\begin{enumerate}
+	\item \textbf{Realizar un programa que permita cambiar el nombre de los archivos de un directorio dado como argumento de entrada. El nuevo nombre será un número secuencial, manteniendo la extensión.} \\
+	
+\end{enumerate}
 \end{document}
