@@ -104,21 +104,27 @@
 	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
 	
 \section{Instalación de máquinas virtuales mediante Vagrant}
-Para descargar la máquina virtual usamos \texttt{vagrant init hashicorp/precise64} y para lanzarla \texttt{vagran up}.
-
-Para actualizar el listado de paquetes usamos \texttt{sudo apt-get update}. Y para la instalación de apache \texttt{sudo apt-get install -y apache2}.
-
-Para redirigir el puerto 80\footnote{Cuidado con el puerto 80 porque nos puede salir un error en el que nos dice que debemos usar un puerto superior al 1024. Por lo tanto, usaremos el 8080 en el archivo \texttt{Vagrantfile}, quedando \texttt{... guest:80, host: 8080} en la línea 3 del código anteriormente mostrado.} lo indicamos en el archivo \texttt{Vagrantfile} de la siguiente forma:
-\begin{lstlisting}[language=Bash]
-Vagrant.configure("2") do |config|
-    config.vm.box = "hashicorp/precise64"
-    config.vm.network :forwarded_port, guest: 80, host: 80
-end
-\end{lstlisting}
-
-Para entrar en la máquina virtual usamos \texttt{vagrant ssh}.
-
-Para comprobar que funciona correctamente, buscamos la dirección \texttt{127.0.0.1:80}\footnote{\texttt{127.0.0.1:8080} en caso de que no nos haya dejado usar el puerto 80.} en nuestro navegador, y nos redirigirá a la página de Apache de la máquina virtual.
+\begin{enumerate}
+	\item \textbf{Crear una máquina virtual usando Vagrant.} \\
+	Para descargar la máquina virtual usamos \texttt{vagrant init hashicorp/precise64} y para lanzarla \texttt{vagran up}.
+	\item \textbf{Actualizar el listado de los paquetes.} \\
+	Para actualizar el listado de paquetes usamos \texttt{sudo apt-get update}.
+	\item \textbf{Instalar el Apache:} \\
+	Para la instalación de apache \texttt{sudo apt-get install -y apache2}.
+	\item \textbf{Redirigir el puerto 80 para accederse localmente.} \\
+	Para redirigir el puerto 80\footnote{Cuidado con el puerto 80 porque nos puede salir un error en el que nos dice que debemos usar un puerto superior al 1024. Por lo tanto, usaremos el 8080 en el archivo \texttt{Vagrantfile}, quedando \texttt{... guest:80, host: 8080} en la línea 3 del código anteriormente mostrado.} lo indicamos en el archivo \texttt{Vagrantfile} de la siguiente forma:
+	\begin{lstlisting}[language=Bash]
+	Vagrant.configure("2") do |config|
+	config.vm.box = "hashicorp/precise64"
+	config.vm.network :forwarded_port, guest: 80, host: 80
+	end
+	\end{lstlisting}
+	
+	Para entrar en la máquina virtual usamos \texttt{vagrant ssh}.
+	
+	Para comprobar que funciona correctamente, buscamos la dirección \texttt{127.0.0.1:80}\footnote{\texttt{127.0.0.1:8080} en caso de que no nos haya dejado usar el puerto 80.} en nuestro navegador, y nos redirigirá a la página de Apache de la máquina virtual.
+		
+\end{enumerate}
 
 \begin{figure}[h]
 	\centering
