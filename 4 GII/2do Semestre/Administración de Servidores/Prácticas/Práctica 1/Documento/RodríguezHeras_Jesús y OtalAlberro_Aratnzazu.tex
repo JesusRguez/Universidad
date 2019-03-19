@@ -142,7 +142,7 @@
 
 \section{Procesos}
 \begin{enumerate}
-	\item \textbf{Encuentra usando find y perm los programas con el setuid activado. ¿Cuáles son?.} \\ 
+	\item \textbf{Encuentra usando find y perm los programas con el setuid activado. ¿Cuáles son?} \\ 
 	\texttt{find / -perm -4000 2>/dev/null}
 	\item \textbf{Identificar los 3 procesos que se ejecutan con permisos de root que requieren más memoria.} \\
 	\texttt{ps aux --sort -rss | grep ``root'' | head -n 3}
@@ -176,7 +176,26 @@
 
 \section{Bash scripting}
 \begin{enumerate}
-	\item \textbf{Realizar un programa que permita cambiar el nombre de los archivos de un directorio dado como argumento de entrada. El nuevo nombre será un número secuencial, manteniendo la extensión.} \\
-	
+	\item \textbf{Realizar un programa que permita cambiar el nombre de los archivos de un directorio dado como argumento de entrada. El nuevo nombre será un número secuencial, manteniendo la extensión.} 
+	\lstinputlisting[language=Bash]{e1.sh}
+	\item \textbf{Se pide realizar un programa que realice una copia de los directorios que cuelguen de /importante/ en media/backup, siguiendo las directivas:
+	\begin{itemize}
+		\item Cada directorio que cuelga de /importante/ deberá de guardarse en un fichero \texttt{.tgz}.
+		\item Cada fichero de backup deberá de tener el nombre del directorio seguido de la fecha. La fecha estará en formato año, mes, día. Por ejemplo, para copiar el directorio \texttt{docencia} deberá tener el nombre \texttt{docencia\_20140404.tgz}.
+	\end{itemize}}
+	\lstinputlisting[language=Bash]{e2.sh}
+	\item \textbf{Proponer una modificación al programa anterior, de tal modo de que parra cada directorio se guarden sólo los 5 últimos ficheros. Es decir, al copiar el sexto fichero asociado a un mismo directorio se borrará la copia más a ntigua.}
+	\lstinputlisting[language=Bash]{e3.sh}
+	\item \textbf{Utilizar el crontab para ejecutar el programa de backup cada día a las 5 de la mañana.} \\
+	Para ejecutar el crontab usamos \texttt{crontab -e}.
+		
+	A continuación, seleccionamos el editor que más nos guste, en nuestro caso, \texttt{nano} (opción 2).
+		
+	Por último escribimos lo siguiente en el archivo de configuración de \texttt{crontab}:
+	\begin{center}
+		\texttt{0 5 * * * /home/vagrant/e3.sh}.
+	\end{center}
+		
+	Al guardar, ya se queda activado y listo para ejecutarse a las 5 de la mañana.
 \end{enumerate}
 \end{document}
