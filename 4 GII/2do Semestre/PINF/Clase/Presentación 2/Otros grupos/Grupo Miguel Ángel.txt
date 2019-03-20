@@ -1,0 +1,11 @@
+Proyecto sobre farmacia Prada en el Puerto de Santa María.
+
+El cliente quiere tarjetas vip para establecer edificios concretos.
+
+También tienen que tener en cuenta la ley de protección de datos.
+
+Insistencia en un chat para que los clientes puedan hablar con los farmacéuticos y que el chat se desconecte cuando se cierre la farmacia.
+
+También tendrían un chat de equipo para poder hablar entre los compañeros de farmacias de la misma compañía.
+
+El cliente no quería hacer la página desde cero quería migrar la web y seguir con lo que tenía.

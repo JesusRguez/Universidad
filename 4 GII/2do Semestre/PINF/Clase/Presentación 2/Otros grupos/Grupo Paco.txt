@@ -1,0 +1,9 @@
+Aplicación de gestion de Aquaterapia.
+
+A la aplicación solo tendrá acceso ella y sus monitores.
+
+No tienen claro los atributos finales del proyecto.
+
+Pueden crear hoteles distintos y grupos separados con las distintas posibilidades tal como el número de alumnos y las actividades que se pueden hacer.
+
+También tienen una zona de gastos para ir administrando a la clienta.

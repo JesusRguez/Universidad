@@ -1,0 +1,17 @@
+Página web sobre dermatología. Proyecto cirugiaderma.
+
+A la fecha de hoy 20/03/2019 han tenid varias reuniones con su jefe.
+
+Su jefe quiere una aplicacion web, android e IOs, donde se puedan subir fotos y vídeos donde solo los dermatólogos puedan acceder.
+
+Está basado en un atlas de cirugía que lleva funcionando 10 años y está un poco obsoleto.
+
+Su jefe priorizaba mucho la seguridad, pero no tienen esa seguridad que este grupo les puede ofrecer.
+
+La aplicación de android tendría un login y un registro (solicitud de acceso por parte de un administrador). Dentro de la aplicación tendrá un atlas donde cada  dermatólogo subirá sus fotos/vídeos y todo será supervisado por un administrador.
+
+Pueden pinchar sobre cualquier parte del cuerpo/cara y te aparecen videos/fotos de las posibles operaciones de esa zona. Además, también tiene una lista por si es incómodo el clicar sobre el monigote.
+
+Para la subida de archivos tendra un pequeño menú para categorizar las subidas realizadas. Hasta que el moderador/administrador no autorice esa subida a la aplicación, el archivo no se subirá.
+
+En cuanto a la página web, tendrá las mismas funcionalidades que la aplicación en android incidiendo mucho en la seguridad. Dentro de la página, tendán el mismo atlas que en la aplicación android.

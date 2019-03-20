@@ -1,0 +1,7 @@
+Proyecto de Konversat.io.
+
+Hasta ahora lo tienen solo en aplicación móvil. Les dice que quieren reservar un hotel y le pide el número de personas y la fecha de la reserva.
+
+Aún queda la confirmación de correo electrónico y acertar más con el reconociiento de voz (cosa que queda por parte de google y su procesador de lenguajes).
+
+Se pretende que las reservas se realicen tal cual como si se estuvieran realizando con una persona.

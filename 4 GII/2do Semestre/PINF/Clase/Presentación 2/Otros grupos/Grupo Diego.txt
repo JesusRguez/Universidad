@@ -1,0 +1,7 @@
+Exoesqueleto de una mano para ayudar a las personas con poca fuerza o movilidad reducida.
+
+Ya tienen el análisis de requisitos siguiendo el IEEE830.
+
+Han usado un arduino UNO para mover los dedos de la mano con motores.
+
+También tienen una interfaz gráfica para ver los movimientos de la mano.

@@ -1,0 +1,13 @@
+Aplicación web para arreglar las fallas que tienen respecto a las versiones de movil y pc.
+
+Lo principal es el diseño web, las redes sociales y los vídeos.
+
+Si los artículos tienen descuento, tendrán que salir destacados.
+
+La aplicación tendrá que ser modificable fácilmente por el cliente y su plantilla de empleados.
+
+Lo que le interesa es aumentar las ventas a nivel nacional.
+
+Intentar que la página te lleve al artículo de la forma más rápida y sencilla.
+
+Usarán el framework "Prestashop".
