@@ -1,0 +1,2 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Sincronizaci\IeC {\'o}n}{3}{0}{1}
