@@ -1,0 +1,4 @@
+- Grupo elegido: Jesús Rodríguez Heras, Carlos Llamas Jaén e Iván Castillo Caro.
+- Trabajo elegido: Comparación de servicios en la nube (Amazon AWS/Azure).
+- Ámbito del trabajo: Montaje de máquinas virtuales para ver las cualidades de ambos servicios. Investigación de los servicios aportados por ambas plataformas y recomendaciones estimadas para distintas finalidades.
+- Cronografía estimada: Reunión temprana para organizar las ideas principales y trabajo en el laboratorio de la asignatura con la idea de establecer 3 semanas a AWS, otras 3 a Azure y dos semanas para la preparación del documento final.
