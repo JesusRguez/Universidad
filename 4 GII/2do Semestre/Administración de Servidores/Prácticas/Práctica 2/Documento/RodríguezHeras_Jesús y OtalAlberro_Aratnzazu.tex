@@ -1,0 +1,184 @@
+%%\documentclass[a4paper,12pt,oneside]{llncs}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en el archivo fuente: UTF-8
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Juego de caracteres usado en la salida dvi
+%% Otra posibilidad: \usepackage{t1enc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ajusta maergenes para a4
+%\usepackage{a4wide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Uso fuente postscript times, para que los ps y pdf queden y pequeños...
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Posibilidad de hipertexto (especialmente en pdf)
+%\usepackage{hyperref}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graficos 
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ciertos caracteres "raros"...
+\usepackage{latexsym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Matematicas aun más fuertes (american math dociety)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % para las tablas
+\usepackage[spanish,es-tabla]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fuentes matematicas lo mas compatibles posibles con postscript (times)
+%% (Esto no funciona para todos los simbolos pero reduce mucho el tamaño del
+%% pdf si hay muchas matamaticas....
+\usepackage{mathptm}
+
+%%% VARIOS:
+%\usepackage{slashbox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{multirow}
+
+%% MARCA DE AGUA
+%% Este package de "draft copy" NO funciona con pdflatex
+%%\usepackage{draftcopy}
+%% Este package de "draft copy" SI funciona con pdflatex
+%%%\usepackage{pdfdraftcopy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indenteacion en español...
+\usepackage[spanish]{babel}
+
+\usepackage{listings}
+% Para escribir código en C
+% \begin{lstlisting}[language=C]
+% #include <stdio.h>
+% int main(int argc, char* argv[]) {
+% puts("Hola mundo!");
+% }
+% \end{lstlisting}
+
+
+\title{Práctica 2}
+\author{Jesús Rodríguez Heras\\
+	Arantzazu Otal Alberro}
+
+\begin{document}
+	
+	\maketitle
+%	\begin{abstract} %Poner esto en todas las prácticas de PCTR
+%%		\begin{center}
+%%			\noindent
+%			
+%%		\end{center}
+%	\end{abstract}
+	\thispagestyle{empty}
+	\newpage
+	
+%	\tableofcontents
+%	\newpage
+	
+	%%\listoftables
+	%%\newpage
+	
+	%%\listoffigures
+	%%\newpage
+	
+	%%%% REAL WORK BEGINS HERE:
+	
+	%%Configuracion del paquete listings
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=latin1}
+	
+\section{Instalación de máquinas virtuales mediante Vagrant}
+En esta primera parte vamos a crear el entorno de trabajo, consistente en tres máquinas virtuales pertenecientes a una misma red privada. Las máquinas se tendrán que crear a partir de un mismo fichero Vagrant.
+\begin{enumerate}
+	\item VM1, con IP 192.168.2.101
+	\item VM2, con IP 192.168.2.102
+	\item VM3, con IP 192.168.2.103
+\end{enumerate}
+
+Las máquinas tendrán la siguiente configuración:
+\begin{itemize}
+	\item nmap tiene que estar instalado en todos.
+	\item iptables en la máquina VM1.
+	\item ufw en la máquina VM1 (debería estar instalado por defecto).
+	\item fwbuilder.
+\end{itemize}
+
+La instalación de los paquetes se deberá realizar mediante la provisión de Vagrant.
+
+Para inicializar Vagrant usamos \texttt{vagrant init debian/jessie64} y luego abrimos y modificamos el archivo \texttt{Vagrantfile} de la siguiente forma:
+\lstinputlisting[language=Ruby]{../Vagrantfile}
+
+A continuación, iniciamos las tres máquinas virtuales en terminales diferentes con \texttt{vagrant up vmX} y nos conectamos a ellas mediante \texttt{vagrant shh vmX} (siendo ``X'' el número de la máquina virtual comprendido entre 1 y 3).
+
+Para instalar nmap en todas las máquinas usaremos el aprovisionamiento de Vagrant creando el archivo \texttt{bootstrap.sh} siguiente:
+\lstinputlisting[language=Bash]{../bootstrap.sh}
+
+\section{Visibilidad de las máquinas}
+Para los distintos ejercicios, se identifica a las máquinas como VM1, VM2 y VM3. Por comodidad, es recomendable poder usar nombres en las reglas. Para ello, se puede añadir en \texttt{/etc/hosts} una línea asociando un nombre y una IP con la siguiente sintáxis: IP NOMBRE ALIAS.
+
+Para hacer esto, entramos en las tres máquinas virtuales y accedemos al archivo mencionado con \texttt{sudo nano /etc/hosts} y lo modificamos de la siguiente forma:
+\begin{lstlisting}[language=Bash]
+	192.168.2.101 vm1
+	192.168.2.102 vm2
+	192.168.2.103 vm3
+\end{lstlisting}
+
+\section{Configuraciones IPtables}
+\subsection{Primeras pruebas}
+En este ejercicio se pide testear VM1 desde VM2, realizando los siguientes ejercicios:
+\begin{enumerate}
+	\item \textbf{Desde VM2 comprobar los puertos que VM1 tiene abiertos.} \\
+	Para comprobar los puertos usamos: \texttt{nmap vm2}.
+	\item \textbf{Prohibir el acceso por ssh.} \\
+	Para ello usaremos: \texttt{sudo iptables -A INPUT -p tcp --dport 22 -j DROP}
+	\item \textbf{Responde a las siguientes preguntas:}
+	\begin{itemize}
+		\item \textbf{¿Qué ha pasado?} \\
+		La consola se queda bloqueada sin poder establecer conexión por ssh.
+		\item \textbf{¿Puedo crear una nueva conexión?} \\
+		Es imposible.
+		\item \textbf{¿La consola sigue funcionando?} \\
+		No, se queda bloqueada y no responde.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Configuración mínima}
+En los ejercicios siguientes, siempre debe partir de esta configuración:
+\begin{itemize}
+	\item \textbf{Permitir conexiones locales.}
+	\item \textbf{Permitir conexiones ya establecidas.}
+	\item \textbf{Políticas por defecto de rechazar en input.}
+\end{itemize}
+
+\subsection{Configurando servidor web completo}
+Configurar VM1 para que tenga la configuración de un servidor web, permitiendo:
+\begin{itemize}
+	\item \textbf{Todos se conecten a los puertos http y https.}
+	\item \textbf{Conexión únicamente por parte de VM2 al servidor ftp.}
+	\item \textbf{Configurar VM1 para que sólo se pueda conectar localmente a mysql.}
+\end{itemize}
+
+\subsection{Poniendo excepciones}
+Permitir conectar a VM1 desde VM2 y VM3 el acceso a los puertos desde 1:1000, con la excepción de que VM2 no se puede conectar por FTP.
+
+
+\section{UFW}
+Usando ufw repetir el ejercicio 3.3.
+
+\end{document}

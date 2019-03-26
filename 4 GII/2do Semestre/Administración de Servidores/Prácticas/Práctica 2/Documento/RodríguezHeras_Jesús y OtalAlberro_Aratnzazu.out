@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Instalaci\363n de m\341quinas virtuales mediante Vagrant}{}% 1
+\BOOKMARK [1][-]{section.2}{Visibilidad de las m\341quinas}{}% 2
+\BOOKMARK [1][-]{section.3}{Configuraciones IPtables}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Primeras pruebas}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Configuraci\363n m\355nima}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Configurando servidor web completo}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Poniendo excepciones}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{UFW}{}% 8
