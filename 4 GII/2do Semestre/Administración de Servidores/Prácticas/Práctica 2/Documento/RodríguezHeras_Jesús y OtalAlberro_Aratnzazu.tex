@@ -144,9 +144,9 @@ Para hacer esto, entramos en las tres máquinas virtuales y accedemos al archivo
 En este ejercicio se pide testear VM1 desde VM2, realizando los siguientes ejercicios:
 \begin{enumerate}
 	\item \textbf{Desde VM2 comprobar los puertos que VM1 tiene abiertos.} \\
-	Para comprobar los puertos usamos: \texttt{nmap vm2}.
+	Para comprobar los puertos usamos: \texttt{nmap vm1}.
 	\item \textbf{Prohibir el acceso por ssh.} \\
-	Para ello usaremos: \texttt{sudo iptables -A INPUT -p tcp --dport 22 -j DROP}
+	Para ello usaremos: \texttt{sudo iptables -A INPUT -p tcp ---dport 22 -j DROP}
 	\item \textbf{Responde a las siguientes preguntas:}
 	\begin{itemize}
 		\item \textbf{¿Qué ha pasado?} \\
@@ -161,24 +161,84 @@ En este ejercicio se pide testear VM1 desde VM2, realizando los siguientes ejerc
 \subsection{Configuración mínima}
 En los ejercicios siguientes, siempre debe partir de esta configuración:
 \begin{itemize}
-	\item \textbf{Permitir conexiones locales.}
-	\item \textbf{Permitir conexiones ya establecidas.}
-	\item \textbf{Políticas por defecto de rechazar en input.}
+	\item \textbf{Permitir conexiones locales.} \\
+	\texttt{sudo iptables -A INPUT -i lo -j ACCEPT}
+	\item \textbf{Permitir conexiones ya establecidas.} \\
+	\texttt{sudo iptables -A INPUT -m state ---state ESTABLISHED -j ACCEPT}
+	\item \textbf{Políticas por defecto de rechazar en input.} \\
+	\texttt{sudo iptables -A INPUT -j DROP}
 \end{itemize}
+
+Para comprobar estas configuraciones hicimos ping entre las máquinas para ver la conectividad.
 
 \subsection{Configurando servidor web completo}
 Configurar VM1 para que tenga la configuración de un servidor web, permitiendo:
 \begin{itemize}
-	\item \textbf{Todos se conecten a los puertos http y https.}
-	\item \textbf{Conexión únicamente por parte de VM2 al servidor ftp.}
-	\item \textbf{Configurar VM1 para que sólo se pueda conectar localmente a mysql.}
+	\item \textbf{Todos se conecten a los puertos http y https.} \\
+	Primero mostramos las iptables con \texttt{sudo iptables -L} y, si tenemos la anterior que no permitía conexiones entrantes, usamos \texttt{sudo iptables -F} para borrarlas todas\footnote{Si queremos borrar solo una regla, mostramos todas las reglas existentes con \texttt{sudo iptables -L --line-numbers} y para borrar la que queramos usamos \texttt{sudo iptables -D INPUT numeroderegla}} (con el inconveniente de que tendremos que reescribir las que queramos).\\
+	Para habilitar http usamos: \texttt{sudo iptables -A INPUT -p tcp ---dport 80 -j ACCEPT} \\
+	Para habilitar https usamos: \texttt{sudo iptables -A INPUT -p tcp ---dport 443 -j ACCEPT}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{http.png}
+	\end{figure}
+	\item \textbf{Conexión únicamente por parte de VM2 al servidor ftp.} \\
+	\texttt{sudo iptables -A INPUT -p tcp ---dport 20 -s 192.168.2.102 -j ACCEPT}\\
+	\texttt{sudo iptables -A INPUT -p tcp ---dport 21 -s 192.168.2.102 -j ACCEPT}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{ftp.png}
+	\end{figure}
+\newpage
+	\item \textbf{Configurar VM1 para que sólo se pueda conectar localmente a mysql.} \\
+	\texttt{sudo iptables -A INPUT -p tcp -i lo ---dport 3306 -j ACCEPT}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{mysql.png}
+	\end{figure}
 \end{itemize}
 
+Otra opción para comprobar los puertos abiertos es poner el comando \texttt{nc -l numerodepuerto \&}. Eso nos abrirá e puerto que queramos y lo mandará a segundo plano con la finalidad de que el nmap o el telnet nos indique que ese puerto está abierto y a la escucha. Para cerrarlo, tendremos que poner el comando \texttt{kill -9 PID}, siendo PID el PID del proceso que nos mantiene el puerto abierto (que se nos muestra al mandar a segundo plano el comando \texttt{nc}).5
+
+\newpage
 \subsection{Poniendo excepciones}
 Permitir conectar a VM1 desde VM2 y VM3 el acceso a los puertos desde 1:1000, con la excepción de que VM2 no se puede conectar por FTP.
 
+Para VM2: \texttt{sudo iptables -A INPUT -p tcp ---dport 20:21 -s 192.168.2.102 -j DROP;sudo iptables -A INPUT -p tcp ---dport 1:1000 -s 192.168.2.101 -j ACCEPT}
 
+Para VM3: \texttt{sudo iptables -A INPUT -p tcp ---dport 1:1000 -s 192.168.2.103 -j ACCEPT}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.34]{1al1000.png}
+\end{figure}
+
+\newpage
 \section{UFW}
-Usando ufw repetir el ejercicio 3.3.
+Configurar VM1 para que tenga la configuración de un servidor web, permitiendo:
+\begin{itemize}
+	\item \textbf{Todos se conecten a los puertos http y https.} \\
+	Para habilitar http usamos: \texttt{sudo ufw allow http} \\
+	Para habilitar https usamos: \texttt{sudo ufw allow https}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{http2.png}
+	\end{figure}
+\newpage
+	\item \textbf{Conexión únicamente por parte de VM2 al servidor ftp.} \\
+	\texttt{sudo ufw allow from 192.168.2.102 to any port 20}\\
+	\texttt{sudo ufw allow from 192.168.2.102 to any port 21}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{ftp2.png}
+	\end{figure}
+	\newpage
+	\item \textbf{Configurar VM1 para que sólo se pueda conectar localmente a mysql.} \\
+	\texttt{sudo ufw allow from 192.168.2.101 to any port 3306}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{mysql2.png}
+	\end{figure}
+\end{itemize}
 
 \end{document}
