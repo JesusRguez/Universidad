@@ -1,0 +1,43 @@
+PREGUNTAS TIPO TEST:
+1. ¿En qué dos unidades se dividen los procesadores fragmentados?
+- Unidad de textura y unidad matemática.
+- Unidad de procesamiento de fragmentos y unidad matemática.
+* Unidad de textura y unidad de procesamiento de fragmentos.
+- Unidad de unidad matemática y unidad de control.
+
+2. ¿Cuál es la mayor característica de la arquitectura orientada a coputación de propósito general sobre GPU?
+* Nivel de procesamiento masivo.
+- Nivel de procesamiento óptimo.
+- Nivel de paralelismo masivo.
+- Nivel de paralelismo óptimo.
+
+3. ¿Cuál es el mayor inconveniente a la hora de trabajar con GPUs?
+- Dificultad para mapear el paralelismo.
+* Dificultad para el programado a la hora de transformar programas diseñados para CPUs tradicionales en programas que puedan ser ejecutados de manera eficiente en una GPU.
+- Dificultad para enviar y recibir datos de la memoria principal del computador.
+- Dificultad a la hora de programar programas de propósito general en CPUs
+
+4. ¿Qué es el kernel?
+- Es el programa que se ejecuta en la GPU.
+- Es el programa que lanza la CPU a la GPU
+- Es el programa que realiza la precarga del programa en la GPU.
+* Es el código que se ejecuta en la GPU y es la función que ejecutan los diferentes flujos durante la fase paralela.
+
+
+PREGUNTAS DE RESPUESTA CORTA:
+1. ¿Cuáles son las características de Nvidia GeForce?
+- Los datos de textura se pueden almacenar en memorias caché para aumentar el rendimiento.
+- El procesador de fragmentos utiliza la unidad de texturas para cargar datos desde la memoria.
+- Poseen dos unidades de procesamiento que operan con una precisión de 32 bits.
+- La unidad de texturas soporta gran cantidad de formatos de datos, pero son devueltos al procesador de gragmentos en formato fp32 o fp16.
+- La memora del sistema dse divida en cuatro particiones independientes.
+- Todos los datos procesados por el pipeline gráfico se almacenan en memoria DRAM.
+- Las texturas y los datos de entrada (vérticas) se pueden almacenar tanto en la memoria DRAM como en la memoria principal del sistema.
+
+
+2. ¿Cuál es la descripción de la arquitectura CUDA?
+- Está organizada en base a multiprocesadores (SM).
+- Dos SM forman un bloque.
+- Cada SM tiene un número de SP que comparten lógica de control y una memoria de caché de instrucciones.
+- Poseen memorias DRAM de tipo GDDR.
+- Los SP son masivamente paralelos, por lo que es muy importante intentar aprovechar este nivel de paralelismo cuando se desarrollen aplicaciones para GPU.
