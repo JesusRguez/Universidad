@@ -7,6 +7,9 @@
 %Para la identación del español
 \usepackage[spanish]{babel}
 \usepackage{animate}
+\usepackage{listings}
+
+
 
 % There are many different themes available for Beamer. A comprehensive
 % list with examples is given here:
@@ -66,7 +69,7 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date{25 de marzo de 2019}
+\date{1 de abril de 2019}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -96,7 +99,6 @@
 
 \begin{frame}
   \titlepage
-  
 \end{frame}
 
 \begin{frame}{Índice}
@@ -112,20 +114,109 @@
 	\begin{block}{Definición}
 		Procedimiento por el que se ajusta el valor de un reloj a un tiempo físico de referencia con una precisión preestablecida.
 	\end{block}
-
-	Es importante asegurar una correcta sincronización entre los computadores de un sistema distribuido para que no se produzcan derivas.
+	\begin{alertblock}{Importante}
+		Es importante asegurar una correcta sincronización entre los computadores de un sistema distribuido para que no se produzcan derivas.
+	\end{alertblock}
+	\begin{block}{Deriva}
+		Representa el tiempo que un reloj se desvía respecto a la hora real con el paso del tiempo.
+	\end{block}
 \end{frame}
 
+\section{P2P}
+\begin{frame}{P2P}
+	\begin{block}{Definición}
+		Es un sistema auto-organizado de entidades iguales y autónomas cuyo objetivo es el uso compartido de recursos distribuidos en un ambiente de red evitando servicios centralizados.
+	\end{block}
+	\begin{exampleblock}{Ejemplo}
+		BitTorrent, eMule, $\mu$Torrent, etc.
+	\end{exampleblock}
+\end{frame}
 
 \section{Sincronización P2P mediante eventos}
 %http://sedici.unlp.edu.ar/handle/10915/23619
 %http://sedici.unlp.edu.ar/bitstream/handle/10915/23619/4787-paper_cacic_2012_a_presentar.pdf?sequence=1
+\begin{frame}{Sincronización P2P mediante eventos}
+	\begin{itemize}
+		\item Para simplificarlo, supondremos que tenemos dos procesadores conectados mediante una red P2P (pont-to-point).
+		
+		\item Para sincronizar dichos procesadores tendremos una estructura de espera activa con una variable (o flag) común en ambos procesadores.
+		
+		\item Cuando uno de ellos realiza un cambio sobre dicha variable compartida (evento) el segundo se sincroniza con el primero.
+	\end{itemize}
+\end{frame}
 
+\begin{frame}{Sincronización P2P mediante eventos}
+Ejemplo de dos procesos sincronizados mediante un evento donde inicialmente la variable global \texttt{turno} vale 0 (o un valor distinto de 1).
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{block}{Procesador 1}
+			\texttt{//Resto de código inicial\\
+			while(turno != 1)\{\\
+			\hspace{0.8cm}//Espera ocupada\\
+			\}\\
+			//Código sincronizado}
+		\end{block}
+		\column{0.45\textwidth}
+		\begin{block}{Procesador 2}
+			\texttt{//Resto de código inicial\\
+			turno = 1;\\
+			//Código sincronizado}
+		\end{block}
+	\end{columns}
+\textcolor{white}{a\\}
+En este ejemplo podemos ver cómo el procesador 1 se queda a la espera de que el procesador 2 le pase el turno (estableciendo a 1 la variable \texttt{turno}).
 
-\section{Sincronización mediante Barreras}
+Con esto se sincronizan para realizar la sección de \texttt{Código sincronizado} o, simplemente, porque sea necesaria una sincronización en ese punto del programa.
+\end{frame}
+
+\section{Sincronización mediante barreras}
 %http://webdiis.unizar.es/~ezpeleta/lib/exe/fetch.php?media=misdatos:pc:08.pdf
 %http://ocw.uc3m.es/ingenieria-informatica/arquitectura-de-computadores/materiales/es-m5-03-sincr-ocw.pdf
+\begin{frame}{Sincronización mediante barreras}
+	\begin{block}{Barrera}
+		Es un punto del código que ninguna entidad concurrente sobrepasa hasta que todas las entidades existentes han llegado a ella.
+	\end{block}
+\end{frame}
 
+\begin{frame}{Sincronización mediante barreras}
+Ejemplo de código Java para la gestión de una barrera y varios procesos:
+
+\textcolor{white}{a\\}
+	\texttt{//Código de Thread:\\
+		public Hilo extends Thread\{\\
+			\hspace{0.8cm}public Hilo (CyclicBarrier ba) \{...\}\\
+			\hspace{0.8cm}public void run()\{\\
+\hspace{0.8cm}\hspace{0.8cm}try\{\\
+\hspace{0.8cm}\hspace{0.8cm}\hspace{0.8cm}int i = bar.await();\\
+\hspace{0.8cm}\hspace{0.8cm}\}catch(Exception e)\{\}\\
+\hspace{0.8cm}\hspace{0.8cm}//Código a ejecutar cuando se abre barrera...\\
+\hspace{0.8cm}\}\\
+		\}\\
+	//Programa principal:\\
+	int numHilos = n; //Número de hilos que abren barrera\\
+	CyclicBarrier Barrera = new CyclicBarrier(numHilos);\\
+	new Hilo(Barrera).start();}
+\end{frame}
+
+\begin{frame}{Sincronización mediante barreras}
+
+\begin{columns}
+	\column{0.45\textwidth}
+	En el ejemplo anterior se ve cómo, hasta que no llegan todos los procesos a la barrera, el programa no seguirá ejecutándose. Y, cuando lo haga, lo harán todos los procesos a la vez.
+	
+	\textcolor{white}{a\\}
+	A la derecha tenemos una figura donde se lanzan tres procesos a la vez y son sincronizados de por medio.
+	\column{0.45\textwidth}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.23]{Barreras.png}
+	\end{figure}
+\end{columns}
+
+
+	
+	
+\end{frame}
 
 \end{document}
 

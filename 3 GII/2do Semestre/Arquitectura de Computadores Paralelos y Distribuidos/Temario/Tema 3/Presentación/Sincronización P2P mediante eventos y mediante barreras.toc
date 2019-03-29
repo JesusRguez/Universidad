@@ -1,2 +1,5 @@
 \select@language {spanish}
 \beamer@sectionintoc {1}{Sincronizaci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{P2P}{4}{0}{2}
+\beamer@sectionintoc {3}{Sincronizaci\IeC {\'o}n P2P mediante eventos}{5}{0}{3}
+\beamer@sectionintoc {4}{Sincronizaci\IeC {\'o}n mediante barreras}{7}{0}{4}

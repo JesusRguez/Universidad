@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  24 MAR 2019 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  29 MAR 2019 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,7 +886,31 @@ Package: ocgbase 2016/03/11 v0.6 support package for ocgx2.sty
 \@anim@lineno=\count266
 \@anim@curfield=\count267
 \@anim@@resizeflags=\count268
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count269
+\lst@gtempboxa=\box72
+\lst@token=\toks51
+\lst@length=\count270
+\lst@currlwidth=\dimen282
+\lst@column=\count271
+\lst@pos=\count272
+\lst@lostspace=\dimen283
+\lst@width=\dimen284
+\lst@newlines=\count273
+\lst@lineno=\count274
+\lst@maxwidth=\dimen285
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count275
+\lst@skipnumbers=\count276
+\lst@framebox=\box73
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMadrid.
 sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewh
@@ -905,20 +929,20 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `"Sincronización P2P mediante eventos y mediante barreras.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -972,8 +996,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring OFF on input line 95.
+\AtBeginShipoutBox=\box74
+Package hyperref Info: Link coloring OFF on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -981,11 +1005,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count269
+\c@section@level=\count277
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
 
 (./Sincronización P2P mediante eventos y mediante barreras.out)
 (./Sincronización P2P mediante eventos y mediante barreras.out)
@@ -993,57 +1017,57 @@ LaTeX Info: Redefining \nameref on input line 95.
 \openout5 = `"Sincronización P2P mediante eventos y mediante barreras.out"'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 95.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 95.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 98.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 95.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 95.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 95.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 95.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 95.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 95.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 95.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 95.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 95.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 95.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 95.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 95.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 95.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 95.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 95.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 95.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 95.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 98.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 98.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 9
-5.
+8.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-95.
+98.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 95.
+ut line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1069,22 +1093,23 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 95.
+LaTeX Info: Redefining \includegraphics on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+\c@lstlisting=\count278
 
 (./Sincronización P2P mediante eventos y mediante barreras.nav)
-Overfull \hbox (32.93024pt too wide) in paragraph at lines 95--95
+Overfull \hbox (32.93024pt too wide) in paragraph at lines 98--98
  [][][][]  
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 100.
+(Font)              size <5> substituted on input line 102.
 
 
 Overfull \hbox (32.93024pt too wide) has occurred while \output is active
@@ -1109,10 +1134,83 @@ Overfull \hbox (32.93024pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-Package atenddvi Info: Last page = 3.
 [3
 
 ]
+LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 133.
+
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[4
+
+]
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[5
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 170
+.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 170.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 170.
+
+
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[6
+
+]
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[7
+
+]
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[8
+
+] <Barreras.png, id=269, 564.1075pt x 856.19875pt>
+File: Barreras.png Graphic file (type png)
+ <use Barreras.png>
+Package pdftex.def Info: Barreras.png used on input line 219.
+(pdftex.def)             Requested size: 129.74199pt x 196.92157pt.
+
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+Package atenddvi Info: Last page = 9.
+[9
+
+ <./Barreras.png>]
 \tf@nav=\write6
 \openout6 = `"Sincronización P2P mediante eventos y mediante barreras.nav"'.
 
@@ -1122,39 +1220,46 @@ Package atenddvi Info: Last page = 3.
 \tf@snm=\write8
 \openout8 = `"Sincronización P2P mediante eventos y mediante barreras.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 130.
- (./Sincronización P2P mediante eventos y mediante barreras.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 221.
+
+(./Sincronización P2P mediante eventos y mediante barreras.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
 Package rerunfilecheck Info: File `"Sincronización P2P mediante eventos y medi
 ante barreras".out' has not changed.
-(rerunfilecheck)             Checksum: B829281D14E478E889B1A2B52CD71632;52.
+(rerunfilecheck)             Checksum: 488036F2EB8B569DAC6D401FE644BBCF;233.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 26052 strings out of 493013
- 496066 string characters out of 6135682
- 569420 words of memory out of 5000000
- 29123 multiletter control sequences out of 15000+600000
- 5759 words of font info for 21 fonts, out of 8000000 for 9000
+ 27582 strings out of 493013
+ 519414 string characters out of 6135682
+ 595097 words of memory out of 5000000
+ 30600 multiletter control sequences out of 15000+600000
+ 10865 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,60p,10441b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
+ 56i,16n,63p,10462b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on "Sincronización P2P mediante eventos y mediante barreras.pdf
-" (3 pages, 41265 bytes).
+" (9 pages, 132442 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 8 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
