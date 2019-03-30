@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  29 MAR 2019 20:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  30 MAR 2019 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,7 +1200,7 @@ Overfull \hbox (32.93024pt too wide) has occurred while \output is active
 ] <Barreras.png, id=269, 564.1075pt x 856.19875pt>
 File: Barreras.png Graphic file (type png)
  <use Barreras.png>
-Package pdftex.def Info: Barreras.png used on input line 219.
+Package pdftex.def Info: Barreras.png used on input line 215.
 (pdftex.def)             Requested size: 129.74199pt x 196.92157pt.
 
 Overfull \hbox (32.93024pt too wide) has occurred while \output is active
@@ -1220,15 +1220,15 @@ Package atenddvi Info: Last page = 9.
 \tf@snm=\write8
 \openout8 = `"Sincronización P2P mediante eventos y mediante barreras.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 221.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 217.
 
 (./Sincronización P2P mediante eventos y mediante barreras.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `"Sincronización P2P mediante eventos y medi
 ante barreras".out' has not changed.
 (rerunfilecheck)             Checksum: 488036F2EB8B569DAC6D401FE644BBCF;233.
@@ -1256,7 +1256,7 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on "Sincronización P2P mediante eventos y mediante barreras.pdf
-" (9 pages, 132442 bytes).
+" (9 pages, 132432 bytes).
 PDF statistics:
  325 PDF objects out of 1000 (max. 8388607)
  288 compressed objects within 3 object streams
