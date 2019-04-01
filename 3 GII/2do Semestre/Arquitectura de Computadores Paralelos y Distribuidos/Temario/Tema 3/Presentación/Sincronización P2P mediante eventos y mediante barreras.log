@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  30 MAR 2019 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  1 APR 2019 09:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1197,7 +1197,7 @@ Overfull \hbox (32.93024pt too wide) has occurred while \output is active
 
 [8
 
-] <Barreras.png, id=269, 564.1075pt x 856.19875pt>
+] <Barreras.png, id=275, 564.1075pt x 856.19875pt>
 File: Barreras.png Graphic file (type png)
  <use Barreras.png>
 Package pdftex.def Info: Barreras.png used on input line 215.
@@ -1207,10 +1207,17 @@ Overfull \hbox (32.93024pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-Package atenddvi Info: Last page = 9.
 [9
 
  <./Barreras.png>]
+Overfull \hbox (32.93024pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+Package atenddvi Info: Last page = 10.
+[10
+
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@nav=\write6
 \openout6 = `"Sincronización P2P mediante eventos y mediante barreras.nav"'.
 
@@ -1220,18 +1227,17 @@ Package atenddvi Info: Last page = 9.
 \tf@snm=\write8
 \openout8 = `"Sincronización P2P mediante eventos y mediante barreras.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 217.
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 261.
 (./Sincronización P2P mediante eventos y mediante barreras.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
 Package rerunfilecheck Info: File `"Sincronización P2P mediante eventos y medi
 ante barreras".out' has not changed.
-(rerunfilecheck)             Checksum: 488036F2EB8B569DAC6D401FE644BBCF;233.
+(rerunfilecheck)             Checksum: 3E3565EA6F1D6123CF6DFDCC9F00C52D;283.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1242,24 +1248,25 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27582 strings out of 493013
- 519414 string characters out of 6135682
- 595097 words of memory out of 5000000
- 30600 multiletter control sequences out of 15000+600000
- 10865 words of font info for 40 fonts, out of 8000000 for 9000
+ 27636 strings out of 493013
+ 520819 string characters out of 6135682
+ 595203 words of memory out of 5000000
+ 30645 multiletter control sequences out of 15000+600000
+ 11389 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,63p,10462b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on "Sincronización P2P mediante eventos y mediante barreras.pdf
-" (9 pages, 132432 bytes).
+" (10 pages, 146590 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 23 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
