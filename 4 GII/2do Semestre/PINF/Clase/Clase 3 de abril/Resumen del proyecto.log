@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  3 APR 2019 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  3 APR 2019 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Documento de plan de proyecto.tex"
-(./Documento de plan de proyecto.tex
+**"Resumen del proyecto.tex"
+(./Resumen del proyecto.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -381,27 +381,78 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(./Documento de plan de proyecto.aux
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/01/14 v0.5h Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count125
+\calc@Bcount=\count126
+\calc@Adimen=\dimen134
+\calc@Bdimen=\dimen135
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count127
+\calc@Cskip=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen136
+\AM@pageheight=\dimen137
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box30
+\AM@global@opts=\toks31
+\AM@toc@title=\toks32
+\c@AM@survey=\count128
+\AM@templatesizebox=\box31
+)
+(./Resumen del proyecto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-\openout1 = `"Documento de plan de proyecto.aux"'.
+\openout1 = `"Resumen del proyecto.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -443,17 +494,8 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box30
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-Package hyperref Info: Link coloring ON on input line 85.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -461,30 +503,30 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count125
+\c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
 
-(./Documento de plan de proyecto.out) (./Documento de plan de proyecto.out)
+(./Resumen del proyecto.out) (./Resumen del proyecto.out)
 \@outlinefile=\write3
-\openout3 = `"Documento de plan de proyecto.out"'.
+\openout3 = `"Resumen del proyecto.out"'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
-\scratchdimen=\dimen134
-\scratchbox=\box31
-\nofMPsegments=\count127
-\nofMParguments=\count128
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count129
-\MPscratchDim=\dimen135
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count130
+\scratchdimen=\dimen138
+\scratchbox=\box33
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen139
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -502,112 +544,199 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 85.
-LaTeX Info: Redefining \% on input line 85.
-\c@lstlisting=\count132
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 93
-.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+\c@lstlisting=\count136
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 97.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 10
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 93
-.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 10
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 93
-.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 10
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 93
-.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 10
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 93.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 109.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 109.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 109.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 109.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 109.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [1
+<UCA.png, id=72, 401.5pt x 401.5pt>
+File: UCA.png Graphic file (type png)
+ <use UCA.png>
+Package pdftex.def Info: UCA.png used on input line 110.
+(pdftex.def)             Requested size: 70.8018pt x 70.80267pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<ESI.png, id=74, 1027.84pt x 1027.84pt>
+File: ESI.png Graphic file (type png)
+ <use ESI.png>
+Package pdftex.def Info: ESI.png used on input line 110.
+(pdftex.def)             Requested size: 70.8018pt x 70.79556pt.
+
+<Stimey.png, id=75, 248.93pt x 250.9375pt>
+File: Stimey.png Graphic file (type png)
+ <use Stimey.png>
+Package pdftex.def Info: Stimey.png used on input line 110.
+(pdftex.def)             Requested size: 70.8018pt x 71.37242pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./UCA.png> <./ESI.png> <./
+Stimey.png (PNG copy)>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 120.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.130 	\newpage
+                [1]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 97.
- (./Documento de plan de proyecto.toc
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 132.
+ (./Resumen del proyecto.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 )
 \tf@toc=\write4
-\openout4 = `"Documento de plan de proyecto.toc"'.
+\openout4 = `"Resumen del proyecto.toc"'.
 
-
-[2] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [2]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
- [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 147.
+ [3]
+<Planificacion.pdf, id=115, 845.1575pt x 597.23125pt>
+File: Planificacion.pdf Graphic file (type pdf)
+ <use Planificacion.pdf>
+Package pdftex.def Info: Planificacion.pdf used on input line 179.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: Planificacion.pdf Graphic file (type pdf)
 
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
- (./Documento de plan de proyecto.aux
+<use Planificacion.pdf>
+Package pdftex.def Info: Planificacion.pdf used on input line 179.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+
+<Planificacion.pdf, id=118, page=1, 845.1575pt x 597.23125pt>
+File: Planificacion.pdf Graphic file (type pdf)
+
+<use Planificacion.pdf, page 1>
+Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+File: Planificacion.pdf Graphic file (type pdf)
+ <use Planificacion.pdf, page 1>
+Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [4]
+File: Planificacion.pdf Graphic file (type pdf)
+
+<use Planificacion.pdf, page 1>
+Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: Planificacion.pdf Graphic file (type pdf)
+ <use Planificacion.pdf, page 1>
+Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: Planificacion.pdf Graphic file (type pdf)
+
+<use Planificacion.pdf, page 1>
+Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [5 <./Planificacion.pdf>]
+<Planificacion.pdf, id=148, page=2, 845.1575pt x 597.23125pt>
+File: Planificacion.pdf Graphic file (type pdf)
+
+<use Planificacion.pdf, page 2>
+Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: Planificacion.pdf Graphic file (type pdf)
+ <use Planificacion.pdf, page 2>
+Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+File: Planificacion.pdf Graphic file (type pdf)
+
+<use Planificacion.pdf, page 2>
+Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
+(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
+ [6 <./Planificacion.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+
+(./Resumen del proyecto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
-Package rerunfilecheck Info: File `"Documento de plan de proyecto".out' has not
- changed.
-(rerunfilecheck)             Checksum: CFD8ABA1DDE690AE6B295E182050DC14;1122.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package rerunfilecheck Info: File `"Resumen del proyecto".out' has not changed.
+
+(rerunfilecheck)             Checksum: E1E12DAA70E4A8EF48B09BCB29865ED7;1189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 9580 strings out of 493013
- 136270 string characters out of 6135682
- 262211 words of memory out of 5000000
- 12925 multiletter control sequences out of 15000+600000
- 39601 words of font info for 71 fonts, out of 8000000 for 9000
+ 10705 strings out of 493013
+ 152206 string characters out of 6135682
+ 285906 words of memory out of 5000000
+ 14038 multiletter control sequences out of 15000+600000
+ 63301 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,6n,49p,359b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,49p,350b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb>
-Output written on "Documento de plan de proyecto.pdf" (5 pages, 38191 bytes).
+nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on "Resumen del proyecto.pdf" (8 pages, 373267 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
