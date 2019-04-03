@@ -144,7 +144,7 @@ bool operator <= (const Fecha& f1, const Fecha& f2){
 
 //Operador >=:
 bool operator >= (const Fecha& f1, const Fecha& f2){
-	return (f1 == f1 || f2 < f1);
+	return (f1 == f2 || f2 < f1);
 }
 
 //Operador ==:
