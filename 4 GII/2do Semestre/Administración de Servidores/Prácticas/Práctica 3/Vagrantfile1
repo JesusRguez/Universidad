@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/jessie64"
+  
+  config.vm.define :r do |r|
+  	r.vm.box="debian/jessie64"
+  	r.vm.hostname="R"
+  	r.vm.network "private_network", ip: "192.168.2.1"
+  	r.vm.network "private_network", ip: "192.168.3.1"
+  end
+  
+  config.vm.define :vm1r1 do |vm1r1|
+  	vm1r1.vm.box="debian/jessie64"
+  	vm1r1.vm.hostname="VM1"
+  	vm1r1.vm.network "private_network", ip: "192.168.2.2"
+  end
+  
+  config.vm.define :vm2r1 do |vm2r1|
+  	vm2r1.vm.box="debian/jessie64"
+  	vm2r1.vm.hostname="VM2"
+  	vm2r1.vm.network "private_network", ip: "192.168.2.3"
+  end
+  
+  config.vm.define :vm1r2 do |vm1r2|
+  	vm1r2.vm.box="debian/jessie64"
+  	vm1r2.vm.hostname="VM3"
+  	vm1r2.vm.network "private_network", ip: "192.168.3.2"
+  end
+  
+  config.vm.define :vm2r2 do |vm2r2|
+  	vm2r2.vm.box="debian/jessie64"
+  	vm2r2.vm.hostname="VM4"
+  	vm2r2.vm.network "private_network", ip: "192.168.3.3"
+  end
+end
