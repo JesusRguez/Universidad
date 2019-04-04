@@ -1,0 +1,506 @@
+%% LyX 2.0.8.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,spanish,intoc,bibtotoc,idxtotoc,BCOR0mm,tablecaptionabove]{scrbook}
+\usepackage[utf8]{luainputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,lmargin=3.5cm,rmargin=2.5cm}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{rotating}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue,pdfpagelayout=OneColumn, pdfnewwindow=true,pdfstartview=XYZ, plainpages=false, pdfpagelabels,pdftex}
+
+\makeatletter
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{\texorpdfstring%
+  {L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+  {LyX}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% DO NOT ALTER THIS PREAMBLE!!!
+%
+% This preamble is designed to ensure that the User's Guide prints
+% out as advertised. If you mess with this preamble,
+% parts of the User's Guide may not print out as expected.  If you
+% have problems LaTeXing this file, please contact 
+% the documentation team
+% email: lyx-docs@lists.lyx.org
+
+%\usepackage[utf8]{inputenc}
+
+\usepackage{ifpdf} % part of the hyperref bundle
+\ifpdf % if pdflatex is used
+
+ % set fonts for nicer pdf view
+ \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+\fi % end if pdflatex is used
+
+% for correct jump positions whe clicking on a link to a float
+\usepackage{float}
+\usepackage[figure]{hypcap}
+%\usepackage[printonlyused]{acronym-custom}
+\usepackage{acronym-custom}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% redefine the \LyX macro for PDF bookmarks
+\def\LyX{\texorpdfstring{%
+  L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+  {LyX}}
+
+% define a short command for \textvisiblespace
+\newcommand{\spce}{\textvisiblespace}
+
+% macro for italic page numbers in the index
+\newcommand{\IndexDef}[1]{\textit{#1}}
+
+% redefine the greyed out note
+%\renewenvironment{lyxgreyedout}
+ %{\textcolor{blue}\bgroup}{\egroup}
+
+% workaround for a makeindex bug, 
+% see sec. "Index Entry Order"
+% only uncomment this when you are using makindex
+%\let\OrgIndex\index 
+%\renewcommand*{\index}[1]{\OrgIndex{#1}}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+\renewcommand{\lstlistlistingname}{Listados}
+\renewcommand{\lstlistingname}{Listado}
+
+\usepackage{hyphenat}
+\usepackage{verbatim}
+
+\AtBeginDocument{
+   \renewcommand{\tablename}{Tabla}
+   \renewcommand{\listtablename}{Índice de tablas}
+}
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}}
+
+\newenvironment{nota}{
+  \begin{changemargin}{2em}{2em}
+    \textbf{\textsc{Nota: }}
+}{
+  \end{changemargin}
+}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type,name,bpel,partnerLink,portType,operation,variable,createInstance, inputVariable, outputVariable, validate, part}% list your attributes here
+}
+
+\makeatother
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  \includegraphics[width=.25\textwidth]{logo_uca}
+
+  \bigskip
+  \bigskip
+  \bigskip
+  
+  \begin{changemargin}{3em}{3em}
+    \centering
+
+    {\LARGE \textsc{\nohyphens{Escuela Superior de Ingeniería}}}
+    
+    \bigskip
+    \bigskip
+    \bigskip
+
+    {\LARGE \nohyphens{Grado en Ingeniería Informática}}
+
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+
+    {\LARGE \nohyphens{Reingeniería de Software para Análisis Armónico de las Mareas}}
+
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+
+    {\large Curso 2018-2019}
+
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+      
+    \end{changemargin}
+
+    {\Large Arantzazu Otal Alberro \\}
+    \bigskip
+    \bigskip 
+    \bigskip 
+    {\large Puerto Real, \today}
+
+\end{titlepage}
+\newpage{\pagestyle{empty}\cleardoublepage}  
+{
+  \thispagestyle{empty} 
+  \centering
+  \includegraphics[width=.2\textwidth]{logo_uca}
+
+  \bigskip
+  \bigskip
+  \bigskip
+  
+  \begin{changemargin}{3em}{3em}
+
+    \begin{center}
+      {\LARGE \textsc{\nohyphens{Escuela Superior de Ingeniería}}}
+      
+      \bigskip
+      \bigskip
+      
+      {\LARGE \nohyphens{Grado en Ingeniería Informática}}
+      
+      \bigskip
+      \bigskip
+      \bigskip
+      \bigskip
+      
+      {\LARGE \nohyphens{Reingeniería de Software para Análisis Armónico de Mareas}}
+      
+      \bigskip
+      \bigskip
+      \bigskip
+      \bigskip
+      
+    \end{center}
+  \end{changemargin}
+
+  \begin{flushleft}
+    \Large
+
+    \textsc{Departamento}: \nohyphens{Ingeniería Informática.} \\
+    \textsc{Directora del proyecto}: \nohyphens{Mª del Carmen de Castro Cabrera} \\
+    \textsc{Autor del Proyecto}: \nohyphens{Arantzazu Otal Alberro}. \\
+  \end{flushleft}
+  
+  \bigskip
+  \bigskip
+  \bigskip
+  
+  \begin{flushright}
+    \large
+    Puerto Real, \today
+
+    \bigskip    
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    Fdo.: Arantzazu Otal Alberro
+    
+  \end{flushright}
+
+}
+
+
+\input{Conclusiones/Agradecimientos.tex}
+
+
+\clearpage
+\newpage{\pagestyle{empty}\cleardoublepage}  
+
+
+
+\tableofcontents{}
+
+\listoffigures
+
+
+\listoftables
+
+
+%----------------------------
+
+
+\chapter{Introducción\label{cap:introducci=0000F3n}}
+\input{Introduccion/Introduccion.tex}
+
+\section{Motivación\label{sec:Motivacion}}
+\input{Introduccion/Motivacion.tex}
+
+\section{Objetivos\label{sec:Objetivos}}
+\input{Introduccion/Objetivos.tex}
+
+\section{Alcance\label{sec:Alcance}}
+\input{Introduccion/Alcance.tex}
+
+\section{Lenguaje WS-BPEL\label{sec:WSBPEL}}
+\input{Introduccion/ws-bpel.tex}
+
+\subsection{Actividades del lenguaje WS-BPEL\label{sec:Actividades}}
+\input{Introduccion/bpelActivities.tex}
+
+\subsection{Desafíos en la prueba de composiciones BPEL\label{sec:DesafiosBPEL}}
+\input{Introduccion/PruebaBPEL.tex}
+
+\subsection{Casos de prueba en composiciones WS-BPEL\label{sec:CasosPruebaBPEL}}
+\input{Introduccion/CasosPrueba.tex}
+
+\section{Composición del triángulo\label{sec:ComposicionTriangulo}}
+\input{Introduccion/Triangulo.tex}
+
+\section{JSON, JavaScript Object Notation\label{sec:JSON}}
+\input{Introduccion/FormatoJSON.tex}
+
+
+
+\section{Glosario\label{sec:Glosario}}
+\input{Introduccion/Glosario.tex}
+
+\subsection{Acrónimos\label{sec:Acronimos}}
+\input{Introduccion/Acronimos.tex}
+
+\subsection{Definiciones\label{sec:Definiciones}}
+\input{Introduccion/Definiciones.tex}
+
+%----------------------------
+\chapter{Técnica de prueba metamórfica\label{sec:TecnicaMetamorfica}}
+\input{Metamorfica/Inicio.tex}
+
+\section{Definición\label{sec:DefinicionMetamorfica}}
+\input{Metamorfica/Definicion.tex}
+
+\section{Aplicación a una composición\label{sec:AplicacionComposicion}}
+\input{Metamorfica/AplicacionComposicion.tex}
+
+%----------------------------
+
+%\chapter{Estado del arte\label{sec:EstadoDelArte}}
+%\input{EstadoDelArte/EstadoDelArte.tex}
+
+%----------------------------
+
+\chapter{Desarrollo del calendario\label{cap:Calendario}}
+\input{Calendario/DesarrolloCalendario.tex}
+
+%\section{Artículo JCIS 2016\label{sec:JCIS16}}
+%\input{Calendario/JCIS16.tex}
+
+%\section{Presentación SGSOACS 2016\label{sec:SGSOACS16}}
+%\input{Calendario/SGSOACS16.tex}
+
+\section{Fases\label{sec:Fases}}
+\input{Calendario/Fases.tex}
+
+\section{Diagrama de Gantt\label{sec:Gantt}}
+\input{Calendario/Gantt.tex}
+
+
+%----------------------------
+
+\chapter{Descripción general del proyecto\label{cap:DescripcionGeneral}}
+%\input{Descripcion/DescripcionGeneral.tex}
+
+\section{Perspectiva del producto\label{sec:Perspectiva}}
+\input{Descripcion/Perspectiva.tex}
+
+\subsection{Entorno del producto\label{sec:Entorno}}
+\input{Descripcion/Entorno.tex}
+
+\subsection{Interfaz de usuario\label{sec:Interfaz}}
+\input{Descripcion/Interfaz.tex}
+
+\section{Funciones\label{sec:Funciones}}
+\input{Descripcion/Funciones.tex}
+
+\section{Características del usuario\label{sec:CaracteristicasUsuario}}
+\input{Descripcion/CaracteristicasUsuario.tex}
+
+\section{Restricciones generales\label{sec:Restricciones}}
+\input{Descripcion/Restricciones.tex}
+
+\subsection{Control de versiones\label{sec:ControlVersiones}}
+\input{Descripcion/ControlVersiones.tex}
+
+\subsection{Lenguajes de programación y tecnologías\label{sec:Tecnologias}}
+\input{Descripcion/Tecnologias.tex}
+
+\subsection{Herramientas\label{sec:Herramientas}}
+\input{Descripcion/Herramientas.tex}
+
+\subsection{Sistemas operativos y hardware\label{sec:SistemasOperativos}}
+\input{Descripcion/SistemasOperativos.tex}
+
+
+
+%----------------------------
+
+\chapter{Desarrollo del proyecto\label{cap:DesarrolloProyecto}}
+\input{Desarrollo/DesarrolloProyecto.tex}
+
+\section{Modelo de ciclo de vida\label{sec:ModeloCiclo}}
+\input{Desarrollo/ModeloCiclo.tex}
+
+\section{Requisitos\label{sec:Requisitos}}
+\input{Desarrollo/Requisitos.tex}
+
+\subsection{Funcionales\label{sec:Funcionales}}
+\input{Desarrollo/Funcionales.tex}
+
+\subsection{De información\label{sec:DeInformacion}}
+\input{Desarrollo/DeInformacion.tex}
+
+\subsection{Reglas de negocio\label{sec:ReglasNegocio}}
+\input{Desarrollo/ReglasNegocio.tex}
+
+\subsection{Interfaz\label{sec:Interfaz}}
+\input{Desarrollo/Interfaz.tex}
+
+\subsection{No funcionales\label{sec:NoFuncionales}}
+\input{Desarrollo/NoFuncionales.tex}
+
+\section{Análisis del sistema\label{sec:Analisis}}
+\input{Desarrollo/Analisis.tex}
+
+\subsection{Casos de uso\label{sec:CasoUso}}
+\input{Desarrollo/CasosDeUso.tex}
+
+%\subsection{Modelo conceptual de datos del dominio\label{sec:ModeloConceptual}}
+%\input{Desarrollo/ModeloConceptual.tex}
+
+\subsection{Diagramas de secuencia\label{sec:DiagramaSecuencia}}
+\input{Desarrollo/DiagramasDeSecuencia.tex}
+
+\section{Diseño del sistema\label{sec:DisenoSistema}}
+\input{Desarrollo/DisenoSistema.tex}
+
+\section{Implementación\label{sec:Implementacion}}
+\input{Desarrollo/Implementacion.tex}
+
+\section{Pruebas y validación\label{sec:PruebasValidacion}}
+\input{Desarrollo/PruebasValidacion.tex}
+
+%----------------------------
+
+\chapter{Análisis y Obtención de Información\label{sec:AnalisisTodo}}
+\input{Resultados/Introduccion.tex}
+
+\section{Proceso de Análisis\label{sec:ProcesoAnalisis}}
+\input{Resultados/ProcesoAnalisis.tex}
+
+\section{Resultado del Análisis\label{sec:ResultadoAnalisis}}
+\input{Resultados/ResultadoAnalisis.tex}
+
+\subsection{Ficheros JSON\label{sec:FicherosJSON}}
+\input{Resultados/JSON.tex}
+
+\subsection{Lenguaje Natural\label{sec:LenguajeNatural}}
+\input{Resultados/LenguajeNatural.tex}
+
+%----------------------------
+
+
+%\chapter{Resumen\label{cap:Resumen}}
+%\input{Resumen/Resumen.tex}
+
+%----------------------------
+
+\chapter{Conclusiones y Trabajo Futuro\label{cap:ConclusionesFuturo}}
+\input{Conclusiones/ConclusionesFuturo.tex}
+
+\section{Valoración\label{sec:Valoracion}}
+\input{Conclusiones/Valoracion.tex}
+
+\section{Objetivos cumplidos\label{sec:ObjetivosCumplidos}}
+\input{Conclusiones/ObjetivosCumplidos.tex}
+
+\section{Lecciones aprendidas\label{sec:LeccionesAprendidas}}
+\input{Conclusiones/LeccionesAprendidas.tex}
+
+\section{Trabajo futuro\label{sec:Futuro}}
+\input{Conclusiones/Futuro.tex}
+
+%----------------------------
+
+
+\appendix
+
+\chapter{Composiciones Estudiadas\label{cap:ComposicionesEstudiadas}}
+\input{Anexos/ComposicionesUtilizadas.tex}
+
+\chapter{Manual de instalación\label{cap:ManualInstalacion}}
+\input{Anexos/ManualInstalacion.tex}
+
+\chapter{Manual de usuario\label{cap:ManualUsuario}}
+\input{Anexos/ManualUsuario.tex}
+
+\chapter{Manual del desarrollador\label{cap:ManualDesarrollador}}
+\input{Anexos/ManualDesarrollador.tex}
+
+\chapter{GNU Free Documentation License\label{cap:LicenciaGNU}}
+\input{Anexos/GNULicense.tex}
+%----------------------------
+
+\bibliographystyle{splncs03}
+\bibliography{referencias}
+
+\end{document}
