@@ -81,5 +81,5 @@ ostream& operator<<(ostream& os, const Pedido& pedido){
     	<< "Fecha:       " << pedido.fecha() << endl
     	<< "Pagado con:  " << pedido.tarjeta()->tipo() << " nº: " << pedido.tarjeta()->numero() << endl
     	<< "Importe:     " << fixed << setprecision(2) << pedido.total() << " €" << endl;
-  return os;
+	return os;
 }
