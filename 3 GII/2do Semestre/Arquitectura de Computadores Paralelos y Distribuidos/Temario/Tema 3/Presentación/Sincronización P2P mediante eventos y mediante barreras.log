@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  2 APR 2019 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  8 APR 2019 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1248,10 +1248,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27636 strings out of 493013
- 520819 string characters out of 6135682
- 595203 words of memory out of 5000000
- 30645 multiletter control sequences out of 15000+600000
+ 27639 strings out of 493013
+ 520868 string characters out of 6135682
+ 594169 words of memory out of 5000000
+ 30648 multiletter control sequences out of 15000+600000
  11389 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,63p,10462b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1263,7 +1263,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on "Sincronización P2P mediante eventos y mediante barreras.pdf
-" (10 pages, 146589 bytes).
+" (10 pages, 146748 bytes).
 PDF statistics:
  382 PDF objects out of 1000 (max. 8388607)
  339 compressed objects within 4 object streams
