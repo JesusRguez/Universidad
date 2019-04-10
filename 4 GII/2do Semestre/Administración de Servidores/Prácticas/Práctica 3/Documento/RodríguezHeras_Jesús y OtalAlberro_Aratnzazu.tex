@@ -159,15 +159,15 @@ En este ejercicio se deberá:
 \section{Servidor DHCP}
 Instalar un servidor DHCP en el cortafuegos. Además, se deberá modificar el fichero Vagrant, para que en lugar de establecer una IP privada, la IP se asigne mediante DHCP.
 
-%Cuando cambie el vagranfile poner:
-%\lstinputlisting[language=Ruby]{Vagrantfile2}
-
 También se puede probar dejando la IP privada y comprobando el funcionamiento del servidor DHCP mediante el cliente DHCP.
 
 El servidor DHCP deberá asignar direcciones IP a cada una de las redes internas. Además, una máquina de la segunda red tendrá que tener una dirección fija.
 
 Tras la configuración, mostrar el estado de los prestamos realizados por el servidor DHCP.
 
-Para instalar el servidor DHCP introducimos el siguiente comando \texttt{sudo apt-get install isc-dhcp-server}.
+Para instalar el servidor DHCP introducimos el siguiente comando:
+\begin{center}
+	\texttt{sudo apt-get install isc-dhcp-server}
+\end{center}
 
 \end{document}

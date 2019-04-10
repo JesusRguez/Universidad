@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  4 APR 2019 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  10 APR 2019 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,15 +627,11 @@ Overfull \hbox (9.26572pt too wide) in paragraph at lines 150--151
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./Ping2.png>]
-Overfull \hbox (5.89752pt too wide) in paragraph at lines 171--172
-[]\T1/ptm/m/n/12 Para ins-ta-lar el ser-vi-dor DHCP in-tro-du-ci-mos el si-guie
-n-te co-man-do \T1/pcr/m/n/12 sudo apt-get install
- []
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-[5 <./Ping3.png>]
+ [5 <./Ping3.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
- (./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux
+
+(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -649,7 +645,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
 Here is how much of TeX's memory you used:
  9994 strings out of 493013
  140573 string characters out of 6135682
- 282255 words of memory out of 5000000
+ 282252 words of memory out of 5000000
  13328 multiletter control sequences out of 15000+600000
  34687 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -660,7 +656,7 @@ fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb>
 Output written on "RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.pdf" (5 pages
-, 879697 bytes).
+, 879670 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream

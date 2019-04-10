@@ -1,10 +1,10 @@
 En la máquina router
 	sudo apt-get install bind9
 Las carpetas están en "/etc/bind"
-	sudo nano named.conf.default.zones //Para acceder al fichero de zonas y editarlo:
+	sudo nano named.conf.default-zones //Para acceder al fichero de zonas y editarlo:
 	zone "manolo.ai" {
 		type master;
-		file "/etc/bind/db.manolo.ai;
+		file "/etc/bind/db.manolo.ai";
 	};
 Creamos el fichero de zona copiando uno de los que hay:
 	cp db.local db.manolo.ai //Si no me deja, pues con sudo
@@ -27,7 +27,7 @@ Creamos el fichero de zona copiando uno de los que hay:
 	sudo /etc/init.d/bind9 status //Para ver el estado
 	
 Para que funcione bien en las máquinas servidoras, habrá que cabmiar el fichero resolve.conf para que coja el nuevo servidor dns
-	sudo nano /etc/resolve.conf 
+	sudo nano /etc/resolv.conf 
 	//Y lo editamos poniendo la ip del router
 	nameserver 192.168.2.1 //En las de la red 1
 	namesercer 192.168.3.1 //En las de la red 2
