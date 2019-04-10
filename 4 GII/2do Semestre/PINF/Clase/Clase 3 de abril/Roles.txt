@@ -1,0 +1,14 @@
+Roles generales:
+- Administrador: Administrar los recursos (controlar a la gente). Tiene que tener una visión y misión claras del proyecto. No es dueño de nada, por lo que debe dejar el proyecto igual o mejor de lo que lo recibió. Actividades:
+	- Es el que organiza las reuniones.
+	- Debe conducir la reunión y los aspectos.
+	- Desarrollar el contrato junto con el cliente.
+	- Realizar el plan de actividades.
+	
+- Analista: Descomponer el problema en subproblemas. El experto en el problema es el cliente (pero no lo sabe explicar). Segun la agencia espacial europea el análisis se divide en dos fases: especificación de requisitos de usuario y especificación de requisitos software. Hay que sentarse con el cliente y proponerle cosas. Los analistas deben ayudar al cliente a definir los objetivos del sistema. Los analistas deben determinar si los requisitos son o no esenciales. Se realiza un documento de requisitos de usuarios y, cuando se acepta, es cuando se firma el contrato. Tiene que hablar con los diseñadores, desarrolladores e ingenieros de pruebas. Debe tener un alto grado de inteligencia emocional.
+
+- Diseñador: Genera prototipos rápidos del sistema. Orgaiza en subsistemas, Identifica concurrencias inherentes a los problemas. Asigna los susbistemas a procesos y tareas. Seleccionar administrador de datos. Identifica que cosas pueden parametrizarse o replicarse.
+
+- Desarrollador: Convierte la especificación en código fuente ejecutable. Determinar lenguajes y estilos de programación. Interactuar con los ingenieros de pruebas. Reunirse con los otros miembros del equipo.
+
+- Ingeniero de pruebas: Construye y aplica los planes de prueba unitarios, de módulos, de sistemas y de acpetación parcial. Vela por la adhesión al estandar adoptacdo para el desarrollo. 
