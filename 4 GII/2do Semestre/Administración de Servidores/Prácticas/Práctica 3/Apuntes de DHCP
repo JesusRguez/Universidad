@@ -1,0 +1,26 @@
+Encender todas las máquinas.
+
+Entramos en el router.
+	sudo apt-get update
+	sudo apt-get install isc-dhcp-server
+Con "man dhcpd" podremos ver el manual del proceso y ver como poner las reglas.
+Fichero de configuración: /etc/dhcp/dhcpd.conf
+Fichero de préstamos: /var/lib/dhcp/dhcp.leases
+Con "man dhcpd.conf" podremos ver como se puede configurar el fichero.
+	sudo nano dhcpd.conf
+	Cogemos el primer ejemplo (que empieza por subnet) y le ponemos el rango de ips de la siguiente forma
+	subnet 192.168.2.0 netmask 255.255.255.0 {
+		default-lease-time 600;
+		max-lease-time 3600;
+		range 192.168.2.10 192.168.2.30;
+	}
+	sudo /etc/init.d/isc-dhcp-server restart //Para reiniciar el servidor dhcp
+	sudo /etc/init.d/isc-dhcp-server status //Para ver el estado
+Con el siguiente comando se puede ver el log
+	sudo journalctl _PID=(el pid que tenga el proceso del status)
+	sudo dhcpd -f //También te dice  que es lo que pasa
+	
+	cat /var/lib/dhcp/dhcp.leases para ver las IP que ha prestado.
+	
+Para perdir IP desde otras máquinas:
+	sudo dhclient
