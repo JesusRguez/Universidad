@@ -7,3 +7,4 @@ Quitar la palabra: punto activo, niños, gente.
 Error en el diagrama de Gantt: Poner el nuevo que el viejo es una mierda y hay que retocar los días porque el análisis de requisitos tiene que ser más largos que la descripción de casos de uso.
 La motivación tiene que ser más "feliz".
 La descripción del sistema actual no concuerda con los objetivos de mejora el sistema actual.
+Añadir números en los costes.
