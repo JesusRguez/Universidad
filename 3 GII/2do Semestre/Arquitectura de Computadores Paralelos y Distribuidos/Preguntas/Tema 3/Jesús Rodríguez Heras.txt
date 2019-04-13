@@ -1,0 +1,31 @@
+PREGUNTAS TIPO TEST:
+1. ¿Qué es un evento?
+- Un punto señalado en el tiempo.
+* La actualización del valor de una variable compartida/global.
+- La actualización del valor de una varibale local.
+- Todas son correctas.
+
+2. ¿Qué es una barrera?
+* Un punto señalado en el código donde todos los hilos se sincronizan.
+- Un punto señalado en el tiempo donde todos los hilos se sincronizan.
+- Un punto en el cual una variable tendrá que levantar una barrera para que pase el hilo que llegue primero.
+- Una estructura decontrol para controlar el último hilo que se ejecuta.
+
+3. ¿Qué problemas de caché surgen con el protocolo Snoopy?
+- Acceso simultáneo del procesador y del bus, operaciones no aritméticas y solapamiento de operaciones.
+- Problemas de acceso a directorios debido a la duplicidad.
+* Acceso simultáneo del procesador y del bus, que proboca operaciones solapadas de diferentes procesadores en la memoria.
+- Todas son correctas.
+
+4. ¿Cuál de los siguientes mecanismos regula la exclusión mutua a nivel hardware?
+*Instruciones RMW.
+- Semáforo.
+- Monitor.
+- Ninguna de las anteriores.
+
+
+5. ¿Quién introdujo el término "Consistencia secuencial" por primera vez?
+- Dijkstra.
+* Leslie Lamport.
+- Einstein.
+- Murray A. Eisenberg y Michael R. McGuire.
