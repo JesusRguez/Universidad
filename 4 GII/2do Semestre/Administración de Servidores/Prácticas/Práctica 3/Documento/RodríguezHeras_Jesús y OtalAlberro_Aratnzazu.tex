@@ -120,14 +120,34 @@ En este ejercicio se deberá:
 	\item \textbf{Configurar el cortafuegos para que de acceso al exterior.} \\
 	Para configurar el cortafuegos, primero debemos deshabilitar la interfaz de red que nos permite salir a Internet desde cada una de las máquinas de las redes. Para ello, identificamos la interfaz que queremos deshabilitar (en nuestro caso, \texttt{eth0}).
 	
-	Si deshabilitamos esta interfaz directamente, tendremos el problema de que la terminal se quedará colgada porque estamos conectados por SSH a esa interfaz, entonces debemos habilitar la conexión SSH desde la otra interfaz. Para ello nos dirigimos al fichero \texttt{sshd\_config} (\texttt{sudo nano /etc/ssh/sshd\_config}) y descomentamos la línea que dice \\\texttt{PasswordAuthentication yes}. Luego, reiniciamos el servicio SSH (sudo /etc/init.d/ssh restart) y ya podemos conectarnos desde la máquina que actúa como router/cortafuegos.
+	Si deshabilitamos esta interfaz directamente, tendremos el problema de que la terminal se quedará colgada porque estamos conectados por SSH a esa interfaz, entonces debemos habilitar la conexión SSH desde la otra interfaz. Para ello nos dirigimos al fichero \texttt{sshd\_config} con:
+	\begin{center}
+		\texttt{sudo nano /etc/ssh/sshd\_config}
+	\end{center}
 	
-	Es hora de entrar en la máquina cortafuegos y conectarnos por SSH a cada una de las máquinas. Una vez dentro de las máquinas servidoras usamos el comando \texttt{sudo ifconfig eth0 down} para deshabilitar la interfaz de red externa.
+	Descomentamos la línea que dice \texttt{PasswordAuthentication yes}. Luego, reiniciamos el servicio SSH con el siguiente comando:
+	\begin{center}
+		sudo /etc/init.d/ssh restart
+	\end{center}
+
+	Después de esto, ya podemos conectarnos desde la máquina que actúa como router/cortafuegos.
 	
-	También debemos activar el ip forward en el router para tener conectividad entre las máquinas de las diferentes redes. Para ello usamos el comando\\\texttt{sudo echo 1 > /proc/sys/net/ipv4/ip\_forward}.
+	Es hora de entrar en la máquina cortafuegos y conectarnos por SSH a cada una de las máquinas. Una vez dentro de las máquinas servidoras usamos el siguiente comando para deshabilitar la interfaz de red externa:
+	\begin{center}
+		\texttt{sudo ifconfig eth0 down}
+	\end{center}
 	
-	A continuación, establecemos la puerta de enlace como la interfaz que tenemos en la máquina que hace de router. Para ello usamos el comando \texttt{sudo route add default gw 192.168.x.1 eth1}, siendo \texttt{x} la red a la que pertenece cada máquina, y \texttt{eth1} la interfaz de la red interna.
+	También debemos activar el ip forward en el router para tener conectividad entre las máquinas de las diferentes redes. Para ello usamos el comando:
+	\begin{center}
+		\texttt{sudo echo 1 > /proc/sys/net/ipv4/ip\_forward}
+	\end{center}
 	
+	A continuación, establecemos la puerta de enlace como la interfaz que tenemos en la máquina que hace de router. Para ello usamos el comando:
+	\begin{center}
+		\texttt{sudo route add default gw 192.168.x.1 eth1}
+	\end{center}
+
+	Siendo \texttt{x} la red a la que pertenece cada máquina, y \texttt{eth1} la interfaz de la red interna.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.25]{Ping.png}
@@ -135,23 +155,28 @@ En este ejercicio se deberá:
 	\end{figure}
 	
 	Lo siguiente es habilitar el enrutamiento a partir de la máquina router al resto de máquinas. El estado inicial es el siguiente:
+	\newpage
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.25]{Ping2.png}
 		\caption{En esta imagen se ve como todas las máquinas intentan hacer ping a \texttt{google.es} pero la única que lo consigue es la máquina r (router/cortafuegos).}
 	\end{figure}
 
-	 Para habilitar el enrutamiento usamos el comando \texttt{sudo iptables -t nat -A \\POSTROUTING -o eth0 -j MASQUERADE} en la máquina router/cortafuegos.
-	 
+	 Para habilitar el enrutamiento usamos el comando en la máquina router/cortafuegos:
+	 \begin{center}
+	 	\texttt{sudo iptables -t nat -A \\POSTROUTING -o eth0 -j MASQUERADE}
+	 \end{center}
+ 
+\newpage	 
 	 Una vez hecho eso, el resultado es el siguiente:
-	 
+\newpage
 	 \begin{figure}[h]
 	 	\centering
 	 	\includegraphics[scale=0.25]{Ping3.png}
 	 	\caption{Una vez habilitado el enrutamiento, todas las máquinas tienen acceso a Internet.}
 	 \end{figure}
 	
-	\newpage
+	
 	\item \textbf{Configurar manualmente los clientes de las redes para que se puedan conectar al servidor.} \\
 	Solo con poner la puerta de enlace y el ip forwarding estaría hecho y ya se ha hecho en el apartado anterior.
 \end{itemize}
@@ -170,4 +195,54 @@ Para instalar el servidor DHCP introducimos el siguiente comando:
 	\texttt{sudo apt-get install isc-dhcp-server}
 \end{center}
 
+\newpage
+Configuramos las subredes en el archivo \texttt{/etc/dhcp/dhcpd.conf} abriendolo con el comando:
+\begin{center}
+	\texttt{sudo nano /etc/dhcp/dhcpd.conf}
+\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{DHCP2.png}
+	\caption{Configuración de las subredes del DNS}
+\end{figure}
+
+A continuación, pedimos una IP al servidor DHCP desde las otras máquinas con:
+\begin{center}
+	\texttt{sudo dhclient -v}
+\end{center}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.25]{DHCP1.png}
+	\caption{Petición de IP desde las máquinas al servidor DHCP}
+\end{figure}
+
+Para ver las direcciones IP cedidas por el servidor DHCP usamos:
+\begin{center}
+	\texttt{sudo cat /var/lib/dhcp/dhcp.leases}
+\end{center}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{DHCP3.png}
+	\caption{Vista de las direcciones IP cedidas por el servidor DHCP}
+\end{figure}
+
+\section{Servidor DNS}
+Configurar la máquina central (router) para que actúe como DNS. Para ello, volveremos a configurar las máquinas con IP fijas, bien por DHCP o bien a mano.
+
+Nosotros lo hicimos antes, sin mirar las siguientes directivas del documento, por lo que nuestras máquinas, se llaman de forma distinta:
+\begin{itemize}
+	\item La máquina 1 de la red 1 tendrá por nombre vm1.net1.uca.es. En nuestra práctica, se llamará \texttt{www.pruebas.pb}.
+	\item La máquina 2 de la red 1 tendrá por nombre vm2.net1.uca.es. En nuestra práctica, se llamará \texttt{db.pruebas.pb}.
+	\item La máquina 1 de la red 2 tendrá por nombre www.as.uca.es, además, tendrá que responder bajo el nombre de ftp.as.uca.es. En nuestra práctica se llamará \texttt{ftp.pruebas.pb}.
+	\item La máquina 2 de la red 2 tendrá por nombre bd.as.uca.es. En nuestra práctica se llamará \texttt{web.pruebas.pb}.
+\end{itemize}
+
+Una vez realizados los cambios necesarios en el archivo de zona y en el archivo ``\texttt{.pb}'', probamos a hacer ping a los nombres de dominio, para que el servidor DNS sea el que resuelva la dirección:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.25]{DNS.png}
+	\caption{Máquinas haciendo ping a los dominios y en el servidor DNS se pueden ver los dominios asociados a las respectivas IP}
+\end{figure}
 \end{document}
