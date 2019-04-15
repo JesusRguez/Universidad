@@ -27,7 +27,7 @@ Creamos el fichero de zona copiando uno de los que hay:
 	sudo /etc/init.d/bind9 status //Para ver el estado
 	
 Para que funcione bien en las máquinas servidoras, habrá que cabmiar el fichero resolve.conf para que coja el nuevo servidor dns
-	sudo nano /etc/resolv.conf 
+	sudo nano /etc/resolv.conf 	
 	//Y lo editamos poniendo la ip del router
 	nameserver 192.168.2.1 //En las de la red 1
 	namesercer 192.168.3.1 //En las de la red 2

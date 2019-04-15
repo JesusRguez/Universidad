@@ -239,10 +239,19 @@ Nosotros lo hicimos antes, sin mirar las siguientes directivas del documento, po
 	\item La máquina 2 de la red 2 tendrá por nombre bd.as.uca.es. En nuestra práctica se llamará \texttt{web.pruebas.pb}.
 \end{itemize}
 
+Ahora cambiamos el servidor de zona y el fichero ``\texttt{.pb}''. Por último, cambiamos el servidor DNS del resto de máquinas en el fichero \texttt{/etc/resolv.conf} con el siguiente comando:
+\begin{center}
+	\texttt{sudo nano /etc/resolv.conf}
+\end{center}
+
+Y cambiamos el servidor DNS por \texttt{192.168.2.1}.
+
 Una vez realizados los cambios necesarios en el archivo de zona y en el archivo ``\texttt{.pb}'', probamos a hacer ping a los nombres de dominio, para que el servidor DNS sea el que resuelva la dirección:
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.25]{DNS.png}
-	\caption{Máquinas haciendo ping a los dominios y en el servidor DNS se pueden ver los dominios asociados a las respectivas IP}
+	\caption{Máquinas haciendo ping a los dominios y en el servidor DNS se puede ver el archivo ``\texttt{.pb}''}
 \end{figure}
+
+
 \end{document}
