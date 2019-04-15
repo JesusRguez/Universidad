@@ -230,27 +230,47 @@ Para ver las direcciones IP cedidas por el servidor DHCP usamos:
 
 \section{Servidor DNS}
 Configurar la máquina central (router) para que actúe como DNS. Para ello, volveremos a configurar las máquinas con IP fijas, bien por DHCP o bien a mano.
-
-Nosotros lo hicimos antes, sin mirar las siguientes directivas del documento, por lo que nuestras máquinas, se llaman de forma distinta:
 \begin{itemize}
-	\item La máquina 1 de la red 1 tendrá por nombre vm1.net1.uca.es. En nuestra práctica, se llamará \texttt{www.pruebas.pb}.
-	\item La máquina 2 de la red 1 tendrá por nombre vm2.net1.uca.es. En nuestra práctica, se llamará \texttt{db.pruebas.pb}.
-	\item La máquina 1 de la red 2 tendrá por nombre www.as.uca.es, además, tendrá que responder bajo el nombre de ftp.as.uca.es. En nuestra práctica se llamará \texttt{ftp.pruebas.pb}.
-	\item La máquina 2 de la red 2 tendrá por nombre bd.as.uca.es. En nuestra práctica se llamará \texttt{web.pruebas.pb}.
+	\item La máquina 1 de la red 1 tendrá por nombre \texttt{vm1.net1.uca.es}.
+	\item La máquina 2 de la red 1 tendrá por nombre \texttt{vm2.net1.uca.es}.
+	\item La máquina 1 de la red 2 tendrá por nombre \texttt{www.as.uca.es}, además, tendrá que responder bajo el nombre de \texttt{ftp.as.uca.es}.
+	\item La máquina 2 de la red 2 tendrá por nombre \texttt{bd.as.uca.es}.
 \end{itemize}
 
-Ahora cambiamos el servidor de zona y el fichero ``\texttt{.pb}''. Por último, cambiamos el servidor DNS del resto de máquinas en el fichero \texttt{/etc/resolv.conf} con el siguiente comando:
+Ahora cambiamos el servidor de zona y el fichero de zona:
+\begin{center}
+	\texttt{/etc/bind/named.conf.default-zones}
+\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.75]{Zona.png}
+	\caption{Fichero de zona}
+\end{figure}
+%\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.65]{BD.png}
+	\caption{Archivo \texttt{db.as.uca.es}}
+\end{figure}
+
+Por último, cambiamos el servidor DNS del resto de máquinas en el fichero \texttt{/etc/resolv.conf} con el siguiente comando:
 \begin{center}
 	\texttt{sudo nano /etc/resolv.conf}
 \end{center}
 
 Y cambiamos el servidor DNS por \texttt{192.168.2.1}.
-
-Una vez realizados los cambios necesarios en el archivo de zona y en el archivo ``\texttt{.pb}'', probamos a hacer ping a los nombres de dominio, para que el servidor DNS sea el que resuelva la dirección:
+\newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.25]{DNS.png}
-	\caption{Máquinas haciendo ping a los dominios y en el servidor DNS se puede ver el archivo ``\texttt{.pb}''}
+	\includegraphics[scale=0.5]{Nameserver.png}
+	\caption{Archivo \texttt{/etc/resolv.conf} de las máquinas servidoras}
+\end{figure}
+
+Una vez realizados los cambios necesarios en el archivo de zona y en el archivo DNS, probamos a hacer ping a los nombres de dominio, para que el servidor DNS sea el que resuelva la dirección:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.345]{Final.png}
+	\caption{Máquinas servidoras haciendo ping a los dominios}
 \end{figure}
 
 
