@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  3 APR 2019 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  16 APR 2019 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -892,17 +892,12 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 3.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 9.
-
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 19.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
  [5
 
 
@@ -918,9 +913,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 
 
-] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+] [8] [9] [10] [11] [12] [13] [14] [15] [16]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 458.
+ [17]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 460.
  [18] [19] [20] [21]
@@ -932,27 +928,26 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `Fantasy.out' has not changed.
-(rerunfilecheck)             Checksum: 0FD1A029E599786375DECD90AA173C03;3140.
+(rerunfilecheck)             Checksum: 42BE413F5086B4EA0B7DE57B70AB5F43;3087.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 10315 strings out of 493013
- 144775 string characters out of 6135682
+ 10284 strings out of 493013
+ 144347 string characters out of 6135682
  293738 words of memory out of 5000000
- 13320 multiletter control sequences out of 15000+600000
- 70929 words of font info for 72 fonts, out of 8000000 for 9000
+ 13294 multiletter control sequences out of 15000+600000
+ 70308 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,49p,583b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,49p,551b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Fantasy.pdf (27 pages, 420862 bytes).
+f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Fantasy.pdf (27 pages, 411751 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
- 670 compressed objects within 7 object streams
+ 712 PDF objects out of 1000 (max. 8388607)
+ 666 compressed objects within 7 object streams
  327 named destinations out of 1000 (max. 500000)
  384 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,502 +1,502 @@
-\chapter{Casos de uso}
+\chapter{Use cases}
 \noindent
-Todos los casos de uso descritos a continuación, tienen la siguiente precondición implícita para poder usar dichos casos de uso en la aplicación final:
+All the use cases described below have the following implicit precondition to be able to use said use cases in the final application:
 \begin{itemize}
-	\item El usuario (profesorado/alumnado) debe tener una cuenta en la plataforma de Stimey y haber iniciado sesión con dicha cuenta.
+	\item The user (teachers/students) must have an account on the Stimey platform and have logged in with that account.
 \end{itemize}
 
-\section{CRUD fantasía}
+\section{CRUD fantasy}
 \hypertarget{crearfantasia}{}
-\subsection{Crear fantasía}
+\subsection{Create fantasy}
 \begin{itemize}
-	\item \textbf{Descripción:} Crea una nueva fantasía.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} El usuario debe tener permisos para crear una nueva fantasía.
-	\item \textbf{Postcondiciones:} La fantasía queda almacenada en el sistema.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Create a new fantasy.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The user must have permission to create a new fantasy.
+	\item \textbf{Postconditions:} Fantasy is stored in the system.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Crear nueva fantasía''.
-		\item El sistema solicita el nombre de la fantasía.
-		\item El usuario introduce el nombre de la fantasía.
-		\item El sistema solicita el código de la fantasía.
-		\item El usuario introduce el código de la fantasía.
-		\item El sistema da a elegir si la fantasía será pública (por defecto), compartida o privada.
-		\item El usuario selecciona ``Pública''.
-		\item El usuario crea la fantasía.
-		\item La fantasía queda almacenada en el sistema.
+		\item The user selects the option ``Create new fantasy''.
+		\item The system requests the name of the fantasy.
+		\item The user enters the name of the fantasy.
+		\item The system requests the fantasy code.
+		\item The user enters the fantasy code.
+		\item The system gives to choose if the fantasy will be public (by default), shared or private.
+		\item The user selects `` Public ''.
+		\item The user creates the fantasy.
+		\item The fantasy is stored in the system.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\7. a) El usuario selecciona que la fantasía será compartida.
+	\item \textbf{Extensions:} \\7. a) The user selects that the fantasy will be shared.
 	\begin{enumerate}
-		\item El sistema permite insertar en una lista los identificadores de otros usuarios con los que quedará compartida la fantasía.
-		\item El usuario introduce los identificadores de los usuarios que compartirán la fantasía.
-		\item Paso 8.
+		\item The system allows to insert in a list the identifiers of other users with which the fantasy will be shared.
+		\item The user enters the identifiers of the users who will share the fantasy.
+		\item Step 8.
 	\end{enumerate}
-	7. b) El usuario selecciona que la fantasía será privada.
+	7. b) The user selects that the fantasy will be private.
 	\begin{enumerate}
-		\item El sistema marca la fantasía como privada para dicho usuario sin dar la posibilidad de compartir.
-		\item Paso 8.
+		\item The system marks the fantasy as private for that user without giving the possibility of sharing.
+		\item Step 8.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás al menú principal.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back to the main menu.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualizar fantasía}
+\subsection{Visualize fantasy}
 \begin{itemize}
-	\item \textbf{Descripción:} Lee una fantasía ya existente.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} No se producen cambios en la fantasía.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Read an existing fantasy.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The fantasy must exist in the system and the user must have modification permissions.
+	\item \textbf{Postconditions:} There are no changes in the fantasy.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Mis fantasías''
-		\item El sistema muestra una lista de las fantasías accesibles por el usuario.
-		\item El usuario selecciona la fantasía que desea visualizar.
-		\item El sistema muestra una ventana emergente con la información de la fantasía y sus opciones.
-		\item El usuario selecciona la opción ``Visualizar fantasía''.
-		\item El sistema muestra la fantasía.
-		\item El usuario lee la fantasía sin hacer ningún cambio y, cuando acaba, cierra la fantasía.
-		\item La fantasía queda sin modificar.
+		\item The user selects the option `` My fantasies ''
+		\item The system displays a list of fantasies accessible by the user.
+		\item The user selects the fantasy that he wants to visualize.
+		\item The system displays a pop-up window with the fantasy information and its options.
+		\item The user selects the option `` Visualize fantasy ''.
+		\item The system shows the fantasy.
+		\item The user reads the fantasy without making any changes and, when it is over, closes the fantasy.
+		\item The fantasy remains unchanged.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back to the main menu.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Modificar fantasía}
+\subsection{Update fantasy}
 \begin{itemize}
-	\item \textbf{Descripción:} Modifica una fantasía ya existente.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} La fantasía queda modificada.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Modify an existing fantasy.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The fantasy must exist in the system and the user must have modification permissions.
+	\item \textbf{Postconditions:} The fantasy is modified.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Mis fantasías''.
-		\item El sistema muestra una lista de las fantasías accesibles por el usuario.
-		\item El usuario selecciona la fantasía que desea modificar.
-		\item El sistema muestra una ventana emergente con la información de la fantasía y sus opciones.
-		\item El usuario selecciona la opción ``Modificar fantasía''.
-		\item El sistema muestra la pantalla de creación de la fantasía para su modificación.
+		\item The user selects the option ``My fantasies''.
+		\item The system displays a list of fantasies accessible by the user.
+		\item The user selects the fantasy that he wants to modify.
+		\item The system displays a pop-up window with the fantasy information and its options.
+		\item The user selects the option ``Modify fantasy''.
+		\item The system displays the fantasy creation screen for modification.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back to the main menu.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Borrar fantasía}
+\subsection{Delete fantasía}
 \begin{itemize}
-	\item \textbf{Descripción:} Borra una fantasía ya existente.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de eliminación.
-	\item \textbf{Postcondiciones:} La fantasía es eliminada del sistema.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Erase an existing fantasy.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The fantasy must exist in the system and the user must have removal permissions.
+	\item \textbf{Postconditions:} Fantasy is eliminated from the system.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Mis fantasías''.
-		\item El sistema muestra una lista de las fantasías accesibles por el usuario.
-		\item El usuario selecciona la fantasía que desea modificar.
-		\item El sistema muestra una ventana emergente con la información de la fantasía y sus opciones.
-		\item El usuario selecciona la opción ``Borrar fantasía''.
-		\item El sistema muestra un mensaje de confirmación.
-		\item El usuario selecciona ``Aceptar''.
-		\item El sistema borra la fantasía.
+		\item The user selects the option ``My fantasies''.
+		\item The system displays a list of fantasies accessible by the user.
+		\item The user selects the fantasy that he wants to modify.
+		\item The system displays a pop-up window with the fantasy information and its options.
+		\item The user selects the option ``Clear fantasy''.
+		\item The system displays a confirmation message.
+		\item The user selects ``Accept''.
+		\item The system erases the fantasy.
 	\end{enumerate}
-	\item \textbf{Extensiones:}  \\7. a) El usuario selecciona ``Cancelar''.
+	\item \textbf{Extensions:}  \\7. a) The user selects ``Cancel''.
 	\begin{enumerate}
-		\item El sistema cierra la ventana emergente.
-		\item Paso 1.
+		\item The system closes the pop-up window.
+		\item Step 1.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás al menú principal.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back to the main menu.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
 
-\section{Elegir idioma}
+\section{Choose language}
 \begin{itemize}
-	\item \textbf{Descripción:} Cambia el idioma de la aplicación.
-	\item \textbf{Actores:} Profesor o alumno (usuario).
-	\item \textbf{Precondiciones:} Ninguna. %el usuario es capaz de encontrar el menú de idioma con la mirada
-	\item \textbf{Postcondiciones:} La aplicación cambia al idioma seleccionado por el usuario.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Change the language of the application.
+	\item \textbf{Actors:} Teacher or student (user).
+	\item \textbf{Preconditions:} None. %el usuario es capaz de encontrar el menú de idioma con la mirada
+	\item \textbf{Postconditions:} The application changes to the language selected by the user.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario pulsa el botón de cambio de idioma.
-		\item El sistema despliega una lista de los idiomas disponibles.
-		\item El usuario  selecciona un idioma de los que están disponibles en el sistema.
-		\item La aplicación cambia el idioma.
+		\item The user presses the language change button.
+		\item The system displays a list of available languages.
+		\item The user selects a language from those that are available in the system.
+		\item The application changes the language.
 	\end{enumerate}
-	\item \textbf{Extensiones:} Ninguna.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} None.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{Copiar fantasía}
+\section{Copy fantasy}
 \begin{itemize}
-	\item \textbf{Descripción:} Clona una fantasía.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Crea una copia de la fantasía seleccionada.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Clone a fantasy.
+	\item \textbf{Actores:} Creator-editor (user).
+	\item \textbf{Precondiciones:} The fantasy must exist in the system and the user must have modification permissions.
+	\item \textbf{Postcondiciones:} Create a copy of the selected fantasy.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Mis fantasías''.
-		\item El sistema muestra una lista de las fantasías accesibles por el usuario.
-		\item El usuario selecciona la fantasía que desea copiar.
-		\item El sistema muestra una ventana emergente con la información de la fantasía y sus opciones.
-		\item El usuario selecciona la opción ``Copiar fantasía''.
-		\item El sistema crea una copia de la fantasía seleccionada.
+		\item The user selects the option ``My fantasies''.
+		\item The system displays a list of fantasies accessible by the user.
+		\item The user selects the fantasy that he wants to copy.
+		\item The system displays a pop-up window with the fantasy information and its options.
+		\item The user selects the option ``Copy fantasy''.
+		\item The system creates a copy of the selected fantasy.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back to the main menu.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
 \section{CRUD background}
 \begin{itemize}
-	\item \textbf{Descripción:} Permite seleccionar, modificar y borrar el background.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Se establece el fondo que el usuario haya elegido.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Allows selecting, modifying and deleting the background.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The fantasy must exist in the system and the user must have modification permissions.
+	\item \textbf{Postconditions:} The fund that the user has chosen is established.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Background``.
-		\item El sistema muestra una ventana para añadir un background al workspace.
-		\item El usuario selecciona una imagen. %puede ser un color
-		\item El sistema establece el background seleccionado por el usuario.
+		\item The user selects the ``Background'' option.
+		\item The system displays a window to add a background to the workspace.
+		\item The user selects an image.
+		\item The system sets the background selected by the user.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás al menú principal. 
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back to the main menu. 
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
 
-\section{CRUD punto activo}
-\subsection{Crear punto activo}
+\section{CRUD active point}
+\subsection{Create active point}
 \begin{itemize}
-	\item \textbf{Descripción:} Crea un punto activo nuevo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Se crea un punto activo vacío en el workspace.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Create a new active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The fantasy must exist in the system and the user must have modification permissions.
+	\item \textbf{Postconditions:} An empty active point is created in the workspace.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona la opción ``Nuevo punto activo''.
-		\item El sistema crea un nuevo punto activo en el workspace.
-		\item El usuario puede mover el punto activo a la zona del workspace que desee.
-		\item El sistema guardará el punto activo en la fantasía.
+		\item The user selects the option ``New active point''.
+		\item The system creates a new active point in the workspace.
+		\item The user can move the active point to the area of the workspace that he wants.
+		\item The system will save the active point in the fantasy.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensiones:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualizar punto activo}
+\subsection{Visualize active point}
 \begin{itemize}
-	\item \textbf{Descripción:} Muestra un punto activo existente para su lectura.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el punto activo debe existir en la fantasía. Además, el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Se muestra el punto activo para su lectura.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Shows an existing active point for reading.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} Fantasy must exist in the system and the active point must exist in fantasy. In addition, the user must have modification permissions.
+	\item \textbf{Postconditions:} The active point is shown for reading.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo que desea visualizar.
-		\item El sistema muestra una ventana con la información del punto activo y sus opciones.
-		\item El usuario selecciona la opción ``Visualizar''.
-		\item El sistema muestra una ventana con el resumen de dicho punto activo.
+		\item The user selects the active point that he wants to view.
+		\item The system displays a window with the information of the active point and its options.
+		\item The user selects the option ``Visualize''.
+		\item The system displays a window with the summary of that active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Modificar punto activo}
+\subsection{Update active point}
 \begin{itemize}
-	\item \textbf{Descripción:} Modifica un punto activo existente.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el punto activo debe existir en la fantasía. Además, el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Modifica el punto activo seleccionado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Modifies an existing active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} Fantasy must exist in the system and the active point must exist in fantasy. In addition, the user must have modification permissions.
+	\item \textbf{Postconditions:} Modifies the selected active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo que desea modificar.
-		\item El sistema muestra una ventana con la información del punto activo y sus opciones.
-		\item El usuario selecciona la opción ``Modificar''.
-		\item El sistema muestra la ventana de creación del punto activo.
+		\item The user selects the active point that he wants to modify.
+		\item The system displays a window with the information of the active point and its options.
+		\item The user selects the option ``Modify''.
+		\item The system displays the creation window of the active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Borrar punto activo}
+\subsection{Delete active point}
 \begin{itemize}
-	\item \textbf{Descripción:} Borra un punto activo existente.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} La fantasía debe existir en el sistema y el punto activo debe existir en la fantasía. Además, el usuario debe tener permisos de modificación.
-	\item \textbf{Postcondiciones:} Borra el punto activo seleccionado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Deletes an existing active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} Fantasy must exist in the system and the active point must exist in fantasy. In addition, the user must have modification permissions.
+	\item \textbf{Postconditions:} Deletes the selected active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo que desea eliminar.
-		\item El sistema muestra una ventana con la información del punto activo y sus opciones.
-		\item El usuario selecciona la opción ``Borrar''.
-		\item El sistema muestra un mensaje de confirmación.
-		\item El usuario selecciona ``Aceptar''.
-		\item El sistema borra el punto activo.
+		\item The user selects the active point that he wants to delete.
+		\item The system displays a window with the information of the active point and its options.
+		\item The user selects the option ``Delete''.
+		\item The system displays a confirmation message.
+		\item The user selects ``Accept''.
+		\item The system deletes the active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\item \textbf{Extensions:} \\ 5. a) The user selects ``Cancel''.
 	\begin{enumerate}
-		\item El sistema cierra la ventana emergente.
-		\item Paso 1.
+		\item The system closes the pop-up window.
+		\item Step 1.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD imagen} %suponemos que es para un punto activo
+\section{CRUD image}
 \hypertarget{crearimagen}{}
-\subsection{Crear imagen}
+\subsection{Create image}
 \begin{itemize}
-	\item \textbf{Descripción:} Inserta una imagen en un punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
-	\item \textbf{Postcondiciones:} Inserta una imagen en el punto activo seleccionado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Inserta una imagen en un punto activo.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The corresponding active point must exist and the fantasy must be being edited.
+	\item \textbf{Postconditions:} Insert an image in the selected active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema muestra una ventana emergente con la información del punto activo.
-		\item El usuario selecciona la opción de ``Insertar imagen''.
-		\item El sistema muestra una ventana en la que da a elegir al usuario de dónde quiere seleccionar la imagen (Internet, local, imagen ya usada en la fantasía).
-		\item El usuario elige la opción ``Internet'' para incluir una imagen de Internet.
-		\item El sistema le pide al usuario la url de la imagen.
-		\item El usuario inserta la url correcta de la imagen.
-		\item El punto activo toma la forma de la imagen.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system displays a pop-up window with the information of the active point.
+		\item The user selects the option ``Insert image''.
+		\item The system shows a window in which the user chooses where to choose the image (Internet, local, image already used in fantasy).
+		\item The user chooses the option ``Internet'' to include an image of the Internet.
+		\item The system asks the user for the url of the image.
+		\item The user inserts the correct url of the image.
+		\item The active point takes the shape of the image.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\5. a) El usuario elige la opción ``Local'' para incluir una imagen desde su ordenador.
+	\item \textbf{Extensions:} \\5. a) The user chooses the ``Local'' option to include an image from his computer.
 	\begin{enumerate}
-		\item El sistema abre una ventana del explorador de archivos.
-		\item El usuario selecciona la imagen deseada y pulsa ``Aceptar''.
-		\item El sistema cierra la ventana del explorador de archivos.
-		\item Paso 8.
+		\item The system opens a file browser window.
+		\item The user selects the desired image and press ``Accept''.
+		\item The system closes the file browser window.
+		\item Step 8.
 	\end{enumerate}
-	5. b) El usuario elige la opción ``Imagen usada anteriormente'' para incluir una imagen ya usada.
+	5. b) The user chooses the option ``Image previously used'' to include an image already used.
 	\begin{enumerate}
-		\item El sistema abre una ventana con las imágenes usadas anteriormente.
-		\item El usuario selecciona la imagen deseada y pulsa ``Aceptar''.
-		\item El sistema cierra la ventana emergente.
-		\item Paso 8.
+		\item The system opens a window with the images previously used.
+		\item The user selects the desired image and press ``Accept''.
+		\item The system closes the pop-up window.
+		\item Step 8.
 	\end{enumerate}
-	7. a) La url no es correcta.
+	7. a) The url is not correct.
 	\begin{enumerate}
-		\item El sistema muestra un mensaje de error.
-		\item Paso 6.
+		\item The system displays an error message.
+		\item Step 6.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} ¿Podrá modificar el tamaño original de la imagen o hacer recortes?
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None. %Ya dijimos que si podía, con el pixlr
 \end{itemize}
 
-\subsection{Modificar imagen}
+\subsection{Update image}
 \begin{itemize}
-	\item \textbf{Descripción:} Modifica una imagen.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir una imagen.
-	\item \textbf{Postcondiciones:} La imagen queda modificada.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Update an image.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} There must be the corresponding active point, you must be editing the fantasy and there must be an image.
+	\item \textbf{Postconditions:} The image is modified.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item Paso 4 de \hyperlink{crearimagen}{\textcolor{blue}{Crear imagen}}.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system opens a popup window with the information of the active point.
+		\item Step 4 of \hyperlink{crearimagen}{Create image}.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensiones:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Borrar imagen}
+\subsection{Delete image}
 \begin{itemize}
-	\item \textbf{Descripción:} Borra una imagen de un punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir una imagen.
-	\item \textbf{Postcondiciones:} Borra la imagen y deja el punto activo en su estado por defecto.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Deletes an image of an active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} There must be the corresponding active point, you must be editing the fantasy and there must be an image.
+	\item \textbf{Postconditions:} Delete the image and leave the active point in its default state.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item El usuario selecciona la imagen y pulsa el botón ``Suprimir''.
-		\item El sistema muestra un mensaje de confirmación.
-		\item El usuario selecciona ``Aceptar''.
-		\item El sistema borra la imagen del punto activo.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system opens a popup window with the information of the active point.
+		\item The user selects the image and presses the ``Delete'' button.
+		\item The system displays a confirmation message.
+		\item The user selects ``Accept''.
+		\item The system deletes the image of the active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\item \textbf{Extensions:} \\ 5. a) The user selects ``Cancel''.
 	\begin{enumerate}
-		\item El sistema cierra la ventana emergente.
-		\item Paso 1.
+		\item The system closes the pop-up window.
+		\item Step 1.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD vídeo}
+\section{CRUD video}
 \hypertarget{crearvideo}{}
-\subsection{Crear vídeo}
+\subsection{Create video}
 \begin{itemize}
-	\item \textbf{Descripción:} Inserta un vídeo dentro de un punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
-	\item \textbf{Postcondiciones:} Inserta un vídeo en el punto activo seleccionado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Insert a video within an active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The corresponding active point must exist and the fantasy must be being edited.
+	\item \textbf{Postconditions:} Insert a video in the selected active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema muestra una ventana emergente con la información del punto activo.
-		\item El usuario selecciona la opción de ``Insertar vídeo''.
-		\item El sistema muestra una ventana en la que da a elegir al usuario de dónde quiere seleccionar la imagen (Internet, local, vídeo ya usado en la fantasía).
-		\item El usuario elige la opción ``Internet'' para incluir un vídeo de Internet.
-		\item El sistema le pide al usuario la url del vídeo.
-		\item El usuario introduce la url correcta del vídeo.
-		\item El sistema guarda el vídeo en el punto activo.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system displays a pop-up window with the information of the active point.
+		\item The user selects the option ``Insert video''.
+		\item The system shows a window in which the user chooses where to choose the image (Internet, local, video already used in fantasy).
+		\item The user chooses the option ``Internet'' to include an Internet video.
+		\item The system asks the user for the url of the video.
+		\item The user enters the correct url of the video.
+		\item The system saves the video in the active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ 5. a) El usuario elige la opción ``Local'' para incluir un vídeo desde su ordenador.
+	\item \textbf{Extensions:} \\ 5. a) The user chooses the ``Local'' option to include a video from his computer.
 	\begin{enumerate}
-		\item El sistema muestra una venta del explorador de archivos.
-		\item El usuario selecciona la imagen deseada y pulsa ``Aceptar''.
-		\item El sistema cierra la ventana del explorador de archivos.
-		\item Paso 8.
+		\item The system shows a file browser sale.
+		\item The user selects the desired image and press ``Accept''.
+		\item The system closes the file browser window.
+		\item Step 8.
 	\end{enumerate}
-	5. b) El usuario elige la opción ``Vídeo usado anteriormente'' para incluir un vídeo ya usado.
+	5. b) The user chooses the option ``Video previously used'' to include a video already used.
 	\begin{enumerate}
-		\item El sistema abre una ventana con los vídeos usados anteriormente.
-		\item El usuario selecciona el vídeo deseado y pulsa ``Aceptar''.
-		\item El sistema cierra la ventana emergente.
-		\item Paso 4.
+		\item The system opens a window with the videos previously used.
+		\item The user selects the desired video and press ``Accept''.
+		\item The system closes the pop-up window.
+		\item Step 4.
 	\end{enumerate}
-	7. a) La url no es correcta.
+	7. a) The url is not correct.
 	\begin{enumerate}
-		\item El sistema muestra un mensaje de error.
-		\item Paso 6.
+		\item The system displays an error message.
+		\item Step 6.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Modificar vídeo}
+\subsection{Update video}
 \begin{itemize}
-	\item \textbf{Descripción:} Modifica un vídeo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un vídeo.
-	\item \textbf{Postcondiciones:} El vídeo queda modificado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Update a video.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} There must be the corresponding active point, you must be editing the fantasy and there must be a video.
+	\item \textbf{Postconditions:} The video is modified.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item Paso 4 de \hyperlink{crearvideo}{\textcolor{blue}{Crear vídeo}}.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system opens a popup window with the information of the active point.
+		\item Step 4 of \hyperlink{crearvideo}{Create video}.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Borrar vídeo}
+\subsection{Delete video}
 \begin{itemize}
-	\item \textbf{Descripción:} Borra un vídeo de un punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente, se debe estar editando la fantasía y debe existir un vídeo.
-	\item \textbf{Postcondiciones:} Borra el vídeo del punto activo.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Delete a video of an active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} There must be the corresponding active point, you must be editing the fantasy and there must be a video.
+	\item \textbf{Postconditions:} Delete the video of the active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
-		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item El usuario selecciona el vídeo y pulsa el botón ``Suprimir''.
-		\item El sistema muestra un mensaje de confirmación.
-		\item El usuario selecciona ``Aceptar''.
-		\item El sistema borra el vídeo del punto activo.
+		\item The user selects the corresponding active point within the fantasy.
+		\item The system opens a popup window with the information of the active point.
+		\item The user selects the video and presses the ``Delete'' button.
+		\item The system displays a confirmation message.
+		\item The user selects ``Accept''.
+		\item The system deletes the video from the active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ 5. a) El usuario selecciona ``Cancelar''.
+	\item \textbf{Extensions:} \\ 5. a) The user selects ``Cancel''.
 	\begin{enumerate}
-		\item El sistema cierra la ventana emergente.
-		\item Paso 1.
+		\item The system closes the pop-up window.
+		\item Step 1.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD texto}
+\section{CRUD text}
 \begin{itemize}
-	\item \textbf{Descripción:} Inserta un texto en un punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
-	\item \textbf{Postcondiciones:} Inserta un texto en el punto activo seleccionado.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Insert a text in an active point.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The corresponding active point must exist and the fantasy must be being edited.
+	\item \textbf{Postconditions:} Insert a text in the selected active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo al que le quiere añadir-editar el texto.
-		\item El sistema muestra una ventana emergente con la información del punto activo.
-		\item El usuario selecciona introduce el texto deseado en el campo ``Texto'' con las opciones de formato que desee. 
-		\item El usuario pulsa en el botón ``Aceptar''.
-		\item El sistema guarda el texto en el punto activo correspondiente.
+		\item The user selects the active point to which he wants to add-edit the text.
+		\item The system displays a pop-up window with the information of the active point.
+		\item The user selects enter the desired text in the ``Text'' field with the formatting options that you want.
+		\item The user clicks on the ``Accept'' button.
+		\item The system saves the text in the corresponding active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	\item \textbf{Extensions:} \\ *a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
 \section{CRUD \textit{quiz}}
 \hypertarget{crearquiz}{}
-\subsection{Crear \textit{quiz}}
+\subsection{Create \textit{quiz}}
 \begin{itemize}
-	\item \textbf{Descripción:} Crea un pequeño cuestionario sobre el tema del que trata el punto activo.
-	\item \textbf{Actores:} Creador-editor (usuario).
-	\item \textbf{Precondiciones:} Debe existir el punto activo correspondiente y se debe estar editando la fantasía.
-	\item \textbf{Postcondiciones:} Crea un pequeño cuestionario en relación al punto activo correspondiente.
-	\item \textbf{Escenario principal:}
+	\item \textbf{Description:} Create a small questionnaire about the subject that the active point deals with.
+	\item \textbf{Actors:} Creator-editor (user).
+	\item \textbf{Preconditions:} The corresponding active point must exist and the fantasy must be being edited.
+	\item \textbf{Postconditions:} Create a small questionnaire in relation to the corresponding active point.
+	\item \textbf{Main stage:}
 	\begin{enumerate}
-		\item El usuario selecciona el punto activo correspondiente.
-		\item El sistema muestra una ventana emergente con la información del punto activo.
-		\item El usuario selecciona la opción de ``Crear \textit{quiz}''.
-		\item El sistema muestra las posibles opciones.
-		\item El usuario selecciona ``Respuesta simple''.
-		\item El sistema muestra una ventana emergente para crear la pregunta con sus posibles respuestas.
-		\item El usuario rellena la ventana emergente con la pregunta y las respuestas convenientes y pulsa ``Aceptar'' cuando termina.
-		\item El sistema cierra la ventana emergente.
-		\item El cuestionario queda registrado en el punto activo seleccionado.
+		\item The user selects the corresponding active point.
+		\item The system displays a pop-up window with the information of the active point.
+		\item The user selects the option ``Create \textit{quiz}''.
+		\item The system shows the possible options.
+		\item The user selects ``Simple answer''.
+		\item The system displays a pop-up window to create the question with its possible answers.
+		\item The user populates the pop-up window with the question and the appropriate answers and press ``Accept'' when it finishes.
+		\item The system closes the pop-up window.
+		\item The questionnaire is registered in the selected active point.
 	\end{enumerate}
-	\item \textbf{Extensiones:} \\3. a) El usuario elige la opción ``Palabra''.
+	\item \textbf{Extensions:} \\3. a) The user chooses the option ``Word''.
 	\begin{enumerate}
-		\item El sistema abre una ventana emergente para crear la pregunta y su respuesta.
-		\item El usuario rellena la ventana emergente con la pregunta y la respuesta conveniente y pulsa ``Aceptar'' cuando termina.
-		\item Paso 8.
+		\item The system opens a pop-up window to create the question and its answer.
+		\item The user populates the pop-up window with the question and the appropriate answer and press ``Accept'' when it finishes.
+		\item Step 8.
 	\end{enumerate}
-	3. b) El usuario elige la opción ``Quiz con imágenes''.
+	3. b) The user chooses the option ``Quiz with images''.
 	\begin{enumerate}
-		\item El sistema abre una ventana emergente para crear la pregunta con la imagen y su respuesta.
-		\item El usuario rellena la ventana emergente con la pregunta, la imagen y la respuesta conveniente, y pulsa ``Aceptar'' cuando termina.
-		\item Paso 8.
+		\item The system opens a pop-up window to create the question with the image and its response.
+		\item The user fills in the pop-up window with the question, the image and the appropriate answer, and press ``Accept'' when it finishes.
+		\item Step 8.
 	\end{enumerate}
-	3. c) El usuario elige la opción ``Unir''.
+	3. c) The user chooses the ``Join'' option.
 	\begin{enumerate}
-		\item El sistema abre una ventana emergente para crear el quiz de unión.
-		\item El usuario rellena la ventana emergente con las posibles respuestas y su respuesta correcta y pulsa ``Aceptar'' cuando termina.
-		\item Paso 8.
+		\item The system opens a pop-up window to create the join quiz.
+		\item The user populates the pop-up window with the possible answers and their correct answer and press ``Accept'' when it finishes.
+		\item Step 8.
 	\end{enumerate}
-	*a) En cualquier momento, el usuario puede volver atrás.
-	\item \textbf{Variaciones:} Ninguna.
-	\item \textbf{No-funcional:} Ninguna.
-	\item \textbf{Cuestiones:} Ninguna.
+	*a) At any time, the user can go back.
+	\item \textbf{Variations:} None.
+	\item \textbf{Not-functional:} None.
+	\item \textbf{Issues:} None.
 \end{itemize}
 
 \subsection{Visualizar \textit{quiz}}

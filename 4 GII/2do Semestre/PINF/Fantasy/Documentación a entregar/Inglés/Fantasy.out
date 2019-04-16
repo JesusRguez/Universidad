@@ -1,31 +1,31 @@
-\BOOKMARK [0][-]{chapter.1}{An\341lisis de requisitos}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Analisys of requirements}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Workspace}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Caracter\355sticas}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Casos de uso}{}% 4
-\BOOKMARK [1][-]{section.2.1}{CRUD fantas\355a}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.1.1}{Crear fantas\355a}{section.2.1}% 6
-\BOOKMARK [2][-]{subsection.2.1.2}{Visualizar fantas\355a}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.3}{Modificar fantas\355a}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.4}{Borrar fantas\355a}{section.2.1}% 9
-\BOOKMARK [1][-]{section.2.2}{Elegir idioma}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Copiar fantas\355a}{chapter.2}% 11
+\BOOKMARK [1][-]{section.1.2}{Characteristics}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Use cases}{}% 4
+\BOOKMARK [1][-]{section.2.1}{CRUD fantasy}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Create fantasy}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{Visualize fantasy}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.3}{Update fantasy}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.4}{Delete fantas\355a}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Choose language}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Copy fantasy}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.4}{CRUD background}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.5}{CRUD punto activo}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.5.1}{Crear punto activo}{section.2.5}% 14
-\BOOKMARK [2][-]{subsection.2.5.2}{Visualizar punto activo}{section.2.5}% 15
-\BOOKMARK [2][-]{subsection.2.5.3}{Modificar punto activo}{section.2.5}% 16
-\BOOKMARK [2][-]{subsection.2.5.4}{Borrar punto activo}{section.2.5}% 17
-\BOOKMARK [1][-]{section.2.6}{CRUD imagen}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.6.1}{Crear imagen}{section.2.6}% 19
-\BOOKMARK [2][-]{subsection.2.6.2}{Modificar imagen}{section.2.6}% 20
-\BOOKMARK [2][-]{subsection.2.6.3}{Borrar imagen}{section.2.6}% 21
-\BOOKMARK [1][-]{section.2.7}{CRUD v\355deo}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.7.1}{Crear v\355deo}{section.2.7}% 23
-\BOOKMARK [2][-]{subsection.2.7.2}{Modificar v\355deo}{section.2.7}% 24
-\BOOKMARK [2][-]{subsection.2.7.3}{Borrar v\355deo}{section.2.7}% 25
-\BOOKMARK [1][-]{section.2.8}{CRUD texto}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.5}{CRUD active point}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.5.1}{Create active point}{section.2.5}% 14
+\BOOKMARK [2][-]{subsection.2.5.2}{Visualize active point}{section.2.5}% 15
+\BOOKMARK [2][-]{subsection.2.5.3}{Update active point}{section.2.5}% 16
+\BOOKMARK [2][-]{subsection.2.5.4}{Delete active point}{section.2.5}% 17
+\BOOKMARK [1][-]{section.2.6}{CRUD image}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.6.1}{Create image}{section.2.6}% 19
+\BOOKMARK [2][-]{subsection.2.6.2}{Update image}{section.2.6}% 20
+\BOOKMARK [2][-]{subsection.2.6.3}{Delete image}{section.2.6}% 21
+\BOOKMARK [1][-]{section.2.7}{CRUD video}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.7.1}{Create video}{section.2.7}% 23
+\BOOKMARK [2][-]{subsection.2.7.2}{Update video}{section.2.7}% 24
+\BOOKMARK [2][-]{subsection.2.7.3}{Delete video}{section.2.7}% 25
+\BOOKMARK [1][-]{section.2.8}{CRUD text}{chapter.2}% 26
 \BOOKMARK [1][-]{section.2.9}{CRUD quiz}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.9.1}{Crear quiz}{section.2.9}% 28
+\BOOKMARK [2][-]{subsection.2.9.1}{Create quiz}{section.2.9}% 28
 \BOOKMARK [2][-]{subsection.2.9.2}{Visualizar quiz}{section.2.9}% 29
 \BOOKMARK [2][-]{subsection.2.9.3}{Modificar quiz}{section.2.9}% 30
 \BOOKMARK [2][-]{subsection.2.9.4}{Borrar quiz}{section.2.9}% 31

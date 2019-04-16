@@ -1,47 +1,57 @@
-\chapter{Análisis de requisitos}
+\chapter{Analisys of requirements}
 \section{Workspace}
-El diseño gráfico usado deberá ser el mismo que el de la página de Stimey en todos los iconos usados: \url{https://stimey.eu/home}. Si necesitamos algo más, Alicia, nos lo podría facilitar.
+The design used should be the same as that of the \href{https://stimey.eu/home}{Stimey} page in all the icons used.
 
-El profesor tendrá más permisos y privilegios que el alumno, de forma que pueda crear fantasías para evaluar a sus alumnos y ellos tendrán que completarlas o crear las que el profesor les ponga como trabajo.
+%El diseño gráfico usado deberá ser el mismo que el de la página de \href{https://stimey.eu/home}{Stimey} en todos los iconos usados.
 
-En el workspace tendremos una serie de opciones que estarán disponibles tanto para el rol de profesor como de alumno en función de los permisos de cada rol:
+We can highlight two user roles: teachers and students.
+
+%Podremos destacar dos roles de usuario: profesores y usuarios.
+
+The teacher will have more permissions and privileges than the student, so that he can create fantasies to evaluate his students and they will have to complete them or create the ones that the teacher puts them as work.
+
+%El profesor tendrá más permisos y privilegios que el alumno, de forma que pueda crear fantasías para evaluar a sus alumnos y ellos tendrán que completarlas o crear las que el profesor les ponga como trabajo.
+
+In the workspace we will have a series of options that will be available for both the teacher and student roles depending on the permissions of each role:
+
+%En el workspace tendremos una serie de opciones que estarán disponibles tanto para el rol de profesor como de alumno en función de los permisos de cada rol:
 \begin{itemize}
-	\item \textbf{Background:} Se abre una ventana donde se podrá seleccionar una imagen usada anteriormente, de google o del ordenador. Esta imagen cubrirá todo el workspace. También será posible introducir texto añadiéndolo manualmente o mediante un link.
-	\item \textbf{Punto Activo:} Establece un punto activo en el workspace (arrastrando y soltando).
+	\item \textbf{Background:} A window opens where you can select a previously used image, google or computer. This image will cover all the workspace. It will also be possible to enter text by adding it manually or through a link.
+	\item \textbf{Active point:} Set an active point in the workspace (drag and drop).
 	\begin{itemize}
-		\item Será posible moverlo y modificar los contenidos del mismo.
-		\item Si se añade una imagen al puto activo, dicho punto, se adapta a la forma de la imagen.
-		\item Una vez originado el punto activo se abre un pop\_up con un texto.
-		\item También se puede asignar un vídeo, que abrirá una ventana para reproducirlo, o un audio. En caso de que no exista audio o vídeo, no se mostrará el respectivo botón.
-		\item Los puntos activos podrán tener música de fondo que será silenciada si se inicia la reproducción de audio o vídeo asignados a dicho punto por el profesorado. La música será restablecida al terminar el audio o vídeo correspondiente.
-		\item Los puntos activos pueden ser reorganizados por el profesorado para que emerjan en el orden que ellos quieran.
-		\item Un alumno no puede continuar con el siguiente punto activo sin terminar el actual.
-		\item El quiz de los puntos activos debe ser divertido.
-		\item Las cuestiones planteadas en los quiz de los puntos activos deberán ser 2 y no demasiado difíciles (respuesta múltiple, escribir una palabra, quiz con imágenes y preguntas sobre ésta, unir items, etc).
-		\item El quiz saldrá en pantalla cuando se cierra el punto activo actual.
-		\item Una vez acabado el quiz, aparece el siguiente punto activo en el orden establecido por el profesorado en el workspace.
-		\item Cada punto activo tendrá una puntuación hasta sumar entre todos un máximo de 100 puntos.
-		\item Al asignar una puntuación a un punto activo, ésta se restará al total que llevemos (máximo 100 puntos). Si un punto activo es eliminado, el contador general recupera la puntuación que tenía asignada dicho punto activo.
-		\item El alumno no sabe el total de puntos activos que hay en total.
-		\item Cuando el alumno obtiene una puntuación al completar un punto activo, dicha cantidad se suma al contador global.
-		\item Finalmente, podremos tener un resumen estadístico con las preguntas acertadas/falladas de cada punto activo.
-		\item Solo se guardará la puntuación obtenida la primera vez que se realice un quiz, luego, se podrán hacer más veces, pero la nota no se registrará.
-		\item El alumno tendrá la opción de guardar su progreso con un botón de guardar manualmente o mediante la opción de autoguardado.
+		\item It will be possible to move it and modify the contents of it.
+		\item If an image is added to the active puto, that point is adapted to the shape of the image.
+		\item Once the active point originates, a pop-up with a text opens.
+		\item You can also assign a video, which will open a window to play it, or an audio. In case there is no audio or video, the respective button will not be displayed.
+		\item Active points may have background music that will be muted if the audio or video playback assigned to that point by the faculty begins. The music will be restored when the corresponding audio or video ends.
+		\item The active points can be reorganized by the teachers so that they emerge in the order they want.
+		\item A student can not continue with the next active point without finishing the current one.
+		\item The active points quiz should be fun.
+		\item The questions raised in the quiz of the active points should be 2 and not too difficult (multiple answer, write a word, quiz with images and questions about it, join items, etc).
+		\item The quiz will appear on screen when the current active point is closed.
+		\item Once the quiz is finished, the next active point appears in the order established by the faculty in the workspace.
+		\item Each active point will have a score to add up to a maximum of 100 points.
+		\item When assigning a score to an active point, it will be subtracted from the total we carry (maximum 100 points). If an active point is eliminated, the general counter recovers the score assigned to that active point.
+		\item The student does not know the total number of active points in total.
+		\item When the student obtains a score when completing an active point, this amount is added to the global counter.
+		\item Finally, we can have a statistical summary with the right/failed questions of each active point.
+		\item Only the score obtained will be saved the first time a quiz is done, then it can be done more times, but the note will not be recorded.
+		\item The student will have the option to save their progress with a save button manually or through the auto-save option.
 	\end{itemize}
 \end{itemize}
 
-\section{Características}
+\section{Characteristics}
 \begin{itemize}
-	\item Al finalizar todos los puntos activos habrá un botón abajo a la derecha de ``\textbf{más información}'' y en el centro un nuevo quiz que será el examen final. Este examen tendrá una puntuación independiente al de todos los puntos activos y no tendrá el resumen estadístico. Si se repite este quiz, la nota del mismo se actualizaría con un tanto por ciento de la nueva nota, más la nota anterior con el objetivo de que un alumno que repita un quiz no pueda obtener la mejor nota por repetición del mismo.
-	\item El profesorado podrá mandar a los alumnos hacer fantasías para aprender como tarea. Estas tareas podrán realizarse en grupos de alumnos en función de dos ideas:
+	\item At the end of all active points there will be a button at the bottom right of ``\textbf{more information}'' and in the center a new quiz that will be the final exam. This exam will have an independent score to all active points and will not have the statistical summary. If this quiz is repeated, the note would be updated with a percentage of the new grade, plus the previous note with the objective that a student who repeats a quiz can not get the best grade per repetition of it.
+	\item Teachers can send students to make fantasies to learn as homework. These tasks can be done in groups of students based on two ideas:
 	\begin{enumerate}
-		\item \textbf{Obligatoria:} Un alumno realiza la fantasía y el resto busca información adicional.
-		\item \textbf{Opcional pero ideal:} Edición concurrente de la fantasía entre todos los integrantes del grupo.
+		\item \textbf{Obligatory:} One student makes the fantasy and the rest looks for additional information.
+		\item \textbf{Optional:} Concurrent edition of the fantasy among all the members of the group.
 	\end{enumerate}
-	\item Cada fantasía tendrá un código para poder ser compartida.
-	\item Tendremos dos tipos de permisos en las fantasías: ``\textbf{ver}'' y ``\textbf{ver y editar}''.
-	\item La plataforma notificará al profesorado cuando los alumnos hayan terminado sus respectivos trabajos.
-	\item Las fantasías podrán ser privadas o públicas. Por defecto, siempre serán públicas y podrán ser accedidas por todo el que utilice la plataforma.
-	\item Las fantasías privadas podrán ser accedidas por otras personas mediante una contraseña.
-	\item Las fantasías podrán ser clonadas.
+	\item Each fantasy will have a code to be shared.
+	\item We will have two types of permissions in the fantasies: ``\textbf{see}'' and ``\textbf{see and edit}''.
+	\item The platform will notify the faculty when the students have finished their respective jobs.
+	\item Fantasies may be private or public. By default, they will always be public and can be accessed by everyone who uses the platform.
+	\item Private fantasies can be accessed by other people with a password.
+	\item Fantasies can be cloned.
 \end{itemize}
