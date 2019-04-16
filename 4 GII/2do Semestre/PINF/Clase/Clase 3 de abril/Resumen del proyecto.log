@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  9 APR 2019 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  16 APR 2019 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,90 +653,47 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 147.
  [3]
-<Planificacion.pdf, id=115, 845.1575pt x 597.23125pt>
-File: Planificacion.pdf Graphic file (type pdf)
- <use Planificacion.pdf>
-Package pdftex.def Info: Planificacion.pdf used on input line 179.
-(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
-File: Planificacion.pdf Graphic file (type pdf)
+<Gantt.pdf, id=115, 561.9665pt x 104.51949pt>
+File: Gantt.pdf Graphic file (type pdf)
+ <use Gantt.pdf>
+Package pdftex.def Info: Gantt.pdf used on input line 181.
+(pdftex.def)             Requested size: 477.67378pt x 88.84196pt.
 
-<use Planificacion.pdf>
-Package pdftex.def Info: Planificacion.pdf used on input line 179.
-(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+Overfull \hbox (5.64255pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
 
-<Planificacion.pdf, id=118, page=1, 845.1575pt x 597.23125pt>
-File: Planificacion.pdf Graphic file (type pdf)
-
-<use Planificacion.pdf, page 1>
-Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
-(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
-File: Planificacion.pdf Graphic file (type pdf)
- <use Planificacion.pdf, page 1>
-Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
- [4]
-File: Planificacion.pdf Graphic file (type pdf)
-
-<use Planificacion.pdf, page 1>
-Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
-File: Planificacion.pdf Graphic file (type pdf)
- <use Planificacion.pdf, page 1>
-Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
-File: Planificacion.pdf Graphic file (type pdf)
-
-<use Planificacion.pdf, page 1>
-Package pdftex.def Info: Planificacion.pdf, page1 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
- [5 <./Planificacion.pdf>]
-<Planificacion.pdf, id=148, page=2, 845.1575pt x 597.23125pt>
-File: Planificacion.pdf Graphic file (type pdf)
-
-<use Planificacion.pdf, page 2>
-Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
-File: Planificacion.pdf Graphic file (type pdf)
- <use Planificacion.pdf, page 2>
-Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
-File: Planificacion.pdf Graphic file (type pdf)
-
-<use Planificacion.pdf, page 2>
-Package pdftex.def Info: Planificacion.pdf, page2 used on input line 179.
-(pdftex.def)             Requested size: 614.40643pt x 434.1708pt.
- [6 <./Planificacion.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
-
-(./Resumen del proyecto.aux
+[4 <./Gantt.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+ (./Resumen del proyecto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `"Resumen del proyecto".out' has not changed.
 
 (rerunfilecheck)             Checksum: E1E12DAA70E4A8EF48B09BCB29865ED7;1189.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 10705 strings out of 493013
- 152206 string characters out of 6135682
- 285906 words of memory out of 5000000
- 14038 multiletter control sequences out of 15000+600000
+ 10697 strings out of 493013
+ 151996 string characters out of 6135682
+ 284906 words of memory out of 5000000
+ 14032 multiletter control sequences out of 15000+600000
  63301 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,49p,350b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,49p,407b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on "Resumen del proyecto.pdf" (8 pages, 373267 bytes).
+Output written on "Resumen del proyecto.pdf" (6 pages, 1106469 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
