@@ -26,21 +26,17 @@
 \BOOKMARK [1][-]{section.2.8}{CRUD text}{chapter.2}% 26
 \BOOKMARK [1][-]{section.2.9}{CRUD quiz}{chapter.2}% 27
 \BOOKMARK [2][-]{subsection.2.9.1}{Create quiz}{section.2.9}% 28
-\BOOKMARK [2][-]{subsection.2.9.2}{Visualizar quiz}{section.2.9}% 29
-\BOOKMARK [2][-]{subsection.2.9.3}{Modificar quiz}{section.2.9}% 30
-\BOOKMARK [2][-]{subsection.2.9.4}{Borrar quiz}{section.2.9}% 31
-\BOOKMARK [1][-]{section.2.10}{CRUD efecto de audio}{chapter.2}% 32
-\BOOKMARK [2][-]{subsection.2.10.1}{Crear efecto de audio}{section.2.10}% 33
-\BOOKMARK [2][-]{subsection.2.10.2}{Modificar efecto de audio}{section.2.10}% 34
-\BOOKMARK [2][-]{subsection.2.10.3}{Borrar efecto de audio}{section.2.10}% 35
-\BOOKMARK [1][-]{section.2.11}{CRUD informaci\363n adicional}{chapter.2}% 36
-\BOOKMARK [1][-]{section.2.12}{Organizar puntos activos}{chapter.2}% 37
-\BOOKMARK [1][-]{section.2.13}{CRUD quiz final}{chapter.2}% 38
-\BOOKMARK [2][-]{subsection.2.13.1}{Crear quiz final}{section.2.13}% 39
-\BOOKMARK [2][-]{subsection.2.13.2}{Visualizar quiz final}{section.2.13}% 40
-\BOOKMARK [2][-]{subsection.2.13.3}{Modificar quiz final}{section.2.13}% 41
-\BOOKMARK [2][-]{subsection.2.13.4}{Borrar quiz final}{section.2.13}% 42
-\BOOKMARK [1][-]{section.2.14}{Gestionar porcentaje de un punto activo}{chapter.2}% 43
-\BOOKMARK [1][-]{section.2.15}{Gestionar ficha alumno}{chapter.2}% 44
-\BOOKMARK [1][-]{section.2.16}{Asignar nota final}{chapter.2}% 45
-\BOOKMARK [1][-]{section.2.17}{Asignar fantas\355a}{chapter.2}% 46
+\BOOKMARK [2][-]{subsection.2.9.2}{Visualize quiz}{section.2.9}% 29
+\BOOKMARK [2][-]{subsection.2.9.3}{Update quiz}{section.2.9}% 30
+\BOOKMARK [2][-]{subsection.2.9.4}{Delete quiz}{section.2.9}% 31
+\BOOKMARK [1][-]{section.2.10}{CRUD audio effect}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.10.1}{Create audio effect}{section.2.10}% 33
+\BOOKMARK [2][-]{subsection.2.10.2}{Update audio effect}{section.2.10}% 34
+\BOOKMARK [2][-]{subsection.2.10.3}{Delete audio effect}{section.2.10}% 35
+\BOOKMARK [1][-]{section.2.11}{CRUD additional information}{chapter.2}% 36
+\BOOKMARK [1][-]{section.2.12}{Organize active points}{chapter.2}% 37
+\BOOKMARK [1][-]{section.2.13}{CRUD final quiz}{chapter.2}% 38
+\BOOKMARK [2][-]{subsection.2.13.1}{Create final quiz}{section.2.13}% 39
+\BOOKMARK [2][-]{subsection.2.13.2}{Visualize final quiz}{section.2.13}% 40
+\BOOKMARK [2][-]{subsection.2.13.3}{Update final quiz}{section.2.13}% 41
+\BOOKMARK [2][-]{subsection.2.13.4}{Delete final quiz}{section.2.13}% 42

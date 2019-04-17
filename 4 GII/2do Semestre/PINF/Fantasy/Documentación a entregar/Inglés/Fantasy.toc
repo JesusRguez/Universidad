@@ -25,23 +25,19 @@
 \contentsline {subsection}{\numberline {2.7.2}Update video}{16}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}Delete video}{17}{subsection.2.7.3}
 \contentsline {section}{\numberline {2.8}CRUD text}{17}{section.2.8}
-\contentsline {section}{\numberline {2.9}CRUD \textit {quiz}}{18}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Create \textit {quiz}}{18}{subsection.2.9.1}
-\contentsline {subsection}{\numberline {2.9.2}Visualizar \textit {quiz}}{19}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Modificar \textit {quiz}}{19}{subsection.2.9.3}
-\contentsline {subsection}{\numberline {2.9.4}Borrar \textit {quiz}}{20}{subsection.2.9.4}
-\contentsline {section}{\numberline {2.10}CRUD efecto de audio}{20}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}Crear efecto de audio}{20}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Modificar efecto de audio}{21}{subsection.2.10.2}
-\contentsline {subsection}{\numberline {2.10.3}Borrar efecto de audio}{22}{subsection.2.10.3}
-\contentsline {section}{\numberline {2.11}CRUD informaci\IeC {\'o}n adicional}{22}{section.2.11}
-\contentsline {section}{\numberline {2.12}Organizar puntos activos}{23}{section.2.12}
-\contentsline {section}{\numberline {2.13}CRUD \textit {quiz} final}{23}{section.2.13}
-\contentsline {subsection}{\numberline {2.13.1}Crear \textit {quiz} final}{23}{subsection.2.13.1}
-\contentsline {subsection}{\numberline {2.13.2}Visualizar \textit {quiz} final}{24}{subsection.2.13.2}
-\contentsline {subsection}{\numberline {2.13.3}Modificar \textit {quiz} final}{25}{subsection.2.13.3}
-\contentsline {subsection}{\numberline {2.13.4}Borrar \textit {quiz} final}{25}{subsection.2.13.4}
-\contentsline {section}{\numberline {2.14}Gestionar porcentaje de un punto activo}{26}{section.2.14}
-\contentsline {section}{\numberline {2.15}Gestionar ficha alumno}{26}{section.2.15}
-\contentsline {section}{\numberline {2.16}Asignar nota final}{26}{section.2.16}
-\contentsline {section}{\numberline {2.17}Asignar fantas\IeC {\'\i }a}{27}{section.2.17}
+\contentsline {section}{\numberline {2.9}CRUD quiz}{18}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Create quiz}{18}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}Visualize quiz}{19}{subsection.2.9.2}
+\contentsline {subsection}{\numberline {2.9.3}Update quiz}{19}{subsection.2.9.3}
+\contentsline {subsection}{\numberline {2.9.4}Delete quiz}{20}{subsection.2.9.4}
+\contentsline {section}{\numberline {2.10}CRUD audio effect}{20}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Create audio effect}{20}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Update audio effect}{21}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}Delete audio effect}{22}{subsection.2.10.3}
+\contentsline {section}{\numberline {2.11}CRUD additional information}{22}{section.2.11}
+\contentsline {section}{\numberline {2.12}Organize active points}{23}{section.2.12}
+\contentsline {section}{\numberline {2.13}CRUD final quiz}{23}{section.2.13}
+\contentsline {subsection}{\numberline {2.13.1}Create final quiz}{23}{subsection.2.13.1}
+\contentsline {subsection}{\numberline {2.13.2}Visualize final quiz}{24}{subsection.2.13.2}
+\contentsline {subsection}{\numberline {2.13.3}Update final quiz}{25}{subsection.2.13.3}
+\contentsline {subsection}{\numberline {2.13.4}Delete final quiz}{25}{subsection.2.13.4}
