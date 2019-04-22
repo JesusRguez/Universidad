@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  3 APR 2019 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  22 APR 2019 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,36 +578,36 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 129.
  [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
 
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (./Documento de plan de proyecto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `"Documento de plan de proyecto".out' has not
  changed.
-(rerunfilecheck)             Checksum: CFD8ABA1DDE690AE6B295E182050DC14;1122.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+(rerunfilecheck)             Checksum: E2E3FE7553C682443369D3A6091199F2;1454.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 9580 strings out of 493013
- 136270 string characters out of 6135682
- 262211 words of memory out of 5000000
- 12925 multiletter control sequences out of 15000+600000
+ 9595 strings out of 493013
+ 136439 string characters out of 6135682
+ 262214 words of memory out of 5000000
+ 12929 multiletter control sequences out of 15000+600000
  39601 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,6n,49p,359b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,6n,49p,368b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb>
-Output written on "Documento de plan de proyecto.pdf" (5 pages, 38191 bytes).
+Output written on "Documento de plan de proyecto.pdf" (5 pages, 39297 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
