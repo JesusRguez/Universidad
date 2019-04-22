@@ -115,7 +115,7 @@ Cada red tendrá un par de máquinas virtuales (no hace falta conectarlas todas 
 En este ejercicio se deberá:
 \begin{itemize}
 	\item \textbf{Crear el entorno de red mediante un único fichero Vagrant.}
-	\lstinputlisting[language=Ruby]{../Vagrantfile1}
+	\lstinputlisting[language=Ruby]{../Vagrantfile}
 	
 	\item \textbf{Configurar el cortafuegos para que de acceso al exterior.} \\
 	Para configurar el cortafuegos, primero debemos deshabilitar la interfaz de red que nos permite salir a Internet desde cada una de las máquinas de las redes. Para ello, identificamos la interfaz que queremos deshabilitar (en nuestro caso, \texttt{eth0}).
@@ -161,26 +161,26 @@ En este ejercicio se deberá:
 		\includegraphics[scale=0.25]{Ping2.png}
 		\caption{En esta imagen se ve como todas las máquinas intentan hacer ping a \texttt{google.es} pero la única que lo consigue es la máquina r (router/cortafuegos).}
 	\end{figure}
-
+	\textcolor{white}{.}
+	\newpage
 	 Para habilitar el enrutamiento usamos el comando en la máquina router/cortafuegos:
 	 \begin{center}
 	 	\texttt{sudo iptables -t nat -A \\POSTROUTING -o eth0 -j MASQUERADE}
 	 \end{center}
- 
-\newpage	 
+ 	 
 	 Una vez hecho eso, el resultado es el siguiente:
-\newpage
 	 \begin{figure}[h]
 	 	\centering
 	 	\includegraphics[scale=0.25]{Ping3.png}
 	 	\caption{Una vez habilitado el enrutamiento, todas las máquinas tienen acceso a Internet.}
 	 \end{figure}
 	
-	
+	\newpage
 	\item \textbf{Configurar manualmente los clientes de las redes para que se puedan conectar al servidor.} \\
 	Solo con poner la puerta de enlace y el ip forwarding estaría hecho y ya se ha hecho en el apartado anterior.
 \end{itemize}
 
+\newpage
 \section{Servidor DHCP}
 Instalar un servidor DHCP en el cortafuegos. Además, se deberá modificar el fichero Vagrant, para que en lugar de establecer una IP privada, la IP se asigne mediante DHCP.
 
@@ -195,7 +195,7 @@ Para instalar el servidor DHCP introducimos el siguiente comando:
 	\texttt{sudo apt-get install isc-dhcp-server}
 \end{center}
 
-\newpage
+
 Configuramos las subredes en el archivo \texttt{/etc/dhcp/dhcpd.conf} abriendolo con el comando:
 \begin{center}
 	\texttt{sudo nano /etc/dhcp/dhcpd.conf}
@@ -205,6 +205,16 @@ Configuramos las subredes en el archivo \texttt{/etc/dhcp/dhcpd.conf} abriendolo
 	\includegraphics[scale=0.8]{DHCP2.png}
 	\caption{Configuración de las subredes del DNS}
 \end{figure}
+
+Ahora, reiniciamos el servidor dhcp con:
+\begin{center}
+	\texttt{sudo /etc/init.d/isc-dhcp-server restart}
+\end{center}
+
+Para comprobar el estado del servidor dhcp usaremos el siguiente comando:
+\begin{center}
+	\texttt{sudo /etc/init.d/isc-dhcp-server status}
+\end{center}
 
 A continuación, pedimos una IP al servidor DHCP desde las otras máquinas con:
 \begin{center}
@@ -219,7 +229,7 @@ A continuación, pedimos una IP al servidor DHCP desde las otras máquinas con:
 
 Para ver las direcciones IP cedidas por el servidor DHCP usamos:
 \begin{center}
-	\texttt{sudo cat /var/lib/dhcp/dhcp.leases}
+	\texttt{sudo cat /var/lib/dhcp/dhcpd.leases}
 \end{center}
 \newpage
 \begin{figure}[h]

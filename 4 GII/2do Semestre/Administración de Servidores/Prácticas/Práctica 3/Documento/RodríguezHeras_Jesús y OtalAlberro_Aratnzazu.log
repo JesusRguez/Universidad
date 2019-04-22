@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  15 APR 2019 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  22 APR 2019 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,7 +579,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
-) (../Vagrantfile1
+) (../Vagrantfile
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
 )
@@ -609,53 +609,55 @@ Overfull \hbox (9.26572pt too wide) in paragraph at lines 161--162
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./Ping.png>] [5 <./Ping2.png>]
-<Ping3.png, id=80, 1925.1925pt x 1052.93375pt>
+[4 <./Ping.png>] <Ping3.png, id=75, 1925.1925pt x 1052.93375pt>
 File: Ping3.png Graphic file (type png)
- <use Ping3.png>
-Package pdftex.def Info: Ping3.png used on input line 175.
+
+<use Ping3.png>
+Package pdftex.def Info: Ping3.png used on input line 174.
 (pdftex.def)             Requested size: 481.29695pt x 263.23279pt.
 
-Overfull \hbox (9.26572pt too wide) in paragraph at lines 175--176
+Overfull \hbox (9.26572pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
-[6 <./Ping3.png>] <DHCP2.png, id=86, 430.60875pt x 320.19624pt>
-File: DHCP2.png Graphic file (type png)
 
-<use DHCP2.png>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./Ping2.png>] [6 <./Ping3.png>]
+<DHCP2.png, id=86, 430.60875pt x 320.19624pt>
+File: DHCP2.png Graphic file (type png)
+ <use DHCP2.png>
 Package pdftex.def Info: DHCP2.png used on input line 205.
 (pdftex.def)             Requested size: 344.48746pt x 256.15733pt.
- [7 <./DHCP2.png>]
-<DHCP1.png, id=93, 1926.19624pt x 1083.04625pt>
+ [7 <./DHCP2.png>] <DHCP1.png, id=93, 1926.19624pt x 1083.04625pt>
 File: DHCP1.png Graphic file (type png)
  <use DHCP1.png>
-Package pdftex.def Info: DHCP1.png used on input line 216.
+Package pdftex.def Info: DHCP1.png used on input line 226.
 (pdftex.def)             Requested size: 481.54788pt x 270.7609pt.
 
-Overfull \hbox (9.51665pt too wide) in paragraph at lines 216--217
+Overfull \hbox (9.51665pt too wide) in paragraph at lines 226--227
  [][] 
  []
 
 [8 <./DHCP1.png>] <DHCP3.png, id=99, 368.37625pt x 544.0325pt>
 File: DHCP3.png Graphic file (type png)
  <use DHCP3.png>
-Package pdftex.def Info: DHCP3.png used on input line 227.
+Package pdftex.def Info: DHCP3.png used on input line 237.
 (pdftex.def)             Requested size: 294.70139pt x 435.2266pt.
 
 [9 <./DHCP3.png>] <Zona.png, id=105, 350.30875pt x 93.34875pt>
 File: Zona.png Graphic file (type png)
  <use Zona.png>
-Package pdftex.def Info: Zona.png used on input line 246.
+Package pdftex.def Info: Zona.png used on input line 256.
 (pdftex.def)             Requested size: 262.73091pt x 70.01138pt.
 
 <BD.png, id=106, 673.51625pt x 435.6275pt>
 File: BD.png Graphic file (type png)
  <use BD.png>
-Package pdftex.def Info: BD.png used on input line 252.
+Package pdftex.def Info: BD.png used on input line 262.
 (pdftex.def)             Requested size: 437.78038pt x 283.15451pt.
 
-Overfull \hbox (16.72214pt too wide) in paragraph at lines 256--257
+Overfull \hbox (16.72214pt too wide) in paragraph at lines 266--267
 []\T1/ptm/m/n/12 Por �l-ti-mo, cam-bia-mos el ser-vi-dor DNS del res-to de m�-q
 ui-nas en el fi-che-ro \T1/pcr/m/n/12 /etc/resolv.conf
  []
@@ -664,32 +666,32 @@ ui-nas en el fi-che-ro \T1/pcr/m/n/12 /etc/resolv.conf
 <Nameserver.png, id=113, 679.53876pt x 130.4875pt>
 File: Nameserver.png Graphic file (type png)
  <use Nameserver.png>
-Package pdftex.def Info: Nameserver.png used on input line 265.
+Package pdftex.def Info: Nameserver.png used on input line 275.
 (pdftex.def)             Requested size: 339.76855pt x 65.24358pt.
 
 <Final.png, id=114, 1369.115pt x 738.76pt>
 File: Final.png Graphic file (type png)
  <use Final.png>
-Package pdftex.def Info: Final.png used on input line 272.
+Package pdftex.def Info: Final.png used on input line 282.
 (pdftex.def)             Requested size: 472.34518pt x 254.87247pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 277.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
  [11 <./Nameserver.png> <./Final.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 277.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 277.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 277.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `"RodríguezHeras_Jesús y OtalAlberro_Aratnz
 azu".out' has not changed.
 (rerunfilecheck)             Checksum: 6DA36F36B546769B09660937A9F5AFCD;186.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 277.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
  10044 strings out of 493013
- 141141 string characters out of 6135682
- 282252 words of memory out of 5000000
+ 141138 string characters out of 6135682
+ 282250 words of memory out of 5000000
  13357 multiletter control sequences out of 15000+600000
  34687 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -700,7 +702,7 @@ fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb>
 Output written on "RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.pdf" (11 page
-s, 1381359 bytes).
+s, 1381396 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams

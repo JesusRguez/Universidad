@@ -5,7 +5,7 @@ Entramos en el router.
 	sudo apt-get install isc-dhcp-server
 Con "man dhcpd" podremos ver el manual del proceso y ver como poner las reglas.
 Fichero de configuración: /etc/dhcp/dhcpd.conf
-Fichero de préstamos: /var/lib/dhcp/dhcp.leases
+Fichero de préstamos: /var/lib/dhcp/dhcpd.leases
 Con "man dhcpd.conf" podremos ver como se puede configurar el fichero.
 	sudo nano dhcpd.conf
 	Cogemos el primer ejemplo (que empieza por subnet) y le ponemos el rango de ips de la siguiente forma
@@ -20,7 +20,7 @@ Con el siguiente comando se puede ver el log
 	sudo journalctl _PID=(el pid que tenga el proceso del status)
 	sudo dhcpd -f //También te dice  que es lo que pasa
 	
-	cat /var/lib/dhcp/dhcp.leases para ver las IP que ha prestado.
+	cat /var/lib/dhcp/dhcpd.leases para ver las IP que ha prestado.
 	
 Para perdir IP desde otras máquinas:
 	sudo dhclient
