@@ -18,7 +18,7 @@ public:
 	typedef std::map<Alumno*, Grupo*> Alumnos;
 
 	//Asocia con alumno
-	coid matriculado(Alumno&, Grupo&);
+	void matriculado(Alumno&, Grupo&);
 	Alumnos& matricula() const;
 
 	//Asociación con Grupo
