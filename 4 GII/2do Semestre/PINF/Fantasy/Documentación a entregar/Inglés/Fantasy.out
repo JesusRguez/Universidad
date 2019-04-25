@@ -1,42 +1,74 @@
-\BOOKMARK [0][-]{chapter.1}{Analisys of requirements}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Workspace}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Characteristics}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Use cases}{}% 4
-\BOOKMARK [1][-]{section.2.1}{CRUD fantasy}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.1.1}{Create fantasy}{section.2.1}% 6
-\BOOKMARK [2][-]{subsection.2.1.2}{Visualize fantasy}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.3}{Update fantasy}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.4}{Delete fantas\355a}{section.2.1}% 9
-\BOOKMARK [1][-]{section.2.2}{Choose language}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Copy fantasy}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{CRUD background}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.5}{CRUD active point}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.5.1}{Create active point}{section.2.5}% 14
-\BOOKMARK [2][-]{subsection.2.5.2}{Visualize active point}{section.2.5}% 15
-\BOOKMARK [2][-]{subsection.2.5.3}{Update active point}{section.2.5}% 16
-\BOOKMARK [2][-]{subsection.2.5.4}{Delete active point}{section.2.5}% 17
-\BOOKMARK [1][-]{section.2.6}{CRUD image}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.6.1}{Create image}{section.2.6}% 19
-\BOOKMARK [2][-]{subsection.2.6.2}{Update image}{section.2.6}% 20
-\BOOKMARK [2][-]{subsection.2.6.3}{Delete image}{section.2.6}% 21
-\BOOKMARK [1][-]{section.2.7}{CRUD video}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.7.1}{Create video}{section.2.7}% 23
-\BOOKMARK [2][-]{subsection.2.7.2}{Update video}{section.2.7}% 24
-\BOOKMARK [2][-]{subsection.2.7.3}{Delete video}{section.2.7}% 25
-\BOOKMARK [1][-]{section.2.8}{CRUD text}{chapter.2}% 26
-\BOOKMARK [1][-]{section.2.9}{CRUD quiz}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.9.1}{Create quiz}{section.2.9}% 28
-\BOOKMARK [2][-]{subsection.2.9.2}{Visualize quiz}{section.2.9}% 29
-\BOOKMARK [2][-]{subsection.2.9.3}{Update quiz}{section.2.9}% 30
-\BOOKMARK [2][-]{subsection.2.9.4}{Delete quiz}{section.2.9}% 31
-\BOOKMARK [1][-]{section.2.10}{CRUD audio effect}{chapter.2}% 32
-\BOOKMARK [2][-]{subsection.2.10.1}{Create audio effect}{section.2.10}% 33
-\BOOKMARK [2][-]{subsection.2.10.2}{Update audio effect}{section.2.10}% 34
-\BOOKMARK [2][-]{subsection.2.10.3}{Delete audio effect}{section.2.10}% 35
-\BOOKMARK [1][-]{section.2.11}{CRUD additional information}{chapter.2}% 36
-\BOOKMARK [1][-]{section.2.12}{Organize active points}{chapter.2}% 37
-\BOOKMARK [1][-]{section.2.13}{CRUD final quiz}{chapter.2}% 38
-\BOOKMARK [2][-]{subsection.2.13.1}{Create final quiz}{section.2.13}% 39
-\BOOKMARK [2][-]{subsection.2.13.2}{Visualize final quiz}{section.2.13}% 40
-\BOOKMARK [2][-]{subsection.2.13.3}{Update final quiz}{section.2.13}% 41
-\BOOKMARK [2][-]{subsection.2.13.4}{Delete final quiz}{section.2.13}% 42
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Description of the current system}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Objectives and scope of the project}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.3.1}{Objetives}{section.1.3}% 5
+\BOOKMARK [2][-]{subsection.1.3.2}{Scope}{section.1.3}% 6
+\BOOKMARK [1][-]{section.1.4}{Organization of the document}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Planning}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Development methodology}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{Project planning}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Organization}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{Roles}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Hardware and software resources}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Costs}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{Human costs}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Material costs}{section.2.4}% 16
+\BOOKMARK [1][-]{section.2.5}{Risk management}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.6}{Team policy}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.7}{Hits}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.7.1}{Sprint 0 \(27th February to 6th March\)}{section.2.7}% 20
+\BOOKMARK [2][-]{subsection.2.7.2}{Sprint 1 \(6th March to 27th March\)}{section.2.7}% 21
+\BOOKMARK [2][-]{subsection.2.7.3}{Sprint 2 \(27th March to 3rd April\)}{section.2.7}% 22
+\BOOKMARK [2][-]{subsection.2.7.4}{Sprint 3 \(3rd April to 10th April\)}{section.2.7}% 23
+\BOOKMARK [2][-]{subsection.2.7.5}{Sprint 4 \(10th April to 24th April\)}{section.2.7}% 24
+\BOOKMARK [2][-]{subsection.2.7.6}{Sprint 5 \(24th April to 1st May\)}{section.2.7}% 25
+\BOOKMARK [1][-]{section.2.8}{Meetings}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.8.1}{Meeting 0 \(27th February\)}{section.2.8}% 27
+\BOOKMARK [2][-]{subsection.2.8.2}{Meeting 2 \(6th March\)}{section.2.8}% 28
+\BOOKMARK [2][-]{subsection.2.8.3}{Meeting 3 \(27th March\)}{section.2.8}% 29
+\BOOKMARK [2][-]{subsection.2.8.4}{Meeting 4 \(3rd April\)}{section.2.8}% 30
+\BOOKMARK [2][-]{subsection.2.8.5}{Meeting 5 \(10th April\)}{section.2.8}% 31
+\BOOKMARK [2][-]{subsection.2.8.6}{Meeting 6 \(24th April\)}{section.2.8}% 32
+\BOOKMARK [0][-]{chapter.3}{Analisys of requirements}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Workspace}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.2}{Characteristics}{chapter.3}% 35
+\BOOKMARK [0][-]{chapter.4}{Use cases}{}% 36
+\BOOKMARK [1][-]{section.4.1}{CRUD fantasy}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.1.1}{Create fantasy}{section.4.1}% 38
+\BOOKMARK [2][-]{subsection.4.1.2}{Visualize fantasy}{section.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.1.3}{Update fantasy}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.4}{Delete fantas\355a}{section.4.1}% 41
+\BOOKMARK [1][-]{section.4.2}{Choose language}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.3}{Copy fantasy}{chapter.4}% 43
+\BOOKMARK [1][-]{section.4.4}{CRUD background}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.5}{CRUD active point}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.5.1}{Create active point}{section.4.5}% 46
+\BOOKMARK [2][-]{subsection.4.5.2}{Visualize active point}{section.4.5}% 47
+\BOOKMARK [2][-]{subsection.4.5.3}{Update active point}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.4}{Delete active point}{section.4.5}% 49
+\BOOKMARK [1][-]{section.4.6}{CRUD image}{chapter.4}% 50
+\BOOKMARK [2][-]{subsection.4.6.1}{Create image}{section.4.6}% 51
+\BOOKMARK [2][-]{subsection.4.6.2}{Update image}{section.4.6}% 52
+\BOOKMARK [2][-]{subsection.4.6.3}{Delete image}{section.4.6}% 53
+\BOOKMARK [1][-]{section.4.7}{CRUD video}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.7.1}{Create video}{section.4.7}% 55
+\BOOKMARK [2][-]{subsection.4.7.2}{Update video}{section.4.7}% 56
+\BOOKMARK [2][-]{subsection.4.7.3}{Delete video}{section.4.7}% 57
+\BOOKMARK [1][-]{section.4.8}{CRUD text}{chapter.4}% 58
+\BOOKMARK [1][-]{section.4.9}{CRUD quiz}{chapter.4}% 59
+\BOOKMARK [2][-]{subsection.4.9.1}{Create quiz}{section.4.9}% 60
+\BOOKMARK [2][-]{subsection.4.9.2}{Visualize quiz}{section.4.9}% 61
+\BOOKMARK [2][-]{subsection.4.9.3}{Update quiz}{section.4.9}% 62
+\BOOKMARK [2][-]{subsection.4.9.4}{Delete quiz}{section.4.9}% 63
+\BOOKMARK [1][-]{section.4.10}{CRUD audio effect}{chapter.4}% 64
+\BOOKMARK [2][-]{subsection.4.10.1}{Create audio effect}{section.4.10}% 65
+\BOOKMARK [2][-]{subsection.4.10.2}{Update audio effect}{section.4.10}% 66
+\BOOKMARK [2][-]{subsection.4.10.3}{Delete audio effect}{section.4.10}% 67
+\BOOKMARK [1][-]{section.4.11}{CRUD additional information}{chapter.4}% 68
+\BOOKMARK [1][-]{section.4.12}{Organize active points}{chapter.4}% 69
+\BOOKMARK [1][-]{section.4.13}{CRUD final quiz}{chapter.4}% 70
+\BOOKMARK [2][-]{subsection.4.13.1}{Create final quiz}{section.4.13}% 71
+\BOOKMARK [2][-]{subsection.4.13.2}{Visualize final quiz}{section.4.13}% 72
+\BOOKMARK [2][-]{subsection.4.13.3}{Update final quiz}{section.4.13}% 73
+\BOOKMARK [2][-]{subsection.4.13.4}{Delete final quiz}{section.4.13}% 74
