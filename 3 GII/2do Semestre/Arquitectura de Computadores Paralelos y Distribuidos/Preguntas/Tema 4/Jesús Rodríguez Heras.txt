@@ -1,0 +1,31 @@
+PREGUNTAS TIPO TEST:
+Característica principal de la red crossbar
+* Permite varias conexiones simultáneas entre distintos destinos.
+- Permite varias conexiones simultáneas entre varios nodos al mismo destino.
+- Tendremos el mismo número de switches que de nodos
+- Se colapsa con facilidad.
+
+¿Cuál es una red multietapa?
+- Red Butterfly.
+- Red Omega.
+- Red de Benes.
+* Todas son correctas.
+
+¿Qué metodo de encaminamiento podemos usar tanto para la red Omega como para la red Butterly?
+- Basándonos en el nodo de origen.
+- Basándonos en el nodo de destino.
+* Realizar la operación XOR entre origen y destino.
+- Realizar la operación AND entre origen y destino.
+
+¿Qué obtenemos si doblamos una red de Benes sobre sí misma?
+- Una matriz.
+* Un árbol.
+- Un grafo.
+- Un camino de coste mínimo.
+
+PREGUNTA DE DESARROLLO:
+¿Cómo funciona el encaminamiento XOR en una red Omega?
+Se realiza la operación XOR entre el origen y el destino. El resultado, denominado routing record o registtro de encaminamiento (RE), se debe utilizar de la siguiente manera:
+En cada etapa se procesa un bit del registro de encaminamiento, comenzando por el de más peso (más a la izquierda):
+	- Si es 0: se continua sin cruzar el switch.
+	- Si es 1: se cruza dentro del switch eligiendo la salida contraria a la entrada.
