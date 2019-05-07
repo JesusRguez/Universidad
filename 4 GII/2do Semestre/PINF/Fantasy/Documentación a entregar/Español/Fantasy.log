@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  25 APR 2019 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  7 MAY 2019 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,21 +601,16 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
  (./PlanProyecto.tex
 Cap\'{\i }tulo 2.
-<Gantt.pdf, id=435, 561.9665pt x 104.51949pt>
-File: Gantt.pdf Graphic file (type pdf)
- <use Gantt.pdf>
-Package pdftex.def Info: Gantt.pdf used on input line 13.
-(pdftex.def)             Requested size: 477.67378pt x 88.84196pt.
-
-Overfull \hbox (7.91878pt too wide) in paragraph at lines 13--14
- [][] 
- []
-
-[9
+<Gantt.png, id=435, 1107.13625pt x 275.0275pt>
+File: Gantt.png Graphic file (type png)
+ <use Gantt.png>
+Package pdftex.def Info: Gantt.png used on input line 13.
+(pdftex.def)             Requested size: 464.99405pt x 115.51076pt.
+ [9
 
 
 
- <./Gantt.pdf>]
+ <./Gantt.png>]
 Overfull \hbox (5.58405pt too wide) in paragraph at lines 31--32
 []\T1/ptm/m/n/10 Como re-cur-sos soft-wa-re te-ne-mos el fra-me-work La-ra-vel,
  Atom, Vi-sual Stu-dio Co-de, TeXS-tu-dio, PhPM-yAd-min, MySQL,
@@ -656,13 +651,13 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `Fantasy.out' has not changed.
-(rerunfilecheck)             Checksum: C28B0D09BFF38853B160C7F1DCF9892B;5442.
+(rerunfilecheck)             Checksum: 46BC0DF9C6EE1AEEAA850A40D4B29790;5442.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
  10714 strings out of 493013
  149847 string characters out of 6135682
- 301978 words of memory out of 5000000
+ 301975 words of memory out of 5000000
  13648 multiletter control sequences out of 15000+600000
  70308 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -672,10 +667,10 @@ e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on Fantasy.pdf (35 pages, 1166966 bytes).
+Output written on Fantasy.pdf (35 pages, 465017 bytes).
 PDF statistics:
- 966 PDF objects out of 1000 (max. 8388607)
- 895 compressed objects within 9 object streams
+ 945 PDF objects out of 1000 (max. 8388607)
+ 889 compressed objects within 9 object streams
  398 named destinations out of 1000 (max. 500000)
  637 words of extra memory for PDF output out of 10000 (max. 10000000)
 
