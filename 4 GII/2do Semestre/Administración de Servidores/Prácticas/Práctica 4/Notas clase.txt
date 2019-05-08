@@ -1,0 +1,53 @@
+Una vez hemos instalado webmin y apache, entramos en webmin con https y con el usuario y contraseñas "vagrant".
+
+Le damos a crear virtual host y ponemos el puerto 80.
+Creamos la carpeta del document root en "/var/www/manolo" y ponemos de nombre "manolo.ai" (cambiar lo que hay entre comillas).
+Al entrar en manolo.ai, sale lo que hemos puesto en el index.html que está en "/var/www/manolo/index.html"
+
+En webmin, en la edición de directivas globales, ponemos "adddefaultcharset utf-8" para que nos pille las tildes en español.
+
+Para instalar php, hay que instalarlo y engancharle el módulo de php, para ello:
+	sudo apt-get install libapache2-mod-php "se supone que con esto valdría"
+
+Vamos a la configuración de los módulos y podemos ver que el módulo de php7, está activado.
+
+Para ver que funciona, podemos probar algo en php.
+
+
+Ahora veremos el control de acceso de los directorios.
+
+Vamos a /var/www/manolo/ y creamos una carpeta, por ejemplo "mkdir software" y dentro un "prueba.html"
+
+Si entramos en manolo.ai/software/prueba.html (si entramos en manolo.ai/software, nos tiene que decir "forbiden" porque no está indexado).
+
+Si en "Edit Directives" vemos "option none", nos saldrá el forbiden, si lo quitamos, podremos ver el contenido de la carpeta (software en este caso), tambien si le ponemos indexes.
+
+Para cambiar las directivas de una carpeta o crear un directory en webmin, nos vamos a create per-directory y ponemos la ruta a donde se encuentra.
+
+Para cambiar las opciones de indexación, vamos al Document Options y pinchamos en generate directory indexes, cambiamos el selected below de arriba y luego a save. Refresh.
+
+Al recargar la página manolo.ai/software, podremos ver el contenido de la carpeta software.
+
+Para el control de acceso, vamos a Access Control.
+
+Lo que vamos a hacer aquí es crear usuarios de webmin, que no tendrá nada que ver con los usuarios del sistema.
+
+En authentication realm name hay que poner algo (lo que sea).
+En Authentication tipe, lo ponemos en basic.
+En User text file, ponemos el directorio del archivo txt (acceso.txt) con las contraseñas de los usuaarios.
+En Basic login, en text file.
+
+Guardamos y volvemos a entrar y podremos ver edit users. Y podremos crear el usuario que queramos.
+
+Para ver si lo hemos hecho bien vamos al edit Directives.
+
+
+A continuación toca lo de la caché.
+
+Para ello, se activa el módulo expires y se le da a refresh.
+
+Para hacer la prueba se descargar una imagen y ponerla en la carpeta.
+
+Vamos a la directiva del virtual host y añadimos el expires que copiemos de la pagina de documentación oficial. También tendremos que poner el expiresActive On, para que funcione.
+
+Haciendo curl --head manolo.ai/uca.jpg y podremos ver el tiempo de expiración.
