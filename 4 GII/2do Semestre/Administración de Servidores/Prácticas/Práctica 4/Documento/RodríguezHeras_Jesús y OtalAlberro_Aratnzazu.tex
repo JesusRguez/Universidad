@@ -133,7 +133,8 @@ A continuación, actualizamos los paquetes e instalamos Webmin\footnote{Si nos d
 
 Para instalar php, usamos el siguiente comando:
 \begin{center}
-	\texttt{sudo apt-get install php}
+	\texttt{sudo apt-get install php5-common}
+	\texttt{sudo apt-get install libapache2-mod-php5}
 \end{center}
 
 A la hora de modificar el fichero \texttt{/etc/hosts} de la máquina anfitriona, lo abrimos con:
@@ -204,11 +205,63 @@ Como ejemplo, vamos a modelar y configurar el entorno web del grupo de investiga
 	\item La página principal del grupo está bajo el dominio \texttt{manolorg.uca.es}. El contenido se almacenará en \texttt{/var/www/manolorg}.
 	
 	Para ello accedemos a webmin y creamos un nuevo host virtual y, en document root ponemos \texttt{/var/www/manolorg}.
+	
 	\item Se desea que solo se acceda a la dirección \texttt{/docs} solo pueda acceder el usuario \texttt{admin} y el usuario \texttt{manolo}.
+	
 	\item No se mostrarán los directorios, excepto la carpeta \texttt{/software} que será solo accesible para el usuario \texttt{admin}.
+	
+	Para que el directorio \texttt{software} nos muestre el índice de archivos, tendremos que crear un nuevo ``directory'' llamado software, luego nos iremos al \texttt{Document Options} del nuevo directorio. Una vez ahí, tendremos que marcar la opción de ``Selected below'' y la opción ``Generate directory indexes'' como ``yes''. Quedaría como en la siguiente imagen:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Indexing.png}
+		\caption{Document Options para software}
+		\label{Document Options para software}
+	\end{figure}
+	
 	\item La dirección \texttt{/sci2s} apuntará a la web \texttt{sci2s.ugr.es}.
+	
+	Para ello creamos el directory de \texttt{sci2s}, entramos dentro y le damos a ``Aliases and Redirects'' y ponemos la dirección deseada como en la siguiente imagen:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{ugr.png}
+		\caption{Redirección a sci2s.ugr.es}
+		\label{Redirección a sci2s.ugr.es}
+	\end{figure}
+	
 	\item El grupo estará creado por diferentes laboratorios, crear un subdominio para el lab1 y el lab2. El contenido se almacenará en \texttt{/var/www/lab*}.
+	
+	Para ello, creamos dos carpetas nuevas desde la consola de la máquina virtual en \texttt{/var/www}, llamadas \texttt{lab1} y \texttt{lab2}.
+	
+	Para cada uno de los laboratorios, crearemos un virtual host distinto, y, en las opciones de creación, pondremos el document root en ``/var/www/labX'' (siendo X el número del laboratorio), pondremos el puerto 80, como \texttt{server name} pondremos ``labX.manolorg.uca.es'' (siendo X el número del laboratorio).
+	
+	PONER FOTO DE QUE CARGAN LOS LABORATORIOS
+	
 \end{itemize}
 
 Se deberá crear una web sencilla (Hola mundo) en cada uno de los dominios y carpetas. Las páginas deben tener caracteres con tildes, por lo que debemos configurar Apache para que trabaje con UTF8.
+
+Por defecto, no funciona la codificación UTF8, como podemos ver en la siguiente imagen:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.34]{SinUTF8.png}
+	\caption{Sin UTF8}
+	\label{Sin UTF8}
+\end{figure}
+
+Para activar el UTF8, nos dirigimos nos dirigimos a la edición de directivas globales (en la pestaña "global configuration") y añadimos la siguiente directiva al final\footnote{Si estamos usando Debian/Jessie debemos cambiar el archivo \texttt{/etc/apache2/conf-enabled/charset.conf} y descomentar la instrucción que dice: \texttt{\#AddDefaultCharset UTF-8}.}:
+\begin{center}
+	\texttt{adddefaultcharset utf-8}
+\end{center}
+
+\newpage
+Una vez añadida la directiva mencionada, podemos ver como sí que funciona la codificación UTF8:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.34]{ConUTF8.png}
+	\caption{Con UTF8}
+	\label{Con UTF8}
+\end{figure}
 \end{document}
