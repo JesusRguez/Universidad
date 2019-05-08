@@ -51,3 +51,13 @@ Para hacer la prueba se descargar una imagen y ponerla en la carpeta.
 Vamos a la directiva del virtual host y añadimos el expires que copiemos de la pagina de documentación oficial. También tendremos que poner el expiresActive On, para que funcione.
 
 Haciendo curl --head manolo.ai/uca.jpg y podremos ver el tiempo de expiración.
+
+
+Para activar el rewrite, vamos a los módulos de configuración, hacemos click en rewrite, y refresh.
+
+Luego, nos vamos a las directivas y ponemos "RewriteEngine On" y añadimos una regla como:
+	RewriteRule "/p\.html" "/p2.html"
+	
+Guardamos y hacemos refresh.
+
+Si luego entramos en p.html, nos cambiará a p2.html. (esto es trasnparente, para que se vea el cambio, tendremos que ponerle la opción R)
