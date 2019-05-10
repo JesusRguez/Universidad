@@ -74,6 +74,25 @@
 % puts("Hola mundo!");
 % }
 % \end{verbatim}
+\usepackage{hyphenat}
+
+\newenvironment{changemargin}[2]{%
+	\begin{list}{}{%
+			\setlength{\topsep}{0pt}%
+			\setlength{\leftmargin}{#1}%
+			\setlength{\rightmargin}{#2}%
+			\setlength{\listparindent}{\parindent}%
+			\setlength{\itemindent}{\parindent}%
+			\setlength{\parsep}{\parskip}%
+		}%
+		\item[]}{\end{list}}
+	
+\newenvironment{nota}{
+	\begin{changemargin}{2em}{2em}
+		\textbf{\textsc{Nota: }}
+	}{
+	\end{changemargin}
+}
 
 
 \title{\huge{Fantasy}}
@@ -92,55 +111,197 @@
 \begin{document}
 %	\maketitle
 
-	\begin{titlepage}
+%	\begin{titlepage}
+%		\centering
+%		
+%		{\scshape\huge Escuela Superior de Ingeniería \par}
+%		\vspace{1cm}
+%		{\scshape\LARGE Universidad de Cádiz\par}
+%		\vspace{1cm}
+%		{\scshape\Large{Stimey}\par}
+%		\vspace{1cm}
+%		{\Huge\bfseries Fantasy\par}
+%		\vspace{1cm}
+%		{\Large\itshape Luis Gutiérrez Flores\\
+%			Nicolás Ruiz Requejo\\
+%			Jesús Rodríguez Heras\\
+%			Arantzazu Otal Alberro\\
+%			Alejandro Segovia Gallardo\\
+%			Alejandro José Caraballo García\\
+%			Gabriel Fernando Sánchez Reina\par}
+%		\vspace{2.5cm}
+%		\begin{table}[htb]
+%			\centering
+%			\begin{tabular}{ccc}
+%				\includegraphics[width=0.15\textwidth]{UCA.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{ESI.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{Stimey.png}\par\vspace{1.2cm}
+%			\end{tabular}
+%		\end{table}
+%%		\vfill
+%		
+%		
+%		
+%		% Bottom of the page
+%%		{\large \today\par}
+%	\end{titlepage}
+
+\begin{titlepage}
+	\centering
+%	\includegraphics[width=.1\textwidth]{UCA.png}
+
+\begin{table}[htb]
+				\centering
+				\begin{tabular}{ccc}
+					\includegraphics[width=0.15\textwidth]{UCA.png}\par\vspace{0.2cm} & \includegraphics[width=0.15\textwidth]{ESI.png}\par\vspace{0.2cm} & \includegraphics[width=0.15\textwidth]{Stimey.png}\par\vspace{0.2cm}
+				\end{tabular}
+			\end{table}
+	
+%	\bigskip
+%	\bigskip
+%	\bigskip
+	
+	\begin{changemargin}{3em}{3em}
 		\centering
 		
-		{\scshape\huge Escuela Superior de Ingeniería \par}
-		\vspace{1cm}
-		{\scshape\LARGE Universidad de Cádiz\par}
-		\vspace{1cm}
-		{\scshape\Large{Stimey}\par}
-		\vspace{1cm}
-		{\Huge\bfseries Fantasy\par}
-		\vspace{1cm}
-		{\Large\itshape Luis Gutiérrez Flores\\
-			Nicolás Ruiz Requejo\\
-			Jesús Rodríguez Heras\\
-			Arantzazu Otal Alberro\\
-			Alejandro Segovia Gallardo\\
-			Alejandro José Caraballo García\\
-			Gabriel Fernando Sánchez Reina\par}
-		\vspace{2.5cm}
-		\begin{table}[htb]
-			\centering
-			\begin{tabular}{ccc}
-				\includegraphics[width=0.15\textwidth]{UCA.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{ESI.png}\par\vspace{1.2cm} & \includegraphics[width=0.15\textwidth]{Stimey.png}\par\vspace{1.2cm}
-			\end{tabular}
-		\end{table}
-%		\vfill
+		{\LARGE \textsc{\nohyphens{Escuela Superior de Ingeniería}}}
 		
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
 		
+		{\LARGE \nohyphens{Grado en Ingeniería Informática}}
 		
-		% Bottom of the page
-%		{\large \today\par}
-	\end{titlepage}
+		\bigskip
+		\bigskip
+%		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		
+		{\LARGE \nohyphens{\textbf{Fantasy}}}
+		
+		\bigskip
+		\bigskip
+%		\bigskip
+		\bigskip
+		\bigskip
+		
+		{\large Curso 2018-2019}
+		
+		\bigskip
+		\bigskip
+%		\bigskip
+%		\bigskip
+		\bigskip
+		\bigskip
+		
+	\end{changemargin}
+	
+	{\Large Luis Gutiérrez Flores\\
+					Nicolás Ruiz Requejo\\
+					Jesús Rodríguez Heras\\
+					Arantzazu Otal Alberro\\
+					Alejandro Segovia Gallardo\\
+					Alejandro José Caraballo García\\
+					Gabriel Fernando Sánchez Reina} \\
+	\bigskip
+	\bigskip 
+	\bigskip 
+	{\large Puerto Real, \today}
+	
+\end{titlepage}
+\newpage{\pagestyle{empty}\cleardoublepage}  
+{
+	\thispagestyle{empty} 
+	\centering
+%	\includegraphics[width=.1\textwidth]{UCA.png}
+\begin{table}[htb]
+	\centering
+	\begin{tabular}{ccc}
+		\includegraphics[width=0.15\textwidth]{UCA.png}\par\vspace{0.2cm} & \includegraphics[width=0.15\textwidth]{ESI.png}\par\vspace{0.2cm} & \includegraphics[width=0.15\textwidth]{Stimey.png}\par\vspace{0.2cm}
+	\end{tabular}
+\end{table}
+	
+%	\bigskip
+%	\bigskip
+%	\bigskip
+	
+	\begin{changemargin}{3em}{3em}
+		
+		\begin{center}
+			{\LARGE \textsc{\nohyphens{Escuela Superior de Ingeniería}}}
+			
+			\bigskip
+			\bigskip
+			
+			{\LARGE \nohyphens{Grado en Ingeniería Informática}}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\bigskip
+			
+			{\LARGE \nohyphens{\textbf{Fantasy}}}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\bigskip
+			
+		\end{center}
+	\end{changemargin}
+	
+	\begin{flushleft}
+		\Large
+		
+		\textsc{Departamento}: \nohyphens{Ingeniería Informática.} \\
+		\textsc{Directora del proyecto}: \nohyphens{Alicia Ale.} \\
+		\textsc{Autor del Proyecto}: \nohyphens{Equipo Fantasy}. \\
+	\end{flushleft}
+	
+	\bigskip
+	\bigskip
+	\bigskip
+	
+	\begin{flushright}
+		\large
+		Puerto Real, \today
+		
+		\bigskip    
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		Fdo.: Equipo Fantasy
+		
+	\end{flushright}
+	
+}
 	
 %	\thispagestyle{empty}
 	\newpage
 	
+	\include{Resumen}
+	
 	\tableofcontents
 	\newpage
 	
-	\include{Introduccion}
-	\include{PlanProyecto}
-	\include{AnalisisRequisitos}
-	\include{CasosUso}
-%	\include{Doc4}
-%	\include{Doc5}
-%	\include{Doc6}
-%	\include{Doc7}
-%	\include{Doc8}
-%	\include{Doc9}
-%	\include{Doc10}
+	\part{Prolegómeno}
+	\include{Prolegomeno/Introduccion}
+	\include{Prolegomeno/PlanProyecto}
+	
+	\part{Desarrollo}
+	\include{Desarrollo/AnalisisRequisitos}
+	\include{Desarrollo/CasosUso}
+	\include{Desarrollo/Implementacion}
+	\include{Desarrollo/Pruebas}
+
+	\part{Eplílogo}
+	\include{Epilogo/ManualUsuario}
+	\include{Epilogo/ManualInstalacionExplotacion}
+	\include{Epilogo/Conclusiones}
 	
 \end{document}

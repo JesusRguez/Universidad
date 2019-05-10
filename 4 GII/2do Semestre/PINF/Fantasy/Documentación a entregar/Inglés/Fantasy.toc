@@ -1,75 +1,110 @@
 \select@language {USenglish}
-\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{7}{section.1.1}
-\contentsline {section}{\numberline {1.2}Description of the current system}{7}{section.1.2}
-\contentsline {section}{\numberline {1.3}Objectives and scope of the project}{7}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Objetives}{7}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Scope}{7}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Organization of the document}{8}{section.1.4}
-\contentsline {chapter}{\numberline {2}Planning}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Development methodology}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Project planning}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Organization}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Roles}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Hardware and software resources}{10}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Costs}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Human costs}{10}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Material costs}{10}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Risk management}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Team policy}{10}{section.2.6}
-\contentsline {section}{\numberline {2.7}Hits}{11}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Sprint 0 ($27^{th}$ February to $6^{th}$ March)}{11}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Sprint 1 ($6^{th}$ March to $27^{th}$ March)}{11}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Sprint 2 ($27^{th}$ March to $3^{rd}$ April)}{11}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {2.7.4}Sprint 3 ($3^{rd}$ April to $10^{th}$ April)}{11}{subsection.2.7.4}
-\contentsline {subsection}{\numberline {2.7.5}Sprint 4 ($10^{th}$ April to $24^{th}$ April)}{11}{subsection.2.7.5}
-\contentsline {subsection}{\numberline {2.7.6}Sprint 5 ($24^{th}$ April to $1^{st}$ May)}{11}{subsection.2.7.6}
-\contentsline {section}{\numberline {2.8}Meetings}{12}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Meeting 0 ($27^{th}$ February)}{12}{subsection.2.8.1}
-\contentsline {subsection}{\numberline {2.8.2}Meeting 1 ($6^{th}$ March)}{12}{subsection.2.8.2}
-\contentsline {subsection}{\numberline {2.8.3}Meeting 2 ($27^{th}$ March)}{12}{subsection.2.8.3}
-\contentsline {subsection}{\numberline {2.8.4}Meeting 3 ($3^{rd}$ April)}{12}{subsection.2.8.4}
-\contentsline {subsection}{\numberline {2.8.5}Meeting 4 ($10^{th}$ April)}{12}{subsection.2.8.5}
-\contentsline {subsection}{\numberline {2.8.6}Meeting 5 ($24^{th}$ April)}{12}{subsection.2.8.6}
-\contentsline {chapter}{\numberline {3}Analisys of requirements}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Workspace}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Characteristics}{14}{section.3.2}
-\contentsline {chapter}{\numberline {4}Use cases}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}CRUD fantasy}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Create fantasy}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Visualize fantasy}{16}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Update fantasy}{16}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Delete fantas\IeC {\'\i }a}{17}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Choose language}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Copy fantasy}{18}{section.4.3}
-\contentsline {section}{\numberline {4.4}CRUD background}{19}{section.4.4}
-\contentsline {section}{\numberline {4.5}CRUD active point}{19}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Create active point}{19}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Visualize active point}{20}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Update active point}{20}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Delete active point}{21}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}CRUD image}{21}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Create image}{21}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Update image}{22}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Delete image}{23}{subsection.4.6.3}
-\contentsline {section}{\numberline {4.7}CRUD video}{23}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Create video}{23}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Update video}{24}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Delete video}{25}{subsection.4.7.3}
-\contentsline {section}{\numberline {4.8}CRUD text}{25}{section.4.8}
-\contentsline {section}{\numberline {4.9}CRUD quiz}{26}{section.4.9}
-\contentsline {subsection}{\numberline {4.9.1}Create quiz}{26}{subsection.4.9.1}
-\contentsline {subsection}{\numberline {4.9.2}Visualize quiz}{27}{subsection.4.9.2}
-\contentsline {subsection}{\numberline {4.9.3}Update quiz}{27}{subsection.4.9.3}
-\contentsline {subsection}{\numberline {4.9.4}Delete quiz}{28}{subsection.4.9.4}
-\contentsline {section}{\numberline {4.10}CRUD audio effect}{28}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}Create audio effect}{28}{subsection.4.10.1}
-\contentsline {subsection}{\numberline {4.10.2}Update audio effect}{29}{subsection.4.10.2}
-\contentsline {subsection}{\numberline {4.10.3}Delete audio effect}{30}{subsection.4.10.3}
-\contentsline {section}{\numberline {4.11}CRUD additional information}{30}{section.4.11}
-\contentsline {section}{\numberline {4.12}Organize active points}{31}{section.4.12}
-\contentsline {section}{\numberline {4.13}CRUD final quiz}{31}{section.4.13}
-\contentsline {subsection}{\numberline {4.13.1}Create final quiz}{31}{subsection.4.13.1}
-\contentsline {subsection}{\numberline {4.13.2}Visualize final quiz}{32}{subsection.4.13.2}
-\contentsline {subsection}{\numberline {4.13.3}Update final quiz}{33}{subsection.4.13.3}
-\contentsline {subsection}{\numberline {4.13.4}Delete final quiz}{33}{subsection.4.13.4}
+\contentsline {part}{I\hspace {1em}Prolegomenon}{11}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction}{13}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{13}{section.1.1}
+\contentsline {section}{\numberline {1.2}Description of the current system}{13}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objectives and scope of the project}{13}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Objetives}{13}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Scope}{13}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Organization of the document}{14}{section.1.4}
+\contentsline {chapter}{\numberline {2}Planning}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}Development methodology}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Project planning}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Organization}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Roles}{16}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Hardware and software resources}{16}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Costs}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Human costs}{16}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Material costs}{16}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Risk management}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}Team policy}{16}{section.2.6}
+\contentsline {section}{\numberline {2.7}Hits}{17}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Sprint 0 ($27^{th}$ February to $6^{th}$ March)}{17}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Sprint 1 ($6^{th}$ March to $27^{th}$ March)}{17}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Sprint 2 ($27^{th}$ March to $3^{rd}$ April)}{17}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Sprint 3 ($3^{rd}$ April to $10^{th}$ April)}{17}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Sprint 4 ($10^{th}$ April to $24^{th}$ April)}{17}{subsection.2.7.5}
+\contentsline {subsection}{\numberline {2.7.6}Sprint 5 ($24^{th}$ April to $1^{st}$ May)}{17}{subsection.2.7.6}
+\contentsline {section}{\numberline {2.8}Meetings}{18}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Meeting 0 ($27^{th}$ February)}{18}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.2}Meeting 1 ($6^{th}$ March)}{18}{subsection.2.8.2}
+\contentsline {subsection}{\numberline {2.8.3}Meeting 2 ($27^{th}$ March)}{18}{subsection.2.8.3}
+\contentsline {subsection}{\numberline {2.8.4}Meeting 3 ($3^{rd}$ April)}{18}{subsection.2.8.4}
+\contentsline {subsection}{\numberline {2.8.5}Meeting 4 ($10^{th}$ April)}{18}{subsection.2.8.5}
+\contentsline {subsection}{\numberline {2.8.6}Meeting 5 ($24^{th}$ April)}{18}{subsection.2.8.6}
+\contentsline {part}{II\hspace {1em}Developing}{19}{part.2}
+\contentsline {chapter}{\numberline {3}Analisys of requirements}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Workspace}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Characteristics}{22}{section.3.2}
+\contentsline {chapter}{\numberline {4}Use cases}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design of use cases}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}CRUD fantasy}{23}{subsection.4.1.1}
+\contentsline {subsubsection}{Use case: Create fantasy}{23}{section*.2}
+\contentsline {subsubsection}{Use case: Visualize fantasy}{24}{section*.3}
+\contentsline {subsubsection}{Use case: Update fantasy}{25}{section*.4}
+\contentsline {subsubsection}{Use case: Delete fantas\IeC {\'\i }a}{25}{section*.5}
+\contentsline {subsection}{\numberline {4.1.2}Use case: Choose language}{26}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Use case: Copy fantasy}{26}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}CRUD background}{27}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}CRUD active point}{27}{subsection.4.1.5}
+\contentsline {subsubsection}{Use case: Create active point}{27}{section*.6}
+\contentsline {subsubsection}{Use case: Visualize active point}{28}{section*.7}
+\contentsline {subsubsection}{Use case: Update active point}{28}{section*.8}
+\contentsline {subsubsection}{Use case: Delete active point}{29}{section*.9}
+\contentsline {subsection}{\numberline {4.1.6}CRUD image}{29}{subsection.4.1.6}
+\contentsline {subsubsection}{Use case: Create image}{29}{section*.10}
+\contentsline {subsubsection}{Use case: Update image}{30}{section*.11}
+\contentsline {subsubsection}{Use case: Delete image}{31}{section*.12}
+\contentsline {subsection}{\numberline {4.1.7}CRUD video}{31}{subsection.4.1.7}
+\contentsline {subsubsection}{Use case: Create video}{31}{section*.13}
+\contentsline {subsubsection}{Use case: Update video}{32}{section*.14}
+\contentsline {subsubsection}{Use case: Delete video}{33}{section*.15}
+\contentsline {subsection}{\numberline {4.1.8}CRUD text}{33}{subsection.4.1.8}
+\contentsline {subsection}{\numberline {4.1.9}CRUD quiz}{34}{subsection.4.1.9}
+\contentsline {subsubsection}{Use case: Create quiz}{34}{section*.16}
+\contentsline {subsubsection}{Use case: Visualize quiz}{35}{section*.17}
+\contentsline {subsubsection}{Use case: Update quiz}{35}{section*.18}
+\contentsline {subsubsection}{Use case: Delete quiz}{36}{section*.19}
+\contentsline {subsection}{\numberline {4.1.10}CRUD audio effect}{36}{subsection.4.1.10}
+\contentsline {subsubsection}{Use case: Create audio effect}{36}{section*.20}
+\contentsline {subsubsection}{Use case: Update audio effect}{37}{section*.21}
+\contentsline {subsubsection}{Use case: Delete audio effect}{38}{section*.22}
+\contentsline {subsection}{\numberline {4.1.11}CRUD additional information}{38}{subsection.4.1.11}
+\contentsline {subsection}{\numberline {4.1.12}Use case: Organize active points}{39}{subsection.4.1.12}
+\contentsline {subsection}{\numberline {4.1.13}CRUD final quiz}{39}{subsection.4.1.13}
+\contentsline {subsubsection}{Use case: Create final quiz}{39}{section*.23}
+\contentsline {subsubsection}{Use case: Visualize final quiz}{40}{section*.24}
+\contentsline {subsubsection}{Use case: Update final quiz}{41}{section*.25}
+\contentsline {subsubsection}{Use case: Delete final quiz}{41}{section*.26}
+\contentsline {section}{\numberline {4.2}User interface desing}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Data design}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Design of components}{42}{section.4.4}
+\contentsline {section}{\numberline {4.5}Parameterization of the base software}{42}{section.4.5}
+\contentsline {chapter}{\numberline {5}Implementation of the system}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Technological environment}{43}{section.5.1}
+\contentsline {section}{\numberline {5.2}Source code}{43}{section.5.2}
+\contentsline {section}{\numberline {5.3}Code quality}{43}{section.5.3}
+\contentsline {chapter}{\numberline {6}System tests}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unit tests}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Integration testing}{45}{section.6.2}
+\contentsline {section}{\numberline {6.3}System tests}{45}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Functional testing}{45}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Non-functional tests}{45}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Acceptance Tests}{45}{section.6.4}
+\contentsline {part}{III\hspace {1em}Epilogue}{47}{part.3}
+\contentsline {chapter}{\numberline {7}User manual}{49}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{49}{section.7.1}
+\contentsline {section}{\numberline {7.2}Features}{49}{section.7.2}
+\contentsline {section}{\numberline {7.3}Previous requirements}{49}{section.7.3}
+\contentsline {section}{\numberline {7.4}Utilization}{49}{section.7.4}
+\contentsline {chapter}{\numberline {8}Installation and operation manual}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{51}{section.8.1}
+\contentsline {section}{\numberline {8.2}Previous requirements}{51}{section.8.2}
+\contentsline {section}{\numberline {8.3}Inventory of components}{51}{section.8.3}
+\contentsline {section}{\numberline {8.4}Installation procedures}{51}{section.8.4}
+\contentsline {section}{\numberline {8.5}Operating procedures and service level}{51}{section.8.5}
+\contentsline {section}{\numberline {8.6}Implantation tests}{51}{section.8.6}
+\contentsline {chapter}{\numberline {9}Conclusions}{53}{chapter.9}
+\contentsline {section}{\numberline {9.1}Objetives}{53}{section.9.1}
+\contentsline {section}{\numberline {9.2}Learned lessons}{53}{section.9.2}
+\contentsline {section}{\numberline {9.3}Future work}{53}{section.9.3}

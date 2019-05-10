@@ -1,13 +1,15 @@
 \chapter{Use cases}
-\noindent
+\section{Design of use cases}
 All the use cases described below have the following implicit precondition to be able to use said use cases in the final application:
 \begin{itemize}
 	\item The user (teachers/students) must have an account on the Stimey platform and have logged in with that account.
 \end{itemize}
 
-\section{CRUD fantasy}
+The proposed use cases are the following:
+
+\subsection{CRUD fantasy}
 \hypertarget{crearfantasia}{}
-\subsection{Create fantasy}
+\subsubsection{Use case: Create fantasy}
 \begin{itemize}
 	\item \textbf{Description:} Create a new fantasy.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -42,7 +44,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualize fantasy}
+\subsubsection{Use case: Visualize fantasy}
 \begin{itemize}
 	\item \textbf{Description:} Read an existing fantasy.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -65,7 +67,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update fantasy}
+\subsubsection{Use case: Update fantasy}
 \begin{itemize}
 	\item \textbf{Description:} Modify an existing fantasy.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -86,7 +88,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete fantasía}
+\subsubsection{Use case: Delete fantasía}
 \begin{itemize}
 	\item \textbf{Description:} Erase an existing fantasy.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -115,7 +117,7 @@ All the use cases described below have the following implicit precondition to be
 \end{itemize}
 
 
-\section{Choose language}
+\subsection{Use case: Choose language}
 \begin{itemize}
 	\item \textbf{Description:} Change the language of the application.
 	\item \textbf{Actors:} Teacher or student (user).
@@ -134,7 +136,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{Copy fantasy}
+\subsection{Use case: Copy fantasy}
 \begin{itemize}
 	\item \textbf{Description:} Clone a fantasy.
 	\item \textbf{Actores:} Creator-editor (user).
@@ -155,7 +157,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD background}
+\subsection{CRUD background}
 \begin{itemize}
 	\item \textbf{Description:} Allows selecting, modifying and deleting the background.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -175,8 +177,8 @@ All the use cases described below have the following implicit precondition to be
 \end{itemize}
 
 
-\section{CRUD active point}
-\subsection{Create active point}
+\subsection{CRUD active point}
+\subsubsection{Use case: Create active point}
 \begin{itemize}
 	\item \textbf{Description:} Create a new active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -195,7 +197,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualize active point}
+\subsubsection{Use case: Visualize active point}
 \begin{itemize}
 	\item \textbf{Description:} Shows an existing active point for reading.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -214,7 +216,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update active point}
+\subsubsection{Use case: Update active point}
 \begin{itemize}
 	\item \textbf{Description:} Modifies an existing active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -233,7 +235,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete active point}
+\subsubsection{Use case: Delete active point}
 \begin{itemize}
 	\item \textbf{Description:} Deletes an existing active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -259,9 +261,9 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD image}
+\subsection{CRUD image}
 \hypertarget{crearimagen}{}
-\subsection{Create image}
+\subsubsection{Use case: Create image}
 \begin{itemize}
 	\item \textbf{Description:} Inserta una imagen en un punto activo.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -303,7 +305,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None. %Ya dijimos que si podía, con el pixlr
 \end{itemize}
 
-\subsection{Update image}
+\subsubsection{Use case: Update image}
 \begin{itemize}
 	\item \textbf{Description:} Update an image.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -321,7 +323,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete image}
+\subsubsection{Use case: Delete image}
 \begin{itemize}
 	\item \textbf{Description:} Deletes an image of an active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -347,9 +349,9 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD video}
+\subsection{CRUD video}
 \hypertarget{crearvideo}{}
-\subsection{Create video}
+\subsubsection{Use case: Create video}
 \begin{itemize}
 	\item \textbf{Description:} Insert a video within an active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -391,7 +393,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update video}
+\subsubsection{Use case: Update video}
 \begin{itemize}
 	\item \textbf{Description:} Update a video.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -409,7 +411,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete video}
+\subsubsection{Use case: Delete video}
 \begin{itemize}
 	\item \textbf{Description:} Delete a video of an active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -435,7 +437,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD text}
+\subsection{CRUD text}
 \begin{itemize}
 	\item \textbf{Description:} Insert a text in an active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -455,9 +457,9 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD quiz}
+\subsection{CRUD quiz}
 \hypertarget{crearquiz}{}
-\subsection{Create quiz}
+\subsubsection{Use case: Create quiz}
 \begin{itemize}
 	\item \textbf{Description:} Create a small questionnaire about the subject that the active point deals with.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -499,7 +501,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualize quiz}
+\subsubsection{Use case: Visualize quiz}
 \begin{itemize}
 	\item \textbf{Description:} Shows the status of quiz.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -518,7 +520,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update quiz}
+\subsubsection{Use case: Update quiz}
 \begin{itemize}
 	\item \textbf{Description:} It allows modifying the quiz.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -537,7 +539,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete quiz}
+\subsubsection{Use case: Delete quiz}
 \begin{itemize}
 	\item \textbf{Description:} Delete the quiz of the selected active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -563,9 +565,9 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD audio effect}
+\subsection{CRUD audio effect}
 \hypertarget{crearaudio}{}
-\subsection{Create audio effect}
+\subsubsection{Use case: Create audio effect}
 \begin{itemize}
 	\item \textbf{Description:} Sets a background audio effect on the active point.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -607,7 +609,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update audio effect}
+\subsubsection{Use case: Update audio effect}
 \begin{itemize}
 	\item \textbf{Description:} Allows you to modify an audio effect.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -625,7 +627,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete audio effect}
+\subsubsection{Use case: Delete audio effect}
 \begin{itemize}
 	\item \textbf{Description:} Delete an audio effect from an active point.
 	\item \textbf{Actors:} Creador-editor (usuario).
@@ -652,7 +654,7 @@ All the use cases described below have the following implicit precondition to be
 \end{itemize}
 
 
-\section{CRUD additional information}
+\subsection{CRUD additional information}
 \begin{itemize}
 	\item \textbf{Description:} Insert a text as additional fantasy information.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -672,7 +674,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{Organize active points}
+\subsection{Use case: Organize active points}
 \begin{itemize}
 	\item \textbf{Description:} Organize the appearance of active points.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -694,9 +696,9 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{CRUD final quiz}
+\subsection{CRUD final quiz}
 \hypertarget{crearquizfinal}{}
-\subsection{Create final quiz}
+\subsubsection{Use case: Create final quiz}
 \begin{itemize}
 	\item \textbf{Description:} Create a questionnaire about the subject that fantasy deals with.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -738,7 +740,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Visualize final quiz}
+\subsubsection{Use case: Visualize final quiz}
 \begin{itemize}
 	\item \textbf{Description:} Shows the status of quiz.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -757,7 +759,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Update final quiz}
+\subsubsection{Use case: Update final quiz}
 \begin{itemize}
 	\item \textbf{Description:} It allows modifying the final quiz.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -776,7 +778,7 @@ All the use cases described below have the following implicit precondition to be
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\subsection{Delete final quiz}
+\subsubsection{Use case: Delete final quiz}
 \begin{itemize}
 	\item \textbf{Description:} Delete the final quiz of the fantasy.
 	\item \textbf{Actors:} Creator-editor (user).
@@ -854,3 +856,12 @@ All the use cases described below have the following implicit precondition to be
 %	\item \textbf{No-funcional:}
 %	\item \textbf{Cuestiones:}
 %\end{itemize}
+
+\section{User interface desing}
+
+\section{Data design}
+\textcolor{red}{DATABASE DIAGRAM}
+
+\section{Design of components}
+
+\section{Parameterization of the base software}

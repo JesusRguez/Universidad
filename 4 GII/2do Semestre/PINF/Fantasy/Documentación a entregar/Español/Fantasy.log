@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  7 MAY 2019 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  10 MAY 2019 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,6 +419,11 @@ File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
 File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language83
+LaTeX Info: Redefining \_ on input line 43.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -428,33 +433,37 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 
-(./Introduccion.aux) (./PlanProyecto.aux) (./AnalisisRequisitos.aux)
-(./CasosUso.aux))
+(./Resumen.aux) (./Prolegomeno/Introduccion.aux)
+(./Prolegomeno/PlanProyecto.aux) (./Desarrollo/AnalisisRequisitos.aux)
+(./Desarrollo/CasosUso.aux) (./Desarrollo/Implementacion.aux)
+(./Desarrollo/Pruebas.aux) (./Epilogo/ManualUsuario.aux)
+(./Epilogo/ManualInstalacionExplotacion.aux) (./Epilogo/Conclusiones.aux))
 \openout1 = `Fantasy.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 92.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 111.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 92.
+Package hyperref Info: Link coloring ON on input line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -464,9 +473,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 92.
-LaTeX Info: Redefining \pageref on input line 92.
-LaTeX Info: Redefining \nameref on input line 92.
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
 
 (./Fantasy.out) (./Fantasy.out)
 \@outlinefile=\write3
@@ -503,110 +512,146 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
 \c@lstlisting=\count133
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 104.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 11
-6.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 15
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 11
-6.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 15
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 11
-6.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 15
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 11
-6.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 15
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 116.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 153.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 116.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 153.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 153.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 153.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 153.
 
-<UCA.png, id=313, 401.5pt x 401.5pt>
+<UCA.png, id=353, 401.5pt x 401.5pt>
 File: UCA.png Graphic file (type png)
  <use UCA.png>
-Package pdftex.def Info: UCA.png used on input line 117.
+Package pdftex.def Info: UCA.png used on input line 154.
 (pdftex.def)             Requested size: 70.46037pt x 70.4596pt.
 
-<ESI.png, id=315, 1027.84pt x 1027.84pt>
+<ESI.png, id=355, 1027.84pt x 1027.84pt>
 File: ESI.png Graphic file (type png)
  <use ESI.png>
-Package pdftex.def Info: ESI.png used on input line 117.
+Package pdftex.def Info: ESI.png used on input line 154.
 (pdftex.def)             Requested size: 70.46037pt x 70.45053pt.
 
-<Stimey.png, id=316, 248.93pt x 250.9375pt>
+<Stimey.png, id=356, 248.93pt x 250.9375pt>
 File: Stimey.png Graphic file (type png)
  <use Stimey.png>
-Package pdftex.def Info: Stimey.png used on input line 117.
+Package pdftex.def Info: Stimey.png used on input line 154.
 (pdftex.def)             Requested size: 70.46037pt x 71.02782pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./UCA.png> <./ESI.png> <./
 Stimey.png (PNG copy)>] [2
 
-] (./Fantasy.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
- [3] [4])
-\tf@toc=\write4
-\openout4 = `Fantasy.toc'.
+]
+File: UCA.png Graphic file (type png)
+ <use UCA.png>
+Package pdftex.def Info: UCA.png used on input line 221.
+(pdftex.def)             Requested size: 70.46037pt x 70.4596pt.
+File: ESI.png Graphic file (type png)
+ <use ESI.png>
+Package pdftex.def Info: ESI.png used on input line 221.
+(pdftex.def)             Requested size: 70.46037pt x 70.45053pt.
+File: Stimey.png Graphic file (type png)
+ <use Stimey.png>
+Package pdftex.def Info: Stimey.png used on input line 221.
+(pdftex.def)             Requested size: 70.46037pt x 71.02782pt.
+ [3]
+\openout2 = `Resumen.aux'.
 
- [5]
-\openout2 = `Introduccion.aux'.
-
- (./Introduccion.tex [6
+ (./Resumen.tex
+[4
 
 
 ]
-Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[5]) [6
+
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 289.
+ (./Fantasy.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+ [7] [8])
+\tf@toc=\write4
+\openout4 = `Fantasy.toc'.
+
+ [9] [10
+
+]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 292.
+ [11] [12]
+\openout2 = `Prolegomeno/Introduccion.aux'.
+
+
+(./Prolegomeno/Introduccion.tex
+Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
-) [7] [8]
-\openout2 = `PlanProyecto.aux'.
+) [13
 
- (./PlanProyecto.tex
+
+] [14]
+\openout2 = `Prolegomeno/PlanProyecto.aux'.
+
+ (./Prolegomeno/PlanProyecto.tex
 Cap\'{\i }tulo 2.
-<Gantt.png, id=435, 1107.13625pt x 275.0275pt>
+<Gantt.png, id=511, 1107.13625pt x 275.0275pt>
 File: Gantt.png Graphic file (type png)
  <use Gantt.png>
 Package pdftex.def Info: Gantt.png used on input line 13.
 (pdftex.def)             Requested size: 464.99405pt x 115.51076pt.
- [9
+ [15
 
 
 
@@ -616,61 +661,114 @@ Overfull \hbox (5.58405pt too wide) in paragraph at lines 31--32
  Atom, Vi-sual Stu-dio Co-de, TeXS-tu-dio, PhPM-yAd-min, MySQL,
  []
 
-[10] [11]) [12]
-\openout2 = `AnalisisRequisitos.aux'.
+[16] [17]) [18] [19
 
- (./AnalisisRequisitos.tex
+
+] [20]
+\openout2 = `Desarrollo/AnalisisRequisitos.aux'.
+
+ (./Desarrollo/AnalisisRequisitos.tex
 Cap\'{\i }tulo 3.
-[13
+[21
 
 
+] [22]) [23]
+\openout2 = `Desarrollo/CasosUso.aux'.
 
-] [14]) [15]
-\openout2 = `CasosUso.aux'.
-
- (./CasosUso.tex [16
+ (./Desarrollo/CasosUso.tex [24
 
 
 
 ]
 Cap\'{\i }tulo 4.
-[17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 458.
+[25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 460.
- [28] [29] [30] [31]
-[32] [33] [34]) [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+ [35]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 462.
+ [36] [37] [38] [39]
+[40] [41] [42] [43]) [44]
+\openout2 = `Desarrollo/Implementacion.aux'.
+
+ (./Desarrollo/Implementacion.tex
+Cap\'{\i }tulo 5.
+) [45
+
+
+
+]
+\openout2 = `Desarrollo/Pruebas.aux'.
+
+ (./Desarrollo/Pruebas.tex [46
+
+
+
+]
+Cap\'{\i }tulo 6.
+) [47] [48
+
+
+] [49] [50]
+\openout2 = `Epilogo/ManualUsuario.aux'.
+
+ (./Epilogo/ManualUsuario.tex
+Cap\'{\i }tulo 7.
+) [51
+
+
+]
+\openout2 = `Epilogo/ManualInstalacionExplotacion.aux'.
+
+ (./Epilogo/ManualInstalacionExplotacion.tex [52
+
+
+
+]
+Cap\'{\i }tulo 8.
+) [53]
+\openout2 = `Epilogo/Conclusiones.aux'.
+
+ (./Epilogo/Conclusiones.tex [54
+
+
+
+]
+Cap\'{\i }tulo 9.
+) [55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
  (./Fantasy.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- (./Introduccion.aux) (./PlanProyecto.aux)
-(./AnalisisRequisitos.aux) (./CasosUso.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+ (./Resumen.aux) (./Prolegomeno/Introduccion.aux)
+(./Prolegomeno/PlanProyecto.aux) (./Desarrollo/AnalisisRequisitos.aux)
+(./Desarrollo/CasosUso.aux) (./Desarrollo/Implementacion.aux)
+(./Desarrollo/Pruebas.aux) (./Epilogo/ManualUsuario.aux)
+(./Epilogo/ManualInstalacionExplotacion.aux) (./Epilogo/Conclusiones.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
 Package rerunfilecheck Info: File `Fantasy.out' has not changed.
-(rerunfilecheck)             Checksum: 46BC0DF9C6EE1AEEAA850A40D4B29790;5442.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
+(rerunfilecheck)             Checksum: BEC3527E98594E8A4F43BE525FE621CC;6140.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
  ) 
 Here is how much of TeX's memory you used:
- 10714 strings out of 493013
- 149847 string characters out of 6135682
- 301975 words of memory out of 5000000
- 13648 multiletter control sequences out of 15000+600000
- 70308 words of font info for 70 fonts, out of 8000000 for 9000
+ 10870 strings out of 493013
+ 152423 string characters out of 6135682
+ 301996 words of memory out of 5000000
+ 13701 multiletter control sequences out of 15000+600000
+ 62553 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,49p,589b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,49p,600b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on Fantasy.pdf (35 pages, 465017 bytes).
+Output written on Fantasy.pdf (55 pages, 472382 bytes).
 PDF statistics:
- 945 PDF objects out of 1000 (max. 8388607)
- 889 compressed objects within 9 object streams
- 398 named destinations out of 1000 (max. 500000)
- 637 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1119 PDF objects out of 1200 (max. 8388607)
+ 1041 compressed objects within 11 object streams
+ 453 named destinations out of 1000 (max. 500000)
+ 717 words of extra memory for PDF output out of 10000 (max. 10000000)
 

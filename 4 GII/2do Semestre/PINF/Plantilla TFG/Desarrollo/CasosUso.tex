@@ -1,9 +1,5 @@
 \chapter{Diseño del sistema}
-
-\textcolor{red}{PARA SEGUIR EL DOCUMENTO DE CARLOS, PODEMOS DECIR QUE, SI LA ARQUITECTURA DE DISEÑO SON LOS CASOS DE USO, Y LA ARQUITECTURA LÓGICA SON LAS TABLAS DE LA BASE DE DATOS, PODEMOS DEJAR LO QUE  HAY AQUÍ DE CASOS DE USO TAL Y COMO ESTÁ Y, SIMPLEMENTE, AÑADIR EL DIAGRAMA DE LA BASE DE DATOS.\\AÑADIR SUB A TODAS LAS SUBSECCIONES PARA PONERLAS COMO SUBSUBSECCIONES PARA QUE SALGAN EN ROSITA Y QUEDE MEJOR}
-
-\section{Casos de uso}
-
+\section{Diseño de casos de uso}
 En el diseño del sistema se han propuesto una serie de casos de uso que tienen la siguiente precondición implícita para poder usar dichos casos de uso en la aplicación final:
 \begin{itemize}
 	\item El usuario (profesorado/alumnado) debe tener una cuenta en la plataforma de Stimey y haber iniciado sesión con dicha cuenta.
@@ -48,7 +44,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Visualizar fantasía}
+\subsubsection{Caso de uso: Visualizar fantasía}
 \begin{itemize}
 	\item \textbf{Descripción:} Lee una fantasía ya existente.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -71,7 +67,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar fantasía}
+\subsubsection{Caso de uso: Modificar fantasía}
 \begin{itemize}
 	\item \textbf{Descripción:} Modifica una fantasía ya existente.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -92,7 +88,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar fantasía}
+\subsubsection{Caso de uso: Borrar fantasía}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra una fantasía ya existente.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -121,7 +117,7 @@ Los casos de uso propuestos son los siguientes:
 \end{itemize}
 
 
-\section{Elegir idioma}
+\subsection{Caso de uso: Elegir idioma}
 \begin{itemize}
 	\item \textbf{Descripción:} Cambia el idioma de la aplicación.
 	\item \textbf{Actores:} Profesor o alumno (usuario).
@@ -140,7 +136,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Copiar fantasía}
+\subsection{Caso de uso: Copiar fantasía}
 \begin{itemize}
 	\item \textbf{Descripción:} Clona una fantasía.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -161,7 +157,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD background}
+\subsection{CRUD background}
 \begin{itemize}
 	\item \textbf{Descripción:} Permite seleccionar, modificar y borrar el background.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -181,8 +177,8 @@ Los casos de uso propuestos son los siguientes:
 \end{itemize}
 
 
-\section{CRUD punto activo}
-\subsection{Crear punto activo}
+\subsection{CRUD punto activo}
+\subsubsection{Caso de uso: Crear punto activo}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea un punto activo nuevo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -201,7 +197,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Visualizar punto activo}
+\subsubsection{Caso de uso: Visualizar punto activo}
 \begin{itemize}
 	\item \textbf{Descripción:} Muestra un punto activo existente para su lectura.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -220,7 +216,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar punto activo}
+\subsubsection{Caso de uso: Modificar punto activo}
 \begin{itemize}
 	\item \textbf{Descripción:} Modifica un punto activo existente.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -239,7 +235,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar punto activo}
+\subsubsection{Caso de uso: Borrar punto activo}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra un punto activo existente.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -265,9 +261,9 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD imagen} %suponemos que es para un punto activo
+\subsection{CRUD imagen} %suponemos que es para un punto activo
 \hypertarget{crearimagen}{}
-\subsection{Crear imagen}
+\subsubsection{Caso de uso: Crear imagen}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta una imagen en un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -309,7 +305,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} ¿Podrá modificar el tamaño original de la imagen o hacer recortes?
 \end{itemize}
 
-\subsection{Modificar imagen}
+\subsubsection{Caso de uso: Modificar imagen}
 \begin{itemize}
 	\item \textbf{Descripción:} Modifica una imagen.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -319,7 +315,7 @@ Los casos de uso propuestos son los siguientes:
 	\begin{enumerate}
 		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
 		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item Paso 4 de \hyperlink{crearimagen}{\textcolor{blue}{Crear imagen}}.
+		\item Paso 4 de \hyperlink{crearimagen}{Crear imagen}.
 	\end{enumerate}
 	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
@@ -327,7 +323,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar imagen}
+\subsubsection{Caso de uso: Borrar imagen}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra una imagen de un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -353,9 +349,9 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD vídeo}
+\subsection{CRUD vídeo}
 \hypertarget{crearvideo}{}
-\subsection{Crear vídeo}
+\subsubsection{Caso de uso: Crear vídeo}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta un vídeo dentro de un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -397,7 +393,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar vídeo}
+\subsubsection{Caso de uso: Modificar vídeo}
 \begin{itemize}
 	\item \textbf{Descripción:} Modifica un vídeo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -407,7 +403,7 @@ Los casos de uso propuestos son los siguientes:
 	\begin{enumerate}
 		\item El usuario selecciona el punto activo correspondiente dentro de la fantasía.
 		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item Paso 4 de \hyperlink{crearvideo}{\textcolor{blue}{Crear vídeo}}.
+		\item Paso 4 de \hyperlink{crearvideo}{Crear vídeo}.
 	\end{enumerate}
 	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
@@ -415,7 +411,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar vídeo}
+\subsubsection{Caso de uso: Borrar vídeo}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra un vídeo de un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -441,7 +437,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD texto}
+\subsection{CRUD texto}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta un texto en un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -461,9 +457,9 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD \textit{quiz}}
+\subsection{CRUD \textit{quiz}}
 \hypertarget{crearquiz}{}
-\subsection{Crear \textit{quiz}}
+\subsubsection{Caso de uso: Crear \textit{quiz}}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea un pequeño cuestionario sobre el tema del que trata el punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -505,7 +501,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Visualizar \textit{quiz}}
+\subsubsection{Caso de uso: Visualizar \textit{quiz}}
 \begin{itemize}
 	\item \textbf{Descripción:} Muestra el estado del \textit{quiz}.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -524,7 +520,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar \textit{quiz}}
+\subsubsection{Caso de uso: Modificar \textit{quiz}}
 \begin{itemize}
 	\item \textbf{Descripción:} Permite modificar el \textit{quiz}.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -535,7 +531,7 @@ Los casos de uso propuestos son los siguientes:
 		\item El usuario selecciona el punto activo correspondiente.
 		\item El sistema muestra una ventana emergente con la información del punto activo.
 		\item El usuario selecciona la opción ``Modificar \textit{quiz}''.
-		\item Paso 4 de \hyperlink{crearquiz}{\textcolor{blue}{Crear \textit{Quiz}}}
+		\item Paso 4 de \hyperlink{crearquiz}{Crear \textit{Quiz}}.
 	\end{enumerate}
 	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
@@ -543,7 +539,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar \textit{quiz}}
+\subsubsection{Caso de uso: Borrar \textit{quiz}}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra el \textit{quiz} del punto activo seleccionado.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -569,9 +565,9 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD efecto de audio}
+\subsection{CRUD efecto de audio}
 \hypertarget{crearaudio}{}
-\subsection{Crear efecto de audio}
+\subsubsection{Caso de uso: Crear efecto de audio}
 \begin{itemize}
 	\item \textbf{Descripción:} Establece un efecto de audio de fondo en el punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -613,7 +609,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar efecto de audio}
+\subsubsection{Caso de uso: Modificar efecto de audio}
 \begin{itemize}
 	\item \textbf{Descripción:} Modificar efecto de audio.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -623,7 +619,7 @@ Los casos de uso propuestos son los siguientes:
 	\begin{enumerate}
 		\item El usuario selecciona el punto activo.
 		\item El sistema abre una ventana emergente con la información del punto activo.
-		\item Paso 4 de \hyperlink{crearaudio}{\textcolor{blue}{Crear audio}}
+		\item Paso 4 de \hyperlink{crearaudio}{Crear audio}.
 	\end{enumerate}
 	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
@@ -631,7 +627,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar efecto de audio}
+\subsubsection{Caso de uso: Borrar efecto de audio}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra un efecto de audio de un punto activo.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -658,7 +654,7 @@ Los casos de uso propuestos son los siguientes:
 \end{itemize}
 
 
-\section{CRUD información adicional}
+\subsection{CRUD información adicional}
 \begin{itemize}
 	\item \textbf{Descripción:} Inserta un texto como información adicional de la fantasía.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -678,7 +674,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{Organizar puntos activos}
+\subsection{Organizar puntos activos}
 \begin{itemize}
 	\item \textbf{Descripción:} Organiza la aparición de los puntos activos.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -700,9 +696,9 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\section{CRUD \textit{quiz} final}
+\subsection{CRUD \textit{quiz} final}
 \hypertarget{crearquizfinal}{}
-\subsection{Crear \textit{quiz} final}
+\subsubsection{Caso de uso: Crear \textit{quiz} final}
 \begin{itemize}
 	\item \textbf{Descripción:} Crea un cuestionario sobre el tema del que trata la fantasía.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -744,7 +740,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Visualizar \textit{quiz} final}
+\subsubsection{Caso de uso: Visualizar \textit{quiz} final}
 \begin{itemize}
 	\item \textbf{Descripción:} Muestra el estado del \textit{quiz}.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -763,7 +759,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Modificar \textit{quiz} final}
+\subsubsection{Caso de uso: Modificar \textit{quiz} final}
 \begin{itemize}
 	\item \textbf{Descripción:} Permite modificar el \textit{quiz} final.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -774,7 +770,7 @@ Los casos de uso propuestos son los siguientes:
 		\item El usuario pulsa el botón de "Cuestionario final".
 		\item El sistema muestra las posibles opciones.
 		\item El usuario selecciona la opción ``Modificar \textit{quiz} final''.
-		\item Caso de uso \hyperlink{crearquizfinal}{\textcolor{blue}{Crear \textit{Quiz} final}}
+		\item Caso de uso \hyperlink{crearquizfinal}{Crear \textit{quiz} final}.
 	\end{enumerate}
 	\item \textbf{Extensiones:} \\ *a) En cualquier momento, el usuario puede volver atrás.
 	\item \textbf{Variaciones:} Ninguna.
@@ -782,7 +778,7 @@ Los casos de uso propuestos son los siguientes:
 	\item \textbf{Cuestiones:} Ninguna.
 \end{itemize}
 
-\subsection{Borrar \textit{quiz} final}
+\subsubsection{Caso de uso: Borrar \textit{quiz} final}
 \begin{itemize}
 	\item \textbf{Descripción:} Borra el \textit{quiz} final de la fantasía.
 	\item \textbf{Actores:} Creador-editor (usuario).
@@ -860,3 +856,12 @@ Los casos de uso propuestos son los siguientes:
 %	\item \textbf{No-funcional:}
 %	\item \textbf{Cuestiones:}
 %\end{itemize}
+
+\section{Diseño de la interfaz de usuario}
+
+\section{Diseño de datos}
+\textcolor{red}{DIAGRAMA DE LA BASE DE DATOS}
+
+\section{Diseño de componentes}
+
+\section{Parametrización del software base}
