@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  8 MAY 2019 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  10 MAY 2019 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,9 +683,9 @@ Cap\'{\i }tulo 3.
 Cap\'{\i }tulo 4.
 [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 462.
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 464.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 466.
  [36] [37] [38] [39]
 [40] [41] [42]) [43]
 \openout2 = `Desarrollo/Implementacion.aux'.
@@ -748,13 +748,13 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
 Package rerunfilecheck Info: File `Fantasy.out' has not changed.
-(rerunfilecheck)             Checksum: 29A05225B86028F3B4950B0BA0BCD70F;7462.
+(rerunfilecheck)             Checksum: C030D65468D9D8FE7D69D32CEA0FDBBA;7457.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
  ) 
 Here is how much of TeX's memory you used:
- 10885 strings out of 493013
- 152774 string characters out of 6135682
- 302996 words of memory out of 5000000
+ 10886 strings out of 493013
+ 152784 string characters out of 6135682
+ 302993 words of memory out of 5000000
  13721 multiletter control sequences out of 15000+600000
  62553 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -764,10 +764,10 @@ e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on Fantasy.pdf (55 pages, 474931 bytes).
+Output written on Fantasy.pdf (55 pages, 475174 bytes).
 PDF statistics:
- 1194 PDF objects out of 1200 (max. 8388607)
- 1115 compressed objects within 12 object streams
- 448 named destinations out of 1000 (max. 500000)
+ 1195 PDF objects out of 1200 (max. 8388607)
+ 1116 compressed objects within 12 object streams
+ 449 named destinations out of 1000 (max. 500000)
  877 words of extra memory for PDF output out of 10000 (max. 10000000)
 
