@@ -6,6 +6,7 @@
 #include <cstring>
 #include <functional>
 #include <algorithm>
+#include <set>
 #include "tarjeta.hpp"
 #include "usuario.hpp"
 
@@ -40,11 +41,33 @@ bool operator <(const Numero& n1, const Numero& n2){
 }
 
 //Constructor de tarjeta:
-Tarjeta::Tarjeta (const Tipo& tipo, const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad):tipo_(tipo), numero_(numero), usuario_(&usuario), fechaExp_(fecha_caducidad), titular_facial_(usuario.nombre() + " " + usuario.apellidos()){
+Tarjeta::Tarjeta (const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad):numero_(numero), usuario_(&usuario), fechaExp_(fecha_caducidad){
 	if (fecha_caducidad < Fecha())
 		throw Caducada(fecha_caducidad);
 
+	activa_ = true;
 	usuario_->es_titular_de(*this);
+
+	switch (numero[0]) {
+		case '3':{
+			if (numero[1] == 4 || numero[1] == 7) {
+				tipo_ = AmericanExpress;
+			}else{
+				tipo_ = JCB;
+			}
+		} break;
+		case '4': tipo_ = VISA; break;
+		case '5': tipo_ = Mastercard; break;
+		case '6': tipo_ = Maestro; break;
+		default: tipo_ = Otro;
+	}
+
+	std::pair<std::set<Numero>::iterator, bool> ret;
+	ret = numeros_.insert(numero);
+
+	if (ret.second == false) {
+		throw Num_duplicado(numero);
+	}
 }
 
 //Destructor de tarjeta:
@@ -68,9 +91,15 @@ Fecha Tarjeta::caducidad() const{
 	return fechaExp_;
 }
 
-//Mostrar titular facial:
-Cadena Tarjeta::titular_facial() const{
-	return titular_facial_;
+//Mostrar si está activa:
+bool Tarjeta::activa() const{
+	return activa_;
+}
+
+//Cambiar activada/desactivada:
+bool Tarjeta::activa(bool a){
+	activa_ = a;
+	return activa_;
 }
 
 //Mostrar titular:
@@ -81,6 +110,7 @@ const Usuario* Tarjeta::titular() const{
 //Anular titular:
 void Tarjeta::anula_titular(){
 	const_cast<Usuario*&>(usuario_) = nullptr;
+	activa_ = false;
 }
 
 //Operador <:
@@ -91,17 +121,18 @@ bool operator < (const Tarjeta& t1,const Tarjeta& t2){
 //operador <<:
 ostream& operator << (ostream& os, Tarjeta::Tipo const& tipo){
 	switch (tipo){
-		case 0: os << "VISA";  break;
-		case 1: os << "Mastercard"; break;
-		case 2: os << "Maestro";  break;
-		case 3: os << "JCB"; break;
-		case 4: os << "AmericanExpress"; break;
+		case 0: os << "Otro"; break;
+		case 1: os << "VISA"; break;
+		case 2: os << "Mastercard"; break;
+		case 3: os << "Maestro"; break;
+		case 4: os << "JCB"; break;
+		case 5: os << "AmericanExpress"; break;
 	}
 
   return os;
 }
 
 ostream& operator << (ostream& os , const Tarjeta& t){
-	os << t.tipo() << endl << t.numero() << endl << t.titular_facial() << endl << "Caduca: " << setfill('0') << setw(2) << t.caducidad().mes() << "/" << setw(2) << (t.caducidad().anno() % 100) << endl;
+	os << t.tipo() << endl << t.numero() << endl << t.titular()->nombre() << " " << t.titular()->apellidos() << endl << "Caduca: " << setfill('0') << setw(2) << t.caducidad().mes() << "/" << setw(2) << (t.caducidad().anno() % 100) << endl;
 	return os;
 }
