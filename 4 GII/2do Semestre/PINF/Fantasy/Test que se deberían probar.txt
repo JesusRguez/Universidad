@@ -1,0 +1,8 @@
+En /tests/Feature:
+	- Que cargue todos lso directorios de la página web (todas las rutas).
+
+En /tests/Unit:
+	- Que cargue todas las funciones y métodos de las rutas establecidas.
+	- Crear fantasía.
+	- Crear punto activo.
+	- Básicamente lo mismo con todos los casos de uso mencionados en la documentación.
