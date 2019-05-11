@@ -1,12 +1,13 @@
 //tarjeta.cpp
 
-//Jesús Rodríguez Heras 2018
+//Jesús Rodríguez Heras 2019
 
 #include <iomanip>
 #include <cstring>
 #include <functional>
 #include <algorithm>
 #include <set>
+#include <ctype.h>
 #include "tarjeta.hpp"
 #include "usuario.hpp"
 
@@ -133,6 +134,17 @@ ostream& operator << (ostream& os, Tarjeta::Tipo const& tipo){
 }
 
 ostream& operator << (ostream& os , const Tarjeta& t){
-	os << t.tipo() << endl << t.numero() << endl << t.titular()->nombre() << " " << t.titular()->apellidos() << endl << "Caduca: " << setfill('0') << setw(2) << t.caducidad().mes() << "/" << setw(2) << (t.caducidad().anno() % 100) << endl;
+	Cadena nombre(t.titular()->nombre());
+	Cadena apellidos(t.titular()->apellidos());
+
+	for (size_t i = 0; i < nombre.length(); ++i) {
+		nombre[i] = toupper(nombre[i]);
+	}
+
+	for (size_t i = 0; i < apellidos.length(); ++i) {
+		apellidos[i] = toupper(apellidos[i]);
+	}
+
+	os << t.tipo() << endl << t.numero() << endl << nombre << " " << apellidos << endl << "Caduca: " << setfill('0') << setw(2) << t.caducidad().mes() << "/" << setw(2) << (t.caducidad().anno() % 100) << endl;
 	return os;
 }

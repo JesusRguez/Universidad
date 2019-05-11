@@ -1,5 +1,7 @@
 //cadena.hpp
 
+//Jesús Rodríguez Heras 2019
+
 #ifndef CADENA_H_
 #define CADENA_H_
 #include <iostream>

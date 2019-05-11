@@ -1,6 +1,6 @@
 //articulo.hpp
 
-//Jesús Rodríguez Heras 2018
+//Jesús Rodríguez Heras 2019
 
 #ifndef ARTICULO_HPP_
 #define ARTICULO_HPP_

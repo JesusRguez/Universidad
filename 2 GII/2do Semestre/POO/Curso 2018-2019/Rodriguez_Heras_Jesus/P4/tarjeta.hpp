@@ -1,6 +1,6 @@
 //tarjeta.hpp
 
-//Jesús Rodríguez Heras 2018
+//Jesús Rodríguez Heras 2019
 
 #ifndef TARJETA_HPP_
 #define TARJETA_HPP_

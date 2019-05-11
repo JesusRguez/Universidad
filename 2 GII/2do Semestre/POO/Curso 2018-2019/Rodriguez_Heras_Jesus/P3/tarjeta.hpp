@@ -1,11 +1,12 @@
 //tarjeta.hpp
 
-//Jesús Rodríguez Heras 2018
+//Jesús Rodríguez Heras 2019
 
 #ifndef TARJETA_HPP_
 #define TARJETA_HPP_
 #include <iostream>
 #include <algorithm>
+#include <set>
 #include "fecha.hpp"
 #include "cadena.hpp"
 
@@ -58,10 +59,13 @@ class Usuario;
 class Tarjeta{
 public:
 	//Tipo enumerado de tarjeta:
-	enum Tipo{VISA, Mastercard, Maestro, JCB, AmericanExpress};
+	enum Tipo{Otro,VISA, Mastercard, Maestro, JCB, AmericanExpress};
+
+	//Set de números:
+	typedef std::set<Numero> numeros;
 
 	//Constructor de tarjeta:
-	Tarjeta (const Tipo& tipo, const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad);
+	Tarjeta (const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad);
 
 	//Evitar copia:
 	Tarjeta(const Tarjeta&) = delete;
@@ -79,8 +83,11 @@ public:
 	//Mostrar fecha de caducidad:
 	Fecha caducidad() const;
 
-	//Mostrar titular facial:
-	Cadena titular_facial() const;
+	//Mostrar si está activa:
+	bool activa() const;
+
+	//Cambiar activada/desactivada:
+	bool activa(bool a = true);
 
 	//Mostrar titular:
 	const Usuario* titular() const;
@@ -88,25 +95,42 @@ public:
 	//Anular titular:
 	void anula_titular();
 
-	//Clase caducada:
+	//Clase Caducada:
 	class Caducada{
 	public:
-		//Constructor de caducada:
+		//Constructor de Caducada:
 		Caducada(const Fecha& caducada) : caducada_(caducada){}
 
 		//Mostrar cuando caducó:
-		const Fecha& cuando() const { return caducada_;}
+		const Fecha& cuando() const { return caducada_; }
 
 	private:
 		Fecha caducada_;
-};
+	};
+
+	//Clase Desactivada:
+	class Desactivada{};
+
+	//Clase Num_duplicado:
+	class Num_duplicado{
+	public:
+		//Constructor de Num_duplicado:
+		Num_duplicado(const Numero& numero) : numero_(numero){}
+
+		//Mostrar número duplicado:
+		const Numero& que() const { return numero_; }
+
+	private:
+		Numero numero_;
+	};
 
 private:
 	Tipo tipo_;
 	Numero numero_;
 	Usuario* const usuario_;
 	Fecha fechaExp_;
-	Cadena titular_facial_;
+	bool activa_;
+	numeros numeros_;
 };
 
 //Operador < de tarjetas:

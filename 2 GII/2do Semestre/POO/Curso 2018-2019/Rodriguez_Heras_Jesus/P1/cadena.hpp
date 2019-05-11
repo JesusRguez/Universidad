@@ -1,6 +1,6 @@
 //cadena.hpp
 
-//Jesús Rodríguez Heras 2018
+//Jesús Rodríguez Heras 2019
 
 #ifndef CADENA_H_
 #define CADENA_H_

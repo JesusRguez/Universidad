@@ -1,5 +1,7 @@
 //cadena.cpp
 
+//Jesús Rodríguez Heras 2019
+
 #include <iostream>
 #include <cstring>
 #include <stdexcept>
