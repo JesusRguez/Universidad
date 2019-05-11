@@ -1,3 +1,10 @@
+// Create a test in the Feature directory...
+php artisan make:test UserTest
+
+// Create a test in the Unit directory...
+php artisan make:test UserTest --unit
+
+
 En /tests/Feature:
 	- Que cargue todos lso directorios de la página web (todas las rutas).
 
