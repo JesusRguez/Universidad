@@ -122,7 +122,7 @@ bool operator < (const Tarjeta& t1,const Tarjeta& t2){
 //operador <<:
 ostream& operator << (ostream& os, Tarjeta::Tipo const& tipo){
 	switch (tipo){
-		case 0: os << "Otro"; break;
+		case 0: os << "Tipo indeterminado"; break;
 		case 1: os << "VISA"; break;
 		case 2: os << "Mastercard"; break;
 		case 3: os << "Maestro"; break;

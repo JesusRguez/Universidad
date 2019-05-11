@@ -122,7 +122,7 @@ bool operator < (const Tarjeta& t1,const Tarjeta& t2){
 //operador <<:
 ostream& operator << (ostream& os, Tarjeta::Tipo const& tipo){
 	switch (tipo){
-		case 0: os << "Otro"; break;
+		case 0: os << "Tipo indeterminado"; break;
 		case 1: os << "VISA"; break;
 		case 2: os << "Mastercard"; break;
 		case 3: os << "Maestro"; break;
@@ -144,6 +144,8 @@ ostream& operator << (ostream& os , const Tarjeta& t){
 	for (size_t i = 0; i < apellidos.length(); ++i) {
 		apellidos[i] = toupper(apellidos[i]);
 	}
+
+
 
 	os << t.tipo() << endl << t.numero() << endl << nombre << " " << apellidos << endl << "Caduca: " << setfill('0') << setw(2) << t.caducidad().mes() << "/" << setw(2) << (t.caducidad().anno() % 100) << endl;
 	return os;

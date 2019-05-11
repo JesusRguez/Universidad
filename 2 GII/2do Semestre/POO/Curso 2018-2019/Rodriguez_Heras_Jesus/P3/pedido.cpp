@@ -14,6 +14,7 @@ Pedido::Pedido(Usuario_Pedido& u_p, Pedido_Articulo& p_a, Usuario& u, const Tarj
 	if(u.n_articulos()==0) throw Vacio(&u);
 	if(t.titular()!=&u) throw Impostor(&u);
 	if(t.caducidad()<fp) throw Tarjeta::Caducada(t.caducidad());
+	if(!t.activa()) throw Tarjeta::Desactivada();
 	for(const pair<Articulo*, unsigned> c : u.compra()){
 		if(c.first->stock() < c.second){
 			const_cast<Usuario::Articulos&>(u.compra()).clear();
