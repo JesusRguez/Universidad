@@ -1,3 +1,6 @@
+https://styde.net/pruebas-con-laravel/
+https://laravel.com/docs/5.8/http-tests
+
 // Create a test in the Feature directory...
 php artisan make:test UserTest
 
