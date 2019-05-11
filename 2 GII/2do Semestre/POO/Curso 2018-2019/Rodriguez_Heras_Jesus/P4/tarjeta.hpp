@@ -6,6 +6,7 @@
 #define TARJETA_HPP_
 #include <iostream>
 #include <algorithm>
+#include <set>
 #include "fecha.hpp"
 #include "cadena.hpp"
 
@@ -28,7 +29,7 @@ public:
 		Incorrecto (Numero::Razon razon):razon_(razon){}
 
 		//Razón:
-		Numero::Razon razon() const{ return razon_; }
+		Numero::Razon razon() const{return razon_;}
 
 	private:
 		Numero::Razon razon_;
@@ -44,13 +45,13 @@ bool operator <(const Numero& n1, const Numero& n2);
 //Es blanco:
 class EsBlanco: public unary_function<char, bool>{
 public:
-	bool operator()(char c) const { return isspace(c); }
+	bool operator()(char c) const {return isspace(c);}
 };
 
 //Es dígito:
 class EsDigito: public unary_function<char, bool>{
 public:
-	bool operator()(char c) const { return isdigit(c); }
+	bool operator()(char c) const {return isdigit(c);}
 };
 
 class Usuario;
@@ -58,10 +59,13 @@ class Usuario;
 class Tarjeta{
 public:
 	//Tipo enumerado de tarjeta:
-	enum Tipo{VISA, Mastercard, Maestro, JCB, AmericanExpress};
+	enum Tipo{Otro,VISA, Mastercard, Maestro, JCB, AmericanExpress};
+
+	//Set de números:
+	typedef std::set<Numero> numeros;
 
 	//Constructor de tarjeta:
-	Tarjeta (const Tipo& tipo, const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad);
+	Tarjeta (const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad);
 
 	//Evitar copia:
 	Tarjeta(const Tarjeta&) = delete;
@@ -71,27 +75,30 @@ public:
 	~Tarjeta();
 
 	//Mostrar tipo:
-	inline Tipo tipo() const noexcept { return tipo_; }
+	Tipo tipo() const;
 
 	//Mostrar número:
-	inline Numero numero() const noexcept { return numero_; }
+	Numero numero() const;
 
 	//Mostrar fecha de caducidad:
-	inline Fecha caducidad() const noexcept { return fechaExp_; }
+	Fecha caducidad() const;
 
-	//Mostrar titular facial:
-	inline Cadena titular_facial() const noexcept { return titular_facial_; }
+	//Mostrar si está activa:
+	bool activa() const;
+
+	//Cambiar activada/desactivada:
+	bool activa(bool a = true);
 
 	//Mostrar titular:
-	inline const Usuario* titular() const noexcept { return usuario_; }
+	const Usuario* titular() const;
 
 	//Anular titular:
 	void anula_titular();
 
-	//Clase caducada:
+	//Clase Caducada:
 	class Caducada{
 	public:
-		//Constructor de caducada:
+		//Constructor de Caducada:
 		Caducada(const Fecha& caducada) : caducada_(caducada){}
 
 		//Mostrar cuando caducó:
@@ -99,14 +106,31 @@ public:
 
 	private:
 		Fecha caducada_;
-};
+	};
+
+	//Clase Desactivada:
+	class Desactivada{};
+
+	//Clase Num_duplicado:
+	class Num_duplicado{
+	public:
+		//Constructor de Num_duplicado:
+		Num_duplicado(const Numero& numero) : numero_(numero){}
+
+		//Mostrar número duplicado:
+		const Numero& que() const { return numero_; }
+
+	private:
+		Numero numero_;
+	};
 
 private:
 	Tipo tipo_;
 	Numero numero_;
 	Usuario* const usuario_;
 	Fecha fechaExp_;
-	Cadena titular_facial_;
+	bool activa_;
+	numeros numeros_;
 };
 
 //Operador < de tarjetas:
