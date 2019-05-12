@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  16 MAR 2019 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  12 MAY 2019 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,6 +381,13 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+))
 (./Rodríguez_Heras_Jesús.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
@@ -587,10 +594,10 @@ Package rerunfilecheck Info: File `Rodríguez_Heras_Jesús.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 9521 strings out of 493013
- 135571 string characters out of 6135682
- 258165 words of memory out of 5000000
- 12914 multiletter control sequences out of 15000+600000
+ 9680 strings out of 493013
+ 138291 string characters out of 6135682
+ 261670 words of memory out of 5000000
+ 13067 multiletter control sequences out of 15000+600000
  29079 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,8n,49p,351b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -598,7 +605,7 @@ Here is how much of TeX's memory you used:
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb>
-Output written on Rodríguez_Heras_Jesús.pdf (2 pages, 109593 bytes).
+Output written on Rodríguez_Heras_Jesús.pdf (2 pages, 109439 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream
