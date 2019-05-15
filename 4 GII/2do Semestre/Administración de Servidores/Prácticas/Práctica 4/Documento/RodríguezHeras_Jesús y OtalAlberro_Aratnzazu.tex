@@ -101,7 +101,9 @@
 	%%%% REAL WORK BEGINS HERE:
 	
 	%%Configuracion del paquete listings
-	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=utf8/latin1, breaklines=true}
+	\lstset{language=bash, numbers=left, numberstyle=\tiny, numbersep=10pt, firstnumber=1, stepnumber=1, basicstyle=\small\ttfamily, tabsize=1, extendedchars=true, inputencoding=utf8/latin1, breaklines=true,literate=%
+		{á}{{\'a}}1 %Esto es para que me pille la tilde de página en el ejemplo de index.html
+	}
 	
 \section{Instalación de la máquina}
 En esta primera parte vamos a crear el entorno de trabajo que utilizaremos durante la práctica. Para ello vamos a:
@@ -242,8 +244,20 @@ Como ejemplo, vamos a modelar y configurar el entorno web del grupo de investiga
 
 Se deberá crear una web sencilla (Hola mundo) en cada uno de los dominios y carpetas. Las páginas deben tener caracteres con tildes, por lo que debemos configurar Apache para que trabaje con UTF8.
 
-Por defecto, no funciona la codificación UTF8, como podemos ver en la siguiente imagen:
+Para ello, usaremos el siguiente código en el fichero \texttt{/var/www/manolorg}:
+\begin{lstlisting}[language=html]
+<html>
+	<head>
+		<title>MANOLORG</title>
+	</head>
+	<body>
+		<p>Página de inicio de manolorg.</p>
+	</body>
+</html>
+\end{lstlisting}
+
 \newpage
+Por defecto, no funciona la codificación UTF8, como podemos ver en la siguiente imagen:
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.34]{SinUTF8.png}

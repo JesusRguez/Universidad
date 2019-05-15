@@ -4,7 +4,7 @@ Le damos a crear virtual host y ponemos el puerto 80.
 Creamos la carpeta del document root en "/var/www/manolo" y ponemos de nombre "manolo.ai" (cambiar lo que hay entre comillas).
 Al entrar en manolo.ai, sale lo que hemos puesto en el index.html que está en "/var/www/manolo/index.html"
 
-En webmin, en la edición de directivas globales, ponemos "adddefaultcharset utf-8" para que nos pille las tildes en español.
+En webmin, en la edición de directivas globales, ponemos "adddefaultcharset utf-8" para que nos pille las tildes en español. Y cuando hagamos el documento "index.html", hacerlo como html de verdad y no en texto plano, con su head, title, body y p.
 
 Para instalar php, hay que instalarlo y engancharle el módulo de php, para ello:
 	sudo apt-get install libapache2-mod-php "se supone que con esto valdría"
@@ -61,3 +61,11 @@ Luego, nos vamos a las directivas y ponemos "RewriteEngine On" y añadimos una r
 Guardamos y hacemos refresh.
 
 Si luego entramos en p.html, nos cambiará a p2.html. (esto es trasnparente, para que se vea el cambio, tendremos que ponerle la opción R)
+
+
+CONFIGURACIÓN DE BALANCEO DE CARGA:
+Para ello, mirar las diapositivas de apache, en la parte d balanceo de carga y mirar como se pone en el archivo de configuración "Edit Directives" del servidor main. Es ahí donde tendremos que poner el balanceo de carga hacia las demás máquinas con los factores de carga que queramos.
+
+Una vez que hayamos guardado el archivo, nos saldrá un directorio que nos mostrará las directivas que hemos incluido anteriormente.
+
+Cuando el balanceador de carga está ativo, podremos ver como va cambiando lo que sale en la página web en función de lo que hay en el index.html de cada nodo.
