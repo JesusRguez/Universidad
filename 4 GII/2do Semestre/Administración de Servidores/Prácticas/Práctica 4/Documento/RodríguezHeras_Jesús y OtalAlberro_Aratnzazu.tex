@@ -210,6 +210,46 @@ Como ejemplo, vamos a modelar y configurar el entorno web del grupo de investiga
 	
 	\item Se desea que solo se acceda a la dirección \texttt{/docs} solo pueda acceder el usuario \texttt{admin} y el usuario \texttt{manolo}.
 	
+	Para ello creamos el directorio \texttt{/docs} y lo añadimos como ``directory'' en webmin. Luego, vamos a ``Access control'' y añadimos lo siguiente:
+	\begin{itemize}
+		\item En authentication realm name hay que poner algo (lo que sea).
+		\item En restrict users by login poner ``All valid users''.
+		\item En Authentication tipe, lo ponemos en basic.
+		\item En clients must satisfy, ponemos ``All access control''.
+		\item En User text file, ponemos el directorio del archivo txt (acceso.txt) con las contraseñas de los usuarios.
+		\item En Basic login, en text file.	
+		\item Guardamos y volvemos a entrar y podremos ver edit users. Y podremos crear el usuario que queramos.
+	\end{itemize}
+	
+	\newpage
+	Debería quedar como en la siguiente imagen\footnote{Solo deberíamos tener un fichero de constraseñas, que debería estar en el document root de \texttt{manolorg.uca.es}.}:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{ControlAcceso.png}
+		\caption{Configuración de control de acceso.}
+		\label{Configuración de control de acceso}
+	\end{figure}
+
+	Para crear el usuario con su contraseña, le damos al botón ``Edit Users'' que hay en ``Access Control'' y lo ponemos tal como vemos en la siguiente imagen:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Usuarios.png}
+		\caption{Creación de usuarios.}
+		\label{Creación de usuarios}
+	\end{figure}
+
+	Para comprobar si funciona entramos a la dirección \texttt{manolorg.uca.es/docs} y veremos que nos pide el control de acceso como en la siguiente imagen:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Login.png}
+		\caption{Configuración de control de acceso en \texttt{manolorg.uca.es/docs}.}
+		\label{Configuración de control de acceso en manolorg.uca.es/docs}
+	\end{figure}
+
+	Si ponemos las credenciales creadas anteriormente, nos permitirá el acceso.
+	
 	\item No se mostrarán los directorios, excepto la carpeta \texttt{/software} que será solo accesible para el usuario \texttt{admin}.
 	
 	Para que el directorio \texttt{software} nos muestre el índice de archivos, tendremos que crear un nuevo ``directory'' llamado software, luego nos iremos al \texttt{Document Options} del nuevo directorio. Una vez ahí, tendremos que marcar la opción de ``Selected below'' y la opción ``Generate directory indexes'' como ``yes''. Quedaría como en la siguiente imagen:
@@ -219,6 +259,15 @@ Como ejemplo, vamos a modelar y configurar el entorno web del grupo de investiga
 		\includegraphics[scale=0.34]{Indexing.png}
 		\caption{Document Options para software}
 		\label{Document Options para software}
+	\end{figure}
+
+	También debemos configurar que solo tenga acceso el usuario admin en el ``Access Control''. Para ello, marcamos la opción ``Only these users'' como se ve en la siguiente imagen:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Admin.png}
+		\caption{Control de acceso para admin en \texttt{/software}.}
+		\label{Control de acceso para admin en /software}
 	\end{figure}
 	
 	\item La dirección \texttt{/sci2s} apuntará a la web \texttt{sci2s.ugr.es}.
@@ -238,8 +287,21 @@ Como ejemplo, vamos a modelar y configurar el entorno web del grupo de investiga
 	
 	Para cada uno de los laboratorios, crearemos un virtual host distinto, y, en las opciones de creación, pondremos el document root en ``/var/www/labX'' (siendo X el número del laboratorio), pondremos el puerto 80, como \texttt{server name} pondremos ``labX.manolorg.uca.es'' (siendo X el número del laboratorio).
 	
-	PONER FOTO DE QUE CARGAN LOS LABORATORIOS
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{CrearLab.png}
+		\caption{Ejemplo de creación de \texttt{lab2.manolorg.uca.es}.}
+		\label{Ejemplo de creación de lab2.manolorg.uca.es}
+	\end{figure}
 	
+	Una vez hecho lo mismo con ambos laboratorios, entramos en \texttt{lab1.manolorg.uca.es} y \texttt{lab2.manolorg.uca.es} para ver si funcionan ambos sitios, tal como se muestra en la siguiente imagen:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{FuncionanLabs.png}
+		\caption{Muestra del funcionamiento de los laboratorios.}
+		\label{Muestra del funcionamiento de los laboratorios}
+	\end{figure}
 \end{itemize}
 
 Se deberá crear una web sencilla (Hola mundo) en cada uno de los dominios y carpetas. Las páginas deben tener caracteres con tildes, por lo que debemos configurar Apache para que trabaje con UTF8.
@@ -278,4 +340,30 @@ Una vez añadida la directiva mencionada, podemos ver como sí que funciona la c
 	\caption{Con UTF8}
 	\label{Con UTF8}
 \end{figure}
+
+\section{Caché}
+Las imágenes (png, jpg) se cachearán para agilizar la web (hay muchas fotos). Esto se hará por medio del plugin expires.
+
+Para ello, iremos a ``Configure Apache Modules'' y seleccionamos la opción ``Expires''.
+
+Para descargar la imagen usar el siguiente comando:
+\begin{center}
+	\texttt{wget dirección}
+\end{center}
+
+Y la ubicaremos en el ``Document root'' del servidor\footnote{La hemos renombrado como \texttt{UCA.jpg} para que sea más corto.}.
+
+Siendo \texttt{dirección}, la dirección de la imagen.
+
+Para configurar la expiración de la caché, nos dirigimos al ``Edit directives'' del virtual host (\texttt{manolorg.uca.es}) y añadimos en el apartado de dicho directorio el siguiente código:
+\begin{center}
+	\texttt{ExpiresActive On\\
+		ExpiresByType image/jpeg ``access plus 3 minutes''}
+\end{center}
+
+Para comprobar si funciona abrimos una consola en nuestro ordenador y ejecutamos el comando:
+\begin{center}
+	\texttt{curl ---head manolorg.uca.es/UCA.jpg}
+\end{center}
+
 \end{document}

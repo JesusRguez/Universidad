@@ -33,8 +33,9 @@ Para el control de acceso, vamos a Access Control.
 Lo que vamos a hacer aquí es crear usuarios de webmin, que no tendrá nada que ver con los usuarios del sistema.
 
 En authentication realm name hay que poner algo (lo que sea).
+En restrict users by login poner "All valid users".
 En Authentication tipe, lo ponemos en basic.
-En User text file, ponemos el directorio del archivo txt (acceso.txt) con las contraseñas de los usuaarios.
+En User text file, ponemos el directorio del archivo txt (acceso.txt) con las contraseñas de los usuarios.
 En Basic login, en text file.
 
 Guardamos y volvemos a entrar y podremos ver edit users. Y podremos crear el usuario que queramos.
