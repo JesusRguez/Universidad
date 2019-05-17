@@ -18,12 +18,12 @@
 \contentsline {part}{III\hspace {1em}Comparaci\IeC {\'o}n de los servicios ofrecidos por AWS y Azure}{17}{part.3}
 \contentsline {chapter}{\numberline {5}Creaci\IeC {\'o}n de m\IeC {\'a}quinas virtuales en AWS y Azure}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}Creaci\IeC {\'o}n de una m\IeC {\'a}quina virtual en AWS}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Creaci\IeC {\'o}n de una m\IeC {\'a}quina virtual en Azure}{19}{section.5.2}
-\contentsline {chapter}{\numberline {6}Creaci\IeC {\'o}n de webs en AWS y Azure}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Creaci\IeC {\'o}n de una web en AWS}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Creaci\IeC {\'o}n de una web en Azure}{21}{section.6.2}
-\contentsline {chapter}{\numberline {7}Creaci\IeC {\'o}n de servicios de IoT en AWS y Azure}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1}Creaci\IeC {\'o}n de servicios IoT en AWS}{23}{section.7.1}
-\contentsline {section}{\numberline {7.2}Creaci\IeC {\'o}n de servicios IoT en Azure}{23}{section.7.2}
-\contentsline {part}{IV\hspace {1em}Anexo}{25}{part.4}
-\contentsline {chapter}{\numberline {8}Referencias}{27}{chapter.8}
+\contentsline {section}{\numberline {5.2}Creaci\IeC {\'o}n de una m\IeC {\'a}quina virtual en Azure}{27}{section.5.2}
+\contentsline {chapter}{\numberline {6}Creaci\IeC {\'o}n de webs en AWS y Azure}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Creaci\IeC {\'o}n de una web en AWS}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Creaci\IeC {\'o}n de una web en Azure}{33}{section.6.2}
+\contentsline {chapter}{\numberline {7}Creaci\IeC {\'o}n de servicios de IoT en AWS y Azure}{35}{chapter.7}
+\contentsline {section}{\numberline {7.1}Creaci\IeC {\'o}n de servicios IoT en AWS}{35}{section.7.1}
+\contentsline {section}{\numberline {7.2}Creaci\IeC {\'o}n de servicios IoT en Azure}{35}{section.7.2}
+\contentsline {part}{IV\hspace {1em}Anexo}{37}{part.4}
+\contentsline {chapter}{\numberline {8}Referencias}{39}{chapter.8}
