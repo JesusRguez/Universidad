@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  14 MAY 2019 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  18 MAY 2019 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -889,16 +889,16 @@ Package: ocgbase 2016/03/11 v0.6 support package for ocgx2.sty
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemere
 ctangles.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMadrid.
-sty
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewh
-ale.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeor
-chid.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeFrankfu
+rt.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemesm
+oothbars.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemero
 unded.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemein
-folines.sty)) (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeor
+chid.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewh
+ale.sty)) (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 
@@ -942,14 +942,14 @@ LaTeX Font Info:    ... okay on input line 100.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.95003pt, 433.34402pt, 10.95003pt)
-* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 284.52756pt, 0.0pt)
 * \paperwidth=455.24408pt
-* \paperheight=256.0748pt
-* \textwidth=433.34402pt
-* \textheight=227.62207pt
-* \oddsidemargin=-61.31996pt
-* \evensidemargin=-61.31996pt
+* \paperheight=284.52756pt
+* \textwidth=398.3386pt
+* \textheight=256.07483pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1090,45 +1090,46 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
  (./AWS vs Azure.nav)
-Overfull \hbox (39.69609pt too wide) in paragraph at lines 100--100
- [][]  
- []
-
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 114.
 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-Overfull \hbox (39.69609pt too wide) has occurred while \output is active
- [][]  
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./AWS vs Azure.toc
+] (./AWS vs Azure.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \hbox (39.69609pt too wide) has occurred while \output is active
- [][]  
+Overfull \vbox (3.06828pt too high) detected at line 118
  []
 
 [2
 
+] [3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
 ]
-Overfull \hbox (39.69609pt too wide) has occurred while \output is active
- [][]  
- []
-
-[3
-
-]
-Overfull \hbox (39.69609pt too wide) has occurred while \output is active
- [][]  
- []
-
-Package atenddvi Info: Last page = 4.
-[4
+Package atenddvi Info: Last page = 14.
+ [14
 
 ]
 \tf@nav=\write6
@@ -1140,16 +1141,16 @@ Package atenddvi Info: Last page = 4.
 \tf@snm=\write8
 \openout8 = `"AWS vs Azure.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 132.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 187.
  (./AWS vs Azure.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `"AWS vs Azure".out' has not changed.
-(rerunfilecheck)             Checksum: C350F2CA645FA65091651466719FD695;78.
+(rerunfilecheck)             Checksum: 34673C0903761570BCF476D70EB27901;655.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1157,20 +1158,21 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 26053 strings out of 493013
- 495299 string characters out of 6135682
- 568116 words of memory out of 5000000
- 29118 multiletter control sequences out of 15000+600000
- 5452 words of font info for 20 fonts, out of 8000000 for 9000
+ 26194 strings out of 493013
+ 497658 string characters out of 6135682
+ 578083 words of memory out of 5000000
+ 29220 multiletter control sequences out of 15000+600000
+ 5758 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,60p,10423b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,72p,10423b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on "AWS vs Azure.pdf" (4 pages, 41819 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
+Output written on "AWS vs Azure.pdf" (14 pages, 78298 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 11 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 660 compressed objects within 7 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
