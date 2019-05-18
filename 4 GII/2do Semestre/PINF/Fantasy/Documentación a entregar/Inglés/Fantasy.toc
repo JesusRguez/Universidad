@@ -37,8 +37,8 @@
 \contentsline {section}{\numberline {3.1}Workspace}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Teachers}{21}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Students}{21}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Characteristics of active points}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Characteristics of fantasies}{22}{section.3.3}
+\contentsline {section}{\numberline {3.2}Characteristics of fantasies}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Characteristics of active points}{22}{section.3.3}
 \contentsline {chapter}{\numberline {4}System design}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Design of use cases}{25}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}CRUD fantasy}{25}{subsection.4.1.1}

@@ -41,8 +41,8 @@
 \BOOKMARK [1][-]{section.3.1}{Workspace}{chapter.3}% 41
 \BOOKMARK [2][-]{subsection.3.1.1}{Profesorado}{section.3.1}% 42
 \BOOKMARK [2][-]{subsection.3.1.2}{Alumnado}{section.3.1}% 43
-\BOOKMARK [1][-]{section.3.2}{Caracter\355sticas de los puntos activos}{chapter.3}% 44
-\BOOKMARK [1][-]{section.3.3}{Caracter\355sticas de las fantas\355as}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.2}{Caracter\355sticas de las fantas\355as}{chapter.3}% 44
+\BOOKMARK [1][-]{section.3.3}{Caracter\355sticas de los puntos activos}{chapter.3}% 45
 \BOOKMARK [0][-]{chapter.4}{Dise\361o del sistema}{part.2}% 46
 \BOOKMARK [1][-]{section.4.1}{Dise\361o de casos de uso}{chapter.4}% 47
 \BOOKMARK [2][-]{subsection.4.1.1}{CRUD fantas\355a}{section.4.1}% 48
@@ -60,33 +60,30 @@
 \BOOKMARK [2][-]{subsection.4.1.13}{CRUD quiz final}{section.4.1}% 60
 \BOOKMARK [1][-]{section.4.2}{Dise\361o de la interfaz de usuario}{chapter.4}% 61
 \BOOKMARK [1][-]{section.4.3}{Dise\361o de datos}{chapter.4}% 62
-\BOOKMARK [1][-]{section.4.4}{Dise\361o de componentes}{chapter.4}% 63
-\BOOKMARK [1][-]{section.4.5}{Parametrizaci\363n del software base}{chapter.4}% 64
-\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del sistema}{part.2}% 65
-\BOOKMARK [1][-]{section.5.1}{Entorno tecnol\363gico}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.2}{C\363digo fuente}{chapter.5}% 67
-\BOOKMARK [1][-]{section.5.3}{Calidad de c\363digo}{chapter.5}% 68
-\BOOKMARK [0][-]{chapter.6}{Pruebas del sistema}{part.2}% 69
-\BOOKMARK [1][-]{section.6.1}{Pruebas unitarias}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.2}{Pruebas de integraci\363n}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.3}{Pruebas de sistema}{chapter.6}% 72
-\BOOKMARK [2][-]{subsection.6.3.1}{Pruebas funcionales}{section.6.3}% 73
-\BOOKMARK [2][-]{subsection.6.3.2}{Pruebas no funcionales}{section.6.3}% 74
-\BOOKMARK [1][-]{section.6.4}{Pruebas de aceptaci\363n}{chapter.6}% 75
-\BOOKMARK [-1][-]{part.3}{III Epl\355logo}{}% 76
-\BOOKMARK [0][-]{chapter.7}{Manual de usuario}{part.3}% 77
-\BOOKMARK [1][-]{section.7.1}{Introducci\363n}{chapter.7}% 78
-\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas}{chapter.7}% 79
-\BOOKMARK [1][-]{section.7.3}{Requisitos previos}{chapter.7}% 80
-\BOOKMARK [1][-]{section.7.4}{Utilizaci\363n}{chapter.7}% 81
-\BOOKMARK [0][-]{chapter.8}{Manual de instalaci\363n y explotaci\363n}{part.3}% 82
-\BOOKMARK [1][-]{section.8.1}{Introducci\363n}{chapter.8}% 83
-\BOOKMARK [1][-]{section.8.2}{Requisitos previos}{chapter.8}% 84
-\BOOKMARK [1][-]{section.8.3}{Inventario de componentes}{chapter.8}% 85
-\BOOKMARK [1][-]{section.8.4}{Procedimientos de instalaci\363n}{chapter.8}% 86
-\BOOKMARK [1][-]{section.8.5}{Procedimientos de operaci\363n y nivel de servicio}{chapter.8}% 87
-\BOOKMARK [1][-]{section.8.6}{Pruebas de implantaci\363n}{chapter.8}% 88
-\BOOKMARK [0][-]{chapter.9}{Conclusiones}{part.3}% 89
-\BOOKMARK [1][-]{section.9.1}{Objetivos}{chapter.9}% 90
-\BOOKMARK [1][-]{section.9.2}{Lecciones aprendidas}{chapter.9}% 91
-\BOOKMARK [1][-]{section.9.3}{Trabajo futuro}{chapter.9}% 92
+\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del sistema}{part.2}% 63
+\BOOKMARK [1][-]{section.5.1}{Entorno tecnol\363gico}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.2}{C\363digo fuente}{chapter.5}% 65
+\BOOKMARK [1][-]{section.5.3}{Calidad de c\363digo}{chapter.5}% 66
+\BOOKMARK [0][-]{chapter.6}{Pruebas del sistema}{part.2}% 67
+\BOOKMARK [1][-]{section.6.1}{Pruebas unitarias}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.2}{Pruebas de integraci\363n}{chapter.6}% 69
+\BOOKMARK [1][-]{section.6.3}{Pruebas de sistema}{chapter.6}% 70
+\BOOKMARK [2][-]{subsection.6.3.1}{Pruebas funcionales}{section.6.3}% 71
+\BOOKMARK [2][-]{subsection.6.3.2}{Pruebas no funcionales}{section.6.3}% 72
+\BOOKMARK [1][-]{section.6.4}{Pruebas de aceptaci\363n}{chapter.6}% 73
+\BOOKMARK [-1][-]{part.3}{III Epl\355logo}{}% 74
+\BOOKMARK [0][-]{chapter.7}{Manual de usuario}{part.3}% 75
+\BOOKMARK [1][-]{section.7.1}{Introducci\363n}{chapter.7}% 76
+\BOOKMARK [1][-]{section.7.2}{Caracter\355sticas}{chapter.7}% 77
+\BOOKMARK [1][-]{section.7.3}{Requisitos previos}{chapter.7}% 78
+\BOOKMARK [1][-]{section.7.4}{Utilizaci\363n}{chapter.7}% 79
+\BOOKMARK [0][-]{chapter.8}{Manual de instalaci\363n y explotaci\363n}{part.3}% 80
+\BOOKMARK [1][-]{section.8.1}{Introducci\363n}{chapter.8}% 81
+\BOOKMARK [1][-]{section.8.2}{Requisitos previos}{chapter.8}% 82
+\BOOKMARK [1][-]{section.8.3}{Inventario de componentes}{chapter.8}% 83
+\BOOKMARK [1][-]{section.8.4}{Procedimientos de instalaci\363n}{chapter.8}% 84
+\BOOKMARK [1][-]{section.8.5}{Pruebas de implantaci\363n}{chapter.8}% 85
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{part.3}% 86
+\BOOKMARK [1][-]{section.9.1}{Objetivos}{chapter.9}% 87
+\BOOKMARK [1][-]{section.9.2}{Lecciones aprendidas}{chapter.9}% 88
+\BOOKMARK [1][-]{section.9.3}{Trabajo futuro}{chapter.9}% 89

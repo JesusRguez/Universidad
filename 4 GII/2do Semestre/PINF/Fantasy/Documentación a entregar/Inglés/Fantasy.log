@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  18 MAY 2019 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  18 MAY 2019 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1285,7 +1285,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
 Package rerunfilecheck Info: File `Fantasy.out' has not changed.
-(rerunfilecheck)             Checksum: F79A23753DC7E830B2E314A3215F8356;5852.
+(rerunfilecheck)             Checksum: 9C34D441257C09F41849425098617C55;5852.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
  ) 
 Here is how much of TeX's memory you used:
@@ -1301,7 +1301,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on Fantasy.pdf (55 pages, 480540 bytes).
+Output written on Fantasy.pdf (55 pages, 480563 bytes).
 PDF statistics:
  1129 PDF objects out of 1200 (max. 8388607)
  1051 compressed objects within 11 object streams
