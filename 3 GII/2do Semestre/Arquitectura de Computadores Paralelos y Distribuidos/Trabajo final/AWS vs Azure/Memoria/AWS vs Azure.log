@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  20 MAY 2019 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  20 MAY 2019 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,178 +671,185 @@ Cap\'{\i }tulo 5.
 [19
 
 
-] <ImagenesAWS/1.png, id=258, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/1.png Graphic file (type png)
+] <ImagenesAWS/MV/1.png, id=258, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/1.png Graphic file (type png)
 
-<use ImagenesAWS/1.png>
-Package pdftex.def Info: ImagenesAWS/1.png used on input line 23.
-(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- <ImagenesAWS/3.png, id=259, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/3.png Graphic file (type png)
-
-<use ImagenesAWS/3.png>
-Package pdftex.def Info: ImagenesAWS/3.png used on input line 30.
-(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [20 <./ImagenesAWS/1.png> <./ImagenesAWS/3.png>]
-<ImagenesAWS/5.png, id=270, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/5.png Graphic file (type png)
- <use ImagenesAWS/5.png>
-Package pdftex.def Info: ImagenesAWS/5.png used on input line 38.
+<use ImagenesAWS/MV/1.png>
+Package pdftex.def Info: ImagenesAWS/MV/1.png used on input line 23.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/6.png, id=271, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/6.png Graphic file (type png)
- <use ImagenesAWS/6.png>
-Package pdftex.def Info: ImagenesAWS/6.png used on input line 45.
+<ImagenesAWS/MV/3.png, id=259, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/3.png Graphic file (type png)
+
+<use ImagenesAWS/MV/3.png>
+Package pdftex.def Info: ImagenesAWS/MV/3.png used on input line 30.
+(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [20 <./ImagenesAWS/MV/1.png> <./ImagenesAWS/MV/3.png>] <ImagenesAWS/MV/5.png, 
+id=270, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/5.png Graphic file (type png)
+
+<use ImagenesAWS/MV/5.png>
+Package pdftex.def Info: ImagenesAWS/MV/5.png used on input line 38.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-[21 <./ImagenesAWS/5.png> <./ImagenesAWS/6.png>]
-<ImagenesAWS/7.png, id=283, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/7.png Graphic file (type png)
- <use ImagenesAWS/7.png>
-Package pdftex.def Info: ImagenesAWS/7.png used on input line 53.
+<ImagenesAWS/MV/6.png, id=271, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/6.png Graphic file (type png)
+
+<use ImagenesAWS/MV/6.png>
+Package pdftex.def Info: ImagenesAWS/MV/6.png used on input line 45.
+(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [21 <./ImagenesAWS/MV/5.png> <./ImagenesAWS/MV/6.png>] <ImagenesAWS/MV/7.png, 
+id=283, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/7.png Graphic file (type png)
+
+<use ImagenesAWS/MV/7.png>
+Package pdftex.def Info: ImagenesAWS/MV/7.png used on input line 53.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/8.png, id=284, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/8.png Graphic file (type png)
- <use ImagenesAWS/8.png>
-Package pdftex.def Info: ImagenesAWS/8.png used on input line 60.
+<ImagenesAWS/MV/8.png, id=284, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/8.png Graphic file (type png)
+
+<use ImagenesAWS/MV/8.png>
+Package pdftex.def Info: ImagenesAWS/MV/8.png used on input line 60.
+(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [22 <./ImagenesAWS/MV/7.png> <./ImagenesAWS/MV/8.png>] <ImagenesAWS/MV/9.png, 
+id=295, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/9.png Graphic file (type png)
+
+<use ImagenesAWS/MV/9.png>
+Package pdftex.def Info: ImagenesAWS/MV/9.png used on input line 68.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-[22 <./ImagenesAWS/7.png> <./ImagenesAWS/8.png>]
-<ImagenesAWS/9.png, id=295, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/9.png Graphic file (type png)
- <use ImagenesAWS/9.png>
-Package pdftex.def Info: ImagenesAWS/9.png used on input line 68.
+<ImagenesAWS/MV/10.png, id=296, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/10.png Graphic file (type png)
+
+<use ImagenesAWS/MV/10.png>
+Package pdftex.def Info: ImagenesAWS/MV/10.png used on input line 75.
+(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [23 <./ImagenesAWS/MV/9.png> <./ImagenesAWS/MV/10.png>] <ImagenesAWS/MV/12.png
+, id=307, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/12.png Graphic file (type png)
+
+<use ImagenesAWS/MV/12.png>
+Package pdftex.def Info: ImagenesAWS/MV/12.png used on input line 83.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/10.png, id=296, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/10.png Graphic file (type png)
- <use ImagenesAWS/10.png>
-Package pdftex.def Info: ImagenesAWS/10.png used on input line 75.
-(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+<ImagenesAWS/MV/13.png, id=308, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/13.png Graphic file (type png)
 
-[23 <./ImagenesAWS/9.png> <./ImagenesAWS/10.png>]
-<ImagenesAWS/12.png, id=307, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/12.png Graphic file (type png)
- <use ImagenesAWS/12.png>
-Package pdftex.def Info: ImagenesAWS/12.png used on input line 83.
+<use ImagenesAWS/MV/13.png>
+Package pdftex.def Info: ImagenesAWS/MV/13.png used on input line 90.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [24 <./ImagenesAWS/MV/12.png> <./ImagenesAWS/MV/13.png>] <ImagenesAWS/MV/15.pn
+g, id=319, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/15.png Graphic file (type png)
 
-<ImagenesAWS/13.png, id=308, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/13.png Graphic file (type png)
- <use ImagenesAWS/13.png>
-Package pdftex.def Info: ImagenesAWS/13.png used on input line 90.
-(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
-
-[24 <./ImagenesAWS/12.png> <./ImagenesAWS/13.png>]
-<ImagenesAWS/15.png, id=319, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/15.png Graphic file (type png)
- <use ImagenesAWS/15.png>
-Package pdftex.def Info: ImagenesAWS/15.png used on input line 98.
+<use ImagenesAWS/MV/15.png>
+Package pdftex.def Info: ImagenesAWS/MV/15.png used on input line 98.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 104.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<ImagenesAWS/16.png, id=320, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/16.png Graphic file (type png)
- <use ImagenesAWS/16.png>
-Package pdftex.def Info: ImagenesAWS/16.png used on input line 108.
+<ImagenesAWS/MV/16.png, id=320, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/16.png Graphic file (type png)
+
+<use ImagenesAWS/MV/16.png>
+Package pdftex.def Info: ImagenesAWS/MV/16.png used on input line 108.
+(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [25 <./ImagenesAWS/MV/15.png> <./ImagenesAWS/MV/16.png>] <ImagenesAWS/MV/17.pn
+g, id=333, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/17.png Graphic file (type png)
+
+<use ImagenesAWS/MV/17.png>
+Package pdftex.def Info: ImagenesAWS/MV/17.png used on input line 116.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-[25 <./ImagenesAWS/15.png> <./ImagenesAWS/16.png>]
-<ImagenesAWS/17.png, id=333, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/17.png Graphic file (type png)
- <use ImagenesAWS/17.png>
-Package pdftex.def Info: ImagenesAWS/17.png used on input line 116.
+<ImagenesAWS/MV/19.png, id=334, 1371.1225pt x 770.88pt>
+File: ImagenesAWS/MV/19.png Graphic file (type png)
+
+<use ImagenesAWS/MV/19.png>
+Package pdftex.def Info: ImagenesAWS/MV/19.png used on input line 123.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
+ [26 <./ImagenesAWS/MV/17.png> <./ImagenesAWS/MV/19.png>] <ImagenesAzure/MV/1.p
+ng, id=345, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/1.png Graphic file (type png)
 
-<ImagenesAWS/19.png, id=334, 1371.1225pt x 770.88pt>
-File: ImagenesAWS/19.png Graphic file (type png)
- <use ImagenesAWS/19.png>
-Package pdftex.def Info: ImagenesAWS/19.png used on input line 123.
-(pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
-
-[26 <./ImagenesAWS/17.png> <./ImagenesAWS/19.png>]
-<ImagenesAzure/1.png, id=345, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/1.png Graphic file (type png)
-
-<use ImagenesAzure/1.png>
-Package pdftex.def Info: ImagenesAzure/1.png used on input line 144.
+<use ImagenesAzure/MV/1.png>
+Package pdftex.def Info: ImagenesAzure/MV/1.png used on input line 144.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [27 <./ImagenesAzure/1.png>]
-<ImagenesAzure/1medio.png, id=352, 1091.07625pt x 599.23875pt>
-File: ImagenesAzure/1medio.png Graphic file (type png)
+ [27 <./ImagenesAzure/MV/1.png>]
+<ImagenesAzure/MV/1medio.png, id=352, 1091.07625pt x 599.23875pt>
+File: ImagenesAzure/MV/1medio.png Graphic file (type png)
 
-<use ImagenesAzure/1medio.png>
-Package pdftex.def Info: ImagenesAzure/1medio.png used on input line 152.
+<use ImagenesAzure/MV/1medio.png>
+Package pdftex.def Info: ImagenesAzure/MV/1medio.png used on input line 152.
 (pdftex.def)             Requested size: 381.88242pt x 209.7367pt.
 
-<ImagenesAzure/2.png, id=353, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/2.png Graphic file (type png)
+<ImagenesAzure/MV/2.png, id=353, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/2.png Graphic file (type png)
 
-<use ImagenesAzure/2.png>
-Package pdftex.def Info: ImagenesAzure/2.png used on input line 159.
+<use ImagenesAzure/MV/2.png>
+Package pdftex.def Info: ImagenesAzure/MV/2.png used on input line 159.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [28 <./ImagenesAzure/1medio.png> <./ImagenesAzure/2.png>] <ImagenesAzure/3.png
-, id=362, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/3.png Graphic file (type png)
+ [28 <./ImagenesAzure/MV/1medio.png> <./ImagenesAzure/MV/2.png>] <ImagenesAzure
+/MV/3.png, id=362, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/3.png Graphic file (type png)
 
-<use ImagenesAzure/3.png>
-Package pdftex.def Info: ImagenesAzure/3.png used on input line 167.
-(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
-
-<ImagenesAzure/4.png, id=363, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/4.png Graphic file (type png)
-
-<use ImagenesAzure/4.png>
-Package pdftex.def Info: ImagenesAzure/4.png used on input line 174.
-(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [29 <./ImagenesAzure/3.png> <./ImagenesAzure/4.png>]
-<ImagenesAzure/5.png, id=372, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/5.png Graphic file (type png)
-
-<use ImagenesAzure/5.png>
-Package pdftex.def Info: ImagenesAzure/5.png used on input line 182.
+<use ImagenesAzure/MV/3.png>
+Package pdftex.def Info: ImagenesAzure/MV/3.png used on input line 167.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/7.png, id=373, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/7.png Graphic file (type png)
+<ImagenesAzure/MV/4.png, id=363, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/4.png Graphic file (type png)
 
-<use ImagenesAzure/7.png>
-Package pdftex.def Info: ImagenesAzure/7.png used on input line 189.
+<use ImagenesAzure/MV/4.png>
+Package pdftex.def Info: ImagenesAzure/MV/4.png used on input line 174.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [30 <./ImagenesAzure/5.png> <./ImagenesAzure/7.png>]
-<ImagenesAzure/8.png, id=382, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/8.png Graphic file (type png)
+ [29 <./ImagenesAzure/MV/3.png> <./ImagenesAzure/MV/4.png>] <ImagenesAzure/MV/5
+.png, id=372, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/5.png Graphic file (type png)
 
-<use ImagenesAzure/8.png>
-Package pdftex.def Info: ImagenesAzure/8.png used on input line 197.
-(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
-
-<ImagenesAzure/9.png, id=383, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/9.png Graphic file (type png)
-
-<use ImagenesAzure/9.png>
-Package pdftex.def Info: ImagenesAzure/9.png used on input line 204.
-(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [31 <./ImagenesAzure/8.png> <./ImagenesAzure/9.png>]
-<ImagenesAzure/10.png, id=393, 1022.31938pt x 555.57562pt>
-File: ImagenesAzure/10.png Graphic file (type png)
-
-<use ImagenesAzure/10.png>
-Package pdftex.def Info: ImagenesAzure/10.png used on input line 212.
+<use ImagenesAzure/MV/5.png>
+Package pdftex.def Info: ImagenesAzure/MV/5.png used on input line 182.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/cpuinfo.png, id=394, 733.74126pt x 508.90125pt>
-File: ImagenesAzure/cpuinfo.png Graphic file (type png)
+<ImagenesAzure/MV/7.png, id=373, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/7.png Graphic file (type png)
 
-<use ImagenesAzure/cpuinfo.png>
-Package pdftex.def Info: ImagenesAzure/cpuinfo.png used on input line 219.
+<use ImagenesAzure/MV/7.png>
+Package pdftex.def Info: ImagenesAzure/MV/7.png used on input line 189.
+(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
+ [30 <./ImagenesAzure/MV/5.png> <./ImagenesAzure/MV/7.png>] <ImagenesAzure/MV/8
+.png, id=382, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/8.png Graphic file (type png)
+
+<use ImagenesAzure/MV/8.png>
+Package pdftex.def Info: ImagenesAzure/MV/8.png used on input line 197.
+(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
+
+<ImagenesAzure/MV/9.png, id=383, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/9.png Graphic file (type png)
+
+<use ImagenesAzure/MV/9.png>
+Package pdftex.def Info: ImagenesAzure/MV/9.png used on input line 204.
+(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
+ [31 <./ImagenesAzure/MV/8.png> <./ImagenesAzure/MV/9.png>] <ImagenesAzure/MV/1
+0.png, id=393, 1022.31938pt x 555.57562pt>
+File: ImagenesAzure/MV/10.png Graphic file (type png)
+
+<use ImagenesAzure/MV/10.png>
+Package pdftex.def Info: ImagenesAzure/MV/10.png used on input line 212.
+(pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
+
+<ImagenesAzure/MV/cpuinfo.png, id=394, 733.74126pt x 508.90125pt>
+File: ImagenesAzure/MV/cpuinfo.png Graphic file (type png)
+
+<use ImagenesAzure/MV/cpuinfo.png>
+Package pdftex.def Info: ImagenesAzure/MV/cpuinfo.png used on input line 219.
 (pdftex.def)             Requested size: 330.18051pt x 229.00345pt.
-) [32 <./ImagenesAzure/10.png> <./ImagenesAzure/cpuinfo.png>]
+) [32 <./ImagenesAzure/MV/10.png> <./ImagenesAzure/MV/cpuinfo.png>]
 \openout2 = `Comparaciones/CreacionWeb.aux'.
 
  (./Comparaciones/CreacionWeb.tex
@@ -900,9 +907,9 @@ Package rerunfilecheck Info: File `"AWS vs Azure".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 10804 strings out of 493013
- 154845 string characters out of 6135682
- 301569 words of memory out of 5000000
+ 10806 strings out of 493013
+ 155177 string characters out of 6135682
+ 301572 words of memory out of 5000000
  13945 multiletter control sequences out of 15000+600000
  66471 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

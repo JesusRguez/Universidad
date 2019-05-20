@@ -20,14 +20,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Nos dirigimos a la consola de administración de AWS.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/1.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/1.png}
 		\caption{Consola de administración de AWS.}
 		\label{Consola de administración de AWS}
 	\end{figure}
 	\item Seleccionamos ``Ejecute una máquina virtual''.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/3.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/3.png}
 		\caption{Selección de solución.}
 		\label{Selección de solución}
 	\end{figure}
@@ -35,14 +35,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Seleccionamos la AMI que deseemos, en nuestro caso será ``Ubuntu server 18.04 LTS (HVM), SSD Volume Type''.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/5.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/5.png}
 		\caption{Selección de AMI.}
 		\label{Selección de AMI}
 	\end{figure}
 	\item Seleccionamos el tipo de instancia que queremos:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/6.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/6.png}
 		\caption{Selección de instancia.}
 		\label{Selección de instancia}
 	\end{figure}
@@ -50,14 +50,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Ahora debemos configurar los detalles que tendrá la instancia seleccionada:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/7.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/7.png}
 		\caption{Configuración de la instancia.}
 		\label{Configuración de la instancia}
 	\end{figure}
 	\item Seleccionamos el tamaño del almacenamiento y el tipo de disco duro:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/8.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/8.png}
 		\caption{Selección de almacenamiento.}
 		\label{Selección de almacenamiento}
 	\end{figure}
@@ -65,14 +65,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Añadimos las etiquetas que deseemos:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/9.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/9.png}
 		\caption{Añadimos las etiquetas.}
 		\label{Añadimos las etiqutas}
 	\end{figure}
 	\item Configuramos las conexiones que vayamos a tener como el SSH:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/10.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/10.png}
 		\caption{Configuración conexiones.}
 		\label{Configuración de conexiones}
 	\end{figure}
@@ -80,14 +80,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Finalmente, veremos una página con el resumen de las características que tendrá nuestra máquina:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/12.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/12.png}
 		\caption{Resumen de la máquina.}
 		\label{Resumen de la máquina}
 	\end{figure}
 	\item Cuando le damos a ``Launch'' nos saldrá la siguiente pestaña para generar y descargar la clave SSH:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/13.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/13.png}
 		\caption{Creación de clave SSH.}
 		\label{Creación de clave SSH}
 	\end{figure}
@@ -95,7 +95,7 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Luego, en el apartado de ``Instancias'' de la consola de administración podremos ver nuestra máquina virtual ejecutándose:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/15.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/15.png}
 		\caption{Máquina en ejecución.}
 		\label{Máquina en ejecución}
 	\end{figure}
@@ -105,7 +105,7 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\end{center}
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/16.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/16.png}
 		\caption{Conexión con la máquina virtual.}
 		\label{Conexión con la máquina virtual}
 	\end{figure}
@@ -113,14 +113,14 @@ Para crear el servicio debemos seguir los siguientes pasos:
 	\item Si lanzamos el comando: \texttt{cat /proc/cpuinfo}, podremos ver las características del procesador de nuestra máquina virtual.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/17.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/17.png}
 		\caption{Información de la CPU de la máquina virtual.}
 		\label{Información de la CPU de la máquina virtual}
 	\end{figure}
 	\item Para detener la ejecución de la máquina virtual, en la consola de administración, hacemos click derecho y seleccionamos ``Stop'' dentro de ``Instance State''. También es posible detener la máquina virtual con el comando \texttt{sudo shutdown now}.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.28]{ImagenesAWS/19.png}
+		\includegraphics[scale=0.28]{ImagenesAWS/MV/19.png}
 		\caption{Detener la ejecución de la máquina virtual.}
 		\label{Detener la ejecución de la máquina virtual}
 	\end{figure}
@@ -141,7 +141,7 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Seleccionamos la opción ``máquinas virtuales'' del menú de la derecha:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/1.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/1.png}
 		\caption{Crear máquina virtual.}
 		\label{Crear máquina virtual}
 	\end{figure}
@@ -149,14 +149,14 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Seleccionamos el tipo de instancia que queremos:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/1medio.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/1medio.png}
 		\caption{Selección de instancia.}
 		\label{Selección de instancia2}
 	\end{figure}
 	\item Establecemos el tipo de autenticación por SSH y añadimos la clave pública:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/2.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/2.png}
 		\caption{Establecer autenticación por SSH.}
 		\label{Establecer autenticación por SSH}
 	\end{figure}
@@ -164,14 +164,14 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Seleccionamos el tamaño de almacenamiento:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/3.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/3.png}
 		\caption{Selección de almacenamiento.}
 		\label{Selección de almacenamiento2}
 	\end{figure}
 	\item Configuramos las redes virtuales:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/4.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/4.png}
 		\caption{Configuración de redes virtuales.}
 		\label{Configuración de redes virtuales}
 	\end{figure}
@@ -179,14 +179,14 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Seleccionamos los puertos de entrada y si queremos equilibrio de carga:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/5.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/5.png}
 		\caption{Selección de entrada y equilibrio de carga.}
 		\label{Selección de entrada y equilibrio de carga}
 	\end{figure}
 	\item Añadimos la configuración de seguridad:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/7.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/7.png}
 		\caption{Configuración de seguridad.}
 		\label{Configuración de seguridad}
 	\end{figure}
@@ -194,14 +194,14 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Luego veremos las extensiones dentro de las opciones avanzadas:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/8.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/8.png}
 		\caption{Opciones avanzadas.}
 		\label{Opciones avanzadas}
 	\end{figure}
 	\item Añadimos las etiquetas que deseemos:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/9.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/9.png}
 		\caption{Añadimos las etiquetas.}
 		\label{Añadimos las etiqutas2}
 	\end{figure}
@@ -209,14 +209,14 @@ Para crear el servicio, debemos seguir los siguientes pasos:
 	\item Finalmente, revisamos la configuración y creamos la máquina virtual:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{ImagenesAzure/10.png}
+		\includegraphics[scale=0.35]{ImagenesAzure/MV/10.png}
 		\caption{Revisión de la configuración.}
 		\label{Revisión de la configuración}
 	\end{figure}
 	\item Para conectarnos, lo haremos por ssh a la IP indicada y para ver las especificaciones de la CPU de la máquina virtual usaremos el comando \texttt{cat /proc/cpuinfo}:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.45]{ImagenesAzure/cpuinfo.png}
+		\includegraphics[scale=0.45]{ImagenesAzure/MV/cpuinfo.png}
 		\caption{Información del procesador.}
 		\label{Información del procesador}
 	\end{figure}
