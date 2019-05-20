@@ -1,21 +1,15 @@
 \select@language {spanish}
-\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{AWS}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Azure}{4}{0}{1}
-\beamer@sectionintoc {2}{Caracter\IeC {\'\i }sticas y limitaciones}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{AWS}{5}{0}{2}
-\beamer@subsubsectionintoc {2}{1}{1}{Caracter\IeC {\'\i }sticas de AWS}{5}{0}{2}
-\beamer@subsubsectionintoc {2}{1}{2}{Limitaciones de AWS}{6}{0}{2}
-\beamer@subsectionintoc {2}{2}{Azure}{7}{0}{2}
-\beamer@subsubsectionintoc {2}{2}{1}{Caracter\IeC {\'\i }sticas de Azure}{7}{0}{2}
-\beamer@subsubsectionintoc {2}{2}{2}{Limitaciones de Azure}{8}{0}{2}
-\beamer@sectionintoc {3}{Comparaci\IeC {\'o}n de los servicios ofrecidos por AWS y Azure}{9}{0}{3}
-\beamer@subsectionintoc {3}{1}{Creaci\IeC {\'o}n de m\IeC {\'a}quinas virtuales}{9}{0}{3}
-\beamer@subsubsectionintoc {3}{1}{1}{AWS}{9}{0}{3}
-\beamer@subsubsectionintoc {3}{1}{2}{Azure}{10}{0}{3}
-\beamer@subsectionintoc {3}{2}{Creaci\IeC {\'o}n de webs}{11}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{1}{AWS}{11}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{2}{Azure}{12}{0}{3}
-\beamer@subsectionintoc {3}{3}{Creaci\IeC {\'o}n de servicios IoT}{13}{0}{3}
-\beamer@subsubsectionintoc {3}{3}{1}{AWS}{13}{0}{3}
-\beamer@subsubsectionintoc {3}{3}{2}{Azure}{14}{0}{3}
+\beamer@sectionintoc {1}{AWS vs Azure}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{AWS}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Azure}{7}{0}{1}
+\beamer@sectionintoc {2}{Comparaci\IeC {\'o}n de los servicios ofrecidos por AWS y Azure}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Creaci\IeC {\'o}n de m\IeC {\'a}quinas virtuales}{11}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Creaci\IeC {\'o}n de m\IeC {\'a}quinas virtuales en AWS}{11}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{2}{Creaci\IeC {\'o}n de m\IeC {\'a}quinas virtuales en Azure}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Creaci\IeC {\'o}n de webs}{17}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Servicios Web}{17}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{2}{Creaci\IeC {\'o}n de webs en AWS}{18}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{3}{Creaci\IeC {\'o}n de webs en Azure}{19}{0}{2}
+\beamer@subsectionintoc {2}{3}{Creaci\IeC {\'o}n de servicios IoT}{20}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{Creaci\IeC {\'o}n de servicios IoT en AWS}{20}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{2}{Creaci\IeC {\'o}n de servicios IoT en Azure}{22}{0}{2}

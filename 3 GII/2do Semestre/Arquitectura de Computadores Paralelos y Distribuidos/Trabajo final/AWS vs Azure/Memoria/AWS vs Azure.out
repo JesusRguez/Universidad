@@ -19,10 +19,13 @@
 \BOOKMARK [1][-]{section.5.1}{Creaci\363n de una m\341quina virtual en AWS}{chapter.5}% 19
 \BOOKMARK [1][-]{section.5.2}{Creaci\363n de una m\341quina virtual en Azure}{chapter.5}% 20
 \BOOKMARK [0][-]{chapter.6}{Creaci\363n de webs en AWS y Azure}{part.3}% 21
-\BOOKMARK [1][-]{section.6.1}{Creaci\363n de una web en AWS}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.2}{Creaci\363n de una web en Azure}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{Creaci\363n de servicios de IoT en AWS y Azure}{part.3}% 24
-\BOOKMARK [1][-]{section.7.1}{Creaci\363n de servicios IoT en AWS}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.2}{Creaci\363n de servicios IoT en Azure}{chapter.7}% 26
-\BOOKMARK [-1][-]{part.4}{IV Anexo}{}% 27
-\BOOKMARK [0][-]{chapter.8}{Referencias}{part.4}% 28
+\BOOKMARK [1][-]{section.6.1}{Servicios Web}{chapter.6}% 22
+\BOOKMARK [2][-]{subsection.6.1.1}{SOAP}{section.6.1}% 23
+\BOOKMARK [2][-]{subsection.6.1.2}{REST}{section.6.1}% 24
+\BOOKMARK [1][-]{section.6.2}{Creaci\363n de una web en AWS}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.3}{Creaci\363n de una web en Azure}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Creaci\363n de servicios de IoT en AWS y Azure}{part.3}% 27
+\BOOKMARK [1][-]{section.7.1}{Creaci\363n de servicios IoT en AWS}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{Creaci\363n de servicios IoT en Azure}{chapter.7}% 29
+\BOOKMARK [-1][-]{part.4}{IV Anexo}{}% 30
+\BOOKMARK [0][-]{chapter.8}{Referencias}{part.4}% 31

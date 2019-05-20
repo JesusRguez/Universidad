@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  20 MAY 2019 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  21 MAY 2019 01:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,9 +562,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
+] [3] [4
+
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 122.
  (./AWS vs Azure.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -578,17 +580,17 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
- [3])
+ [5])
 \tf@toc=\write4
 \openout4 = `"AWS vs Azure.toc"'.
 
- [4]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 117.
- [5
 
-]
 [6]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 125.
+ [7
+
+] [8]
 \openout2 = `Introduccion/AWS.aux'.
 
  (./Introduccion/AWS.tex
@@ -599,27 +601,27 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-[7
+[9
 
 
-]) [8]
+]) [10]
 \openout2 = `Introduccion/Azure.aux'.
 
  (./Introduccion/Azure.tex
 Cap\'{\i }tulo 2.
-) [9
+[11
 
 
 
-] [10
+]) [12] [13
 
 
-] [11] [12]
+] [14]
 \openout2 = `Conceptos/CaracteristicasAWS.aux'.
 
  (./Conceptos/CaracteristicasAWS.tex
 Cap\'{\i }tulo 3.
-<ImagenesAWS/Servicios.png, id=207, 1170.3725pt x 555.07375pt>
+<ImagenesAWS/Servicios.png, id=231, 1170.3725pt x 555.07375pt>
 File: ImagenesAWS/Servicios.png Graphic file (type png)
 
 <use ImagenesAWS/Servicios.png>
@@ -632,15 +634,15 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
- [13
+ [15
 
 
- <./ImagenesAWS/Servicios.png>]) [14]
+ <./ImagenesAWS/Servicios.png>]) [16]
 \openout2 = `Conceptos/CaracteristicasAzure.aux'.
 
  (./Conceptos/CaracteristicasAzure.tex
 Cap\'{\i }tulo 4.
-<ImagenesAzure/Servicios.png, id=224, 1925.1925pt x 941.5175pt>
+<ImagenesAzure/Servicios.png, id=247, 1925.1925pt x 941.5175pt>
 File: ImagenesAzure/Servicios.png Graphic file (type png)
 
 <use ImagenesAzure/Servicios.png>
@@ -651,7 +653,7 @@ Overfull \hbox (30.78325pt too wide) in paragraph at lines 6--7
  [][] 
  []
 
-[15
+[17
 
 
 
@@ -660,88 +662,88 @@ Overfull \hbox (30.78325pt too wide) in paragraph at lines 6--7
 LaTeX Warning: Command \' invalid in math mode on input line 20.
 
 Missing character: There is no í in font zptmcmr!
-) [16] [17
+) [18] [19
 
 
-] [18]
+] [20]
 \openout2 = `Comparaciones/CreacionMV.aux'.
 
  (./Comparaciones/CreacionMV.tex
 Cap\'{\i }tulo 5.
-[19
+[21
 
 
-] <ImagenesAWS/MV/1.png, id=258, 1371.1225pt x 770.88pt>
+] <ImagenesAWS/MV/1.png, id=282, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/1.png Graphic file (type png)
 
 <use ImagenesAWS/MV/1.png>
 Package pdftex.def Info: ImagenesAWS/MV/1.png used on input line 23.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/3.png, id=259, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/3.png, id=283, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/3.png Graphic file (type png)
 
 <use ImagenesAWS/MV/3.png>
 Package pdftex.def Info: ImagenesAWS/MV/3.png used on input line 30.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [20 <./ImagenesAWS/MV/1.png> <./ImagenesAWS/MV/3.png>] <ImagenesAWS/MV/5.png, 
-id=270, 1371.1225pt x 770.88pt>
+ [22 <./ImagenesAWS/MV/1.png> <./ImagenesAWS/MV/3.png>] <ImagenesAWS/MV/5.png, 
+id=294, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/5.png Graphic file (type png)
 
 <use ImagenesAWS/MV/5.png>
 Package pdftex.def Info: ImagenesAWS/MV/5.png used on input line 38.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/6.png, id=271, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/6.png, id=295, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/6.png Graphic file (type png)
 
 <use ImagenesAWS/MV/6.png>
 Package pdftex.def Info: ImagenesAWS/MV/6.png used on input line 45.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [21 <./ImagenesAWS/MV/5.png> <./ImagenesAWS/MV/6.png>] <ImagenesAWS/MV/7.png, 
-id=283, 1371.1225pt x 770.88pt>
+ [23 <./ImagenesAWS/MV/5.png> <./ImagenesAWS/MV/6.png>] <ImagenesAWS/MV/7.png, 
+id=306, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/7.png Graphic file (type png)
 
 <use ImagenesAWS/MV/7.png>
 Package pdftex.def Info: ImagenesAWS/MV/7.png used on input line 53.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/8.png, id=284, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/8.png, id=307, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/8.png Graphic file (type png)
 
 <use ImagenesAWS/MV/8.png>
 Package pdftex.def Info: ImagenesAWS/MV/8.png used on input line 60.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [22 <./ImagenesAWS/MV/7.png> <./ImagenesAWS/MV/8.png>] <ImagenesAWS/MV/9.png, 
-id=295, 1371.1225pt x 770.88pt>
+ [24 <./ImagenesAWS/MV/7.png> <./ImagenesAWS/MV/8.png>] <ImagenesAWS/MV/9.png, 
+id=318, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/9.png Graphic file (type png)
 
 <use ImagenesAWS/MV/9.png>
 Package pdftex.def Info: ImagenesAWS/MV/9.png used on input line 68.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/10.png, id=296, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/10.png, id=319, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/10.png Graphic file (type png)
 
 <use ImagenesAWS/MV/10.png>
 Package pdftex.def Info: ImagenesAWS/MV/10.png used on input line 75.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [23 <./ImagenesAWS/MV/9.png> <./ImagenesAWS/MV/10.png>] <ImagenesAWS/MV/12.png
-, id=307, 1371.1225pt x 770.88pt>
+ [25 <./ImagenesAWS/MV/9.png> <./ImagenesAWS/MV/10.png>] <ImagenesAWS/MV/12.png
+, id=331, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/12.png Graphic file (type png)
 
 <use ImagenesAWS/MV/12.png>
 Package pdftex.def Info: ImagenesAWS/MV/12.png used on input line 83.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/13.png, id=308, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/13.png, id=332, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/13.png Graphic file (type png)
 
 <use ImagenesAWS/MV/13.png>
 Package pdftex.def Info: ImagenesAWS/MV/13.png used on input line 90.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [24 <./ImagenesAWS/MV/12.png> <./ImagenesAWS/MV/13.png>] <ImagenesAWS/MV/15.pn
-g, id=319, 1371.1225pt x 770.88pt>
+ [26 <./ImagenesAWS/MV/12.png> <./ImagenesAWS/MV/13.png>] <ImagenesAWS/MV/15.pn
+g, id=343, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/15.png Graphic file (type png)
 
 <use ImagenesAWS/MV/15.png>
@@ -752,125 +754,305 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 104.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<ImagenesAWS/MV/16.png, id=320, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/16.png, id=344, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/16.png Graphic file (type png)
 
 <use ImagenesAWS/MV/16.png>
 Package pdftex.def Info: ImagenesAWS/MV/16.png used on input line 108.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [25 <./ImagenesAWS/MV/15.png> <./ImagenesAWS/MV/16.png>] <ImagenesAWS/MV/17.pn
-g, id=333, 1371.1225pt x 770.88pt>
+ [27 <./ImagenesAWS/MV/15.png> <./ImagenesAWS/MV/16.png>] <ImagenesAWS/MV/17.pn
+g, id=356, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/17.png Graphic file (type png)
 
 <use ImagenesAWS/MV/17.png>
 Package pdftex.def Info: ImagenesAWS/MV/17.png used on input line 116.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
 
-<ImagenesAWS/MV/19.png, id=334, 1371.1225pt x 770.88pt>
+<ImagenesAWS/MV/19.png, id=357, 1371.1225pt x 770.88pt>
 File: ImagenesAWS/MV/19.png Graphic file (type png)
 
 <use ImagenesAWS/MV/19.png>
 Package pdftex.def Info: ImagenesAWS/MV/19.png used on input line 123.
 (pdftex.def)             Requested size: 383.91168pt x 215.84492pt.
- [26 <./ImagenesAWS/MV/17.png> <./ImagenesAWS/MV/19.png>] <ImagenesAzure/MV/1.p
-ng, id=345, 1022.31938pt x 555.57562pt>
+ [28 <./ImagenesAWS/MV/17.png> <./ImagenesAWS/MV/19.png>] <ImagenesAzure/MV/1.p
+ng, id=368, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/1.png Graphic file (type png)
 
 <use ImagenesAzure/MV/1.png>
 Package pdftex.def Info: ImagenesAzure/MV/1.png used on input line 144.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [27 <./ImagenesAzure/MV/1.png>]
-<ImagenesAzure/MV/1medio.png, id=352, 1091.07625pt x 599.23875pt>
+ [29 <./ImagenesAzure/MV/1.png>]
+<ImagenesAzure/MV/1medio.png, id=375, 1091.07625pt x 599.23875pt>
 File: ImagenesAzure/MV/1medio.png Graphic file (type png)
 
 <use ImagenesAzure/MV/1medio.png>
 Package pdftex.def Info: ImagenesAzure/MV/1medio.png used on input line 152.
 (pdftex.def)             Requested size: 381.88242pt x 209.7367pt.
 
-<ImagenesAzure/MV/2.png, id=353, 1022.31938pt x 555.57562pt>
+<ImagenesAzure/MV/2.png, id=376, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/2.png Graphic file (type png)
 
 <use ImagenesAzure/MV/2.png>
 Package pdftex.def Info: ImagenesAzure/MV/2.png used on input line 159.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [28 <./ImagenesAzure/MV/1medio.png> <./ImagenesAzure/MV/2.png>] <ImagenesAzure
-/MV/3.png, id=362, 1022.31938pt x 555.57562pt>
+ [30 <./ImagenesAzure/MV/1medio.png> <./ImagenesAzure/MV/2.png>] <ImagenesAzure
+/MV/3.png, id=385, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/3.png Graphic file (type png)
 
 <use ImagenesAzure/MV/3.png>
 Package pdftex.def Info: ImagenesAzure/MV/3.png used on input line 167.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/MV/4.png, id=363, 1022.31938pt x 555.57562pt>
+<ImagenesAzure/MV/4.png, id=386, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/4.png Graphic file (type png)
 
 <use ImagenesAzure/MV/4.png>
 Package pdftex.def Info: ImagenesAzure/MV/4.png used on input line 174.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [29 <./ImagenesAzure/MV/3.png> <./ImagenesAzure/MV/4.png>] <ImagenesAzure/MV/5
-.png, id=372, 1022.31938pt x 555.57562pt>
+ [31 <./ImagenesAzure/MV/3.png> <./ImagenesAzure/MV/4.png>] <ImagenesAzure/MV/5
+.png, id=396, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/5.png Graphic file (type png)
 
 <use ImagenesAzure/MV/5.png>
 Package pdftex.def Info: ImagenesAzure/MV/5.png used on input line 182.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/MV/7.png, id=373, 1022.31938pt x 555.57562pt>
+<ImagenesAzure/MV/7.png, id=397, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/7.png Graphic file (type png)
 
 <use ImagenesAzure/MV/7.png>
 Package pdftex.def Info: ImagenesAzure/MV/7.png used on input line 189.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [30 <./ImagenesAzure/MV/5.png> <./ImagenesAzure/MV/7.png>] <ImagenesAzure/MV/8
-.png, id=382, 1022.31938pt x 555.57562pt>
+ [32 <./ImagenesAzure/MV/5.png> <./ImagenesAzure/MV/7.png>] <ImagenesAzure/MV/8
+.png, id=406, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/8.png Graphic file (type png)
 
 <use ImagenesAzure/MV/8.png>
 Package pdftex.def Info: ImagenesAzure/MV/8.png used on input line 197.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/MV/9.png, id=383, 1022.31938pt x 555.57562pt>
+<ImagenesAzure/MV/9.png, id=407, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/9.png Graphic file (type png)
 
 <use ImagenesAzure/MV/9.png>
 Package pdftex.def Info: ImagenesAzure/MV/9.png used on input line 204.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
- [31 <./ImagenesAzure/MV/8.png> <./ImagenesAzure/MV/9.png>] <ImagenesAzure/MV/1
-0.png, id=393, 1022.31938pt x 555.57562pt>
+ [33 <./ImagenesAzure/MV/8.png> <./ImagenesAzure/MV/9.png>] <ImagenesAzure/MV/1
+0.png, id=416, 1022.31938pt x 555.57562pt>
 File: ImagenesAzure/MV/10.png Graphic file (type png)
 
 <use ImagenesAzure/MV/10.png>
 Package pdftex.def Info: ImagenesAzure/MV/10.png used on input line 212.
 (pdftex.def)             Requested size: 357.81714pt x 194.45438pt.
 
-<ImagenesAzure/MV/cpuinfo.png, id=394, 733.74126pt x 508.90125pt>
+<ImagenesAzure/MV/cpuinfo.png, id=417, 733.74126pt x 508.90125pt>
 File: ImagenesAzure/MV/cpuinfo.png Graphic file (type png)
 
 <use ImagenesAzure/MV/cpuinfo.png>
 Package pdftex.def Info: ImagenesAzure/MV/cpuinfo.png used on input line 219.
 (pdftex.def)             Requested size: 330.18051pt x 229.00345pt.
-) [32 <./ImagenesAzure/MV/10.png> <./ImagenesAzure/MV/cpuinfo.png>]
+) [34 <./ImagenesAzure/MV/10.png> <./ImagenesAzure/MV/cpuinfo.png>]
 \openout2 = `Comparaciones/CreacionWeb.aux'.
 
  (./Comparaciones/CreacionWeb.tex
 Cap\'{\i }tulo 6.
-) [33
+[35
 
 
 
-]
+] <ImagenesAWS/Web/error_aws.png, id=431, 1059.96pt x 288.3272pt>
+File: ImagenesAWS/Web/error_aws.png Graphic file (type png)
+
+<use ImagenesAWS/Web/error_aws.png>
+Package pdftex.def Info: ImagenesAWS/Web/error_aws.png used on input line 27.
+(pdftex.def)             Requested size: 476.9776pt x 129.74603pt.
+
+Overfull \hbox (7.2226pt too wide) in paragraph at lines 27--28
+ [][] 
+ []
+
+[36 <./ImagenesAWS/Web/error_aws.png>]
+<web_azure/creacion1.png, id=438, 609.77812pt x 512.66531pt>
+File: web_azure/creacion1.png Graphic file (type png)
+
+<use web_azure/creacion1.png>
+Package pdftex.def Info: web_azure/creacion1.png used on input line 42.
+(pdftex.def)             Requested size: 335.379pt x 281.96678pt.
+
+<web_azure/creacion2.png, id=439, 559.33969pt x 263.48438pt>
+File: web_azure/creacion2.png Graphic file (type png)
+
+<use web_azure/creacion2.png>
+Package pdftex.def Info: web_azure/creacion2.png used on input line 51.
+(pdftex.def)             Requested size: 307.63777pt x 144.91684pt.
+ [37 <./web_azure/creacion1.png> <./web_azure/creacion2.png>] <web_azure/creaci
+on3.png, id=447, 694.84593pt x 191.21437pt>
+File: web_azure/creacion3.png Graphic file (type png)
+
+<use web_azure/creacion3.png>
+Package pdftex.def Info: web_azure/creacion3.png used on input line 59.
+(pdftex.def)             Requested size: 382.16644pt x 105.16821pt.
+
+<web_azure/web1.png, id=448, 1027.84pt x 586.19pt>
+File: web_azure/web1.png Graphic file (type png)
+ <use web_azure/web1.png>
+Package pdftex.def Info: web_azure/web1.png used on input line 68.
+(pdftex.def)             Requested size: 411.12872pt x 234.47185pt.
+
+[38 <./web_azure/creacion3.png> <./web_azure/web1.png (PNG copy)>]
+<web_azure/centro.png, id=455, 694.84593pt x 191.21437pt>
+File: web_azure/centro.png Graphic file (type png)
+
+<use web_azure/centro.png>
+Package pdftex.def Info: web_azure/centro.png used on input line 78.
+(pdftex.def)             Requested size: 382.16644pt x 105.16821pt.
+
+<web_azure/web2.png, id=456, 1271.5003pt x 371.88937pt>
+File: web_azure/web2.png Graphic file (type png)
+
+<use web_azure/web2.png>
+Package pdftex.def Info: web_azure/web2.png used on input line 87.
+(pdftex.def)             Requested size: 381.45303pt x 111.56766pt.
+
+<web_azure/web3.png, id=457, 745.28438pt x 296.60812pt>
+File: web_azure/web3.png Graphic file (type png)
+
+<use web_azure/web3.png>
+Package pdftex.def Info: web_azure/web3.png used on input line 96.
+(pdftex.def)             Requested size: 409.90767pt x 163.13496pt.
+ [39 <./web_azure/centro.png> <./web_azure/web2.png> <./web_azure/web3.png>] <w
+eb_azure/web4.png, id=465, 657.2053pt x 96.36pt>
+File: web_azure/web4.png Graphic file (type png)
+
+<use web_azure/web4.png>
+Package pdftex.def Info: web_azure/web4.png used on input line 104.
+(pdftex.def)             Requested size: 361.46402pt x 52.99814pt.
+
+<web_azure/web5.png, id=466, 615.80063pt x 514.92375pt>
+File: web_azure/web5.png Graphic file (type png)
+
+<use web_azure/web5.png>
+Package pdftex.def Info: web_azure/web5.png used on input line 113.
+(pdftex.def)             Requested size: 338.69139pt x 283.20892pt.
+) [40 <./web_azure/web4.png> <./web_azure/web5.png>]
 \openout2 = `Comparaciones/CreacionIC.aux'.
 
- (./Comparaciones/CreacionIC.tex [34
 
-
-
-]
+(./Comparaciones/CreacionIC.tex
 Cap\'{\i }tulo 7.
-) [35] [36
+[41
 
 
-] [37] [38]
+
+] <iot_aws/creacion1.png, id=477, 1439.3775pt x 790.45313pt>
+File: iot_aws/creacion1.png Graphic file (type png)
+
+<use iot_aws/creacion1.png>
+Package pdftex.def Info: iot_aws/creacion1.png used on input line 17.
+(pdftex.def)             Requested size: 388.63712pt x 213.42519pt.
+
+<iot_aws/creacion2.png, id=478, 1439.3775pt x 790.45313pt>
+File: iot_aws/creacion2.png Graphic file (type png)
+
+<use iot_aws/creacion2.png>
+Package pdftex.def Info: iot_aws/creacion2.png used on input line 26.
+(pdftex.def)             Requested size: 388.63712pt x 213.42519pt.
+ [42 <./iot_aws/creacion1.png> <./iot_aws/creacion2.png>] <iot_aws/creacion3.pn
+g, id=485, 1439.3775pt x 790.45313pt>
+File: iot_aws/creacion3.png Graphic file (type png)
+
+<use iot_aws/creacion3.png>
+Package pdftex.def Info: iot_aws/creacion3.png used on input line 36.
+(pdftex.def)             Requested size: 388.63712pt x 213.42519pt.
+
+<iot_aws/creacion4.png, id=486, 1927.2pt x 1056.94875pt>
+File: iot_aws/creacion4.png Graphic file (type png)
+
+<use iot_aws/creacion4.png>
+Package pdftex.def Info: iot_aws/creacion4.png used on input line 45.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+ [43 <./iot_aws/creacion3.png> <./iot_aws/creacion4.png>] <iot_aws/creacion5.pn
+g, id=495, 1927.2pt x 1056.94875pt>
+File: iot_aws/creacion5.png Graphic file (type png)
+
+<use iot_aws/creacion5.png>
+Package pdftex.def Info: iot_aws/creacion5.png used on input line 55.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+
+<iot_aws/centro.png, id=496, 1927.2pt x 1056.94875pt>
+File: iot_aws/centro.png Graphic file (type png)
+ <use iot_aws/centro.png>
+Package pdftex.def Info: iot_aws/centro.png used on input line 68.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+
+[44 <./iot_aws/creacion5.png> <./iot_aws/centro.png>]
+<iot_aws/dispositivos.png, id=505, 1927.2pt x 1056.94875pt>
+File: iot_aws/dispositivos.png Graphic file (type png)
+
+<use iot_aws/dispositivos.png>
+Package pdftex.def Info: iot_aws/dispositivos.png used on input line 79.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+
+<iot_aws/dispositivos2.png, id=506, 1927.2pt x 1056.94875pt>
+File: iot_aws/dispositivos2.png Graphic file (type png)
+
+<use iot_aws/dispositivos2.png>
+Package pdftex.def Info: iot_aws/dispositivos2.png used on input line 86.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+ [45 <./iot_aws/dispositivos.png> <./iot_aws/dispositivos2.png>] <iot_azure/pri
+mera.png, id=515, 718.18312pt x 356.83313pt>
+File: iot_azure/primera.png Graphic file (type png)
+
+<use iot_azure/primera.png>
+Package pdftex.def Info: iot_azure/primera.png used on input line 100.
+(pdftex.def)             Requested size: 359.09068pt x 178.41612pt.
+
+<iot_azure/escala.png, id=516, 688.07062pt x 453.94594pt>
+File: iot_azure/escala.png Graphic file (type png)
+
+<use iot_azure/escala.png>
+Package pdftex.def Info: iot_azure/escala.png used on input line 109.
+(pdftex.def)             Requested size: 344.03447pt x 226.97241pt.
+ [46 <./iot_azure/primera.png> <./iot_azure/escala.png>] <iot_azure/dispositivo
+.png, id=523, 456.20438pt x 394.47375pt>
+File: iot_azure/dispositivo.png Graphic file (type png)
+
+<use iot_azure/dispositivo.png>
+Package pdftex.def Info: iot_azure/dispositivo.png used on input line 119.
+(pdftex.def)             Requested size: 228.10162pt x 197.23639pt.
+
+<iot_azure/dispositivos.png, id=524, 1927.2pt x 1056.94875pt>
+File: iot_azure/dispositivos.png Graphic file (type png)
+
+<use iot_azure/dispositivos.png>
+Package pdftex.def Info: iot_azure/dispositivos.png used on input line 129.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+ [47 <./iot_azure/dispositivo.png> <./iot_azure/dispositivos.png>] <iot_azure/c
+entro.png, id=532, 1927.2pt x 1056.94875pt>
+File: iot_azure/centro.png Graphic file (type png)
+
+<use iot_azure/centro.png>
+Package pdftex.def Info: iot_azure/centro.png used on input line 139.
+(pdftex.def)             Requested size: 385.43318pt x 211.386pt.
+
+<iot_azure/azure_cli.png, id=533, 769.37437pt x 234.1247pt>
+File: iot_azure/azure_cli.png Graphic file (type png)
+
+<use iot_azure/azure_cli.png>
+Package pdftex.def Info: iot_azure/azure_cli.png used on input line 149.
+(pdftex.def)             Requested size: 461.62819pt x 140.47589pt.
+ [48 <./iot_azure/centro.png> <./iot_azure/azure_cli.png>] <iot_azure/mensajes.
+png, id=541, 1114.91531pt x 632.3625pt>
+File: iot_azure/mensajes.png Graphic file (type png)
+
+<use iot_azure/mensajes.png>
+Package pdftex.def Info: iot_azure/mensajes.png used on input line 160.
+(pdftex.def)             Requested size: 445.95822pt x 252.94052pt.
+) [49 <./iot_azure/mensajes.png>] [50
+
+
+] [51]
+[52]
 \openout2 = `Anexo/Anexo.aux'.
 
  (./Anexo/Anexo.tex
@@ -887,12 +1069,18 @@ Overfull \hbox (7.74503pt too wide) in paragraph at lines 9--10
  / latest / gr / aws _ service _ limits . html$[][]\T1/ptm/m/n/10 . 
  []
 
-) [39
+
+Overfull \hbox (31.74503pt too wide) in paragraph at lines 12--13
+[][][]$\T1/pcr/m/n/10 https : / / docs . microsoft . com / es-[]es / azure / io
+t-[]hub / quickstart-[]send-[]telemetry-[]dotnet$[][] 
+ []
+
+) [53
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (./AWS vs Azure.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
@@ -900,30 +1088,30 @@ LaTeX Info: Redefining \% on input line 23.
 (./Conceptos/CaracteristicasAWS.aux) (./Conceptos/CaracteristicasAzure.aux)
 (./Comparaciones/CreacionMV.aux) (./Comparaciones/CreacionWeb.aux)
 (./Comparaciones/CreacionIC.aux) (./Anexo/Anexo.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `"AWS vs Azure".out' has not changed.
-(rerunfilecheck)             Checksum: 1CD2542B64EA54AFE9EE7E69CE186BFD;1933.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
+(rerunfilecheck)             Checksum: DA9AB52075F7FFEB14A347AB96AC476D;2109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 10806 strings out of 493013
- 155177 string characters out of 6135682
+ 10999 strings out of 493013
+ 158745 string characters out of 6135682
  301572 words of memory out of 5000000
- 13945 multiletter control sequences out of 15000+600000
+ 14073 multiletter control sequences out of 15000+600000
  66471 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,49p,724b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,49p,724b,622s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "AWS vs Azure.pdf" (39 pages, 2331790 bytes).
+Output written on "AWS vs Azure.pdf" (53 pages, 4447735 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 400 compressed objects within 4 object streams
- 130 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
 

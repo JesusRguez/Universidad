@@ -1,4 +1,4 @@
-\documentclass[aspectratio=1610]{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 %% Juego de caracteres usado en el archivo fuente: UTF-8
 \usepackage{ucs}
@@ -89,11 +89,17 @@ Sisic Dino}
 
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Índice}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
 %\AtBeginSubsection[]
 %{
-%  \begin{frame}<beamer>{Índice}
-%    \tableofcontents[currentsection,currentsubsection]
-%  \end{frame}
+%	\begin{frame}<beamer>{Índice}
+%	\tableofcontents[currentsection,currentsubsection]
+%\end{frame}
 %}
 
 % Let's get started
@@ -114,76 +120,242 @@ Sisic Dino}
 \end{frame}
 
 \begin{frame}{Índice}
-  \tableofcontents
+\small\tableofcontents
 \end{frame}
+\normalsize
 
-\section{Introducción}
+\section{AWS vs Azure}
 \subsection{AWS}
 \begin{frame}{AWS}
-	contenidos...
+	\begin{block}{What is AWS?}
+		Amazon Web Services (AWS), is a collection of public cloud computing web services launched by Amazon.
+	\end{block}
+	\begin{block}{Features of AWS}
+		\begin{itemize}
+			\item Launched 13 years ago.
+			\item Cloud platform, offering over 165 fully featured services from data centers globally.
+			\item Largest community of customers and partners.
+			\item Fastest pace of innovation.
+			\item Most proven operational expertise.
+			\item Only pay for what you use.
+			\item Redundancy anda availability across the world.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{AWS}
+	\begin{block}{Capacities of AWS}
+		\begin{itemize}
+			\item Highly durable storage: Amazon Glacier, Amazon S3, Amazon EBS
+			\item Low cost computing: Amazon EC2
+			\item High performance data bases: A. Redshift, A. DynamoDB, A. Elasticache, A. RDS
+			\item Managing tools: A. CloudWatch, AWS IAM, AWS Cloudformation, AWS Beanstalk
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{AWS}
+	\begin{block}{Limits of AWS}
+		\begin{itemize}
+			\item \textbf{Amazon EC2:} Has limits on both the type of instance (virtual machine) that can be used and the number of hours in a month (750 Linux/750 Windows).
+			\item \textbf {Amazon S3:} You have a limit on the amount of storage that can be used and the frequency with which you can call certain operations each month.
+			\item \textbf{Amazon RDS:} You have a limit of 750 hours per month during the first 12 months. Turning on an instance three hours is the same as turning on an instance three times in one hour.
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \subsection{Azure}
 \begin{frame}{Azure}
-contenidos...
+\begin{block}{What is Azure?}
+	It is a collection of public cloud computing web services launched by Microsoft.
+\end{block}
+\begin{block}{Features of Azure}
+	\begin{itemize}
+		\item Launched in 2010.
+		\item Collection of various cloud computing service.
+		\item Integrated suite of tools, templates, and managed services.
+		\item It provides software as a service (SaaS), platform as a service (PaaS) and infrastructure as a service (IaaS).
+		\item Ideal for businesses that utilize Windows or Linux for their operations.
+		\item Has over 100 services equipped with end-to-end features.
+	\end{itemize}
+\end{block}
 \end{frame}
 
-\section{Características y limitaciones}
-\subsection{AWS}
-\subsubsection{Características de AWS}
-\begin{frame}{Características de AWS}
-contenidos...
+\begin{frame}{Azure}
+\begin{block}{Capacities of Azure}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item Build websites with ASP.NET, PHP or Node.js.
+			\item Migrate applications and infrastructure.
+			\item SQL Database.
+			\item Caching.
+			\item CDN.
+			\item Virtual Network.
+		\end{itemize}
+		\column{0.45\textwidth}
+		\begin{itemize}
+			\item Deploy and run Windows Server and Linux virtual machines.
+			\item Mobile Services.
+			\item Cloud Services.
+			\item Business Analytics.
+			\item Hadoop.
+			\item Media Services.
+		\end{itemize}
+	\end{columns}
+\end{block}
 \end{frame}
 
-\subsubsection{Limitaciones de AWS}
-\begin{frame}{Limitaciones de AWS}
-	contenidos...
-\end{frame}
-
-\subsection{Azure}
-\subsubsection{Características de Azure}
-\begin{frame}{Características de Azure}
-contenidos...
-\end{frame}
-
-\subsubsection{Limitaciones de Azure}
-\begin{frame}{Limitaciones de Azure}
-contenidos...
+\begin{frame}{Azure}
+	\begin{block}{Limits of Azure}
+		In the student version, Azure has the following limits:
+		\begin{itemize}
+			\item 750 hours of virtual machines for both Linux and Windows.
+			\item 128GB of SSD storage.
+			\item 250GB of a standard S0 instance of SQL databases.
+			\item 1500 hours of dynamic IP for virtual machines.
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \section{Comparación de los servicios ofrecidos por AWS y Azure}
 \subsection{Creación de máquinas virtuales}
-\subsubsection{AWS}
+\subsubsection{Creación de máquinas virtuales en AWS}
 \begin{frame}{Creación de máquinas virtuales en AWS}
-	contenidos...
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.23]{AWS/MV/4.png}
+		\caption{Selección de sistema operativo.}
+		\label{Sistema operativo}
+	\end{figure}
 \end{frame}
 
-\subsubsection{Azure}
+\begin{frame}{Creación de máquinas virtuales en AWS}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.23]{AWS/MV/7.png}
+	\caption{Configurar detalles.}
+	\label{Configurar detalles}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Creación de máquinas virtuales en AWS}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.23]{AWS/MV/16.png}
+	\caption{Conexión por SSH.}
+	\label{SSH}
+\end{figure}
+\end{frame}
+
+\subsubsection{Creación de máquinas virtuales en Azure}
 \begin{frame}{Creación de máquinas virtuales en Azure}
-	contenidos...
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.32]{Azure/MV/1.png}
+		\caption{Selección de sistema operativo.}
+		\label{Sistema operativo2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Creación de máquinas virtuales en Azure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.32]{Azure/MV/5.png}
+	\caption{Selección como equilibrio de carga.}
+	\label{Equilibrio de carga}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Creación de máquinas virtuales en Azure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{Azure/MV/cpuinfo.png}
+	\caption{Conexión por SSH.}
+	\label{SSH2}
+\end{figure}
 \end{frame}
 
 \subsection{Creación de webs}
-\subsubsection{AWS}
-\begin{frame}{Creación de webs en AWS}
-	contenidos...
+\subsubsection{Servicios Web}
+\begin{frame}{Web Services}
+\begin{block}{What are web services?}
+	\begin{itemize}
+		\item Piece of software that makes itself available over the internet.
+		\item Uses a standardized XML messaging system.
+		\item Are not tied to any OS, so they work independently and concurrently.
+		\item Are built on top of open standards such as TCP/IP, HTTP, Java, HTML, and XML.
+	\end{itemize}
+\end{block}
+\begin{block}{Components}
+	\begin{itemize}
+		\item SOAP (Simple Objet Protocol).
+		\item UDDI (Universal Description, Discovery and Integration).
+		\item WSDL (Web Services Description Language).
+	\end{itemize}
+\end{block}
 \end{frame}
 
-\subsubsection{Azure}
+\subsubsection{Creación de webs en AWS}
+\begin{frame}{Creación de webs en AWS}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.17]{web_aws/.png}
+		\caption{ AWS.}
+		\label{}
+	\end{figure}
+\end{frame}
+
+\subsubsection{Creación de webs en Azure}
 \begin{frame}{Creación de webs en Azure}
-	contenidos...
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.17]{web_azure/.png}
+		\caption{ Azure.}
+		\label{}
+	\end{figure}
 \end{frame}
 
 \subsection{Creación de servicios IoT}
-\subsubsection{AWS}
+\subsubsection{Creación de servicios IoT en AWS}
 \begin{frame}{Creación de servicios IoT en AWS}
-	contenidos...
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.17]{iot_aws/centro.png}
+		\caption{Centro de control de IoT de AWS.}
+		\label{Centro de control de IoT de AWS}
+	\end{figure}
 \end{frame}
 
-\subsubsection{Azure}
-\begin{frame}{Creación de servicios IoT en Azure}
-	contenidos...
+\begin{frame}{Creación de servicios IoT en AWS}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.17]{iot_aws/creacion5.png}
+	\caption{Dispositivos IoT de AWS.}
+	\label{Dispositivo IoT de AWS}
+\end{figure}
 \end{frame}
+
+\subsubsection{Creación de servicios IoT en Azure}
+\begin{frame}{Creación de servicios IoT en Azure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.17]{iot_azure/centro2.png}
+	\caption{Centro de control de IoT de Azure.}
+	\label{Centro de control de IoT de Azure}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Creación de servicios IoT en Azure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.285]{iot_azure/mensajes.png}
+	\caption{Dispositivo de IoT de Azure.}
+	\label{Dispositivo de IoT de Azure}
+\end{figure}
+\end{frame}
+
+
 \end{document}
 
 
