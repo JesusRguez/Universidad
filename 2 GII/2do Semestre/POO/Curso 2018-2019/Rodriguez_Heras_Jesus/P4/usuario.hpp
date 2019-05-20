@@ -23,7 +23,7 @@ public:
 	Clave(const char* contrasena);
 
 	//Mostrar clave cifrada:
-	inline const Cadena& clave() const noexcept { return clave_; }
+	const Cadena& clave() const{ return clave_; }
 
 	//Verificar clave:
 	bool verifica(const char* posible_contrasena) const;
@@ -35,7 +35,7 @@ public:
 	    Incorrecta(const Clave::Razon razon):razon_(razon){}
 
 	    //Razón:
-	    Clave::Razon razon() const { return razon_; }
+	    Clave::Razon razon() const {return razon_;}
 
 	  private:
 	    Clave::Razon razon_;
@@ -76,28 +76,28 @@ public:
 	void no_es_titular_de(Tarjeta& t);
 
 	//Mostrar id:
-	inline Cadena id() const noexcept { return id_; }
+	inline Cadena id() const { return id_; }
 
 	//Mostrar nombre:
-	inline Cadena nombre() const noexcept { return nombre_; }
+	inline Cadena nombre() const { return nombre_; }
 
 	//Mostrar apellidos:
-	inline Cadena apellidos() const noexcept { return apellidos_; }
+	inline Cadena apellidos() const { return apellidos_; }
 
 	//Mostrar dirección:
-	inline Cadena direccion() const noexcept { return direccion_; }
+	inline Cadena direccion() const { return direccion_; }
 
 	//Mostrar tarjetas:
-	inline const Tarjetas& tarjetas() const noexcept { return MapTarjetas_; }
+	inline const Tarjetas& tarjetas() const { return MapTarjetas_; }
 
 	//Asociacion unidireccional:
 	void compra(Articulo& a, unsigned cant=1);
 
 	//Colección de artículos:
-	const Articulos& compra() const;
+	inline const Articulos& compra() const { return n_art_; }
 
 	//Mostrar número de artículos:
-	inline size_t n_articulos() const noexcept { return n_art_.size(); }
+	inline size_t n_articulos() const { return n_art_.size(); }
 
 	//Operador <<:
 	friend ostream& operator<<(ostream& os, const Usuario& u);
@@ -109,7 +109,7 @@ public:
         Id_duplicado(const Cadena& idd) : idd_(idd) {}
 
         //Mostrar id duplicado:
-        const Cadena& idd() const { return idd_; }
+        const Cadena& idd() const {return idd_;}
 
     private:
         Cadena idd_;

@@ -24,19 +24,19 @@ public:
 	Pedido(Usuario_Pedido& u_p, Pedido_Articulo& p_a, Usuario& u, const Tarjeta& t, const Fecha& fp=Fecha());
 
 	//Mostrar número:
-	inline int numero() const noexcept { return num_; }
+	inline int numero() const { return num_; }
 
 	//Mostrar tarjeta:
-	inline Tarjeta const* tarjeta() const noexcept { return tarjeta_; }
+	inline Tarjeta const* tarjeta() const { return tarjeta_; }
 
 	//Mostrar fecha:
-	inline Fecha fecha() const noexcept { return fecha_; }
+	inline Fecha fecha() const { return fecha_; }
 
 	//Mostrar total:
-	inline double total() const noexcept { return total_; }
+	inline double total() const { return total_; }
 
 	//Mostrar n_total_pedidos:
-	inline static int n_total_pedidos() noexcept { return N_pedidos; }
+	inline static int n_total_pedidos() { return N_pedidos; }
 
 	class Vacio{
   	public:

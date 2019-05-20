@@ -16,17 +16,16 @@ using namespace std;
 class Pedido;
 class Articulo;
 
-//Clase LineaPedido:
 class LineaPedido{
 public:
 	//Constructor de LineaPedido:
 	explicit LineaPedido(double pv, unsigned cant=1);
 
 	//Mostrar el precio de venta:
-	inline double precio_venta() const noexcept { return precio_venta_; }
+	inline double precio_venta() const { return precio_venta_; }
 
 	//Mostrar la cantidad:
-	inline unsigned cantidad() const noexcept { return cantidad_; }
+	inline unsigned cantidad() const { return cantidad_; }
 
 private:
 	double precio_venta_;

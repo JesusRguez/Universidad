@@ -20,7 +20,7 @@ public:
 	Numero (const Cadena& numero);
 
 	//Operador const char* ():
-	operator const char* () const;
+	inline operator const char* () const { return (numero_.c_str()); }
 
 	//Clase Incorrecto:
 	class Incorrecto{
@@ -75,22 +75,22 @@ public:
 	~Tarjeta();
 
 	//Mostrar tipo:
-	Tipo tipo() const;
+	inline Tipo tipo() const { return tipo_; }
 
 	//Mostrar número:
-	Numero numero() const;
+	inline Numero numero() const { return numero_; }
 
 	//Mostrar fecha de caducidad:
-	Fecha caducidad() const;
+	inline Fecha caducidad() const {return fechaExp_; }
 
 	//Mostrar si está activa:
-	bool activa() const;
+	inline bool activa() const {return activa_; }
 
 	//Cambiar activada/desactivada:
 	bool activa(bool a = true);
 
 	//Mostrar titular:
-	const Usuario* titular() const;
+	inline const Usuario* titular() const { return usuario_; }
 
 	//Anular titular:
 	void anula_titular();

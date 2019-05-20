@@ -31,11 +31,6 @@ Numero::Numero (const Cadena& numero):numero_(numero){
 	    throw Incorrecto(Razon::NO_VALIDO);
 }
 
-//Operador const char* ():
-Numero::operator const char* () const{
-	return (numero_.c_str());
-}
-
 //Operador < de números:
 bool operator <(const Numero& n1, const Numero& n2){
 	return strcmp(n1, n2) < 0;
@@ -77,35 +72,10 @@ Tarjeta::~Tarjeta(){
 		usuario_->no_es_titular_de(*this);
 }
 
-//Mostrar tipo:
-Tarjeta::Tipo Tarjeta::tipo() const{
-	return tipo_;
-}
-
-//Mostrar número:
-Numero Tarjeta::numero() const{
-	return numero_;
-}
-
-//Mostrar fecha de caducidad:
-Fecha Tarjeta::caducidad() const{
-	return fechaExp_;
-}
-
-//Mostrar si está activa:
-bool Tarjeta::activa() const{
-	return activa_;
-}
-
 //Cambiar activada/desactivada:
 bool Tarjeta::activa(bool a){
 	activa_ = a;
 	return activa_;
-}
-
-//Mostrar titular:
-const Usuario* Tarjeta::titular() const{
-	return usuario_;
 }
 
 //Anular titular:

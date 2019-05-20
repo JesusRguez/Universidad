@@ -23,7 +23,7 @@ public:
 	Clave(const char* contrasena);
 
 	//Mostrar clave cifrada:
-	const Cadena& clave() const;
+	const Cadena& clave() const{ return clave_; }
 
 	//Verificar clave:
 	bool verifica(const char* posible_contrasena) const;
@@ -76,28 +76,28 @@ public:
 	void no_es_titular_de(Tarjeta& t);
 
 	//Mostrar id:
-	Cadena id() const;
+	inline Cadena id() const { return id_; }
 
 	//Mostrar nombre:
-	Cadena nombre() const;
+	inline Cadena nombre() const { return nombre_; }
 
 	//Mostrar apellidos:
-	Cadena apellidos() const;
+	inline Cadena apellidos() const { return apellidos_; }
 
 	//Mostrar dirección:
-	Cadena direccion() const;
+	inline Cadena direccion() const { return direccion_; }
 
 	//Mostrar tarjetas:
-	const Tarjetas& tarjetas() const;
+	inline const Tarjetas& tarjetas() const { return MapTarjetas_; }
 
 	//Asociacion unidireccional:
 	void compra(Articulo& a, unsigned cant=1);
 
 	//Colección de artículos:
-	const Articulos& compra() const;
+	inline const Articulos& compra() const { return n_art_; }
 
 	//Mostrar número de artículos:
-	size_t n_articulos() const;
+	inline size_t n_articulos() const { return n_art_.size(); }
 
 	//Operador <<:
 	friend ostream& operator<<(ostream& os, const Usuario& u);

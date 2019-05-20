@@ -29,11 +29,6 @@ Clave::Clave(const char* contrasena){
 		throw Incorrecta(ERROR_CRYPT);
 }
 
-//Mostrar clave:
-const Cadena& Clave::clave() const {
-	return clave_;
-}
-
 //Verificar clave:
 bool Clave::verifica(const char* posible_contrasena) const {
 	if(const char * const p=crypt(posible_contrasena, clave_.c_str()))
@@ -65,47 +60,12 @@ void Usuario::no_es_titular_de(Tarjeta& t){
 	MapTarjetas_.erase(t.numero());
 }
 
-//Mostrar id:
-Cadena Usuario::id() const {
-	return id_;
-}
-
-//Mostrar nombre:
-Cadena Usuario::nombre() const {
-	return nombre_;
-}
-
-//Mostrar apellidos:
-Cadena Usuario::apellidos() const {
-	return apellidos_;
-}
-
-//Mostrar dirección:
-Cadena Usuario::direccion() const {
-	return direccion_;
-}
-
-//Mostrar tarjetas:
-const Usuario::Tarjetas& Usuario::tarjetas() const {
-	return MapTarjetas_;
-}
-
 //Asociacion unidireccional:
 void Usuario::compra(Articulo& a, unsigned cant){
 	if (cant == 0)
 		n_art_.erase(const_cast<Articulo*>(&a));
 	else
 		n_art_[const_cast<Articulo*>(&a)] = cant;
-}
-
-//Colección de artículos:
-const Usuario::Articulos& Usuario::compra() const {
-	return n_art_;
-}
-
-//Mostrar número de artículos:
-size_t Usuario::n_articulos() const {
-	return n_art_.size();
 }
 
 //Operador <<:

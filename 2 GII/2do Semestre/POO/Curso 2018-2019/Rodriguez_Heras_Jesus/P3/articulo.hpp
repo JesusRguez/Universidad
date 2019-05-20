@@ -13,21 +13,21 @@ public:
 	Articulo(const Cadena& referencia, const Cadena& titulo, const Fecha& fecha_publi, const double& precio, const unsigned& stock);
 
 	//Mostrar referencia:
-	const Cadena& referencia() const;
+	inline const Cadena& referencia() const { return referencia_; }
 
 	//Mostrar título:
-	const Cadena& titulo() const;
+	inline const Cadena& titulo() const { return titulo_; }
 
 	//Mostrar fecha de publicación:
-	const Fecha& f_publi() const;
+	inline const Fecha& f_publi() const { return fecha_publi_; }
 
 	//Mostrar precio:
-	const double precio() const;
-	double& precio();
+	inline const double precio() const { return precio_; }
+	inline double& precio() { return precio_; }
 
 	//Mostrar stock:
-	const unsigned stock() const;
-	unsigned& stock();
+	inline const unsigned stock() const { return stock_; }
+	inline unsigned& stock() { return stock_; }
 
 private:
 	Cadena referencia_;

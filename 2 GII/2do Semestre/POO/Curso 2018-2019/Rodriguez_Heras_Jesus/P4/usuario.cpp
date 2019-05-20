@@ -68,11 +68,6 @@ void Usuario::compra(Articulo& a, unsigned cant){
 		n_art_[const_cast<Articulo*>(&a)] = cant;
 }
 
-//Colección de artículos:
-const Usuario::Articulos& Usuario::compra() const {
-	return n_art_;
-}
-
 //Operador <<:
 ostream& operator<<(ostream& os, const Usuario& u){
 	os << u.id() << "[" << u.contrasena_.clave() << "]" << u.nombre() << u.apellidos() << endl << u.direccion() << endl << "Tarjetas:" << endl;
