@@ -51,19 +51,21 @@
 \headcommand {\beamer@subsubsectionentry {0}{2}{2}{3}{19}{Creaci\IeC {\'o}n de webs en Azure}}
 \headcommand {\slideentry {2}{2}{3}{19/19}{Creaci\IeC {\'o}n de webs}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{20}{Creaci\IeC {\'o}n de servicios IoT}}\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{20}{Creaci\IeC {\'o}n de servicios IoT en AWS}}
-\headcommand {\slideentry {2}{3}{1}{20/20}{Creaci\IeC {\'o}n de servicios IoT}{0}}
+\headcommand {\slideentry {2}{2}{4}{20/20}{Creaci\IeC {\'o}n de webs}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {2}{3}{2}{21/21}{Creaci\IeC {\'o}n de servicios IoT}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{21}{Creaci\IeC {\'o}n de servicios IoT}}\headcommand {\beamer@subsectionpages {17}{20}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{21}{Creaci\IeC {\'o}n de servicios IoT en AWS}}
+\headcommand {\slideentry {2}{3}{1}{21/21}{Creaci\IeC {\'o}n de servicios IoT}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{3}{2}{22}{Creaci\IeC {\'o}n de servicios IoT en Azure}}
-\headcommand {\slideentry {2}{3}{3}{22/22}{Creaci\IeC {\'o}n de servicios IoT}{0}}
+\headcommand {\slideentry {2}{3}{2}{22/22}{Creaci\IeC {\'o}n de servicios IoT}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {2}{3}{4}{23/23}{Creaci\IeC {\'o}n de servicios IoT}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{2}{23}{Creaci\IeC {\'o}n de servicios IoT en Azure}}
+\headcommand {\slideentry {2}{3}{3}{23/23}{Creaci\IeC {\'o}n de servicios IoT}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@partpages {1}{23}}
-\headcommand {\beamer@subsectionpages {20}{23}}
-\headcommand {\beamer@sectionpages {10}{23}}
-\headcommand {\beamer@documentpages {23}}
-\headcommand {\def \inserttotalframenumber {23}}
+\headcommand {\slideentry {2}{3}{4}{24/24}{Creaci\IeC {\'o}n de servicios IoT}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@partpages {1}{24}}
+\headcommand {\beamer@subsectionpages {21}{24}}
+\headcommand {\beamer@sectionpages {10}{24}}
+\headcommand {\beamer@documentpages {24}}
+\headcommand {\def \inserttotalframenumber {24}}

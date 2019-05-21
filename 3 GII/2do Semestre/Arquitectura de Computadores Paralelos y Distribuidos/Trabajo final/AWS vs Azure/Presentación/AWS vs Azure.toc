@@ -10,6 +10,6 @@
 \beamer@subsubsectionintoc {2}{2}{1}{Servicios Web}{17}{0}{2}
 \beamer@subsubsectionintoc {2}{2}{2}{Creaci\IeC {\'o}n de webs en AWS}{18}{0}{2}
 \beamer@subsubsectionintoc {2}{2}{3}{Creaci\IeC {\'o}n de webs en Azure}{19}{0}{2}
-\beamer@subsectionintoc {2}{3}{Creaci\IeC {\'o}n de servicios IoT}{20}{0}{2}
-\beamer@subsubsectionintoc {2}{3}{1}{Creaci\IeC {\'o}n de servicios IoT en AWS}{20}{0}{2}
-\beamer@subsubsectionintoc {2}{3}{2}{Creaci\IeC {\'o}n de servicios IoT en Azure}{22}{0}{2}
+\beamer@subsectionintoc {2}{3}{Creaci\IeC {\'o}n de servicios IoT}{21}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{Creaci\IeC {\'o}n de servicios IoT en AWS}{21}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{2}{Creaci\IeC {\'o}n de servicios IoT en Azure}{23}{0}{2}
