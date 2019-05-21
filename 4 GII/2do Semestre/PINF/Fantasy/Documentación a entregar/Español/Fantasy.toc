@@ -106,10 +106,11 @@
 \contentsline {subsection}{\numberline {7.4.1}Crear fantas\IeC {\'\i }a}{54}{subsection.7.4.1}
 \contentsline {subsection}{\numberline {7.4.2}Modificar fantas\IeC {\'\i }a}{54}{subsection.7.4.2}
 \contentsline {subsection}{\numberline {7.4.3}Eliminar fantas\IeC {\'\i }a}{54}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Crear punto activo}{54}{subsection.7.4.4}
-\contentsline {subsection}{\numberline {7.4.5}Modificar punto activo}{54}{subsection.7.4.5}
-\contentsline {subsection}{\numberline {7.4.6}Eliminar punto activo}{54}{subsection.7.4.6}
-\contentsline {subsection}{\numberline {7.4.7}Jugar fantas\IeC {\'\i }a}{54}{subsection.7.4.7}
+\contentsline {subsection}{\numberline {7.4.4}Duplicar fantas\IeC {\'\i }a}{54}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Crear punto activo}{54}{subsection.7.4.5}
+\contentsline {subsection}{\numberline {7.4.6}Modificar punto activo}{54}{subsection.7.4.6}
+\contentsline {subsection}{\numberline {7.4.7}Eliminar punto activo}{54}{subsection.7.4.7}
+\contentsline {subsection}{\numberline {7.4.8}Jugar fantas\IeC {\'\i }a}{54}{subsection.7.4.8}
 \contentsline {chapter}{\numberline {8}Manual de instalaci\IeC {\'o}n y explotaci\IeC {\'o}n}{55}{chapter.8}
 \contentsline {section}{\numberline {8.1}Introducci\IeC {\'o}n}{55}{section.8.1}
 \contentsline {section}{\numberline {8.2}Requisitos previos}{55}{section.8.2}
