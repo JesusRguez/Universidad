@@ -4,7 +4,7 @@ struct V{
     virtual ~V(){}
 };
 
-struct X{
+struct X: V{
     void fv(){}
     void f(){
         std::cout << "Procesando objeto X..." << '\n';
