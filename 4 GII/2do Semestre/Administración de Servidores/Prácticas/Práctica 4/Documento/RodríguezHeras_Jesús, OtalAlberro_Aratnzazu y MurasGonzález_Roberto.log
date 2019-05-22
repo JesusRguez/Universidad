@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  15 MAY 2019 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.25)  22 MAY 2019 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.tex"
-(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.tex
+**"RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.tex"
+(./RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -388,27 +388,28 @@ Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 ))
-(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux
+(./RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-\openout1 = `"RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux"'.
+\openout1 = `"RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Ro
+berto.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -460,7 +461,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 80.
+Package hyperref Info: Link coloring ON on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -470,14 +471,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count125
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 
-(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.out)
-(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.out)
+(./RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.out)
+(./RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.out)
 \@outlinefile=\write3
-\openout3 = `"RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.out"'.
+\openout3 = `"RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Ro
+berto.out"'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -510,53 +512,53 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
 \c@lstlisting=\count132
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 89
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 90
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 89
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 90
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 89
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 90
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 89
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 90
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 89.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -567,41 +569,41 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 108.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 121.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 109.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 122.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
 
-Overfull \hbox (50.80588pt too wide) in paragraph at lines 126--127
+Overfull \hbox (50.80588pt too wide) in paragraph at lines 127--128
 []\T1/ptm/m/n/12 Nos di-ri-gi-mos al apar-ta-do \T1/ptm/m/it/12 Using the web-m
 in APT re-po-si-tory\T1/ptm/m/n/12 . En el ar-chi-vo \T1/pcr/m/n/12 /etc/apt/so
 urces.list
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
-[2] <Apache.png, id=32, 1371.1225pt x 770.88pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
+[2] <Apache.png, id=40, 1371.1225pt x 770.88pt>
 File: Apache.png Graphic file (type png)
  <use Apache.png>
-Package pdftex.def Info: Apache.png used on input line 166.
+Package pdftex.def Info: Apache.png used on input line 167.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
 
-<Webmin.png, id=34, 1371.1225pt x 770.88pt>
+<Webmin.png, id=42, 1371.1225pt x 770.88pt>
 File: Webmin.png Graphic file (type png)
  <use Webmin.png>
-Package pdftex.def Info: Webmin.png used on input line 177.
+Package pdftex.def Info: Webmin.png used on input line 178.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
 
 
@@ -614,7 +616,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (8.7915pt too wide) in paragraph at lines 183--184
+Overfull \hbox (8.7915pt too wide) in paragraph at lines 184--185
 []\T1/ptm/m/n/12 Para com-pro-bar que php fun-cio-na bien cam-bia-mos el ar-chi
 -vo \T1/pcr/m/n/12 /var/www/html/index.html
  []
@@ -623,69 +625,71 @@ Overfull \hbox (8.7915pt too wide) in paragraph at lines 183--184
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 190.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 191.
 
-<PHP.png, id=41, 1371.1225pt x 770.88pt>
+<PHP.png, id=49, 1371.1225pt x 770.88pt>
 File: PHP.png Graphic file (type png)
  <use PHP.png>
-Package pdftex.def Info: PHP.png used on input line 198.
+Package pdftex.def Info: PHP.png used on input line 199.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./Webmin.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 215.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 216.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
 
-[5 <./PHP.png>] <ControlAcceso.png, id=66, 1371.1225pt x 770.88pt>
+[5 <./PHP.png>] <ControlAcceso.png, id=74, 1371.1225pt x 770.88pt>
 File: ControlAcceso.png Graphic file (type png)
 
 <use ControlAcceso.png>
-Package pdftex.def Info: ControlAcceso.png used on input line 228.
+Package pdftex.def Info: ControlAcceso.png used on input line 229.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
  [6 <./ControlAcceso.png>]
-<Usuarios.png, id=74, 1371.1225pt x 770.88pt>
+<Usuarios.png, id=82, 1371.1225pt x 770.88pt>
 File: Usuarios.png Graphic file (type png)
  <use Usuarios.png>
-Package pdftex.def Info: Usuarios.png used on input line 237.
+Package pdftex.def Info: Usuarios.png used on input line 238.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
- [7 <./Usuarios.png>] <Login.png, id=82, 1371.1225pt x 770.88pt>
+ [7 <./Usuarios.png>] <Login.png, id=90, 1371.1225pt x 770.88pt>
 File: Login.png Graphic file (type png)
  <use Login.png>
-Package pdftex.def Info: Login.png used on input line 246.
+Package pdftex.def Info: Login.png used on input line 247.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
- [8 <./Login.png>] <Indexing.png, id=89, 1371.1225pt x 770.88pt>
+ [8 <./Login.png>] <Indexing.png, id=97, 1371.1225pt x 770.88pt>
 File: Indexing.png Graphic file (type png)
  <use Indexing.png>
-Package pdftex.def Info: Indexing.png used on input line 259.
+Package pdftex.def Info: Indexing.png used on input line 260.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
- [9 <./Indexing.png>] <Admin.png, id=96, 1371.1225pt x 770.88pt>
+ [9 <./Indexing.png>] <Admin.png, id=104, 1371.1225pt x 770.88pt>
 File: Admin.png Graphic file (type png)
  <use Admin.png>
-Package pdftex.def Info: Admin.png used on input line 268.
-(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
- [10 <./Admin.png>] <ugr.png, id=103, 1371.1225pt x 770.88pt>
-File: ugr.png Graphic file (type png)
- <use ugr.png>
-Package pdftex.def Info: ugr.png used on input line 279.
-(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
- [11 <./ugr.png>] <CrearLab.png, id=110, 1371.1225pt x 770.88pt>
-File: CrearLab.png Graphic file (type png)
- <use CrearLab.png>
-Package pdftex.def Info: CrearLab.png used on input line 293.
+Package pdftex.def Info: Admin.png used on input line 269.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
 
-<FuncionanLabs.png, id=111, 1364.09625pt x 171.64125pt>
+[10 <./Admin.png>] <ugr.png, id=111, 1371.1225pt x 770.88pt>
+File: ugr.png Graphic file (type png)
+ <use ugr.png>
+Package pdftex.def Info: ugr.png used on input line 280.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+
+[11 <./ugr.png>] <CrearLab.png, id=118, 1371.1225pt x 770.88pt>
+File: CrearLab.png Graphic file (type png)
+
+<use CrearLab.png>
+Package pdftex.def Info: CrearLab.png used on input line 294.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+ <FuncionanLabs.png, id=119, 1364.09625pt x 171.64125pt>
 File: FuncionanLabs.png Graphic file (type png)
 
 <use FuncionanLabs.png>
-Package pdftex.def Info: FuncionanLabs.png used on input line 301.
+Package pdftex.def Info: FuncionanLabs.png used on input line 302.
 (pdftex.def)             Requested size: 463.78659pt x 58.35724pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -696,59 +700,98 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
-) [12 <./CrearLab.png> <./FuncionanLabs.png>] <SinUTF8.png, id=129, 1371.1225pt
+) [12 <./CrearLab.png> <./FuncionanLabs.png>] <SinUTF8.png, id=137, 1371.1225pt
  x 770.88pt>
 File: SinUTF8.png Graphic file (type png)
 
 <use SinUTF8.png>
-Package pdftex.def Info: SinUTF8.png used on input line 325.
+Package pdftex.def Info: SinUTF8.png used on input line 326.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
 
-Overfull \hbox (17.56604pt too wide) in paragraph at lines 330--330
+Overfull \hbox (17.56604pt too wide) in paragraph at lines 331--331
 [][][]\T1/ptm/m/n/10 Si es-ta-mos usan-do De-bia-n/-Jes-sie de-be-mos cam-biar 
 el ar-chi-vo \T1/pcr/m/n/10 /etc/apache2/conf-enabled/charset.conf
  []
 
-[13 <./SinUTF8.png>] <ConUTF8.png, id=139, 1371.1225pt x 770.88pt>
+[13 <./SinUTF8.png>] <ConUTF8.png, id=147, 1371.1225pt x 770.88pt>
 File: ConUTF8.png Graphic file (type png)
 
 <use ConUTF8.png>
-Package pdftex.def Info: ConUTF8.png used on input line 339.
+Package pdftex.def Info: ConUTF8.png used on input line 340.
 (pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 369.
  [14 <./ConUTF8.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 369.
+<Expires.png, id=156, 1371.1225pt x 770.88pt>
+File: Expires.png Graphic file (type png)
+ <use Expires.png>
+Package pdftex.def Info: Expires.png used on input line 374.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+ [15 <./Expires.png>] <Imagen.png, id=164, 1371.1225pt x 770.88pt>
+File: Imagen.png Graphic file (type png)
+ <use Imagen.png>
+Package pdftex.def Info: Imagen.png used on input line 401.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+ [16 <./Imagen.png>] <Imagen2.png, id=171, 1371.1225pt x 770.88pt>
+File: Imagen2.png Graphic file (type png)
+ <use Imagen2.png>
+Package pdftex.def Info: Imagen2.png used on input line 417.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 425.
 
-(./RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.aux
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+)
+Overfull \hbox (29.09843pt too wide) in paragraph at lines 431--432
+[]\T1/ptm/m/n/12 Ahora pro-ba-mos a en-trar en \T1/pcr/m/n/12 http://manolorg.u
+ca.es/personalWeb.php?user=JAR
+ []
+
+[17 <./Imagen2.png>] <JAR.png, id=182, 1371.1225pt x 770.88pt>
+File: JAR.png Graphic file (type png)
+ <use JAR.png>
+Package pdftex.def Info: JAR.png used on input line 435.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+
+[18 <./JAR.png>] <JAR2.png, id=189, 1371.1225pt x 770.88pt>
+File: JAR2.png Graphic file (type png)
+ <use JAR2.png>
+Package pdftex.def Info: JAR2.png used on input line 449.
+(pdftex.def)             Requested size: 466.17549pt x 262.09573pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
+
+[19 <./JAR2.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+
+(./RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzález_Roberto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 369.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 369.
-Package rerunfilecheck Info: File `"RodríguezHeras_Jesús y OtalAlberro_Aratnz
-azu".out' has not changed.
-(rerunfilecheck)             Checksum: 1BDC74F28B368CC4CB557F0F70FD4238;180.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 369.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package rerunfilecheck Info: File `"RodríguezHeras_Jesús, OtalAlberro_Aratnza
+zu y MurasGonzález_Roberto".out' has not changed.
+(rerunfilecheck)             Checksum: 46FE02B2397A0AAA7F47EE60390E6BA6;281.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 458.
  ) 
 Here is how much of TeX's memory you used:
- 12274 strings out of 493013
- 179852 string characters out of 6135682
- 518614 words of memory out of 5000000
- 15572 multiletter control sequences out of 15000+600000
+ 12397 strings out of 493013
+ 181585 string characters out of 6135682
+ 518924 words of memory out of 5000000
+ 15672 multiletter control sequences out of 15000+600000
  60350 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,8n,51p,449b,3335s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,8n,51p,659b,3335s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "RodríguezHeras_Jesús y OtalAlberro_Aratnzazu.pdf" (14 page
-s, 1161917 bytes).
+Output written on "RodríguezHeras_Jesús, OtalAlberro_Aratnzazu y MurasGonzál
+ez_Roberto.pdf" (19 pages, 1561980 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

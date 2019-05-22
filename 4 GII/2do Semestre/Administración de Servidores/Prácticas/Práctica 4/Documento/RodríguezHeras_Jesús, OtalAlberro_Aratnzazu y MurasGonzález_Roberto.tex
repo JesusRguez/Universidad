@@ -75,7 +75,8 @@
 
 \title{Práctica 4}
 \author{Jesús Rodríguez Heras\\
-	Arantzazu Otal Alberro}
+	Arantzazu Otal Alberro\\
+Roberto Muras González}
 
 \begin{document}
 	
@@ -365,5 +366,93 @@ Para comprobar si funciona abrimos una consola en nuestro ordenador y ejecutamos
 \begin{center}
 	\texttt{curl ---head manolorg.uca.es/UCA.jpg}
 \end{center}
+
+\newpage
+Una vez hecho eso, obtenemos lo siguiente:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.34]{Expires.png}
+	\caption{Configuración y resultado del expires.}
+	\label{Configuración y resultado del expires}
+\end{figure}
+
+\section{Redirección}
+\begin{itemize}
+	\item Hay un problema en la base de datos con los nombres, y algunos ficheros aparecen erróneamente como .jpeg de forma errónea. Se desea que en el subdirectorio /imagenes todos los
+	ficheros con extensión .jpeg se busquen con extensión .jpg.
+	
+	Para ello, creamos el subdirectorio \texttt{/imagenes} en el directorio \texttt{/var/www/manolorg}.
+	
+	A continuación, creamos el directory \texttt{/imagenes} en webmin.
+	
+	En ``Global configuration'' nos vamos a ``Configure Apache Modules'' y activamos el módulo \texttt{rewrite}.
+	
+	Luego, nos dirigimos al ``Edit directives'' de \texttt{manolorg} y añadimos al final lo siguiente:
+	\begin{center}
+		\texttt{RewriteEngine On\\
+			RewriteRule ``\^/imagenes/(.*)\.jpeg'' ``/imagenes/\$1.jpg'' [R]}
+		\\Es un acento circunflejo.
+	\end{center}
+
+	Entonces, al buscar \texttt{http://manolorg.uca.es/imagenes/UCA.jpeg}, nos mostrará \texttt{http://manolorg.uca.es/imagenes/UCA.jpg} y nos cambiará la dirección como podemos ver en la siguiente imagen.
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Imagen.png}
+		\caption{Imagen del subdirectorio imágenes.}
+		\label{Imagen}
+	\end{figure}
+	
+	\item Modificar la condición anterior para que sólo cambie las extensiones a .jpg cuando no exista el fichero con la extensión .jpeg.
+
+	Para ello tendremos que añadir una condición al ``Edit directives'' del ``Global configuration'' poniéndole lo siguiente:
+	\begin{center}
+		\texttt{RewriteCond \%{Document\_root}\%{Request\_Filename} !-f}
+	\end{center}
+	
+	Luego, probamos a entrar en: \texttt{http://manolorg.uca.es/imagenes/UCA2.jpeg} y nos mostrará la ``jpeg'' aunque exista la ``jpg''.
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{Imagen2.png}
+		\caption{Imagen jpeg.}
+		\label{Imagen jpeg}
+	\end{figure}
+	
+	\item El dominio manologr.uca.es tiene diferentes páginas para cada usuario. Estás páginas se sirven de forma dinámica mediante php. Así, la URL manologr.uca.es/personalWeb.php?user=\\CoboMJ mostrará la página personal del usuario CoboMJ donde se podría ver el listado de sus	publicaciones. Necesitamos convertir esta URL en una URL más ambigable del tipo manolo.uca.es/team/CoboMJ. Para poder probar el funcionamiento, se deberá crear la página php personalWeb.php que lo único que hará es mostrar un mensaje con el parámetro pasado por get.
+	
+	Para ello, crearemos el fichero \texttt{personalWeb.php} en \texttt{/var/www/manolorg/} con un get:
+	\begin{lstlisting}{language=php}
+		<?php
+		echo '¡Hola ' . htmlspecialchars($_GET["user"]) . '!';
+		?>
+	\end{lstlisting}
+	
+	Ahora probamos a entrar en \texttt{http://manolorg.uca.es/personalWeb.php?user=JAR} y veremos lo siguiente:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{JAR.png}
+		\caption{Comprobación php.}
+		\label{Comprobación php}
+	\end{figure}
+
+	Ahora, añadimos la siguiente línea en el ``Edit directives'' de ``Global configuration'':
+	\begin{center}
+		\texttt{RewriteRule ``\^/team/(.*)'' ``/personalWeb.php?user=\$1''}
+	\end{center}
+	
+	Para comprobar que funciona nos dirigimos a la siguiente dirección:\\ \texttt{manolorg.uca.es/team/JAR2}, y nos sale lo siguiente:
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{JAR2.png}
+		\caption{Comprobación de php con redirección.}
+		\label{PHP2}
+	\end{figure}
+\end{itemize}
+
+\section{Balanceo de carga}
+
 
 \end{document}
