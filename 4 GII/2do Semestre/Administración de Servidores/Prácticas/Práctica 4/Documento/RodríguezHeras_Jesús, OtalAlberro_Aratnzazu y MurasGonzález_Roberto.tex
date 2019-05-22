@@ -453,6 +453,49 @@ Una vez hecho eso, obtenemos lo siguiente:
 \end{itemize}
 
 \section{Balanceo de carga}
+Dado que esperamos mucho servicios, las páginas se servirán mediante un balanceo de carga, entre los servidores nodo01.manolorg.uca.es, nodo02.manolorg.uca.es, y nodo03.manolorg.uca.es.
+
+El servidor nodo02 gestionará la mitad de peticiones que nodo01. El último es un servidor de respaldo que funcionará sólo en el caso de que los anteriores fallen.
+
+Para ello, haremos cuatro máquinas virtuales e instalaremos webmin en la máquina donde se encuentra el balanceo de carga y modificaremos el ``index.html'' de las otras tres máquinas virtuales con el siguiente código:
+\begin{lstlisting}{language=html}
+	<html>
+	<h1>NODO 1</h1>
+	</html>
+\end{lstlisting}
+
+Una vez configurado, debemos comprobar el rendimiento que obtenemos. Para ello:
+\begin{itemize}
+	\item Probar, usando alguna herramienta de medición, el número de peticiones por segundo sin usar balanceo de carga.
+	
+	Para ello, con todos los servidores encendidos lanzaremos el siguiente comando desde nuestra terminal:
+	\begin{center}
+		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
+	\end{center}
+
+	Y obtendremos el siguiente resultado:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{SinBalanceo.png}
+		\caption{Sin balanceo.}
+		\label{Sin balanceo}
+	\end{figure}
+
+	\item Indicar, usando la misma herramienta, usando el balanceo de carga anterior.
+	
+	Para ello, con todos los servidores encendidos lanzaremos el siguiente comando desde nuestra terminal:
+	\begin{center}
+		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
+	\end{center}
+	\newpage
+	Y obtendremos el siguiente resultado:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.34]{ConBalanceo.png}
+		\caption{Con balanceo.}
+		\label{Con balanceo}
+	\end{figure}
+\end{itemize}
 
 
 \end{document}
