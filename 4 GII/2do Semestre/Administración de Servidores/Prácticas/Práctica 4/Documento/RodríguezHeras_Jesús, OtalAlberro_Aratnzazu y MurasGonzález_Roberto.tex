@@ -464,24 +464,37 @@ Para ello, haremos cuatro máquinas virtuales e instalaremos webmin en la máqui
 	</html>
 \end{lstlisting}
 
-Para configurar el balanceo de carga nos dirigimos al host virtual por defecto de la máquina que actúa como balanceador y, en ``Edit directives'' ponemos lo siguiente:\\
+Para configurar el balanceo de carga tendremos que habilitar los siguientes módulos de apache:
+\begin{itemize}
+	\item lbmethod\_bybusyness
+	\item lbmethod\_byrequests
+	\item lbmethod\_bytrafic
+	\item lbmethod\_heartbeat
+	\item proxy\_balancer
+	\item proxy\_html
+	\item proxy\_http
+\end{itemize}
+
+Luego, nos dirigimos al host virtual por defecto de la máquina que actúa como balanceador y, en ``Edit directives'' ponemos lo siguiente:\\
 
 \noindent
 %\begin{center}
 	\texttt{ProxyPass / balancer://hotcluster/\\
 		<Proxy balancer://hotcluster>\\
-		BalancerMember http://192.168.1.11\\
-		BalancerMember http://192.168.1.12\\
+		BalancerMember http://192.168.1.11 loadfactor=2\\
+		BalancerMember http://192.168.1.12 loadfactor=1\\
 		BalancerMember http://192.168.1.13 status=+H\\
 		ProxySet lbmethod=bytraffic\\
 		</Proxy>}\\
 %\end{center}
 
+El \texttt{loadfactor} es para que el nodo1 reciba el doble de peticiones que el nodo2
+
 Una vez configurado, debemos comprobar el rendimiento que obtenemos. Para ello:
 \begin{itemize}
 	\item Probar, usando alguna herramienta de medición, el número de peticiones por segundo sin usar balanceo de carga.
 	
-	Para ello, con todos los servidores encendidos y sin balanceo de carga lanzaremos el siguiente comando desde nuestra terminal:
+	Para ello, comentamos las líneas que habilitan el balanceo de carga en webmin y, con todos los servidores encendidos y sin balanceo de carga, lanzaremos el siguiente comando desde nuestra terminal:
 	\begin{center}
 		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
 	\end{center}
@@ -500,7 +513,7 @@ Una vez configurado, debemos comprobar el rendimiento que obtenemos. Para ello:
 	\begin{center}
 		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
 	\end{center}
-	\newpage
+%	\newpage
 	Y obtendremos el siguiente resultado:
 	\begin{figure}[h]
 		\centering
