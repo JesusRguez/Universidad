@@ -464,11 +464,24 @@ Para ello, haremos cuatro máquinas virtuales e instalaremos webmin en la máqui
 	</html>
 \end{lstlisting}
 
+Para configurar el balanceo de carga nos dirigimos al host virtual por defecto de la máquina que actúa como balanceador y, en ``Edit directives'' ponemos lo siguiente:\\
+
+\noindent
+%\begin{center}
+	\texttt{ProxyPass / balancer://hotcluster/\\
+		<Proxy balancer://hotcluster>\\
+		BalancerMember http://192.168.1.11\\
+		BalancerMember http://192.168.1.12\\
+		BalancerMember http://192.168.1.13 status=+H\\
+		ProxySet lbmethod=bytraffic\\
+		</Proxy>}\\
+%\end{center}
+
 Una vez configurado, debemos comprobar el rendimiento que obtenemos. Para ello:
 \begin{itemize}
 	\item Probar, usando alguna herramienta de medición, el número de peticiones por segundo sin usar balanceo de carga.
 	
-	Para ello, con todos los servidores encendidos lanzaremos el siguiente comando desde nuestra terminal:
+	Para ello, con todos los servidores encendidos y sin balanceo de carga lanzaremos el siguiente comando desde nuestra terminal:
 	\begin{center}
 		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
 	\end{center}
@@ -483,7 +496,7 @@ Una vez configurado, debemos comprobar el rendimiento que obtenemos. Para ello:
 
 	\item Indicar, usando la misma herramienta, usando el balanceo de carga anterior.
 	
-	Para ello, con todos los servidores encendidos lanzaremos el siguiente comando desde nuestra terminal:
+	Para ello, con todos los servidores encendidos y con balanceo de carga lanzaremos el siguiente comando desde nuestra terminal:
 	\begin{center}
 		\texttt{ab -n 100 -c 10 http://manolorg.uca.es/}
 	\end{center}
