@@ -117,9 +117,9 @@
 \contentsline {section}{\numberline {8.2}Previous requirements}{55}{section.8.2}
 \contentsline {section}{\numberline {8.3}Inventory of components}{55}{section.8.3}
 \contentsline {section}{\numberline {8.4}Installation procedures}{55}{section.8.4}
-\contentsline {section}{\numberline {8.5}Operating procedures and service level}{55}{section.8.5}
-\contentsline {section}{\numberline {8.6}Implantation tests}{55}{section.8.6}
+\contentsline {section}{\numberline {8.5}Implantation tests}{55}{section.8.5}
 \contentsline {chapter}{\numberline {9}Conclusions}{57}{chapter.9}
 \contentsline {section}{\numberline {9.1}Objetives}{57}{section.9.1}
-\contentsline {section}{\numberline {9.2}Learned lessons}{57}{section.9.2}
+\contentsline {section}{\numberline {9.2}Lessons learned}{57}{section.9.2}
 \contentsline {section}{\numberline {9.3}Future work}{57}{section.9.3}
+\contentsline {chapter}{\numberline {10}Bibliography}{59}{chapter.10}
