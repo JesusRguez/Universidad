@@ -16,84 +16,100 @@
 \BOOKMARK [2][-]{subsection.2.3.4}{Sprint 3 \(3rd April to 10th April\)}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.5}{Sprint 4 \(10th April to 24th April\)}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.6}{Sprint 5 \(24th April to 1st May\)}{section.2.3}% 18
-\BOOKMARK [1][-]{section.2.4}{Meetings}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.4.1}{Meeting 0 \(27th February\)}{section.2.4}% 20
-\BOOKMARK [2][-]{subsection.2.4.2}{Meeting 1 \(6th March\)}{section.2.4}% 21
-\BOOKMARK [2][-]{subsection.2.4.3}{Meeting 2 \(27th March\)}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.4}{Meeting 3 \(3rd April\)}{section.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.4.5}{Meeting 4 \(10th April\)}{section.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.4.6}{Meeting 5 \(24th April\)}{section.2.4}% 25
-\BOOKMARK [1][-]{section.2.5}{Team policy}{chapter.2}% 26
-\BOOKMARK [1][-]{section.2.6}{Organization}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.6.1}{Roles}{section.2.6}% 28
-\BOOKMARK [2][-]{subsection.2.6.2}{Hardware and software resources}{section.2.6}% 29
-\BOOKMARK [1][-]{section.2.7}{Costs}{chapter.2}% 30
-\BOOKMARK [2][-]{subsection.2.7.1}{Human costs}{section.2.7}% 31
-\BOOKMARK [2][-]{subsection.2.7.2}{Material costs}{section.2.7}% 32
-\BOOKMARK [1][-]{section.2.8}{Risk management}{chapter.2}% 33
-\BOOKMARK [1][-]{section.2.9}{Canvas model}{chapter.2}% 34
-\BOOKMARK [-1][-]{part.2}{II Developing}{}% 35
-\BOOKMARK [0][-]{chapter.3}{Analisys of requirements}{part.2}% 36
-\BOOKMARK [1][-]{section.3.1}{Agents catalogue}{chapter.3}% 37
-\BOOKMARK [2][-]{subsection.3.1.1}{Teachers}{section.3.1}% 38
-\BOOKMARK [2][-]{subsection.3.1.2}{Students}{section.3.1}% 39
-\BOOKMARK [1][-]{section.3.2}{Functional requiriments}{chapter.3}% 40
-\BOOKMARK [2][-]{subsection.3.2.1}{CRUD fantasy}{section.3.2}% 41
-\BOOKMARK [2][-]{subsection.3.2.2}{Use case: Copy fantasy}{section.3.2}% 42
-\BOOKMARK [2][-]{subsection.3.2.3}{CRUD background}{section.3.2}% 43
-\BOOKMARK [2][-]{subsection.3.2.4}{CRUD active point}{section.3.2}% 44
-\BOOKMARK [2][-]{subsection.3.2.5}{CRUD image}{section.3.2}% 45
-\BOOKMARK [2][-]{subsection.3.2.6}{CRUD video}{section.3.2}% 46
-\BOOKMARK [2][-]{subsection.3.2.7}{CRUD text}{section.3.2}% 47
-\BOOKMARK [2][-]{subsection.3.2.8}{CRUD quiz}{section.3.2}% 48
-\BOOKMARK [2][-]{subsection.3.2.9}{CRUD audio effect}{section.3.2}% 49
-\BOOKMARK [2][-]{subsection.3.2.10}{CRUD additional information}{section.3.2}% 50
-\BOOKMARK [2][-]{subsection.3.2.11}{Use case: Organize active points}{section.3.2}% 51
-\BOOKMARK [2][-]{subsection.3.2.12}{CRUD final quiz}{section.3.2}% 52
-\BOOKMARK [1][-]{section.3.3}{Characteristics of fantasies}{chapter.3}% 53
-\BOOKMARK [1][-]{section.3.4}{Characteristics of active points}{chapter.3}% 54
-\BOOKMARK [0][-]{chapter.4}{System design}{part.2}% 55
-\BOOKMARK [1][-]{section.4.1}{Architecture design}{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.1.1}{Phisical architecture}{section.4.1}% 57
-\BOOKMARK [2][-]{subsection.4.1.2}{Logical architecture}{section.4.1}% 58
-\BOOKMARK [2][-]{subsection.4.1.3}{Design architecture}{section.4.1}% 59
-\BOOKMARK [1][-]{section.4.2}{User interface desing}{chapter.4}% 60
-\BOOKMARK [1][-]{section.4.3}{Data design}{chapter.4}% 61
-\BOOKMARK [1][-]{section.4.4}{Design of components}{chapter.4}% 62
-\BOOKMARK [1][-]{section.4.5}{Parameterization of the base software}{chapter.4}% 63
-\BOOKMARK [0][-]{chapter.5}{Implementation of the system}{part.2}% 64
-\BOOKMARK [1][-]{section.5.1}{Technological environment}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.2}{Source code}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.3}{Code quality}{chapter.5}% 67
-\BOOKMARK [0][-]{chapter.6}{System tests}{part.2}% 68
-\BOOKMARK [1][-]{section.6.1}{Unit tests}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.2}{Integration testing}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.3}{System tests}{chapter.6}% 71
-\BOOKMARK [2][-]{subsection.6.3.1}{Functional testing}{section.6.3}% 72
-\BOOKMARK [2][-]{subsection.6.3.2}{Non-functional tests}{section.6.3}% 73
-\BOOKMARK [1][-]{section.6.4}{Acceptance Tests}{chapter.6}% 74
-\BOOKMARK [-1][-]{part.3}{III Epilogue}{}% 75
-\BOOKMARK [0][-]{chapter.7}{User manual}{part.3}% 76
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 77
-\BOOKMARK [1][-]{section.7.2}{Features}{chapter.7}% 78
-\BOOKMARK [1][-]{section.7.3}{Previous requirements}{chapter.7}% 79
-\BOOKMARK [1][-]{section.7.4}{Utilization}{chapter.7}% 80
-\BOOKMARK [2][-]{subsection.7.4.1}{Create a fantasy}{section.7.4}% 81
-\BOOKMARK [2][-]{subsection.7.4.2}{Modify fantasy}{section.7.4}% 82
-\BOOKMARK [2][-]{subsection.7.4.3}{Delete fantasy}{section.7.4}% 83
-\BOOKMARK [2][-]{subsection.7.4.4}{Duplicate fantasy}{section.7.4}% 84
-\BOOKMARK [2][-]{subsection.7.4.5}{Create active point}{section.7.4}% 85
-\BOOKMARK [2][-]{subsection.7.4.6}{Modify active point}{section.7.4}% 86
-\BOOKMARK [2][-]{subsection.7.4.7}{Delete active point}{section.7.4}% 87
-\BOOKMARK [2][-]{subsection.7.4.8}{Play fantasy}{section.7.4}% 88
-\BOOKMARK [0][-]{chapter.8}{Installation and operation manual}{part.3}% 89
-\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 90
-\BOOKMARK [1][-]{section.8.2}{Previous requirements}{chapter.8}% 91
-\BOOKMARK [1][-]{section.8.3}{Inventory of components}{chapter.8}% 92
-\BOOKMARK [1][-]{section.8.4}{Installation procedures}{chapter.8}% 93
-\BOOKMARK [1][-]{section.8.5}{Implantation tests}{chapter.8}% 94
-\BOOKMARK [0][-]{chapter.9}{Conclusions}{part.3}% 95
-\BOOKMARK [1][-]{section.9.1}{Objetives}{chapter.9}% 96
-\BOOKMARK [1][-]{section.9.2}{Lessons learned}{chapter.9}% 97
-\BOOKMARK [1][-]{section.9.3}{Future work}{chapter.9}% 98
-\BOOKMARK [0][-]{chapter.10}{Bibliography}{part.3}% 99
+\BOOKMARK [2][-]{subsection.2.3.7}{Sprint 6 \(3rd May to 8th May\)}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.8}{Sprint 7 \(8th May to 15th May\)}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.9}{Sprint 8 \(15th May to 22nd May\)}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.10}{Sprint 9 \(22nd May to 29th May\)}{section.2.3}% 22
+\BOOKMARK [1][-]{section.2.4}{Meetings}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.4.1}{Meeting 0 \(27th February\)}{section.2.4}% 24
+\BOOKMARK [2][-]{subsection.2.4.2}{Meeting 1 \(6th March\)}{section.2.4}% 25
+\BOOKMARK [2][-]{subsection.2.4.3}{Meeting 2 \(27th March\)}{section.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.4.4}{Meeting 3 \(3rd April\)}{section.2.4}% 27
+\BOOKMARK [2][-]{subsection.2.4.5}{Meeting 4 \(10th April\)}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.6}{Meeting 5 \(24th April\)}{section.2.4}% 29
+\BOOKMARK [2][-]{subsection.2.4.7}{Meeting 6 \(3rd May\)}{section.2.4}% 30
+\BOOKMARK [2][-]{subsection.2.4.8}{Meeting 7 \(8th May\)}{section.2.4}% 31
+\BOOKMARK [2][-]{subsection.2.4.9}{Meeting 8 \(15th May\)}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.10}{Meeting 9 \(22nd May\)}{section.2.4}% 33
+\BOOKMARK [2][-]{subsection.2.4.11}{Meeting 9 \(29th May\)}{section.2.4}% 34
+\BOOKMARK [1][-]{section.2.5}{Team policy}{chapter.2}% 35
+\BOOKMARK [1][-]{section.2.6}{Organization}{chapter.2}% 36
+\BOOKMARK [2][-]{subsection.2.6.1}{Roles}{section.2.6}% 37
+\BOOKMARK [2][-]{subsection.2.6.2}{Hardware and software resources}{section.2.6}% 38
+\BOOKMARK [1][-]{section.2.7}{Costs}{chapter.2}% 39
+\BOOKMARK [2][-]{subsection.2.7.1}{Human costs}{section.2.7}% 40
+\BOOKMARK [2][-]{subsection.2.7.2}{Material costs}{section.2.7}% 41
+\BOOKMARK [1][-]{section.2.8}{Risk management}{chapter.2}% 42
+\BOOKMARK [1][-]{section.2.9}{Canvas model}{chapter.2}% 43
+\BOOKMARK [-1][-]{part.2}{II Developing}{}% 44
+\BOOKMARK [0][-]{chapter.3}{Analisys of requirements}{part.2}% 45
+\BOOKMARK [1][-]{section.3.1}{Agents catalogue}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.1.1}{Teachers}{section.3.1}% 47
+\BOOKMARK [2][-]{subsection.3.1.2}{Students}{section.3.1}% 48
+\BOOKMARK [1][-]{section.3.2}{Functional requiriments}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.2.1}{CRUD fantasy}{section.3.2}% 50
+\BOOKMARK [2][-]{subsection.3.2.2}{Use case: Copy fantasy}{section.3.2}% 51
+\BOOKMARK [2][-]{subsection.3.2.3}{CRUD background}{section.3.2}% 52
+\BOOKMARK [2][-]{subsection.3.2.4}{CRUD active point}{section.3.2}% 53
+\BOOKMARK [2][-]{subsection.3.2.5}{CRUD image}{section.3.2}% 54
+\BOOKMARK [2][-]{subsection.3.2.6}{CRUD video}{section.3.2}% 55
+\BOOKMARK [2][-]{subsection.3.2.7}{CRUD text}{section.3.2}% 56
+\BOOKMARK [2][-]{subsection.3.2.8}{CRUD quiz}{section.3.2}% 57
+\BOOKMARK [2][-]{subsection.3.2.9}{CRUD audio effect}{section.3.2}% 58
+\BOOKMARK [2][-]{subsection.3.2.10}{CRUD additional information}{section.3.2}% 59
+\BOOKMARK [2][-]{subsection.3.2.11}{Use case: Organize active points}{section.3.2}% 60
+\BOOKMARK [2][-]{subsection.3.2.12}{CRUD final quiz}{section.3.2}% 61
+\BOOKMARK [1][-]{section.3.3}{Information requirements}{chapter.3}% 62
+\BOOKMARK [1][-]{section.3.4}{Non-functional requirements}{chapter.3}% 63
+\BOOKMARK [2][-]{subsection.3.4.1}{Efficiency}{section.3.4}% 64
+\BOOKMARK [2][-]{subsection.3.4.2}{Logical and data security}{section.3.4}% 65
+\BOOKMARK [2][-]{subsection.3.4.3}{Usability}{section.3.4}% 66
+\BOOKMARK [2][-]{subsection.3.4.4}{Dependibility}{section.3.4}% 67
+\BOOKMARK [1][-]{section.3.5}{Business rules}{chapter.3}% 68
+\BOOKMARK [1][-]{section.3.6}{Study of technological alternatives}{chapter.3}% 69
+\BOOKMARK [1][-]{section.3.7}{GAP analysis}{chapter.3}% 70
+\BOOKMARK [0][-]{chapter.4}{System design}{part.2}% 71
+\BOOKMARK [1][-]{section.4.1}{Architecture design}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.1.1}{Phisical architecture}{section.4.1}% 73
+\BOOKMARK [2][-]{subsection.4.1.2}{Logical architecture}{section.4.1}% 74
+\BOOKMARK [2][-]{subsection.4.1.3}{Design architecture}{section.4.1}% 75
+\BOOKMARK [1][-]{section.4.2}{User interface desing}{chapter.4}% 76
+\BOOKMARK [1][-]{section.4.3}{Data design}{chapter.4}% 77
+\BOOKMARK [1][-]{section.4.4}{Design of components}{chapter.4}% 78
+\BOOKMARK [1][-]{section.4.5}{Parameterization of the base software}{chapter.4}% 79
+\BOOKMARK [0][-]{chapter.5}{Implementation of the system}{part.2}% 80
+\BOOKMARK [1][-]{section.5.1}{Technological environment}{chapter.5}% 81
+\BOOKMARK [1][-]{section.5.2}{Source code}{chapter.5}% 82
+\BOOKMARK [1][-]{section.5.3}{Code quality}{chapter.5}% 83
+\BOOKMARK [0][-]{chapter.6}{System tests}{part.2}% 84
+\BOOKMARK [1][-]{section.6.1}{Unit tests}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.2}{Integration testing}{chapter.6}% 86
+\BOOKMARK [1][-]{section.6.3}{System tests}{chapter.6}% 87
+\BOOKMARK [2][-]{subsection.6.3.1}{Functional testing}{section.6.3}% 88
+\BOOKMARK [2][-]{subsection.6.3.2}{Non-functional tests}{section.6.3}% 89
+\BOOKMARK [1][-]{section.6.4}{Acceptance Tests}{chapter.6}% 90
+\BOOKMARK [-1][-]{part.3}{III Epilogue}{}% 91
+\BOOKMARK [0][-]{chapter.7}{User manual}{part.3}% 92
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 93
+\BOOKMARK [1][-]{section.7.2}{Features}{chapter.7}% 94
+\BOOKMARK [1][-]{section.7.3}{Previous requirements}{chapter.7}% 95
+\BOOKMARK [1][-]{section.7.4}{Utilization}{chapter.7}% 96
+\BOOKMARK [2][-]{subsection.7.4.1}{Create fantasy}{section.7.4}% 97
+\BOOKMARK [2][-]{subsection.7.4.2}{Modify fantasy}{section.7.4}% 98
+\BOOKMARK [2][-]{subsection.7.4.3}{Delete fantasy}{section.7.4}% 99
+\BOOKMARK [2][-]{subsection.7.4.4}{Duplicate fantasy}{section.7.4}% 100
+\BOOKMARK [2][-]{subsection.7.4.5}{Create active point}{section.7.4}% 101
+\BOOKMARK [2][-]{subsection.7.4.6}{Modify active point}{section.7.4}% 102
+\BOOKMARK [2][-]{subsection.7.4.7}{Delete active point}{section.7.4}% 103
+\BOOKMARK [2][-]{subsection.7.4.8}{Play fantasy}{section.7.4}% 104
+\BOOKMARK [0][-]{chapter.8}{Installation and operation manual}{part.3}% 105
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 106
+\BOOKMARK [1][-]{section.8.2}{Previous requirements}{chapter.8}% 107
+\BOOKMARK [1][-]{section.8.3}{Inventory of components}{chapter.8}% 108
+\BOOKMARK [1][-]{section.8.4}{Installation procedures}{chapter.8}% 109
+\BOOKMARK [1][-]{section.8.5}{Implantation tests}{chapter.8}% 110
+\BOOKMARK [0][-]{chapter.9}{Conclusions}{part.3}% 111
+\BOOKMARK [1][-]{section.9.1}{Objetives}{chapter.9}% 112
+\BOOKMARK [1][-]{section.9.2}{Lessons learned}{chapter.9}% 113
+\BOOKMARK [1][-]{section.9.3}{Future work}{chapter.9}% 114
+\BOOKMARK [0][-]{chapter.10}{Bibliography}{part.3}% 115

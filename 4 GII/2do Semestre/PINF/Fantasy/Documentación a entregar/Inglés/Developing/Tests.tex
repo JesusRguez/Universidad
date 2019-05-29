@@ -1,18 +1,31 @@
 \chapter{System tests}
 \section{Unit tests}
-For the unit tests we have used the testing tool provided by Laravel, which allow us to program unit tests that will run automatically and will give us a direct result of each test.
+For the unit tests we have used the Laravel framework that allows the automation of tests through code.
+
+This improves the confidence of the code and helps the application to be as secure as possible.
 
 \section{Integration testing}
-The integration tests have been tested during the whole duration of the project while the different active points modules and workspaces where linked in the platform.
+In the integration tests we have used the seeders, which mimic the behavior of real objects in a controlled manner. These objects are also useful when real objects have not yet been developed, are very expensive to instantiate or are not available.
+
+We will use the Laravel framework just like in the automated unit tests.
 
 \section{System tests}
 The system tests have been checked thanks to the testing tools provided by Laravel, which, like the unit tests, have been program to be linked automatically.
 
 \subsection{Functional testing}
-\textcolor{red}{ALGO}
+We will perform functional tests in order to check whether the system performs correctly the functionality described in the requirements. Black box tests will be carried out.
+
+Throughout the development of the project, manual tests will be carried out to verify the proper functioning of each of the scenarios of each established use case and the next milestone will not be advanced until it has been verified that everything is working correctly.
 
 \subsection{Non-functional tests}
-\textcolor{red}{ALGO}
+The purpose of the non-functional tests is to check whether the system (integrated and complete) meets the non-functional requirements previously established in the requirements analysis. For this, they will carry out the following types of tests:
+\begin{itemize}
+	\item Efficiency: Monitoring of resource consumption, load and stress tests on the server and web performance tests will be carried out.
+	\item Logical an data security: To guarantee the authenticity, confidentiality and integrity of the
+	data, as well as responsibility and non-repudiation, we will carry out an exhaustive check of the read and write permissions on the system data and operations execution.
+	\item Usability: We will carry out an analysis of the web through heuristic rules, we will study the results working with real users, through field observations, interviews and questionnaires. They will also be tested for use by specific browsers or by manipulating their properties and automatic validations will be made.
+	\item Dependibility:There will be a static analysis of the code, detection of bugs, security vulnerabilities, code smells, complexity metrics, size, test coverage, etc.
+\end{itemize}
 
 \section{Acceptance Tests}
 We have been making the acceptance tests with our client of this project in each of the meetings, on which they argumented the changes they wanted and accepted or rejected our proposals.

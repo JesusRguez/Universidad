@@ -17,7 +17,45 @@ These agents can be sorted in two groups: students and teachers.
 \end{itemize}
 
 \section{Functional requiriments}
-All the use cases described below have the following implicit precondition to be able to use said use cases in the final application:
+\subsubsection{Characteristics of fantasies}
+\begin{itemize}
+	\item At the end of all active points there will be a button at the bottom right of ``\textbf{more information}'' and in the center there will be a new quiz that will be the final exam. This exam will have an independent score to all active points and will not have the statistical summary. If this quiz is repeated, the score would be updated with a percentage of the new score, plus the previous score with the objective that a student who repeats a quiz can not get the best grade due to repetition of it.
+	\item The teachers can ask the students to make fantasies to learn as homework. These tasks can be done in groups of students based on two ideas:
+	\begin{enumerate}
+		\item \textbf{Compulsory:} A student make fantasy and the rest search for additional information.
+		\item \textbf{Optional:} Concurrent fantasy edition among all the members of the group.
+	\end{enumerate}
+	\item Each fantasy will have a code to be shared.
+	\item We will have two types of permissions in the fantasies: ``\textbf{see}'' and ``\textbf{see and edit}''.
+	\item The platform will notify the teacher when the students have finished their respective jobs.
+	\item The fantasies may be private, shared or public. By default, they will always be public and can be accesible by everyone who uses the platform.
+	\item Shared fantasies can be accesible by other people with a password.
+	\item Fantasies can be cloned.
+\end{itemize}
+
+\subsubsection{Characteristics of active points}
+\begin{itemize}
+	\item It will be possible to move it within the background and modify its contents.
+	\item If an image is added to the active point, that point is adapted to the shape of the image.
+	\item You can also assign a video, which will open a window to play it, or an audio. In case there is no audio or video, the respective button will not be displayed.
+	\item Active points may have background music that will be muted if the audio or video playback assigned to that point by the teacher begins. The music will be restored when the corresponding audio or video ends.
+	\item The active points can be reorganized by the teachers and students so that they emerge in the desired order.
+	\item Through the realization (not creation) of a fantasy, a student can not continue with the next active point without finishing the current one.
+	\item The active points quiz should be fun and intuitive.
+	\item There should be only three questions in each quiz of each active point and they should not be too difficult (multiple answer, simple answer, write a word).
+	\item The quiz of the active point will appear on the screen when that active point is closed.
+	\item Once the quiz is finished, the next active point appears in the order established by the teachers/students in the workspace.
+	\item Each active point will have a score to add (to all) a maximum of 100 points.
+	\item When assigning a score to an active point, it will be subtracted from the total (maximum 100 points). If an active point is eliminated, the general counter recovers the score assigned to that active point.
+	\item The student does not know the total number of active points in the fantasy.
+	\item When the student obtains a score by completing an active point, this amount is added to the global counter.
+	\item Finally, we can have a statistical summary with the right/wrong questions of each active point.
+	\item Only the score obtained will be saved the first time a quiz is done, then it can be done more times, but the note will not be recorded in the system.
+	\item The student will have the option to save his progress with a save button manually or through the auto-save option.
+\end{itemize}
+
+
+All the use cases described then have the following implicit precondition to be able to use said use cases in the final application:
 \begin{itemize}
 	\item The user (teachers/students) must have an account on the STIMEY platform and have logged in with that account.
 \end{itemize}
@@ -801,39 +839,53 @@ The proposed use cases are the following:
 	\item \textbf{Issues:} None.
 \end{itemize}
 
-\section{Characteristics of fantasies}
-\begin{itemize}
-	\item At the end of all active points there will be a button at the bottom right of ``\textbf{more information}'' and in the center there will be a new quiz that will be the final exam. This exam will have an independent score to all active points and will not have the statistical summary. If this quiz is repeated, the score would be updated with a percentage of the new score, plus the previous score with the objective that a student who repeats a quiz can not get the best grade due to repetition of it.
-	\item The teachers can ask the students to make fantasies to learn as homework. These tasks can be done in groups of students based on two ideas:
-	\begin{enumerate}
-		\item \textbf{Compulsory:} A student make fantasy and the rest search for additional information.
-		\item \textbf{Optional:} Concurrent fantasy edition among all the members of the group.
-	\end{enumerate}
-	\item Each fantasy will have a code to be shared.
-	\item We will have two types of permissions in the fantasies: ``\textbf{see}'' and ``\textbf{see and edit}''.
-	\item The platform will notify the teacher when the students have finished their respective jobs.
-	\item The fantasies may be private, shared or public. By default, they will always be public and can be accesible by everyone who uses the platform.
-	\item Shared fantasies can be accesible by other people with a password.
-	\item Fantasies can be cloned.
-\end{itemize}
+\newpage
+\section{Information requirements}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Developing/StimeyUML.png}
+	\caption{Stimey UML.}
+	\label{Stimey UML}
+\end{figure}
 
-\section{Characteristics of active points}
-\begin{itemize}
-	\item It will be possible to move it within the background and modify its contents.
-	\item If an image is added to the active point, that point is adapted to the shape of the image.
-	\item You can also assign a video, which will open a window to play it, or an audio. In case there is no audio or video, the respective button will not be displayed.
-	\item Active points may have background music that will be muted if the audio or video playback assigned to that point by the teacher begins. The music will be restored when the corresponding audio or video ends.
-	\item The active points can be reorganized by the teachers and students so that they emerge in the desired order.
-	\item Through the realization (not creation) of a fantasy, a student can not continue with the next active point without finishing the current one.
-	\item The active points quiz should be fun and intuitive.
-	\item There should be only three questions in each quiz of each active point and they should not be too difficult (multiple answer, simple answer, write a word).
-	\item The quiz of the active point will appear on the screen when that active point is closed.
-	\item Once the quiz is finished, the next active point appears in the order established by the teachers/students in the workspace.
-	\item Each active point will have a score to add (to all) a maximum of 100 points.
-	\item When assigning a score to an active point, it will be subtracted from the total (maximum 100 points). If an active point is eliminated, the general counter recovers the score assigned to that active point.
-	\item The student does not know the total number of active points in the fantasy.
-	\item When the student obtains a score by completing an active point, this amount is added to the global counter.
-	\item Finally, we can have a statistical summary with the right/wrong questions of each active point.
-	\item Only the score obtained will be saved the first time a quiz is done, then it can be done more times, but the note will not be recorded in the system.
-	\item The student will have the option to save his progress with a save button manually or through the auto-save option.
-\end{itemize}
+
+\section{Non-functional requirements}
+\subsection{Efficiency}
+\begin{itemize}
+	\item All system functionality and business transaction must respond to the user in less than 5 seconds.
+	\item The system is able to operate properly with several users with concurrent sessions.
+	\item The modified data in the database must be updated for all users who access in less than 2 seconds.
+\end{itemize}
+
+\subsection{Logical and data security}
+\begin{itemize}
+	\item The access permissions to the system may only be changed by the data access administrator.
+	\item The passwords of the users for their login are encrypted.
+\end{itemize}
+
+\subsection{Usability}
+\begin{itemize}
+	\item The learning time of the system by a user is less than 2 hours.
+	\item The system has properly structured user manuals.
+	\item The web application has a ``Responsive'' design to ensure proper viewing on multiple personal computers, tablet devices and smartphones.
+	\item The system has well-formed graphical interfaces.
+\end{itemize}
+
+\subsection{Dependibility}
+\begin{itemize}
+	\item The system must have an availability of 99.99\% of the time a user tries to access it once it is launched on the STIMEY servers.
+	\item The time to start or restart the system is less than 2 minutes.
+	\item The probability of failure of the system can not be less than 0.05\%.
+\end{itemize}
+
+\section{Business rules}
+Not applicable.
+
+\section{Study of technological alternatives}
+As a technological alternative, the web application could be proposed as a REST server that is responsible for receiving the requests and resolving them concurrently, which would give greater modularity to the system.
+
+In addition, in case of failure, it would be known where the fault is most easily due to the REST system.
+
+\section{GAP analysis}
+Not applicable.
+

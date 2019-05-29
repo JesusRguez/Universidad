@@ -1,14 +1,14 @@
 \select@language {USenglish}
 \contentsline {chapter}{\numberline {1}User manual}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Introducci\IeC {\'o}n}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Caracter\IeC {\'\i }sticas}{5}{section.1.2}
-\contentsline {section}{\numberline {1.3}Requisitos previos}{5}{section.1.3}
-\contentsline {section}{\numberline {1.4}Utilizaci\IeC {\'o}n}{5}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Crear fantas\IeC {\'\i }a}{6}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Modificar fantas\IeC {\'\i }a}{6}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Duplicar fantas\IeC {\'\i }a}{6}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}Eliminar fantas\IeC {\'\i }a}{6}{subsection.1.4.4}
-\contentsline {subsection}{\numberline {1.4.5}Crear punto activo}{6}{subsection.1.4.5}
-\contentsline {subsection}{\numberline {1.4.6}Modificar punto activo}{6}{subsection.1.4.6}
-\contentsline {subsection}{\numberline {1.4.7}Eliminar punto activo}{6}{subsection.1.4.7}
-\contentsline {subsection}{\numberline {1.4.8}Jugar fantas\IeC {\'\i }a}{6}{subsection.1.4.8}
+\contentsline {section}{\numberline {1.1}Introducction}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Features}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Previous requirements}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Utilization}{5}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Create fantasy}{6}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Modify fantasy}{6}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Delete fantasy}{6}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Duplicate fantasy}{6}{subsection.1.4.4}
+\contentsline {subsection}{\numberline {1.4.5}Create active point}{6}{subsection.1.4.5}
+\contentsline {subsection}{\numberline {1.4.6}Modify active point}{6}{subsection.1.4.6}
+\contentsline {subsection}{\numberline {1.4.7}Delete active point}{6}{subsection.1.4.7}
+\contentsline {subsection}{\numberline {1.4.8}Play fantasy}{6}{subsection.1.4.8}

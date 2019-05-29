@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Fantasy" company="" webLink="http://" view-date="2019-02-25" view-index="0" gantt-divider-location="563" resource-divider-location="300" version="2.8.10" locale="es_ES">
+<?xml version="1.0" encoding="UTF-8"?><project name="Fantasy" company="" webLink="http://" view-date="2019-02-25" view-index="0" gantt-divider-location="563" resource-divider-location="300" version="2.8.10" locale="es">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="320" order="0"/>
         <field id="tpd4" name="Fecha de inicio" width="127" order="1"/>
         <field id="tpd5" name="Fecha de fin" width="112" order="2"/>
-        <option id="color.recent"><![CDATA[#009900 #ff3333]]></option>
+        <option id="color.recent"><![CDATA[#ff99ff #ff3333 #009900]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nombre" width="210" order="0"/>
@@ -34,44 +34,48 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="34" name="Reunión 0" color="#ff3333" meeting="false" start="2019-02-27" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="34" name="Meeting 0" color="#ff3333" meeting="false" start="2019-02-27" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="0" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="0" name="Análisis de requisitos y asignación de roles" color="#8cb6ce" meeting="false" start="2019-02-28" duration="7" complete="0" thirdDate="2019-02-27" thirdDate-constraint="0" expand="true"/>
-        <task id="41" name="Reunión 1" color="#ff3333" meeting="false" start="2019-03-06" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Requirements analysis and role assignment" color="#8cb6ce" meeting="false" start="2019-02-28" duration="7" complete="0" thirdDate="2019-02-27" thirdDate-constraint="0" expand="true"/>
+        <task id="41" name="Meeting 1" color="#ff3333" meeting="false" start="2019-03-06" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="9" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="9" name="Diseño de bases de datos" color="#8cb6ce" meeting="false" start="2019-03-07" duration="21" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="47" name="Reunión 2" color="#ff3333" meeting="false" start="2019-03-27" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="9" name="Database design" color="#8cb6ce" meeting="false" start="2019-03-07" duration="21" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="47" name="Meeting 2" color="#ff3333" meeting="false" start="2019-03-27" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="11" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="11" name="Diseño e implementación de Front-End" color="#8cb6ce" meeting="false" start="2019-03-28" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="61" name="Reunión 3" color="#ff3333" meeting="false" start="2019-04-03" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="11" name="Design and implementation of Front-End" color="#8cb6ce" meeting="false" start="2019-03-28" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="61" name="Meeting 3" color="#ff3333" meeting="false" start="2019-04-03" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="13" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="13" name="Migración a Laravel" color="#8cb6ce" meeting="false" start="2019-04-04" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="66" name="Reunión 4" color="#ff3333" meeting="false" start="2019-04-10" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="13" name="Migration to Laravel" color="#8cb6ce" meeting="false" start="2019-04-04" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="66" name="Meeting 4" color="#ff3333" meeting="false" start="2019-04-10" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="21" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="21" name="Implementación de características de P.A." color="#8cb6ce" meeting="false" start="2019-04-11" duration="14" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="71" name="Reunión 5" color="#ff3333" meeting="false" start="2019-04-24" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="21" name="Implementation of characteristics of P.A." color="#8cb6ce" meeting="false" start="2019-04-11" duration="14" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="71" name="Meeting 5" color="#ff3333" meeting="false" start="2019-04-24" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="73" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="73" name="Diseño de la vista del jugador" color="#8cb6ce" meeting="false" start="2019-04-25" duration="9" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="74" name="Reunión 6" color="#ff3333" meeting="false" start="2019-05-03" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="73" name="Player view design" color="#8cb6ce" meeting="false" start="2019-04-25" duration="9" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="74" name="Meeting 6" color="#ff3333" meeting="false" start="2019-05-03" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="77" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="77" name="Creación de quiz para P.A." color="#8cb6ce" meeting="false" start="2019-05-04" duration="5" complete="0" thirdDate="2019-05-03" thirdDate-constraint="0" expand="true"/>
-        <task id="84" name="Reunión 7" color="#ff3333" meeting="false" start="2019-05-08" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="77" name="Creation of quiz for P.A." color="#8cb6ce" meeting="false" start="2019-05-04" duration="5" complete="0" thirdDate="2019-05-03" thirdDate-constraint="0" expand="true"/>
+        <task id="84" name="Meeting 7" color="#ff3333" meeting="false" start="2019-05-08" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="86" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="86" name="Finalización quiz y modo jugar fantasía" color="#8cb6ce" meeting="false" start="2019-05-09" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="88" name="Reunión 8" color="#ff3333" meeting="false" start="2019-05-15" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+        <task id="86" name="Quiz completion and fantasy play mode" color="#8cb6ce" meeting="false" start="2019-05-09" duration="7" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="88" name="Meeting 8" color="#ff3333" meeting="false" start="2019-05-15" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="90" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="90" name="Puesta a punto y corrección de erorres" color="#8cb6ce" meeting="false" start="2019-05-16" duration="13" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="26" name="Pruebas de la aplicación" color="#8cb6ce" meeting="false" start="2019-04-25" duration="34" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="97" name="Presentación final" color="#009900" meeting="false" start="2019-05-29" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="90" name="Creation of a login system" color="#8cb6ce" meeting="false" start="2019-05-16" duration="13" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="108" name="Meeting 9" color="#ff3333" meeting="false" start="2019-05-22" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
+            <depend id="110" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="110" name="Plan to deploy the application." color="#8cb6ce" meeting="false" start="2019-05-23" duration="6" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="26" name="Application tests" color="#ff99ff" meeting="false" start="2019-04-11" duration="48" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="97" name="End of project" color="#009900" meeting="false" start="2019-05-29" duration="1" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
