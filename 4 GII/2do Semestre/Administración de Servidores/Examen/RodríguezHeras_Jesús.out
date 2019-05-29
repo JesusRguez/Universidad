@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Configuraci\363n inicial}{}% 1
+\BOOKMARK [1][-]{section.2}{Cortafuegos}{}% 2
+\BOOKMARK [1][-]{section.3}{Apache}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Instalaci\363n de Apache}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Instalaci\363n de PHP}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Instalaci\363n de Webmin}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Crear los virtualhost}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Crear una peque\361a p\341gina web en cada uno de los virtualhots con tildes y dem\341s caracteres especiales}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Establecer la redirecci\363n}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Configuraci\363n avanzada de Apache}{}% 10
