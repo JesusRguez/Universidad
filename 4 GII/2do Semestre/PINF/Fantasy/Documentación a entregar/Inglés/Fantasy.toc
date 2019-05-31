@@ -125,11 +125,10 @@
 \contentsline {subsection}{\numberline {7.4.1}Create fantasy}{58}{subsection.7.4.1}
 \contentsline {subsection}{\numberline {7.4.2}Modify fantasy}{58}{subsection.7.4.2}
 \contentsline {subsection}{\numberline {7.4.3}Delete fantasy}{58}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Duplicate fantasy}{58}{subsection.7.4.4}
-\contentsline {subsection}{\numberline {7.4.5}Create active point}{58}{subsection.7.4.5}
-\contentsline {subsection}{\numberline {7.4.6}Modify active point}{58}{subsection.7.4.6}
-\contentsline {subsection}{\numberline {7.4.7}Delete active point}{58}{subsection.7.4.7}
-\contentsline {subsection}{\numberline {7.4.8}Play fantasy}{58}{subsection.7.4.8}
+\contentsline {subsection}{\numberline {7.4.4}Create active point}{58}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Modify active point}{58}{subsection.7.4.5}
+\contentsline {subsection}{\numberline {7.4.6}Search fantasy}{58}{subsection.7.4.6}
+\contentsline {subsection}{\numberline {7.4.7}Play fantasy}{58}{subsection.7.4.7}
 \contentsline {chapter}{\numberline {8}Installation and operation manual}{59}{chapter.8}
 \contentsline {section}{\numberline {8.1}Introduction}{59}{section.8.1}
 \contentsline {section}{\numberline {8.2}Previous requirements}{59}{section.8.2}
