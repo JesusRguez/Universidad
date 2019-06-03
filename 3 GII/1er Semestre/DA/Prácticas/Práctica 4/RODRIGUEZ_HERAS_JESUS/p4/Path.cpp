@@ -12,7 +12,7 @@ void DEF_LIB_EXPORTED calculateAdditionalCost(float** additionalCost, int cellsW
     for(int i = 0 ; i < cellsHeight ; ++i) {
         for(int j = 0 ; j < cellsWidth ; ++j) {
             Vector3 cellPosition = cellCenterToPosition(i, j, cellWidth, cellHeight);
-            additionalCost[i][j] = 1/(_sdistance(cellPosition, (*it)->position));
+            additionalCost[i][j] = _sdistance(cellPosition, (*it)->position);
         }
     }
 }
