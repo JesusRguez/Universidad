@@ -74,8 +74,8 @@ VPATH     = .:${DIRTESTS}:${DIRFECHACADENA}:${DIRLUHN}
 # añádase a OWN_SRCS y quítese usuario-pedido.hpp de OWN_HDRS.
 
 OWN_SRCS  = usuario.cpp tarjeta.cpp articulo.cpp pedido-articulo.cpp \
-  pedido.cpp usuario-pedido.cpp
-OWN_HDRS  = $(OWN_SRCS:.cpp=.hpp)
+  pedido.cpp #usuario-pedido.cpp
+OWN_HDRS  = $(OWN_SRCS:.cpp=.hpp) usuario-pedido.hpp
 
 OWN_OBJS  = $(OWN_SRCS:.cpp=.o)
 

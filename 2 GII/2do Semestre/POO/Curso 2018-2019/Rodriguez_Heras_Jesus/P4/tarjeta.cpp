@@ -38,8 +38,9 @@ bool operator <(const Numero& n1, const Numero& n2){
 
 //Constructor de tarjeta:
 Tarjeta::Tarjeta (const Numero& numero, Usuario& usuario, const Fecha& fecha_caducidad):numero_(numero), usuario_(&usuario), fechaExp_(fecha_caducidad){
-	if (fecha_caducidad < Fecha())
+	if (fecha_caducidad < Fecha()){
 		throw Caducada(fecha_caducidad);
+	}
 
 	activa_ = true;
 	usuario_->es_titular_de(*this);
@@ -64,6 +65,8 @@ Tarjeta::Tarjeta (const Numero& numero, Usuario& usuario, const Fecha& fecha_cad
 	if (ret.second == false) {
 		throw Num_duplicado(numero);
 	}
+
+
 }
 
 //Destructor de tarjeta:
