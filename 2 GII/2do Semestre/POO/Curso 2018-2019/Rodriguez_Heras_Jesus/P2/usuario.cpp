@@ -85,7 +85,7 @@ void mostrar_articulo(ostream& os, const Articulo& a){
 
 //Mostrar carro:
 void mostrar_carro(ostream& os, const Usuario& u){
-	os << "Carrito de la compra de " << u.id() << "[Artículos: " << u.n_articulos() << "]" << endl << " Cant. Artículo" << endl << setw(65) << setfill('=') << '\n'  << setfill(' ');
+	os << "Carrito de la compra de " << u.id() << " [Artículos: " << u.n_articulos() << "]" << endl << " Cant. Artículo" << endl << setw(65) << setfill('=') << '\n'  << setfill(' ');
 	for (auto const& i : u.compra()) {
 		os << setw(4) << i.second << "   ";
 		mostrar_articulo(os, *(i.first));
