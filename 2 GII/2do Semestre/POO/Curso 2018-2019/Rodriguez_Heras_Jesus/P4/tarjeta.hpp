@@ -75,22 +75,22 @@ public:
 	~Tarjeta();
 
 	//Mostrar tipo:
-	inline Tipo tipo() const { return tipo_; }
+	inline Tipo tipo() const noexcept { return tipo_; }
 
 	//Mostrar número:
-	inline Numero numero() const { return numero_; }
+	inline Numero numero() const noexcept { return numero_; }
 
 	//Mostrar fecha de caducidad:
-	inline Fecha caducidad() const {return fechaExp_; }
+	inline Fecha caducidad() const noexcept {return fechaExp_; }
 
 	//Mostrar si está activa:
-	inline bool activa() const {return activa_; }
+	inline bool activa() const noexcept {return activa_; }
 
 	//Cambiar activada/desactivada:
 	bool activa(bool a = true);
 
 	//Mostrar titular:
-	inline const Usuario* titular() const { return usuario_; }
+	inline const Usuario* titular() const noexcept { return usuario_; }
 
 	//Anular titular:
 	void anula_titular();

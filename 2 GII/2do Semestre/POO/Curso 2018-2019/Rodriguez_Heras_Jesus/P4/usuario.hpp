@@ -76,19 +76,19 @@ public:
 	void no_es_titular_de(Tarjeta& t);
 
 	//Mostrar id:
-	inline Cadena id() const { return id_; }
+	inline Cadena id() const noexcept { return id_; }
 
 	//Mostrar nombre:
-	inline Cadena nombre() const { return nombre_; }
+	inline Cadena nombre() const noexcept { return nombre_; }
 
 	//Mostrar apellidos:
-	inline Cadena apellidos() const { return apellidos_; }
+	inline Cadena apellidos() const noexcept { return apellidos_; }
 
 	//Mostrar dirección:
-	inline Cadena direccion() const { return direccion_; }
+	inline Cadena direccion() const noexcept { return direccion_; }
 
 	//Mostrar tarjetas:
-	inline const Tarjetas& tarjetas() const { return MapTarjetas_; }
+	inline const Tarjetas& tarjetas() const noexcept { return MapTarjetas_; }
 
 	//Asociacion unidireccional:
 	void compra(Articulo& a, unsigned cant=1);
@@ -97,7 +97,7 @@ public:
 	inline const Articulos& compra() const { return n_art_; }
 
 	//Mostrar número de artículos:
-	inline size_t n_articulos() const { return n_art_.size(); }
+	inline size_t n_articulos() const noexcept { return n_art_.size(); }
 
 	//Operador <<:
 	friend ostream& operator<<(ostream& os, const Usuario& u);
