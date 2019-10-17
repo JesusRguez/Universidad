@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.10)  12 OCT 2019 21:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.10)  17 OCT 2019 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,26 +596,30 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [3] [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+ [3]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
 (./Memoria prácticas Jesús Rodríguez Heras.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `"Memoria prácticas Jesús Rodríguez Heras"
 .out' has not changed.
-(rerunfilecheck)             Checksum: AB418A5C96362A74F5E8EF65DF98D668;1424.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+(rerunfilecheck)             Checksum: 120174E7AC4D53A9670F64BB507A7924;1432.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 9749 strings out of 492615
- 139761 string characters out of 6131390
- 440095 words of memory out of 5000000
- 13482 multiletter control sequences out of 15000+600000
+ 10003 strings out of 492615
+ 142645 string characters out of 6131390
+ 440109 words of memory out of 5000000
+ 13732 multiletter control sequences out of 15000+600000
  39858 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,6n,49p,372b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -623,11 +627,11 @@ Here is how much of TeX's memory you used:
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb>
-Output written on "Memoria prácticas Jesús Rodríguez Heras.pdf" (4 pages, 46
-555 bytes).
+Output written on "Memoria prácticas Jesús Rodríguez Heras.pdf" (5 pages, 52
+145 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
