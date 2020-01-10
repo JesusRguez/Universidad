@@ -62,8 +62,8 @@ void DEF_LIB_EXPORTED calculatePath(AStarNode* originNode, AStarNode* targetNode
                     if (opened.end() == std::find(opened.begin(), opened.end(), (*iter))) {
                         i = (*iter)->position.x / cellWidth;
                         j = (*iter)->position.y / cellHeight;
-                        (*iter)->G = current->G + _distance(current->position, (*iter)->position) + additionalCost[i][j];
-                        (*iter)->H = _sdistance((*iter)->position, targetNode->position);
+                        (*iter)->G = current->G + _distance(current->position, (*iter)->position);
+                        (*iter)->H = _sdistance((*iter)->position, targetNode->position) + additionalCost[i][j];
                         (*iter)->F = (*iter)->G + (*iter)->H;
                         (*iter)->parent = current;
 
